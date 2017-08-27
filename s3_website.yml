@@ -1,5 +1,8 @@
-s3_id: <%= ENV['S3_ID'] %>
-s3_secret: <%= ENV['S3_SECRET'] %>
-s3_bucket: adysis-ad-delivery-js
+image: cgswong/aws
 
-site: /
+pipelines:
+  branches:
+    master:
+      - step:
+          script:
+            - aws s3 --region "us-east-1" sync public/ s3://adysis-ad-delivery-js--cache-control "public, max-age=14400" --delete
