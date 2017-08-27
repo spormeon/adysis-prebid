@@ -1,0 +1,812 @@
+// need to add bidders gross-net 
+
+
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Foundation | Welcome</title>
+<link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet" type="text/css">
+
+<script>
+!function(e,t,n,i,r){window[e]=window[e]||function(){window[e].opts.queue.push(arguments)},window[e].opts={url:n,bidPriceKey:i,pubId:r,queue:[]};var o=document.createElement("script");o.src=t,o.async=!0,o.type="text/javascript";var s=document.getElementsByTagName("script");s[0].parentNode.insertBefore(o,s[0])}("PulsePointPrebidAnalytics","http://tag.contextweb.com/pba.js","http://bh.contextweb.com/hba","hb_pb","561446");
+</script>
+
+<script type="text/javascript">
+  function PPObjectIndented(obj, indent) {
+   try { console.log("PrettyPrint Object Function Called...");} catch (e) { }
+   if (Object.keys(obj).length === 0 && obj.constructor === Object) return "{}: empty object returned...";
+   var result = "";
+   if (indent == null) { indent = ""; }
+   for (var property in obj) {
+     var value = obj[property];
+     if (typeof value == 'string') { value = "'" + value + "'"; }
+     else if (typeof value == 'object') {
+       if (value instanceof Array) { value = "[ " + value + " ]"; }
+       else {
+         var od = PPObjectIndented(value, indent + "  ");
+         value = "\n<br/>" + indent + "{\n<br/>" + od + "\n" + indent + "}";   // If you prefer { and } to be aligned
+       }
+     }
+     result += indent + "'" + property + "' : " + value + ",\n<br/>";
+   }
+   return result.replace(/,\n$/, "");
+ }
+</script>
+
+<!-- Prebid Config Section START -->
+<!-- Make sure this is inserted before your GPT tag -->
+<script>
+  
+  var PREBID_TIMEOUT = 1100;
+     
+  var gpt_config = {
+    prebid_timeout: 1000, //left for reference but not using right now...
+    default_gbp_rate: 0.71,
+    latest_gbp_rate: 0.77984,
+    dynamically_lookup_gbp_rate: true,
+    mobileWidthBreakpoint: 640,
+    tabletWidthBreakpoint: 767,
+    bigbox_sizes: '[[300, 600], [300x250], [160, 600], [120, 600]]',
+    bigbox_sizes_mobile: '[[300, 250]]',
+    leaderboard_sizes: '[[970, 250],[970, 90],[728, 90]]',
+    leaderboard_sizes_mobile: '[[728, 90]]'
+  }; //./gpt_config
+
+  var isMobile = /iPhone|iPod|Android|iemobile|WPDesktop|Windows Phone|BlackBerry|BB/i.test(navigator.userAgent) && /Mobile/i.test(navigator.userAgent);
+
+  gpt_config.state = {
+      isMobile: isMobile,
+      viewport: {
+          width: window.innerWidth && document.documentElement.clientWidth ? Math.min(window.innerWidth, document.documentElement.clientWidth) : window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth,
+          height: window.innerHeight && document.documentElement.clientHeight ? Math.min(window.innerHeight, document.documentElement.clientHeight) : window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight
+      },
+      bigbox_sizes:  isMobile ? gpt_config.bigbox_sizes_mobile : gpt_config.bigbox_sizes,
+      leaderboard_sizes:  isMobile ? gpt_config.leaderboard_sizes_mobile : gpt_config.leaderboard_sizes
+  }; //./gpt_config.state
+  
+  var adUnits = [
+  //new ad unit block
+  {
+    code: 'div-gpt-ad-1503571938435-0',  // first right hand side 300x600 
+    sizes: gpt_config.state.bigbox_sizes,
+    bids: [
+      { bidder: 'sovrn',        params: { tagid: '504166' } }, /* 300x600 */
+      { bidder: 'aol',          params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x250 */ 
+      { bidder: 'aol',          params: { placement: '4882888', network: '4436.1', server: 'adserver.adtech.de' } }, /* 160x600 */
+      { bidder: 'aol',          params: { placement: '5293857', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x600 */
+      { bidder: 'districtmDMX', params: { id:171413, currency: 'usd' } }, /* 300x600 - 300x250 - 160x600 */
+      { bidder: 'pulsepoint',   params: { cf: '300X600', cp: 561446, ct: 602638 } }, /* 300x600 */
+      { bidder: 'pulsepoint',   params: { cf: '300X250', cp: 561446, ct: 602639 } }, /*300x250 */
+      { bidder: 'pulsepoint',   params: { cf: '160X600', cp: 561446, ct: 602640 } }, /*160x600 */
+      { bidder: 'pulsepoint',   params: { cf: '120X600', cp: 561446, ct: 602641 } }, /*120x600*/
+      { bidder: 'sovrn',        params: { tagid: '504164' } }, /* 300x250 */
+      { bidder: 'sovrn',        params: { tagid: '504170' } }, /* 160x600 */
+      { bidder: 'sovrn',        params: { tagid: '504169' } } /* 120x600 */
+    ] //./bids
+  },
+  //new ad unit block
+  {
+    code: 'div-gpt-ad-1503571938435-2', //second right hand side 300x600
+    sizes: gpt_config.state.bigbox_sizes,
+    bids: [
+      { bidder: 'sovrn',        params: { tagid: '504166' } }, //300x600
+      { bidder: 'aol',          params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, //300x250
+      { bidder: 'aol',          params: { placement: '4882888', network: '4436.1', server: 'adserver.adtech.de' } }, //160x600
+      { bidder: 'aol',          params: { placement: '5293857', network: '4436.1', server: 'adserver.adtech.de' } }, //300x600
+      { bidder: 'districtmDMX', params: { id:171413, currency: 'usd' } }, //300x600 - 300x250 - 160x600
+      { bidder: 'pulsepoint',   params: { cf: '300X600', cp: 561446, ct: 602638 } }, /* 300x600 */
+      { bidder: 'pulsepoint',   params: { cf: '300X250', cp: 561446, ct: 602639 } }, /*300x250 */
+      { bidder: 'pulsepoint',   params: { cf: '160X600', cp: 561446, ct: 602640 } }, /*160x600 */
+      { bidder: 'pulsepoint',   params: { cf: '120X600', cp: 561446, ct: 602641 } }, /*120x600*/
+      { bidder: 'sovrn',        params: { tagid: '504164' } }, //300x250 
+      { bidder: 'sovrn',        params: { tagid: '504170' } }, //160x600
+      { bidder: 'sovrn',        params: { tagid: '504169' } } //120x600
+    ] //./bids
+  },
+  //new ad unit block
+  {
+    code: 'div-gpt-ad-1503571938435-3',  // first left hand side 300x600
+    sizes: gpt_config.state.bigbox_sizes,
+    bids: [
+      { bidder: 'sovrn',        params: { tagid: '504166' } }, //300x600
+      { bidder: 'aol',          params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, //300x250
+      { bidder: 'aol',          params: { placement: '4882888', network: '4436.1', server: 'adserver.adtech.de' } }, //160x600
+      { bidder: 'aol',          params: { placement: '5293857', network: '4436.1', server: 'adserver.adtech.de' } }, //300x600
+      { bidder: 'districtmDMX', params: { id:171413, currency: 'usd' } }, //300x600 - 300x250 - 160x600
+      { bidder: 'pulsepoint',   params: { cf: '300X600', cp: 561446, ct: 602638 } }, /* 300x600 */
+      { bidder: 'pulsepoint',   params: { cf: '300X250', cp: 561446, ct: 602639 } }, /*300x250 */
+      { bidder: 'pulsepoint',   params: { cf: '160X600', cp: 561446, ct: 602640 } }, /*160x600 */
+      { bidder: 'pulsepoint',   params: { cf: '120X600', cp: 561446, ct: 602641 } }, /*120x600*/
+      { bidder: 'sovrn',        params: { tagid: '504164' } }, //300x250 
+      { bidder: 'sovrn',        params: { tagid: '504170' } }, //160x600
+      { bidder: 'sovrn',        params: { tagid: '504169' } } //120x600
+    ] //./bids
+  },
+  //new ad unit block
+  {
+    code: 'div-gpt-ad-1503571938435-1',
+    sizes: gpt_config.state.leaderboard_sizes,
+    bids: [,
+      { bidder: 'sovrn',        params: { tagid: '504162' } }, //970x250
+      { bidder: 'aol',          params: { placement: '4882887', network: '4436.1', server: 'adserver.adtech.de' } }, //728x90
+      { bidder: 'districtmDMX', params: { id:171412, currency: 'usd' } }, // 970x250 - 970x90 - 728x90 - 468x60
+      { bidder: 'pulsepoint',   params: { cf: '970X250', cp: 561446, ct: 602634 } },
+      { bidder: 'pulsepoint',   params: { cf: '970X90', cp: 561446, ct: 602642 } },
+      { bidder: 'pulsepoint',   params: { cf: '728X90', cp: 561446, ct: 602643 } },
+      { bidder: 'pulsepoint',   params: { cf: '320X50', cp: 561446, ct: 602644 } },
+      { bidder: 'sovrn',        params: { tagid: '504165' } } //728x90
+    ] //./bids
+  }
+  ]; //./adUnits
+    
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+
+  // get latest currency exchange rate GBP to USD 
+  function getGBPRate(callback) {
+    var currencyUrl = "https://api.fixer.io/latest?base=USD";
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4 && xhr.status === 200) {
+        newRate = JSON.parse(xhr.responseText).rates.GBP;
+        callback(newRate);
+      }
+    };
+    xhr.open("GET", currencyUrl, true);
+    xhr.send(null);
+  }
+
+  var pbjs = pbjs || {};
+  pbjs.que = pbjs.que || [];
+
+  //load up prebid.js,  I think we need to load this earlier
+  (function() {
+      var pbjsEl = document.createElement("script");
+      pbjsEl.type = "text/javascript";
+      pbjsEl.async = true;
+      pbjsEl.src = "https://d3s34vlfe7g7ew.cloudfront.net/prebid_20170821225746.js";
+      var pbjsTargetEl = document.getElementsByTagName("head")[0];
+      pbjsTargetEl.insertBefore(pbjsEl, pbjsTargetEl.firstChild);
+  })();
+
+  getGBPRate(function(newRate) {
+    gpt_config.state.latest_gbp_rate = newRate;
+    console.log('Latest GBP Rate updated: ', gpt_config.state.latest_gbp_rate);
+  });
+// Add the below code snippet to your page
+    pbjs.que.push(function() {
+    pbjs.enableAnalytics({
+           provider: 'pulsepoint'
+        });
+    });
+</script>
+
+<!-- Prebid Boilerplate Section START. No Need to Edit. -->
+  <script>
+    var googletag = googletag || {};
+    googletag.cmd = googletag.cmd || [];
+    googletag.cmd.push(function() {
+      googletag.pubads().disableInitialLoad();
+    });
+
+    pbjs.que.push(function() {
+      pbjs.addAdUnits(adUnits);
+      pbjs.requestBids({
+        bidsBackHandler: initAdserver
+      });
+    });
+
+    function initAdserver() {
+      if (pbjs.adserverRequestSent) return;
+      pbjs.adserverRequestSent = true;
+      googletag.cmd.push(function() {
+        pbjs.que.push(function() {
+          
+          pbjs.bidderSettings = {
+            standard: {
+              adserverTargeting: [{
+                key: "hb_bidder",
+                val: function(bidResponse) {
+                  return bidResponse.bidderCode;
+                }
+              }, {
+                key: "hb_adid",
+                val: function(bidResponse) {
+                  return bidResponse.adId;
+                }
+              }, {
+                key: "custom_bid_price",
+                val: function(bidResponse) {
+                  var cpm = bidResponse.cpm / (gpt_config.state.latest_gbp_rate || gpt_config.default_gbp_rate);
+                  if (cpm < 5) {
+                    return (Math.ceil(cpm)).toFixed(2); 
+                  } else {
+                    return '5.00';
+                  }
+                }
+              },{
+                key: "hb_pb",
+                val: function(bidResponse) {
+                  return bidResponse.cpm / (gpt_config.state.latest_gbp_rate || gpt_config.default_gbp_rate);
+                }
+              }]
+            }
+          }; //./pbjs.bidderSettings
+          
+          pbjs.setTargetingForGPTAsync();
+          googletag.pubads().refresh();
+
+          // development output of targeting params - 2DO: remove prior to production deployment
+          var targetingParams = pbjs.getAdserverTargeting();
+          var paramsOutput = PPObjectIndented(targetingParams, "  ");
+          var container = document.getElementById('targeting_info');
+          container.innerHTML = paramsOutput;
+          // container.innerHTML = JSON.stringify(targetingParams);
+        });
+      });
+    }
+
+    setTimeout(function() { initAdserver(); }, PREBID_TIMEOUT);
+
+  </script>
+  <!-- Prebid Boilerplate Section END -->
+
+  <script>
+    (function () {
+        var gads = document.createElement('script');
+        gads.async = true;
+        gads.type = 'text/javascript';
+        var useSSL = 'https:' == document.location.protocol;
+        gads.src = (useSSL ? 'https:' : 'http:') +
+                '//www.googletagservices.com/tag/js/gpt.js';
+        var node = document.getElementsByTagName('script')[0];
+        node.parentNode.insertBefore(gads, node);
+    })();
+  </script>
+
+  
+  <script>
+  googletag.cmd.push(function() {
+    googletag.defineSlot('/1001824/prebid_test1', [[300, 600],[300, 250],[160, 600],[120, 600]], 'div-gpt-ad-1503571938435-0').addService(googletag.pubads());
+    googletag.defineSlot('/1001824/prebid_test2', [[970, 250], [970, 90], [728, 90]], 'div-gpt-ad-1503571938435-1').addService(googletag.pubads());
+    googletag.defineSlot('/1001824/prebid_test3', [[300, 600],[300, 250],[160, 600],[120, 600]], 'div-gpt-ad-1503571938435-2').addService(googletag.pubads());
+    googletag.defineSlot('/1001824/prebid_test4', [[300, 600],[300, 250],[160, 600],[120, 600]], 'div-gpt-ad-1503571938435-3').addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.enableServices();
+  });
+</script>
+
+</head>
+<body>
+<style>
+  /*icon styles*/
+  .fi-social-facebook {
+    color: dodgerblue;
+    font-size: 2rem;
+  }
+  .fi-social-youtube {
+    color: red;
+    font-size: 2rem;
+  }
+  .fi-social-pinterest {
+    color: darkred;
+    font-size: 2rem;
+  }
+  i.fi-social-instagram {
+    color: brown;
+    font-size: 2rem;
+  }
+  i.fi-social-tumblr {
+    color: navy;
+    font-size: 2rem;
+  }
+  .fi-social-twitter {
+    color: skyblue;
+    font-size: 2rem;
+  }
+
+</style>
+
+<header>
+  <!-- Sub Navigation -->
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <ul class="menu">
+        <li><a href="#">One</a></li>
+        <li><a href="#">Two</a></li>
+        <li><a href="#">Three</a></li>
+        <li><a href="#">Four</a></li>
+      </ul>
+    </div>
+    <div class="top-bar-right">
+      <ul class="menu">
+        <li><input type="search" placeholder="Search"></li>
+        <li><button type="button" class="button">Search</button></li>
+      </ul>
+    </div>
+  </div>
+  <!-- /Sub Navigation -->
+
+  <!-- logo and ad break -->
+  <div class="row">
+    <div class="medium-4 columns">
+      <img src="http://placehold.it/450x183&text=LOGO" alt="company logo">
+      
+      
+      
+    </div>
+    <div class="medium-8 columns">
+      
+      
+      <!-- /1001824/prebid_test2 -->
+<div id='div-gpt-ad-1503571938435-1'>
+<script>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1503571938435-1'); });
+</script>
+</div>
+      
+    </div>
+  </div>
+  <!-- / logo and ad break -->
+  <br><br><br><br>
+  <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
+    <button class="menu-icon" type="button" data-toggle></button>
+    <div class="title-bar-title">Menu</div>
+  </div>
+
+  <div class="top-bar" id="main-menu">
+    <ul class="menu vertical medium-horizontal expanded medium-text-center" data-responsive-menu="drilldown medium-dropdown">
+      <li class="has-submenu"><a href="#">Tech</a>
+        <ul class="submenu menu vertical" data-submenu>
+          <li><a href="#">One</a></li>
+          <li><a href="#">Two</a></li>
+          <li><a href="#">Three</a></li>
+        </ul>
+      </li>
+      <li class="has-submenu"><a href="#">Energy</a>
+        <ul class="submenu menu vertical" data-submenu>
+          <li><a href="#">One</a></li>
+          <li><a href="#">Two</a></li>
+          <li><a href="#">Three</a></li>
+        </ul>
+      </li>
+      <li class="has-submenu"><a href="#">Space</a>
+        <ul class="submenu menu vertical" data-submenu>
+          <li><a href="#">One</a></li>
+          <li><a href="#">Two</a></li>
+          <li><a href="#">Three</a></li>
+        </ul>
+      </li>
+      <li class="has-submenu"><a href="#">Medicine</a>
+        <ul class="submenu menu vertical" data-submenu>
+          <li><a href="#">One</a></li>
+          <li><a href="#">Two</a></li>
+          <li><a href="#">Three</a></li>
+        </ul>
+      </li>
+      <li class="has-submenu"><a href="#">Robotics</a>
+        <ul class="submenu menu vertical" data-submenu>
+          <li><a href="#">One</a></li>
+          <li><a href="#">Two</a></li>
+          <li><a href="#">Three</a></li>
+        </ul>
+      </li>
+      <li class="has-submenu"><a href="#">Tesla</a>
+        <ul class="submenu menu vertical" data-submenu>
+          <li><a href="#">One</a></li>
+          <li><a href="#">Two</a></li>
+          <li><a href="#">Three</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  
+<center>
+    <div id="targeting_info">no info yet</div>
+<hr color="#353535" noshade />
+<script>
+  // this is used by link / button. there is inline code in the PB chain to udpate the on-page div with targeting params...
+  mShowTargeting = function() {
+    try {
+      console.log('printed BEFORE targeting output. click the triangles to explore targeting contents.');
+      console.log(' ');
+      console.log(' ');
+      console.log(' ');
+      var tgt = pbjs.getAdserverTargeting();
+      console.log(tgt);
+      console.log(' ');
+      console.log(' ');
+      console.log(' ');
+      console.log('./end of output');
+    } catch (e) { }
+  };
+</script>
+<button onclick="mShowTargeting()">Log Targeting to Console</button>
+</center>
+<center>
+<a href="/"><button>ADOPTS HOME</button></a>   
+</center>
+  <br>
+
+</header>
+
+<br>
+
+<div class="row">
+  <div class="medium-8 columns">
+    <p><img src="http://placehold.it/900x450&text=Promoted Article" alt="main article image"></p>
+  </div>
+  <div class="medium-4 columns">
+    <p><img src="http://placehold.it/400x200&text=Other cool article" alt="article promo image" alt="advertisement for deep fried Twinkies"></p>
+   <!-- /1001824/prebid_test1 -->
+<div id='div-gpt-ad-1503571938435-0'>
+<script>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1503571938435-0'); });
+</script>
+</div>
+  </div>
+</div>
+
+<hr>
+
+<div class="row column">
+  <h4 style="margin: 0;" class="text-center">BREAKING NEWS</h4>
+</div>
+
+<hr>
+
+<div class="row small-up-3 medium-up-4 large-up-5">
+
+  <div class="column">
+    <img src="http://placehold.it/400x370&text=Look at me!" alt="image for article">
+  </div>
+
+  <div class="column">
+    <img src="http://placehold.it/400x370&text=Look at me!" alt="image for article">
+  </div>
+
+  <div class="column">
+    <img src="http://placehold.it/400x370&text=Look at me!" alt="image for article">
+  </div>
+
+  <div class="column show-for-medium">
+    <img src="http://placehold.it/400x370&text=Look at me!" alt="image for article">
+  </div>
+
+  <div class="column show-for-large">
+    <img src="http://placehold.it/400x370&text=Look at me!" alt="image for article">
+  </div>
+
+</div>
+
+<hr>
+
+<div class="row column">
+  <h4 style="margin: 0;" class="text-center">LATEST STORIES</h4>
+</div>
+
+<hr>
+
+<div class="row">
+  <div class="large-8 columns" style="border-right: 1px solid #E3E5E8;">
+
+  <article>
+
+    <div class="row">
+      <div class="large-6 columns">
+        <p><img src="http://placehold.it/600x370&text=Look at me!" alt="image for article" alt="article preview image"></p>
+      </div>
+      <div class="large-6 columns">
+        <h5><a href="#">'Toxicology report shows THC, Ambien, Xanax, Vicodin in Tiger Woods’ system</a></h5>
+        <p>
+          <span><i class="fi-torso"> By Thadeus &nbsp;&nbsp;</i></span>
+          <span><i class="fi-calendar"> 11/23/16 &nbsp;&nbsp;</i></span>
+          <span><i class="fi-comments"> 6 comments</i></span>
+        </p>
+        <p>While Tiger Woods admitted to taking Xanax and Vicodin prior to his DUI arrest in May, the toxicology report released on Monday also shows...</p>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+      <div class="large-6 columns">
+        <p><img src="http://placehold.it/600x370&text=Look at me!" alt="image for article" alt="article preview image"></p>
+      </div>
+      <div class="large-6 columns">
+        <h5><a href="#">Monday’s Photos from the 2017 Wyndham Championship</a></h5>
+        <p>
+          <span><i class="fi-torso"> By Thadeus &nbsp;&nbsp;</i></span>
+          <span><i class="fi-calendar"> 11/23/16 &nbsp;&nbsp;</i></span>
+          <span><i class="fi-comments"> 6 comments</i></span>
+        </p>
+        <p>GolfWRX is live this week from the 2017 Wyndham Championship at Sedgefield Country Club (Ross Course) in Greensboro, North Carolina. The course, which was....</p>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+      <div class="large-6 columns">
+        <p><img src="http://placehold.it/600x370&text=Look at me!" alt="image for article" alt="article preview image"></p>
+      </div>
+      <div class="large-6 columns">
+        <h5><a href="#">Monday’s Photos from the 2017 PGA Championship</a></h5>
+        <p>
+          <span><i class="fi-torso"> By Thadeus &nbsp;&nbsp;</i></span>
+          <span><i class="fi-calendar"> 11/23/16 &nbsp;&nbsp;</i></span>
+          <span><i class="fi-comments"> 6 comments</i></span>
+        </p>
+        <p>GolfWRX is live this week from the 2017 PGA Championship at Quail Hollow Club in Charlotte, North Carolina. The course -- which was originally...</p>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+      <div class="large-6 columns">
+        <p><img src="http://placehold.it/600x370&text=Look at me!" alt="image for article" alt="article preview image"></p>
+      </div>
+      <div class="large-6 columns">
+        <h5><a href="#">2017 PGA Championship Betting Odds</a></h5>
+        <p>
+          <span><i class="fi-torso"> By Thadeus &nbsp;&nbsp;</i></span>
+          <span><i class="fi-calendar"> 11/23/16 &nbsp;&nbsp;</i></span>
+          <span><i class="fi-comments"> 6 comments</i></span>
+        </p>
+        <p>After his 2017 Open Championship victory, can Jordan Spieth become the youngest golfer ever to compete the career grand slam at Quail Hollow? Eh, not..</p>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+      <div class="large-6 columns">
+        <p><img src="http://placehold.it/600x370&text=Look at me!" alt="image for article" alt="article preview image"></p>
+      </div>
+      <div class="large-6 columns">
+        <h5><a href="#">Rory McIlroy explains decision to part ways with caddie J.P. Fitzgerald</a></h5>
+        <p>
+          <span><i class="fi-torso"> By Thadeus &nbsp;&nbsp;</i></span>
+          <span><i class="fi-calendar"> 11/23/16 &nbsp;&nbsp;</i></span>
+          <span><i class="fi-comments"> 6 comments</i></span>
+        </p>
+        <p>A report was recently released that Rory McIlroy fired longtime friend and caddie J.P. Fitzgerald, who was on his bag for each of McIlroy's....</p>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+      <div class="large-6 columns">
+        <p><img src="http://placehold.it/600x370&text=Look at me!" alt="image for article" alt="article preview image"></p>
+      </div>
+      <div class="large-6 columns">
+        <h5><a href="#">5 Things We Learned on Day 3 of The Open</a></h5>
+        <p>
+          <span><i class="fi-torso"> By Thadeus &nbsp;&nbsp;</i></span>
+          <span><i class="fi-calendar"> 11/23/16 &nbsp;&nbsp;</i></span>
+          <span><i class="fi-comments"> 6 comments</i></span>
+        </p>
+        <p>5. Bones Can See The Future At the beginning of the NBC Coverage, Dan Hicks asked Jim "Bones" MacKay what he expected to see out on....</p>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+      <div class="large-6 columns">
+          <!-- /1001824/prebid_test4 -->
+   <div id='div-gpt-ad-1503571938435-3'>
+<script>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1503571938435-3'); });
+</script>
+</div>
+</div>
+      <div class="large-6 columns">
+        <h5><a href="#">Phil Mickelson at The Open: No driver, driving iron, new putter?</a></h5>
+        <p>
+          <span><i class="fi-torso"> By Thadeus &nbsp;&nbsp;</i></span>
+          <span><i class="fi-calendar"> 11/23/16 &nbsp;&nbsp;</i></span>
+          <span><i class="fi-comments"> 6 comments</i></span>
+        </p>
+        <p>“My math is different from anyone else,” Phil Mickelson told reporters ahead of the British Open at Royal Birkdale.
+<br>
+It seems, much like his math was different in 2013 when he unleashed the Phrankenwood, Mickelson’s Open calculations have again returned a different result.
+<br>
+Lefty looks to be scrapping the driver in favor of a Callaway Epic 3-iron bent to 16 degrees, per a Golf Channel report. He will also carry a 3-wood this week; it’s a 13.5-degree Callaway GBB Epic Sub Zero with a Mitsubishi Fubuki K 70X shaft.
+<br>
+Mickelson has carried an Apex UT 3-iron this year, which he’ll reportedly keep in the bag in addition to the driving iron.
+<br>
+Interestingly, we also spotted Mickelson testing an insert-less putter, deviating from his Odyssey Versa #9 White with a Microhinge Insert.</p>
+      </div>
+    </div>
+
+    <hr>
+
+    <ul class="pagination" role="navigation" aria-label="Pagination">
+      <li class="disabled">Previous <span class="show-for-sr">page</span></li>
+      <li class="current"><span class="show-for-sr">You're on page</span> 1</li>
+      <li><a href="#" aria-label="Page 2">2</a></li>
+      <li><a href="#" aria-label="Page 3">3</a></li>
+      <li><a href="#" aria-label="Page 4">4</a></li>
+      <li><a href="#" aria-label="Next page">Next <span class="show-for-sr">page</span></a></li>
+    </ul>
+
+    </article>
+
+  </div>
+
+  <div class="large-4 columns">
+
+    <aside>
+
+      <div class="row small-up-3">
+
+        <div class="column text-center">
+          <i class="fi-social-facebook"></i>
+          <h6>56,009</h6>
+          <p><small>FOLLOWERS</small></p>
+          <br>
+        </div>
+
+        <div class="column text-center">
+          <i class="fi-social-twitter"></i>
+          <h6>76,905</h6>
+          <p><small>FOLLOWERS</small></p>
+          <br>
+        </div>
+
+        <div class="column text-center">
+          <i class="fi-social-instagram"></i>
+          <h6>34,099</h6>
+          <p><small>FOLLOWERS</small></p>
+          <br>
+        </div>
+
+        <div class="column text-center">
+          <i class="fi-social-tumblr"></i>
+          <h6>13,765</h6>
+          <p><small>FOLLOWERS</small></p>
+        </div>
+
+        <div class="column text-center">
+          <i class="fi-social-pinterest"></i>
+          <h6>9,283</h6>
+          <p><small>FOLLOWERS</small></p>
+        </div>
+
+        <div class="column text-center">
+          <i class="fi-social-youtube"></i>
+          <h6>99,000</h6>
+          <p><small>FOLLOWERS</small></p>
+        </div>
+
+      </div>
+
+      <br>
+
+      <div class="row column">
+        <p class="lead">FROM OUR FRIENDS</p>
+        <!-- /1001824/prebid_test3 -->
+<div id='div-gpt-ad-1503571938435-2'>
+<script>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1503571938435-2'); });
+</script>
+</div>
+      </div>
+
+      <br>
+
+      <div class="row column">
+        <p class="lead">TRENDING POSTS</p>
+
+        <div class="media-object">
+          <div class="media-object-section">
+            <img class="thumbnail" src= "http://placehold.it/100">
+          </div>
+          <div class="media-object-section">
+            <h5>All I need is a space suit and I'm ready to go.</h5>
+          </div>
+        </div>
+
+        <div class="media-object">
+          <div class="media-object-section">
+            <img class="thumbnail" src= "http://placehold.it/100">
+          </div>
+          <div class="media-object-section">
+            <h5>Are the stars out tonight? I don't know if it's cloudy or bright.</h5>
+          </div>
+        </div>
+
+        <div class="media-object">
+          <div class="media-object-section">
+            <img class="thumbnail" src= "http://placehold.it/100">
+          </div>
+          <div class="media-object-section">
+            <h5>And the world keeps spinning.</h5>
+          </div>
+        </div>
+
+        <div class="media-object">
+          <div class="media-object-section">
+            <img class="thumbnail" src= "http://placehold.it/100">
+          </div>
+          <div class="media-object-section">
+            <h5>Cold hearted orb that rules the night.</h5>
+          </div>
+        </div>
+
+      </div>
+      
+    </aside>
+    
+  </div>
+</div>
+
+<footer>
+  <div class="row expanded callout secondary">
+
+    <div class="large-4 columns">
+      <h5>FLICKR IMAGES</h5>
+      <div class="row small-up-4">
+        <div class="column"><img class="thumbnail" src="http://placehold.it/75" alt="image of space dog"></div>
+        <div class="column"><img class="thumbnail" src="http://placehold.it/75" alt="image of space dog"></div>
+        <div class="column"><img class="thumbnail" src="http://placehold.it/75" alt="image of space dog"></div>
+        <div class="column"><img class="thumbnail" src="http://placehold.it/75" alt="image of space dog"></div>
+        <div class="column"><img class="thumbnail" src="http://placehold.it/75" alt="image of space dog"></div>
+        <div class="column"><img class="thumbnail" src="http://placehold.it/75" alt="image of space dog"></div>
+        <div class="column"><img class="thumbnail" src="http://placehold.it/75" alt="image of space dog"></div>
+        <div class="column"><img class="thumbnail" src="http://placehold.it/75" alt="image of space dog"></div>
+      </div>
+      
+    </div>
+
+    <div class="large-4 columns">
+      <h5>FLICKR IMAGES</h5>
+      <span class="secondary label">Space</span>
+      <span class="secondary label">Galaxies</span>
+      <span class="secondary label">Milky Way</span>
+      <span class="secondary label">Black Holes</span>
+      <span class="secondary label">Rebels</span>
+      <span class="secondary label">Death Star</span>
+      <span class="secondary label">Republic</span>
+      <span class="secondary label">R2D2</span>
+    </div>
+
+    <div class="large-4 columns">
+      <h5>RANDOM MAG</h5>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti quam voluptatum vel repellat ab similique molestias molestiae ea omnis eos, id asperiores est praesentium, voluptate officia nulla aspernatur sequi aliquam.</p>
+    </div>
+
+  </div>
+  <div class="row expanded">
+
+    <div class="medium-6 columns">
+      <ul class="menu">
+        <li><a href="#">Legal</a></li>
+        <li><a href="#">Partner</a></li>
+        <li><a href="#">Explore</a></li>
+      </ul>
+    </div>
+
+    <div class="medium-6 columns">
+      <ul class="menu align-right">
+        <li class="menu-text">Copyright © 2099 Random Mag</li>
+      </ul>
+    </div>
+  </div>
+
+</footer>
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+<script>
+      $(document).foundation();
+    </script>
+<script type="text/javascript" src="https://intercom.zurb.com/scripts/zcom.js"></script>
+</body>
+</html>
