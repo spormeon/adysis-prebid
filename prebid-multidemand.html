@@ -1,0 +1,225 @@
+<html>
+<head>
+    
+  <!-- Prebid Config Section START -->
+  <!-- Make sure this is inserted before your GPT tag -->
+  <script> 
+    var PREBID_TIMEOUT = 500;
+
+    var adUnits = [{
+        code: 'div-gpt-ad-1503393253852-0',
+        sizes: [[300, 250],[300, 600],[160, 600],[120, 600]],
+        bids: [
+        {
+          bidder: 'sovrn',
+          params: {
+            tagid: '504166'//300x600
+          }
+        },
+        {
+          bidder: 'aol', // waiting HB authorize
+          params: {
+            placement: '4882886',  // these are right details, not heard if authorized
+            network: '4436',    //300x250
+            server: 'adserver.adtech.de'
+           }
+         },
+         {
+            bidder: 'huddledmasses',
+            params: {
+              placement_id: 6544   //300x250
+            }
+        },
+        {
+           bidder: 'smartyads',
+           params: {
+             banner_id: 6368 //300x250
+            }
+         },
+        {
+          bidder: 'sovrn',
+          params: {
+            tagid: '504164' //300x250 
+            }
+          },
+          {
+          bidder: 'sovrn',
+          params: {
+            tagid: '504170'//160x600
+            }
+          },
+           {
+          bidder: 'sovrn',
+          params: {
+            tagid: '504169' //120x600
+            }
+          },
+         {
+           bidder: 'smartyads',
+           params: {
+             banner_id: 6383 //160x600
+            }
+         }
+         
+        ]
+    },{
+        code: 'div-gpt-ad-1503393253852-1',
+        sizes: [[728, 90],[970, 250]],
+        bids: [
+        {
+           bidder: 'sovrn',
+           params: {
+             tagid: '504162' //970x250
+             }
+         },
+        {
+          bidder: 'aol', // waiting HB authorize
+          params: {
+            placement: '4882887',  // these are right details, not heard if authorized
+            network: '4436',    //728x90
+            server: 'adserver.adtech.de'
+           }
+         },
+         {
+           bidder: 'sovrn',
+           params: {
+             tagid: '504165' //728x90
+         }
+        },
+        {
+           bidder: 'smartyads',
+           params: {
+             banner_id: 6379 //728x90
+            }
+         },
+         {
+            bidder: 'huddledmasses',
+            params: {
+              placement_id: 6545   //728x90
+            }
+        }
+        ]
+    }];
+    
+    var pbjs = pbjs || {};
+    pbjs.que = pbjs.que || [];
+    
+    pbjs.que.push(function() {
+    pbjs.setPriceGranularity("medium");   // this needs to be tweaked once prices seen more
+    });
+             
+  </script>
+  <!-- Prebid Config Section END -->
+  
+  <!-- Prebid Boilerplate Section START. No Need to Edit. -->
+  
+  <script>
+    var googletag = googletag || {};
+    googletag.cmd = googletag.cmd || [];
+    googletag.cmd.push(function() {
+        googletag.pubads().disableInitialLoad();
+    });
+
+    pbjs.que.push(function() {
+        pbjs.addAdUnits(adUnits);
+        pbjs.requestBids({
+            bidsBackHandler: sendAdserverRequest
+        });
+    });
+
+    function sendAdserverRequest() {
+        if (pbjs.adserverRequestSent) return;
+        pbjs.adserverRequestSent = true;
+        googletag.cmd.push(function() {
+            pbjs.que.push(function() {
+                pbjs.setTargetingForGPTAsync();
+                googletag.pubads().refresh();
+                
+                // development output of targeting params - 2DO: remove prior to production deployment
+          var targetingParams = pbjs.getAdserverTargeting();
+          var container = document.getElementById('targeting_info');
+          container.innerHTML = JSON.stringify(targetingParams);
+            });
+        });
+    }
+
+    setTimeout(function() {
+        sendAdserverRequest();
+    }, PREBID_TIMEOUT);
+
+  </script>
+  <!-- Prebid Boilerplate Section END -->
+  <script type="text/javascript" src="http://adops.golfwrx.com/prebid_20170821225746.js" async></script>
+
+  <script>
+    (function () {
+        var gads = document.createElement('script');
+        gads.async = true;
+        gads.type = 'text/javascript';
+        var useSSL = 'https:' == document.location.protocol;
+        gads.src = (useSSL ? 'https:' : 'http:') +
+                '//www.googletagservices.com/tag/js/gpt.js';
+        var node = document.getElementsByTagName('script')[0];
+        node.parentNode.insertBefore(gads, node);
+    })();
+  </script>
+
+  <script>
+  googletag.cmd.push(function() {
+    googletag.defineSlot('/1001824/prebid_test1', [[300, 250],[300, 600],[160, 600],[120, 600]], 'div-gpt-ad-1503393253852-0').addService(googletag.pubads());
+    googletag.defineSlot('/1001824/prebid_test2', [[970, 250],[728, 90]], 'div-gpt-ad-1503393253852-1').addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.enableServices();
+  });
+</script>
+</head>
+
+<body>
+<h2>Prebid.js Test</h2>
+<div id="targeting_info">no info yet</div>
+<h5>Div-1</h5>
+<!-- /1001824/prebid_test1 -->
+<div id='div-gpt-ad-1503393253852-0'>
+<script>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1503393253852-0'); });
+</script>
+</div>
+
+<h5>Div-2</h5>
+<!-- /1001824/prebid_test2 -->
+<div id='div-gpt-ad-1503393253852-1'>
+<script>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1503393253852-1'); });
+</script>
+</div>
+<center>
+<hr color="#353535" noshade />
+<script>
+  mShowTargeting = function() {
+    try {
+      console.log('printed BEFORE targeting output. click the triangles to explore targeting contents.');
+      console.log(' ');
+      console.log(' ');
+      console.log(' ');
+      var tgt = pbjs.getAdserverTargeting();
+      console.log(tgt);
+      console.log(' ');
+      console.log(' ');
+      console.log(' ');
+      console.log('./end of output');
+    } catch (e) {
+      console.log('mShowTargeting catch thrown...');
+    }
+  };
+</script>
+<button onclick="mShowTargeting()">Log Targeting to Console</button>
+</center>
+
+
+<br><br><br><br>
+<center>
+<a href="/"><button>HOME</button></a>   
+</center>
+<br><br><br><br>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<html>
+<head>
+  <!-- Prebid Config Section START -->
+  <!-- Make sure this is inserted before your GPT tag -->
+  <script> 
+    var PREBID_TIMEOUT = 700;
+
+    var adUnits = [{
+        code: 'div-gpt-ad-1503078667754-0',
+        sizes: [[300, 250]],
+        bids: [
+        {
+                     bidder: 'ucfunnel',
+                     params: {
+                         adid: 'ad-E2BBB7E7B69BD226F93D69A83686264', // required, this is a DMX ID found in your Boost (B3) account
+                         width: '300',
+                         height: '250'
+                }
+            } 
+        ]
+    },{
+        code: 'div-gpt-ad-1503078667754-1',
+        sizes: [[970, 250]],
+        bids: [
+        {
+                     bidder: 'ucfunnel',
+                     params: {
+                         adid: 'ad-E2BBB7E7228BEA4619687AEBE384A48', // required, this is a DMX ID found in your Boost (B3) account
+                         width: '970',
+                         height: '250'
+                }
+        }]
+    }];
+    
+    var pbjs = pbjs || {};
+    pbjs.que = pbjs.que || [];
+
+  </script>
+  <!-- Prebid Config Section END -->
+  
+  <!-- Prebid Boilerplate Section START. No Need to Edit. -->
+  <script type="text/javascript" src="http://adops.golfwrx.com/prebid_20170821225746.js" async></script>
+  <script>
+    var googletag = googletag || {};
+    googletag.cmd = googletag.cmd || [];
+    googletag.cmd.push(function() {
+        googletag.pubads().disableInitialLoad();
+    });
+
+    pbjs.que.push(function() {
+        pbjs.addAdUnits(adUnits);
+        pbjs.requestBids({
+            bidsBackHandler: sendAdserverRequest
+        });
+    });
+
+    function sendAdserverRequest() {
+        if (pbjs.adserverRequestSent) return;
+        pbjs.adserverRequestSent = true;
+        googletag.cmd.push(function() {
+            pbjs.que.push(function() {
+                pbjs.setTargetingForGPTAsync();
+                googletag.pubads().refresh();
+            });
+        });
+    }
+
+    setTimeout(function() {
+        sendAdserverRequest();
+    }, PREBID_TIMEOUT);
+
+  </script>
+  <!-- Prebid Boilerplate Section END -->
+
+  <script>
+    (function () {
+        var gads = document.createElement('script');
+        gads.async = true;
+        gads.type = 'text/javascript';
+        var useSSL = 'https:' == document.location.protocol;
+        gads.src = (useSSL ? 'https:' : 'http:') +
+                '//www.googletagservices.com/tag/js/gpt.js';
+        var node = document.getElementsByTagName('script')[0];
+        node.parentNode.insertBefore(gads, node);
+    })();
+  </script>
+
+  <script>
+  googletag.cmd.push(function() {
+    googletag.defineSlot('/1001824/prebid_test1', [[1, 1]], 'div-gpt-ad-1503392190870-0').addService(googletag.pubads());
+    googletag.defineSlot('/1001824/prebid_test2', [[1, 1]], 'div-gpt-ad-1503392190870-1').addService(googletag.pubads());
+    googletag.defineSlot('/1001824/prebid_test3', [[160, 600], [300, 250], [728, 90], [120, 600], [970, 250], [300, 600], [970, 90]], 'div-gpt-ad-1503392190870-2').addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.enableServices();
+  });
+</script>
+</head>
+
+<body>
+<h2>Prebid.js Test</h2>
+<h5>Div-1</h5>
+<!-- /1001824/prebid_test1 -->
+<div id='div-gpt-ad-1503392190870-0'>
+<script>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1503392190870-0'); });
+</script>
+</div>
+</div>
+
+<h5>Div-2</h5>
+<!-- /1001824/prebid_test2 -->
+<div id='div-gpt-ad-1503392190870-1'>
+<script>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1503392190870-1'); });
+</script>
+</div>
+</div>
+
+
+<h5>Div-3</h5>
+<!-- /1001824/prebid_test3 -->
+<div id='div-gpt-ad-1503392190870-2'>
+<script>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1503392190870-2'); });
+</script>
+</div>
+</div>
+<center>
+<hr color="#353535" noshade />
+<script>
+  mShowTargeting = function() {
+    try {
+      console.log('printed BEFORE targeting output. click the triangles to explore targeting contents.');
+      console.log(' ');
+      console.log(' ');
+      console.log(' ');
+      var tgt = pbjs.getAdserverTargeting();
+      console.log(tgt);
+      console.log(' ');
+      console.log(' ');
+      console.log(' ');
+      console.log('./end of output');
+    } catch (e) {
+      console.log('mShowTargeting catch thrown...');
+    }
+  };
+</script>
+<button onclick="mShowTargeting()">Log Targeting to Console</button>
+</center>
+
+
+<br><br><br><br>
+<center>
+<a href="/"><button>HOME</button></a>   
+</center>
+<br><br><br><br>
+</body>
+</html>
