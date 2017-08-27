@@ -1,3 +1,5 @@
+//currency
+
 {
    "dataAsOf":"2017-08-24",
    "conversions":{
