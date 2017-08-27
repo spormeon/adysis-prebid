@@ -176,12 +176,7 @@
     gpt_config.state.latest_gbp_rate = newRate;
     console.log('Latest GBP Rate updated: ', gpt_config.state.latest_gbp_rate);
   });
-// Add the below code snippet to your page
-    pbjs.que.push(function() {
-    pbjs.enableAnalytics({
-           provider: 'pulsepoint'
-        });
-    });
+
 </script>
 
 <!-- Prebid Boilerplate Section START. No Need to Edit. -->
@@ -196,6 +191,9 @@
       pbjs.addAdUnits(adUnits);
       pbjs.requestBids({
         bidsBackHandler: initAdserver
+        });
+      pbjs.enableAnalytics({   // trying to add pulsepoint analytics
+           provider: 'pulsepoint'
       });
     });
 
