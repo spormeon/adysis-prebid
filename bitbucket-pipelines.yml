@@ -5,5 +5,5 @@ pipelines:
     master:
       - step:
           script:
-            - aws s3 --region "us-east-1" sync / s3://adysis-ad-delivery-js --cache-control "public, max-age=14400" --delete
+            - aws s3 --region "us-east-1" sync /prebid-header-bidding s3://adysis-ad-delivery-js --cache-control "public, max-age=14400" --delete
             
