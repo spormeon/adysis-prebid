@@ -1,4 +1,4 @@
-//currency grab
+//currency grabs
 
 {
    "dataAsOf":"2017-08-24",
