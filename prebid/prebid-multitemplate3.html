@@ -176,7 +176,25 @@
     gpt_config.state.latest_gbp_rate = newRate;
     console.log('Latest GBP Rate updated: ', gpt_config.state.latest_gbp_rate);
   });
-
+  
+  //adjust bids for gross to net value
+  pbjs.bidderSettings = {
+      aol: {
+        bidCpmAdjustment : function(bidCpm){
+          // adjust the bid in real time before the auction takes place
+          return bidCpm * 0.85;
+        }
+      }
+    };
+    
+    pbjs.bidderSettings = {
+      districtmDMX: {
+        bidCpmAdjustment : function(bidCpm){
+          // adjust the bid in real time before the auction takes place
+          return bidCpm * 0.90;
+        }
+      }
+    };
 </script>
 
 <!-- Prebid Boilerplate Section START. No Need to Edit. -->
