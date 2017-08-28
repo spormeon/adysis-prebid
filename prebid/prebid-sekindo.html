@@ -1,5 +1,28 @@
 <html>
 <head>
+    
+<script type="text/javascript">
+  function PPObjectIndented(obj, indent) {
+   try { console.log("PrettyPrint Object Function Called...");} catch (e) { }
+   if (Object.keys(obj).length === 0 && obj.constructor === Object) return "{}: empty object returned...";
+   var result = "";
+   if (indent == null) { indent = ""; }
+   for (var property in obj) {
+     var value = obj[property];
+     if (typeof value == 'string') { value = "'" + value + "'"; }
+     else if (typeof value == 'object') {
+       if (value instanceof Array) { value = "[ " + value + " ]"; }
+       else {
+         var od = PPObjectIndented(value, indent + "  ");
+         value = "\n<br/>" + indent + "{\n<br/>" + od + "\n" + indent + "}";   // If you prefer { and } to be aligned
+       }
+     }
+     result += indent + "'" + property + "' : " + value + ",\n<br/>";
+   }
+   return result.replace(/,\n$/, "");
+ }
+</script>
+
   <!-- Prebid Config Section START -->
   <!-- Make sure this is inserted before your GPT tag -->
   <script> 
@@ -64,7 +87,14 @@
             });
         });
     }
-
+    
+// development output of targeting params - 2DO: remove prior to production deployment
+          var targetingParams = pbjs.getAdserverTargeting();
+          var paramsOutput = PPObjectIndented(targetingParams, "  ");
+          var container = document.getElementById('targeting_info');
+          container.innerHTML = paramsOutput;
+          // container.innerHTML = JSON.stringify(targetingParams);
+          
     setTimeout(function() {
         sendAdserverRequest();
     }, PREBID_TIMEOUT);
