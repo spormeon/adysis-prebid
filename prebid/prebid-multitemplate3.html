@@ -37,12 +37,12 @@
 <!-- Make sure this is inserted before your GPT tag -->
 <script>
   
-  var PREBID_TIMEOUT = 1500;
+  var PREBID_TIMEOUT = 1500;   // seems to be more stable at 1500
      
   var gpt_config = {
     prebid_timeout: 1000, //left for reference but not using right now...
     default_gbp_rate: 0.71,
-    latest_gbp_rate: 0.77984,
+    latest_gbp_rate: 0.77984, //needs to chnage on, mon, tue, wed, thurs, frid, sat.  no currency chnages on weekends
     dynamically_lookup_gbp_rate: true,
     mobileWidthBreakpoint: 640,
     tabletWidthBreakpoint: 767,
@@ -64,15 +64,7 @@
       leaderboard_sizes:  isMobile ? gpt_config.leaderboard_sizes_mobile : gpt_config.leaderboard_sizes
   }; //./gpt_config.state
   
-  //load up prebid.js
-  (function() {
-      var pbjsEl = document.createElement("script");
-      pbjsEl.type = "text/javascript";
-      pbjsEl.async = true;
-      pbjsEl.src = "https://d3s34vlfe7g7ew.cloudfront.net/prebid_20170821225746.js";
-      var pbjsTargetEl = document.getElementsByTagName("head")[0];
-      pbjsTargetEl.insertBefore(pbjsEl, pbjsTargetEl.firstChild);
-  })();
+ 
   
   var adUnits = [
   //new ad unit block
@@ -196,6 +188,17 @@
 
 <!-- Prebid Boilerplate Section START. No Need to Edit. -->
   <script>
+   //load up prebid.js
+  (function() {
+      var pbjsEl = document.createElement("script");
+      pbjsEl.type = "text/javascript";
+      pbjsEl.async = true;
+      pbjsEl.src = "https://d3s34vlfe7g7ew.cloudfront.net/prebid_20170821225746.js";
+      var pbjsTargetEl = document.getElementsByTagName("head")[0];
+      pbjsTargetEl.insertBefore(pbjsEl, pbjsTargetEl.firstChild);
+  })();
+  
+  
     var googletag = googletag || {};
     googletag.cmd = googletag.cmd || [];
     googletag.cmd.push(function() {
@@ -203,6 +206,7 @@
     });
 
     pbjs.que.push(function() {
+      pbjs.setPriceGranularity("medium");   // this needs to be tweaked once prices seen more
       pbjs.addAdUnits(adUnits);
       pbjs.requestBids({
         bidsBackHandler: initAdserver
