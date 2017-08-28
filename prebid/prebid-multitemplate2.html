@@ -220,7 +220,7 @@
               },{
                 key: "hb_pb",
                 val: function(bidResponse) {
-                  return bidResponse.cpm * (gpt_config.state.latest_gbp_rate || gpt_config.default_gbp_rate);
+                  var cpm = bidResponse.cpm * (gpt_config.state.latest_gbp_rate || gpt_config.default_gbp_rate);
                   if (cpm < 100) {
                     return (Math.ceil(cpm)).toFixed(2); 
                   } else {
