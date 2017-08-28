@@ -81,6 +81,8 @@
       { bidder: 'pulsepoint',   params: { cf: '300X250', cp: 561446, ct: 602639 } }, /*300x250 */
       { bidder: 'pulsepoint',   params: { cf: '160X600', cp: 561446, ct: 602640 } }, /*160x600 */
       { bidder: 'pulsepoint',   params: { cf: '120X600', cp: 561446, ct: 602641 } }, /*120x600*/
+      { bidder: 'sekindoUM',    params: { spaceId: '87709' } }, /* 300x250 */  //sekindo in-banner video demand
+      { bidder: 'sekindoapn',   params: { placement: '11968756' } }, /* 300x250 */  //sekindo ATF_APN
       { bidder: 'sovrn',        params: { tagid: '504164' } }, /* 300x250 */
       { bidder: 'sovrn',        params: { tagid: '504170' } }, /* 160x600 */
       { bidder: 'sovrn',        params: { tagid: '504169' } } /* 120x600 */
@@ -184,6 +186,14 @@
         }
       }
     };
+    pbjs.bidderSettings = {
+      sekindoapn: {
+        bidCpmAdjustment : function(bidCpm){
+          // adjust the bid in real time before the auction takes place
+          return bidCpm * 0.75;
+        }
+      }
+    };
 </script>
 
 <!-- Prebid Boilerplate Section START. No Need to Edit. -->
@@ -206,6 +216,7 @@
     });
 
     pbjs.que.push(function() {
+      pbjs.aliasBidder("appnexus","sekindoapn");  // alias for bidder
       pbjs.setPriceGranularity("medium");   // this needs to be tweaked once prices seen more
       pbjs.addAdUnits(adUnits);
       pbjs.requestBids({
