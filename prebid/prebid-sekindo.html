@@ -143,8 +143,10 @@
     </script>
 </div>
 <center>
+    <div id="targeting_info">no info yet</div>
 <hr color="#353535" noshade />
 <script>
+  // this is used by link / button. there is inline code in the PB chain to udpate the on-page div with targeting params...
   mShowTargeting = function() {
     try {
       console.log('printed BEFORE targeting output. click the triangles to explore targeting contents.');
@@ -157,19 +159,15 @@
       console.log(' ');
       console.log(' ');
       console.log('./end of output');
-    } catch (e) {
-      console.log('mShowTargeting catch thrown...');
-    }
+    } catch (e) { }
   };
 </script>
 <button onclick="mShowTargeting()">Log Targeting to Console</button>
 </center>
-
-
-<br><br><br><br>
 <center>
-<a href="/"><button>HOME</button></a>   
+<a href="/"><button>ADOPTS HOME</button></a>   
 </center>
+  <br>
 <br><br><br><br>
 </body>
 </html>
