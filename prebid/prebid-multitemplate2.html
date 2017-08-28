@@ -40,7 +40,7 @@
   var gpt_config = {
     prebid_timeout: 1000, //left for reference but not using right now...
     default_gbp_rate: 0.71,
-    latest_gbp_rate: 9.77984,
+    latest_gbp_rate: 0.77984,
     dynamically_lookup_gbp_rate: true,
     mobileWidthBreakpoint: 640,
     tabletWidthBreakpoint: 767,
@@ -221,6 +221,11 @@
                 key: "hb_pb",
                 val: function(bidResponse) {
                   return bidResponse.cpm * (gpt_config.state.latest_gbp_rate || gpt_config.default_gbp_rate);
+                  if (cpm < 100) {
+                    return (Math.ceil(cpm)).toFixed(2); 
+                  } else {
+                    return '100.00';
+                  }
                 }
               }]
             }
