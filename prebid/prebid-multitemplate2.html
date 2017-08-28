@@ -210,7 +210,9 @@
               }, {
                 key: "custom_bid_price",
                 val: function(bidResponse) {
-                  return 'NONE';
+                  if (cpm < 0.00) {
+              return 'NONE';
+                 }
                 }
               },{
                 key: "hb_pb",
