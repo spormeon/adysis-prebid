@@ -72,6 +72,19 @@
           }
         },
         {
+          bidder: 'sekindoUM', // sekindos in-banner video demand
+          params: {
+            spaceId: '87709'  // 300x250
+          }
+        }, 
+        {
+          bidder: 'sekindoapn',   // display banners, should be no video
+          params: {
+            placement: '11968756'   // 300x250 ATF_APN
+                            
+          }
+        },
+        {
           bidder: 'aol', 
           params: {
             placement: '4882886',  
@@ -479,8 +492,17 @@
         }
       }
     };
+    pbjs.bidderSettings = {
+      sekindoapn: {
+        bidCpmAdjustment : function(bidCpm){
+          // adjust the bid in real time before the auction takes place
+          return bidCpm * 0.75;
+        }
+      }
+    };
     
     pbjs.que.push(function() {
+      pbjs.aliasBidder("appnexus","sekindo");
       pbjs.setPriceGranularity("medium");   // this needs to be tweaked once prices seen more
     });
              
