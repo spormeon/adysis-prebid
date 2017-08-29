@@ -49,17 +49,7 @@
     leaderboard_sizes_mobile: [[320, 50]]
   }; //./gpt_config
 
-  var isMobile = /iPhone|iPod|Android|iemobile|WPDesktop|Windows Phone|BlackBerry|BB/i.test(navigator.userAgent) && /Mobile/i.test(navigator.userAgent);
-
-  gpt_config.state = {
-      isMobile: isMobile,
-      viewport: {
-          width: window.innerWidth && document.documentElement.clientWidth ? Math.min(window.innerWidth, document.documentElement.clientWidth) : window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth,
-          height: window.innerHeight && document.documentElement.clientHeight ? Math.min(window.innerHeight, document.documentElement.clientHeight) : window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight
-      },
-      bigbox_sizes:  isMobile ? gpt_config.bigbox_sizes_mobile : gpt_config.bigbox_sizes,
-      leaderboard_sizes:  isMobile ? gpt_config.leaderboard_sizes_mobile : gpt_config.leaderboard_sizes
-  }; //./gpt_config.state
+  
   
   var adUnits = [
   //new ad unit block
@@ -224,8 +214,8 @@
   })();
 
   getGBPRate(function(newRate) {
-    gpt_config.state.latest_gbp_rate = newRate;
-    console.log('Latest GBP Rate updated: ', gpt_config.state.latest_gbp_rate);
+    gpt_config.latest_gbp_rate = newRate;
+    console.log('Latest GBP Rate updated: ', gpt_config.latest_gbp_rate);
   });
   
   
@@ -293,7 +283,7 @@
               }, {
                 key: "hb_pb",
                 val: function(bidResponse) {
-                  var cpm = bidResponse.cpm * (gpt_config.state.latest_gbp_rate || gpt_config.default_gbp_rate);
+                  var cpm = bidResponse.cpm * (gpt_config.latest_gbp_rate || gpt_config.default_gbp_rate);
                   if (cpm < 100) {
                     return (Math.ceil(cpm)).toFixed(2); 
                   } else {
