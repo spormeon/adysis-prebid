@@ -65,19 +65,19 @@
   //new ad unit block
   {
     code: 'div-gpt-ad-1503571938435-0',  // first right hand side 300x600 
-    sizes: gpt_config.state.bigbox_sizes,
+    sizes: gpt_config.bigbox_sizes,
     sizeMapping: [  //new!
                              {
                                  minWidth : 1024,  //if device screen width is greater than 1024, use these sizes
-                                 sizes : gpt_config.state.bigbox_sizes
+                                 sizes : gpt_config.bigbox_sizes
                              },
                              {
                                  minWidth : 480,  //if device screen width is < 1024 && > 480, use these sizes
-                                 sizes : gpt_config.state.bigbox_sizes_tablet
+                                 sizes : gpt_config.bigbox_sizes_tablet
                              },
                              {
                                  minWidth : 0,  //if device screen width is < 480 && > 0, use these sizes
-                                 sizes : gpt_config.state.bigbox_sizes_mobile
+                                 sizes : gpt_config.bigbox_sizes_mobile
                              }
              ],
     bids: [
@@ -99,7 +99,7 @@
   //new ad unit block
   {
     code: 'div-gpt-ad-1503571938435-2', //second right hand side 300x600
-    sizes: gpt_config.state.bigbox_sizes,
+    sizes: gpt_config.bigbox_sizes,
     bids: [
       { bidder: 'aol',          params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, //300x250
       { bidder: 'aol',          params: { placement: '4882888', network: '4436.1', server: 'adserver.adtech.de' } }, //160x600
@@ -118,7 +118,7 @@
   //new ad unit block
   {
     code: 'div-gpt-ad-1503571938435-3',  // first left hand side 300x600
-    sizes: gpt_config.state.bigbox_sizes,
+    sizes: gpt_config.bigbox_sizes,
     bids: [
       { bidder: 'aol',          params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, //300x250
       { bidder: 'aol',          params: { placement: '4882888', network: '4436.1', server: 'adserver.adtech.de' } }, //160x600
@@ -137,19 +137,19 @@
   //new ad unit block
   {
     code: 'div-gpt-ad-1503571938435-1',
-    sizes: gpt_config.state.leaderboard_sizes,
+    sizes: gpt_config.leaderboard_sizes,
     sizeMapping: [  //new!
                              {
                                  minWidth : 1024,  //if device screen width is greater than 1024, use these sizes
-                                 sizes : gpt_config.state.leaderboard_sizes
+                                 sizes : gpt_config.leaderboard_sizes
                              },
                              {
                                  minWidth : 480,  //if device screen width is < 1024 && > 480, use these sizes
-                                 sizes : gpt_config.state.leaderboard_sizes_tablet
+                                 sizes : gpt_config.leaderboard_sizes_tablet
                              },
                              {
                                  minWidth : 0,  //if device screen width is < 480 && > 0, use these sizes
-                                 sizes : gpt_config.state.leaderboard_sizes_mobile
+                                 sizes : gpt_config.leaderboard_sizes_mobile
                              }
              ],
     bids: [
