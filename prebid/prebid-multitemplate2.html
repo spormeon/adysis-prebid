@@ -242,7 +242,7 @@
             
           
           pbjs.setTargetingForGPTAsync();
-          googletag.pubads().refresh();
+          googletag.pubads().setTargeting('[hb_nowin]'), refresh();
 
           // development output of targeting params - 2DO: remove prior to production deployment
           var targetingParams = pbjs.getAdserverTargeting();
