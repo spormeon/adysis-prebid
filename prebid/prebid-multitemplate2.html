@@ -157,33 +157,6 @@
 
   var pbjs = pbjs || {};
   pbjs.que = pbjs.que || [];
-  
-    //adjust bids for gross to net value
-            pbjs.bidderSettings = {
-      aol: {
-        bidCpmAdjustment : function(bidCpm){
-          // adjust the bid in real time before the auction takes place
-          return bidCpm * 0.85;
-        }
-      }
-    };
-    
-    pbjs.bidderSettings = {
-      districtmDMX: {
-        bidCpmAdjustment : function(bidCpm){
-          // adjust the bid in real time before the auction takes place
-          return bidCpm * 0.90;
-        }
-      }
-    };
-    pbjs.bidderSettings = {
-      sekindoapn: {
-        bidCpmAdjustment : function(bidCpm){
-          // adjust the bid in real time before the auction takes place
-          return bidCpm * 0.75;
-        }
-      }
-    };
             
   //load up prebid.js,  I think we need to load this earlier
   (function() {
@@ -228,6 +201,24 @@
         pbjs.que.push(function() {
           
           pbjs.bidderSettings = {
+              aol: {
+        bidCpmAdjustment : function(bidCpm){
+          // adjust the bid in real time before the auction takes place
+          return bidCpm * 0.85;
+        }
+      },
+      districtDMX: {
+        bidCpmAdjustment : function(bidCpm){
+          // adjust the bid in real time before the auction takes place
+          return bidCpm * 0.90;
+        }
+      },
+      sekindonapn: {
+        bidCpmAdjustment : function(bidCpm){
+          // adjust the bid in real time before the auction takes place
+          return bidCpm * 0.75;
+        }
+      },
             standard: {
               adserverTargeting: [{
                 key: "hb_bidder",
