@@ -213,6 +213,11 @@
                   return bidResponse.adId;
                 }
               }, {
+                key: "hb_nowin",
+                val: function(bidResponse){
+                  return 'no_win';
+                }
+              }, {
                 key: "custom_bid_price",
                 val: function(bidResponse) {
                     return bidResponse.cpm;
@@ -242,7 +247,7 @@
             
           
           pbjs.setTargetingForGPTAsync();
-          googletag.pubads().setTargeting('hb_nowin', 'NONE'); refresh();
+          googletag.pubads().refresh();
 
           // development output of targeting params - 2DO: remove prior to production deployment
           var targetingParams = pbjs.getAdserverTargeting();
