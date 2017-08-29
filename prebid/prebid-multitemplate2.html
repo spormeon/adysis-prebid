@@ -157,7 +157,13 @@
 
   var pbjs = pbjs || {};
   pbjs.que = pbjs.que || [];
-
+  
+    //adjust bids for gross to net value
+            pbjs.bidderSettings = 
+            { aol: { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.85; }}},
+            { districtDMX: { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.90; }}},
+            { sekindoapn: { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.75; }}};
+            
   //load up prebid.js,  I think we need to load this earlier
   (function() {
       var pbjsEl = document.createElement("script");
@@ -239,11 +245,7 @@
             }
           };
           //./pbjs.bidderSettings
-          //adjust bids for gross to net value
-            pbjs.bidderSettings = 
-            { aol: { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.85; }}},
-            { districtDMX: { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.90; }}},
-            { sekindoapn: { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.75; }}};
+          
             
           
           pbjs.setTargetingForGPTAsync();
