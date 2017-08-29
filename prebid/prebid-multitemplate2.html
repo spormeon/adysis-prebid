@@ -39,8 +39,8 @@
      
   var gpt_config = {
     prebid_timeout: 1000, //left for reference but not using right now...
-    default_gbp_rate: 0.71,
-    latest_gbp_rate: 0.77984,
+    default_gbp_rate: 0.71, // not being used
+    latest_gbp_rate: 0.77984, //not being used, using newRate from the function
     dynamically_lookup_gbp_rate: true,
     mobileWidthBreakpoint: 640,
     tabletWidthBreakpoint: 767,
@@ -171,7 +171,9 @@
     gpt_config.state.latest_gbp_rate = newRate;
     console.log('Latest GBP Rate updated: ', gpt_config.state.latest_gbp_rate);
   });
-
+  
+  
+    
 </script>
 
 <!-- Prebid Boilerplate Section START. No Need to Edit. -->
@@ -183,6 +185,8 @@
     });
 
     pbjs.que.push(function() {
+      pbjs.aliasBidder("appnexus","sekindoapn");  // alias for bidder
+      pbjs.setPriceGranularity("medium");   // this needs to be tweaked once prices seen more
       pbjs.addAdUnits(adUnits);
       pbjs.requestBids({
         bidsBackHandler: initAdserver
@@ -210,8 +214,9 @@
               }, {
                 key: "custom_bid_price",
                 val: function(bidResponse) {
+                    return bidResponse.cpm;
                   if (cpm < 0.00) {
-              return 'NONE';
+                    return 'NONE';
                  }
                 }
               },{
@@ -226,7 +231,14 @@
                 }
               }]
             }
-          }; //./pbjs.bidderSettings
+          };
+          //./pbjs.bidderSettings
+          //adjust bids for gross to net value
+            pbjs.bidderSettings = 
+            { aol: { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.85; }}},
+            { districtDMX: { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.90; }}},
+            { sekindoapn: { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.75; }}};
+            
           
           pbjs.setTargetingForGPTAsync();
           googletag.pubads().refresh();
