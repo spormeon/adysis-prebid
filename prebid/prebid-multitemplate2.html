@@ -221,7 +221,7 @@
                 key: "custom_bid_price",
                 val: function(bidResponse) {
                     return bidResponse.cpm;
-                  if (cpm < 0.00) {
+                  if (cpm < 100.00) {
                     return 'NONE';
                  }
                 }
