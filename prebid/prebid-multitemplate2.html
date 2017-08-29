@@ -194,7 +194,7 @@
       });
     });
 
-    function sendAdserverRequest() {
+    function initAdserver() {
       if (pbjs.adserverRequestSent) return;
       pbjs.adserverRequestSent = true;
       googletag.cmd.push(function() {
@@ -259,7 +259,7 @@
       });
     }
 
-    setTimeout(function() { sendAdserverRequest(); }, PREBID_TIMEOUT);
+    setTimeout(function() { initAdserver(); }, PREBID_TIMEOUT);
 
   </script>
   <!-- Prebid Boilerplate Section END -->
