@@ -45,7 +45,7 @@
     bigbox_sizes_tablet: [[300, 250]],
     bigbox_sizes_mobile: [[300, 250]],
     leaderboard_sizes: [[970, 250],[970, 90],[728, 90]],
-    leaderboard_sizes_tablet: [[970, 90],[728, 90]],
+    leaderboard_sizes_tablet: [[728, 90]],
     leaderboard_sizes_mobile: [[320, 50]]
   }; //./gpt_config
 
@@ -69,15 +69,15 @@
     sizeMapping: [  //new!
                              {
                                  minWidth : 1024,  //if device screen width is greater than 1024, use these sizes
-                                 sizes : gpt_config.bigbox_sizes
+                                 sizes : [[300, 600], [300, 250], [160, 600], [120, 600]]
                              },
                              {
                                  minWidth : 480,  //if device screen width is < 1024 && > 480, use these sizes
-                                 sizes : gpt_config.bigbox_sizes_tablet
+                                 sizes : [[300, 250]]
                              },
                              {
                                  minWidth : 0,  //if device screen width is < 480 && > 0, use these sizes
-                                 sizes : gpt_config.bigbox_sizes_mobile
+                                 sizes : [[300, 250]]
                              }
              ],
     bids: [
@@ -100,6 +100,20 @@
   {
     code: 'div-gpt-ad-1503571938435-2', //second right hand side 300x600
     sizes: gpt_config.bigbox_sizes,
+    sizeMapping: [  //new!
+                             {
+                                 minWidth : 1024,  //if device screen width is greater than 1024, use these sizes
+                                 sizes : [[300, 600], [300, 250], [160, 600], [120, 600]]
+                             },
+                             {
+                                 minWidth : 480,  //if device screen width is < 1024 && > 480, use these sizes
+                                 sizes : [[300, 250]]
+                             },
+                             {
+                                 minWidth : 0,  //if device screen width is < 480 && > 0, use these sizes
+                                 sizes : [[300, 250]]
+                             }
+             ],
     bids: [
       { bidder: 'aol',          params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, //300x250
       { bidder: 'aol',          params: { placement: '4882888', network: '4436.1', server: 'adserver.adtech.de' } }, //160x600
@@ -119,6 +133,20 @@
   {
     code: 'div-gpt-ad-1503571938435-3',  // first left hand side 300x600
     sizes: gpt_config.bigbox_sizes,
+    sizeMapping: [  //new!
+                             {
+                                 minWidth : 1024,  //if device screen width is greater than 1024, use these sizes
+                                 sizes : [[300, 600], [300, 250], [160, 600], [120, 600]]
+                             },
+                             {
+                                 minWidth : 480,  //if device screen width is < 1024 && > 480, use these sizes
+                                 sizes : [[300, 250]]
+                             },
+                             {
+                                 minWidth : 0,  //if device screen width is < 480 && > 0, use these sizes
+                                 sizes : [[300, 250]]
+                             }
+             ],
     bids: [
       { bidder: 'aol',          params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, //300x250
       { bidder: 'aol',          params: { placement: '4882888', network: '4436.1', server: 'adserver.adtech.de' } }, //160x600
@@ -141,15 +169,15 @@
     sizeMapping: [  //new!
                              {
                                  minWidth : 1024,  //if device screen width is greater than 1024, use these sizes
-                                 sizes : gpt_config.leaderboard_sizes
+                                 sizes : [[970, 250],[970, 90],[728, 90]]
                              },
                              {
                                  minWidth : 480,  //if device screen width is < 1024 && > 480, use these sizes
-                                 sizes : gpt_config.leaderboard_sizes_tablet
+                                 sizes : [[728, 90]]
                              },
                              {
                                  minWidth : 0,  //if device screen width is < 480 && > 0, use these sizes
-                                 sizes : gpt_config.leaderboard_sizes_mobile
+                                 sizes : [[320, 50]]
                              }
              ],
     bids: [
