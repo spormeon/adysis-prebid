@@ -194,7 +194,7 @@
       });
     });
 
-    function initAdserver() {
+    function sendAdserverRequest() {
       if (pbjs.adserverRequestSent) return;
       pbjs.adserverRequestSent = true;
       googletag.cmd.push(function() {
