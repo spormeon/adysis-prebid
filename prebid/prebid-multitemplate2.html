@@ -233,14 +233,6 @@
                   return 'no_win';
                 }
               }, {
-                key: "custom_bid_price",
-                val: function(bidResponse) {
-                    return bidResponse.cpm;
-                  if (cpm < 100.00) {
-                    return 'NONE';
-                 }
-                }
-              },{
                 key: "hb_pb",
                 val: function(bidResponse) {
                   var cpm = bidResponse.cpm * (gpt_config.state.latest_gbp_rate || gpt_config.default_gbp_rate);
