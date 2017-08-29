@@ -35,7 +35,7 @@
 <!-- Make sure this is inserted before your GPT tag -->
 <script>
   
-  var PREBID_TIMEOUT = 1100;
+  var PREBID_TIMEOUT = 1000;
      
   var gpt_config = {
     prebid_timeout: 1000, //left for reference but not using right now...
@@ -68,7 +68,6 @@
     code: 'div-gpt-ad-1503571938435-0',  // first right hand side 300x600 
     sizes: gpt_config.state.bigbox_sizes,
     bids: [
-      { bidder: 'sovrn',        params: { tagid: '504166' } }, /* 300x600 */
       { bidder: 'aol',          params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x250 */ 
       { bidder: 'aol',          params: { placement: '4882888', network: '4436.1', server: 'adserver.adtech.de' } }, /* 160x600 */
       { bidder: 'aol',          params: { placement: '5293857', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x600 */
@@ -77,6 +76,8 @@
       { bidder: 'pulsepoint',   params: { cf: '300X250', cp: 561446, ct: 602639 } }, /*300x250 */
       { bidder: 'pulsepoint',   params: { cf: '160X600', cp: 561446, ct: 602640 } }, /*160x600 */
       { bidder: 'pulsepoint',   params: { cf: '120X600', cp: 561446, ct: 602641 } }, /*120x600*/
+      { bidder: 'sekindoapn',   params: { placement: '11968756' } }, /* 300x250 */  //sekindo ATF_APN
+      { bidder: 'sovrn',        params: { tagid: '504166' } }, /* 300x600 */
       { bidder: 'sovrn',        params: { tagid: '504164' } }, /* 300x250 */
       { bidder: 'sovrn',        params: { tagid: '504170' } }, /* 160x600 */
       { bidder: 'sovrn',        params: { tagid: '504169' } } /* 120x600 */
@@ -87,7 +88,6 @@
     code: 'div-gpt-ad-1503571938435-2', //second right hand side 300x600
     sizes: gpt_config.state.bigbox_sizes,
     bids: [
-      { bidder: 'sovrn',        params: { tagid: '504166' } }, //300x600
       { bidder: 'aol',          params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, //300x250
       { bidder: 'aol',          params: { placement: '4882888', network: '4436.1', server: 'adserver.adtech.de' } }, //160x600
       { bidder: 'aol',          params: { placement: '5293857', network: '4436.1', server: 'adserver.adtech.de' } }, //300x600
@@ -96,6 +96,7 @@
       { bidder: 'pulsepoint',   params: { cf: '300X250', cp: 561446, ct: 602639 } }, /*300x250 */
       { bidder: 'pulsepoint',   params: { cf: '160X600', cp: 561446, ct: 602640 } }, /*160x600 */
       { bidder: 'pulsepoint',   params: { cf: '120X600', cp: 561446, ct: 602641 } }, /*120x600*/
+      { bidder: 'sovrn',        params: { tagid: '504166' } }, //300x600
       { bidder: 'sovrn',        params: { tagid: '504164' } }, //300x250 
       { bidder: 'sovrn',        params: { tagid: '504170' } }, //160x600
       { bidder: 'sovrn',        params: { tagid: '504169' } } //120x600
@@ -106,7 +107,6 @@
     code: 'div-gpt-ad-1503571938435-3',  // first left hand side 300x600
     sizes: gpt_config.state.bigbox_sizes,
     bids: [
-      { bidder: 'sovrn',        params: { tagid: '504166' } }, //300x600
       { bidder: 'aol',          params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, //300x250
       { bidder: 'aol',          params: { placement: '4882888', network: '4436.1', server: 'adserver.adtech.de' } }, //160x600
       { bidder: 'aol',          params: { placement: '5293857', network: '4436.1', server: 'adserver.adtech.de' } }, //300x600
@@ -115,6 +115,7 @@
       { bidder: 'pulsepoint',   params: { cf: '300X250', cp: 561446, ct: 602639 } }, /*300x250 */
       { bidder: 'pulsepoint',   params: { cf: '160X600', cp: 561446, ct: 602640 } }, /*160x600 */
       { bidder: 'pulsepoint',   params: { cf: '120X600', cp: 561446, ct: 602641 } }, /*120x600*/
+      { bidder: 'sovrn',        params: { tagid: '504166' } }, //300x600
       { bidder: 'sovrn',        params: { tagid: '504164' } }, //300x250 
       { bidder: 'sovrn',        params: { tagid: '504170' } }, //160x600
       { bidder: 'sovrn',        params: { tagid: '504169' } } //120x600
@@ -125,13 +126,13 @@
     code: 'div-gpt-ad-1503571938435-1',
     sizes: gpt_config.state.leaderboard_sizes,
     bids: [,
-      { bidder: 'sovrn',        params: { tagid: '504162' } }, //970x250
       { bidder: 'aol',          params: { placement: '4882887', network: '4436.1', server: 'adserver.adtech.de' } }, //728x90
       { bidder: 'districtmDMX', params: { id:171412, currency: 'usd' } }, // 970x250 - 970x90 - 728x90 - 468x60
       { bidder: 'pulsepoint',   params: { cf: '970X250', cp: 561446, ct: 602634 } },
       { bidder: 'pulsepoint',   params: { cf: '970X90', cp: 561446, ct: 602642 } },
       { bidder: 'pulsepoint',   params: { cf: '728X90', cp: 561446, ct: 602643 } },
       { bidder: 'pulsepoint',   params: { cf: '320X50', cp: 561446, ct: 602644 } },
+      { bidder: 'sovrn',        params: { tagid: '504162' } }, //970x250
       { bidder: 'sovrn',        params: { tagid: '504165' } } //728x90
     ] //./bids
   }
