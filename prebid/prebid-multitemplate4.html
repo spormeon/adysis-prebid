@@ -31,7 +31,7 @@
 <!-- Make sure this is inserted before your GPT tag -->
 <script>
   
-  var PREBID_TIMEOUT = 1150;
+  var PREBID_TIMEOUT = 1500;
      
   var gpt_config = {
     prebid_timeout: 1000, //left for reference but not using right now...
@@ -172,6 +172,7 @@
       { bidder: 'pulsepoint',   params: { cf: '728X90', cp: 561446, ct: 602643 } },
       { bidder: 'pulsepoint',   params: { cf: '320X50', cp: 561446, ct: 602644 } },
       { bidder: 'sekindoapn',   params: { placementId: '11968754' } }, /* 970x250 */  //sekindo_APN
+      //{ bidder: 'sonobi', params: { } },  //just waiting for prebid info
       { bidder: 'sovrn',        params: { tagid: '504162' } }, //970x250
       { bidder: 'sovrn',        params: { tagid: '504165' } }, //728x90
       { bidder: 'huddledmasses',params: {placement_id: 6545 }},  /* 728x90 */
