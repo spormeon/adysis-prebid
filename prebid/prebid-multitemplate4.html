@@ -37,7 +37,7 @@
   var gpt_config = {
     prebid_timeout: 1000, //left for reference but not using right now...
     default_gbp_rate: 0.71, // not being used
-    latest_gbp_rate: 0.77984, //not being used, using newRate from the function
+    latest_gbp_rate: 0.77162, //not being used, using newRate from the function
     dynamically_lookup_gbp_rate: true,
     mobileWidthBreakpoint: 640,
     tabletWidthBreakpoint: 767,
@@ -79,11 +79,22 @@
       { bidder: 'pulsepoint',   params: { cf: '300X250', cp: 561446, ct: 602639 } }, /*300x250 */
       { bidder: 'pulsepoint',   params: { cf: '160X600', cp: 561446, ct: 602640 } }, /*160x600 */
       { bidder: 'pulsepoint',   params: { cf: '120X600', cp: 561446, ct: 602641 } }, /*120x600*/
+      { bidder: 'sekindoapn',   params: { placement: '11968755' } }, /* 300x600 */  //sekindo ATF_APN
       { bidder: 'sekindoapn',   params: { placement: '11968756' } }, /* 300x250 */  //sekindo ATF_APN
+      { bidder: 'sekindoapn',   params: { placement: '11968757' } }, /* 160x600 */  //sekindo ATF_APN
       { bidder: 'sovrn',        params: { tagid: '504166' } }, /* 300x600 */
       { bidder: 'sovrn',        params: { tagid: '504164' } }, /* 300x250 */
       { bidder: 'sovrn',        params: { tagid: '504163' } }, /* 160x600 */
-      { bidder: 'sovrn',        params: { tagid: '504169' } } /* 120x600 */
+      { bidder: 'sovrn',        params: { tagid: '504169' } }, /* 120x600 */
+      { bidder: 'huddledmasses',params: {placement_id: 6544 }},  /* 300x250 */
+      { bidder: 'huddledmasses',params: {placement_id: 6546 }},  /* 160x600 */
+      { bidder: 'smartyads',    params: {banner_id: 6368 }}, /*300x250*/
+      { bidder: 'smartyads',    params: {banner_id: 6383 }}, /*160x600*/
+      { bidder: 'vertoz',       params: {placementId:'VZ-HB-F839907VGB86E1'}}, /*300x600*/
+      { bidder: 'vertoz',       params: {placementId:'VZ-HB-M568254V344777'}}, /*300x250*/
+      { bidder: 'vertoz',       params: {placementId:'VZ-HB-I951082VE249HH'}}, /*160x600*/
+      { bidder: 'vertoz',       params: {placementId:'VZ-HB-P511170V2009D9'}} /*120x250*/
+       
     ] //./bids
   },
   //new ad unit block
@@ -113,10 +124,21 @@
       { bidder: 'pulsepoint',   params: { cf: '300X250', cp: 561446, ct: 602639 } }, /*300x250 */
       { bidder: 'pulsepoint',   params: { cf: '160X600', cp: 561446, ct: 602640 } }, /*160x600 */
       { bidder: 'pulsepoint',   params: { cf: '120X600', cp: 561446, ct: 602641 } }, /*120x600*/
+      { bidder: 'sekindoapn',   params: { placement: '11968759' } }, /* 300x600 */  //sekindo BTF1_APN
+      { bidder: 'sekindoapn',   params: { placement: '11968761' } }, /* 300x250 */  //sekindo BTF1_APN
+      { bidder: 'sekindoapn',   params: { placement: '11968763' } }, /* 160x600 */  //sekindo BTF1_APN
       { bidder: 'sovrn',        params: { tagid: '504166' } }, //300x600
       { bidder: 'sovrn',        params: { tagid: '504164' } }, //300x250 
       { bidder: 'sovrn',        params: { tagid: '504163' } }, //160x600
-      { bidder: 'sovrn',        params: { tagid: '504169' } } //120x600
+      { bidder: 'sovrn',        params: { tagid: '504169' } }, //120x600
+      { bidder: 'huddledmasses',params: {placement_id: 6544 }},  /* 300x250 */
+      { bidder: 'huddledmasses',params: {placement_id: 6546 }},  /* 160x600 */
+      { bidder: 'smartyads',    params: {banner_id: 6368 }}, /*300x250*/
+      { bidder: 'smartyads',    params: {banner_id: 6383 }}, /*160x600*/
+      { bidder: 'vertoz',       params: {placementId:'VZ-HB-F839907VGB86E1'}}, /*300x600*/
+      { bidder: 'vertoz',       params: {placementId:'VZ-HB-M568254V344777'}}, /*300x250*/
+      { bidder: 'vertoz',       params: {placementId:'VZ-HB-I951082VE249HH'}}, /*160x600*/
+      { bidder: 'vertoz',       params: {placementId:'VZ-HB-P511170V2009D9'}} /*120x250*/
     ] //./bids
   },
   //new ad unit block
@@ -146,10 +168,21 @@
       { bidder: 'pulsepoint',   params: { cf: '300X250', cp: 561446, ct: 602639 } }, /*300x250 */
       { bidder: 'pulsepoint',   params: { cf: '160X600', cp: 561446, ct: 602640 } }, /*160x600 */
       { bidder: 'pulsepoint',   params: { cf: '120X600', cp: 561446, ct: 602641 } }, /*120x600*/
+      { bidder: 'sekindoapn',   params: { placement: '11968758' } }, /* 300x600 */  //sekindo BTF2_APN
+      { bidder: 'sekindoapn',   params: { placement: '11968762' } }, /* 300x250 */  //sekindo BTF2_APN
+      { bidder: 'sekindoapn',   params: { placement: '11968768' } }, /* 160x600 */  //sekindo BTF2_APN
       { bidder: 'sovrn',        params: { tagid: '504166' } }, //300x600
       { bidder: 'sovrn',        params: { tagid: '504164' } }, //300x250 
       { bidder: 'sovrn',        params: { tagid: '504163' } }, //160x600
-      { bidder: 'sovrn',        params: { tagid: '504169' } } //120x600
+      { bidder: 'sovrn',        params: { tagid: '504169' } }, //120x600
+      { bidder: 'huddledmasses',params: {placement_id: 6544 }},  /* 300x250 */
+      { bidder: 'huddledmasses',params: {placement_id: 6546 }},  /* 160x600 */
+      { bidder: 'smartyads',    params: {banner_id: 6368 }}, /*300x250*/
+      { bidder: 'smartyads',    params: {banner_id: 6383 }}, /*160x600*/
+      { bidder: 'vertoz',       params: {placementId:'VZ-HB-F839907VGB86E1'}}, /*300x600*/
+      { bidder: 'vertoz',       params: {placementId:'VZ-HB-M568254V344777'}}, /*300x250*/
+      { bidder: 'vertoz',       params: {placementId:'VZ-HB-I951082VE249HH'}}, /*160x600*/
+      { bidder: 'vertoz',       params: {placementId:'VZ-HB-P511170V2009D9'}} /*120x250*/
     ] //./bids
   },
   //new ad unit block
@@ -178,7 +211,11 @@
       { bidder: 'pulsepoint',   params: { cf: '728X90', cp: 561446, ct: 602643 } },
       { bidder: 'pulsepoint',   params: { cf: '320X50', cp: 561446, ct: 602644 } },
       { bidder: 'sovrn',        params: { tagid: '504162' } }, //970x250
-      { bidder: 'sovrn',        params: { tagid: '504165' } } //728x90
+      { bidder: 'sovrn',        params: { tagid: '504165' } }, //728x90
+      { bidder: 'huddledmasses',params: {placement_id: 6545 }},  /* 728x90 */
+      { bidder: 'smartyads',    params: {banner_id: 6379 }}, /*728x90*/
+      { bidder: 'vertoz',       params: {placementId:'VZ-HB-Y968967V15GC66'}}, /*970x250*/
+      { bidder: 'vertoz',       params: {placementId:'VZ-HB-P786728VDF5C56'}} /*728x90*/
     ] //./bids
   }
   ]; //./adUnits
