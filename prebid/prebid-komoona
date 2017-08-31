@@ -1,0 +1,181 @@
+<html>
+<head>
+  <!-- Prebid Config Section START -->
+  <!-- Make sure this is inserted before your GPT tag -->
+  <script> 
+    var PREBID_TIMEOUT = 700;
+
+    var adUnits = [{
+        code: 'div-gpt-ad-1503078667754-0',
+        sizes: [[300, 600], [300, 250], [160, 600], [120, 600]],
+        bids: [
+        //Golfwrx.com _KB 300x600
+{
+	"bidder": "komoona",
+	"params": {
+		"hbid": "e885cf345b55406b9c37415b7fcc8409",
+		"placementId": "be3564ac269d63fb992e3b2554e06ada"
+	}
+},
+      
+//Golfwrx.com _KB 160x600
+{
+	"bidder": "komoona",
+	"params": {
+		"hbid": "e885cf345b55406b9c37415b7fcc8409",
+		"placementId": "3ef8c7500669dc363bec56f1e5a393f7"
+	}
+},
+      
+//Golfwrx.com Mobile _KB 320x50
+{
+	"bidder": "komoona",
+	"params": {
+		"hbid": "e885cf345b55406b9c37415b7fcc8409",
+		"placementId": "d0ece5eadd6b239406e68248693ed3f4"
+	}
+},
+
+//Golfwrx.com #2_KB 300x250
+{
+	"bidder": "komoona",
+	"params": {
+		"hbid": "e885cf345b55406b9c37415b7fcc8409",
+		"placementId": "2d14facbe61621faad0c7b2aa0458cff"
+	}
+}
+        ]
+    },{
+        code: 'div-gpt-ad-1503078667754-1',
+        sizes: [[970, 250],[970, 90],[728, 90]],
+        bids: [
+        //Golfwrx.com _KB 970x250
+{
+	"bidder": "komoona",
+	"params": {
+		"hbid": "e885cf345b55406b9c37415b7fcc8409",
+		"placementId": "9d83aaec60c3a1b2df135d9909721743"
+	}
+},
+//Golfwrx.com _KB 728x90
+{
+	"bidder": "komoona",
+	"params": {
+		"hbid": "e885cf345b55406b9c37415b7fcc8409",
+		"placementId": "f459bc6a806e35663096e71b66e697a7"
+	}
+}
+        ]
+    }];
+    
+    var pbjs = pbjs || {};
+    pbjs.que = pbjs.que || [];
+
+  </script>
+  <!-- Prebid Config Section END -->
+  
+  <!-- Prebid Boilerplate Section START. No Need to Edit. -->
+  <script type="text/javascript" src="http://adops.golfwrx.com/prebid_20170821225746.js" async></script>
+  <script>
+    var googletag = googletag || {};
+    googletag.cmd = googletag.cmd || [];
+    googletag.cmd.push(function() {
+        googletag.pubads().disableInitialLoad();
+    });
+
+    pbjs.que.push(function() {
+        pbjs.addAdUnits(adUnits);
+        pbjs.requestBids({
+            bidsBackHandler: sendAdserverRequest
+        });
+    });
+
+    function sendAdserverRequest() {
+        if (pbjs.adserverRequestSent) return;
+        pbjs.adserverRequestSent = true;
+        googletag.cmd.push(function() {
+            pbjs.que.push(function() {
+                pbjs.setTargetingForGPTAsync();
+                googletag.pubads().refresh();
+            });
+        });
+    }
+
+    setTimeout(function() {
+        sendAdserverRequest();
+    }, PREBID_TIMEOUT);
+
+  </script>
+  <!-- Prebid Boilerplate Section END -->
+
+  <script>
+    (function () {
+        var gads = document.createElement('script');
+        gads.async = true;
+        gads.type = 'text/javascript';
+        var useSSL = 'https:' == document.location.protocol;
+        gads.src = (useSSL ? 'https:' : 'http:') +
+                '//www.googletagservices.com/tag/js/gpt.js';
+        var node = document.getElementsByTagName('script')[0];
+        node.parentNode.insertBefore(gads, node);
+    })();
+  </script>
+
+  <script>
+    googletag.cmd.push(function () {
+        googletag.defineSlot('/1001824/prebid_test1', [[300, 600], [300, 250], [160, 600], [120, 600]], 'div-gpt-ad-1503078667754-0').addService(googletag.pubads());
+
+        googletag.defineSlot('/1001824/prebid_test2', [[970, 250],[970, 90],[728, 90]], 'div-gpt-ad-1503078667754-1').addService(googletag.pubads());
+
+        googletag.pubads().enableSingleRequest();
+        googletag.enableServices();
+    });
+  </script>
+</head>
+
+<body>
+<h2>Prebid.js Test</h2>
+<h5>Div-1</h5>
+<div id='div-gpt-ad-1503078667754-0'>
+    <script type='text/javascript'>
+        googletag.cmd.push(function() { googletag.display('div-gpt-ad-1503078667754-0'); });
+    </script>
+</div>
+
+<h5>Div-2</h5>
+<div id='div-gpt-ad-1503078667754-1'>
+    <script type='text/javascript'>
+        googletag.cmd.push(function() { googletag.display('div-gpt-ad-1503078667754-1'); });
+    </script>
+</div>
+<center>
+<hr color="#353535" noshade />
+<script>
+  mShowTargeting = function() {
+    try {
+      console.log('printed BEFORE targeting output. click the triangles to explore targeting contents.');
+      console.log(' ');
+      console.log(' ');
+      console.log(' ');
+      var tgt = pbjs.getAdserverTargeting();
+      console.log(tgt);
+      console.log(' ');
+      console.log(' ');
+      console.log(' ');
+      console.log('./end of output');
+    } catch (e) {
+      console.log('mShowTargeting catch thrown...');
+    }
+  };
+</script>
+<button onclick="mShowTargeting()">Log Targeting to Console</button>
+</center>
+
+
+<br><br><br><br>
+<center>
+<a href="/"><button>HOME</button></a>   
+</center>
+<br><br><br><br>
+</body>
+</html>
