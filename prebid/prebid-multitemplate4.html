@@ -62,7 +62,7 @@
       { bidder: 'aol',          params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x250 */ 
       { bidder: 'aol',          params: { placement: '4882888', network: '4436.1', server: 'adserver.adtech.de' } }, /* 160x600 */
       { bidder: 'aol',          params: { placement: '5293857', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x600 */
-      { bidder: 'atomx',        params: { id: '3808201'} },  //does all sizes
+      //{ bidder: 'atomx',        params: { id: '3808201'} },  //does all sizes, not working at moment
       { bidder: 'districtmDMX', params: { id:171413 } }, /* 300x600 - 300x250 - 160x600 */
       { bidder: 'pulsepoint',   params: { cf: '300X600', cp: 561446, ct: 602638 } }, /* 300x600 */
       { bidder: 'pulsepoint',   params: { cf: '300X250', cp: 561446, ct: 602639 } }, /*300x250 */
@@ -101,7 +101,7 @@
       { bidder: 'aol',          params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, //300x250
       { bidder: 'aol',          params: { placement: '4882888', network: '4436.1', server: 'adserver.adtech.de' } }, //160x600
       { bidder: 'aol',          params: { placement: '5293857', network: '4436.1', server: 'adserver.adtech.de' } }, //300x600
-      { bidder: 'atomx',        params: { id: '3808201'} },  //does all sizes
+      //{ bidder: 'atomx',        params: { id: '3808201'} },  //does all sizes, not working at moment
       { bidder: 'districtmDMX', params: { id: 171413 } }, //300x600 - 300x250 - 160x600
       { bidder: 'pulsepoint',   params: { cf: '300X600', cp: 561446, ct: 602638 } }, /* 300x600 */
       { bidder: 'pulsepoint',   params: { cf: '300X250', cp: 561446, ct: 602639 } }, /*300x250 */
@@ -137,7 +137,7 @@
       { bidder: 'aol',          params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, //300x250
       { bidder: 'aol',          params: { placement: '4882888', network: '4436.1', server: 'adserver.adtech.de' } }, //160x600
       { bidder: 'aol',          params: { placement: '5293857', network: '4436.1', server: 'adserver.adtech.de' } }, //300x600
-      { bidder: 'atomx',        params: { id: '3808201'} },  //does all sizes
+      //{ bidder: 'atomx',        params: { id: '3808201'} },  //does all sizes, not working at moment
       { bidder: 'districtmDMX', params: { id: 171413 } }, //300x600 - 300x250 - 160x600
       { bidder: 'pulsepoint',   params: { cf: '300X600', cp: 561446, ct: 602638 } }, /* 300x600 */
       { bidder: 'pulsepoint',   params: { cf: '300X250', cp: 561446, ct: 602639 } }, /*300x250 */
@@ -172,7 +172,7 @@
              ],
     bids: [
       { bidder: 'aol',          params: { placement: '4882887', network: '4436.1', server: 'adserver.adtech.de' } }, //728x90
-      { bidder: 'atomx',        params: { id: '3808200'} },  //does all sizes
+      //{ bidder: 'atomx',        params: { id: '3808200'} },  //does all sizes, not working at moment
       { bidder: 'districtmDMX', params: { id: 171412 } }, // 970x250 - 970x90 - 728x90 - 468x60
       { bidder: 'pulsepoint',   params: { cf: '970X250', cp: 561446, ct: 602634 } },
       { bidder: 'pulsepoint',   params: { cf: '970X90', cp: 561446, ct: 602642 } },
@@ -244,32 +244,14 @@
       });
     });
 
-    function initAdserver() {
-      if (pbjs.adserverRequestSent) return;
-      pbjs.adserverRequestSent = true;
-      googletag.cmd.push(function() {
-        pbjs.que.push(function() {
+    
           
-          pbjs.bidderSettings = {
-              aol: {
-        bidCpmAdjustment : function(bidCpm){
-          // adjust the bid in real time before the auction takes place
-          return bidCpm * 0.85;
-        }
-      },
-      districtDMX: {
-        bidCpmAdjustment : function(bidCpm){
-          // adjust the bid in real time before the auction takes place
-          return bidCpm * 0.90;
-        }
-      },
-      sekindonapn: {
-        bidCpmAdjustment : function(bidCpm){
-          // adjust the bid in real time before the auction takes place
-          return bidCpm * 0.75;
-        }
-      },
-            standard: {
+      pbjs.bidderSettings = { 
+           aol:         { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.85; } }, // adjust the bid in real time before the auction takes place
+           districtDMX: { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.90; } }, // adjust the bid in real time before the auction takes place
+           sekindonapn: { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.75; } }, // adjust the bid in real time before the auction takes place
+            
+           standard: {
               adserverTargeting: [{
                 key: "hb_bidder",
                 val: function(bidResponse) {
@@ -298,6 +280,13 @@
               }]
             }
           };
+          
+          function initAdserver() {
+      if (pbjs.adserverRequestSent) return;
+      pbjs.adserverRequestSent = true; //think this needs to go at end, so everything is done, adjusted before bids sent to server
+      googletag.cmd.push(function() {
+        pbjs.que.push(function() {
+            
           //./pbjs.bidderSettings
 
           pbjs.setTargetingForGPTAsync();
