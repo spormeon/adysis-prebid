@@ -167,8 +167,7 @@
     sizeMapping: [  //new!
       { minWidth : 1024, sizes : [[970, 250],[970, 90],[728, 90]] }, //if device screen width is greater than 1024, use these sizes
       { minWidth : 480, sizes : [[728, 90]] }, //if device screen width is < 1024 && > 480, use these sizes
-      { minWidth : 0, sizes : [[320, 50]] } //if device screen width is < 480 && > 0, use these sizes
-                             
+      { minWidth : 0, sizes : [[320, 50]] } //if device screen width is < 480 && > 0, use these sizes              
              ],
     bids: [
       { bidder: 'aol',          params: { placement: '4882887', network: '4436.1', server: 'adserver.adtech.de' } }, //728x90
@@ -224,9 +223,7 @@
     gpt_config.latest_gbp_rate = newRate;
     console.log('Latest GBP Rate updated: ', gpt_config.latest_gbp_rate);
   });
-  
 </script>
-
 <!-- Prebid Boilerplate Section START. No Need to Edit. -->
   <script>
     var googletag = googletag || {};
@@ -243,9 +240,7 @@
         bidsBackHandler: initAdserver
       });
     });
-
-    
-          
+            
       pbjs.bidderSettings = { 
            aol:         { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.85; } }, // adjust the bid in real time before the auction takes place
            districtDMX: { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.90; } }, // adjust the bid in real time before the auction takes place
@@ -263,12 +258,17 @@
                   return bidResponse.adId;
                 }
               }, {
+                key: "hb_size",
+                val: function(bidResponse) {
+                  return bidResponse.adSize;
+                }
+              },{
                 key: "hb_nowin",
                 val: function(bidResponse){
                   return 'no_win';
                 }
               }, {
-                key: "hb_pb",
+                key: "hb_pb",    // not 100% sure this is right, its currency converting but is it also adjusting bid for gross/net value
                 val: function(bidResponse) {
                   var cpm = bidResponse.cpm * (gpt_config.latest_gbp_rate || gpt_config.default_gbp_rate);
                   if (cpm < 100) {
@@ -303,10 +303,8 @@
     }
 
     setTimeout(function() { initAdserver(); }, PREBID_TIMEOUT);
-
   </script>
   <!-- Prebid Boilerplate Section END -->
-
   <script>
     (function () {
         var gads = document.createElement('script');
