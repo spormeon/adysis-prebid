@@ -76,10 +76,10 @@
       { bidder: 'sovrn',        params: { tagid: '504163' } }, /* 160x600 */
       { bidder: 'sovrn',        params: { tagid: '504169' } }, /* 120x600 */
       { bidder: 'huddledmasses',params: { placement_id: 6544 }},  /* 300x250 */
+      { bidder: 'huddledmasses',params: { placement_id: 6546 }},  /* 160x600 */
       { bidder: 'komoona',      params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: 'be3564ac269d63fb992e3b2554e06ada' } },  //Golfwrx.com _KB 300x600
       { bidder: 'komoona',      params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: '2d14facbe61621faad0c7b2aa0458cff' } },  //Golfwrx.com _KB 300x250
       { bidder: 'komoona',      params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: '3ef8c7500669dc363bec56f1e5a393f7' } },  //Golfwrx.com _KB 160x600
-      { bidder: 'huddledmasses',params: { placement_id: 6546 }},  /* 160x600 */
       { bidder: 'smartyads',    params: { banner_id: 6368 }}, /*300x250*/
       { bidder: 'smartyads',    params: { banner_id: 6383 }} /*160x600*/
       //{ bidder: 'vertoz',       params: {placementId:'VZ-HB-F839907VGB86E1'}}, /*300x600*/ // They seem like junk stuff
@@ -225,7 +225,7 @@
   });
 </script>
 <!-- Prebid Boilerplate Section START. No Need to Edit. -->
-  <script>
+<script>
     var googletag = googletag || {};
     googletag.cmd = googletag.cmd || [];
     googletag.cmd.push(function() {
@@ -234,7 +234,7 @@
 
     pbjs.que.push(function() {
       pbjs.aliasBidder('appnexus','sekindoapn');  // alias for bidder
-      pbjs.setPriceGranularity("high");   // this needs to be tweaked once prices seen more
+      // pbjs.setPriceGranularity("high");   // not being used, being done in adserver targeting below, this needs to be tweaked once prices seen more
       pbjs.addAdUnits(adUnits);
       pbjs.requestBids({
         bidsBackHandler: initAdserver
@@ -248,6 +248,7 @@
             
            standard: {
               adserverTargeting: [
+              { key: "hb_bidder", { return country; } }, 
               { key: "hb_bidder", val: function(bidResponse) { return bidResponse.bidderCode; } }, 
               { key: "hb_adid",   val: function(bidResponse) { return bidResponse.adId; } }, 
               { key: "hb_size",   val: function(bidResponse) { return bidResponse.size; } },         
@@ -260,7 +261,7 @@
           
           function initAdserver() {
       if (pbjs.adserverRequestSent) return;
-      pbjs.adserverRequestSent = true; //think this needs to go at end, so everything is done, adjusted before bids sent to server
+      pbjs.adserverRequestSent = true;
       googletag.cmd.push(function() {
         pbjs.que.push(function() {
             
@@ -278,7 +279,7 @@
         });
       });
     }
-
+    
     setTimeout(function() { initAdserver(); }, PREBID_TIMEOUT);
   </script>
   <!-- Prebid Boilerplate Section END -->
