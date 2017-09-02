@@ -234,7 +234,7 @@
 
     pbjs.que.push(function() {
       pbjs.aliasBidder('appnexus','sekindoapn');  // alias for bidder
-      pbjs.setPriceGranularity("medium");   // this needs to be tweaked once prices seen more
+      pbjs.setPriceGranularity("high");   // this needs to be tweaked once prices seen more
       pbjs.addAdUnits(adUnits);
       pbjs.requestBids({
         bidsBackHandler: initAdserver
