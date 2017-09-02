@@ -270,7 +270,12 @@
               }, {
                 key: "hb_pb",    // not 100% sure this is right, its currency converting but is it also adjusting bid for gross/net value
                 val: function(bidResponse) {
-                    return bidResponse.cpm * (gpt_config.latest_gbp_rate || gpt_config.default_gbp_rate).toFixed(2);
+                    var cpm = bidResponse.cpm * (gpt_config.latest_gbp_rate || gpt_config.default_gbp_rate);
+                    if (cpm <20) {
+                    return (Math.floor(cpm * 10) / 10).toFixed(2);}
+                    else {
+                    return '20.00';
+                  }
                 }
               }]
             }
