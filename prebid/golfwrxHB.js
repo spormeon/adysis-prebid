@@ -1,4 +1,4 @@
-<script>
+
   function PPObjectIndented(obj, indent) {
    try { console.log("PrettyPrint Object Function Called...");} catch (e) { }
    if (Object.keys(obj).length === 0 && obj.constructor === Object) return "{}: empty object returned...";
@@ -18,10 +18,10 @@
    }
    return result.replace(/,\n$/, "");
  }
-</script>
+
 <!-- Prebid Config Section START -->
 <!-- Make sure this is inserted before your GPT tag -->
-<script>
+
   
   var PREBID_TIMEOUT = 1500;
      
@@ -248,9 +248,9 @@
     gpt_config.latest_gbp_rate = newRate;
     console.log('Latest GBP Rate updated: ', gpt_config.latest_gbp_rate);
   });
-</script>
+
 <!-- Prebid Boilerplate Section START. No Need to Edit. -->
-<script>
+
     var googletag = googletag || {};
     googletag.cmd = googletag.cmd || [];
     googletag.cmd.push(function() {
@@ -307,9 +307,9 @@
     }
     
     setTimeout(function() { initAdserver(); }, PREBID_TIMEOUT);
-  </script>
+  
   <!-- Prebid Boilerplate Section END -->
-  <script>
+  
     (function () {
         var gads = document.createElement('script');
         gads.async = true;
@@ -320,8 +320,8 @@
         var node = document.getElementsByTagName('script')[0];
         node.parentNode.insertBefore(gads, node);
     })();
-  </script>
-  <script>
+  
+  
   googletag.cmd.push(function() {
     googletag.defineSlot('/1001824/prebid_test1', [[300, 600],[300, 250],[160, 600],[120, 600]], 'div-gpt-ad-1503571938435-0').addService(googletag.pubads());
     googletag.defineSlot('/1001824/prebid_test2', [[970, 250],[970, 90],[728, 90]], 'div-gpt-ad-1503571938435-1').addService(googletag.pubads());
@@ -330,4 +330,4 @@
     googletag.pubads().enableSingleRequest();
     googletag.enableServices();
   });
-</script>
+
