@@ -1,4 +1,4 @@
-<script type="text/javascript">
+<script>
   function PPObjectIndented(obj, indent) {
    try { console.log("PrettyPrint Object Function Called...");} catch (e) { }
    if (Object.keys(obj).length === 0 && obj.constructor === Object) return "{}: empty object returned...";
