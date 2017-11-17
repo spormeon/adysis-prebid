@@ -212,7 +212,7 @@
       { bidder: 'huddledmasses',params: { placement_id: 6545 } },  /* 728x90 */
       { bidder: 'smartyads',    params: { banner_id: 6379 } }, /*728x90*/
       { bidder: 'vertoz',       params: { placementId:'VZ-HB-Y968967V15GC66'} }, /* 970x250 */
-      { bidder: 'vertoz',       params: { placementId:'VZ-HB-P786728VDF5C56'} } /*7 28x90 */
+      { bidder: 'vertoz',       params: { placementId:'VZ-HB-P786728VDF5C56'} }, /*7 28x90 */
       { bidder: 'springserve',  params: { placementId: '12463800'} }  /* 970x250 - 970x90 - 728x90  */
     ] //./bids
   }
