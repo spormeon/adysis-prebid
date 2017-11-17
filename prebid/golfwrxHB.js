@@ -264,6 +264,7 @@
     pbjs.que.push(function() {
       pbjs.aliasBidder('appnexus','sekindoapn');  // alias for bidder
       pbjs.aliasBidder('appnexus','brealtime');   // alias for bidder
+      pbjs.aliasBidder('appnexus','springserve'); // alias for bidder
       // pbjs.setPriceGranularity("high");   // not being used, being done in adserver targeting below, this needs to be tweaked once prices seen more
       pbjs.addAdUnits(adUnits);
       pbjs.requestBids({
