@@ -84,7 +84,7 @@
       { bidder: 'vertoz',       params: { placementId: 'VZ-HB-M568254V344777'} }, /*300x250*/
       { bidder: 'vertoz',       params: { placementId: 'VZ-HB-I951082VE249HH'} }, /*160x600*/
       { bidder: 'vertoz',       params: { placementId: 'VZ-HB-P511170V2009D9'} }, /*120x250*/
-      { bidder: 'springserve',  params: { placementId: '12463797'} }  /* 300x600 - 300x250 - 160x600 - 120x600 */
+      { bidder: 'springserveAlias2',     params: { placementId: '12463797'} }  /* 300x600 - 300x250 - 160x600 - 120x600 */
     ] //./bids
   },
   //new ad unit block
@@ -130,7 +130,7 @@
       { bidder: 'vertoz',       params: { placementId: 'VZ-HB-M568254V344777'} }, /*300x250*/
       { bidder: 'vertoz',       params: { placementId: 'VZ-HB-I951082VE249HH'} }, /*160x600*/
       { bidder: 'vertoz',       params: { placementId: 'VZ-HB-P511170V2009D9'} },  /*120x250*/
-      { bidder: 'springserve',  params: { placementId: '12463797'} }  /* 300x600 - 300x250 - 160x600 - 120x600 */
+      { bidder: 'springserveAlias2',  params: { placementId: '12463797'} }  /* 300x600 - 300x250 - 160x600 - 120x600 */
     ] //./bids
   },
   //new ad unit block
@@ -176,7 +176,7 @@
       { bidder: 'vertoz',       params: { placementId: 'VZ-HB-M568254V344777'} }, /*300x250*/
       { bidder: 'vertoz',       params: { placementId: 'VZ-HB-I951082VE249HH'} }, /*160x600*/
       { bidder: 'vertoz',       params: { placementId: 'VZ-HB-P511170V2009D9'} },  /*120x250*/
-      { bidder: 'springserve',  params: { placementId: '12463797'} }  /* 300x600 - 300x250 - 160x600 - 120x600 */
+      { bidder: 'springserveAlias2',  params: { placementId: '12463797'} }  /* 300x600 - 300x250 - 160x600 - 120x600 */
     ] //./bids
   },
   //new ad unit block
@@ -213,7 +213,7 @@
       { bidder: 'smartyads',    params: { banner_id: 6379 } }, /*728x90*/
       { bidder: 'vertoz',       params: { placementId:'VZ-HB-Y968967V15GC66'} }, /* 970x250 */
       { bidder: 'vertoz',       params: { placementId:'VZ-HB-P786728VDF5C56'} }, /*7 28x90 */
-      { bidder: 'springserve',  params: { placementId: '12463800'} }  /* 970x250 - 970x90 - 728x90  */
+      { bidder: 'springserveAlias2',  params: { placementId: '12463800'} }  /* 970x250 - 970x90 - 728x90  */
     ] //./bids
   }
   ]; //./adUnits
@@ -264,7 +264,7 @@
     pbjs.que.push(function() {
       pbjs.aliasBidder('appnexus','sekindoapn');  // alias for bidder
       pbjs.aliasBidder('appnexus','brealtime');   // alias for bidder
-      pbjs.aliasBidder('appnexus','springserve'); // alias for bidder
+      pbjs.aliasBidder('appnexus','springserveAlias2'); // alias for bidder
       // pbjs.setPriceGranularity("high");   // not being used, being done in adserver targeting below, this needs to be tweaked once prices seen more
       pbjs.addAdUnits(adUnits);
       pbjs.requestBids({
@@ -277,7 +277,7 @@
            districtDMX: { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.90; } }, // adjust the bid in real time before the auction takes place
            sekindonapn: { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.75; } }, // adjust the bid in real time before the auction takes place
            brealtime:   { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.80; } }, // adjust the bid in real time before the auction takes place
-           springserve: { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.65; } }, // adjust the bid in real time before the auction takes place
+           springserveAlias2: { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.65; } }, // adjust the bid in real time before the auction takes place
             
            standard: {
               adserverTargeting: [
