@@ -68,22 +68,22 @@
       { bidder: 'sekindoapn',   params: { placementId: '11968755' } }, /* 300x600 */  
       { bidder: 'sekindoapn',   params: { placementId: '11968756' } }, /* 300x250 */ 
       { bidder: 'sekindoapn',   params: { placementId: '11968757' } }, /* 160x600 */
-      { bidder: 'sonobi',       params: { ad_unit: '/1001824/prebid_test1', dom_id: 'div-gpt-ad-1503393253852-0', floor: 0.0 } },  /* does all sizes, different sort of setup */
+      /* { bidder: 'sonobi',       params: { ad_unit: '/1001824/prebid_test1', dom_id: 'div-gpt-ad-1503393253852-0', floor: 0.0 } },  */ /* does all sizes, different sort of setup */
       { bidder: 'sovrn',        params: { tagid: '504166' } }, /* 300x600 */
       { bidder: 'sovrn',        params: { tagid: '504164' } }, /* 300x250 */
       { bidder: 'sovrn',        params: { tagid: '504163' } }, /* 160x600 */
       { bidder: 'sovrn',        params: { tagid: '504169' } }, /* 120x600 */
-      { bidder: 'huddledmasses',params: { placement_id: 6544 } },  /* 300x250 */
-      { bidder: 'huddledmasses',params: { placement_id: 6546 } },  /* 160x600 */
+      /* { bidder: 'huddledmasses',params: { placement_id: 6544 } }, */ /* 300x250 */
+      /* { bidder: 'huddledmasses',params: { placement_id: 6546 } }, */ /* 160x600 */
       { bidder: 'komoona',      params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: 'be3564ac269d63fb992e3b2554e06ada' } },  /* Golfwrx.com _KB 300x600 */
       { bidder: 'komoona',      params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: '2d14facbe61621faad0c7b2aa0458cff' } },  /* Golfwrx.com _KB 300x250 */
       { bidder: 'komoona',      params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: '3ef8c7500669dc363bec56f1e5a393f7' } },  /* Golfwrx.com _KB 160x600 */
-      { bidder: 'smartyads',    params: { banner_id: 6368 } }, /* 300x250 */
-      { bidder: 'smartyads',    params: { banner_id: 6383 } }, /* 160x600 */
-      { bidder: 'vertoz',       params: { placementId: 'VZ-HB-F839907VGB86E1'} }, /*300x600*/ 
-      { bidder: 'vertoz',       params: { placementId: 'VZ-HB-M568254V344777'} }, /*300x250*/
-      { bidder: 'vertoz',       params: { placementId: 'VZ-HB-I951082VE249HH'} }, /*160x600*/
-      { bidder: 'vertoz',       params: { placementId: 'VZ-HB-P511170V2009D9'} }, /*120x250*/
+      /* { bidder: 'smartyads',    params: { banner_id: 6368 } }, */ /* 300x250 */
+      /* { bidder: 'smartyads',    params: { banner_id: 6383 } }, */ /* 160x600 */
+      /* { bidder: 'vertoz',       params: { placementId: 'VZ-HB-F839907VGB86E1'} }, */ /*300x600*/ 
+      /* { bidder: 'vertoz',       params: { placementId: 'VZ-HB-M568254V344777'} }, */ /*300x250*/
+      /* { bidder: 'vertoz',       params: { placementId: 'VZ-HB-I951082VE249HH'} }, */ /*160x600*/
+      /* { bidder: 'vertoz',       params: { placementId: 'VZ-HB-P511170V2009D9'} }, */ /*120x250*/
       { bidder: 'springserveAlias2',     params: { placementId: '12463797'} }  /* 300x600 - 300x250 - 160x600 - 120x600 */
     ] //./bids
   },
@@ -114,22 +114,22 @@
       { bidder: 'sekindoapn',   params: { placementId: '11968755' } }, /* 300x600 */  
       { bidder: 'sekindoapn',   params: { placementId: '11968756' } }, /* 300x250 */ 
       { bidder: 'sekindoapn',   params: { placementId: '11968757' } }, /* 160x600 */
-      { bidder: 'sonobi',       params: { ad_unit: '/1001824/prebid_test1', dom_id: 'div-gpt-ad-1503393253852-0', floor: 0.0 } },  /* does all sizes, different sort of setup */
+      /* { bidder: 'sonobi',       params: { ad_unit: '/1001824/prebid_test1', dom_id: 'div-gpt-ad-1503393253852-0', floor: 0.0 } },  */ /* does all sizes, different sort of setup */
       { bidder: 'sovrn',        params: { tagid: '504166' } }, /* 300x600 */
       { bidder: 'sovrn',        params: { tagid: '504164' } }, /* 300x250 */
       { bidder: 'sovrn',        params: { tagid: '504163' } }, /* 160x600 */
       { bidder: 'sovrn',        params: { tagid: '504169' } }, /* 120x600 */
-      { bidder: 'huddledmasses',params: { placement_id: 6544 } },  /* 300x250 */
-      { bidder: 'huddledmasses',params: { placement_id: 6546 } },  /* 160x600 */
+      /* { bidder: 'huddledmasses',params: { placement_id: 6544 } },  */ /* 300x250 */
+      /* { bidder: 'huddledmasses',params: { placement_id: 6546 } },  */ /* 160x600 */
       { bidder: 'komoona',      params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: 'be3564ac269d63fb992e3b2554e06ada' } },  /* Golfwrx.com _KB 300x600 */
       { bidder: 'komoona',      params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: '2d14facbe61621faad0c7b2aa0458cff' } },  /* Golfwrx.com _KB 300x250 */
       { bidder: 'komoona',      params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: '3ef8c7500669dc363bec56f1e5a393f7' } },  /* Golfwrx.com _KB 160x600 */
-      { bidder: 'smartyads',    params: { banner_id: 6368 } }, /* 300x250 */
-      { bidder: 'smartyads',    params: { banner_id: 6383 } }, /* 160x600 */
-      { bidder: 'vertoz',       params: { placementId: 'VZ-HB-F839907VGB86E1'} }, /*300x600*/ 
-      { bidder: 'vertoz',       params: { placementId: 'VZ-HB-M568254V344777'} }, /*300x250*/
-      { bidder: 'vertoz',       params: { placementId: 'VZ-HB-I951082VE249HH'} }, /*160x600*/
-      { bidder: 'vertoz',       params: { placementId: 'VZ-HB-P511170V2009D9'} },  /*120x250*/
+      /* { bidder: 'smartyads',    params: { banner_id: 6368 } }, */ /* 300x250 */
+      /* { bidder: 'smartyads',    params: { banner_id: 6383 } }, */ /* 160x600 */
+      /* { bidder: 'vertoz',       params: { placementId: 'VZ-HB-F839907VGB86E1'} }, */ /*300x600*/ 
+      /* { bidder: 'vertoz',       params: { placementId: 'VZ-HB-M568254V344777'} }, */ /*300x250*/
+      /* { bidder: 'vertoz',       params: { placementId: 'VZ-HB-I951082VE249HH'} }, */ /*160x600*/
+      /* { bidder: 'vertoz',       params: { placementId: 'VZ-HB-P511170V2009D9'} }, */ /*120x250*/
       { bidder: 'springserveAlias2',  params: { placementId: '12463797'} }  /* 300x600 - 300x250 - 160x600 - 120x600 */
     ] //./bids
   },
@@ -160,22 +160,22 @@
       { bidder: 'sekindoapn',   params: { placementId: '11968755' } }, /* 300x600 */  
       { bidder: 'sekindoapn',   params: { placementId: '11968756' } }, /* 300x250 */ 
       { bidder: 'sekindoapn',   params: { placementId: '11968757' } }, /* 160x600 */
-      { bidder: 'sonobi',       params: { ad_unit: '/1001824/prebid_test1', dom_id: 'div-gpt-ad-1503393253852-0', floor: 0.0 } },  /* does all sizes, different sort of setup */
+      /* { bidder: 'sonobi',       params: { ad_unit: '/1001824/prebid_test1', dom_id: 'div-gpt-ad-1503393253852-0', floor: 0.0 } },  */ /* does all sizes, different sort of setup */
       { bidder: 'sovrn',        params: { tagid: '504166' } }, /* 300x600 */
       { bidder: 'sovrn',        params: { tagid: '504164' } }, /* 300x250 */
       { bidder: 'sovrn',        params: { tagid: '504163' } }, /* 160x600 */
       { bidder: 'sovrn',        params: { tagid: '504169' } }, /* 120x600 */
-      { bidder: 'huddledmasses',params: { placement_id: 6544 } },  /* 300x250 */
-      { bidder: 'huddledmasses',params: { placement_id: 6546 } },  /* 160x600 */
+      /* { bidder: 'huddledmasses',params: { placement_id: 6544 } },  */ /* 300x250 */
+      /* { bidder: 'huddledmasses',params: { placement_id: 6546 } },  */ /* 160x600 */
       { bidder: 'komoona',      params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: 'be3564ac269d63fb992e3b2554e06ada' } },  /* Golfwrx.com _KB 300x600 */
       { bidder: 'komoona',      params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: '2d14facbe61621faad0c7b2aa0458cff' } },  /* Golfwrx.com _KB 300x250 */
       { bidder: 'komoona',      params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: '3ef8c7500669dc363bec56f1e5a393f7' } },  /* Golfwrx.com _KB 160x600 */
-      { bidder: 'smartyads',    params: { banner_id: 6368 } }, /* 300x250 */
-      { bidder: 'smartyads',    params: { banner_id: 6383 } }, /* 160x600 */
-      { bidder: 'vertoz',       params: { placementId: 'VZ-HB-F839907VGB86E1'} }, /*300x600*/ 
-      { bidder: 'vertoz',       params: { placementId: 'VZ-HB-M568254V344777'} }, /*300x250*/
-      { bidder: 'vertoz',       params: { placementId: 'VZ-HB-I951082VE249HH'} }, /*160x600*/
-      { bidder: 'vertoz',       params: { placementId: 'VZ-HB-P511170V2009D9'} },  /*120x250*/
+      /* { bidder: 'smartyads',    params: { banner_id: 6368 } }, */ /* 300x250 */
+      /* { bidder: 'smartyads',    params: { banner_id: 6383 } }, */ /* 160x600 */
+      /* { bidder: 'vertoz',       params: { placementId: 'VZ-HB-F839907VGB86E1'} }, */ /*300x600*/ 
+      /* { bidder: 'vertoz',       params: { placementId: 'VZ-HB-M568254V344777'} }, */ /*300x250*/
+      /* { bidder: 'vertoz',       params: { placementId: 'VZ-HB-I951082VE249HH'} }, */ /*160x600*/
+      /* { bidder: 'vertoz',       params: { placementId: 'VZ-HB-P511170V2009D9'} }, */ /*120x250*/
       { bidder: 'springserveAlias2',  params: { placementId: '12463797'} }  /* 300x600 - 300x250 - 160x600 - 120x600 */
     ] //./bids
   },
@@ -206,13 +206,13 @@
       { bidder: 'pulsepoint',   params: { cf: '728X90', cp: 561446, ct: 602643 } },
       { bidder: 'pulsepoint',   params: { cf: '320X50', cp: 561446, ct: 602644 } },
       { bidder: 'sekindoapn',   params: { placementId: '11968754' } }, /* 970x250 */
-      { bidder: 'sonobi',       params: { ad_unit: '/1001824/prebid_test2', dom_id: 'div-gpt-ad-1503393253852-1', floor: 0.5 } },  /* does all sizes, different sort of setup */ 
+      /* { bidder: 'sonobi',       params: { ad_unit: '/1001824/prebid_test2', dom_id: 'div-gpt-ad-1503393253852-1', floor: 0.5 } },  */ /* does all sizes, different sort of setup */ 
       { bidder: 'sovrn',        params: { tagid: '504162' } }, /* 970x250 */
       { bidder: 'sovrn',        params: { tagid: '504165' } }, /* 728x90 */
-      { bidder: 'huddledmasses',params: { placement_id: 6545 } },  /* 728x90 */
-      { bidder: 'smartyads',    params: { banner_id: 6379 } }, /*728x90*/
-      { bidder: 'vertoz',       params: { placementId:'VZ-HB-Y968967V15GC66'} }, /* 970x250 */
-      { bidder: 'vertoz',       params: { placementId:'VZ-HB-P786728VDF5C56'} }, /*7 28x90 */
+      /* { bidder: 'huddledmasses',params: { placement_id: 6545 } },  */ /* 728x90 */
+      /* { bidder: 'smartyads',    params: { banner_id: 6379 } }, */ /*728x90*/
+      /* { bidder: 'vertoz',       params: { placementId:'VZ-HB-Y968967V15GC66'} }, */ /* 970x250 */
+      /* { bidder: 'vertoz',       params: { placementId:'VZ-HB-P786728VDF5C56'} }, */ /*7 28x90 */
       { bidder: 'springserveAlias2',  params: { placementId: '12463800'} }  /* 970x250 - 970x90 - 728x90  */
     ] //./bids
   }
@@ -273,10 +273,10 @@
     });
             
       pbjs.bidderSettings = { 
-           aol:         { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.85; } }, // adjust the bid in real time before the auction takes place
-           districtmDMX: { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.90; } }, // adjust the bid in real time before the auction takes place
-           sekindonapn: { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.75; } }, // adjust the bid in real time before the auction takes place
-           brealtime:   { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.80; } }, // adjust the bid in real time before the auction takes place
+           aol:               { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.85; } }, // adjust the bid in real time before the auction takes place
+           districtmDMX:      { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.90; } }, // adjust the bid in real time before the auction takes place
+           sekindonapn:       { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.75; } }, // adjust the bid in real time before the auction takes place
+           brealtime:         { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.80; } }, // adjust the bid in real time before the auction takes place
            springserveAlias2: { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.65; } }, // adjust the bid in real time before the auction takes place
             
            standard: {
@@ -285,7 +285,7 @@
               { key: "hb_adid",   val: function(bidResponse) { return bidResponse.adId; } }, 
               { key: "hb_size",   val: function(bidResponse) { return bidResponse.size; } },         
               { key: "hb_nowin",  val: function(bidResponse) { return 'no_win'; } }, 
-              { key: "hb_website",  val: function(bidResponse) { return 'golfwrx.com'; } },
+              { key: "hb_website",val: function(bidResponse) { return 'golfwrx.com'; } },
               { key: "hb_pb",     val: function(bidResponse) { var cpm = bidResponse.cpm * (gpt_config.latest_gbp_rate || gpt_config.default_gbp_rate);  //converts cpm to GBP, rounds cpm to nearest 0.10 incriment, sets 20 if above 20
                     if (cpm <20) { return (Math.floor(cpm * 10) / 10).toFixed(2);} else { return '20.00'; } }
               }]
