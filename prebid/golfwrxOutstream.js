@@ -39,7 +39,7 @@
                     playerSwf: '//d27kkruj8fr60l.cloudfront.net/os/flash/4/FlashPlayback.swf',
                     license: 'd0xJY29G8m6uhal3rH19mqR4r4GAj5GvmYZr2dC4q3+t0KBoo269hal69A==',
                     credits: {
-                        name: 'by Varrando',
+                        name: 'by Adysis',
                         url: 'https://adysis.com'
                     },
                     header: 'Advertising',
