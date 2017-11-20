@@ -17,7 +17,7 @@
                     volume: 0.4,
                     closeOffset: 4,
                     mobileCloseOffset: 2,
-                    closeCompleted: true,
+                    closeCompleted: false,
                     showWhen: 'adLoaded',
                     onlyAutoplay: false,
                     ads: {
@@ -25,7 +25,7 @@
                         loadTimeout: 10000,
                         adLoadTimeout: 10000,
                         adPlayTimeout: 10000,
-                        maxPodLength: 3,
+                        maxPodLength: 1,
                         redirectMaxLevel: 10,
                         adBreaks: [
                             {
