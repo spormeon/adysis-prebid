@@ -17,7 +17,7 @@
                     volume: 0.4,
                     closeOffset: 4,
                     mobileCloseOffset: 2,
-                    closeCompleted: false,
+                    closeCompleted: true,
                     showWhen: 'adLoaded',
                     onlyAutoplay: false,
                     ads: {
@@ -40,12 +40,12 @@
                     license: 'd0xJY29G8m6uhal3rH19mqR4r4GAj5GvmYZr2dC4q3+t0KBoo269hal69A==',
                     credits: {
                         name: 'by Varrando',
-                        url: 'https://varrando.com'
+                        url: 'https://adysis.com'
                     },
                     header: 'Advertising',
                     footer: {
-                        name: 'Varrando Technology',
-                        url: 'https://varrando.com/outstream-player/'
+                        name: 'Adysis Technology',
+                        url: 'https://adysis.com'
                     }
                 };
 
