@@ -10,7 +10,7 @@
             });
 
             function getOptions(options) {
-                var v1 = 'http://demo.tremorvideo.com/proddev/vast/vast2VPAIDLinear.xml';
+                var v1 = 'http://demo.tremorvideo.com/proddev/vast/vast_inline_linear.xml';
                 var v2 = 'https://demo.varrando.com/vast/varrando/vast02.xml';
 
                 var ipOptions = {
