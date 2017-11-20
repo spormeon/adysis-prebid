@@ -19,9 +19,9 @@
                     mobileCloseOffset: 2,
                     closeCompleted: false,
                     showWhen: 'adLoaded',
-                    onlyAutoplay: false,
+                    onlyAutoplay: true,
                     ads: {
-                        useOnlyHtml5: false,
+                        useOnlyHtml5: true,
                         loadTimeout: 10000,
                         adLoadTimeout: 10000,
                         adPlayTimeout: 10000,
