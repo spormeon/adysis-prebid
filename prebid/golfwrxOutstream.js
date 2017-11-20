@@ -1,5 +1,5 @@
  
-            varrando.setupInPage("varrando-inpage1", getOptions({}), function (event) {
+            varrando.setupInPage("varrando-inpage1", getOptions({maxWidth: '640px', v1: 1}), function (event) {
             }, function (message) {
             });
             varrando.setupInPage("varrando-inpage2", getOptions({maxWidth: '420px', v2: 1}), function (event) {
@@ -10,7 +10,7 @@
             });
 
             function getOptions(options) {
-                var v1 = 'http://demo.tremorvideo.com/proddev/vast/vast_inline_linear.xml';
+                var v1 = 'https://demo.varrando.com/vast/varrando/vast01.xml';
                 var v2 = 'https://demo.varrando.com/vast/varrando/vast02.xml';
 
                 var ipOptions = {
