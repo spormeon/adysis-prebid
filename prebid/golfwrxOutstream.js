@@ -1,12 +1,4 @@
-//Load jQuery library using plain JavaScript
-(function(){
-  var newscript = document.createElement('script');
-     newscript.type = 'text/javascript';
-     newscript.async = true;
-     newscript.src = '//d27kkruj8fr60l.cloudfront.net/os/7.0/varrando.osembed.min.js?x69753';
-  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(newscript);
-
-       
+ 
             varrando.setupInPage("varrando-inpage1", getOptions({}), function (event) {
             }, function (message) {
             });
@@ -16,7 +8,7 @@
             varrando.setupInPage("varrando-inpage3", getOptions({size: 'fill'}), function (event) {
             }, function (message) {
             });
-})();
+
             function getOptions(options) {
                 var v1 = 'https://demo.varrando.com/vast/varrando/vast01.xml';
                 var v2 = 'https://demo.varrando.com/vast/varrando/vast02.xml';
