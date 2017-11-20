@@ -194,6 +194,10 @@
       { bidder: 'aol',          params: { placement: '6507338', network: '4436.1', server: 'adserver.adtech.de' } }, /* 970x90 */
       { bidder: 'aol',          params: { placement: '6507341', network: '4436.1', server: 'adserver.adtech.de' } }, /* 468x60 */
       { bidder: 'aol',          params: { placement: '6507340', network: '4436.1', server: 'adserver.adtech.de' } }, /* 320x50 */
+      { bidder: 'featureforward', params: {pubId:28,siteId:6 ,placementId: '0' }},	  
+	  { bidder: 'featureforward', params: {pubId:28,siteId:6 ,placementId: '1' }},	  
+	  { bidder: 'featureforward', params: {pubId:28,siteId:6 ,placementId: '2' }},	  
+	  { bidder: 'featureforward', params: {pubId:28,siteId:6 ,placementId: '3' }},
       /* { bidder: 'atomx',        params: { id: '3808200'} }, */ /* does all sizes, not working at moment */
       { bidder: 'brealtime',    params: { placementId: '12002322' } },  /* 970x250 */
       { bidder: 'brealtime',    params: { placementId: '12002329' } },  /* 970x90 */
