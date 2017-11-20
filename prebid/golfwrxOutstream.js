@@ -21,7 +21,7 @@
                     showWhen: 'adLoaded',
                     onlyAutoplay: true,
                     ads: {
-                        useOnlyHtml5: true,
+                        useOnlyHtml5: false,
                         loadTimeout: 10000,
                         adLoadTimeout: 10000,
                         adPlayTimeout: 10000,
