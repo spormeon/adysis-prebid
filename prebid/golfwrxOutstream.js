@@ -1,5 +1,5 @@
  
-            varrando.setupInPage("varrando-inpage1", getOptions({maxWidth: '640px', v1: 1}), function (event) {
+            varrando.setupInPage("varrando-inpage1", getOptions({maxWidth: '640px', v2: 1}), function (event) {
             }, function (message) {
             });
             varrando.setupInPage("varrando-inpage2", getOptions({maxWidth: '420px', v2: 1}), function (event) {
@@ -19,7 +19,7 @@
                     mobileCloseOffset: 2,
                     closeCompleted: false,
                     showWhen: 'adLoaded',
-                    onlyAutoplay: true,
+                    onlyAutoplay: false,
                     ads: {
                         useOnlyHtml5: false,
                         loadTimeout: 10000,
