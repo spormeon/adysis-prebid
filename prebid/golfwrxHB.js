@@ -290,7 +290,7 @@
               { key: "hb_size",   val: function(bidResponse) { return bidResponse.size; } },         
               { key: "hb_nowin",  val: function(bidResponse) { return 'no_win'; } }, 
               { key: "hb_website",val: function(bidResponse) { return 'golfwrx.com'; } },
-              { key: "hb_pb",     val: function(bidResponse) { var cpm = (bidResponse.cpm * (gpt_config.latest_gbp_rate || gpt_config.default_gbp_rate)) * 0.70;  //converts cpm to GBP, rounds cpm to nearest 0.10 incriment, sets 20 if above 20, sets a rev share value
+              { key: "hb_pb",     val: function(bidResponse) { var cpm = (bidResponse.cpm * (gpt_config.latest_gbp_rate || gpt_config.default_gbp_rate)) / 0.70;  //converts cpm to GBP, rounds cpm to nearest 0.10 incriment, sets 20 if above 20, sets a rev share value
                     if (cpm <20) { return (Math.floor(cpm * 10) / 10).toFixed(2);} else { return '20.00'; } }
               }]
             }
