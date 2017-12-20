@@ -19,6 +19,19 @@
    return result.replace(/,\n$/, "");
  }
 
+<!-- Prebid Analytics -->
+;(function(p,l,o,w,i,n,g){if(!p[i]){p.GlobalSnowplowNamespace=p.GlobalSnowplowNamespace||[];
+p.GlobalSnowplowNamespace.push(i);p[i]=function(){(p[i].q=p[i].q||[]).push(arguments)
+};p[i].q=p[i].q||[];n=l.createElement(o);g=l.getElementsByTagName(o)[0];n.async=1;
+n.src=w;g.parentNode.insertBefore(n,g)}}(window,document,"script","//d1fc8wv8zag5ca.cloudfront.net/2.8.2/sp.js","snowplow"));
+
+window.snowplow('newTracker', 'cf', 'd30e42x8qna3wj.cloudfront.net', { // Initialise a tracker
+  appId: 'testwebsite.com',
+  cookieDomain: '.testwebsite.com'
+});
+
+window.snowplow('trackPageView');
+
 <!-- Prebid Config Section START -->
 <!-- Make sure this is inserted before your GPT tag -->
 
@@ -269,7 +282,7 @@
       pbjs.aliasBidder('appnexus','sekindoapn');  // alias for bidder
       pbjs.aliasBidder('appnexus','brealtime');   // alias for bidder
       pbjs.aliasBidder('appnexus','springserveAlias2'); // alias for bidder
-      // pbjs.setPriceGranularity("high");   // not being used, being done in adserver targeting below, this needs to be tweaked once prices seen more
+      // pbjs.setPriceGranularity("dense");   // not being used, being done in adserver targeting below, this needs to be tweaked once prices seen more
       pbjs.addAdUnits(adUnits);
       pbjs.requestBids({
         bidsBackHandler: initAdserver
@@ -282,6 +295,7 @@
            sekindonapn:       { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.75; } }, // adjust the bid in real time before the auction takes place
            brealtime:         { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.80; } }, // adjust the bid in real time before the auction takes place
            springserveAlias2: { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.65; } }, // adjust the bid in real time before the auction takes place
+           bidCpmAdjustment: function (bidCpm) { if(bidCpm < 1.50){ return 0; } return bidCpm; },
             
            standard: {
               adserverTargeting: [
