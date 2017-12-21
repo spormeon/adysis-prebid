@@ -27,7 +27,7 @@ n.src=w;g.parentNode.insertBefore(n,g)}}(window,document,"script","//d1fc8wv8zag
 
 window.snowplow('newTracker', 'cf', '//d30e42x8qna3wj.cloudfront.net', { // Initialise a tracker
   appId: 'adops.golfwrx.com',
-  cookieDomain: '.testwebsite.com'
+  cookieDomain: '.golfwrx.com'
 });
 
 window.snowplow('trackPageView');
