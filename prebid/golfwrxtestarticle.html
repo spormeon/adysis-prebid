@@ -3,126 +3,15 @@
 <html lang="en-US">
 <head>
 <!-- Make sure this is inserted before the GPT tag -->
-<script> 
-  var PREBID_TIMEOUT = 700;
 
-  var adUnits = [
-    //WRX_FP_Header_728x90
-    {
-      code: 'div-gpt-ad-1441132690068-0',
-      sizes: [[728, 90], [970, 90], [970, 250]],
-      bids: [
-        { bidder: 'sovrn',        params: { tagid: '507381' } }, /* golfwrx_728x90_ATF_AiH */
-        { bidder: 'sovrn',        params: { tagid: '507379' } }, /* golfwrx_970x90_ATF_AiH */
-        { bidder: 'appnexus',     params: { placementId: '11971351' } } /* one placementId for all sizes */
-      ] // ./bids
-    }
-    // ./WRX_FP_Header_728x90
-    , // for the love of all things holy, please don't forget the comma
-    // WRX_FP_ATF_300x250
-    {
-      code: 'div-gpt-ad-1441132690068-1',
-      sizes: [[300, 250]],
-      // sizes: [[300, 250], [300,600]],
-      bids: [
-        { bidder: 'sovrn',        params: { tagid: '507388' } }, /* golfwrx_300x250_ATF_AiH */ 
-        { bidder: 'appnexus',     params: { placementId: '11971351' } } /* one placementId for all sizes */
-      ] // ./bids
-    }
-    // ./WRX_FP_ATF_300x250
-    , // for the love of all things holy, please don't forget the comma
-    // WRX_FP_BTF_300x250_1
-    {
-      code: 'div-gpt-ad-1441132690068-2',
-      sizes: [[300, 250], [300,600]],
-      bids: [
-        { bidder: 'sovrn',        params: { tagid: '507389' } }, /* golfwrx_300x250_BTF_AiH */
-        { bidder: 'sovrn',        params: { tagid: '507386' } }, /* golfwrx_300x600_BTF_AiH	*/
-        { bidder: 'appnexus',     params: { placementId: '11971351' } } /* one placementId for all sizes */
-      ] // ./bids
-    }
-    // ./WRX_FP_BTF_300x250_1
-    , // for the love of all things holy, please don't forget the comma
-    // WRX_FP_BTF_300x250_2
-    {
-      code: 'div-gpt-ad-1441132690068-3',
-      sizes: [[300, 250], [300,600]],
-      bids: [
-        { bidder: 'sovrn',        params: { tagid: '507389' } }, /* golfwrx_300x250_BTF_AiH */
-        { bidder: 'sovrn',        params: { tagid: '507386' } }, /* golfwrx_300x600_BTF_AiH	*/
-        { bidder: 'appnexus',     params: { placementId: '11971351' } } /* one placementId for all sizes */
-      ] // ./bids
-    }
-    // ./WRX_FP_BTF_300x250_2
-  ]; // ./adUnits
 
-  var pbjs = pbjs || {};
-  pbjs.que = pbjs.que || [];
+<!-- In-reed test -->
+<script>!function(e,t,a,n,g){e[n]=e[n]||[],e[n].push({"gtm.start":(new Date).getTime(),event:"gtm.js"});var m=t.getElementsByTagName(a)[0],r=t.createElement(a);r.async=!0,r.src="https://www.googletagmanager.com/gtm.js?id=GTM-PL4PD49",m.parentNode.insertBefore(r,m)}(window.parent,window.parent.document,"script","dataLayer");</script><script>var iframe=window.parent.document.createElement("iframe");iframe.src="https://www.googletagmanager.com/ns.html?id=GTM-PL4PD49";iframe.height="0";iframe.width="0";iframe.style="display:none;visibility:hidden";window.parent.document.body.appendChild(iframe);</script><script>window.parent['$$mm-analytics'] = window.parent['$$mm-analytics'] || {};if (typeof window.parent['$$mm-analytics'].firstEmbed === 'undefined') {window.parent['$$mm-analytics'].firstEmbed = Date.now();}</script>
+<script async type='text/javascript' src="https://bucket1.mm-syringe.com/prod/configs/616fa65d-129d-451b-96dd-551148aa9a44.js"></script>
+<script async type='text/javascript' src="https://bucket1.mm-syringe.com/prod/injector/injector.1.1.js"></script>
 
-</script>
 
-<script src="http://sponsors.golfwrx.com/wrxsetup.js" async></script>
 
-<script>
-  var googletag = googletag || {};
-  googletag.cmd = googletag.cmd || [];
-  googletag.cmd.push(function() {
-    googletag.pubads().disableInitialLoad();
-  });
-  
-  const wrxGranularity = {
-    "buckets" : [{
-      "precision": 2,
-      "min" : 0,
-      "max" : 16,
-      "increment" : 0.01
-    }
-    // ,
-    // {
-    //   "precision": 2,
-    //   "min" : 5,
-    //   "max" : 20,
-    //   "increment" : 1.00
-    // }
-    ]
-  };
-  
-  pbjs.que.push(function() {
-    // pbjs.setPriceGranularity("high");
-    pbjs.setPriceGranularity(wrxGranularity);
-  });
-
-  pbjs.que.push(function() {
-    pbjs.addAdUnits(adUnits);
-    pbjs.requestBids({
-      bidsBackHandler: sendAdserverRequest
-    });
-  });
-
-  function sendAdserverRequest() {
-    if (pbjs.adserverRequestSent) return;
-    pbjs.adserverRequestSent = true;
-    googletag.cmd.push(function() {
-      pbjs.que.push(function() {
-        pbjs.setTargetingForGPTAsync();
-        googletag.pubads().refresh();
-        
-        // development output of targeting params - 2DO: remove prior to production deployment
-        // var targetingParams = pbjs.getAdserverTargeting();
-        // var paramsOutput = PPObjectIndented(targetingParams);
-        // console.log(paramsOutput);
-        // var container = document.getElementById('targeting_info');
-        // container.innerHTML = paramsOutput;
-        
-      });
-    });
-  }
-
-  setTimeout(function() {
-      sendAdserverRequest();
-  }, PREBID_TIMEOUT);
-
-</script>
 
 <meta charset="UTF-8" >
 <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
