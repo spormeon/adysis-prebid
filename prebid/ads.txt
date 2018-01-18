@@ -11,7 +11,7 @@ switchconcepts.com, Q3N3aXRjaA==-a124, DIRECT
 teads.tv, 12104, DIRECT, 15a9c44f6d26cbe1
 adtech.com, 4436, RESELLER
 adtech.com, 9993, RESELLER
-adtrue.com, 1219, RESELLER
+adtrue.com, 1219, DIRECT
 amazon.com, 3411, RESELLER
 aolcloud.net, 4436, RESELLER
 aolcloud.net, 9993, RESELLER
@@ -19,7 +19,7 @@ appnexus.com, 1908, RESELLER
 appnexus.com, 7944, RESELLER
 appnexus.com, 1001, RESELLER
 appnexus.com, 1117, RESELLER
-appnexus.com, 1356, RESELLER
+appnexus.com, 1356, RESELLER, f5ab79cb980f11d1 
 appnexus.com, 3135, RESELLER
 appnexus.com, 3538, RESELLER
 appnexus.com, 3539, RESELLER
@@ -27,11 +27,13 @@ appnexus.com, 3540, RESELLER
 contextweb.com, 558511, RESELLER
 contextweb.com, 560031, RESELLER
 contextweb.com, 561446, RESELLER, 89ff185a4c4e857c
+contextweb.com, 560700, RESELLER, 89ff185a4c4e857c
 criteo.com, 3450, RESELLER
-emxdgt.com, 59, RESELLER
+emxdgt.com, 59, DIRECT, 1e1d41537f7cad7f 
 google.com, pub-9685734445476814, RESELLER, f08c47fec0942fa0
 google.com, pub-5214588792313820, RESELLER, f08c47fec0942fa0
 google.com, pub-9557089510405422, RESELLER, f08c47fec0942fa0
+google.com, pub-3762254771375579, RESELLER, f08c47fec0942fa0
 gumgum.com, 11645, RESELLER, ffdef49475d318a9
 improvedigital.com, 335, RESELLER
 indexexchange.com, 180008, RESELLER
@@ -48,6 +50,7 @@ pubmatic.com, 137711, RESELLER
 pubmatic.com, 156212, RESELLER
 pubmatic.com, 30666, RESELLER, 5d62403b186f2ace
 pubmatic.com, 62483, RESELLER
+pubmatic.com, 155495, RESELLER, 5d62403b186f2ace
 rhythmone.com, 1934627955, RESELLER
 rubiconproject.com, 16414, RESELLER
 smartadserver.com, 1827, RESELLER
