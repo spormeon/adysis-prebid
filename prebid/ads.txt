@@ -1,6 +1,6 @@
 ## golfwrx.com ads.txt | 2017-12-12-09-25-37
 google.com, pub-3979877680810268, DIRECT, f08c47fec0942fa0
-appnexus.com, 8516, DIRECT
+appnexus.com, 8516, DIRECT, f5ab79cb980f11d1
 sovrn.com, 257186, DIRECT, fafdf38b16bf6b2b
 lijit.com, 257186, DIRECT, fafdf38b16bf6b2b
 33across.com, 33, DIRECT
@@ -15,17 +15,17 @@ adtrue.com, 1219, DIRECT
 amazon.com, 3411, RESELLER
 aolcloud.net, 4436, RESELLER
 aolcloud.net, 9993, RESELLER
-appnexus.com, 1908, RESELLER
-appnexus.com, 7944, RESELLER
-appnexus.com, 1001, RESELLER
-appnexus.com, 1117, RESELLER
+appnexus.com, 1908, RESELLER, f5ab79cb980f11d1
+appnexus.com, 7944, RESELLER, f5ab79cb980f11d1
+appnexus.com, 1001, RESELLER, f5ab79cb980f11d1
+appnexus.com, 1117, RESELLER, f5ab79cb980f11d1
 appnexus.com, 1356, RESELLER, f5ab79cb980f11d1 
-appnexus.com, 3135, RESELLER
-appnexus.com, 3538, RESELLER
-appnexus.com, 3539, RESELLER
-appnexus.com, 3540, RESELLER
-contextweb.com, 558511, RESELLER
-contextweb.com, 560031, RESELLER
+appnexus.com, 3135, RESELLER, f5ab79cb980f11d1
+appnexus.com, 3538, RESELLER, f5ab79cb980f11d1
+appnexus.com, 3539, RESELLER, f5ab79cb980f11d1
+appnexus.com, 3540, RESELLER, f5ab79cb980f11d1
+contextweb.com, 558511, RESELLER, 89ff185a4c4e857c
+contextweb.com, 560031, RESELLER, 89ff185a4c4e857c
 contextweb.com, 561446, RESELLER, 89ff185a4c4e857c
 contextweb.com, 560700, RESELLER, 89ff185a4c4e857c
 criteo.com, 3450, RESELLER
@@ -43,13 +43,13 @@ lkqd.net, 293, RESELLER
 nativeads.com, 52853, RESELLER
 openx.com, 100766, RESELLER, 6a698e2ec38604c6
 openx.com, 537120563, RESELLER, 6a698e2ec38604c6
-openx.com, 537120960, RESELLER
-openx.com, 538959099, RESELLER
-openx.com, 83499, RESELLER
-pubmatic.com, 137711, RESELLER
-pubmatic.com, 156212, RESELLER
+openx.com, 537120960, RESELLER, 6a698e2ec38604c6
+openx.com, 538959099, RESELLER, 6a698e2ec38604c6
+openx.com, 83499, RESELLER, 6a698e2ec38604c6
+pubmatic.com, 137711, RESELLER, 5d62403b186f2ace
+pubmatic.com, 156212, RESELLER, 5d62403b186f2ace
 pubmatic.com, 30666, RESELLER, 5d62403b186f2ace
-pubmatic.com, 62483, RESELLER
+pubmatic.com, 62483, RESELLER, 5d62403b186f2ace
 pubmatic.com, 155495, RESELLER, 5d62403b186f2ace
 rhythmone.com, 1934627955, RESELLER
 rubiconproject.com, 16414, RESELLER
