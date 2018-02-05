@@ -18,27 +18,26 @@
       }
     },
     bids: [
-    	{
-            bidder: 'appnexusAst',
-            params: {
-              placementId: '5768085',
-              video: {
-                skippable: true,
-                playback_method: [ 'auto_play_sound_off' ]
-              }
-            }
-          },
-          {
-            bidder: 'unruly',
-            params: {
-              targetingUUID: '6f15e139-5f18-49a1-b52f-87e5e69ee65e',
-              siteId: 1081534
+        {
+          bidder: 'appnexusAst',
+          params: {
+            placementId: '5768085',
+            video: {
+              skippable: true,
+              playback_method: [ 'auto_play_sound_off' ]
             }
           }
-        ]
-      }
-    ]
-  }];
+        },
+        {
+          bidder: 'unruly',
+          params: {
+            targetingUUID: '6f15e139-5f18-49a1-b52f-87e5e69ee65e',
+            siteId: 1081534
+          }
+        }
+      ]
+    }
+  ];
 
   pbjs.que.push(function () {
     pbjs.addAdUnits(videoAdUnits);
