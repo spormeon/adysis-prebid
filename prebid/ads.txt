@@ -59,7 +59,7 @@ spotx.tv, 139883, RESELLER, 7842df1d2fe2db34
 spotxchange.com, 139883, RESELLER, 7842df1d2fe2db34
 theagency.com, 1058, RESELLER
 google.com, pub-1956856209985681, RESELLER, f08c47fec0942fa0
-avantisvideo.com, 7737, DIRECT
-spotxchange.com, 165877, DIRECT, 7842df1d2fe2db34
-spotx.tv, 165877, DIRECT, 7842df1d2fe2db34
-Advertising.com, 23598, DIRECT
+avantisvideo.com, 7723, DIRECT
+spotxchange.com, 165877, RESELLER, 7842df1d2fe2db34
+spotx.tv, 165877, RESELLER, 7842df1d2fe2db34
+Advertising.com, 23598, RESELLER
