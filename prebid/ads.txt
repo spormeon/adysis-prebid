@@ -63,3 +63,9 @@ avantisvideo.com, 7723, DIRECT
 spotxchange.com, 165877, RESELLER, 7842df1d2fe2db34
 spotx.tv, 165877, RESELLER, 7842df1d2fe2db34
 Advertising.com, 23598, RESELLER
+<-- viewdeos -->
+advertising.com, 12287, RESELLER
+beachfront.com, beachfront_4174, RESELLER
+google.com, pub-1062972861553303, RESELLER, f08c47fec0942fa0
+google.com, pub-8544626876536809, RESELLER, f08c47fec0942fa0
+fyber.com, e6e94829fdc031615ca9be992ce2e8e2, RESELLER
