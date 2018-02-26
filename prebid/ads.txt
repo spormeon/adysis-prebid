@@ -69,3 +69,6 @@ beachfront.com, beachfront_4174, RESELLER
 google.com, pub-1062972861553303, RESELLER, f08c47fec0942fa0
 google.com, pub-8544626876536809, RESELLER, f08c47fec0942fa0
 fyber.com, e6e94829fdc031615ca9be992ce2e8e2, RESELLER
+<-- switch updates -->
+rubiconproject.com, 14766, RESELLER
+experian.com, EXP_0122_A, RESELLER
