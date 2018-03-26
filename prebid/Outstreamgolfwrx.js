@@ -6,7 +6,3 @@ var googletag = googletag || {};
     googletag.pubads().collapseEmptyDivs();
     googletag.enableServices();
   });
-<!-- /1001824/Outstream -->
-"<div id='div-gpt-ad-1522059993505-0'>
-googletag.cmd.push(function() { googletag.display('div-gpt-ad-1522059993505-0'); });
-</div>"
