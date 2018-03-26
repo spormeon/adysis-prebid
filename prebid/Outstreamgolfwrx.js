@@ -1,4 +1,4 @@
-<script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+async='async' src='https://www.googletagservices.com/tag/js/gpt.js'
 
   var googletag = googletag || {};
   googletag.cmd = googletag.cmd || [];
