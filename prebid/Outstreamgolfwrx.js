@@ -6,7 +6,7 @@ var googletag = googletag || {};
     googletag.pubads().collapseEmptyDivs();
     googletag.enableServices();
   });
-<div class="ad-reporter-ahytrfg35423"> <!-- div for the chrome extension ads info grabber -->
+<div class="ad-reporter-ahytrfg35423">
 <!-- /1001824/Outstream -->
 <div id='div-gpt-ad-1522059993505-0'>
 googletag.cmd.push(function() { googletag.display('div-gpt-ad-1522059993505-0'); });
