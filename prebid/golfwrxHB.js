@@ -73,7 +73,7 @@ window.snowplow('trackPageView');
       { bidder: 'brealtime',    params: { placementId: '12002335' } },  /* 300x250 */ 
       { bidder: 'brealtime',    params: { placementId: '12002336' } },  /* 160x600 */ 
       { bidder: 'brealtime',    params: { placementId: '12002337' } },  /* 120x600 */
-      { bidder: 'conversant',   params: { site_id: '118233' } },  /* 300x250 */ 
+      /* { bidder: 'conversant',   params: { site_id: '118233' } }, */  /* 300x250 */ 
       { bidder: 'districtmDMX', params: { id:171413 } }, /* 300x600 - 300x250 - 160x600 */
       { bidder: 'pulsepoint',   params: { cf: '300X600', cp: 561446, ct: 602638 } }, /* 300x600 */
       { bidder: 'pulsepoint',   params: { cf: '300X250', cp: 561446, ct: 602639 } }, /* 300x250 */
@@ -120,7 +120,7 @@ window.snowplow('trackPageView');
       { bidder: 'brealtime',    params: { placementId: '12002335' } },  /* 300x250 */ 
       { bidder: 'brealtime',    params: { placementId: '12002336' } },  /* 160x600 */ 
       { bidder: 'brealtime',    params: { placementId: '12002337' } },  /* 120x600 */
-      { bidder: 'conversant',   params: { site_id: '118233' } },  /* 300x250 */ 
+      /* { bidder: 'conversant',   params: { site_id: '118233' } }, */  /* 300x250 */ 
       { bidder: 'districtmDMX', params: { id:171413 } }, /* 300x600 - 300x250 - 160x600 */
       { bidder: 'pulsepoint',   params: { cf: '300X600', cp: 561446, ct: 602638 } }, /* 300x600 */
       { bidder: 'pulsepoint',   params: { cf: '300X250', cp: 561446, ct: 602639 } }, /* 300x250 */
@@ -167,7 +167,7 @@ window.snowplow('trackPageView');
       { bidder: 'brealtime',    params: { placementId: '12002335' } },  /* 300x250 */ 
       { bidder: 'brealtime',    params: { placementId: '12002336' } },  /* 160x600 */ 
       { bidder: 'brealtime',    params: { placementId: '12002337' } },  /* 120x600 */
-      { bidder: 'conversant',   params: { site_id: '118233' } },  /* 300x250 */ 
+      /* { bidder: 'conversant',   params: { site_id: '118233' } }, */  /* 300x250 */ 
       { bidder: 'districtmDMX', params: { id:171413 } }, /* 300x600 - 300x250 - 160x600 */
       { bidder: 'pulsepoint',   params: { cf: '300X600', cp: 561446, ct: 602638 } }, /* 300x600 */
       { bidder: 'pulsepoint',   params: { cf: '300X250', cp: 561446, ct: 602639 } }, /* 300x250 */
@@ -220,7 +220,7 @@ window.snowplow('trackPageView');
       { bidder: 'brealtime',    params: { placementId: '12002330' } },  /* 728x90 */
       { bidder: 'brealtime',    params: { placementId: '12002331' } },  /* 468x60 */
       { bidder: 'brealtime',    params: { placementId: '12002333' } },  /* 320x50 */
-      { bidder: 'conversant',   params: { site_id: '118233' } },  /* 728x90 */ 
+      /* { bidder: 'conversant',   params: { site_id: '118233' } }, */  /* 728x90 */ 
       { bidder: 'districtmDMX', params: { id: 171412 } }, /* 970x250 - 970x90 - 728x90 - 468x60 */
       { bidder: 'pulsepoint',   params: { cf: '970X250', cp: 561446, ct: 602634 } },
       { bidder: 'pulsepoint',   params: { cf: '970X90', cp: 561446, ct: 602642 } },
