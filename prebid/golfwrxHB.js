@@ -319,7 +319,7 @@ window.snowplow('trackPageView');
       pbjs.adserverRequestSent = true;
       googletag.cmd.push(function() {
         pbjs.que.push(function() {
-        	pbjs.setConfig({pubcid: {expInterval: 525600}});
+        	
           //./pbjs.bidderSettings
 
           pbjs.setTargetingForGPTAsync();
