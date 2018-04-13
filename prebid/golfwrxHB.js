@@ -36,7 +36,7 @@ window.snowplow('trackPageView');
 <!-- Make sure this is inserted before your GPT tag -->
 
   
-  var PREBID_TIMEOUT = 1500;
+  var PREBID_TIMEOUT = 1000;
      
   var gpt_config = {
     prebid_timeout: 1000, //left for reference but not using right now...
