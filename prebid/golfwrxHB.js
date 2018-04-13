@@ -292,9 +292,7 @@ window.snowplow('trackPageView');
         bidsBackHandler: initAdserver
       });
     });
-    
-      pbjs.setBidderSequence('random');  
-      
+       
       pbjs.bidderSettings = { 
            aol:               { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.85; } }, // adjust the bid in real time before the auction takes place
            districtmDMX:      { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.90; } }, // adjust the bid in real time before the auction takes place
