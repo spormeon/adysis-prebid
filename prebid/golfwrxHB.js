@@ -264,7 +264,7 @@ window.snowplow('trackPageView');
       var pbjsEl = document.createElement("script");
       pbjsEl.type = "text/javascript";
       pbjsEl.async = true;
-      pbjsEl.src = "https://d3s34vlfe7g7ew.cloudfront.net/prebid_20170821225746.js";
+      pbjsEl.src = "https://d3s34vlfe7g7ew.cloudfront.net/prebid_20180413075915.js";
       var pbjsTargetEl = document.getElementsByTagName("head")[0];
       pbjsTargetEl.insertBefore(pbjsEl, pbjsTargetEl.firstChild);
   })();
