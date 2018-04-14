@@ -299,7 +299,7 @@ window.snowplow('trackPageView');
            sekindonapn:       { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.75; } }, // adjust the bid in real time before the auction takes place
            brealtime:         { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.80; } }, // adjust the bid in real time before the auction takes place
            springserveAlias2: { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.65; } }, // adjust the bid in real time before the auction takes place
-           bidCpmAdjustment: function (bidCpm) { if(bidCpm < 1.50){ return 0; } return bidCpm; },
+           
             
            standard: {
               adserverTargeting: [
