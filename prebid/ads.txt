@@ -72,3 +72,10 @@ fyber.com, e6e94829fdc031615ca9be992ce2e8e2, RESELLER
 <-- switch updates -->
 rubiconproject.com, 14766, RESELLER
 experian.com, EXP_0122_A, RESELLER
+<-- UAM adstxt -->
+aps.amazon.com, 7f2180c4-57bc-43a4-9896-ecff1a52049d, DIRECT #display
+contextweb.com, 561562, RESELLER, 89ff185a4c4e857 #display
+c1exchange.com, c1x_a9_uampubs, RESELLER #display
+coxmt.com, 2000068024302, RESELLER #display
+districtm.io, 100962, RESELLER #display
+appnexus.com, 1908, RESELLER, f5ab79cb980f11d1 #display
