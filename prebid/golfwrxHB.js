@@ -106,6 +106,7 @@ apstag.fetchBids({
       { bidder: 'aol',          params: { placement: '5293857', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x600 */
       { bidder: 'aol',          params: { placement: '6507339', network: '4436.1', server: 'adserver.adtech.de' } }, /* 120x600 */
       /* { bidder: 'atomx',        params: { id: '3808201'} }, */  /* does all sizes, not working at moment */ 
+      { bidder: 'appnexus',     params: { placementId: '11971351' } }, /* one placementId for all sizes */
       { bidder: 'brealtime',    params: { placementId: '12002334' } },  /* 300x600 */
       { bidder: 'brealtime',    params: { placementId: '12002335' } },  /* 300x250 */ 
       { bidder: 'brealtime',    params: { placementId: '12002336' } },  /* 160x600 */ 
