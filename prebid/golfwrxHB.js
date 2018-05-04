@@ -1,25 +1,5 @@
 
-  function PPObjectIndented(obj, indent) {
-   try { console.log("PrettyPrint Object Function Called...");} catch (e) { }
-   if (Object.keys(obj).length === 0 && obj.constructor === Object) return "{}: empty object returned...";
-   var result = "";
-   if (indent == null) { indent = ""; }
-   for (var property in obj) {
-     var value = obj[property];
-     if (typeof value == 'string') { value = "'" + value + "'"; }
-     else if (typeof value == 'object') {
-       if (value instanceof Array) { value = "[ " + value + " ]"; }
-       else {
-         var od = PPObjectIndented(value, indent + "  ");
-         value = "\n<br/>" + indent + "{\n<br/>" + od + "\n" + indent + "}";   // If you prefer { and } to be aligned
-       }
-     }
-     result += indent + "'" + property + "' : " + value + ",\n<br/>";
-   }
-   return result.replace(/,\n$/, "");
- }
-
-<!-- Prebid Analytics -->
+ <!-- Prebid Analytics -->
 ;(function(p,l,o,w,i,n,g){if(!p[i]){p.GlobalSnowplowNamespace=p.GlobalSnowplowNamespace||[];
 p.GlobalSnowplowNamespace.push(i);p[i]=function(){(p[i].q=p[i].q||[]).push(arguments)
 };p[i].q=p[i].q||[];n=l.createElement(o);g=l.getElementsByTagName(o)[0];n.async=1;
