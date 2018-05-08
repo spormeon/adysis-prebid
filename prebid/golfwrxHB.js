@@ -227,7 +227,7 @@ apstag.fetchBids({
     sizes: gpt_config.leaderboard_sizes,
     sizeMapping: [  //new!
       { minWidth : 1024, sizes : [[970, 250], [970, 90], [728, 90]] }, //if device screen width is greater than 1024, use these sizes
-      { minWidth : 480, sizes : [[728, 90]] }, //if device screen width is < 1024 && > 480, use these sizes
+      { minWidth : 480, sizes : [[728, 90], [468, 60]] }, //if device screen width is < 1024 && > 480, use these sizes
       { minWidth : 0, sizes : [[320, 50]] } //if device screen width is < 480 && > 0, use these sizes              
              ],
     bids: [
