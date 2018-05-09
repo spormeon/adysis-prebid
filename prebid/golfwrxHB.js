@@ -316,6 +316,33 @@ apstag.fetchBids({
       pbjs.aliasBidder('appnexus','springserveAlias2'); // alias for bidder
       // pbjs.setPriceGranularity("dense");   // not being used, being done in adserver targeting below, this needs to be tweaked once prices seen more
       pbjs.addAdUnits(adUnits);
+      
+      pbjs.setConfig({
+          sizeConfig: [{
+              'mediaQuery': '(min-width: 1024px)',
+              'sizesSupported': [
+                  [970, 90],
+                  [728, 90],
+                  [300, 600],
+                  [300, 250]
+              ],
+              'labels': ['desktop']
+          }, {
+              'mediaQuery': '(min-width: 480px) and (max-width: 1023px)',
+              'sizesSupported': [
+                  [300, 600],
+                  [300, 250]
+              ],
+              'labels': ['tablet']
+          }, {
+              'mediaQuery': '(min-width: 0px)',
+              'sizesSupported': [
+                  [20, 20]
+              ],
+              'labels': ['phone']
+          }]
+      });
+      
       pbjs.requestBids({
         bidsBackHandler: initAdserver
       });
