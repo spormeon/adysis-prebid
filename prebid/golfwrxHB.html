@@ -168,6 +168,17 @@ document.write('<scr'+'ipt src="//ads.adysis.com/w/1.0/jstag"><\/scr'+'ipt>');
         document.body.appendChild(ifrm);
     }
 </script>
+
+<script type="text/javascript">
+    function prepareFrame() {
+        var ifrm = document.createElement("iframe");
+        ifrm.setAttribute("src", "http://google.com/");
+        ifrm.style.width = "640px";
+        ifrm.style.height = "480px";
+        document.body.appendChild(ifrm);
+    }
+</script> 
+
 <hr>
 
 <div class="row small-up-3 medium-up-4 large-up-5">
