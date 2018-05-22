@@ -106,12 +106,12 @@ apstag.fetchBids({
       { bidder: 'sovrn',        params: { tagid: '504166' } }, /* 300x600 */
       { bidder: 'sovrn',        params: { tagid: '504164' } }, /* 300x250 */
       { bidder: 'sovrn',        params: { tagid: '504163' } }, /* 160x600 */
-      { bidder: 'sovrn',        params: { tagid: '504169' } }, /* 120x600 */
+      { bidder: 'sovrn',        params: { tagid: '504169' } } /* 120x600 */
       /* { bidder: 'huddledmasses',params: { placement_id: 6544 } }, */ /* 300x250 */
       /* { bidder: 'huddledmasses',params: { placement_id: 6546 } }, */ /* 160x600 */
-      { bidder: 'komoona',      params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: 'be3564ac269d63fb992e3b2554e06ada' } },  /* Golfwrx.com _KB 300x600 */
-      { bidder: 'komoona',      params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: '2d14facbe61621faad0c7b2aa0458cff' } },  /* Golfwrx.com _KB 300x250 */
-      { bidder: 'komoona',      params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: '3ef8c7500669dc363bec56f1e5a393f7' } }  /* Golfwrx.com _KB 160x600 */
+      /* { bidder: 'komoona',      params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: 'be3564ac269d63fb992e3b2554e06ada' } }, */  /* Golfwrx.com _KB 300x600 */
+      /* { bidder: 'komoona',      params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: '2d14facbe61621faad0c7b2aa0458cff' } }, */  /* Golfwrx.com _KB 300x250 */
+      /* { bidder: 'komoona',      params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: '3ef8c7500669dc363bec56f1e5a393f7' } }  */ /* Golfwrx.com _KB 160x600 */
       /* { bidder: 'smartyads',    params: { banner_id: 6368 } }, */ /* 300x250 */
       /* { bidder: 'smartyads',    params: { banner_id: 6383 } }, */ /* 160x600 */
       /* { bidder: 'vertoz',       params: { placementId: 'VZ-HB-F839907VGB86E1'} }, */ /*300x600*/ 
@@ -156,12 +156,12 @@ apstag.fetchBids({
       { bidder: 'sovrn',        params: { tagid: '504166' } }, /* 300x600 */
       { bidder: 'sovrn',        params: { tagid: '504164' } }, /* 300x250 */
       { bidder: 'sovrn',        params: { tagid: '504163' } }, /* 160x600 */
-      { bidder: 'sovrn',        params: { tagid: '504169' } }, /* 120x600 */
+      { bidder: 'sovrn',        params: { tagid: '504169' } } /* 120x600 */
       /* { bidder: 'huddledmasses',params: { placement_id: 6544 } },  */ /* 300x250 */
       /* { bidder: 'huddledmasses',params: { placement_id: 6546 } },  */ /* 160x600 */
-      { bidder: 'komoona',      params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: 'be3564ac269d63fb992e3b2554e06ada' } },  /* Golfwrx.com _KB 300x600 */
-      { bidder: 'komoona',      params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: '2d14facbe61621faad0c7b2aa0458cff' } },  /* Golfwrx.com _KB 300x250 */
-      { bidder: 'komoona',      params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: '3ef8c7500669dc363bec56f1e5a393f7' } }  /* Golfwrx.com _KB 160x600 */
+      /*{ bidder: 'komoona',      params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: 'be3564ac269d63fb992e3b2554e06ada' } },  */ /* Golfwrx.com _KB 300x600 */
+      /* { bidder: 'komoona',      params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: '2d14facbe61621faad0c7b2aa0458cff' } },  */ /* Golfwrx.com _KB 300x250 */
+      /* { bidder: 'komoona',      params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: '3ef8c7500669dc363bec56f1e5a393f7' } }  */ /* Golfwrx.com _KB 160x600 */
       /* { bidder: 'smartyads',    params: { banner_id: 6368 } }, */ /* 300x250 */
       /* { bidder: 'smartyads',    params: { banner_id: 6383 } }, */ /* 160x600 */
       /* { bidder: 'vertoz',       params: { placementId: 'VZ-HB-F839907VGB86E1'} }, */ /*300x600*/ 
@@ -206,12 +206,12 @@ apstag.fetchBids({
       { bidder: 'sovrn',        params: { tagid: '504166' } }, /* 300x600 */
       { bidder: 'sovrn',        params: { tagid: '504164' } }, /* 300x250 */
       { bidder: 'sovrn',        params: { tagid: '504163' } }, /* 160x600 */
-      { bidder: 'sovrn',        params: { tagid: '504169' } }, /* 120x600 */
+      { bidder: 'sovrn',        params: { tagid: '504169' } } /* 120x600 */
       /* { bidder: 'huddledmasses',params: { placement_id: 6544 } },  */ /* 300x250 */
       /* { bidder: 'huddledmasses',params: { placement_id: 6546 } },  */ /* 160x600 */
-      { bidder: 'komoona',      params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: 'be3564ac269d63fb992e3b2554e06ada' } },  /* Golfwrx.com _KB 300x600 */
-      { bidder: 'komoona',      params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: '2d14facbe61621faad0c7b2aa0458cff' } },  /* Golfwrx.com _KB 300x250 */
-      { bidder: 'komoona',      params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: '3ef8c7500669dc363bec56f1e5a393f7' } }  /* Golfwrx.com _KB 160x600 */
+      /* { bidder: 'komoona',      params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: 'be3564ac269d63fb992e3b2554e06ada' } },  */ /* Golfwrx.com _KB 300x600 */
+      /* { bidder: 'komoona',      params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: '2d14facbe61621faad0c7b2aa0458cff' } }, */ /* Golfwrx.com _KB 300x250 */
+      /* { bidder: 'komoona',      params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: '3ef8c7500669dc363bec56f1e5a393f7' } }  */ /* Golfwrx.com _KB 160x600 */
       /* { bidder: 'smartyads',    params: { banner_id: 6368 } }, */ /* 300x250 */
       /* { bidder: 'smartyads',    params: { banner_id: 6383 } }, */ /* 160x600 */
       /* { bidder: 'vertoz',       params: { placementId: 'VZ-HB-F839907VGB86E1'} }, */ /*300x600*/ 
