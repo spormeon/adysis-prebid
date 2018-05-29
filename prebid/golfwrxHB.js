@@ -378,7 +378,7 @@ apstag.fetchBids({
           //./pbjs.bidderSettings
 
           pbjs.setTargetingForGPTAsync();
-          googletag.pubads().refresh();
+          //googletag.pubads().refresh();
 
           // development output of targeting params - 2DO: remove prior to production deployment
           var targetingParams = pbjs.getAdserverTargeting();
