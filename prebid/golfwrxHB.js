@@ -323,7 +323,6 @@ apstag.fetchBids({
     	  bidderTimeout: 3000,
     	  userSync: {
     		    iframeEnabled: true,
-    	        syncsPerBidder: 5, // and no more than 3 syncs at a time
     	        syncDelay: 6000 // write image pixels 5 seconds after the auction
     	    },
           sizeConfig: [{
