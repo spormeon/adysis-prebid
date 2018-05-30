@@ -316,6 +316,8 @@ apstag.fetchBids({
       // pbjs.setPriceGranularity("dense");   // not being used, being done in adserver targeting below, this needs to be tweaked once prices seen more
       pbjs.addAdUnits(adUnits);
       pbjs.enableSendAllBids();
+      pbjs.setConfig({ publisherDomain: "http://www.golfwrx.com" );
+      pbjs.setConfig({ cookieSyncDelay: 100 );
       pbjs.setConfig({
           sizeConfig: [{
               'mediaQuery': '(min-width: 1024px)',
