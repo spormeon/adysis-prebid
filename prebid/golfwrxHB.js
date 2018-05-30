@@ -315,11 +315,11 @@ apstag.fetchBids({
       pbjs.aliasBidder('appnexus','springserveAlias2'); // alias for bidder
       // pbjs.setPriceGranularity("dense");   // not being used, being done in adserver targeting below, this needs to be tweaked once prices seen more
       pbjs.addAdUnits(adUnits);
-      pbjs.enableSendAllBids();
+      // pbjs.enableSendAllBids();
       
       pbjs.setConfig({
-    	  publisherDomain: "https://www.theverge.com",
-    	  cookieSyncDelay: 100,
+    	  publisherDomain: "http://www.golfwrx.com",
+    	  cookieSyncDelay: 50,
           sizeConfig: [{
               'mediaQuery': '(min-width: 1024px)',
               'sizesSupported': [
