@@ -267,8 +267,7 @@ apstag.fetchBids({
   }
   ]; //./adUnits
     
-  var googletag = googletag || {};
-  googletag.cmd = googletag.cmd || [];
+  
 
   // get latest currency exchange rate GBP to USD 
   function getGBPRate(callback) {
