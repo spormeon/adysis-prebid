@@ -318,10 +318,8 @@ apstag.fetchBids({
       pbjs.enableSendAllBids();
       
       pbjs.setConfig({
-    	  publisherDomain: "http://www.golfwrx.com"
-      },
-      cookieSyncDelay: 100
-      }.
+    	  publisherDomain: "https://www.theverge.com",
+    	  cookieSyncDelay: 100,
           sizeConfig: [{
               'mediaQuery': '(min-width: 1024px)',
               'sizesSupported': [
