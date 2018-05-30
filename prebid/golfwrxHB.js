@@ -320,6 +320,7 @@ apstag.fetchBids({
       pbjs.setConfig({
     	  publisherDomain: "http://www.golfwrx.com",
     	  cookieSyncDelay: 50,
+    	  bidderTimeout: 3000,
           sizeConfig: [{
               'mediaQuery': '(min-width: 1024px)',
               'sizesSupported': [
