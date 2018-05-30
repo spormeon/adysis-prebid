@@ -374,18 +374,8 @@ apstag.fetchBids({
       pbjs.adserverRequestSent = true;
       googletag.cmd.push(function() {
         pbjs.que.push(function() {
-        	
-          //./pbjs.bidderSettings
-
           pbjs.setTargetingForGPTAsync();
           googletag.pubads().refresh();
-
-          // development output of targeting params - 2DO: remove prior to production deployment
-          var targetingParams = pbjs.getAdserverTargeting();
-          var paramsOutput = PPObjectIndented(targetingParams, "  ");
-          var container = document.getElementById('targeting_info');
-          container.innerHTML = paramsOutput;
-          // container.innerHTML = JSON.stringify(targetingParams);
         });
       });
     }
