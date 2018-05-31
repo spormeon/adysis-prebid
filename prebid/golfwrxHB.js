@@ -404,7 +404,7 @@ apstag.fetchBids({
   
   
   googletag.cmd.push(function() {
-    googletag.defineSlot('/1001824/prebid_test1', [[300, 600],[300, 250],[160, 600],[120, 600]], 'div-gpt-ad-1503571938435-0').addService(googletag.pubads());
+    var _Ad1 = googletag.defineSlot('/1001824/prebid_test1', [[300, 600],[300, 250],[160, 600],[120, 600]], 'div-gpt-ad-1503571938435-0').addService(googletag.pubads());
     googletag.defineSlot('/1001824/prebid_test2', [[970, 250],[970, 90],[728, 90]], 'div-gpt-ad-1503571938435-1').addService(googletag.pubads());
     googletag.defineSlot('/1001824/prebid_test3', [[300, 600],[300, 250],[160, 600],[120, 600]], 'div-gpt-ad-1503571938435-2').addService(googletag.pubads());
     googletag.defineSlot('/1001824/prebid_test4', [[300, 600],[300, 250],[160, 600],[120, 600]], 'div-gpt-ad-1503571938435-3').addService(googletag.pubads());
