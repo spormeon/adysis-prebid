@@ -414,7 +414,10 @@ apstag.fetchBids({
     googletag.display("middlerightSlot");
     googletag.display("bottomrightSlot");
     googletag.display("bottomleftSlot");
-    setInterval(function(){googletag.pubads().refresh([topSlot], [middlerightSlot], [bottomrightSlot], [bottomleftSlot]);}, 60000);
+    setInterval(function(){googletag.pubads().refresh([topSlot]);}, 60000);
+    setInterval(function(){googletag.pubads().refresh([middlerightSlot]);}, 60000);
+    setInterval(function(){googletag.pubads().refresh([bottomrightSlot]);}, 60000);
+    setInterval(function(){googletag.pubads().refresh([bottomleftSlot]);}, 60000);
   });
   
   
