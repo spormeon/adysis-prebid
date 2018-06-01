@@ -404,11 +404,36 @@ apstag.fetchBids({
   
   
   googletag.cmd.push(function() {
-    _Mrec = googletag.defineSlot('/1001824/prebid_test1', [[300, 600],[300, 250],[160, 600],[120, 600]], 'div-gpt-ad-1503571938435-0').addService(googletag.pubads());
-    googletag.defineSlot('/1001824/prebid_test2', [[970, 250],[970, 90],[728, 90]], 'div-gpt-ad-1503571938435-1').addService(googletag.pubads());
-    googletag.defineSlot('/1001824/prebid_test3', [[300, 600],[300, 250],[160, 600],[120, 600]], 'div-gpt-ad-1503571938435-2').addService(googletag.pubads());
-    googletag.defineSlot('/1001824/prebid_test4', [[300, 600],[300, 250],[160, 600],[120, 600]], 'div-gpt-ad-1503571938435-3').addService(googletag.pubads());
+      var topSlot = googletag.defineSlot('/1001824/prebid_test2', [[970, 250],[970, 90],[728, 90]], 'div-gpt-ad-1503571938435-1').setTargeting("test", "refresh").addService(googletag.pubads());
+      var middlerightSlot = googletag.defineSlot('/1001824/prebid_test3', [[300, 600],[300, 250],[160, 600],[120, 600]], 'div-gpt-ad-1503571938435-2').setTargeting("test", "refresh").addService(googletag.pubads());
+      var bottomrightSlot = googletag.defineSlot('/1001824/prebid_test1', [[300, 600],[300, 250],[160, 600],[120, 600]], 'div-gpt-ad-1503571938435-0').setTargeting("test", "refresh").addService(googletag.pubads());
+      var bottomleftSlot = googletag.defineSlot('/1001824/prebid_test4', [[300, 600],[300, 250],[160, 600],[120, 600]], 'div-gpt-ad-1503571938435-3').setTargeting("test", "refresh").addService(googletag.pubads());
     googletag.pubads().enableSingleRequest();
     googletag.enableServices();
   });
-
+  
+  
+  function refreshSlot(slot) {
+      pbjs.que.push(function() {
+          pbjs.requestBids({
+              timeout: PREBID_TIMEOUT,
+              adUnitCodes: [slot.getSlotElementId()],
+              bidsBackHandler: function() {
+                  pbjs.setTargetingForGPTAsync([slot.getSlotElementId()]);
+                  googletag.pubads().refresh([slot]);
+              }
+          });
+      });
+  }
+  function refreshSlot1() {
+	    refreshSlot(topSlot);
+	}
+	function refreshSlot2() {
+	    refreshSlot(middlerightSlot);
+	}
+	function refreshSlot3() {
+	    refreshSlot(bottomrightSlot);
+	}  
+	function refreshSlot4() {
+	    refreshSlot(bottomleftSlot);
+	}
