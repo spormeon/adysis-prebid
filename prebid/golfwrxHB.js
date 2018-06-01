@@ -411,7 +411,7 @@ apstag.fetchBids({
     googletag.pubads().enableSingleRequest();
     googletag.enableServices();
     googletag.display("topSlot");
-    setInterval(function(){googletag.pubads().refresh([slot1]);}, 30000);
+    setInterval(function(){googletag.pubads().refresh([topSlot]);}, 30000);
   });
   
   
