@@ -318,7 +318,7 @@ apstag.fetchBids({
       // pbjs.enableSendAllBids();
       
       pbjs.setConfig({
-    	  publisherDomain: "http://adops.golfwrx.com",
+    	  publisherDomain: "golfwrx.com",
     	  cookieSyncDelay: 50,
     	  bidderTimeout: 1200,
     	  userSync: {
