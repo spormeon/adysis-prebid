@@ -411,7 +411,7 @@ apstag.fetchBids({
     googletag.pubads().enableSingleRequest();
     googletag.enableServices();
     googletag.display("topSlot", "middlerightSlot", "bottomrightSlot", "bottomleftSlot");
-    setInterval(function(){googletag.pubads().refresh([topSlot], [middleSlot], [bottomrightSlot], [bottomleftSlot]);}, 60000);
+    setInterval(function(){googletag.pubads().refresh([topSlot], [middlerightSlot], [bottomrightSlot], [bottomleftSlot]);}, 60000);
   });
   
   
