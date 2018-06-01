@@ -404,12 +404,14 @@ apstag.fetchBids({
   
   
   googletag.cmd.push(function() {
-      topSlot = googletag.defineSlot('/1001824/prebid_test2', [[970, 250],[970, 90],[728, 90]], 'div-gpt-ad-1503571938435-1').setTargeting("test", "refresh").addService(googletag.pubads());
+      topSlot = googletag.defineSlot('/1001824/prebid_test2', [[970, 250],[970, 90],[728, 90]], 'div-gpt-ad-1503571938435-1', "topSlot").setTargeting("test", "refresh").addService(googletag.pubads());
       middlerightSlot = googletag.defineSlot('/1001824/prebid_test3', [[300, 600],[300, 250],[160, 600],[120, 600]], 'div-gpt-ad-1503571938435-2').setTargeting("test", "refresh").addService(googletag.pubads());
       bottomrightSlot = googletag.defineSlot('/1001824/prebid_test1', [[300, 600],[300, 250],[160, 600],[120, 600]], 'div-gpt-ad-1503571938435-0').setTargeting("test", "refresh").addService(googletag.pubads());
       bottomleftSlot = googletag.defineSlot('/1001824/prebid_test4', [[300, 600],[300, 250],[160, 600],[120, 600]], 'div-gpt-ad-1503571938435-3').setTargeting("test", "refresh").addService(googletag.pubads());
     googletag.pubads().enableSingleRequest();
     googletag.enableServices();
+    googletag.display("topSlot");
+    setInterval(function(){googletag.pubads().refresh([slot1]);}, 30000);
   });
   
   
