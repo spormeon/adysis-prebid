@@ -410,8 +410,8 @@ apstag.fetchBids({
       bottomleftSlot = googletag.defineSlot('/1001824/prebid_test4', [[300, 600],[300, 250],[160, 600],[120, 600]], 'div-gpt-ad-1503571938435-3').setTargeting("test", "refresh").addService(googletag.pubads());
     googletag.pubads().enableSingleRequest();
     googletag.enableServices();
-    googletag.display("topSlot");
-    setInterval(function(){googletag.pubads().refresh([topSlot]);}, 30000);
+    googletag.display("topSlot", "middlerightSlot", "bottomrightSlot", "bottomleftSlot");
+    setInterval(function(){googletag.pubads().refresh([topSlot], [middleSlot], [bottomrightSlot], [bottomleftSlot]);}, 60000);
   });
   
   
