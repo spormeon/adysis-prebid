@@ -30,7 +30,7 @@ apstag.fetchBids({
          sizes: [[300, 600],[300, 250],[160, 600]] //example: [[300,250], [300,600]]
      },
      {
-         slotID: 'div-gpt-ad-1503571938435-1', //example: 'div-gpt-ad-1475185990716-0'
+         slotID: 'topSlot', //example: 'div-gpt-ad-1475185990716-0'
          slotName: '1001824/prebid_test2', //example: '12345/leaderboard-1'
          sizes: [[970, 250],[728, 90]] //example: [[728,90]]
      },
@@ -223,7 +223,7 @@ apstag.fetchBids({
   },
   //new ad unit block
   {
-    code: 'div-gpt-ad-1503571938435-1',
+    code: 'topSlot',
     sizes: gpt_config.leaderboard_sizes,
     sizeMapping: [  //new!
       { minWidth : 1024, sizes : [[970, 250], [970, 90], [728, 90]] }, //if device screen width is greater than 1024, use these sizes
@@ -404,7 +404,7 @@ apstag.fetchBids({
   
   
   googletag.cmd.push(function() {
-      topSlot = googletag.defineSlot('/1001824/prebid_test2', [[970, 250],[970, 90],[728, 90]], 'div-gpt-ad-1503571938435-1', "topSlot").setTargeting("test", "refresh").addService(googletag.pubads());
+      topSlot = googletag.defineSlot('/1001824/prebid_test2', [[970, 250],[970, 90],[728, 90]], 'topSlot').setTargeting("test", "refresh").addService(googletag.pubads());
       middlerightSlot = googletag.defineSlot('/1001824/prebid_test3', [[300, 600],[300, 250],[160, 600],[120, 600]], 'div-gpt-ad-1503571938435-2').setTargeting("test", "refresh").addService(googletag.pubads());
       bottomrightSlot = googletag.defineSlot('/1001824/prebid_test1', [[300, 600],[300, 250],[160, 600],[120, 600]], 'div-gpt-ad-1503571938435-0').setTargeting("test", "refresh").addService(googletag.pubads());
       bottomleftSlot = googletag.defineSlot('/1001824/prebid_test4', [[300, 600],[300, 250],[160, 600],[120, 600]], 'div-gpt-ad-1503571938435-3').setTargeting("test", "refresh").addService(googletag.pubads());
