@@ -25,7 +25,7 @@ apstag.init({
 });
 apstag.fetchBids({
      slots: [{
-         slotID: 'div-gpt-ad-1503571938435-0', //example: 'div-gpt-ad-1475102693815-0'
+         slotID: 'bottomrightSlot', //example: 'div-gpt-ad-1475102693815-0'
          slotName: '1001824/prebid_test1', //example: '12345/box-1'
          sizes: [[300, 600],[300, 250],[160, 600]] //example: [[300,250], [300,600]]
      },
@@ -35,12 +35,12 @@ apstag.fetchBids({
          sizes: [[970, 250],[728, 90]] //example: [[728,90]]
      },
      {
-         slotID: 'div-gpt-ad-1503571938435-2', //example: 'div-gpt-ad-1475185990716-0'
+         slotID: 'middlerightSlot', //example: 'div-gpt-ad-1475185990716-0'
          slotName: '1001824/prebid_test3', //example: '12345/leaderboard-1'
          sizes: [[300, 600],[300, 250],[160, 600]] //example: [[728,90]]
      },
      {
-         slotID: 'div-gpt-ad-1503571938435-3', //example: 'div-gpt-ad-1475185990716-0'
+         slotID: 'bottomleftSlot', //example: 'div-gpt-ad-1475185990716-0'
          slotName: '1001824/prebid_test4', //example: '12345/leaderboard-1'
          sizes: [[300, 600],[300, 250],[160, 600]] //example: [[728,90]]
      }],
@@ -73,7 +73,7 @@ apstag.fetchBids({
   var adUnits = [
   //new ad unit block
   {
-    code: 'div-gpt-ad-1503571938435-0',  // first right hand side 300x600 
+    code: 'bottomrightSlot',  // first right hand side 300x600 
     sizes: gpt_config.bigbox_sizes,
     sizeMapping: [  //new!
       { minWidth : 1024, sizes : [[300, 600], [300, 250], [160, 600], [120, 600]] },   //if device screen width is greater than 1024, use these sizes//
@@ -123,7 +123,7 @@ apstag.fetchBids({
   },
   //new ad unit block
   {
-    code: 'div-gpt-ad-1503571938435-2', //second right hand side 300x600
+    code: 'middlerightSlot', //second right hand side 300x600
     sizes: gpt_config.bigbox_sizes,
     sizeMapping: [  //new!
       { minWidth : 1024, sizes : [[300, 600], [300, 250], [160, 600], [120, 600]] },   //if device screen width is greater than 1024, use these sizes//
@@ -173,7 +173,7 @@ apstag.fetchBids({
   },
   //new ad unit block
   {
-    code: 'div-gpt-ad-1503571938435-3',  // first left hand side 300x600
+    code: 'bottomleftSlot',  // first left hand side 300x600
     sizes: gpt_config.bigbox_sizes,
     sizeMapping: [  //new!
       { minWidth : 1024, sizes : [[300, 600], [300, 250], [160, 600], [120, 600]] },   //if device screen width is greater than 1024, use these sizes//
@@ -405,9 +405,9 @@ apstag.fetchBids({
   
   googletag.cmd.push(function() {
       topSlot = googletag.defineSlot('/1001824/prebid_test2', [[970, 250],[970, 90],[728, 90]], 'topSlot').setTargeting("test", "refresh").addService(googletag.pubads());
-      middlerightSlot = googletag.defineSlot('/1001824/prebid_test3', [[300, 600],[300, 250],[160, 600],[120, 600]], 'div-gpt-ad-1503571938435-2').setTargeting("test", "refresh").addService(googletag.pubads());
-      bottomrightSlot = googletag.defineSlot('/1001824/prebid_test1', [[300, 600],[300, 250],[160, 600],[120, 600]], 'div-gpt-ad-1503571938435-0').setTargeting("test", "refresh").addService(googletag.pubads());
-      bottomleftSlot = googletag.defineSlot('/1001824/prebid_test4', [[300, 600],[300, 250],[160, 600],[120, 600]], 'div-gpt-ad-1503571938435-3').setTargeting("test", "refresh").addService(googletag.pubads());
+      middlerightSlot = googletag.defineSlot('/1001824/prebid_test3', [[300, 600],[300, 250],[160, 600],[120, 600]], 'middlerightSlot').setTargeting("test", "refresh").addService(googletag.pubads());
+      bottomrightSlot = googletag.defineSlot('/1001824/prebid_test1', [[300, 600],[300, 250],[160, 600],[120, 600]], 'bottomrightSlot').setTargeting("test", "refresh").addService(googletag.pubads());
+      bottomleftSlot = googletag.defineSlot('/1001824/prebid_test4', [[300, 600],[300, 250],[160, 600],[120, 600]], 'bottomleftSlot').setTargeting("test", "refresh").addService(googletag.pubads());
     googletag.pubads().enableSingleRequest();
     googletag.enableServices();
     googletag.display("topSlot");
