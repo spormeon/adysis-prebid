@@ -425,15 +425,15 @@ apstag.fetchBids({
           });
       });
   }
-  function refreshSlot1() {
+  function refreshtopSlot() {
 	    refreshSlot(topSlot);
 	}
-	function refreshSlot2() {
+	function refreshmiddlerightSlot() {
 	    refreshSlot(middlerightSlot);
 	}
-	function refreshSlot3() {
+	function refreshbottomrightSlot() {
 	    refreshSlot(bottomrightSlot);
 	}  
-	function refreshSlot4() {
+	function refreshbottomleftSlot() {
 	    refreshSlot(bottomleftSlot);
 	}
