@@ -65,8 +65,8 @@ apstag.fetchBids({
     bigbox_sizes: [[300, 600], [300, 250], [160, 600], [120, 600]],
     bigbox_sizes_tablet: [[300, 250]],
     bigbox_sizes_mobile: [[300, 250]],
-    leaderboard_sizes: [[970, 250],[970, 90],[728, 90]],
-    leaderboard_sizes_tablet: [[728, 90]],
+    leaderboard_sizes: [[970, 250],[970, 90],[728, 90],[468,60],[320, 50]],
+    leaderboard_sizes_tablet: [[728, 90],[468,60],[320, 50]],
     leaderboard_sizes_mobile: [[320, 50]]
   }; //./gpt_config
  
@@ -76,9 +76,9 @@ apstag.fetchBids({
     code: 'bottomrightSlot',  // first right hand side 300x600 
     sizes: gpt_config.bigbox_sizes,
     sizeMapping: [  //new!
-      { minWidth : 1024, sizes : [[300, 600], [300, 250], [160, 600], [120, 600]] },   //if device screen width is greater than 1024, use these sizes//
-      { minWidth : 480, sizes : [[300, 250]] },  //if device screen width is < 1024 && > 480, use these sizes//
-      { minWidth : 0, sizes : [[300, 250]] }  //if device screen width is < 480 && > 0, use these sizes//
+      { minWidth : 1024, sizes : gpt_config.bigbox_sizes },   //if device screen width is greater than 1024, use these sizes//
+      { minWidth : 480, sizes : gpt_config.bigbox_sizes_tablet },  //if device screen width is < 1024 && > 480, use these sizes//
+      { minWidth : 0, sizes : gpt_config.bigbox_sizes_mobile }  //if device screen width is < 480 && > 0, use these sizes//
              ],
     bids: [
       { bidder: 'aol',          params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x250 */ 
@@ -126,9 +126,9 @@ apstag.fetchBids({
     code: 'middlerightSlot', //second right hand side 300x600
     sizes: gpt_config.bigbox_sizes,
     sizeMapping: [  //new!
-      { minWidth : 1024, sizes : [[300, 600], [300, 250], [160, 600], [120, 600]] },   //if device screen width is greater than 1024, use these sizes//
-      { minWidth : 480, sizes : [[300, 250]] },  //if device screen width is < 1024 && > 480, use these sizes//
-      { minWidth : 0, sizes : [[300, 250]] }  //if device screen width is < 480 && > 0, use these sizes//
+      { minWidth : 1024, sizes : gpt_config.bigbox_sizes },   //if device screen width is greater than 1024, use these sizes//
+      { minWidth : 480, sizes : gpt_config.bigbox_sizes_tablet },  //if device screen width is < 1024 && > 480, use these sizes//
+      { minWidth : 0, sizes : gpt_config.bigbox_sizes_mobile }  //if device screen width is < 480 && > 0, use these sizes//
              ],
     bids: [
       { bidder: 'aol',          params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x250 */ 
@@ -176,9 +176,9 @@ apstag.fetchBids({
     code: 'bottomleftSlot',  // first left hand side 300x600
     sizes: gpt_config.bigbox_sizes,
     sizeMapping: [  //new!
-      { minWidth : 1024, sizes : [[300, 600], [300, 250], [160, 600], [120, 600]] },   //if device screen width is greater than 1024, use these sizes//
-      { minWidth : 480, sizes : [[300, 250]] },  //if device screen width is < 1024 && > 480, use these sizes//
-      { minWidth : 0, sizes : [[300, 250]] }  //if device screen width is < 480 && > 0, use these sizes//
+      { minWidth : 1024, sizes : gpt_config.bigbox_sizes },   //if device screen width is greater than 1024, use these sizes//
+      { minWidth : 480, sizes : gpt_config.bigbox_sizes_tablet },  //if device screen width is < 1024 && > 480, use these sizes//
+      { minWidth : 0, sizes : gpt_config.bigbox_sizes_mobile }  //if device screen width is < 480 && > 0, use these sizes//
              ],
     bids: [
       { bidder: 'aol',          params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x250 */ 
@@ -404,7 +404,7 @@ apstag.fetchBids({
   
   
   googletag.cmd.push(function() {
-      topSlot = googletag.defineSlot('/1001824/prebid_test2', [[970, 250],[970, 90],[728, 90],[320, 50]], 'topSlot').setTargeting("test", "refresh").addService(googletag.pubads());
+      topSlot = googletag.defineSlot('/1001824/prebid_test2', [[970, 250],[970, 90],[728, 90],[468, 60],[320, 50]], 'topSlot').setTargeting("test", "refresh").addService(googletag.pubads());
       middlerightSlot = googletag.defineSlot('/1001824/prebid_test3', [[300, 600],[300, 250],[160, 600],[120, 600]], 'middlerightSlot').setTargeting("test", "refresh").addService(googletag.pubads());
       bottomrightSlot = googletag.defineSlot('/1001824/prebid_test1', [[300, 600],[300, 250],[160, 600],[120, 600]], 'bottomrightSlot').setTargeting("test", "refresh").addService(googletag.pubads());
       bottomleftSlot = googletag.defineSlot('/1001824/prebid_test4', [[300, 600],[300, 250],[160, 600],[120, 600]], 'bottomleftSlot').setTargeting("test", "refresh").addService(googletag.pubads());
