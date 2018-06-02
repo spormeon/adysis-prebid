@@ -261,7 +261,7 @@ var allSizes = [
   {
     code: 'topSlot',
     
-    mediaTypes: { banner: { sizes: phoneSizes } },
+    mediaTypes: { banner: { sizes: allSizes } },
     
     bids: [
       { bidder: 'aol',          params: { placement: '4882887', network: '4436.1', server: 'adserver.adtech.de' } }, /* 728x90 */
