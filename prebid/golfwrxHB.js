@@ -424,7 +424,7 @@ apstag.fetchBids({
   
   
   googletag.cmd.push(function() {
-      topSlot = googletag.defineSlot('/1001824/prebid_test2', topSizes, 'topSlot').setTargeting("test", "refresh").addService(googletag.pubads());
+      topSlot = googletag.defineSlot('/1001824/prebid_test2', topSizes, 'topSlot').setTargeting("hb_size", "refresh").addService(googletag.pubads());
       middlerightSlot = googletag.defineSlot('/1001824/prebid_test3', bottomSizes, 'middlerightSlot').setTargeting("test", "refresh").addService(googletag.pubads());
       bottomrightSlot = googletag.defineSlot('/1001824/prebid_test1', bottomSizes, 'bottomrightSlot').setTargeting("test", "refresh").addService(googletag.pubads());
       bottomleftSlot = googletag.defineSlot('/1001824/prebid_test4', bottomSizes, 'bottomleftSlot').setTargeting("test", "refresh").addService(googletag.pubads());
