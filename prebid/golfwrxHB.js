@@ -371,7 +371,8 @@ apstag.fetchBids({
               adserverTargeting: [
               { key: "hb_bidder", val: function(bidResponse) { return bidResponse.bidderCode; } }, 
               { key: "hb_adid",   val: function(bidResponse) { return bidResponse.adId; } }, 
-              { key: "hb_size",   val: function(bidResponse) { return bidResponse.size; } },         
+              { key: "hb_size",   val: function(bidResponse) { return bidResponse.size; } },
+              { key: "hb_time",   val: function(bidResponse) { return bidResponse.time; } },
               { key: "hb_nowin",  val: function(bidResponse) { return 'no_win'; } }, 
               { key: "hb_website",val: function(bidResponse) { return 'golfwrx.com'; } },
               { key: "hb_pb",     val: function(bidResponse) { var cpm = (bidResponse.cpm * (gpt_config.latest_gbp_rate || gpt_config.default_gbp_rate)) *1.2 ;  //converts cpm to GBP, rounds cpm to nearest 0.10 incriment, sets 20 if above 20, sets a rev share value
