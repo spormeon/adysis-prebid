@@ -13,45 +13,7 @@ window.snowplow('newTracker', 'cf', '//d30e42x8qna3wj.cloudfront.net', { // Init
 window.snowplow('trackPageView');
 
 <!-- Prebid Config Section START -->
-<!-- Make sure this is inserted before your GPT tag -->
 
-//load the apstag.js library
-!function(a9,a,p,s,t,A,g){if(a[a9])return;function q(c,r){a[a9]._Q.push([c,r])}a[a9]={init:function(){q("i",arguments)},fetchBids:function(){q("f",arguments)},setDisplayBids:function(){},targetingKeys:function(){return[]},_Q:[]};A=p.createElement(s);A.async=!0;A.src=t;g=p.getElementsByTagName(s)[0];g.parentNode.insertBefore(A,g)}("apstag",window,document,"script","//c.amazon-adsystem.com/aax2/apstag.js");
-
-//initialize the apstag.js library on the page to allow bidding
-apstag.init({
-     pubID: '7f2180c4-57bc-43a4-9896-ecff1a52049d', //enter your pub ID here as shown above, it must within quotes
-     adServer: 'googletag'
-});
-apstag.fetchBids({
-     slots: [{
-         slotID: 'bottomrightSlot', //example: 'div-gpt-ad-1475102693815-0'
-         slotName: '1001824/prebid_test1', //example: '12345/box-1'
-         sizes: [[300, 600],[300, 250],[160, 600]] //example: [[300,250], [300,600]]
-     },
-     {
-         slotID: 'topSlot', //example: 'div-gpt-ad-1475185990716-0'
-         slotName: '1001824/prebid_test2', //example: '12345/leaderboard-1'
-         sizes: [[970, 250],[728, 90]] //example: [[728,90]]
-     },
-     {
-         slotID: 'middlerightSlot', //example: 'div-gpt-ad-1475185990716-0'
-         slotName: '1001824/prebid_test3', //example: '12345/leaderboard-1'
-         sizes: [[300, 600],[300, 250],[160, 600]] //example: [[728,90]]
-     },
-     {
-         slotID: 'bottomleftSlot', //example: 'div-gpt-ad-1475185990716-0'
-         slotName: '1001824/prebid_test4', //example: '12345/leaderboard-1'
-         sizes: [[300, 600],[300, 250],[160, 600]] //example: [[728,90]]
-     }],
-     timeout: 2e3
-}, function(bids) {
-     // set apstag targeting on googletag, then trigger the first DFP request in googletag's disableInitialLoad integration
-     googletag.cmd.push(function(){
-         apstag.setDisplayBids();
-         //googletag.pubads().refresh();
-     });
-}); 
 var desktopSizes = [
     [970, 250],
     [970, 90],
@@ -86,6 +48,47 @@ var allSizes = [
     [160,600],
     [120, 600]
 ];
+
+<!-- Make sure this is inserted before your GPT tag -->
+
+//load the apstag.js library
+!function(a9,a,p,s,t,A,g){if(a[a9])return;function q(c,r){a[a9]._Q.push([c,r])}a[a9]={init:function(){q("i",arguments)},fetchBids:function(){q("f",arguments)},setDisplayBids:function(){},targetingKeys:function(){return[]},_Q:[]};A=p.createElement(s);A.async=!0;A.src=t;g=p.getElementsByTagName(s)[0];g.parentNode.insertBefore(A,g)}("apstag",window,document,"script","//c.amazon-adsystem.com/aax2/apstag.js");
+
+//initialize the apstag.js library on the page to allow bidding
+apstag.init({
+     pubID: '7f2180c4-57bc-43a4-9896-ecff1a52049d', //enter your pub ID here as shown above, it must within quotes
+     adServer: 'googletag'
+});
+apstag.fetchBids({
+     slots: [{
+         slotID: 'bottomrightSlot', //example: 'div-gpt-ad-1475102693815-0'
+         slotName: '1001824/prebid_test1', //example: '12345/box-1'
+         sizes: [[300, 600],[300, 250],[160, 600]] //example: [[300,250], [300,600]]
+     },
+     {
+         slotID: 'topSlot', //example: 'div-gpt-ad-1475185990716-0'
+         slotName: '1001824/prebid_test2', //example: '12345/leaderboard-1'
+         sizes: allSizes //example: [[728,90]]
+     },
+     {
+         slotID: 'middlerightSlot', //example: 'div-gpt-ad-1475185990716-0'
+         slotName: '1001824/prebid_test3', //example: '12345/leaderboard-1'
+         sizes: [[300, 600],[300, 250],[160, 600]] //example: [[728,90]]
+     },
+     {
+         slotID: 'bottomleftSlot', //example: 'div-gpt-ad-1475185990716-0'
+         slotName: '1001824/prebid_test4', //example: '12345/leaderboard-1'
+         sizes: [[300, 600],[300, 250],[160, 600]] //example: [[728,90]]
+     }],
+     timeout: 2e3
+}, function(bids) {
+     // set apstag targeting on googletag, then trigger the first DFP request in googletag's disableInitialLoad integration
+     googletag.cmd.push(function(){
+         apstag.setDisplayBids();
+         //googletag.pubads().refresh();
+     });
+}); 
+
   var PREBID_TIMEOUT = 800;
      
   var gpt_config = {
