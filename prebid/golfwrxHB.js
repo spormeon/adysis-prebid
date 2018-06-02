@@ -260,13 +260,9 @@ var allSizes = [
   //new ad unit block
   {
     code: 'topSlot',
-    sizes: gpt_config.leaderboard_sizes,
-    mediaTypes: { banner: { sizes: allSizes } },
-    sizeMapping: [  //new!
-      { minWidth : 1024, sizes : [[970, 250], [970, 90], [728, 90]] }, //if device screen width is greater than 1024, use these sizes
-      { minWidth : 480, sizes : [[728, 90], [468, 60]] }, //if device screen width is < 1024 && > 480, use these sizes
-      { minWidth : 0, sizes : [[320, 50]] } //if device screen width is < 480 && > 0, use these sizes              
-             ],
+    
+    mediaTypes: { banner: { sizes: phoneSizes } },
+    
     bids: [
       { bidder: 'aol',          params: { placement: '4882887', network: '4436.1', server: 'adserver.adtech.de' } }, /* 728x90 */
       { bidder: 'aol',          params: { placement: '6507337', network: '4436.1', server: 'adserver.adtech.de' } }, /* 970x250 */
