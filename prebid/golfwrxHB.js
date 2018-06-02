@@ -52,7 +52,40 @@ apstag.fetchBids({
          //googletag.pubads().refresh();
      });
 }); 
-  
+var desktopSizes = [
+    [970, 250],
+    [970, 90],
+    [728, 90],
+    [468, 60],
+    [320, 50],
+    [300, 600],
+    [300, 250],
+    [160, 600],
+    [120, 600]
+];
+var tabletSizes = [
+    [728, 90],
+    [468, 60],
+    [320, 50],
+    [160, 600],
+    [120, 600],
+    [300, 250]
+];
+var phoneSizes = [
+    [320, 50],
+    [300, 250]
+];
+var allSizes = [
+    [970, 250],
+    [970, 90],
+    [728,90],
+    [468, 60],
+    [320, 50],
+    [300, 600],
+    [300, 250],
+    [160,600],
+    [120, 600]
+];
   var PREBID_TIMEOUT = 800;
      
   var gpt_config = {
@@ -75,6 +108,7 @@ apstag.fetchBids({
   {
     code: 'bottomrightSlot',  // first right hand side 300x600 
     sizes: gpt_config.bigbox_sizes,
+    mediaTypes: { banner: { sizes: allSizes } },
     sizeMapping: [  //new!
       { minWidth : 1024, sizes : [[300, 600], [300, 250], [160, 600], [120, 600]] },   //if device screen width is greater than 1024, use these sizes//
       { minWidth : 480, sizes : [[300, 250]] },  //if device screen width is < 1024 && > 480, use these sizes//
@@ -125,6 +159,7 @@ apstag.fetchBids({
   {
     code: 'middlerightSlot', //second right hand side 300x600
     sizes: gpt_config.bigbox_sizes,
+    mediaTypes: { banner: { sizes: allSizes } },
     sizeMapping: [  //new!
       { minWidth : 1024, sizes : [[300, 600], [300, 250], [160, 600], [120, 600]] },   //if device screen width is greater than 1024, use these sizes//
       { minWidth : 480, sizes : [[300, 250]] },  //if device screen width is < 1024 && > 480, use these sizes//
@@ -175,6 +210,7 @@ apstag.fetchBids({
   {
     code: 'bottomleftSlot',  // first left hand side 300x600
     sizes: gpt_config.bigbox_sizes,
+    mediaTypes: { banner: { sizes: allSizes } },
     sizeMapping: [  //new!
       { minWidth : 1024, sizes : [[300, 600], [300, 250], [160, 600], [120, 600]] },   //if device screen width is greater than 1024, use these sizes//
       { minWidth : 480, sizes : [[300, 250]] },  //if device screen width is < 1024 && > 480, use these sizes//
@@ -225,6 +261,7 @@ apstag.fetchBids({
   {
     code: 'topSlot',
     sizes: gpt_config.leaderboard_sizes,
+    mediaTypes: { banner: { sizes: allSizes } },
     sizeMapping: [  //new!
       { minWidth : 1024, sizes : [[970, 250], [970, 90], [728, 90]] }, //if device screen width is greater than 1024, use these sizes
       { minWidth : 480, sizes : [[728, 90], [468, 60]] }, //if device screen width is < 1024 && > 480, use these sizes
@@ -325,29 +362,19 @@ apstag.fetchBids({
     		    iframeEnabled: true,
     	        syncDelay: 2000 // write image pixels 5 seconds after the auction
     	    },
-          sizeConfig: [{
-              'mediaQuery': '(min-width: 1024px)',
-              'sizesSupported': [
-                  [970, 90],
-                  [728, 90],
-                  [300, 600],
-                  [300, 250]
-              ],
-              'labels': ['desktop']
-          }, {
-              'mediaQuery': '(min-width: 480px) and (max-width: 1023px)',
-              'sizesSupported': [
-                  [300, 600],
-                  [300, 250]
-              ],
-              'labels': ['tablet']
-          }, {
-              'mediaQuery': '(min-width: 0px)',
-              'sizesSupported': [
-                  [20, 20]
-              ],
-              'labels': ['phone']
-          }]
+    	    sizeConfig: [{
+                'mediaQuery': '(min-width: 1025px)',
+                'sizesSupported': desktopSizes,
+                'labels': ['desktop']
+            }, {
+                'mediaQuery': '(min-width: 768px) and (max-width: 1024px)',
+                'sizesSupported': tabletSizes,
+                'labels': ['tablet']
+            }, {
+                'mediaQuery': '(min-width: 320px) and (max-width: 812px)',
+                'sizesSupported': phoneSizes,
+                'labels': ['phone']
+            }]
       });
       
       pbjs.requestBids({
