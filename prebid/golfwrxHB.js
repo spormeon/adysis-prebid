@@ -267,8 +267,6 @@ apstag.fetchBids({
   }
   ]; //./adUnits
     
-  
-
   // get latest currency exchange rate GBP to USD 
   function getGBPRate(callback) {
     var currencyUrl = "https://api.fixer.io/latest?base=USD";
@@ -365,8 +363,6 @@ apstag.fetchBids({
            sekindonapn:       { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.75; } }, // adjust the bid in real time before the auction takes place
            brealtime:         { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.80; } }, // adjust the bid in real time before the auction takes place
            springserveAlias2: { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.65; } }, // adjust the bid in real time before the auction takes place
-           
-            
            standard: {
               adserverTargeting: [
               { key: "hb_bidder", val: function(bidResponse) { return bidResponse.bidderCode; } }, 
@@ -407,7 +403,6 @@ apstag.fetchBids({
         node.parentNode.insertBefore(gads, node);
     })();
   
-  
   googletag.cmd.push(function() {
 	  var mappingleaderslot = googletag.sizeMapping().
 	  addSize([1024, 769], [[970,250],[970,90],[728,90],[468,60],[320,50]]).
@@ -434,7 +429,6 @@ apstag.fetchBids({
     setInterval(function(){googletag.pubads().refresh([bottomrightSlot]);}, 120000);
     setInterval(function(){googletag.pubads().refresh([bottomleftSlot]);}, 120000);
   });
-  
   
   function refreshSlot(slot) {
       pbjs.que.push(function() {
