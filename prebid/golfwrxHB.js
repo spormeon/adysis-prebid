@@ -328,17 +328,24 @@ apstag.fetchBids({
           sizeConfig: [{
               'mediaQuery': '(min-width: 1024px)',
               'sizesSupported': [
-                  [970, 90],
+                  [970, 250],
+            	  [970, 90],
                   [728, 90],
+                  [468, 60],
+                  [320, 50],
                   [300, 600],
+                  [160, 600],
+                  [120, 600],
                   [300, 250]
               ],
               'labels': ['desktop']
           }, {
               'mediaQuery': '(min-width: 480px) and (max-width: 1023px)',
               'sizesSupported': [
-                  [300, 600],
-                  [300, 250]
+                  [728, 90],
+                  [468, 60],
+                  [320, 50],
+            	  [300, 250]
               ],
               'labels': ['tablet']
           }, {
