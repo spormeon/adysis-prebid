@@ -62,12 +62,12 @@ apstag.fetchBids({
     dynamically_lookup_gbp_rate: true,
     mobileWidthBreakpoint: 640,
     tabletWidthBreakpoint: 767,
-    bigbox_sizes: [[300, 600], [300, 250], [160, 600], [120, 600]],
-    bigbox_sizes_tablet: [[300, 250]],
-    bigbox_sizes_mobile: [[300, 250]],
-    leaderboard_sizes: [[970, 250],[970, 90],[728, 90],[468,60],[320, 50]],
-    leaderboard_sizes_tablet: [[728, 90],[468,60],[320, 50]],
-    leaderboard_sizes_mobile: [[320, 50]]
+    bigbox_sizes: [[300, 600], [300, 250], [160, 600], [120, 600],[250,250]],
+    bigbox_sizes_tablet: [[300, 250],[250,250]],
+    bigbox_sizes_mobile: [[300, 250],[250,250]],
+    leaderboard_sizes: [[970, 250],[970, 90],[728, 90],[468,60],[320, 50],[234,60]],
+    leaderboard_sizes_tablet: [[728, 90],[468,60],[320, 50],[234,60]],
+    leaderboard_sizes_mobile: [[320, 50],[234,60]]
   }; //./gpt_config
  
   var adUnits = [
@@ -331,7 +331,8 @@ apstag.fetchBids({
                   [300, 600],
                   [160, 600],
                   [120, 600],
-                  [300, 250]
+                  [300, 250],
+                  [250, 250]
               ],
               'labels': ['desktop']
           }, {
@@ -340,7 +341,8 @@ apstag.fetchBids({
                   [728, 90],
                   [468, 60],
                   [320, 50],
-            	  [300, 250]
+            	  [300, 250],
+            	  [234, 60]
               ],
               'labels': ['tablet']
           }, {
@@ -414,10 +416,10 @@ apstag.fetchBids({
 	  addSize([768, 500], [[300,250],[250,250]]).
 	  addSize([1, 1], [[300,250],[250,250]]).
 	  build();
-      topSlot = googletag.defineSlot('/1001824/prebid_test2', [[970, 250],[970, 90],[728, 90],[468, 60],[320, 50]], 'topSlot').defineSizeMapping(mappingleaderslot).setTargeting("test", "refresh").addService(googletag.pubads());
-      middlerightSlot = googletag.defineSlot('/1001824/prebid_test3', [[300, 600],[300, 250],[160, 600],[120, 600]], 'middlerightSlot').defineSizeMapping(mappingbigboxslot).setTargeting("test", "refresh").addService(googletag.pubads());
-      bottomrightSlot = googletag.defineSlot('/1001824/prebid_test1', [[300, 600],[300, 250],[160, 600],[120, 600]], 'bottomrightSlot').defineSizeMapping(mappingbigboxslot).setTargeting("test", "refresh").addService(googletag.pubads());
-      bottomleftSlot = googletag.defineSlot('/1001824/prebid_test4', [[300, 600],[300, 250],[160, 600],[120, 600]], 'bottomleftSlot').defineSizeMapping(mappingbigboxslot).setTargeting("test", "refresh").addService(googletag.pubads());
+      topSlot = googletag.defineSlot('/1001824/prebid_test2', [[970, 250],[970, 90],[728, 90],[468, 60],[320, 50],[234, 60]], 'topSlot').defineSizeMapping(mappingleaderslot).setTargeting("test", "refresh").addService(googletag.pubads());
+      middlerightSlot = googletag.defineSlot('/1001824/prebid_test3', [[300, 600],[300, 250],[160, 600],[120, 600],[250, 250]], 'middlerightSlot').defineSizeMapping(mappingbigboxslot).setTargeting("test", "refresh").addService(googletag.pubads());
+      bottomrightSlot = googletag.defineSlot('/1001824/prebid_test1', [[300, 600],[300, 250],[160, 600],[120, 600],[250, 250]], 'bottomrightSlot').defineSizeMapping(mappingbigboxslot).setTargeting("test", "refresh").addService(googletag.pubads());
+      bottomleftSlot = googletag.defineSlot('/1001824/prebid_test4', [[300, 600],[300, 250],[160, 600],[120, 600],[250,250]], 'bottomleftSlot').defineSizeMapping(mappingbigboxslot).setTargeting("test", "refresh").addService(googletag.pubads());
     googletag.pubads().enableSingleRequest();
     googletag.enableServices();
     googletag.display("topSlot");
