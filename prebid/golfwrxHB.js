@@ -405,14 +405,14 @@ apstag.fetchBids({
   
   googletag.cmd.push(function() {
 	  var mappingtopslot = googletag.sizeMapping().
-	  addSize([1024, 768 ], [970, 250]).
-	  addSize([768, 500 ], [728, 90]).
-	  addSize([1, 1 ], [320, 50]).
+	  addSize([1024, 769], [970, 250]).
+	  addSize([768, 500], [728, 90]).
+	  addSize([1, 1], [320, 50]).
 	  build();
 	  var mappingbigboxslot = googletag.sizeMapping().
-	  addSize([1024, 768 ], [300, 600]).
-	  addSize([768, 500 ], [300, 250]).
-	  addSize([1, 1 ], [300, 250]).
+	  addSize([1024, 769], [300, 600]).
+	  addSize([768, 500], [300, 250]).
+	  addSize([1, 1], [300, 250]).
 	  build();
       topSlot = googletag.defineSlot('/1001824/prebid_test2', [[970, 250],[970, 90],[728, 90],[468, 60],[320, 50]], 'topSlot').defineSizeMapping(mappingtopslot).setTargeting("test", "refresh").addService(googletag.pubads());
       middlerightSlot = googletag.defineSlot('/1001824/prebid_test3', [[300, 600],[300, 250],[160, 600],[120, 600]], 'middlerightSlot').defineSizeMapping(mappingbigboxslot).setTargeting("test", "refresh").addService(googletag.pubads());
