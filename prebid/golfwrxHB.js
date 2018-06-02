@@ -65,7 +65,7 @@ apstag.fetchBids({
      slots: [{
          slotID: 'bottomrightSlot', //example: 'div-gpt-ad-1475102693815-0'
          slotName: '1001824/prebid_test1', //example: '12345/box-1'
-         sizes: [[300, 600],[300, 250],[160, 600]] //example: [[300,250], [300,600]]
+         sizes: bottomSizes //example: [[300,250], [300,600]]
      },
      {
          slotID: 'topSlot', //example: 'div-gpt-ad-1475185990716-0'
@@ -75,12 +75,12 @@ apstag.fetchBids({
      {
          slotID: 'middlerightSlot', //example: 'div-gpt-ad-1475185990716-0'
          slotName: '1001824/prebid_test3', //example: '12345/leaderboard-1'
-         sizes: [[300, 600],[300, 250],[160, 600]] //example: [[728,90]]
+         sizes: bottomSizes //example: [[728,90]]
      },
      {
          slotID: 'bottomleftSlot', //example: 'div-gpt-ad-1475185990716-0'
          slotName: '1001824/prebid_test4', //example: '12345/leaderboard-1'
-         sizes: [[300, 600],[300, 250],[160, 600]] //example: [[728,90]]
+         sizes: bottomSizes //example: [[728,90]]
      }],
      timeout: 2e3
 }, function(bids) {
