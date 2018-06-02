@@ -405,7 +405,7 @@ apstag.fetchBids({
   
   googletag.cmd.push(function() {
 	  var mappingleaderslot = googletag.sizeMapping().
-	  addSize([1024, 769], [970, 250],[970, 90]).
+	  
 	  addSize([768, 500], [728, 90]).
 	  addSize([1, 1], [320, 50]).
 	  build();
