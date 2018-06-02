@@ -13,9 +13,49 @@ window.snowplow('newTracker', 'cf', '//d30e42x8qna3wj.cloudfront.net', { // Init
 window.snowplow('trackPageView');
 
 <!-- Prebid Config Section START -->
+
+<<<<<<< HEAD
+
+=======
+var desktopSizes = [
+    [970, 250],
+    [970, 90],
+    [728, 90],
+    [468, 60],
+    [320, 50],
+    [300, 600],
+    [300, 250],
+    [160, 600],
+    [120, 600]
+];
+var tabletSizes = [
+    [728, 90],
+    [468, 60],
+    [320, 50],
+    [160, 600],
+    [120, 600],
+    [300, 250]
+];
+var phoneSizes = [
+    [320, 50],
+    [300, 250]
+];
+var topSizes = [
+    [970, 250],
+    [970, 90],
+    [728,90],
+    [468, 60],
+    [320, 50]
+];
+var bottomSizes = [
+    [300, 600],
+    [300, 250],
+    [160,600],
+    [120, 600]
+];
+
 <!-- Make sure this is inserted before your GPT tag -->
-
-
+>>>>>>> 750a672fba5f0adcce79d4ce6f97136c879f6adc
 //load the apstag.js library
 !function(a9,a,p,s,t,A,g){if(a[a9])return;function q(c,r){a[a9]._Q.push([c,r])}a[a9]={init:function(){q("i",arguments)},fetchBids:function(){q("f",arguments)},setDisplayBids:function(){},targetingKeys:function(){return[]},_Q:[]};A=p.createElement(s);A.async=!0;A.src=t;g=p.getElementsByTagName(s)[0];g.parentNode.insertBefore(A,g)}("apstag",window,document,"script","//c.amazon-adsystem.com/aax2/apstag.js");
 
@@ -28,22 +68,22 @@ apstag.fetchBids({
      slots: [{
          slotID: 'bottomrightSlot', //example: 'div-gpt-ad-1475102693815-0'
          slotName: '1001824/prebid_test1', //example: '12345/box-1'
-         sizes: [[300, 600],[300, 250],[160, 600]] //example: [[300,250], [300,600]]
+         sizes: bottomSizes //example: [[300,250], [300,600]]
      },
      {
          slotID: 'topSlot', //example: 'div-gpt-ad-1475185990716-0'
          slotName: '1001824/prebid_test2', //example: '12345/leaderboard-1'
-         sizes: [[970, 250],[728, 90]] //example: [[728,90]]
+         sizes: topSizes //example: [[728,90]]
      },
      {
          slotID: 'middlerightSlot', //example: 'div-gpt-ad-1475185990716-0'
          slotName: '1001824/prebid_test3', //example: '12345/leaderboard-1'
-         sizes: [[300, 600],[300, 250],[160, 600]] //example: [[728,90]]
+         sizes: bottomSizes //example: [[728,90]]
      },
      {
          slotID: 'bottomleftSlot', //example: 'div-gpt-ad-1475185990716-0'
          slotName: '1001824/prebid_test4', //example: '12345/leaderboard-1'
-         sizes: [[300, 600],[300, 250],[160, 600]] //example: [[728,90]]
+         sizes: bottomSizes //example: [[728,90]]
      }],
      timeout: 2e3
 }, function(bids) {
@@ -53,7 +93,7 @@ apstag.fetchBids({
          //googletag.pubads().refresh();
      });
 }); 
-  
+
   var PREBID_TIMEOUT = 800;
      
   var gpt_config = {
@@ -75,12 +115,9 @@ apstag.fetchBids({
   //new ad unit block
   {
     code: 'bottomrightSlot',  // first right hand side 300x600 
-    sizes: gpt_config.bigbox_sizes,
-    sizeMapping: [  //new!
-      { minWidth : 1024, sizes : [[300, 600], [300, 250], [160, 600], [120, 600]] },   //if device screen width is greater than 1024, use these sizes//
-      { minWidth : 480, sizes : [[300, 250]] },  //if device screen width is < 1024 && > 480, use these sizes//
-      { minWidth : 0, sizes : [[300, 250]] }  //if device screen width is < 480 && > 0, use these sizes//
-             ],
+    
+    mediaTypes: { banner: { sizes: bottomSizes } },
+    
     bids: [
       { bidder: 'aol',          params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x250 */ 
       { bidder: 'aol',          params: { placement: '4882888', network: '4436.1', server: 'adserver.adtech.de' } }, /* 160x600 */
@@ -125,12 +162,9 @@ apstag.fetchBids({
   //new ad unit block
   {
     code: 'middlerightSlot', //second right hand side 300x600
-    sizes: gpt_config.bigbox_sizes,
-    sizeMapping: [  //new!
-      { minWidth : 1024, sizes : [[300, 600], [300, 250], [160, 600], [120, 600]] },   //if device screen width is greater than 1024, use these sizes//
-      { minWidth : 480, sizes : [[300, 250]] },  //if device screen width is < 1024 && > 480, use these sizes//
-      { minWidth : 0, sizes : [[300, 250]] }  //if device screen width is < 480 && > 0, use these sizes//
-             ],
+    
+    mediaTypes: { banner: { sizes: bottomSizes } },
+    
     bids: [
       { bidder: 'aol',          params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x250 */ 
       { bidder: 'aol',          params: { placement: '4882888', network: '4436.1', server: 'adserver.adtech.de' } }, /* 160x600 */
@@ -175,12 +209,9 @@ apstag.fetchBids({
   //new ad unit block
   {
     code: 'bottomleftSlot',  // first left hand side 300x600
-    sizes: gpt_config.bigbox_sizes,
-    sizeMapping: [  //new!
-      { minWidth : 1024, sizes : [[300, 600], [300, 250], [160, 600], [120, 600]] },   //if device screen width is greater than 1024, use these sizes//
-      { minWidth : 480, sizes : [[300, 250]] },  //if device screen width is < 1024 && > 480, use these sizes//
-      { minWidth : 0, sizes : [[300, 250]] }  //if device screen width is < 480 && > 0, use these sizes//
-             ],
+    
+    mediaTypes: { banner: { sizes: bottomSizes } },
+    
     bids: [
       { bidder: 'aol',          params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x250 */ 
       { bidder: 'aol',          params: { placement: '4882888', network: '4436.1', server: 'adserver.adtech.de' } }, /* 160x600 */
@@ -225,12 +256,9 @@ apstag.fetchBids({
   //new ad unit block
   {
     code: 'topSlot',
-    sizes: gpt_config.leaderboard_sizes,
-    sizeMapping: [  //new!
-      { minWidth : 1024, sizes : [[970, 250], [970, 90], [728, 90]] }, //if device screen width is greater than 1024, use these sizes
-      { minWidth : 480, sizes : [[728, 90], [468, 60]] }, //if device screen width is < 1024 && > 480, use these sizes
-      { minWidth : 0, sizes : [[320, 50]] } //if device screen width is < 480 && > 0, use these sizes              
-             ],
+    
+    mediaTypes: { banner: { sizes: topSizes } },
+    
     bids: [
       { bidder: 'aol',          params: { placement: '4882887', network: '4436.1', server: 'adserver.adtech.de' } }, /* 728x90 */
       { bidder: 'aol',          params: { placement: '6507337', network: '4436.1', server: 'adserver.adtech.de' } }, /* 970x250 */
@@ -315,6 +343,30 @@ apstag.fetchBids({
       pbjs.aliasBidder('appnexus','brealtime');   // alias for bidder
       pbjs.aliasBidder('appnexus','springserveAlias2'); // alias for bidder
       // pbjs.setPriceGranularity("dense");   // not being used, being done in adserver targeting below, this needs to be tweaked once prices seen more
+      
+      
+      pbjs.bidderSettings = { 
+              aol:               { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.85; } }, // adjust the bid in real time before the auction takes place
+              districtmDMX:      { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.90; } }, // adjust the bid in real time before the auction takes place
+              sekindonapn:       { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.75; } }, // adjust the bid in real time before the auction takes place
+              brealtime:         { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.80; } }, // adjust the bid in real time before the auction takes place
+              springserveAlias2: { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.65; } }, // adjust the bid in real time before the auction takes place
+              
+               
+              standard: {
+                 adserverTargeting: [
+                 { key: "test", val: 'refresh' }, 
+                 { key: "hb_bidder", val: function(bidResponse) { return bidResponse.bidderCode; } }, 
+                 { key: "hb_adid",   val: function(bidResponse) { return bidResponse.adId; } }, 
+                 { key: "hb_size",   val: function(bidResponse) { return bidResponse.size; } },         
+                 { key: "hb_nowin",  val: function(bidResponse) { return 'no_win'; } }, 
+                 { key: "hb_website",val: function(bidResponse) { return 'golfwrx.com'; } },
+                 { key: "hb_pb",     val: function(bidResponse) { var cpm = (bidResponse.cpm * (gpt_config.latest_gbp_rate || gpt_config.default_gbp_rate)) *1.2 ;  //converts cpm to GBP, rounds cpm to nearest 0.10 incriment, sets 20 if above 20, sets a rev share value
+                       if (cpm <20) { return (Math.floor(cpm * 10) / 10).toFixed(2);} else { return '20.00'; } }
+                 }]
+               }
+             };
+      
       pbjs.addAdUnits(adUnits);
       // pbjs.enableSendAllBids();
       
@@ -326,29 +378,19 @@ apstag.fetchBids({
     		    iframeEnabled: true,
     	        syncDelay: 2000 // write image pixels 5 seconds after the auction
     	    },
-          sizeConfig: [{
-              'mediaQuery': '(min-width: 1024px)',
-              'sizesSupported': [
-                  [970, 90],
-                  [728, 90],
-                  [300, 600],
-                  [300, 250]
-              ],
-              'labels': ['desktop']
-          }, {
-              'mediaQuery': '(min-width: 480px) and (max-width: 1023px)',
-              'sizesSupported': [
-                  [300, 600],
-                  [300, 250]
-              ],
-              'labels': ['tablet']
-          }, {
-              'mediaQuery': '(min-width: 0px)',
-              'sizesSupported': [
-                  [20, 20]
-              ],
-              'labels': ['phone']
-          }]
+    	    sizeConfig: [{
+                'mediaQuery': '(min-width: 1025px)',
+                'sizesSupported': desktopSizes,
+                'labels': ['desktop']
+            }, {
+                'mediaQuery': '(min-width: 768px) and (max-width: 1024px)',
+                'sizesSupported': tabletSizes,
+                'labels': ['tablet']
+            }, {
+                'mediaQuery': '(min-width: 320px) and (max-width: 812px)',
+                'sizesSupported': phoneSizes,
+                'labels': ['phone']
+            }]
       });
       
       pbjs.requestBids({
@@ -356,26 +398,7 @@ apstag.fetchBids({
       });
     });
        
-      pbjs.bidderSettings = { 
-           aol:               { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.85; } }, // adjust the bid in real time before the auction takes place
-           districtmDMX:      { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.90; } }, // adjust the bid in real time before the auction takes place
-           sekindonapn:       { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.75; } }, // adjust the bid in real time before the auction takes place
-           brealtime:         { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.80; } }, // adjust the bid in real time before the auction takes place
-           springserveAlias2: { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.65; } }, // adjust the bid in real time before the auction takes place
-           
-            
-           standard: {
-              adserverTargeting: [
-              { key: "hb_bidder", val: function(bidResponse) { return bidResponse.bidderCode; } }, 
-              { key: "hb_adid",   val: function(bidResponse) { return bidResponse.adId; } }, 
-              { key: "hb_size",   val: function(bidResponse) { return bidResponse.size; } },         
-              { key: "hb_nowin",  val: function(bidResponse) { return 'no_win'; } }, 
-              { key: "hb_website",val: function(bidResponse) { return 'golfwrx.com'; } },
-              { key: "hb_pb",     val: function(bidResponse) { var cpm = (bidResponse.cpm * (gpt_config.latest_gbp_rate || gpt_config.default_gbp_rate)) *1.2 ;  //converts cpm to GBP, rounds cpm to nearest 0.10 incriment, sets 20 if above 20, sets a rev share value
-                    if (cpm <20) { return (Math.floor(cpm * 10) / 10).toFixed(2);} else { return '20.00'; } }
-              }]
-            }
-          };
+      
           
           function initAdserver() {
       if (pbjs.adserverRequestSent) return;
@@ -405,10 +428,10 @@ apstag.fetchBids({
   
   
   googletag.cmd.push(function() {
-      topSlot = googletag.defineSlot('/1001824/prebid_test2', [[970, 250],[970, 90],[728, 90]], 'topSlot').setTargeting("test", "refresh").addService(googletag.pubads());
-      middlerightSlot = googletag.defineSlot('/1001824/prebid_test3', [[300, 600],[300, 250],[160, 600],[120, 600]], 'middlerightSlot').setTargeting("test", "refresh").addService(googletag.pubads());
-      bottomrightSlot = googletag.defineSlot('/1001824/prebid_test1', [[300, 600],[300, 250],[160, 600],[120, 600]], 'bottomrightSlot').setTargeting("test", "refresh").addService(googletag.pubads());
-      bottomleftSlot = googletag.defineSlot('/1001824/prebid_test4', [[300, 600],[300, 250],[160, 600],[120, 600]], 'bottomleftSlot').setTargeting("test", "refresh").addService(googletag.pubads());
+      topSlot = googletag.defineSlot('/1001824/prebid_test2', topSizes, 'topSlot').addService(googletag.pubads());
+      middlerightSlot = googletag.defineSlot('/1001824/prebid_test3', bottomSizes, 'middlerightSlot').setTargeting("test", "refresh").addService(googletag.pubads());
+      bottomrightSlot = googletag.defineSlot('/1001824/prebid_test1', bottomSizes, 'bottomrightSlot').setTargeting("test", "refresh").addService(googletag.pubads());
+      bottomleftSlot = googletag.defineSlot('/1001824/prebid_test4', bottomSizes, 'bottomleftSlot').setTargeting("test", "refresh").addService(googletag.pubads());
     googletag.pubads().enableSingleRequest();
     googletag.enableServices();
     googletag.display("topSlot");
