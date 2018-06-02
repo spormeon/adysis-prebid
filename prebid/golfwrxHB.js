@@ -226,9 +226,9 @@ apstag.fetchBids({
     code: 'topSlot',
     sizes: gpt_config.leaderboard_sizes,
     sizeMapping: [  //new!
-      { minWidth : 1024, sizes : [[970, 250], [970, 90], [728, 90]] }, //if device screen width is greater than 1024, use these sizes
-      { minWidth : 480, sizes : [[728, 90], [468, 60]] }, //if device screen width is < 1024 && > 480, use these sizes
-      { minWidth : 0, sizes : [[320, 50]] } //if device screen width is < 480 && > 0, use these sizes              
+      { minWidth : 1024, sizes : gpt_config.leaderboard_sizes }, //if device screen width is greater than 1024, use these sizes
+      { minWidth : 480, sizes : gpt_config.leaderboard_sizes_tablet }, //if device screen width is < 1024 && > 480, use these sizes
+      { minWidth : 0, sizes : gpt_config.leaderboard_sizes_mobile } //if device screen width is < 480 && > 0, use these sizes              
              ],
     bids: [
       { bidder: 'aol',          params: { placement: '4882887', network: '4436.1', server: 'adserver.adtech.de' } }, /* 728x90 */
