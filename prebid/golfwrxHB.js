@@ -37,14 +37,14 @@ var phoneSizes = [
     [320, 50],
     [300, 250]
 ];
-var 970Sizes = [
+var topSizes = [
     [970, 250],
     [970, 90],
     [728,90],
     [468, 60],
     [320, 50]
 ];
-var 360Sizes = [
+var bottomSizes = [
     [300, 600],
     [300, 250],
     [160,600],
@@ -70,7 +70,7 @@ apstag.fetchBids({
      {
          slotID: 'topSlot', //example: 'div-gpt-ad-1475185990716-0'
          slotName: '1001824/prebid_test2', //example: '12345/leaderboard-1'
-         sizes: 970Sizes //example: [[728,90]]
+         sizes: topSizes //example: [[728,90]]
      },
      {
          slotID: 'middlerightSlot', //example: 'div-gpt-ad-1475185990716-0'
@@ -113,7 +113,7 @@ apstag.fetchBids({
   {
     code: 'bottomrightSlot',  // first right hand side 300x600 
     
-    mediaTypes: { banner: { sizes: 360Sizes } },
+    mediaTypes: { banner: { sizes: bottomSizes } },
     
     bids: [
       { bidder: 'aol',          params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x250 */ 
@@ -160,7 +160,7 @@ apstag.fetchBids({
   {
     code: 'middlerightSlot', //second right hand side 300x600
     
-    mediaTypes: { banner: { sizes: 360Sizes } },
+    mediaTypes: { banner: { sizes: bottomSizes } },
     
     bids: [
       { bidder: 'aol',          params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x250 */ 
@@ -207,7 +207,7 @@ apstag.fetchBids({
   {
     code: 'bottomleftSlot',  // first left hand side 300x600
     
-    mediaTypes: { banner: { sizes: 360Sizes } },
+    mediaTypes: { banner: { sizes: bottomSizes } },
     
     bids: [
       { bidder: 'aol',          params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x250 */ 
@@ -254,7 +254,7 @@ apstag.fetchBids({
   {
     code: 'topSlot',
     
-    mediaTypes: { banner: { sizes: 970Sizes } },
+    mediaTypes: { banner: { sizes: topSizes } },
     
     bids: [
       { bidder: 'aol',          params: { placement: '4882887', network: '4436.1', server: 'adserver.adtech.de' } }, /* 728x90 */
@@ -424,10 +424,10 @@ apstag.fetchBids({
   
   
   googletag.cmd.push(function() {
-      topSlot = googletag.defineSlot('/1001824/prebid_test2', 970Sizes, 'topSlot').setTargeting("test", "refresh").addService(googletag.pubads());
-      middlerightSlot = googletag.defineSlot('/1001824/prebid_test3', 360Sizes, 'middlerightSlot').setTargeting("test", "refresh").addService(googletag.pubads());
-      bottomrightSlot = googletag.defineSlot('/1001824/prebid_test1', 360Sizes, 'bottomrightSlot').setTargeting("test", "refresh").addService(googletag.pubads());
-      bottomleftSlot = googletag.defineSlot('/1001824/prebid_test4', 360Sizes, 'bottomleftSlot').setTargeting("test", "refresh").addService(googletag.pubads());
+      topSlot = googletag.defineSlot('/1001824/prebid_test2', topSizes, 'topSlot').setTargeting("test", "refresh").addService(googletag.pubads());
+      middlerightSlot = googletag.defineSlot('/1001824/prebid_test3', bottomSizes, 'middlerightSlot').setTargeting("test", "refresh").addService(googletag.pubads());
+      bottomrightSlot = googletag.defineSlot('/1001824/prebid_test1', bottomSizes, 'bottomrightSlot').setTargeting("test", "refresh").addService(googletag.pubads());
+      bottomleftSlot = googletag.defineSlot('/1001824/prebid_test4', bottomSizes, 'bottomleftSlot').setTargeting("test", "refresh").addService(googletag.pubads());
     googletag.pubads().enableSingleRequest();
     googletag.enableServices();
     googletag.display("topSlot");
