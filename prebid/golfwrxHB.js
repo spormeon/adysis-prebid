@@ -338,6 +338,29 @@ apstag.fetchBids({
       pbjs.aliasBidder('appnexus','brealtime');   // alias for bidder
       pbjs.aliasBidder('appnexus','springserveAlias2'); // alias for bidder
       // pbjs.setPriceGranularity("dense");   // not being used, being done in adserver targeting below, this needs to be tweaked once prices seen more
+      
+      
+      pbjs.bidderSettings = { 
+              aol:               { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.85; } }, // adjust the bid in real time before the auction takes place
+              districtmDMX:      { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.90; } }, // adjust the bid in real time before the auction takes place
+              sekindonapn:       { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.75; } }, // adjust the bid in real time before the auction takes place
+              brealtime:         { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.80; } }, // adjust the bid in real time before the auction takes place
+              springserveAlias2: { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.65; } }, // adjust the bid in real time before the auction takes place
+              
+               
+              standard: {
+                 adserverTargeting: [
+                 { key: "hb_bidder", val: function(bidResponse) { return bidResponse.bidderCode; } }, 
+                 { key: "hb_adid",   val: function(bidResponse) { return bidResponse.adId; } }, 
+                 { key: "hb_size",   val: function(bidResponse) { return bidResponse.size; } },         
+                 { key: "hb_nowin",  val: function(bidResponse) { return 'no_win'; } }, 
+                 { key: "hb_website",val: function(bidResponse) { return 'golfwrx.com'; } },
+                 { key: "hb_pb",     val: function(bidResponse) { var cpm = (bidResponse.cpm * (gpt_config.latest_gbp_rate || gpt_config.default_gbp_rate)) *1.2 ;  //converts cpm to GBP, rounds cpm to nearest 0.10 incriment, sets 20 if above 20, sets a rev share value
+                       if (cpm <20) { return (Math.floor(cpm * 10) / 10).toFixed(2);} else { return '20.00'; } }
+                 }]
+               }
+             };
+      
       pbjs.addAdUnits(adUnits);
       // pbjs.enableSendAllBids();
       
@@ -369,26 +392,7 @@ apstag.fetchBids({
       });
     });
        
-      pbjs.bidderSettings = { 
-           aol:               { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.85; } }, // adjust the bid in real time before the auction takes place
-           districtmDMX:      { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.90; } }, // adjust the bid in real time before the auction takes place
-           sekindonapn:       { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.75; } }, // adjust the bid in real time before the auction takes place
-           brealtime:         { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.80; } }, // adjust the bid in real time before the auction takes place
-           springserveAlias2: { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.65; } }, // adjust the bid in real time before the auction takes place
-           
-            
-           standard: {
-              adserverTargeting: [
-              { key: "hb_bidder", val: function(bidResponse) { return bidResponse.bidderCode; } }, 
-              { key: "hb_adid",   val: function(bidResponse) { return bidResponse.adId; } }, 
-              { key: "hb_size",   val: function(bidResponse) { return bidResponse.size; } },         
-              { key: "hb_nowin",  val: function(bidResponse) { return 'no_win'; } }, 
-              { key: "hb_website",val: function(bidResponse) { return 'golfwrx.com'; } },
-              { key: "hb_pb",     val: function(bidResponse) { var cpm = (bidResponse.cpm * (gpt_config.latest_gbp_rate || gpt_config.default_gbp_rate)) *1.2 ;  //converts cpm to GBP, rounds cpm to nearest 0.10 incriment, sets 20 if above 20, sets a rev share value
-                    if (cpm <20) { return (Math.floor(cpm * 10) / 10).toFixed(2);} else { return '20.00'; } }
-              }]
-            }
-          };
+      
           
           function initAdserver() {
       if (pbjs.adserverRequestSent) return;
