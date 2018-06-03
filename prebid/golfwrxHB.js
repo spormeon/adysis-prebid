@@ -421,6 +421,7 @@ apstag.fetchBids({
       bottomrightSlot = googletag.defineSlot('/1001824/prebid_test1', [[300, 600],[300, 250],[160, 600],[120, 600],[250, 250]], 'bottomrightSlot').defineSizeMapping(mappingbigboxslot).setTargeting("test", "refresh").addService(googletag.pubads());
       bottomleftSlot = googletag.defineSlot('/1001824/prebid_test4', [[300, 600],[300, 250],[160, 600],[120, 600],[250,250]], 'bottomleftSlot').defineSizeMapping(mappingbigboxslot).setTargeting("test", "refresh").addService(googletag.pubads());
     googletag.pubads().enableSingleRequest();
+    googletag.pubads().collapseEmptyDivs();
     googletag.enableServices();
     googletag.display("topSlot");
     googletag.display("middlerightSlot");
@@ -430,7 +431,6 @@ apstag.fetchBids({
     setInterval(function(){googletag.pubads().refresh([middlerightSlot]);}, 120000);
     setInterval(function(){googletag.pubads().refresh([bottomrightSlot]);}, 120000);
     setInterval(function(){googletag.pubads().refresh([bottomleftSlot]);}, 120000);
-    googletag.pubads().collapseEmptyDivs();
   });
   
   function refreshSlot(slot) {
