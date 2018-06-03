@@ -430,6 +430,7 @@ apstag.fetchBids({
     setInterval(function(){googletag.pubads().refresh([middlerightSlot]);}, 120000);
     setInterval(function(){googletag.pubads().refresh([bottomrightSlot]);}, 120000);
     setInterval(function(){googletag.pubads().refresh([bottomleftSlot]);}, 120000);
+    googletag.pubads().collapseEmptyDivs();
   });
   
   function refreshSlot(slot) {
