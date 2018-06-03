@@ -457,9 +457,3 @@ apstag.fetchBids({
 	function refreshbottomleftSlot() {
 	    refreshSlot(bottomleftSlot);
 	}
-	
-	.center-addiv
-	{
-	     margin: 0 auto;
-	     width: 100px; 
-	}
