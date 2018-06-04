@@ -289,7 +289,7 @@ apstag.fetchBids({
       var pbjsEl = document.createElement("script");
       pbjsEl.type = "text/javascript";
       pbjsEl.async = true;
-      pbjsEl.src = "https://d3s34vlfe7g7ew.cloudfront.net/prebid_switch_240518.js";
+      pbjsEl.src = "https://d3s34vlfe7g7ew.cloudfront.net/prebid_20180604192341.js";
       var pbjsTargetEl = document.getElementsByTagName("head")[0];
       pbjsTargetEl.insertBefore(pbjsEl, pbjsTargetEl.firstChild);
   })();
