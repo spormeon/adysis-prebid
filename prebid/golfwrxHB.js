@@ -316,6 +316,11 @@ apstag.fetchBids({
       // pbjs.enableSendAllBids();
       
       pbjs.setConfig({
+    	  consentManagement: {
+              cmpApi: 'iab',
+              timeout: 8000,
+              allowAuctionWithoutConsent: true
+            }
     	  publisherDomain: "http://www.golfwrx.com",
     	  bidderTimeout: 1100,
     	  cookieSyncDelay: 50,
