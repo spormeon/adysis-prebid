@@ -355,6 +355,10 @@ apstag.fetchBids({
               ],
               'labels': ['phone']
           }]
+    	  "currency": {
+    	       "adServerCurrency": "GBP",
+    	       "granularityMultiplier": 1
+    	    }
       });
       
       pbjs.requestBids({
