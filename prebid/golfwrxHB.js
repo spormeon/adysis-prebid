@@ -319,8 +319,12 @@ apstag.fetchBids({
     	  publisherDomain: "http://www.golfwrx.com",
     	  
     	  bidderTimeout: 1500,
-    	  
-          sizeConfig: [{
+    	  cookieSyncDelay: 50,
+    	  userSync: { 
+    		  iframeEnabled: true,
+    		  syncDelay: 2000 // write image pixels 5 seconds after the auction
+    	  },
+    		  sizeConfig: [{
               'mediaQuery': '(min-width: 1024px)',
               'sizesSupported': [
                   [970, 250],
