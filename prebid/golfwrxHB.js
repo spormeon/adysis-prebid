@@ -423,7 +423,8 @@ apstag.fetchBids({
     googletag.pubads().enableSingleRequest();
     googletag.pubads().collapseEmptyDivs(true, true);
     googletag.pubads().setCentering(true);
-    googletag.pubads().addEventListener('impressionViewable', function(event) { console.log('Slot has been seen:');
+    googletag.pubads().addEventListener('impressionViewable', function(event) { console.log('Slot has been seen:')});
+    
     googletag.enableServices();
     googletag.display("topSlot");
     googletag.display("middlerightSlot");
