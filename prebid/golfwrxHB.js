@@ -420,7 +420,7 @@ apstag.fetchBids({
     	  if (event.slot == targetSlot) {
     		  setInterval(function(){googletag.pubads().refresh([topSlot]);}, 30000);
     		  }
-    		});
+    		}));
       middlerightSlot = googletag.defineSlot('/1001824/prebid_test3', [[300, 600],[300, 250],[160, 600],[120, 600],[250, 250]], 'middlerightSlot').defineSizeMapping(mappingbigboxslot).setTargeting("test", "refresh").addService(googletag.pubads());
       bottomrightSlot = googletag.defineSlot('/1001824/prebid_test1', [[300, 600],[300, 250],[160, 600],[120, 600],[250, 250]], 'bottomrightSlot').defineSizeMapping(mappingbigboxslot).setTargeting("test", "refresh").addService(googletag.pubads());
       bottomleftSlot = googletag.defineSlot('/1001824/prebid_test4', [[300, 600],[300, 250],[160, 600],[120, 600],[250,250]], 'bottomleftSlot').defineSizeMapping(mappingbigboxslot).setTargeting("test", "refresh").addService(googletag.pubads());
