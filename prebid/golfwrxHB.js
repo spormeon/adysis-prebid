@@ -428,7 +428,7 @@ apstag.fetchBids({
     googletag.display("middlerightSlot");
     googletag.display("bottomrightSlot");
     googletag.display("bottomleftSlot");
-    googletag.pubads().addEventListener('impressionViewable', setInterval(function(){.refresh([topSlot]);}, 30000));
+    googletag.pubads().addEventListener('impressionViewable', setInterval(function(){refresh([topSlot]);}, 30000));
     	  
     
   });
