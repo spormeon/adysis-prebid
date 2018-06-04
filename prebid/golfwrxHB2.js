@@ -360,3 +360,19 @@ window.snowplow('trackPageView');
     googletag.enableServices();
   });
 
+
+  cookieSyncDelay: 50,
+  userSync: {
+	    iframeEnabled: true,
+      syncDelay: 2000 // write image pixels 5 seconds after the auction
+  },
+  
+  
+  googletag.pubads().addEventListener('impressionViewable', function(event) { setInterval(function(){googletag.pubads().refresh([topSlot]);}, 30000); });
+  googletag.pubads().addEventListener('impressionViewable', function(event) { setInterval(function(){googletag.pubads().refresh([middlerightSlot]);}, 45000); });
+  
+  
+  setInterval(function(){googletag.pubads().refresh([topSlot]);}, 120000);
+  setInterval(function(){googletag.pubads().refresh([middlerightSlot]);}, 120000);
+  setInterval(function(){googletag.pubads().refresh([bottomrightSlot]);}, 120000);
+  setInterval(function(){googletag.pubads().refresh([bottomleftSlot]);}, 120000);

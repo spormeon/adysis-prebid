@@ -423,15 +423,14 @@ apstag.fetchBids({
     googletag.pubads().enableSingleRequest();
     googletag.pubads().collapseEmptyDivs(true, true);
     googletag.pubads().setCentering(true);
-    
     googletag.enableServices();
     googletag.display("topSlot");
     googletag.display("middlerightSlot");
     googletag.display("bottomrightSlot");
     googletag.display("bottomleftSlot");
     
-    googletag.pubads().addEventListener('impressionViewable', function(event) { setInterval(function(){googletag.pubads().refresh([topSlot]);}, 30000); });
-    googletag.pubads().addEventListener('impressionViewable', function(event) { setInterval(function(){googletag.pubads().refresh([middlerightSlot]);}, 45000); });
+    setInterval(function(){googletag.pubads().refresh([topSlot]);}, 120000);
+    setInterval(function(){googletag.pubads().refresh([middlerightSlot]);}, 120000);
     setInterval(function(){googletag.pubads().refresh([bottomrightSlot]);}, 120000);
     setInterval(function(){googletag.pubads().refresh([bottomleftSlot]);}, 120000);
     
