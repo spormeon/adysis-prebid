@@ -317,7 +317,6 @@ apstag.fetchBids({
       
       pbjs.setConfig({
     	  publisherDomain: "http://www.golfwrx.com",
-    	  
     	  bidderTimeout: 1500,
     	  cookieSyncDelay: 50,
     	  userSync: { 
