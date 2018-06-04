@@ -432,8 +432,8 @@ apstag.fetchBids({
     setInterval(function(){googletag.pubads().refresh([middlerightSlot]);}, 120000);
     setInterval(function(){googletag.pubads().refresh([bottomrightSlot]);}, 120000);
     setInterval(function(){googletag.pubads().refresh([bottomleftSlot]);}, 120000);
-    googletag.pubads().addEventListener('impressionViewable', function(event) {
-  	  if (event.slot == (Slot)) {
+  });
+    
     function refreshSlot(slot) {
         pbjs.que.push(function() {
             pbjs.requestBids({
@@ -460,5 +460,5 @@ apstag.fetchBids({
   	}
   	  	  
     
-  };
+  
   
