@@ -53,7 +53,7 @@ apstag.fetchBids({
      });
 }); 
   
-  var PREBID_TIMEOUT = 750;
+  var PREBID_TIMEOUT = 900;
      
   var gpt_config = {
     prebid_timeout: 1000, //left for reference but not using right now...
@@ -322,12 +322,9 @@ apstag.fetchBids({
               allowAuctionWithoutConsent: true
             },
     	  publisherDomain: "http://www.golfwrx.com",
-    	  bidderTimeout: 1100,
+    	  bidderTimeout: 1500,
     	  cookieSyncDelay: 50,
-    	  userSync: { 
-    		  iframeEnabled: true,
-    		  syncDelay: 1500 // write image pixels 5 seconds after the auction
-    	  },
+    	  
     	  "currency": {
    	       "adServerCurrency": "GBP",
    	       "granularityMultiplier": 1
