@@ -328,6 +328,10 @@ apstag.fetchBids({
     		  iframeEnabled: true,
     		  syncDelay: 1500 // write image pixels 5 seconds after the auction
     	  },
+    	  "currency": {
+   	       "adServerCurrency": "GBP",
+   	       "granularityMultiplier": 1
+   	    },
     		  sizeConfig: [{
               'mediaQuery': '(min-width: 1024px)',
               'sizesSupported': [
@@ -360,10 +364,6 @@ apstag.fetchBids({
               ],
               'labels': ['phone']
           }]
-    	  "currency": {
-    	       "adServerCurrency": "GBP",
-    	       "granularityMultiplier": 1
-    	    }
       });
       
       pbjs.requestBids({
