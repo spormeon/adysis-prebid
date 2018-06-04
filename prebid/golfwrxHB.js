@@ -323,7 +323,7 @@ apstag.fetchBids({
             },
     	  publisherDomain: "http://www.golfwrx.com",
     	  bidderTimeout: 1500,
-    	  cookieSyncDelay: 50,
+    	  
     	  
     	  "currency": {
    	       "adServerCurrency": "GBP",
