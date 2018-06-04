@@ -430,7 +430,7 @@ apstag.fetchBids({
     googletag.display("bottomrightSlot");
     googletag.display("bottomleftSlot");
     
-    googletag.pubads().addEventListener('impressionViewable', function(event) { setInterval(function(){googletag.pubads().refresh([topSlot]);}, 30000); });
+    googletag.pubads().addEventListener('impressionViewable', function(event) { if (event.slot) setInterval(function(){googletag.pubads().refresh([topSlot]);}, 30000); });
     googletag.pubads().addEventListener('impressionViewable', function(event) { setInterval(function(){googletag.pubads().refresh([middlerightSlot]);}, 45000); });
     setInterval(function(){googletag.pubads().refresh([bottomrightSlot]);}, 120000);
     setInterval(function(){googletag.pubads().refresh([bottomleftSlot]);}, 120000);
