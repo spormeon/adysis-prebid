@@ -269,7 +269,7 @@ apstag.fetchBids({
     
   // get latest currency exchange rate GBP to USD 
   function getGBPRate(callback) {
-    var currencyUrl = "https://api.fixer.io/latest?base=USD";
+    var currencyUrl = "http://data.fixer.io/api/latest?access_key=cb0d0d21a8e9759bc7fc3a91f446fe7f&?base=USD";
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
       if (xhr.readyState === 4 && xhr.status === 200) {
