@@ -319,7 +319,7 @@ apstag.fetchBids({
     	  consentManagement: {
               cmpApi: 'iab',
               timeout: 8000,
-              allowAuctionWithoutConsent: true
+              allowAuctionWithoutConsent: false
             },
     	  publisherDomain: "http://www.golfwrx.com",
     	  bidderTimeout: 1500,
