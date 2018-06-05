@@ -333,9 +333,7 @@ apstag.fetchBids({
               allowAuctionWithoutConsent: true
             },
     	  publisherDomain: "http://www.golfwrx.com",
-    	  bidderTimeout: 5000,
-    	  
-    	  
+    	  bidderTimeout: 1500,
     	  "currency": {
    	       "adServerCurrency": "GBP",
    	       "granularityMultiplier": 1
