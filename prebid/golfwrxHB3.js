@@ -15,7 +15,7 @@ window.snowplow('trackPageView');
 <!-- Prebid Config Section START -->
 
   
-  var PREBID_TIMEOUT = 1500;
+  var PREBID_TIMEOUT = 2000;
      
   var gpt_config = {
     prebid_timeout: 1000, //left for reference but not using right now...
@@ -282,7 +282,7 @@ window.snowplow('trackPageView');
               accountId: 'e31f627f-53a3-4288-9979-482d3c6ffc76',
               enabled: true,
               bidders: ['appnexus', 'conversant', 'pulsepoint', 'sovrn'],
-              timeout: 1000,
+              timeout: 1500,
               adapter: 'prebidServer',
               endpoint: 'https://prebid.adnxs.com/pbs/v1/openrtb2/auction',
               syncEndpoint: 'https://prebid.adnxs.com/pbs/v1/cookie_sync',
@@ -295,7 +295,7 @@ window.snowplow('trackPageView');
               allowAuctionWithoutConsent: true
             },
     	  publisherDomain: "http://www.golfwrx.com",
-    	  bidderTimeout: 5000,
+    	  bidderTimeout: 2500,
     	  "currency": {
    	       "adServerCurrency": "GBP",
    	       "granularityMultiplier": 1
