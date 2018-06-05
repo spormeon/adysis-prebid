@@ -316,6 +316,17 @@ apstag.fetchBids({
       // pbjs.enableSendAllBids();
       
       pbjs.setConfig({
+    	  s2sConfig: {
+              accountId: 'e31f627f-53a3-4288-9979-482d3c6ffc76',
+              enabled: true,
+              bidders: ['appnexus', 'conversant', 'pulsepoint', 'sovrn'],
+              timeout: 1500,
+              adapter: 'prebidServer',
+              endpoint: 'https://prebid.adnxs.com/pbs/v1/openrtb2/auction',
+              syncEndpoint: 'https://prebid.adnxs.com/pbs/v1/cookie_sync',
+              cookieSet: true,
+              cookiesetUrl: 'https://acdn.adnxs.com/cookieset/cs.js'
+          },
     	  consentManagement: {
               cmpApi: 'iab',
               timeout: 5000,
