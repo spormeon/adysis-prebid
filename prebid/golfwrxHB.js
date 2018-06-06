@@ -53,7 +53,7 @@ apstag.fetchBids({
      });
 }); 
   
-  var PREBID_TIMEOUT = 900;
+  var PREBID_TIMEOUT = 800;
      
   var gpt_config = {
     prebid_timeout: 1000, //left for reference but not using right now...
@@ -436,12 +436,10 @@ apstag.fetchBids({
     googletag.display("middlerightSlot");
     googletag.display("bottomrightSlot");
     googletag.display("bottomleftSlot");
-    
     setInterval(function(){googletag.pubads().refresh([topSlot]);}, 120000);
     setInterval(function(){googletag.pubads().refresh([middlerightSlot]);}, 120000);
     setInterval(function(){googletag.pubads().refresh([bottomrightSlot]);}, 120000);
     setInterval(function(){googletag.pubads().refresh([bottomleftSlot]);}, 120000);
-    
   });
     
     function refreshSlot(slot) {
