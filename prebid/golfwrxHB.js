@@ -309,7 +309,6 @@ apstag.fetchBids({
 
     pbjs.que.push(function() {
       pbjs.aliasBidder('appnexus','sekindoapn');  // alias for bidder
-      
       pbjs.aliasBidder('appnexus','springserveAlias2'); // alias for bidder
       // pbjs.setPriceGranularity("dense");   // not being used, being done in adserver targeting below, this needs to be tweaked once prices seen more
       pbjs.addAdUnits(adUnits);
@@ -322,8 +321,8 @@ apstag.fetchBids({
               timeout: 5000,
               allowAuctionWithoutConsent: true
             },
-    	  publisherDomain: "http://www.golfwrx.com",
-    	  bidderTimeout: 2000,
+    	  publisherDomain: "golfwrx.com",
+    	  bidderTimeout: 2500,
     	  "currency": {
    	       "adServerCurrency": "GBP",
    	       "granularityMultiplier": 1
