@@ -413,7 +413,11 @@ apstag.fetchBids({
   
     googletag.cmd.push(function () {
     	  (function (googletag, pbjs, config) {
-    	    var sizeMappings = {};
+    		  var mappingleaderslot = googletag.sizeMapping().
+    		  addSize([1024, 769], [[970,250],[970,90],[728,90],[468,60],[320,50],[234,60]]).
+    		  addSize([768, 500], [[728,90],[468,60],[320,50],[234,60]]).
+    		  addSize([1, 1], [[320,50],[234,60]]).
+    		  build();
     	    var slots = {};
     	    Object.keys(config.sizeMappings).forEach(function (key) {
     	      var sizeMapping = googletag.sizeMapping();
