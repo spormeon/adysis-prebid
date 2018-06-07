@@ -1,3 +1,19 @@
+var gpt_config = {
+    prebid_timeout: 1000, //left for reference but not using right now...
+    default_gbp_rate: 0.77, // not being used
+    latest_gbp_rate: 0.77414, //RATE AS AT 30-08-2017 , not being used, using newRate from the function
+    dynamically_lookup_gbp_rate: true,
+    mobileWidthBreakpoint: 640,
+    tabletWidthBreakpoint: 767,
+    bigbox_sizes: [[300, 600], [300, 250], [160, 600], [120, 600],[250,250]],
+    bigbox_sizes_tablet: [[300, 250],[250,250]],
+    bigbox_sizes_mobile: [[300, 250],[250,250]],
+    leaderboard_sizes: [[970, 250],[970, 90],[728, 90],[468,60],[320, 50],[234,60]],
+    leaderboard_sizes_tablet: [[728, 90],[468,60],[320, 50],[234,60]],
+    leaderboard_sizes_mobile: [[320, 50],[234,60]]
+  }; //./gpt_config
+
+
 var size = [
 	[970, 250],
 	[970, 90],
@@ -57,13 +73,13 @@ googletag.cmd.push(function () {
     definitons: {
       topSlot: {
         adUnitPath: '/1001824/prebid_test2',
-        size: size,
+        size: gpt_config.leaderboard_sizes,
         sizeMapping: 'mappingleaderslot',
         timeout: 30000,
       },
       middlerightSlot: {
         adUnitPath: '/1001824/prebid_test3',
-        size: size,
+        size: gpt_config.bigbox_sizes,
         sizeMapping: 'mappingbigboxslot',
         timeout: 30000,
       },
