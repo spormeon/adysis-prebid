@@ -437,6 +437,18 @@ apstag.fetchBids({
     	      if (slotConfig) {
     	        var handle = setTimeout(function () {
     	          googletag.cmd.push(function () {
+    	        	  function refreshBid() {
+    	                  pbjs.que.push(function() {
+    	                      pbjs.requestBids({
+    	                          timeout: PREBID_TIMEOUT,
+    	                          adUnitCodes: ['/19968336/header-bid-tag-0'],
+    	                          bidsBackHandler: function() {
+    	                              pbjs.setTargetingForGPTAsync(['/19968336/header-bid-tag-0']);
+    	                              googletag.pubads().refresh([slot1]);
+    	                          }
+    	                      });
+    	                  });
+    	              }
     	            googletag.pubads().refresh([slotConfig.slot]);
     	          });
     	        }, config.definitons[elementId].timeout);
