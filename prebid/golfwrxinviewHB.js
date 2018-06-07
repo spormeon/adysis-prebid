@@ -441,9 +441,9 @@ apstag.fetchBids({
     	                  pbjs.que.push(function() {
     	                      pbjs.requestBids({
     	                          timeout: PREBID_TIMEOUT,
-    	                          adUnitCodes: ['/19968336/header-bid-tag-0'],
+    	                          adUnitCodes: [slot.getSlotElementId()],
     	                          bidsBackHandler: function() {
-    	                              pbjs.setTargetingForGPTAsync(['/19968336/header-bid-tag-0']);
+    	                              pbjs.setTargetingForGPTAsync([slot.getSlotElementId()]);
     	                              googletag.pubads().refresh([slot1]);
     	                          }
     	                      });
