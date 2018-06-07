@@ -441,9 +441,7 @@ apstag.fetchBids({
     	                  pbjs.que.push(function() {
     	                      pbjs.requestBids({
     	                          timeout: PREBID_TIMEOUT,
-    	                          adUnitCodes: [slot.getSlotElementId()],
     	                          bidsBackHandler: function() {
-    	                              pbjs.setTargetingForGPTAsync([slot.getSlotElementId()]);
     	                              googletag.pubads().refresh([slot1]);
     	                          }
     	                      });
