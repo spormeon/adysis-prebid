@@ -445,7 +445,8 @@ apstag.fetchBids({
     	    });
     	    Object.keys(config.definitons).forEach(function (key) {
     	      var def = config.definitons[key];
-    	      var slot = googletag.defineSlot(def.adUnitPath, def.size, def.sizemapping, key);
+    	      var slot = googletag.defineSlot(def.adUnitPath, def.size, key);
+    	      slot.defineSizeMapping(slot);
     	      slot.setTargeting('test', 'refresh');
     	      slot.addService(googletag.pubads());
     	      googletag.display(key);
