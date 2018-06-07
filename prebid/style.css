@@ -1,0 +1,28 @@
+.ad {
+  outline: 1px solid blue;
+  min-width: 90px;
+  min-height: 90px;
+}
+
+.bottom {
+ display: flex;
+ justify-content: space-around;
+}
+
+section {
+  flex: 1 1 auto;
+}
+
+aside {
+  flex: 1 1 auto;
+}
+
+main {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+}
+
+footer {
+  outline: 1px solid red;
+}
