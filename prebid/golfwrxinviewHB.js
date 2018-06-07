@@ -413,11 +413,7 @@ apstag.fetchBids({
   
     googletag.cmd.push(function () {
     	  (function (googletag, pbjs, config) {
-    		  var mappingleaderslot = googletag.sizeMapping().
-    		  addSize([1024, 769], [[970,250],[970,90],[728,90],[468,60],[320,50],[234,60]]).
-    		  addSize([768, 500], [[728,90],[468,60],[320,50],[234,60]]).
-    		  addSize([1, 1], [[320,50],[234,60]]).
-    		  build();
+    	    var sizeMappings = {};
     	    var slots = {};
     	    Object.keys(config.sizeMappings).forEach(function (key) {
     	      var sizeMapping = googletag.sizeMapping();
@@ -484,63 +480,7 @@ apstag.fetchBids({
     	        sizeMapping: 'mappingbigboxslot',
     	        timeout: 45000,
     	      },
-    	    },
-    	    sizeMappings: {
-    	      mappingleaderslot: [
-    	        [
-    	          [1024, 769],
-    	          [
-    	            [970, 250],
-    	            [970, 90],
-    	            [728, 90],
-    	            [468, 60],
-    	            [320, 50],
-    	            [234, 60]
-    	          ]
-    	        ],
-    	        [
-    	          [768, 500],
-    	          [
-    	            [728, 90],
-    	            [468, 60],
-    	            [320, 50],
-    	            [234, 60]
-    	          ]
-    	        ],
-    	        [
-    	          [1, 1],
-    	          [
-    	            [320, 50],
-    	            [234, 60]
-    	          ]
-    	        ],
-    	      ],
-    	      mappingbigboxslot: [
-    	        [
-    	          [1024, 769],
-    	          [
-    	            [300, 600],
-    	            [300, 250],
-    	            [160, 600],
-    	            [120, 600],
-    	            [250, 250]
-    	          ]
-    	        ],
-    	        [
-    	          [768, 500],
-    	          [
-    	            [300, 250],
-    	            [250, 250]
-    	          ]
-    	        ],
-    	        [
-    	          [1, 1],
-    	          [
-    	            [300, 250],
-    	            [250, 250]
-    	          ]
-    	        ],
-    	      ]
     	    }
+    	    
     	  });
     	});
