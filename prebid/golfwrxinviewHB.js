@@ -446,7 +446,7 @@ apstag.fetchBids({
     	    Object.keys(config.definitons).forEach(function (key) {
     	      var def = config.definitons[key];
     	      var slot = googletag.defineSlot(def.adUnitPath, def.size, key);
-    	      slot.defineSizeMapping(slot);
+    	      slot.defineSizeMapping(def.sizeMapping);
     	      slot.setTargeting('test', 'refresh');
     	      slot.addService(googletag.pubads());
     	      googletag.display(key);
@@ -482,6 +482,62 @@ apstag.fetchBids({
     	        timeout: 45000,
     	      },
     	    },
-    	    
+    	    sizeMappings: {
+    	      mappingleaderslot: [
+    	        [
+    	          [1024, 769],
+    	          [
+    	            [970, 250],
+    	            [970, 90],
+    	            [728, 90],
+    	            [468, 60],
+    	            [320, 50],
+    	            [234, 60]
+    	          ]
+    	        ],
+    	        [
+    	          [768, 500],
+    	          [
+    	            [728, 90],
+    	            [468, 60],
+    	            [320, 50],
+    	            [234, 60]
+    	          ]
+    	        ],
+    	        [
+    	          [1, 1],
+    	          [
+    	            [320, 50],
+    	            [234, 60]
+    	          ]
+    	        ],
+    	      ],
+    	      mappingbigboxslot: [
+    	        [
+    	          [1024, 769],
+    	          [
+    	            [300, 600],
+    	            [300, 250],
+    	            [160, 600],
+    	            [120, 600],
+    	            [250, 250]
+    	          ]
+    	        ],
+    	        [
+    	          [768, 500],
+    	          [
+    	            [300, 250],
+    	            [250, 250]
+    	          ]
+    	        ],
+    	        [
+    	          [1, 1],
+    	          [
+    	            [300, 250],
+    	            [250, 250]
+    	          ]
+    	        ],
+    	      ]
+    	    }
     	  });
     	});
