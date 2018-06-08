@@ -51,7 +51,31 @@ apstag.fetchBids({
          //googletag.pubads().refresh();
      });
 }); 
-  
+var desktopSizes = [
+    [970, 250],
+    [300, 600],
+    [300, 250]
+];
+var tabletSizes = [
+    [728, 90],
+    [160, 600],
+    [300, 250]
+];
+var phoneSizes = [
+    [320, 100],
+    [320, 50],
+    [300, 250]
+];
+var allSizes = [
+    [970, 250],
+    [728,90],
+    [320, 100],
+    [320, 50],
+    [300, 600],
+    [300, 250],
+    [160,600]
+];
+
   var PREBID_TIMEOUT = 800;
      
   var gpt_config = {
@@ -223,7 +247,11 @@ apstag.fetchBids({
   //new ad unit block
   {
     code: 'topSlot',
-    sizes: gpt_config.leaderboard_sizes,
+    mediaTypes: {
+        banner: {
+            sizes: allSizes
+        }
+    },
     bids: [
       { bidder: 'aol',          params: { placement: '4882887', network: '4436.1', server: 'adserver.adtech.de' } }, /* 728x90 */
       { bidder: 'aol',          params: { placement: '6507337', network: '4436.1', server: 'adserver.adtech.de' } }, /* 970x250 */
@@ -320,8 +348,21 @@ apstag.fetchBids({
     	  "currency": {
    	       "adServerCurrency": "GBP",
    	       "granularityMultiplier": 1
-   	    }
-    		  
+   	    },
+   	 sizeConfig: [{
+         'mediaQuery': '(min-width: 1025px)',
+         'sizesSupported': desktopSizes,
+         'labels': ['desktop']
+     }, {
+         'mediaQuery': '(min-width: 768px) and (max-width: 1024px)',
+         'sizesSupported': tabletSizes,
+         'labels': ['tablet']
+     }, {
+         'mediaQuery': '(min-width: 320px) and (max-width: 812px)',
+         'sizesSupported': phoneSizes,
+         'labels': ['phone']
+     }]
+      	  
       });
       
       pbjs.requestBids({
