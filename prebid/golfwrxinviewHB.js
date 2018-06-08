@@ -224,7 +224,6 @@ apstag.fetchBids({
   {
     code: 'topSlot',
     sizes: gpt_config.leaderboard_sizes,
-    
     bids: [
       { bidder: 'aol',          params: { placement: '4882887', network: '4436.1', server: 'adserver.adtech.de' } }, /* 728x90 */
       { bidder: 'aol',          params: { placement: '6507337', network: '4436.1', server: 'adserver.adtech.de' } }, /* 970x250 */
@@ -461,7 +460,7 @@ apstag.fetchBids({
     	    sizeMappings: {
     	      mappingleaderslot: [
     	        [
-    	          [1024, 769],
+    	          [1024, 768],
     	          [
     	            [970, 250],
     	            [970, 90],
@@ -490,7 +489,7 @@ apstag.fetchBids({
     	      ],
     	      mappingbigboxslot: [
     	        [
-    	          [1024, 769],
+    	          [1024, 768],
     	          [
     	            [300, 600],
     	            [300, 250],
