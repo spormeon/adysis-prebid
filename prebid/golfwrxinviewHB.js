@@ -356,7 +356,7 @@ var allSizes = [
               allowAuctionWithoutConsent: true
             },
     	  publisherDomain: "golfwrx.com",
-    	  bidderTimeout: 1200,
+    	  bidderTimeout: 1500,
     	  "currency": {
    	       "adServerCurrency": "GBP",
    	       "granularityMultiplier": 1
