@@ -321,39 +321,8 @@ apstag.fetchBids({
     	  "currency": {
    	       "adServerCurrency": "GBP",
    	       "granularityMultiplier": 1
-   	    },
-    		  sizeConfig: [{
-              'mediaQuery': '(min-width: 1024px)',
-              'sizesSupported': [
-                  [970, 250],
-            	  [970, 90],
-                  [728, 90],
-                  [468, 60],
-                  [320, 50],
-                  [300, 600],
-                  [160, 600],
-                  [120, 600],
-                  [300, 250],
-                  [250, 250]
-              ],
-              'labels': ['desktop']
-          }, {
-              'mediaQuery': '(min-width: 480px) and (max-width: 1023px)',
-              'sizesSupported': [
-                  [728, 90],
-                  [468, 60],
-                  [320, 50],
-            	  [300, 250],
-            	  [234, 60]
-              ],
-              'labels': ['tablet']
-          }, {
-              'mediaQuery': '(min-width: 0px)',
-              'sizesSupported': [
-                  [20, 20]
-              ],
-              'labels': ['phone']
-          }]
+   	    }
+    		  
       });
       
       pbjs.requestBids({
