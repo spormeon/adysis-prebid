@@ -435,7 +435,7 @@ apstag.fetchBids({
     	    definitons: {
     	      topSlot: {
     	        adUnitPath: '/1001824/prebid_test2',
-    	        size: gpt_config.leaderboard_sizes,
+    	        size: size,
     	        sizeMapping: 'mappingleaderslot',
     	        timeout: 30000,
     	      },
