@@ -53,27 +53,36 @@ apstag.fetchBids({
 }); 
 var desktopSizes = [
     [970, 250],
+    [970, 90],
+    [728, 90],
+    [468, 60],
+    [320, 50],
     [300, 600],
-    [300, 250]
+    [300, 250],
+    [160, 600],
+    [120, 600],
+    [250, 250]
 ];
 var tabletSizes = [
     [728, 90],
-    [160, 600],
     [300, 250]
 ];
 var phoneSizes = [
-    [320, 100],
+    [468, 60],
     [320, 50],
     [300, 250]
 ];
 var allSizes = [
-    [970, 250],
-    [728,90],
-    [320, 100],
+	[970, 250],
+    [970, 90],
+    [728, 90],
+    [468, 60],
     [320, 50],
     [300, 600],
     [300, 250],
-    [160,600]
+    [160, 600],
+    [120, 600],
+    [250, 250]
 ];
 
   var PREBID_TIMEOUT = 800;
@@ -97,12 +106,11 @@ var allSizes = [
   //new ad unit block
   {
     code: 'bottomrightSlot',  // first right hand side 300x600 
-    sizes: gpt_config.bigbox_sizes,
-    sizeMapping: [  //new!
-      { minWidth : 1024, sizes : gpt_config.bigbox_sizes },   //if device screen width is greater than 1024, use these sizes//
-      { minWidth : 480, sizes : gpt_config.bigbox_sizes_tablet },  //if device screen width is < 1024 && > 480, use these sizes//
-      { minWidth : 0, sizes : gpt_config.bigbox_sizes_mobile }  //if device screen width is < 480 && > 0, use these sizes//
-             ],
+    mediaTypes: {
+        banner: {
+            sizes: allSizes
+        }
+    },
     bids: [
       { bidder: 'aol',          params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x250 */ 
       { bidder: 'aol',          params: { placement: '4882888', network: '4436.1', server: 'adserver.adtech.de' } }, /* 160x600 */
@@ -147,12 +155,11 @@ var allSizes = [
   //new ad unit block
   {
     code: 'middlerightSlot', //second right hand side 300x600
-    sizes: gpt_config.bigbox_sizes,
-    sizeMapping: [  //new!
-      { minWidth : 1024, sizes : gpt_config.bigbox_sizes },   //if device screen width is greater than 1024, use these sizes//
-      { minWidth : 480, sizes : gpt_config.bigbox_sizes_tablet },  //if device screen width is < 1024 && > 480, use these sizes//
-      { minWidth : 0, sizes : gpt_config.bigbox_sizes_mobile }  //if device screen width is < 480 && > 0, use these sizes//
-             ],
+    mediaTypes: {
+        banner: {
+            sizes: allSizes
+        }
+    },
     bids: [
       { bidder: 'aol',          params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x250 */ 
       { bidder: 'aol',          params: { placement: '4882888', network: '4436.1', server: 'adserver.adtech.de' } }, /* 160x600 */
@@ -197,12 +204,11 @@ var allSizes = [
   //new ad unit block
   {
     code: 'bottomleftSlot',  // first left hand side 300x600
-    sizes: gpt_config.bigbox_sizes,
-    sizeMapping: [  //new!
-      { minWidth : 1024, sizes : gpt_config.bigbox_sizes },   //if device screen width is greater than 1024, use these sizes//
-      { minWidth : 480, sizes : gpt_config.bigbox_sizes_tablet },  //if device screen width is < 1024 && > 480, use these sizes//
-      { minWidth : 0, sizes : gpt_config.bigbox_sizes_mobile }  //if device screen width is < 480 && > 0, use these sizes//
-             ],
+    mediaTypes: {
+        banner: {
+            sizes: allSizes
+        }
+    },
     bids: [
       { bidder: 'aol',          params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x250 */ 
       { bidder: 'aol',          params: { placement: '4882888', network: '4436.1', server: 'adserver.adtech.de' } }, /* 160x600 */
