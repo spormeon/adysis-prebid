@@ -415,13 +415,24 @@ apstag.fetchBids({
     	  (function (googletag, pbjs, config) {
     	    var sizeMappings = {};
     	    var slots = {};
-    	    Object.keys(config.sizeMappings).forEach(function (key) {
-    	      var sizeMapping = googletag.sizeMapping();
-    	      config.sizeMappings[key].forEach(function (mapping) {
-    	        console.log('sizeMapping ', sizeMapping, ' mapping ', mapping);
-    	        sizeMapping.addSize.apply(sizeMapping, mapping);
+    	    function refreshSlot(slot) {
+    	      pbjs.que.push(function() {
+    	        pbjs.requestBids({
+    	          timeout: PREBID_TIMEOUT,
+    	          adUnitCodes: [slot.getSlotElementId()],
+    	          bidsBackHandler: function() {
+    	            pbjs.setTargetingForGPTAsync([slot.getSlotElementId()]);
+    	            googletag.pubads().refresh([slot]);
+    	          }
+    	        });
     	      });
-    	      sizeMapping.build();
+    	    }
+    	    Object.keys(config.sizeMappings).forEach(function (key) {
+    	      var sizeMappingBuilder = googletag.sizeMapping();
+    	      config.sizeMappings[key].forEach(function (mapping) {
+    	        sizeMappingBuilder.addSize(mapping[0], mapping[1]);
+    	      });
+    	      var sizeMapping = sizeMappingBuilder.build();
     	      sizeMappings[key] = sizeMapping;
     	      console.log('created sizemapping ', key, ' ', sizeMappings[key]);
     	    });
@@ -437,7 +448,7 @@ apstag.fetchBids({
     	      if (slotConfig) {
     	        var handle = setTimeout(function () {
     	          googletag.cmd.push(function () {
-    	            googletag.pubads().refresh([slotConfig.slot]);
+    	            refreshSlot(event.slot);
     	          });
     	        }, config.definitons[elementId].timeout);
     	        console.log('handle for time ', handle, ' elementId ', elementId, ' duration ', config.definitons[elementId].timeout);
@@ -446,8 +457,8 @@ apstag.fetchBids({
     	    Object.keys(config.definitons).forEach(function (key) {
     	      var def = config.definitons[key];
     	      var slot = googletag.defineSlot(def.adUnitPath, def.size, key);
-    	      slot.defineSizeMapping(def.sizeMapping);
     	      slot.setTargeting('test', 'refresh');
+    	      slot.defineSizeMapping(sizeMappings[def.sizeMapping]);
     	      slot.addService(googletag.pubads());
     	      googletag.display(key);
     	      slots[key] = { slot: slot };
