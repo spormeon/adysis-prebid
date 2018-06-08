@@ -55,43 +55,35 @@ var desktopSizes = [
     [970, 250],
     [970, 90],
     [728, 90],
-    [468, 60],
     [320, 50],
     [300, 600],
     [300, 250],
     [160, 600],
-    [120, 600],
-    [250, 250]
+    [120, 600]
 ];
 var tabletSizes = [
 	[970, 90],
     [728, 90],
-    [468, 60],
     [320, 60],
-    [300, 250],
-    [250, 250]
+    [300, 250]
 ];
 var phoneSizes = [
 	[728, 90],
-    [468, 60],
     [320, 50],
-    [300, 250],
-    [250, 250]
+    [300, 250]
 ];
 var allSizes = [
 	[970, 250],
     [970, 90],
     [728, 90],
-    [468, 60],
     [320, 50],
     [300, 600],
     [300, 250],
     [160, 600],
-    [120, 600],
-    [250, 250]
+    [120, 600]
 ];
 
-  var PREBID_TIMEOUT = 800;
+  var PREBID_TIMEOUT = 900;
      
   var gpt_config = {
     prebid_timeout: 1000, //left for reference but not using right now...
@@ -356,7 +348,7 @@ var allSizes = [
               allowAuctionWithoutConsent: true
             },
     	  publisherDomain: "golfwrx.com",
-    	  bidderTimeout: 1500,
+    	  bidderTimeout: 1800,
     	  "currency": {
    	       "adServerCurrency": "GBP",
    	       "granularityMultiplier": 1
