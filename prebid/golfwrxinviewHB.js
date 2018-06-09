@@ -51,39 +51,8 @@ apstag.fetchBids({
          //googletag.pubads().refresh();
      });
 }); 
-var desktopSizes = [
-    [970, 250],
-    [970, 90],
-    [728, 90],
-    [320, 50],
-    [300, 600],
-    [300, 250],
-    [160, 600],
-    [120, 600]
-];
-var tabletSizes = [
-	[970, 90],
-    [728, 90],
-    [320, 60],
-    [300, 250]
-];
-var phoneSizes = [
-	[728, 90],
-    [320, 50],
-    [300, 250]
-];
-var allSizes = [
-	[970, 250],
-    [970, 90],
-    [728, 90],
-    [320, 50],
-    [300, 600],
-    [300, 250],
-    [160, 600],
-    [120, 600]
-];
-
-  var PREBID_TIMEOUT = 900;
+  
+  var PREBID_TIMEOUT = 800;
      
   var gpt_config = {
     prebid_timeout: 1000, //left for reference but not using right now...
@@ -104,11 +73,12 @@ var allSizes = [
   //new ad unit block
   {
     code: 'bottomrightSlot',  // first right hand side 300x600 
-    mediaTypes: {
-        banner: {
-            sizes: allSizes
-        }
-    },
+    sizes: gpt_config.bigbox_sizes,
+    sizeMapping: [  //new!
+      { minWidth : 1024, sizes : gpt_config.bigbox_sizes },   //if device screen width is greater than 1024, use these sizes//
+      { minWidth : 480, sizes : gpt_config.bigbox_sizes_tablet },  //if device screen width is < 1024 && > 480, use these sizes//
+      { minWidth : 0, sizes : gpt_config.bigbox_sizes_mobile }  //if device screen width is < 480 && > 0, use these sizes//
+             ],
     bids: [
       { bidder: 'aol',          params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x250 */ 
       { bidder: 'aol',          params: { placement: '4882888', network: '4436.1', server: 'adserver.adtech.de' } }, /* 160x600 */
@@ -153,11 +123,12 @@ var allSizes = [
   //new ad unit block
   {
     code: 'middlerightSlot', //second right hand side 300x600
-    mediaTypes: {
-        banner: {
-            sizes: allSizes
-        }
-    },
+    sizes: gpt_config.bigbox_sizes,
+    sizeMapping: [  //new!
+      { minWidth : 1024, sizes : gpt_config.bigbox_sizes },   //if device screen width is greater than 1024, use these sizes//
+      { minWidth : 480, sizes : gpt_config.bigbox_sizes_tablet },  //if device screen width is < 1024 && > 480, use these sizes//
+      { minWidth : 0, sizes : gpt_config.bigbox_sizes_mobile }  //if device screen width is < 480 && > 0, use these sizes//
+             ],
     bids: [
       { bidder: 'aol',          params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x250 */ 
       { bidder: 'aol',          params: { placement: '4882888', network: '4436.1', server: 'adserver.adtech.de' } }, /* 160x600 */
@@ -202,11 +173,12 @@ var allSizes = [
   //new ad unit block
   {
     code: 'bottomleftSlot',  // first left hand side 300x600
-    mediaTypes: {
-        banner: {
-            sizes: allSizes
-        }
-    },
+    sizes: gpt_config.bigbox_sizes,
+    sizeMapping: [  //new!
+      { minWidth : 1024, sizes : gpt_config.bigbox_sizes },   //if device screen width is greater than 1024, use these sizes//
+      { minWidth : 480, sizes : gpt_config.bigbox_sizes_tablet },  //if device screen width is < 1024 && > 480, use these sizes//
+      { minWidth : 0, sizes : gpt_config.bigbox_sizes_mobile }  //if device screen width is < 480 && > 0, use these sizes//
+             ],
     bids: [
       { bidder: 'aol',          params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x250 */ 
       { bidder: 'aol',          params: { placement: '4882888', network: '4436.1', server: 'adserver.adtech.de' } }, /* 160x600 */
@@ -251,11 +223,7 @@ var allSizes = [
   //new ad unit block
   {
     code: 'topSlot',
-    mediaTypes: {
-        banner: {
-            sizes: allSizes
-        }
-    },
+    sizes: gpt_config.leaderboard_sizes,
     bids: [
       { bidder: 'aol',          params: { placement: '4882887', network: '4436.1', server: 'adserver.adtech.de' } }, /* 728x90 */
       { bidder: 'aol',          params: { placement: '6507337', network: '4436.1', server: 'adserver.adtech.de' } }, /* 970x250 */
@@ -348,25 +316,12 @@ var allSizes = [
               allowAuctionWithoutConsent: true
             },
     	  publisherDomain: "golfwrx.com",
-    	  bidderTimeout: 1800,
+    	  bidderTimeout: 1200,
     	  "currency": {
    	       "adServerCurrency": "GBP",
    	       "granularityMultiplier": 1
-   	    },
-   	 sizeConfig: [{
-         'mediaQuery': '(min-width: 1025px)',
-         'sizesSupported': desktopSizes,
-         'labels': ['desktop']
-     }, {
-         'mediaQuery': '(min-width: 768px) and (max-width: 1024px)',
-         'sizesSupported': tabletSizes,
-         'labels': ['tablet']
-     }, {
-         'mediaQuery': '(min-width: 320px) and (max-width: 812px)',
-         'sizesSupported': phoneSizes,
-         'labels': ['phone']
-     }]
-      	  
+   	    }
+    		  
       });
       
       pbjs.requestBids({
