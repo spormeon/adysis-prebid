@@ -223,22 +223,33 @@ apstag.fetchBids({
   //new ad unit block
   {
     code: 'topSlot',
-    sizes: gpt_config.leaderboard_sizes,
+    mediaTypes: {
+        banner: {
+            sizes: [
+             [970, 250],
+   	         [970, 90],
+   	         [728, 90],
+   	         [468, 60],
+   	         [320, 50],
+   	         [234, 60]
+            ]
+        }
+    },
     bids: [
-      { bidder: 'aol',          params: { placement: '4882887', network: '4436.1', server: 'adserver.adtech.de' } }, /* 728x90 */
-      { bidder: 'aol',          params: { placement: '6507337', network: '4436.1', server: 'adserver.adtech.de' } }, /* 970x250 */
-      { bidder: 'aol',          params: { placement: '6507338', network: '4436.1', server: 'adserver.adtech.de' } }, /* 970x90 */
-      { bidder: 'aol',          params: { placement: '6507341', network: '4436.1', server: 'adserver.adtech.de' } }, /* 468x60 */
-      { bidder: 'aol',          params: { placement: '6507340', network: '4436.1', server: 'adserver.adtech.de' } }, /* 320x50 */
+      { bidder: 'aol',    labelAny: ["desktop", "tablet", "phone"],      params: { placement: '4882887', network: '4436.1', server: 'adserver.adtech.de' } }, /* 728x90 */
+      { bidder: 'aol',    labelAny: ["desktop", "tablet", "phone"],      params: { placement: '6507337', network: '4436.1', server: 'adserver.adtech.de' } }, /* 970x250 */
+      { bidder: 'aol',    labelAny: ["desktop", "tablet", "phone"],      params: { placement: '6507338', network: '4436.1', server: 'adserver.adtech.de' } }, /* 970x90 */
+      { bidder: 'aol',    labelAny: ["desktop", "tablet", "phone"],      params: { placement: '6507341', network: '4436.1', server: 'adserver.adtech.de' } }, /* 468x60 */
+      { bidder: 'aol',    labelAny: ["desktop", "tablet", "phone"],      params: { placement: '6507340', network: '4436.1', server: 'adserver.adtech.de' } }, /* 320x50 */
       /* { bidder: 'featureforward', params: {pubId:28,siteId:6 ,placementId: '0' }}, */
       /* { bidder: 'featureforward', params: {pubId:28,siteId:6 ,placementId: '1' }}, */
       /* { bidder: 'featureforward', params: {pubId:28,siteId:6 ,placementId: '2' }}, */
       /* { bidder: 'featureforward', params: {pubId:28,siteId:6 ,placementId: '3' }}, */
       /* { bidder: 'atomx',        params: { id: '3808200'} }, */ /* does all sizes, not working at moment */
-      { bidder: 'appnexus',     params: { placementId: '11971351' } }, /* one placementId for all sizes */
-      { bidder: 'rhythmone',    params: { placementId: '76184' } }, /* one placementId for all sizes */
-      { bidder: 'brealtime',    params: { placementId: '12002322' } },  /* 970x250 */
-      { bidder: 'brealtime',    params: { placementId: '12002329' } },  /* 970x90 */
+      { bidder: 'appnexus',   labelAny: ["desktop", "tablet", "phone"],  params: { placementId: '11971351' } }, /* one placementId for all sizes */
+      { bidder: 'rhythmone',  labelAny: ["desktop", "tablet", "phone"],  params: { placementId: '76184' } }, /* one placementId for all sizes */
+      { bidder: 'brealtime',  labelAny: ["desktop", "tablet", "phone"],  params: { placementId: '12002322' } },  /* 970x250 */
+      { bidder: 'brealtime',  labelAny: ["desktop", "tablet", "phone"],  params: { placementId: '12002329' } },  /* 970x90 */
       { bidder: 'brealtime',    params: { placementId: '12002330' } },  /* 728x90 */
       { bidder: 'brealtime',    params: { placementId: '12002331' } },  /* 468x60 */
       { bidder: 'brealtime',    params: { placementId: '12002333' } },  /* 320x50 */
@@ -324,23 +335,37 @@ apstag.fetchBids({
    	 sizeConfig: [{
          'mediaQuery': '(min-width: 1200px)',
          'sizesSupported': [
-             [970, 90],
-             [728, 90],
-             [300, 250]
+        	 [970, 250],
+	         [970, 90],
+	         [728, 90],
+	         [468, 60],
+	         [320, 50],
+	         [234, 60],
+	         [300, 600],
+	         [300, 250],
+	         [160, 600],
+	         [120, 600],
+	         [250, 250]
          ],
          'labels': ['desktop']
      }, {
          'mediaQuery': '(min-width: 768px) and (max-width: 1199px)',
          'sizesSupported': [
              [728, 90],
-             [300, 250]
+             [468, 60],
+             [320, 50],
+             [234, 60],
+             [300, 250],
+             [250, 250]
          ],
          'labels': ['tablet']
      }, {
          'mediaQuery': '(min-width: 0px)',
          'sizesSupported': [
              [300, 250],
-             [300, 100]
+             [250, 250],
+             [320, 50],
+             [234, 60]
          ],
          'labels': ['phone']
      }]
