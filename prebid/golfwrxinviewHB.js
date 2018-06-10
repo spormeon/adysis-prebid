@@ -228,7 +228,7 @@ apstag.fetchBids({
       { bidder: 'aol',    labelAny: ['desktop', 'tablet'],      params: { placement: '4882887', network: '4436.1', server: 'adserver.adtech.de' } }, /* 728x90 */
       { bidder: 'aol',    labelAny: ['desktop'],      params: { placement: '6507337', network: '4436.1', server: 'adserver.adtech.de' } }, /* 970x250 */
       { bidder: 'aol',    labelAny: ['desktop'],      params: { placement: '6507338', network: '4436.1', server: 'adserver.adtech.de' } }, /* 970x90 */
-      { bidder: 'aol',    labelAny: ['desktop', 'tablet', 'phone'],      params: { placement: '6507341', network: '4436.1', server: 'adserver.adtech.de' } }, /* 468x60 */
+      { bidder: 'aol',    labelAny: ['desktop', 'tablet'],      params: { placement: '6507341', network: '4436.1', server: 'adserver.adtech.de' } }, /* 468x60 */
       { bidder: 'aol',    labelAny: ['desktop', 'tablet', 'phone'],      params: { placement: '6507340', network: '4436.1', server: 'adserver.adtech.de' } }, /* 320x50 */
       /* { bidder: 'featureforward', params: {pubId:28,siteId:6 ,placementId: '0' }}, */
       /* { bidder: 'featureforward', params: {pubId:28,siteId:6 ,placementId: '1' }}, */
@@ -239,19 +239,19 @@ apstag.fetchBids({
       { bidder: 'rhythmone',  labelAny: ['desktop', 'tablet', 'phone'],  params: { placementId: '76184' } }, /* one placementId for all sizes */
       { bidder: 'brealtime',  labelAny: ['desktop'],  params: { placementId: '12002322' } },  /* 970x250 */
       { bidder: 'brealtime',  labelAny: ['desktop'],  params: { placementId: '12002329' } },  /* 970x90 */
-      { bidder: 'brealtime',    params: { placementId: '12002330' } },  /* 728x90 */
-      { bidder: 'brealtime',    params: { placementId: '12002331' } },  /* 468x60 */
-      { bidder: 'brealtime',    params: { placementId: '12002333' } },  /* 320x50 */
-      { bidder: 'conversant',   params: { site_id: '118233' } },  /* 728x90 */ 
-      { bidder: 'districtmDMX', params: { id: 171412 } }, /* 970x250 - 970x90 - 728x90 - 468x60 */
-      { bidder: 'pulsepoint',   params: { cf: '970X250', cp: 561446, ct: 602634 } },
-      { bidder: 'pulsepoint',   params: { cf: '970X90', cp: 561446, ct: 602642 } },
-      { bidder: 'pulsepoint',   params: { cf: '728X90', cp: 561446, ct: 602643 } },
-      { bidder: 'pulsepoint',   params: { cf: '320X50', cp: 561446, ct: 602644 } },
+      { bidder: 'brealtime',  labelAny: ['desktop', 'tablet'], params: { placementId: '12002330' } },  /* 728x90 */
+      { bidder: 'brealtime',  labelAny: ['desktop', 'tablet'], params: { placementId: '12002331' } },  /* 468x60 */
+      { bidder: 'brealtime',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '12002333' } },  /* 320x50 */
+      { bidder: 'conversant', labelAny: ['desktop', 'tablet'], params: { site_id: '118233' } },  /* 728x90 */ 
+      { bidder: 'districtmDMX', labelAny: ['desktop', 'tablet', 'phone'], params: { id: 171412 } }, /* 970x250 - 970x90 - 728x90 - 468x60 */
+      { bidder: 'pulsepoint',   labelAny: ['desktop'], params: { cf: '970X250', cp: 561446, ct: 602634 } },
+      { bidder: 'pulsepoint',   labelAny: ['desktop'], params: { cf: '970X90', cp: 561446, ct: 602642 } },
+      { bidder: 'pulsepoint',   labelAny: ['desktop', 'tablet'], params: { cf: '728X90', cp: 561446, ct: 602643 } },
+      { bidder: 'pulsepoint',   labelAny: ['desktop', 'tablet', 'phone'], params: { cf: '320X50', cp: 561446, ct: 602644 } },
       /* { bidder: 'sekindoapn',   params: { placementId: '11968754' } }, */ /* 970x250 */
       /* { bidder: 'sonobi',       params: { ad_unit: '/1001824/prebid_test2', dom_id: 'div-gpt-ad-1503393253852-1', floor: 0.5 } },  */ /* does all sizes, different sort of setup */ 
-      { bidder: 'sovrn',        params: { tagid: '504162' } }, /* 970x250 */
-      { bidder: 'sovrn',        params: { tagid: '504165' } } /* 728x90 */
+      { bidder: 'sovrn',        labelAny: ['desktop'], params: { tagid: '504162' } }, /* 970x250 */
+      { bidder: 'sovrn',        labelAny: ['desktop', 'tablet'], params: { tagid: '504165' } } /* 728x90 */
       /* { bidder: 'huddledmasses',params: { placement_id: 6545 } },  */ /* 728x90 */
       /* { bidder: 'smartyads',    params: { banner_id: 6379 } }, */ /*728x90*/
       /* { bidder: 'vertoz',       params: { placementId:'VZ-HB-Y968967V15GC66'} }, */ /* 970x250 */
