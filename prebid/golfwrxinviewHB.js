@@ -283,7 +283,7 @@ apstag.fetchBids({
       var pbjsEl = document.createElement("script");
       pbjsEl.type = "text/javascript";
       pbjsEl.async = true;
-      pbjsEl.src = "https://d3s34vlfe7g7ew.cloudfront.net/prebid_switch_240518.js";
+      pbjsEl.src = "https://acdn.adnxs.com/prebid/not-for-prod/1/prebid.js";
       var pbjsTargetEl = document.getElementsByTagName("head")[0];
       pbjsTargetEl.insertBefore(pbjsEl, pbjsTargetEl.firstChild);
   })();
@@ -319,7 +319,8 @@ apstag.fetchBids({
     	  bidderTimeout: 1200,
     	  "currency": {
    	       "adServerCurrency": "GBP",
-   	       "granularityMultiplier": 1
+   	       "granularityMultiplier": 1,
+   	       "conversionRateFile": "https://currency.prebid.org/latest.json",
    	    },
    	 sizeConfig: [{
          mediaQuery: '(min-width: 1200px)',
