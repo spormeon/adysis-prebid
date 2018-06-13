@@ -54,6 +54,7 @@ apstag.fetchBids({
   
   var PREBID_TIMEOUT = 5000;
      
+  
   var gpt_config = {
     prebid_timeout: 3000, //left for reference but not using right now...
     default_gbp_rate: 0.77, // not being used
