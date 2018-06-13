@@ -283,7 +283,7 @@ apstag.fetchBids({
       var pbjsEl = document.createElement("script");
       pbjsEl.type = "text/javascript";
       pbjsEl.async = true;
-      pbjsEl.src = "//acdn.adnxs.com/prebid/not-for-prod/1/prebid.js";
+      pbjsEl.src = "//d3s34vlfe7g7ew.cloudfront.net/switchprebid.js";
       var pbjsTargetEl = document.getElementsByTagName("head")[0];
       pbjsTargetEl.insertBefore(pbjsEl, pbjsTargetEl.firstChild);
   })();
@@ -321,7 +321,7 @@ apstag.fetchBids({
               accountId : 'e31f627f-53a3-4288-9979-482d3c6ffc76',
               enabled : true, //default value set to false
               bidders : ['appnexus', 'sovrn', 'conversant', 'pulsepoint'],
-              timeout : 4000, //default value is 1000
+              timeout : 3000, //default value is 1000
               adapter : 'prebidServer', //if we have any other s2s adapter, default value is s2s
               endpoint : 'https://prebid.adnxs.com/pbs/v1/auction?url_override=http%3A%2F%2Fwww.golfwrx.com'
             },
