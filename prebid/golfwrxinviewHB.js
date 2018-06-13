@@ -317,6 +317,14 @@ apstag.fetchBids({
             },
     	  publisherDomain: "golfwrx.com",
     	  bidderTimeout: 4000,
+    	  s2sConfig : {
+              accountId : 'e31f627f-53a3-4288-9979-482d3c6ffc76',
+              enabled : true, //default value set to false
+              bidders : ['appnexus'],
+              timeout : 1000, //default value is 1000
+              adapter : 'prebidServer', //if we have any other s2s adapter, default value is s2s
+              endpoint : 'https://prebid.adnxs.com/pbs/v1/auction?url_override=http%3A%2F%2Fwww.golfwrx.com'
+            },
     	  "currency": {
    	       "adServerCurrency": "GBP",
    	       "granularityMultiplier": 1,
