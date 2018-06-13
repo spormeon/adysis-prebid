@@ -309,26 +309,30 @@ apstag.fetchBids({
       // pbjs.enableSendAllBids();
       
       pbjs.setConfig({
-    	  
     	  consentManagement: {
               cmpApi: 'iab',
               timeout: 5000,
               allowAuctionWithoutConsent: true
             },
-    	  publisherDomain: "golfwrx.com",
+          debug: true,
+          enableSendAllBids: false, // Default will be `true` as of 1.0
+          bidderSequence: 'random', // Default is random
+    	  publisherDomain: 'golfwrx.com',
     	  bidderTimeout: 4000,
+    	  cache: {url: 'https://prebid.adnxs.com/pbc/v1/cache'},
     	  s2sConfig : {
               accountId : 'e31f627f-53a3-4288-9979-482d3c6ffc76',
               enabled : true, //default value set to false
               bidders : ['appnexus', 'sovrn', 'conversant', 'pulsepoint'],
-              timeout : 3000, //default value is 1000
+              timeout : 1000, //default value is 1000
               adapter : 'prebidServer', //if we have any other s2s adapter, default value is s2s
-              endpoint : 'https://prebid.adnxs.com/pbs/v1/auction?url_override=http%3A%2F%2Fwww.golfwrx.com'
+              endpoint : 'https://prebid.adnxs.com/pbs/v1/openrtb2/auction?url_override=http%3A%2F%2Fwww.golfwrx.com',
+              syncEndpoint: 'https://prebid.adnxs.com/pbs/v1/cookie_sync',
             },
-    	  "currency": {
-   	       "adServerCurrency": "GBP",
-   	       "granularityMultiplier": 1,
-   	       "conversionRateFile": "https://currency.prebid.org/latest.json",
+    	   currency: {
+   	       'adServerCurrency': "GBP",
+   	       'granularityMultiplier': 1,
+   	       'conversionRateFile': 'https://currency.prebid.org/latest.json',
    	    },
    	 sizeConfig: [{
          mediaQuery: '(min-width: 1200px)',
