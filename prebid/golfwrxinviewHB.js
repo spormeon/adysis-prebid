@@ -52,7 +52,7 @@ apstag.fetchBids({
      });
 }); 
   
-  var PREBID_TIMEOUT = 2000;
+  var PREBID_TIMEOUT = 2500;
      
   var gpt_config = {
     prebid_timeout: 3000, //left for reference but not using right now...
@@ -311,7 +311,7 @@ apstag.fetchBids({
       pbjs.setConfig({
     	  consentManagement: {
               cmpApi: 'iab',
-              timeout: 5000,
+              timeout: 8000,
               allowAuctionWithoutConsent: true
             },
           debug: true,
