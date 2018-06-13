@@ -52,7 +52,7 @@ apstag.fetchBids({
      });
 }); 
   
-  var PREBID_TIMEOUT = 1500;
+  var PREBID_TIMEOUT = 2000;
      
   var gpt_config = {
     prebid_timeout: 3000, //left for reference but not using right now...
