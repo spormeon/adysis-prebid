@@ -283,7 +283,7 @@ apstag.fetchBids({
       var pbjsEl = document.createElement("script");
       pbjsEl.type = "text/javascript";
       pbjsEl.async = true;
-      pbjsEl.src = "https://acdn.adnxs.com/prebid/not-for-prod/1/prebid.js";
+      pbjsEl.src = "//d3s34vlfe7g7ew.cloudfront.net/switchprebid.js";
       var pbjsTargetEl = document.getElementsByTagName("head")[0];
       pbjsTargetEl.insertBefore(pbjsEl, pbjsTargetEl.firstChild);
   })();
