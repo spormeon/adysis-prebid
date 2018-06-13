@@ -326,7 +326,7 @@ apstag.fetchBids({
               bidders : ['appnexus', 'sovrn', 'conversant', 'pulsepoint'],
               timeout : 1000, //default value is 1000
               adapter : 'prebidServer', //if we have any other s2s adapter, default value is s2s
-              endpoint : 'https://prebid.adnxs.com/pbs/v1/openrtb2/auction?url_override=http%3A%2F%2Fwww.golfwrx.com',
+              endpoint : 'https://prebid.adnxs.com/pbs/v1/auction?url_override=http%3A%2F%2Fwww.golfwrx.com',
               syncEndpoint: 'https://prebid.adnxs.com/pbs/v1/cookie_sync',
             },
     	   currency: {
