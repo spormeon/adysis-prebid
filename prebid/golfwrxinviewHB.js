@@ -99,7 +99,9 @@ apstag.fetchBids({
       { bidder: 'pulsepoint',   params: { cf: '300X250', cp: 561446, ct: 602639 } }, /* 300x250 */
       { bidder: 'pulsepoint',   params: { cf: '160X600', cp: 561446, ct: 602640 } }, /* 160x600 */
       { bidder: 'pulsepoint',   params: { cf: '120X600', cp: 561446, ct: 602641 } }, /* 120x600 */
-      { bidder: 'sekindoUM',    params: { spaceId: '87709' } }, /* 300x250 */  
+      { bidder: 'sekindoUM',    params: { spaceId: '87709' } }, /* 300x250 */ 
+      { bidder: 'sekindoUM',    params: { spaceId: '87692' } }, /* 300x600 */
+      { bidder: 'sekindoUM',    params: { spaceId: '87694' } }, /* 160x600 */
       /* { bidder: 'sekindoapn',   params: { placementId: '11968756' } }, */ /* 300x250 */ 
       /* { bidder: 'sekindoapn',   params: { placementId: '11968757' } }, */ /* 160x600 */
       /* { bidder: 'sonobi',       params: { ad_unit: '/1001824/prebid_test1', dom_id: 'div-gpt-ad-1503393253852-0', floor: 0.0 } },  */ /* does all sizes, different sort of setup */
@@ -150,6 +152,9 @@ apstag.fetchBids({
       { bidder: 'pulsepoint',   params: { cf: '300X250', cp: 561446, ct: 602639 } }, /* 300x250 */
       { bidder: 'pulsepoint',   params: { cf: '160X600', cp: 561446, ct: 602640 } }, /* 160x600 */
       { bidder: 'pulsepoint',   params: { cf: '120X600', cp: 561446, ct: 602641 } }, /* 120x600 */
+      { bidder: 'sekindoUM',    params: { spaceId: '87709' } }, /* 300x250 */ 
+      { bidder: 'sekindoUM',    params: { spaceId: '87692' } }, /* 300x600 */
+      { bidder: 'sekindoUM',    params: { spaceId: '87694' } }, /* 160x600 */
       /*{ bidder: 'sekindoapn',   params: { placementId: '11968755' } }, */ /* 300x600 */  
       /* { bidder: 'sekindoapn',   params: { placementId: '11968756' } }, */ /* 300x250 */ 
       /* { bidder: 'sekindoapn',   params: { placementId: '11968757' } }, */ /* 160x600 */
@@ -201,6 +206,9 @@ apstag.fetchBids({
       { bidder: 'pulsepoint',   params: { cf: '300X250', cp: 561446, ct: 602639 } }, /* 300x250 */
       { bidder: 'pulsepoint',   params: { cf: '160X600', cp: 561446, ct: 602640 } }, /* 160x600 */
       { bidder: 'pulsepoint',   params: { cf: '120X600', cp: 561446, ct: 602641 } }, /* 120x600 */
+      { bidder: 'sekindoUM',    params: { spaceId: '87709' } }, /* 300x250 */ 
+      { bidder: 'sekindoUM',    params: { spaceId: '87692' } }, /* 300x600 */
+      { bidder: 'sekindoUM',    params: { spaceId: '87694' } }, /* 160x600 */
       /* { bidder: 'sekindoapn',   params: { placementId: '11968755' } },*/ /* 300x600 */  
       /* { bidder: 'sekindoapn',   params: { placementId: '11968756' } }, */ /* 300x250 */ 
       /* { bidder: 'sekindoapn',   params: { placementId: '11968757' } }, */ /* 160x600 */
@@ -248,6 +256,8 @@ apstag.fetchBids({
       { bidder: 'pulsepoint',   labelAny: ['desktop'], params: { cf: '970X90', cp: 561446, ct: 602642 } },
       { bidder: 'pulsepoint',   labelAny: ['desktop', 'tablet'], params: { cf: '728X90', cp: 561446, ct: 602643 } },
       { bidder: 'pulsepoint',   labelAny: ['desktop', 'tablet', 'phone'], params: { cf: '320X50', cp: 561446, ct: 602644 } },
+      { bidder: 'sekindoUM',    params: { spaceId: '87690' } }, /* 970x250 */ 
+      { bidder: 'sekindoUM',    params: { spaceId: '87691' } }, /* 728x90 */
       /* { bidder: 'sekindoapn',   params: { placementId: '11968754' } }, */ /* 970x250 */
       /* { bidder: 'sonobi',       params: { ad_unit: '/1001824/prebid_test2', dom_id: 'div-gpt-ad-1503393253852-1', floor: 0.5 } },  */ /* does all sizes, different sort of setup */ 
       { bidder: 'sovrn',        labelAny: ['desktop'], params: { tagid: '504162' } }, /* 970x250 */
