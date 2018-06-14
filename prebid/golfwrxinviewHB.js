@@ -257,7 +257,7 @@
       pbjs.setConfig({
     	  consentManagement: {
               cmpApi: 'iab',
-              timeout: 3000,
+              timeout: 5000,
               allowAuctionWithoutConsent: true
             },
           debug: true,
@@ -318,8 +318,8 @@
       pbjs.adserverRequestSent = true;
       googletag.cmd.push(function() {
         pbjs.que.push(function() {
-          pbjs.setTargetingForGPTAsync();
-          googletag.pubads().refresh();
+          pbjs.setTargetingForGPTAsync([slot.getSlotElementId()]);
+          googletag.pubads().refresh([slot]);
         });
       });
     }
