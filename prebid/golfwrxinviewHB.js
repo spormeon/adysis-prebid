@@ -313,16 +313,7 @@
             }
           };
           
-          function initAdserver() {
-      if (pbjs.adserverRequestSent) return;
-      pbjs.adserverRequestSent = true;
-      googletag.cmd.push(function() {
-        pbjs.que.push(function() {
-          pbjs.setTargetingForGPTAsync([slot.getSlotElementId()]);
-          googletag.pubads().refresh([slot]);
-        });
-      });
-    }
+          
     
     setTimeout(function() { initAdserver(); }, PREBID_TIMEOUT);
   
