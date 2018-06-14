@@ -1,4 +1,12 @@
- 
+  //load up prebid.js,  I think we need to load this earlier
+  (function() {
+      var pbjsEl = document.createElement("script");
+      pbjsEl.type = "text/javascript";
+      pbjsEl.async = true;
+      pbjsEl.src = "//d3s34vlfe7g7ew.cloudfront.net/prebid114.js";
+      var pbjsTargetEl = document.getElementsByTagName("head")[0];
+      pbjsTargetEl.insertBefore(pbjsEl, pbjsTargetEl.firstChild);
+  })();
 
 <!-- Prebid Config Section START -->
 
@@ -226,15 +234,7 @@
   var pbjs = pbjs || {};
   pbjs.que = pbjs.que || [];
             
-  //load up prebid.js,  I think we need to load this earlier
-  (function() {
-      var pbjsEl = document.createElement("script");
-      pbjsEl.type = "text/javascript";
-      pbjsEl.async = true;
-      pbjsEl.src = "//d3s34vlfe7g7ew.cloudfront.net/prebid114.js";
-      var pbjsTargetEl = document.getElementsByTagName("head")[0];
-      pbjsTargetEl.insertBefore(pbjsEl, pbjsTargetEl.firstChild);
-  })();
+ 
 
   
 
