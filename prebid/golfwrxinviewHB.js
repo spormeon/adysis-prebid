@@ -57,7 +57,7 @@
       { bidder: 'brealtime',    labelAny: ['desktop'], params: { placementId: '12002336' } },  /* 160x600 */ 
       { bidder: 'brealtime',    labelAny: ['desktop'], params: { placementId: '12002337' } },  /* 120x600 */
       { bidder: 'conversant',   labelAny: ['desktop', 'tablet', 'phone'], params: { site_id: '118233' } },  /* 300x250 */ 
-      { bidder: 'districtmDMX', labelAny: ['desktop', 'tablet', 'phone'], params: { id:171413 } }, /* 300x600 - 300x250 - 160x600 */
+      { bidder: 'districtmDMX', labelAny: ['desktop', 'tablet', 'phone'], params: { placementid: '11937611' } }, /* 300x600 - 300x250 - 160x600 */
       { bidder: 'pulsepoint',   labelAny: ['desktop'], params: { cf: '300X600', cp: 561446, ct: 602638 } }, /* 300x600 */
       { bidder: 'pulsepoint',   labelAny: ['desktop', 'tablet', 'phone'], params: { cf: '300X250', cp: 561446, ct: 602639 } }, /* 300x250 */
       { bidder: 'pulsepoint',   labelAny: ['desktop'], params: { cf: '160X600', cp: 561446, ct: 602640 } }, /* 160x600 */
@@ -116,7 +116,7 @@
       { bidder: 'brealtime',    labelAny: ['desktop'], params: { placementId: '12002336' } },  /* 160x600 */ 
       { bidder: 'brealtime',    labelAny: ['desktop'], params: { placementId: '12002337' } },  /* 120x600 */
       { bidder: 'conversant',   labelAny: ['desktop', 'tablet', 'phone'], params: { site_id: '118233' } },  /* 300x250 */ 
-      { bidder: 'districtmDMX', labelAny: ['desktop', 'tablet', 'phone'], params: { id:171413 } }, /* 300x600 - 300x250 - 160x600 */
+      { bidder: 'districtmDMX', labelAny: ['desktop', 'tablet', 'phone'], params: { placementid: '11937611' } }, /* 300x600 - 300x250 - 160x600 */
       { bidder: 'pulsepoint',   labelAny: ['desktop'], params: { cf: '300X600', cp: 561446, ct: 602638 } }, /* 300x600 */
       { bidder: 'pulsepoint',   labelAny: ['desktop', 'tablet', 'phone'], params: { cf: '300X250', cp: 561446, ct: 602639 } }, /* 300x250 */
       { bidder: 'pulsepoint',   labelAny: ['desktop'], params: { cf: '160X600', cp: 561446, ct: 602640 } }, /* 160x600 */
@@ -175,7 +175,7 @@
       { bidder: 'brealtime',    labelAny: ['desktop'], params: { placementId: '12002336' } },  /* 160x600 */ 
       { bidder: 'brealtime',    labelAny: ['desktop'], params: { placementId: '12002337' } },  /* 120x600 */
       { bidder: 'conversant',   labelAny: ['desktop', 'tablet', 'phone'], params: { site_id: '118233' } },  /* 300x250 */ 
-      { bidder: 'districtmDMX', labelAny: ['desktop', 'tablet', 'phone'], params: { id:171413 } }, /* 300x600 - 300x250 - 160x600 */
+      { bidder: 'districtmDMX', labelAny: ['desktop', 'tablet', 'phone'], params: { placementid: '11937611' } }, /* 300x600 - 300x250 - 160x600 */
       { bidder: 'pulsepoint',   labelAny: ['desktop'], params: { cf: '300X600', cp: 561446, ct: 602638 } }, /* 300x600 */
       { bidder: 'pulsepoint',   labelAny: ['desktop', 'tablet', 'phone'], params: { cf: '300X250', cp: 561446, ct: 602639 } }, /* 300x250 */
       { bidder: 'pulsepoint',   labelAny: ['desktop'], params: { cf: '160X600', cp: 561446, ct: 602640 } }, /* 160x600 */
@@ -236,7 +236,7 @@
       { bidder: 'brealtime',  labelAny: ['desktop', 'tablet'], params: { placementId: '12002331' } },  /* 468x60 */
       { bidder: 'brealtime',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '12002333' } },  /* 320x50 */
       { bidder: 'conversant', labelAny: ['desktop', 'tablet'], params: { site_id: '118233' } },  /* 728x90 */ 
-      { bidder: 'districtmDMX', labelAny: ['desktop', 'tablet', 'phone'], params: { id: 171412 } }, /* 970x250 - 970x90 - 728x90 - 468x60 */
+      { bidder: 'districtmDMX', labelAny: ['desktop', 'tablet', 'phone'], params: { placementid: '11937610' } }, /* 970x250 - 970x90 - 728x90 - 468x60 */
       { bidder: 'pulsepoint',   labelAny: ['desktop'], params: { cf: '970X250', cp: 561446, ct: 602634 } },
       { bidder: 'pulsepoint',   labelAny: ['desktop'], params: { cf: '970X90', cp: 561446, ct: 602642 } },
       { bidder: 'pulsepoint',   labelAny: ['desktop', 'tablet'], params: { cf: '728X90', cp: 561446, ct: 602643 } },
@@ -277,6 +277,7 @@
       pbjs.aliasBidder('appnexus','sekindo');  // alias for bidder
       pbjs.aliasBidder('appnexus','brealtime');  // alias for bidder
       pbjs.aliasBidder('appnexus','springserveAlias2'); // alias for bidder
+      pbjs.aliasBidder('appnexus','districtm'); // alias for bidder
       // pbjs.setPriceGranularity("dense");   // not being used, being done in adserver targeting below, this needs to be tweaked once prices seen more
       pbjs.addAdUnits(adUnits);
       // pbjs.enableSendAllBids();
