@@ -260,7 +260,7 @@
       pbjs.setConfig({
     	  consentManagement: {
               cmpApi: 'iab',
-              timeout: 8000,
+              timeout: 3000,
               allowAuctionWithoutConsent: true
             },
           debug: true,
