@@ -271,19 +271,7 @@ apstag.fetchBids({
   }
   ]; //./adUnits
     
-  // get latest currency exchange rate GBP to USD 
-  function getGBPRate(callback) {
-    var currencyUrl = "http://data.fixer.io/api/latest?access_key=cb0d0d21a8e9759bc7fc3a91f446fe7f&?base=USD";
-    var xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function() {
-      if (xhr.readyState === 4 && xhr.status === 200) {
-        newRate = JSON.parse(xhr.responseText).rates.GBP;
-        callback(newRate);
-      }
-    };
-    xhr.open("GET", currencyUrl, true);
-    xhr.send(null);
-  }
+  
 
   var pbjs = pbjs || {};
   pbjs.que = pbjs.que || [];
@@ -298,10 +286,7 @@ apstag.fetchBids({
       pbjsTargetEl.insertBefore(pbjsEl, pbjsTargetEl.firstChild);
   })();
 
-  getGBPRate(function(newRate) {
-    gpt_config.latest_gbp_rate = newRate;
-    console.log('Latest GBP Rate updated: ', gpt_config.latest_gbp_rate);
-  });
+  
 
 <!-- Prebid Boilerplate Section START. No Need to Edit. -->
 
