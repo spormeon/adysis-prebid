@@ -30,7 +30,7 @@
   var adUnits = [
   //new ad unit block
   {
-    code: 'bottomrightSlot',  // first right hand side 300x600 
+    code: 'bottomrightSlot',
     mediaTypes: {
         banner: {
             sizes: [
@@ -89,7 +89,7 @@
   },
   //new ad unit block
   {
-    code: 'middlerightSlot', //second right hand side 300x600
+    code: 'middlerightSlot',
     mediaTypes: {
         banner: {
             sizes: [
@@ -148,7 +148,7 @@
   },
   //new ad unit block
   {
-    code: 'bottomleftSlot',  // first left hand side 300x600
+    code: 'bottomleftSlot',
     mediaTypes: {
         banner: {
             sizes: [
