@@ -300,15 +300,15 @@
    	       'conversionRateFile': 'https://currency.prebid.org/latest.json',
    	    },
    	 sizeConfig: [{
-         mediaQuery: '(min-width: 1200px)',
+         mediaQuery: '(min-width: 769px)',
          sizesSupported: [[970, 250], [970, 90], [728, 90], [468, 60], [320, 50], [234, 60], [300, 600], [300, 250], [160, 600], [120, 600], [250, 250]],
          labels: ['desktop']
      }, {
-         mediaQuery: '(min-width: 768px) and (max-width: 1199px)',
+         mediaQuery: '(min-width: 500px) and (max-width: 768px)',
          sizesSupported: [[728, 90], [468, 60], [320, 50], [234, 60], [300, 250], [250, 250]],
          labels: ['tablet']
      }, {
-         mediaQuery: '(min-width: 0px)',
+         mediaQuery: '(min-width: 1px) and (max-width: 1px)',
          sizesSupported: [[300, 250], [250, 250], [320, 50], [234, 60]],
          labels: ['phone']
      }]
