@@ -99,9 +99,9 @@ apstag.fetchBids({
       { bidder: 'pulsepoint',   params: { cf: '300X250', cp: 561446, ct: 602639 } }, /* 300x250 */
       { bidder: 'pulsepoint',   params: { cf: '160X600', cp: 561446, ct: 602640 } }, /* 160x600 */
       { bidder: 'pulsepoint',   params: { cf: '120X600', cp: 561446, ct: 602641 } }, /* 120x600 */
-      { bidder: 'sekindoapn',   params: { placementId: '11968755' } }, /* 300x600 */  
-      { bidder: 'sekindoapn',   params: { placementId: '11968756' } }, /* 300x250 */ 
-      { bidder: 'sekindoapn',   params: { placementId: '11968757' } }, /* 160x600 */
+      { bidder: 'sekindoUM',   params: { spaceId: '87709' } }, /* 300x250 */  
+      /* { bidder: 'sekindoapn',   params: { placementId: '11968756' } }, */ /* 300x250 */ 
+      /* { bidder: 'sekindoapn',   params: { placementId: '11968757' } }, */ /* 160x600 */
       /* { bidder: 'sonobi',       params: { ad_unit: '/1001824/prebid_test1', dom_id: 'div-gpt-ad-1503393253852-0', floor: 0.0 } },  */ /* does all sizes, different sort of setup */
       { bidder: 'sovrn',        params: { tagid: '504166' } }, /* 300x600 */
       { bidder: 'sovrn',        params: { tagid: '504164' } }, /* 300x250 */
@@ -150,9 +150,9 @@ apstag.fetchBids({
       { bidder: 'pulsepoint',   params: { cf: '300X250', cp: 561446, ct: 602639 } }, /* 300x250 */
       { bidder: 'pulsepoint',   params: { cf: '160X600', cp: 561446, ct: 602640 } }, /* 160x600 */
       { bidder: 'pulsepoint',   params: { cf: '120X600', cp: 561446, ct: 602641 } }, /* 120x600 */
-      { bidder: 'sekindoapn',   params: { placementId: '11968755' } }, /* 300x600 */  
-      { bidder: 'sekindoapn',   params: { placementId: '11968756' } }, /* 300x250 */ 
-      { bidder: 'sekindoapn',   params: { placementId: '11968757' } }, /* 160x600 */
+      /*{ bidder: 'sekindoapn',   params: { placementId: '11968755' } }, */ /* 300x600 */  
+      /* { bidder: 'sekindoapn',   params: { placementId: '11968756' } }, */ /* 300x250 */ 
+      /* { bidder: 'sekindoapn',   params: { placementId: '11968757' } }, */ /* 160x600 */
       /* { bidder: 'sonobi',       params: { ad_unit: '/1001824/prebid_test1', dom_id: 'div-gpt-ad-1503393253852-0', floor: 0.0 } },  */ /* does all sizes, different sort of setup */
       { bidder: 'sovrn',        params: { tagid: '504166' } }, /* 300x600 */
       { bidder: 'sovrn',        params: { tagid: '504164' } }, /* 300x250 */
@@ -201,9 +201,9 @@ apstag.fetchBids({
       { bidder: 'pulsepoint',   params: { cf: '300X250', cp: 561446, ct: 602639 } }, /* 300x250 */
       { bidder: 'pulsepoint',   params: { cf: '160X600', cp: 561446, ct: 602640 } }, /* 160x600 */
       { bidder: 'pulsepoint',   params: { cf: '120X600', cp: 561446, ct: 602641 } }, /* 120x600 */
-      { bidder: 'sekindoapn',   params: { placementId: '11968755' } }, /* 300x600 */  
-      { bidder: 'sekindoapn',   params: { placementId: '11968756' } }, /* 300x250 */ 
-      { bidder: 'sekindoapn',   params: { placementId: '11968757' } }, /* 160x600 */
+      /* { bidder: 'sekindoapn',   params: { placementId: '11968755' } },*/ /* 300x600 */  
+      /* { bidder: 'sekindoapn',   params: { placementId: '11968756' } }, */ /* 300x250 */ 
+      /* { bidder: 'sekindoapn',   params: { placementId: '11968757' } }, */ /* 160x600 */
       /* { bidder: 'sonobi',       params: { ad_unit: '/1001824/prebid_test1', dom_id: 'div-gpt-ad-1503393253852-0', floor: 0.0 } },  */ /* does all sizes, different sort of setup */
       { bidder: 'sovrn',        params: { tagid: '504166' } }, /* 300x600 */
       { bidder: 'sovrn',        params: { tagid: '504164' } }, /* 300x250 */
@@ -302,7 +302,8 @@ apstag.fetchBids({
     });
 
     pbjs.que.push(function() {
-      pbjs.aliasBidder('appnexus','sekindoapn');  // alias for bidder
+      pbjs.aliasBidder('appnexus','sekindo');  // alias for bidder
+      pbjs.aliasBidder('appnexus','brealtime');  // alias for bidder
       pbjs.aliasBidder('appnexus','springserveAlias2'); // alias for bidder
       // pbjs.setPriceGranularity("dense");   // not being used, being done in adserver targeting below, this needs to be tweaked once prices seen more
       pbjs.addAdUnits(adUnits);
