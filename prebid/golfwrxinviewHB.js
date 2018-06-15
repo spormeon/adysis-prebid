@@ -265,7 +265,7 @@
 	        }
 	    },   
 	    bids: [
-	      { bidder: 'justpremium',    labelAny: ['desktop', 'tablet'],      params: { zone: '50978'} } /* wallpaper, video wallpaper */
+	      { bidder: 'justpremium',    labelAny: ['desktop', 'tablet'],      params: { zone: 50978} } /* wallpaper, video wallpaper */
 	    ] //./bids
 	  }
   ]; //./adUnits
@@ -316,11 +316,11 @@
    	    },
    	 sizeConfig: [{
          mediaQuery: '(min-width: 769px)',
-         sizesSupported: [[970, 250], [970, 90], [728, 90], [468, 60], [320, 50], [234, 60], [300, 600], [300, 250], [160, 600], [120, 600], [250, 250]],
+         sizesSupported: [[970, 250], [970, 90], [728, 90], [468, 60], [320, 50], [234, 60], [300, 600], [300, 250], [160, 600], [120, 600], [250, 250], [1, 1]],
          labels: ['desktop']
      }, {
          mediaQuery: '(min-width: 500px) and (max-width: 768px)',
-         sizesSupported: [[728, 90], [468, 60], [320, 50], [234, 60], [300, 250], [250, 250]],
+         sizesSupported: [[728, 90], [468, 60], [320, 50], [234, 60], [300, 250], [250, 250], [1, 1]],
          labels: ['tablet']
      }, {
          mediaQuery: '(min-width: 1px) and (max-width: 1px)',
