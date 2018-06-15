@@ -270,7 +270,25 @@
 	  }
   ]; //./adUnits
     
-  
+  var videoAdUnit = {
+		    code: 'video',
+		    mediaTypes: {
+		        video: {
+		            context: 'instream',
+		            playerSize: [640, 480]
+		        },
+		    },
+		    bids: [{
+		        bidder: 'appnexus',
+		        params: {
+		            placementId: 11971351,
+		            video: {
+		                skippable: true,
+		                playback_methods: ['auto_play_sound_off']
+		            }
+		        }
+		    }]
+		};
 
   var pbjs = pbjs || {};
   pbjs.que = pbjs.que || [];
@@ -307,7 +325,6 @@
           bidderSequence: 'random', // Default is random
     	  publisherDomain: 'golfwrx.com',
     	  bidderTimeout: 4000,
-    	  cache: {url: 'https://prebid.adnxs.com/pbc/v1/cache'},
     	  pubcid: {expInterval: 525600},
     	   currency: {
    	       'adServerCurrency': "GBP",
@@ -334,7 +351,36 @@
         bidsBackHandler: initAdserver
       });
     });
-       
+    
+    
+    
+    
+    pbjs.que.push(function() {
+        pbjs.addAdUnits(videoAdUnit);
+
+        pbjs.setConfig({
+            /* Or whatever your preferred video cache URL is */
+            cache: {
+                url: 'https://prebid.adnxs.com/pbc/v1/cache'
+            }
+        });
+
+        pbjs.requestBids({
+            bidsBackHandler: function(bids) {
+                var videoUrl = pbjs.adServers.dfp.buildVideoUrl({
+                    adUnit: videoAdUnit,
+                    params: {
+                        iu: '/19968336/prebid_cache_video_adunit'
+                    }
+                });
+                invokeVideoPlayer(videoUrl);
+            }
+        });
+    });
+     
+    
+    
+    
       pbjs.bidderSettings = { 
            aol:               { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.85; } }, // adjust the bid in real time before the auction takes place
            districtmDMX:      { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.90; } }, // adjust the bid in real time before the auction takes place

@@ -642,6 +642,37 @@ var SafeCommentsAjax = {"ajaxurl":"http:\/\/www.golfwrx.com\/wp-admin\/admin-aja
               <div class="ad-reporter-ahytrfg35423"> <!-- div for the chrome extension ads info grabber -->
    <div id="topSlot" style='margin:5px auto;'></div>  
    </div>
+   
+   
+   <div class="example-video-container">
+  <video id="vid1" class="video-js vjs-default-skin vjs-big-play-centered" controls
+    data-setup='{}'
+    width='640'
+    height='480'>
+    <source src="http://vjs.zencdn.net/v/oceans.mp4" type='video/mp4'/>
+    <source src="http://vjs.zencdn.net/v/oceans.webm" type='video/webm'/>
+    <source src="http://vjs.zencdn.net/v/oceans.ogv" type='video/ogg'/>
+  </video>
+</div>
+
+<script>
+  function invokeVideoPlayer(url) {
+    videojs("vid1").ready(function() {
+      this.vastClient({
+        adTagUrl: url,
+        playAdAlways: true,
+        verbosity: 0,
+        vpaidFlashLoaderPath: "https://github.com/MailOnline/videojs-vast-vpaid/blob/RELEASE/bin/VPAIDFlash.swf?raw=true",
+        autoplay: true
+      });
+      this.muted(true);
+      this.play();
+    });
+  }
+</script>
+
+
+
 					    				    </div><!--mvp-leader-wrap-->
 										<div id="mvp-site-main" class="left relative">
 			<header id="mvp-main-head-wrap" class="left relative">
