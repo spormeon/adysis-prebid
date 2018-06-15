@@ -466,7 +466,7 @@
       	        adUnitPath: '/1001824/Golfwrx.com-HB/Golfwrx.com-HB-Skin',
       	        size: gpt_config.skin_sizes,
       	        sizeMapping: 'mappingskinslot',
-      	        timeout: 30000,
+      	        timeout: 45000,
       	      },
     	    },
     	    sizeMappings: {
