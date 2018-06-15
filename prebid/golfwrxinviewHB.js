@@ -24,7 +24,8 @@
     bigbox_sizes_mobile: [[300, 250],[250,250]],
     leaderboard_sizes: [[970, 250],[970, 90],[728, 90],[468,60],[320, 50],[234,60]],
     leaderboard_sizes_tablet: [[728, 90],[468,60],[320, 50],[234,60]],
-    leaderboard_sizes_mobile: [[320, 50],[234,60]]
+    leaderboard_sizes_mobile: [[320, 50],[234,60]],
+    skin_sizes: [[1, 1]]
   }; //./gpt_config
  
   var adUnits = [
@@ -253,7 +254,20 @@
       { bidder: 'vertoz',       labelAny: ['desktop', 'tablet'], params: { placementId:'VZ-HB-P786728VDF5C56'} }  /*7 28x90 */
       /* { bidder: 'springserveAlias2',  params: { placementId: '12463800'} }  */ /* 970x250 - 970x90 - 728x90  */
     ] //./bids
-  }
+  },
+  {
+	    code: 'skinSlot',
+	    mediaTypes: {
+	        banner: {
+	            sizes: [
+	            	[1, 1]
+	            ],
+	        }
+	    },   
+	    bids: [
+	      { bidder: 'justpremium',    labelAny: ['desktop', 'tablet'],      params: { zone: '50978'} } /* wallpaper, video wallpaper */
+	    ] //./bids
+	  }
   ]; //./adUnits
     
   
@@ -448,6 +462,12 @@
     	        sizeMapping: 'mappingbigboxslot',
     	        timeout: 60000,
     	      },
+    	      skinSlot: {
+      	        adUnitPath: '/1001824/Golfwrx.com-HB/Golfwrx.com-HB-Skin',
+      	        size: gpt_config.skin_sizes,
+      	        sizeMapping: 'mappingskinslot',
+      	        timeout: 120000,
+      	      },
     	    },
     	    sizeMappings: {
     	      mappingleaderslot: [
@@ -479,6 +499,27 @@
     	          ]
     	        ],
     	      ],
+    	      mappingskinslot: [
+      	        [
+      	          [1024, 768],
+      	          [
+      	            [1, 1]
+      	          ]
+      	        ],
+      	        [
+      	          [768, 500],
+      	          [
+      	            [1, 1]
+      	          ]
+      	        ],
+      	        [
+      	          [1, 1],
+      	          [
+      	            [320, 50],
+      	            [234, 60]
+      	          ]
+      	        ],
+      	      ],
     	      mappingbigboxslot: [
     	        [
     	          [1024, 768],
