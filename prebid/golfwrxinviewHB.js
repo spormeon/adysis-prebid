@@ -294,17 +294,7 @@
     	  publisherDomain: 'golfwrx.com',
     	  bidderTimeout: 4000,
     	  cache: {url: 'https://prebid.adnxs.com/pbc/v1/cache'},
-    	  s2sConfig: {
-    	      accountId: 'e31f627f-53a3-4288-9979-482d3c6ffc76',
-    	      enabled: true,
-    	      bidders: ['districtm', 'appnexus', 'sovrn', 'pulsepoint', 'conversant'],
-    	      timeout: 1200,
-    	      adapter: 'prebidServer',
-    	      endpoint: 'https://prebid.adnxs.com/pbs/v1/auction',
-    	      syncEndpoint: 'https://prebid.adnxs.com/pbs/v1/cookie_sync',
-              cookieSet: true,
-              cookiesetUrl: 'https://acdn.adnxs.com/cookieset/cs.js'
-    	    },
+    	  
     	   currency: {
    	       'adServerCurrency': "GBP",
    	       'granularityMultiplier': 1,
