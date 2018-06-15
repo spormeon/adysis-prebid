@@ -396,7 +396,7 @@
     	    googletag.pubads().enableSingleRequest();
     	    googletag.pubads().collapseEmptyDivs(true, true);
     	    googletag.pubads().setCentering(true);
-    	    googletag.pubads().disableInitialLoad();
+    	    
     	    googletag.enableServices();
     	    googletag.pubads().addEventListener('impressionViewable', function (event) {
     	      var elementId = event.slot.getSlotElementId();
@@ -428,25 +428,25 @@
     	        adUnitPath: '/1001824/prebid_test2',
     	        size: gpt_config.leaderboard_sizes,
     	        sizeMapping: 'mappingleaderslot',
-    	        timeout: 45000,
+    	        timeout: 60000,
     	      },
     	      middlerightSlot: {
     	        adUnitPath: '/1001824/prebid_test3',
     	        size: gpt_config.bigbox_sizes,
     	        sizeMapping: 'mappingbigboxslot',
-    	        timeout: 45000,
+    	        timeout: 60000,
     	      },
     	      bottomrightSlot: {
     	        adUnitPath: '/1001824/prebid_test1',
     	        size: gpt_config.bigbox_sizes,
     	        sizeMapping: 'mappingbigboxslot',
-    	        timeout: 45000,
+    	        timeout: 60000,
     	      },
     	      bottomleftSlot: {
     	        adUnitPath: '/1001824/prebid_test4',
     	        size: gpt_config.bigbox_sizes,
     	        sizeMapping: 'mappingbigboxslot',
-    	        timeout: 45000,
+    	        timeout: 60000,
     	      },
     	    },
     	    sizeMappings: {
