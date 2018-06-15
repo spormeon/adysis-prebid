@@ -294,7 +294,7 @@
     	  publisherDomain: 'golfwrx.com',
     	  bidderTimeout: 4000,
     	  cache: {url: 'https://prebid.adnxs.com/pbc/v1/cache'},
-    	  
+    	  pubcid: {expInterval: 525600},
     	   currency: {
    	       'adServerCurrency': "GBP",
    	       'granularityMultiplier': 1,
