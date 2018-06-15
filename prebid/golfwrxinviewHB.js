@@ -78,12 +78,12 @@
       { bidder: 'komoona',      labelAny: ['desktop'], params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: 'be3564ac269d63fb992e3b2554e06ada' } },  /* Golfwrx.com _KB 300x600 */
       { bidder: 'komoona',      labelAny: ['desktop', 'tablet', 'phone'], params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: '2d14facbe61621faad0c7b2aa0458cff' } }, /* Golfwrx.com _KB 300x250 */
       { bidder: 'komoona',      labelAny: ['desktop'], params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: '3ef8c7500669dc363bec56f1e5a393f7' } },  /* Golfwrx.com _KB 160x600 */
-      { bidder: 'smartyads',    params: { banner_id: 6368 } }, /* 300x250 */
-      { bidder: 'smartyads',    params: { banner_id: 6383 } }, /* 160x600 */
-      { bidder: 'vertoz',       params: { placementId: 'VZ-HB-F839907VGB86E1'} }, /*300x600*/ 
-      { bidder: 'vertoz',       params: { placementId: 'VZ-HB-M568254V344777'} }, /*300x250*/
-      { bidder: 'vertoz',       params: { placementId: 'VZ-HB-I951082VE249HH'} }, /*160x600*/
-      { bidder: 'vertoz',       params: { placementId: 'VZ-HB-P511170V2009D9'} } /*120x250*/
+      { bidder: 'smartyads',    labelAny: ['desktop', 'tablet', 'phone'], params: { banner_id: 6368 } }, /* 300x250 */
+      { bidder: 'smartyads',    labelAny: ['desktop'], params: { banner_id: 6383 } }, /* 160x600 */
+      { bidder: 'vertoz',       labelAny: ['desktop'], params: { placementId: 'VZ-HB-F839907VGB86E1'} }, /*300x600*/ 
+      { bidder: 'vertoz',       labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: 'VZ-HB-M568254V344777'} }, /*300x250*/
+      { bidder: 'vertoz',       labelAny: ['desktop'], params: { placementId: 'VZ-HB-I951082VE249HH'} }, /*160x600*/
+      { bidder: 'vertoz',       labelAny: ['desktop'], params: { placementId: 'VZ-HB-P511170V2009D9'} } /*120x250*/
       /* { bidder: 'springserveAlias2',  params: { placementId: '12463797'} }  */ /* 300x600 - 300x250 - 160x600 - 120x600 */
     ] //./bids
   },
@@ -137,12 +137,12 @@
       { bidder: 'komoona',      labelAny: ['desktop'], params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: 'be3564ac269d63fb992e3b2554e06ada' } },  /* Golfwrx.com _KB 300x600 */
       { bidder: 'komoona',      labelAny: ['desktop', 'tablet', 'phone'], params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: '2d14facbe61621faad0c7b2aa0458cff' } }, /* Golfwrx.com _KB 300x250 */
       { bidder: 'komoona',      labelAny: ['desktop'], params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: '3ef8c7500669dc363bec56f1e5a393f7' } },  /* Golfwrx.com _KB 160x600 */
-      { bidder: 'smartyads',    params: { banner_id: 6368 } }, /* 300x250 */
-      { bidder: 'smartyads',    params: { banner_id: 6383 } }, /* 160x600 */
-      { bidder: 'vertoz',       params: { placementId: 'VZ-HB-F839907VGB86E1'} }, /*300x600*/ 
-      { bidder: 'vertoz',       params: { placementId: 'VZ-HB-M568254V344777'} }, /*300x250*/
-      { bidder: 'vertoz',       params: { placementId: 'VZ-HB-I951082VE249HH'} }, /*160x600*/
-      { bidder: 'vertoz',       params: { placementId: 'VZ-HB-P511170V2009D9'} }  /*120x250*/
+      { bidder: 'smartyads',    labelAny: ['desktop', 'tablet', 'phone'], params: { banner_id: 6368 } }, /* 300x250 */
+      { bidder: 'smartyads',    labelAny: ['desktop'], params: { banner_id: 6383 } }, /* 160x600 */
+      { bidder: 'vertoz',       labelAny: ['desktop'], params: { placementId: 'VZ-HB-F839907VGB86E1'} }, /*300x600*/ 
+      { bidder: 'vertoz',       labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: 'VZ-HB-M568254V344777'} }, /*300x250*/
+      { bidder: 'vertoz',       labelAny: ['desktop'], params: { placementId: 'VZ-HB-I951082VE249HH'} }, /*160x600*/
+      { bidder: 'vertoz',       labelAny: ['desktop'], params: { placementId: 'VZ-HB-P511170V2009D9'} } /*120x250*/
       /* { bidder: 'springserveAlias2',  params: { placementId: '12463797'} }  */ /* 300x600 - 300x250 - 160x600 - 120x600 */
     ] //./bids
   },
@@ -196,12 +196,12 @@
       { bidder: 'komoona',      labelAny: ['desktop'], params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: 'be3564ac269d63fb992e3b2554e06ada' } },  /* Golfwrx.com _KB 300x600 */
       { bidder: 'komoona',      labelAny: ['desktop', 'tablet', 'phone'], params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: '2d14facbe61621faad0c7b2aa0458cff' } }, /* Golfwrx.com _KB 300x250 */
       { bidder: 'komoona',      labelAny: ['desktop'], params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: '3ef8c7500669dc363bec56f1e5a393f7' } },  /* Golfwrx.com _KB 160x600 */
-      { bidder: 'smartyads',    params: { banner_id: 6368 } }, /* 300x250 */
-      { bidder: 'smartyads',    params: { banner_id: 6383 } }, /* 160x600 */
-      { bidder: 'vertoz',       params: { placementId: 'VZ-HB-F839907VGB86E1'} }, /*300x600*/ 
-      { bidder: 'vertoz',       params: { placementId: 'VZ-HB-M568254V344777'} }, /*300x250*/
-      { bidder: 'vertoz',       params: { placementId: 'VZ-HB-I951082VE249HH'} }, /*160x600*/
-      { bidder: 'vertoz',       params: { placementId: 'VZ-HB-P511170V2009D9'} }  /*120x250*/
+      { bidder: 'smartyads',    labelAny: ['desktop', 'tablet', 'phone'], params: { banner_id: 6368 } }, /* 300x250 */
+      { bidder: 'smartyads',    labelAny: ['desktop'], params: { banner_id: 6383 } }, /* 160x600 */
+      { bidder: 'vertoz',       labelAny: ['desktop'], params: { placementId: 'VZ-HB-F839907VGB86E1'} }, /*300x600*/ 
+      { bidder: 'vertoz',       labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: 'VZ-HB-M568254V344777'} }, /*300x250*/
+      { bidder: 'vertoz',       labelAny: ['desktop'], params: { placementId: 'VZ-HB-I951082VE249HH'} }, /*160x600*/
+      { bidder: 'vertoz',       labelAny: ['desktop'], params: { placementId: 'VZ-HB-P511170V2009D9'} } /*120x250*/
       /* { bidder: 'springserveAlias2',  params: { placementId: '12463797'} }  */ /* 300x600 - 300x250 - 160x600 - 120x600 */
     ] //./bids
   },
@@ -247,10 +247,10 @@
       /* { bidder: 'sonobi',       params: { ad_unit: '/1001824/prebid_test2', dom_id: 'div-gpt-ad-1503393253852-1', floor: 0.5 } },  */ /* does all sizes, different sort of setup */ 
       { bidder: 'sovrn',        labelAny: ['desktop'], params: { tagid: '504162' } }, /* 970x250 */
       { bidder: 'sovrn',        labelAny: ['desktop', 'tablet'], params: { tagid: '504165' } }, /* 728x90 */
-      { bidder: 'huddledmasses', params: { placement_id: 6545 } },  /* 728x90 */
-      { bidder: 'smartyads',    params: { banner_id: 6379 } },  /*728x90*/
-      { bidder: 'vertoz',       params: { placementId:'VZ-HB-Y968967V15GC66'} }, /* 970x250 */
-      { bidder: 'vertoz',       params: { placementId:'VZ-HB-P786728VDF5C56'} }  /*7 28x90 */
+      { bidder: 'huddledmasses', labelAny: ['desktop', 'tablet'], params: { placement_id: 6545 } },  /* 728x90 */
+      { bidder: 'smartyads',    labelAny: ['desktop', 'tablet'], params: { banner_id: 6379 } },  /*728x90*/
+      { bidder: 'vertoz',       labelAny: ['desktop'], params: { placementId:'VZ-HB-Y968967V15GC66'} }, /* 970x250 */
+      { bidder: 'vertoz',       labelAny: ['desktop', 'tablet'], params: { placementId:'VZ-HB-P786728VDF5C56'} }  /*7 28x90 */
       /* { bidder: 'springserveAlias2',  params: { placementId: '12463800'} }  */ /* 970x250 - 970x90 - 728x90  */
     ] //./bids
   }
