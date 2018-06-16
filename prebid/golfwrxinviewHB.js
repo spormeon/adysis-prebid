@@ -31,7 +31,7 @@
   var adUnits = [
   //new ad unit block
   {
-    code: 'bottomrightSlot',
+    code: 'toprightSlot',
     mediaTypes: {
         banner: {
             sizes: [
@@ -149,7 +149,7 @@
   },
   //new ad unit block
   {
-    code: 'bottomleftSlot',
+    code: 'bottomrightSlot',
     mediaTypes: {
         banner: {
             sizes: [
@@ -443,19 +443,19 @@
     	        sizeMapping: 'mappingleaderslot',
     	        timeout: 60000,
     	      },
-    	      middlerightSlot: {
+    	      toprightSlot: {
     	        adUnitPath: '/1001824/prebid_test3',
     	        size: gpt_config.bigbox_sizes,
     	        sizeMapping: 'mappingbigboxslot',
     	        timeout: 60000,
     	      },
-    	      bottomrightSlot: {
+    	      middlerightSlot: {
     	        adUnitPath: '/1001824/prebid_test1',
     	        size: gpt_config.bigbox_sizes,
     	        sizeMapping: 'mappingbigboxslot',
     	        timeout: 60000,
     	      },
-    	      bottomleftSlot: {
+    	      bottomrightSlot: {
     	        adUnitPath: '/1001824/prebid_test4',
     	        size: gpt_config.bigbox_sizes,
     	        sizeMapping: 'mappingbigboxslot',
