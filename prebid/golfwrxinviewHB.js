@@ -265,7 +265,7 @@
 	        }
 	    },   
 	    bids: [
-	      { bidder: 'justpremium',    labelAny: ['desktop', 'tablet'],      params: { zone: '50978'} } /* wallpaper, video wallpaper */
+	      { bidder: 'justpremium',    labelAny: ['desktop', 'tablet'],      params: { zone: 50978, allow: ['wp', 'sa', 'pu', 'pd', 'pa', 'ms', 'mo', 'is', 'as', 'fa', 'fi', 'hi', 'cf']} } /* wallpaper, video wallpaper */
 	    ] //./bids
 	  }
   ]; //./adUnits
@@ -514,8 +514,7 @@
       	        [
       	          [1, 1],
       	          [
-      	            [320, 50],
-      	            [234, 60]
+      	            [1, 1]
       	          ]
       	        ],
       	      ],
