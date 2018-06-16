@@ -208,7 +208,7 @@
   },
   //new ad unit block
   {
-    code: 'leaderSlot',
+    code: 'topleaderSlot',
     mediaTypes: {
         banner: {
             sizes: [
@@ -437,7 +437,7 @@
     	    // googletag.pubads().refresh();
     	  })(window.googletag, window.pbjs, {
     	    definitons: {
-    	      leaderSlot: {
+    	      topleaderSlot: {
     	        adUnitPath: '/1001824/prebid_test2',
     	        size: gpt_config.leaderboard_sizes,
     	        sizeMapping: 'mappingleaderslot',
