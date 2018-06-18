@@ -409,7 +409,7 @@
     	    googletag.pubads().enableSingleRequest();
     	    googletag.pubads().collapseEmptyDivs(true, true);
     	    googletag.pubads().setCentering(true);
-    	    
+    	    googletag.pubads().disableInitialLoad();
     	    googletag.enableServices();
     	    googletag.pubads().addEventListener('impressionViewable', function (event) {
     	      var elementId = event.slot.getSlotElementId();
@@ -432,7 +432,7 @@
     	      googletag.display(key);
     	      slots[key] = { slot: slot };
     	    });
-    	     googletag.pubads().refresh();
+    	     //googletag.pubads().refresh();
 
     	    // googletag.pubads().refresh();
     	  })(window.googletag, window.pbjs, {
