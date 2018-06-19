@@ -209,8 +209,7 @@
   //new ad unit block
   {
     code: 'topleaderSlot',
-    mediaTypes: {
-        banner: {
+    
             sizes: [
             	[970, 250],
                 [970, 90],
@@ -219,8 +218,7 @@
                 [234, 60],
                 [320, 50]
             ],
-        }
-    },   
+        
     bids: [
       { bidder: 'aol',    labelAny: ['desktop', 'tablet'],      params: { placement: '4882887', network: '4436.1', server: 'adserver.adtech.de' } }, /* 728x90 */
       { bidder: 'aol',    labelAny: ['desktop'],      params: { placement: '6507337', network: '4436.1', server: 'adserver.adtech.de' } }, /* 970x250 */
