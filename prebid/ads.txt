@@ -103,3 +103,19 @@ districtm.io, 101307, RESELLER
 appnexus.com, 1908, RESELLER, f5ab79cb980f11d1
 google.com, pub-9685734445476814, RESELLER, f08c47fec0942fa0
 appnexus.com, 7944, RESELLER, f5ab79cb980f11d1
+<-- justpremium -->
+openx.com, 539515125, RESELLER, 6a698e2ec38604c6
+improvedigital.com, 185, RESELLER
+spotxchange.com, 108933, RESELLER, 7842df1d2fe2db34
+appnexus.com, 7118, RESELLER
+openx.com, 537118056, RESELLER, 6a698e2ec38604c6     #ME
+openx.com, 537117497, RESELLER, 6a698e2ec38604c6     #ES
+openx.com, 537117297, RESELLER, 6a698e2ec38604c6     #DE
+openx.com, 537117145, RESELLER, 6a698e2ec38604c6     #US
+openx.com, 537116751, RESELLER, 6a698e2ec38604c6     #UK
+openx.com, 537116744, RESELLER, 6a698e2ec38604c6     #NL
+openx.com, 537120117, RESELLER, 6a698e2ec38604c6     #AU
+improvedigital.com, 185, RESELLER
+spotxchange.com, 108933, RESELLER, 7842df1d2fe2db34
+appnexus.com, 7118, RESELLER
+
