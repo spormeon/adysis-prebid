@@ -292,7 +292,7 @@
             },
             s2sConfig: {
                 accountId: 'e31f627f-53a3-4288-9979-482d3c6ffc76',
-                bidders: ['appnexus', 'conversant', 'pulsepoint', 'sovrn'],
+                bidders: ['appnexus', 'conversant', 'pulsepoint', 'sovrn', 'districtm', 'brealtime'],
                 defaultVendor: 'appnexus'
             },
             userSync: {
