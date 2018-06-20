@@ -211,7 +211,6 @@
   //new ad unit block
   {
     code: 'topleaderSlot',
-    
             sizes: [
             	[970, 250],
                 [970, 90],
@@ -220,7 +219,6 @@
                 [234, 60],
                 [320, 50]
             ],
-        
     bids: [
       { bidder: 'aol',    labelAny: ['desktop', 'tablet'],      params: { placement: '4882887', network: '4436.1', server: 'adserver.adtech.de' } }, /* 728x90 */
       { bidder: 'aol',    labelAny: ['desktop'],      params: { placement: '6507337', network: '4436.1', server: 'adserver.adtech.de' } }, /* 970x250 */
@@ -265,14 +263,9 @@
 	  }
   ]; //./adUnits
     
-  
-
   var pbjs = pbjs || {};
   pbjs.que = pbjs.que || [];
             
- 
-
-  
 
 <!-- Prebid Boilerplate Section START. No Need to Edit. -->
 
@@ -439,31 +432,31 @@
     	        adUnitPath: '/1001824/prebid_test2',
     	        size: gpt_config.leaderboard_sizes,
     	        sizeMapping: 'mappingleaderslot',
-    	        timeout: 60000,
+    	        timeout: 55000,
     	      },
     	      toprightSlot: {
     	        adUnitPath: '/1001824/prebid_test3',
     	        size: gpt_config.bigbox_sizes,
     	        sizeMapping: 'mappingbigboxslot',
-    	        timeout: 60000,
+    	        timeout: 55000,
     	      },
     	      middlerightSlot: {
     	        adUnitPath: '/1001824/prebid_test1',
     	        size: gpt_config.bigbox_sizes,
     	        sizeMapping: 'mappingbigboxslot',
-    	        timeout: 60000,
+    	        timeout: 55000,
     	      },
     	      bottomrightSlot: {
     	        adUnitPath: '/1001824/prebid_test4',
     	        size: gpt_config.bigbox_sizes,
     	        sizeMapping: 'mappingbigboxslot',
-    	        timeout: 60000,
+    	        timeout: 55000,
     	      },
     	      skinSlot: {
       	        adUnitPath: '/1001824/Golfwrx.com-HB/Golfwrx.com-HB-Skin',
       	        size: gpt_config.skin_sizes,
       	        sizeMapping: 'mappingskinslot',
-      	        timeout: 45000,
+      	        timeout: 60000,
       	      },
     	    },
     	    sizeMappings: {
