@@ -81,3 +81,25 @@ districtm.io, 100962, RESELLER #display
 appnexus.com, 1908, RESELLER, f5ab79cb980f11d1 #display
 <-- Ad exchange -->
 google.com, pub-2802445174821308, RESELLER, f08c47fec0942fa0
+<-- Adsparc -->
+appnexus.com, 2703, RESELLER
+pubmatic.com, 156049, RESELLER
+adtech.com, 4520, RESELLER
+aolcloud.net, 4520, RESELLER
+Sovrn.com, 228482, RESELLER, fafdf38b16bf6b2b
+Lijit.com, 228482, RESELLER, fafdf38b16bf6b2b
+gumgum.com, 11645, RESELLER, ffdef49475d318a9
+openx.com, 537120960, RESELLER
+openx.com, 83499, RESELLER
+openx.com, 538959099, RESELLER
+pubmatic.com, 137711, RESELLER
+pubmatic.com, 156212, RESELLER
+pubmatic.com, 62483, RESELLER
+contextweb.com, 558511, RESELLER
+EMXDGT.com, 440, RESELLER, 1e1d41537f7cad7f
+Appnexus.com, 1356, RESELLER, f5ab79cb980f11d1
+Google.com, pub-5995202563537249, RESELLER, f08c47fec0942fa0
+districtm.io, 101307, RESELLER
+appnexus.com, 1908, RESELLER, f5ab79cb980f11d1
+google.com, pub-9685734445476814, RESELLER, f08c47fec0942fa0
+appnexus.com, 7944, RESELLER, f5ab79cb980f11d1
