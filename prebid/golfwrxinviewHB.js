@@ -290,6 +290,11 @@
               timeout: 5000,
               allowAuctionWithoutConsent: true
             },
+            s2sConfig: {
+                accountId: 'e31f627f-53a3-4288-9979-482d3c6ffc76',
+                bidders: ['appnexus', 'conversant', 'pulsepoint', 'sovrn'],
+                defaultVendor: 'appnexus'
+            },
             userSync: {
             	iframeEnabled: true,
             	syncsPerBidder: 3, // and no more than 3 syncs at a time
