@@ -295,6 +295,7 @@
             	syncsPerBidder: 3, // and no more than 3 syncs at a time
                 syncDelay: 5000, // 6 seconds after the auction
             	},
+          cookieSyncDelay: 100,
           debug: true,
           enableSendAllBids: false, // Default will be `true` as of 1.0
           bidderSequence: 'random', // Default is random
