@@ -295,7 +295,7 @@
                 bidders: ['appnexus', 'conversant', 'pulsepoint', 'sovrn', 'districtm', 'brealtime'],
                 timeout: 1300,
                 adapter: 'prebidServer',
-                endpoint: 'https://prebid.adnxs.com/pbs/v1/openrtb2/auction',
+                endpoint: 'https://prebid.adnxs.com/pbs/v1/auction',
                 syncEndpoint: 'https://prebid.adnxs.com/pbs/v1/cookie_sync',
                 cookieSet: true,
                 cookiesetUrl: 'https://acdn.adnxs.com/cookieset/cs.js',
