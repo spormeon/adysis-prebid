@@ -277,8 +277,6 @@
               timeout: 5000,
               allowAuctionWithoutConsent: true
             },
-            
-          cookieSyncDelay: 100,
           debug: true,
           enableSendAllBids: false, // Default will be `true` as of 1.0
           bidderSequence: 'random', // Default is random
