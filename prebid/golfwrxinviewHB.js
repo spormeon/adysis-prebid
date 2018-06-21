@@ -32,8 +32,6 @@
   //new ad unit block
   {
     code: 'toprightSlot',
-    mediaTypes: {
-        banner: {
             sizes: [
             	[300, 600],
                 [300, 250],
@@ -41,8 +39,6 @@
                 [160, 600],
                 [120, 600]
             ],
-        }
-    },
     bids: [
       { bidder: 'aol',          labelAny: ['desktop', 'tablet', 'phone'], params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x250 */ 
       { bidder: 'aol',          labelAny: ['desktop'], params: { placement: '4882888', network: '4436.1', server: 'adserver.adtech.de' } }, /* 160x600 */
@@ -91,8 +87,6 @@
   //new ad unit block
   {
     code: 'middlerightSlot',
-    mediaTypes: {
-        banner: {
             sizes: [
             	[300, 600],
                 [300, 250],
@@ -100,8 +94,6 @@
                 [160, 600],
                 [120, 600]
             ],
-        }
-    },
     bids: [
       { bidder: 'aol',          labelAny: ['desktop', 'tablet', 'phone'], params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x250 */ 
       { bidder: 'aol',          labelAny: ['desktop'], params: { placement: '4882888', network: '4436.1', server: 'adserver.adtech.de' } }, /* 160x600 */
@@ -151,8 +143,6 @@
   //new ad unit block
   {
     code: 'bottomrightSlot',
-    mediaTypes: {
-        banner: {
             sizes: [
             	[300, 600],
                 [300, 250],
@@ -160,8 +150,6 @@
                 [160, 600],
                 [120, 600]
             ],
-        }
-    },
     bids: [
       { bidder: 'aol',          labelAny: ['desktop', 'tablet', 'phone'], params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x250 */ 
       { bidder: 'aol',          labelAny: ['desktop'], params: { placement: '4882888', network: '4436.1', server: 'adserver.adtech.de' } }, /* 160x600 */
