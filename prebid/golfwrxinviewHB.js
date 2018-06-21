@@ -298,7 +298,14 @@
                 endpoint: 'https://prebid.adnxs.com/pbs/v1/openrtb2/auction',
                 syncEndpoint: 'https://prebid.adnxs.com/pbs/v1/cookie_sync',
                 cookieSet: true,
-                cookiesetUrl: 'https://acdn.adnxs.com/cookieset/cs.js'
+                cookiesetUrl: 'https://acdn.adnxs.com/cookieset/cs.js',
+                testing: true,
+                bidderControl: {
+                    "appnexus": {
+                        bidSource: {server: 90, client:10},
+                        includeSourceKvp: true
+                    }
+                }
             },
             userSync: {
             	iframeEnabled: true,
