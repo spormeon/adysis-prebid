@@ -288,7 +288,12 @@ DOMReady(function () {
   },
   {
 	    code: 'skinSlot',
-	    sizes: [[1, 1]], 
+	    mediaTypes: {
+	        banner: {
+	            sizes: [
+	            	[1, 1]
+	            ],
+	        } 
 	    bids: [
 	      { bidder: 'justpremium', labelAny: ['desktop', 'tablet'], params: { zone: '50978', allow: ['wp', 'sa', 'pu', 'pd', 'pa', 'ms', 'mo', 'is', 'as', 'fa', 'fi', 'hi', 'cf'] } } /* wallpaper, video wallpaper */
 	    ] //./bids
