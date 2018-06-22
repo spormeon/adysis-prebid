@@ -1,9 +1,12 @@
+
+
+
 // ASSERTIVE ANALYTICS SETTINGS - Version: 1.4.0
 var assertive_entityId = 'eE88aE2HtwKnXikcL';
 var assertive_debug = 0; // append the query string 'assertiveYield=debug' or add this local storage entry 'localStorage.setItem("assertiveYield", "debug")' to enable dynamically
 var assertive_sampleRate = 1; // 1 = 100%, 0.2 = 20%...
 
-var assertive_timeout = null;
+var assertive_timeout = 1500;
 var assertive_layout = null;
 var assertive_userState = null;
 
@@ -37,7 +40,7 @@ DOMReady(function () {
 
 <!-- Prebid Config Section START -->
 
-  var PREBID_TIMEOUT = 1500;
+  
      
   var gpt_config = {
     prebid_timeout: 3000, //left for reference but not using right now...
