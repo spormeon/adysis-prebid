@@ -111,9 +111,9 @@ DOMReady(function () {
       { bidder: 'vertoz',       labelAny: ['desktop'], params: { placementId: 'VZ-HB-F839907VGB86E1'} }, /*300x600*/ 
       { bidder: 'vertoz',       labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: 'VZ-HB-M568254V344777'} }, /*300x250*/
       { bidder: 'vertoz',       labelAny: ['desktop'], params: { placementId: 'VZ-HB-I951082VE249HH'} }, /*160x600*/
-      { bidder: 'vertoz',       labelAny: ['desktop'], params: { placementId: 'VZ-HB-P511170V2009D9'} } /*120x250*/
+      { bidder: 'vertoz',       labelAny: ['desktop'], params: { placementId: 'VZ-HB-P511170V2009D9'} }, /*120x250*/
       /* { bidder: 'springserveAlias2',  params: { placementId: '12463797'} }  */ /* 300x600 - 300x250 - 160x600 - 120x600 */
-      /* { bidder: 'adsparc',      labelAny: ['desktop', 'tablet', 'phone'], params: { networkId: '9969', siteId: '1019801'} } */ /*one placementId for all sizes*/
+      { bidder: 'adsparc',      labelAny: ['desktop', 'tablet', 'phone'], params: { networkId: '9969', siteId: '1019801'} } /*one placementId for all sizes*/
     ] //./bids
   },
   //new ad unit block
@@ -171,9 +171,9 @@ DOMReady(function () {
       { bidder: 'vertoz',       labelAny: ['desktop'], params: { placementId: 'VZ-HB-F839907VGB86E1'} }, /*300x600*/ 
       { bidder: 'vertoz',       labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: 'VZ-HB-M568254V344777'} }, /*300x250*/
       { bidder: 'vertoz',       labelAny: ['desktop'], params: { placementId: 'VZ-HB-I951082VE249HH'} }, /*160x600*/
-      { bidder: 'vertoz',       labelAny: ['desktop'], params: { placementId: 'VZ-HB-P511170V2009D9'} } /*120x250*/
+      { bidder: 'vertoz',       labelAny: ['desktop'], params: { placementId: 'VZ-HB-P511170V2009D9'} }, /*120x250*/
       /* { bidder: 'springserveAlias2',  params: { placementId: '12463797'} }  */ /* 300x600 - 300x250 - 160x600 - 120x600 */
-      /* { bidder: 'adsparc',      labelAny: ['desktop', 'tablet', 'phone'], params: { networkId: '9969', siteId: '1019801'} } */ /*one placementId for all sizes*/
+      { bidder: 'adsparc',      labelAny: ['desktop', 'tablet', 'phone'], params: { networkId: '9969', siteId: '1019801'} } /*one placementId for all sizes*/
     ] //./bids
   },
   //new ad unit block
@@ -231,9 +231,9 @@ DOMReady(function () {
       { bidder: 'vertoz',       labelAny: ['desktop'], params: { placementId: 'VZ-HB-F839907VGB86E1'} }, /*300x600*/ 
       { bidder: 'vertoz',       labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: 'VZ-HB-M568254V344777'} }, /*300x250*/
       { bidder: 'vertoz',       labelAny: ['desktop'], params: { placementId: 'VZ-HB-I951082VE249HH'} }, /*160x600*/
-      { bidder: 'vertoz',       labelAny: ['desktop'], params: { placementId: 'VZ-HB-P511170V2009D9'} } /*120x250*/
+      { bidder: 'vertoz',       labelAny: ['desktop'], params: { placementId: 'VZ-HB-P511170V2009D9'} }, /*120x250*/
       /* { bidder: 'springserveAlias2',  params: { placementId: '12463797'} }  */ /* 300x600 - 300x250 - 160x600 - 120x600 */
-      /* { bidder: 'adsparc',      labelAny: ['desktop', 'tablet', 'phone'], params: { networkId: '9969', siteId: '1019801'} } */ /*one placementId for all sizes*/
+      { bidder: 'adsparc',      labelAny: ['desktop', 'tablet', 'phone'], params: { networkId: '9969', siteId: '1019801'} } /*one placementId for all sizes*/
     ] //./bids
   },
   //new ad unit block
@@ -281,9 +281,9 @@ DOMReady(function () {
       { bidder: 'huddledmasses', labelAny: ['desktop', 'tablet'], params: { placement_id: 6545 } },  /* 728x90 */
       { bidder: 'smartyads',    labelAny: ['desktop', 'tablet'], params: { banner_id: 6379 } },  /*728x90*/
       { bidder: 'vertoz',       labelAny: ['desktop'], params: { placementId:'VZ-HB-Y968967V15GC66'} }, /* 970x250 */
-      { bidder: 'vertoz',       labelAny: ['desktop', 'tablet'], params: { placementId:'VZ-HB-P786728VDF5C56'} }  /*7 28x90 */
+      { bidder: 'vertoz',       labelAny: ['desktop', 'tablet'], params: { placementId:'VZ-HB-P786728VDF5C56'} },  /*7 28x90 */
       /* { bidder: 'springserveAlias2',  params: { placementId: '12463800'} }  */ /* 970x250 - 970x90 - 728x90  */
-      /* { bidder: 'adsparc',      labelAny: ['desktop', 'tablet', 'phone'], params: { networkId: '9969', siteId: '1019801'} } */ /*one placementId for all sizes*/
+      { bidder: 'adsparc',      labelAny: ['desktop', 'tablet', 'phone'], params: { networkId: '9969', siteId: '1019801'} } /*one placementId for all sizes*/
     ] //./bids
   },
   {
