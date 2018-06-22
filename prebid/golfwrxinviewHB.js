@@ -1,4 +1,4 @@
-var PREBID_TIMEOUT = 1000;
+var PREBID_TIMEOUT = 1100;
 
 
 // ASSERTIVE ANALYTICS SETTINGS - Version: 1.4.0
@@ -464,7 +464,7 @@ DOMReady(function () {
     	      googletag.display(key);
     	      slots[key] = { slot: slot };
     	    });
-    	     //googletag.pubads().refresh();
+    	     googletag.pubads().refresh();
 
     	    // googletag.pubads().refresh();
     	  })(window.googletag, window.pbjs, {
