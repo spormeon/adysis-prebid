@@ -1,4 +1,4 @@
-var PREBID_TIMEOUT = 1200;
+var PREBID_TIMEOUT = 1500;
 
 
 // ASSERTIVE ANALYTICS SETTINGS - Version: 1.4.0
@@ -43,12 +43,12 @@ DOMReady(function () {
   
      
   var gpt_config = {
-    prebid_timeout: 3000, //left for reference but not using right now...
-    default_gbp_rate: 0.77, // not being used
-    latest_gbp_rate: 0.77414, //RATE AS AT 30-08-2017 , not being used, using newRate from the function
+    // prebid_timeout: 3000, //left for reference but not using right now...
+    // default_gbp_rate: 0.77, // not being used
+    // latest_gbp_rate: 0.77414, //RATE AS AT 30-08-2017 , not being used, using newRate from the function
     dynamically_lookup_gbp_rate: true,
-    mobileWidthBreakpoint: 640,
-    tabletWidthBreakpoint: 767,
+    // mobileWidthBreakpoint: 640,
+    // tabletWidthBreakpoint: 767,
     bigbox_sizes: [[300, 600], [300, 250], [160, 600], [120, 600],[250,250]],
     bigbox_sizes_tablet: [[300, 250],[250,250]],
     bigbox_sizes_mobile: [[300, 250],[250,250]],
@@ -338,7 +338,7 @@ DOMReady(function () {
           enableSendAllBids: false, // Default will be `true` as of 1.0
           bidderSequence: 'random', // Default is random
     	  publisherDomain: 'golfwrx.com',
-    	  bidderTimeout: 4000,
+    	  bidderTimeout: 3000,
     	  pubcid: {expInterval: 525600},
     	   currency: {
    	       'adServerCurrency': "GBP",
