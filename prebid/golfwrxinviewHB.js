@@ -392,7 +392,7 @@ DOMReady(function () {
       googletag.cmd.push(function() {
         pbjs.que.push(function() {
           pbjs.setTargetingForGPTAsync();
-          googletag.pubads().refresh();
+          // googletag.pubads().refresh();
         });
       });
     }
