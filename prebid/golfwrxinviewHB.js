@@ -334,6 +334,14 @@ DOMReady(function () {
               timeout: 5000,
               allowAuctionWithoutConsent: true
             },
+            userSync: {
+                filterSettings: {
+                    iframe: {
+                        bidders: ['*'],   // '*' means all bidders
+                        filter: 'include'
+                    }
+                }
+            },
           debug: true,
           enableSendAllBids: false, // Default will be `true` as of 1.0
           bidderSequence: 'random', // Default is random
@@ -464,7 +472,7 @@ DOMReady(function () {
     	      googletag.display(key);
     	      slots[key] = { slot: slot };
     	    });
-    	     googletag.pubads().refresh();
+    	     // googletag.pubads().refresh();
 
     	    // googletag.pubads().refresh();
     	  })(window.googletag, window.pbjs, {
