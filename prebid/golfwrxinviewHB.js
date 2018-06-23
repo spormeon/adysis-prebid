@@ -1,4 +1,4 @@
-var PREBID_TIMEOUT = 1800;
+var PREBID_TIMEOUT = 1900;
 
 document.write('<scr'+'ipt type="text/javascript" src="//d3s34vlfe7g7ew.cloudfront.net/prebidanalytics.js" ></scr'+'ipt>'); 
 
