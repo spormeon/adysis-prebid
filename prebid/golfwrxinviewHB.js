@@ -341,7 +341,7 @@ DOMReady(function () {
                 timeout: 1800,
                 adapter: 'prebidServer',
                 endpoint: 'https://prebid.adnxs.com/pbs/v1/auction'
-              }
+              },
             userSync: {
                 iframeEnabled: true,
                 syncsPerBidder: 3, // and no more than 3 syncs at a time
