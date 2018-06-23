@@ -1,4 +1,4 @@
-var PREBID_TIMEOUT = 1400;
+var PREBID_TIMEOUT = 1600;
 
 
 // ASSERTIVE ANALYTICS SETTINGS - Version: 1.4.0
@@ -45,7 +45,7 @@ DOMReady(function () {
   var gpt_config = {
     // prebid_timeout: 3000, //left for reference but not using right now...
     default_gbp_rate: 0.77, // not being used
-    // latest_gbp_rate: 0.77414, //RATE AS AT 30-08-2017 , not being used, using newRate from the function
+    latest_gbp_rate: 0.77414, //RATE AS AT 30-08-2017 , not being used, using newRate from the function
     dynamically_lookup_gbp_rate: true,
     // mobileWidthBreakpoint: 640,
     // tabletWidthBreakpoint: 767,
