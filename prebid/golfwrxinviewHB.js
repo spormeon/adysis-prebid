@@ -335,12 +335,7 @@ DOMReady(function () {
               allowAuctionWithoutConsent: true
             },
             userSync: {
-                filterSettings: {
-                    iframe: {
-                        bidders: ['*'],   // '*' means all bidders
-                        filter: 'include'
-                    }
-                },
+                iframeEnabled: true,
                 syncsPerBidder: 3, // and no more than 3 syncs at a time
                 syncDelay: 6000, // 6 seconds after the auction
             },
