@@ -151,4 +151,15 @@ spotx.tv, 147949, RESELLER, 7842df1d2fe2db34
 spotxchange.com, 147949, RESELLER, 7842df1d2fe2db34
 springserve.com, 686, DIRECT, a24eb641fc82e93d
 synacor.com, 81591, RESELLER
+<-- content-ignite -->
+appnexus.com, 3538, RESELLER
+appnexus.com, 3539, RESELLER
+appnexus.com, 3540, RESELLER
+connectignite.com, 16314, DIRECT
+google.com, pub-4396642442527865, RESELLER, f08c47fec0942fa0
+improvedigital.com, 335, RESELLER
+powerlinks.com, 4d90617d-34a0-11e6-bd6a-0ae0ff90b829, DIRECT #native #banner #video
+pubmatic.com, 156557, RESELLER
+smartadserver.com, 1827, RESELLER
+triplelift.com, 4320, DIRECT, 6c33edb13117fd86
 
