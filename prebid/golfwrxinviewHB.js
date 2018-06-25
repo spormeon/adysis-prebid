@@ -1,4 +1,4 @@
-var PREBID_TIMEOUT = 1750;
+var PREBID_TIMEOUT = 1700;
 
 //ASSERTIVE ANALYTICS SETTINGS - Version: 1.4.0
 var assertive_entityId = 'eE88aE2HtwKnXikcL';
@@ -33,7 +33,7 @@ DOMReady(function () {
       var pbjsEl = document.createElement("script");
       pbjsEl.type = "text/javascript";
       pbjsEl.async = true;
-      pbjsEl.src = "//d3s34vlfe7g7ew.cloudfront.net/prebid_15062018.js";
+      pbjsEl.src = "//d3s34vlfe7g7ew.cloudfront.net/prebid1.15.0-25062018.js";
       var pbjsTargetEl = document.getElementsByTagName("head")[0];
       pbjsTargetEl.insertBefore(pbjsEl, pbjsTargetEl.firstChild);
   })();
