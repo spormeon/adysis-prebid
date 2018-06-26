@@ -1,4 +1,4 @@
-var PREBID_TIMEOUT = 1650;
+var PREBID_TIMEOUT = 1550;
 
 //ASSERTIVE ANALYTICS SETTINGS - Version: 1.4.0
 var assertive_entityId = 'eE88aE2HtwKnXikcL';
@@ -189,7 +189,10 @@ DOMReady(function () {
       { bidder: 'contentignite',      labelAny: ['desktop', 'tablet', 'phone'], params: { accountID: '168237', zoneID: '316288'} }, /*300x250*/
       { bidder: 'fidelity',      labelAny: ['desktop', 'tablet', 'phone'], params: { zoneid: '53864'} }, /*300x250*/
       { bidder: 'fidelity',      labelAny: ['desktop'], params: { zoneid: '53866'} }, /*300x600*/
-      { bidder: 'fidelity',      labelAny: ['desktop'], params: { zoneid: '53863'} } /*160x600*/
+      { bidder: 'fidelity',      labelAny: ['desktop'], params: { zoneid: '53863'} }, /*160x600*/
+      { bidder: 'gumgum',      labelAny: ['desktop'], params: { inSlot: '14598' } }, /*gumgum-160x600*/
+      { bidder: 'gumgum',      labelAny: ['desktop', 'tablet', 'phone'], params: { inSlot: '14600' } }, /*gumgum-300x250*/
+      { bidder: 'gumgum',      labelAny: ['desktop'], params: { inSlot: '14601' } } /*gumgum-300x600*/
     ] //./bids
   },
   //new ad unit block
@@ -254,7 +257,10 @@ DOMReady(function () {
       { bidder: 'contentignite',      labelAny: ['desktop', 'tablet', 'phone'], params: { accountID: '168237', zoneID: '316288'} }, /*300x250*/
       { bidder: 'fidelity',      labelAny: ['desktop', 'tablet', 'phone'], params: { zoneid: '53864'} }, /*300x250*/
       { bidder: 'fidelity',      labelAny: ['desktop'], params: { zoneid: '53866'} }, /*300x600*/
-      { bidder: 'fidelity',      labelAny: ['desktop'], params: { zoneid: '53863'} } /*160x600*/
+      { bidder: 'fidelity',      labelAny: ['desktop'], params: { zoneid: '53863'} }, /*160x600*/
+      { bidder: 'gumgum',      labelAny: ['desktop'], params: { inSlot: '14598' } }, /*gumgum-160x600*/
+      { bidder: 'gumgum',      labelAny: ['desktop', 'tablet', 'phone'], params: { inSlot: '14600' } }, /*gumgum-300x250*/
+      { bidder: 'gumgum',      labelAny: ['desktop'], params: { inSlot: '14601' } } /*gumgum-300x600*/
     ] //./bids
   },
   //new ad unit block
@@ -309,7 +315,11 @@ DOMReady(function () {
       { bidder: 'contentignite',      labelAny: ['desktop', 'tablet'], params: { accountID: '168237', zoneID: '316287'} }, /*728x90*/
       { bidder: 'contentignite',      labelAny: ['desktop', 'tablet', 'phone'], params: { accountID: '168237', zoneID: '316289'} }, /*320x50*/
       { bidder: 'fidelity',      labelAny: ['desktop', 'tablet'], params: { zoneid: '53862'} }, /*728x90*/
-      { bidder: 'fidelity',      labelAny: ['desktop', 'tablet', 'phone'], params: { zoneid: '53865'} } /*320x50*/
+      { bidder: 'fidelity',      labelAny: ['desktop', 'tablet', 'phone'], params: { zoneid: '53865'} }, /*320x50*/
+      { bidder: 'gumgum',      labelAny: ['desktop'], params: { inSlot: '14605' } }, /*gumgum-970x90*/
+      { bidder: 'gumgum',      labelAny: ['desktop', 'tablet'], params: { inSlot: '14604' } }, /*gumgum-728x90*/
+      { bidder: 'gumgum',      labelAny: ['desktop', 'tablet', 'phone'], params: { inSlot: '14603' } }, /*gumgum-468x60*/
+      { bidder: 'gumgum',      labelAny: ['desktop', 'tablet', 'phone'], params: { inSlot: '14602' } } /*gumgum-320x50*/
     ] //./bids
   },
   {
