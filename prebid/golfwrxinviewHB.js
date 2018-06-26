@@ -373,14 +373,14 @@ DOMReady(function () {
             },
             userSync: {
                 iframeEnabled: true,
-                syncsPerBidder: 3, // and no more than 3 syncs at a time
-                syncDelay: 6000, // 6 seconds after the auction
+                syncsPerBidder: 2, // and no more than 3 syncs at a time
+                syncDelay: 5500, // 6 seconds after the auction
             },
           debug: true,
           enableSendAllBids: false, // Default will be `true` as of 1.0
           bidderSequence: 'random', // Default is random
     	  publisherDomain: 'golfwrx.com',
-    	  bidderTimeout: 3000,
+    	  bidderTimeout: 4000,
     	  pubcid: {expInterval: 525600},
     	   currency: {
    	       'adServerCurrency': "GBP",
