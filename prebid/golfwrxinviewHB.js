@@ -1,4 +1,4 @@
-var PREBID_TIMEOUT = 1550;
+var PREBID_TIMEOUT = 1650;
 
 //ASSERTIVE ANALYTICS SETTINGS - Version: 1.4.0
 var assertive_entityId = 'eE88aE2HtwKnXikcL';
@@ -363,14 +363,14 @@ DOMReady(function () {
               timeout: 5000,
               allowAuctionWithoutConsent: true
             },
-           // s2sConfig: {
-           //    accountId: 'e31f627f-53a3-4288-9979-482d3c6ffc76',
-           //     enabled: true,
-           //     bidders: ['districtm'],
-           //     timeout: 1800,
-           //     adapter: 'prebidServer',
-           //     endpoint: 'https://prebid.adnxs.com/pbs/v1/auction'
-           //  },
+           s2sConfig: {
+               accountId: 'e31f627f-53a3-4288-9979-482d3c6ffc76',
+               enabled: true,
+               bidders: ['districtm'],
+               timeout: 1800,
+               adapter: 'prebidServer',
+               endpoint: 'https://prebid.adnxs.com/pbs/v1/auction'
+            },
             userSync: {
                 iframeEnabled: true,
                 syncsPerBidder: 3, // and no more than 3 syncs at a time
