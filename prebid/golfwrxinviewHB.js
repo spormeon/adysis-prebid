@@ -67,7 +67,6 @@ DOMReady(function () {
             sizes: [
                 [300, 600],
                 [300, 250],
-                [250, 250],
                 [160, 600],
                 [120, 600],
                 [1,1]
@@ -135,7 +134,6 @@ DOMReady(function () {
             sizes: [
                 [300, 600],
                 [300, 250],
-                [250, 250],
                 [160, 600],
                 [120, 600],
                 [1, 1]
@@ -203,7 +201,6 @@ DOMReady(function () {
             sizes: [
                 [300, 600],
                 [300, 250],
-                [250, 250],
                 [160, 600],
                 [120, 600],
                 [1, 1]
@@ -392,11 +389,11 @@ DOMReady(function () {
          labels: ['desktop']
      }, {
          mediaQuery: '(min-width: 500px) and (max-width: 768px)',
-         sizesSupported: [[728, 90], [468, 60], [320, 50], [234, 60], [300, 250], [250, 250], [1, 1]],
+         sizesSupported: [[728, 90], [468, 60], [320, 50], [300, 250], [1, 1]],
          labels: ['tablet']
      }, {
          mediaQuery: '(min-width: 1px) and (max-width: 1px)',
-         sizesSupported: [[300, 250], [250, 250], [320, 50], [234, 60], [1, 1]],
+         sizesSupported: [[300, 250], [320, 50], [1, 1]],
          labels: ['phone']
      }]
     		  
