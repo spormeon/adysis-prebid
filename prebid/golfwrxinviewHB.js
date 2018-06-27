@@ -515,13 +515,13 @@ DOMReady(function () {
     	        adUnitPath: '/1001824/prebid_test2',
     	        size: gpt_config.leaderboard_sizes,
     	        sizeMapping: 'mappingleaderslot',
-    	        timeout: 30000,
+    	        timeout: 45000,
     	      },
     	      toprightSlot: {
     	        adUnitPath: '/1001824/prebid_test3',
     	        size: gpt_config.bigbox_sizes,
     	        sizeMapping: 'mappingbigboxslot',
-    	        timeout: 30000,
+    	        timeout: 45000,
     	      },
     	      middlerightSlot: {
     	        adUnitPath: '/1001824/prebid_test1',
@@ -533,7 +533,7 @@ DOMReady(function () {
     	        adUnitPath: '/1001824/prebid_test4',
     	        size: gpt_config.bigbox_sizes,
     	        sizeMapping: 'mappingbigboxslot',
-    	        timeout: 60000,
+    	        timeout: 45000,
     	      },
     	      skinSlot: {
       	        adUnitPath: '/1001824/Golfwrx.com-HB/Golfwrx.com-HB-Skin',
