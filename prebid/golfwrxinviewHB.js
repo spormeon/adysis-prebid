@@ -392,7 +392,7 @@ DOMReady(function () {
          sizesSupported: [[728, 90], [468, 60], [320, 50], [300, 250], [1, 1]],
          labels: ['tablet']
      }, {
-         mediaQuery: '(min-width: 1px) and (max-width: 1px)',
+         mediaQuery: '(min-width: 1px) and (max-width: 499px)',
          sizesSupported: [[300, 250], [320, 50], [1, 1]],
          labels: ['phone']
      }]
