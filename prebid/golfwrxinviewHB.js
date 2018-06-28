@@ -508,7 +508,10 @@ DOMReady(function () {
     	      var def = config.definitons[key];
     	      var slot = googletag.defineSlot(def.adUnitPath, def.size, key);
     	      slot.setTargeting('test', 'refresh');
-    	      pbjs.setTargetingForGPTAsync();
+    	      pbjs.que.push(function() {
+    	          pbjs.setTargetingForGPTAsync();
+    	          // googletag.pubads().refresh();
+    	        });
     	      slot.defineSizeMapping(sizeMappings[def.sizeMapping]);
     	      slot.addService(googletag.pubads());
     	      googletag.display(key);
