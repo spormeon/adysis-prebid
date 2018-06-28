@@ -432,13 +432,7 @@ DOMReady(function () {
            sekindonUM:        { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.75; } }, // adjust the bid in real time before the auction takes place
            brealtime:         { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.80; } }, // adjust the bid in real time before the auction takes place
            springserveAlias2: { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.65; } }, // adjust the bid in real time before the auction takes place
-           standard: {
-               adserverTargeting: [
-               { key: "hb_time",   val: function(bidResponse) { return bidResponse.time; } },
-               { key: "hb_nowin",  val: function(bidResponse) { return 'no_win'; } }, 
-               { key: "hb_website",val: function(bidResponse) { return 'golfwrx.com'; } },
-               ]
-             }
+           
           };
           
           function initAdserver() {
