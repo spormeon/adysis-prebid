@@ -507,17 +507,7 @@ DOMReady(function () {
     	    Object.keys(config.definitons).forEach(function (key) {
     	      var def = config.definitons[key];
     	      var slot = googletag.defineSlot(def.adUnitPath, def.size, key);
-    	      slot.setTargeting('test', 'refresh');
-    	      function initAdserver() {
-    	          if (pbjs.adserverRequestSent) return;
-    	          pbjs.adserverRequestSent = true;
-    	          googletag.cmd.push(function() {
-    	            pbjs.que.push(function() {
-    	              pbjs.setTargetingForGPTAsync();
-    	              // googletag.pubads().refresh();
-    	            });
-    	          });
-    	        }
+    	      
     	      slot.defineSizeMapping(sizeMappings[def.sizeMapping]);
     	      slot.addService(googletag.pubads());
     	      googletag.display(key);
