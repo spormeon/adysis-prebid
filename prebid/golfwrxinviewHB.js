@@ -93,7 +93,7 @@ DOMReady(function () {
       { bidder: 'pulsepoint',   labelAny: ['desktop', 'tablet', 'phone'], params: { cf: '300X250', cp: '561446', ct: '602639' } }, /* 300x250 */
       { bidder: 'pulsepoint',   labelAny: ['desktop'], params: { cf: '160X600', cp: '561446', ct: '602640' } }, /* 160x600 */
       { bidder: 'pulsepoint',   labelAny: ['desktop'], params: { cf: '120X600', cp: '561446', ct: '602641' } }, /* 120x600 */
-      { bidder: 'sekindoUM',    labelAny: ['desktop', 'tablet', 'phone'], params: { spaceId: '87709' } }, /* 300x250 */ 
+      { bidder: 'sekindoUM',    labelAny: ['desktop'], params: { spaceId: '87709' } }, /* 300x250 */ 
       { bidder: 'sekindoUM',    labelAny: ['desktop'], params: { spaceId: '87692' } }, /* 300x600 */
       { bidder: 'sekindoUM',    labelAny: ['desktop'], params: { spaceId: '87694' } }, /* 160x600 */
       /* { bidder: 'sekindoapn',   params: { placementId: '11968755' } },*/ /* 300x600 */  
@@ -161,7 +161,7 @@ DOMReady(function () {
       { bidder: 'pulsepoint',   labelAny: ['desktop', 'tablet', 'phone'], params: { cf: '300X250', cp: 561446, ct: 602639 } }, /* 300x250 */
       { bidder: 'pulsepoint',   labelAny: ['desktop'], params: { cf: '160X600', cp: 561446, ct: 602640 } }, /* 160x600 */
       { bidder: 'pulsepoint',   labelAny: ['desktop'], params: { cf: '120X600', cp: 561446, ct: 602641 } }, /* 120x600 */
-      { bidder: 'sekindoUM',    labelAny: ['desktop', 'tablet', 'phone'], params: { spaceId: '87709' } }, /* 300x250 */ 
+      { bidder: 'sekindoUM',    labelAny: ['desktop'], params: { spaceId: '87709' } }, /* 300x250 */ 
       { bidder: 'sekindoUM',    labelAny: ['desktop'], params: { spaceId: '87692' } }, /* 300x600 */
       { bidder: 'sekindoUM',    labelAny: ['desktop'], params: { spaceId: '87694' } }, /* 160x600 */
       /* { bidder: 'sekindoapn',   params: { placementId: '11968755' } },*/ /* 300x600 */  
@@ -229,7 +229,7 @@ DOMReady(function () {
       { bidder: 'pulsepoint',   labelAny: ['desktop', 'tablet', 'phone'], params: { cf: '300X250', cp: 561446, ct: 602639 } }, /* 300x250 */
       { bidder: 'pulsepoint',   labelAny: ['desktop'], params: { cf: '160X600', cp: 561446, ct: 602640 } }, /* 160x600 */
       { bidder: 'pulsepoint',   labelAny: ['desktop'], params: { cf: '120X600', cp: 561446, ct: 602641 } }, /* 120x600 */
-      { bidder: 'sekindoUM',    labelAny: ['desktop', 'tablet', 'phone'], params: { spaceId: '87709' } }, /* 300x250 */ 
+      { bidder: 'sekindoUM',    labelAny: ['desktop'], params: { spaceId: '87709' } }, /* 300x250 */ 
       { bidder: 'sekindoUM',    labelAny: ['desktop'], params: { spaceId: '87692' } }, /* 300x600 */
       { bidder: 'sekindoUM',    labelAny: ['desktop'], params: { spaceId: '87694' } }, /* 160x600 */
       /* { bidder: 'sekindoapn',   params: { placementId: '11968755' } },*/ /* 300x600 */  
@@ -300,7 +300,7 @@ DOMReady(function () {
       { bidder: 'pulsepoint',   labelAny: ['desktop', 'tablet'], params: { cf: '728X90', cp: 561446, ct: 602643 } },
       { bidder: 'pulsepoint',   labelAny: ['desktop', 'tablet', 'phone'], params: { cf: '320X50', cp: 561446, ct: 602644 } },
       { bidder: 'sekindoUM',    labelAny: ['desktop'], params: { spaceId: '87690' } }, /* 970x250 */ 
-      { bidder: 'sekindoUM',    labelAny: ['desktop', 'tablet'], params: { spaceId: '87691' } }, /* 728x90 */
+      { bidder: 'sekindoUM',    labelAny: ['desktop'], params: { spaceId: '87691' } }, /* 728x90 */
       /* { bidder: 'sekindoapn',   labelAny: ['desktop'], params: { placementId: '11968754' } }, */ /* 970x250 */
       /* { bidder: 'sonobi',       params: { ad_unit: '/1001824/prebid_test2', dom_id: 'div-gpt-ad-1503393253852-1', floor: 0.5 } },  */ /* does all sizes, different sort of setup */ 
       { bidder: 'sovrn',        labelAny: ['desktop'], params: { tagid: '504162' } }, /* 970x250 */
@@ -357,7 +357,31 @@ DOMReady(function () {
       pbjs.addAdUnits(adUnits);
       // pbjs.enableSendAllBids();
       
+      
+      const customConfigObject = {
+    		  "buckets" : [{
+    		      "precision": 2,  //default is 2 if omitted - means 2.1234 rounded to 2 decimal places = 2.12
+    		      "min" : 0,
+    		      "max" : 5,
+    		      "increment" : 0.01  // from $0 to $5, 1-cent increments
+    		    },
+    		    {
+    		      "precision": 2,
+    		      "min" : 5,
+    		      "max" : 20,
+    		      "increment" : 0.10  // from $5 to $20, round down to the previous 10-cent increment
+    		    },
+    		    {
+    		      "precision": 2,
+    		      "min" : 20,
+    		      "max" : 100,
+    		      "increment" : 0.5   // from $20 to $100, round down to the previous 50-cent increment
+    		    }]
+    		};
+      
+      
       pbjs.setConfig({
+    	  priceGranularity: customConfigObject,
     	  consentManagement: {
               cmpApi: 'iab',
               timeout: 5000,
