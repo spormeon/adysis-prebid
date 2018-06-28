@@ -438,18 +438,7 @@ DOMReady(function () {
            sekindonUM:        { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.75; } }, // adjust the bid in real time before the auction takes place
            brealtime:         { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.80; } }, // adjust the bid in real time before the auction takes place
            springserveAlias2: { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.65; } }, // adjust the bid in real time before the auction takes place
-           standard: {
-              adserverTargeting: [
-              { key: "hb_bidder", val: function(bidResponse) { return bidResponse.bidderCode; } }, 
-              { key: "hb_adid",   val: function(bidResponse) { return bidResponse.adId; } }, 
-              { key: "hb_size",   val: function(bidResponse) { return bidResponse.size; } },
-              { key: "hb_time",   val: function(bidResponse) { return bidResponse.time; } },
-              { key: "hb_nowin",  val: function(bidResponse) { return 'no_win'; } }, 
-              { key: "hb_website",val: function(bidResponse) { return 'golfwrx.com'; } },
-              { key: "hb_pb",     val: function(bidResponse) { var cpm = (bidResponse.cpm * (gpt_config.latest_gbp_rate || gpt_config.default_gbp_rate)) *1.2 ;  //converts cpm to GBP, rounds cpm to nearest 0.10 incriment, sets 20 if above 20, sets a rev share value
-                    if (cpm <20) { return (Math.floor(cpm * 10) / 10).toFixed(2);} else { return '20.00'; } }
-              }]
-            }
+           
           };
           
           function initAdserver() {
