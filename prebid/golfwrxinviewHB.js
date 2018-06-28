@@ -88,7 +88,7 @@ DOMReady(function () {
       { bidder: 'brealtime',    labelAny: ['desktop'], params: { placementId: '12002336' } },  /* 160x600 */ 
       { bidder: 'brealtime',    labelAny: ['desktop'], params: { placementId: '12002337' } },  /* 120x600 */
       { bidder: 'conversant',   labelAny: ['desktop', 'tablet', 'phone'], params: { site_id: '118233' } },  /* 300x250 */ 
-      { bidder: 'districtm',    labelAny: ['desktop', 'tablet', 'phone'], params: { placementid: '11937611' } }, /* 300x600 - 300x250 - 160x600 */
+      { bidder: 'districtm',    labelAny: ['desktop', 'tablet', 'phone'], params: { placementid: 11937611 } }, /* 300x600 - 300x250 - 160x600 */
       { bidder: 'pulsepoint',   labelAny: ['desktop'], params: { cf: '300X600', cp: '561446', ct: '602638' } }, /* 300x600 */
       { bidder: 'pulsepoint',   labelAny: ['desktop', 'tablet', 'phone'], params: { cf: '300X250', cp: '561446', ct: '602639' } }, /* 300x250 */
       { bidder: 'pulsepoint',   labelAny: ['desktop'], params: { cf: '160X600', cp: '561446', ct: '602640' } }, /* 160x600 */
@@ -156,7 +156,7 @@ DOMReady(function () {
       { bidder: 'brealtime',    labelAny: ['desktop'], params: { placementId: '12002336' } },  /* 160x600 */ 
       { bidder: 'brealtime',    labelAny: ['desktop'], params: { placementId: '12002337' } },  /* 120x600 */
       { bidder: 'conversant',   labelAny: ['desktop', 'tablet', 'phone'], params: { site_id: '118233' } },  /* 300x250 */ 
-      { bidder: 'districtm',    labelAny: ['desktop', 'tablet', 'phone'], params: { placementid: '11937611' } }, /* 300x600 - 300x250 - 160x600 */
+      { bidder: 'districtm',    labelAny: ['desktop', 'tablet', 'phone'], params: { placementid: 11937611 } }, /* 300x600 - 300x250 - 160x600 */
       { bidder: 'pulsepoint',   labelAny: ['desktop'], params: { cf: '300X600', cp: 561446, ct: 602638 } }, /* 300x600 */
       { bidder: 'pulsepoint',   labelAny: ['desktop', 'tablet', 'phone'], params: { cf: '300X250', cp: 561446, ct: 602639 } }, /* 300x250 */
       { bidder: 'pulsepoint',   labelAny: ['desktop'], params: { cf: '160X600', cp: 561446, ct: 602640 } }, /* 160x600 */
@@ -224,7 +224,7 @@ DOMReady(function () {
       { bidder: 'brealtime',    labelAny: ['desktop'], params: { placementId: '12002336' } },  /* 160x600 */ 
       { bidder: 'brealtime',    labelAny: ['desktop'], params: { placementId: '12002337' } },  /* 120x600 */
       { bidder: 'conversant',   labelAny: ['desktop', 'tablet', 'phone'], params: { site_id: '118233' } },  /* 300x250 */ 
-      { bidder: 'districtm',    labelAny: ['desktop', 'tablet', 'phone'], params: { placementid: '11937611' } }, /* 300x600 - 300x250 - 160x600 */
+      { bidder: 'districtm',    labelAny: ['desktop', 'tablet', 'phone'], params: { placementid: 11937611 } }, /* 300x600 - 300x250 - 160x600 */
       { bidder: 'pulsepoint',   labelAny: ['desktop'], params: { cf: '300X600', cp: 561446, ct: 602638 } }, /* 300x600 */
       { bidder: 'pulsepoint',   labelAny: ['desktop', 'tablet', 'phone'], params: { cf: '300X250', cp: 561446, ct: 602639 } }, /* 300x250 */
       { bidder: 'pulsepoint',   labelAny: ['desktop'], params: { cf: '160X600', cp: 561446, ct: 602640 } }, /* 160x600 */
@@ -294,7 +294,7 @@ DOMReady(function () {
       { bidder: 'brealtime',  labelAny: ['desktop', 'tablet'], params: { placementId: '12002331' } },  /* 468x60 */
       { bidder: 'brealtime',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '12002333' } },  /* 320x50 */
       { bidder: 'conversant', labelAny: ['desktop', 'tablet'], params: { site_id: '118233' } },  /* 728x90 */ 
-      { bidder: 'districtm',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementid: '11937610' } }, /* 970x250 - 970x90 - 728x90 - 468x60 */
+      { bidder: 'districtm',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementid: 11937610 } }, /* 970x250 - 970x90 - 728x90 - 468x60 */
       { bidder: 'pulsepoint',   labelAny: ['desktop'], params: { cf: '970X250', cp: 561446, ct: 602634 } },
       { bidder: 'pulsepoint',   labelAny: ['desktop'], params: { cf: '970X90', cp: 561446, ct: 602642 } },
       { bidder: 'pulsepoint',   labelAny: ['desktop', 'tablet'], params: { cf: '728X90', cp: 561446, ct: 602643 } },
