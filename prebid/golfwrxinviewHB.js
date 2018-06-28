@@ -385,14 +385,14 @@ DOMReady(function () {
                accountId: 'e31f627f-53a3-4288-9979-482d3c6ffc76',
                enabled: true,
                bidders: ['districtm', 'pulsepoint', 'conversant', 'appnexus'],
-               timeout: 1500,
+               timeout: 1000,
                adapter: 'prebidServer',
                endpoint: 'https://prebid.adnxs.com/pbs/v1/auction'
             },
             userSync: {
                 iframeEnabled: true,
-                syncsPerBidder: 1, // and no more than 3 syncs at a time
-                syncDelay: 5500, // 6 seconds after the auction
+                syncsPerBidder: 3, // and no more than 3 syncs at a time
+                syncDelay: 5000, // 5 seconds after the auction
             },
           debug: true,
           enableSendAllBids: false, // Default will be `true` as of 1.0
