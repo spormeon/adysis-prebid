@@ -362,20 +362,14 @@ DOMReady(function () {
     		  "buckets" : [{
     		      "precision": 2,  //default is 2 if omitted - means 2.1234 rounded to 2 decimal places = 2.12
     		      "min" : 0,
-    		      "max" : 5,
+    		      "max" : 0.6,
     		      "increment" : 0.01  // from $0 to $5, 1-cent increments
     		    },
     		    {
     		      "precision": 2,
-    		      "min" : 5,
+    		      "min" : 0.7,
     		      "max" : 20,
     		      "increment" : 0.10  // from $5 to $20, round down to the previous 10-cent increment
-    		    },
-    		    {
-    		      "precision": 2,
-    		      "min" : 20,
-    		      "max" : 100,
-    		      "increment" : 0.5   // from $20 to $100, round down to the previous 50-cent increment
     		    }]
     		};
       
