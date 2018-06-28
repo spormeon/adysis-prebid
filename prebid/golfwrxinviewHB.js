@@ -436,8 +436,8 @@ DOMReady(function () {
                adserverTargeting: [
                { key: "hb_time",   val: function(bidResponse) { return bidResponse.time; } },
                { key: "hb_nowin",  val: function(bidResponse) { return 'no_win'; } }, 
-               { key: "hb_website",val: function(bidResponse) { return 'golfwrx.com'; } }
-               }]
+               { key: "hb_website",val: function(bidResponse) { return 'golfwrx.com'; } },
+               ]
              }
           };
           
