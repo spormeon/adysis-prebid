@@ -139,20 +139,7 @@ DOMReady(function () {
       { bidder: 'districtm',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementid: '11937610' } } /* 970x250 - 970x90 - 728x90 - 468x60 */
       
     ] //./bids
-  },
-  {
-	    code: 'skinSlot',
-	    mediaTypes: {
-	        banner: {
-	            sizes: [
-	            	[1, 1]
-	            ],
-	        } 
-	    },
-	    bids: [
-	      { bidder: 'justpremium', labelAny: ['desktop', 'tablet'], params: { zone: '50978', allow: ['wp', 'sa', 'pu', 'pd', 'pa', 'ms', 'mo', 'is', 'as', 'fa', 'fi', 'hi', 'cf'] } } /* wallpaper, video wallpaper */
-	    ] //./bids
-	  }
+  }
   ]; //./adUnits
     
   var pbjs = pbjs || {};
