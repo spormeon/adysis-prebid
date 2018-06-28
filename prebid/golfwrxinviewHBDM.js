@@ -75,7 +75,7 @@ DOMReady(function () {
     },
     bids: [
       
-      { bidder: 'districtm',    labelAny: ['desktop', 'tablet', 'phone'], params: { placementid: '11937611' } } /* 300x600 - 300x250 - 160x600 */
+      { bidder: 'districtm',    labelAny: ['desktop', 'tablet', 'phone'], params: { placementid: 11937611 } } /* 300x600 - 300x250 - 160x600 */
       
     ] //./bids
   },
@@ -95,7 +95,7 @@ DOMReady(function () {
     },
     bids: [
       
-      { bidder: 'districtm',    labelAny: ['desktop', 'tablet', 'phone'], params: { placementid: '11937611' } } /* 300x600 - 300x250 - 160x600 */
+      { bidder: 'districtm',    labelAny: ['desktop', 'tablet', 'phone'], params: { placementid: 11937611 } } /* 300x600 - 300x250 - 160x600 */
       
     ] //./bids
   },
@@ -115,7 +115,7 @@ DOMReady(function () {
     },
     bids: [
       
-      { bidder: 'districtm',    labelAny: ['desktop', 'tablet', 'phone'], params: { placementid: '11937611' } } /* 300x600 - 300x250 - 160x600 */
+      { bidder: 'districtm',    labelAny: ['desktop', 'tablet', 'phone'], params: { placementid: 11937611 } } /* 300x600 - 300x250 - 160x600 */
       
     ] //./bids
   },
@@ -136,7 +136,7 @@ DOMReady(function () {
     },
     bids: [
       
-      { bidder: 'districtm',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementid: '11937610' } } /* 970x250 - 970x90 - 728x90 - 468x60 */
+      { bidder: 'districtm',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementid: 11937610 } } /* 970x250 - 970x90 - 728x90 - 468x60 */
       
     ] //./bids
   }
