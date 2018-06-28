@@ -384,7 +384,7 @@ DOMReady(function () {
            s2sConfig: {
                accountId: 'e31f627f-53a3-4288-9979-482d3c6ffc76',
                enabled: true,
-               bidders: ['districtm', 'pulsepoint', 'conversant', 'appnexus'],
+               bidders: ['districtm', 'pulsepoint', 'conversant', 'appnexus', 'sovrn'],
                timeout: 1000,
                adapter: 'prebidServer',
                endpoint: 'https://prebid.adnxs.com/pbs/v1/auction'
@@ -398,7 +398,7 @@ DOMReady(function () {
           enableSendAllBids: false, // Default will be `true` as of 1.0
           bidderSequence: 'random', // Default is random
     	  publisherDomain: 'golfwrx.com',
-    	  bidderTimeout: 4000,
+    	  bidderTimeout: 3000,
     	  pubcid: {expInterval: 525600},
     	   currency: {
    	       'adServerCurrency': "GBP",
