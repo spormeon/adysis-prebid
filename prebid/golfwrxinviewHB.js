@@ -490,7 +490,7 @@ DOMReady(function () {
     	    googletag.pubads().enableSingleRequest();
     	    googletag.pubads().collapseEmptyDivs(true, true);
     	    googletag.pubads().setCentering(true);
-    	    
+    	    googletag.pubads().disableInitialLoad();
     	    googletag.enableServices();
     	    googletag.pubads().addEventListener('impressionViewable', function (event) {
     	      var elementId = event.slot.getSlotElementId();
