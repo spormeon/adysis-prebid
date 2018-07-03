@@ -510,7 +510,7 @@ DOMReady(function () {
     	      googletag.display(key);
     	      slots[key] = { slot: slot };
     	    });
-    	     // googletag.pubads().refresh();
+    	     googletag.pubads().refresh();
 
     	  })(window.googletag, window.pbjs, {
     	    definitons: {
