@@ -27,7 +27,6 @@ DOMReady(function () {
     }
 });  
 
-
 //load up prebid.js,  I think we need to load this earlier
   (function() {
       var pbjsEl = document.createElement("script");
@@ -40,8 +39,6 @@ DOMReady(function () {
 
 <!-- Prebid Config Section START -->
 
-  
-     
   var gpt_config = {
     // prebid_timeout: 3000, //left for reference but not using right now...
     default_gbp_rate: 0.77, // not being used
@@ -340,7 +337,6 @@ DOMReady(function () {
   var pbjs = pbjs || {};
   pbjs.que = pbjs.que || [];
             
-
 <!-- Prebid Boilerplate Section START. No Need to Edit. -->
 
     var googletag = googletag || {};
@@ -357,7 +353,6 @@ DOMReady(function () {
       pbjs.addAdUnits(adUnits);
       // pbjs.enableSendAllBids();
       
-      
       const customConfigObject = {
     		  "buckets" : [{
     		      "precision": 2,  //default is 2 if omitted - means 2.1234 rounded to 2 decimal places = 2.12
@@ -372,7 +367,6 @@ DOMReady(function () {
     		      "increment" : 0.10  // from $5 to $20, round down to the previous 10-cent increment
     		    }]
     		};
-      
       
       pbjs.setConfig({
     	  priceGranularity: customConfigObject,
@@ -518,38 +512,37 @@ DOMReady(function () {
     	    });
     	     googletag.pubads().refresh();
 
-    	    
     	  })(window.googletag, window.pbjs, {
     	    definitons: {
     	      topleaderSlot: {
     	        adUnitPath: '/1001824/prebid_test2',
     	        size: gpt_config.leaderboard_sizes,
     	        sizeMapping: 'mappingleaderslot',
-    	        timeout: 45000,
+    	        timeout: 450000,
     	      },
     	      toprightSlot: {
     	        adUnitPath: '/1001824/prebid_test3',
     	        size: gpt_config.bigbox_sizes,
     	        sizeMapping: 'mappingbigboxslot',
-    	        timeout: 45000,
+    	        timeout: 450000,
     	      },
     	      middlerightSlot: {
     	        adUnitPath: '/1001824/prebid_test1',
     	        size: gpt_config.bigbox_sizes,
     	        sizeMapping: 'mappingbigboxslot',
-    	        timeout: 45000,
+    	        timeout: 450000,
     	      },
     	      bottomrightSlot: {
     	        adUnitPath: '/1001824/prebid_test4',
     	        size: gpt_config.bigbox_sizes,
     	        sizeMapping: 'mappingbigboxslot',
-    	        timeout: 45000,
+    	        timeout: 450000,
     	      },
     	      skinSlot: {
       	        adUnitPath: '/1001824/Golfwrx.com-HB/Golfwrx.com-HB-Skin',
       	        size: gpt_config.skin_sizes,
       	        sizeMapping: 'mappingskinslot',
-      	        timeout: 50000,
+      	        timeout: 500000,
       	      },
     	    },
     	    sizeMappings: {
