@@ -1,4 +1,4 @@
-var PREBID_TIMEOUT = 1000;
+var PREBID_TIMEOUT = 1500;
 
 //ASSERTIVE ANALYTICS SETTINGS - Version: 1.4.0
 var assertive_entityId = 'eE88aE2HtwKnXikcL';
@@ -93,7 +93,7 @@ DOMReady(function () {
       /* { bidder: 'sekindoUM',    labelAny: ['desktop'], params: { spaceId: '87709' } }, */ /* 300x250 */ 
       /* { bidder: 'sekindoUM',    labelAny: ['desktop'], params: { spaceId: '87692' } }, */ /* 300x600 */
       /* { bidder: 'sekindoUM',    labelAny: ['desktop'], params: { spaceId: '87694' } }, */ /* 160x600 */
-      /* { bidder: 'sekindoapn',   params: { placementId: '11968755' } },*/ /* 300x600 */  
+      /* { bidder: 'sekindoapn',   params: { placementId: '11968755' } }, */ /* 300x600 */  
       /* { bidder: 'sekindoapn',   params: { placementId: '11968756' } }, */ /* 300x250 */ 
       /* { bidder: 'sekindoapn',   params: { placementId: '11968757' } }, */ /* 160x600 */
       /* { bidder: 'sonobi',       params: { ad_unit: '/1001824/prebid_test1', dom_id: 'div-gpt-ad-1503393253852-0', floor: 0.0 } },  */ /* does all sizes, different sort of setup */
@@ -161,7 +161,7 @@ DOMReady(function () {
       /* { bidder: 'sekindoUM',    labelAny: ['desktop'], params: { spaceId: '87709' } }, */ /* 300x250 */ 
       /* { bidder: 'sekindoUM',    labelAny: ['desktop'], params: { spaceId: '87692' } }, */ /* 300x600 */
       /* { bidder: 'sekindoUM',    labelAny: ['desktop'], params: { spaceId: '87694' } }, */ /* 160x600 */
-      /* { bidder: 'sekindoapn',   params: { placementId: '11968755' } },*/ /* 300x600 */  
+      /* { bidder: 'sekindoapn',   params: { placementId: '11968755' } }, */ /* 300x600 */  
       /* { bidder: 'sekindoapn',   params: { placementId: '11968756' } }, */ /* 300x250 */ 
       /* { bidder: 'sekindoapn',   params: { placementId: '11968757' } }, */ /* 160x600 */
       /* { bidder: 'sonobi',       params: { ad_unit: '/1001824/prebid_test1', dom_id: 'div-gpt-ad-1503393253852-0', floor: 0.0 } },  */ /* does all sizes, different sort of setup */
@@ -372,14 +372,14 @@ DOMReady(function () {
     	  priceGranularity: customConfigObject,
     	  consentManagement: {
               cmpApi: 'iab',
-              timeout: 5000,
+              timeout: 3000,
               allowAuctionWithoutConsent: true
             },
            s2sConfig: {
                accountId: 'e31f627f-53a3-4288-9979-482d3c6ffc76',
                enabled: true,
                bidders: ['districtm', 'pulsepoint', 'conversant', 'appnexus', 'sovrn'],
-               timeout: 800,
+               timeout: 1000,
                adapter: 'prebidServer',
                endpoint: 'https://prebid.adnxs.com/pbs/v1/auction',
                syncEndpoint: 'https://prebid.adnxs.com/pbs/v1/cookie_sync',
@@ -396,7 +396,7 @@ DOMReady(function () {
           enableSendAllBids: false, // Default will be `true` as of 1.0
           bidderSequence: 'random', // Default is random
     	  publisherDomain: 'golfwrx.com',
-    	  bidderTimeout: 3000,
+    	  bidderTimeout: 2000,
     	  pubcid: {expInterval: 525600},
     	   currency: {
    	       'adServerCurrency': "GBP",
