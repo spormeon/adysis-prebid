@@ -1,4 +1,4 @@
-var PREBID_TIMEOUT = 1900;
+var PREBID_TIMEOUT = 1000;
 
 //ASSERTIVE ANALYTICS SETTINGS - Version: 1.4.0
 var assertive_entityId = 'eE88aE2HtwKnXikcL';
@@ -379,7 +379,7 @@ DOMReady(function () {
                accountId: 'e31f627f-53a3-4288-9979-482d3c6ffc76',
                enabled: true,
                bidders: ['districtm', 'pulsepoint', 'conversant', 'appnexus', 'sovrn'],
-               timeout: 1200,
+               timeout: 800,
                adapter: 'prebidServer',
                endpoint: 'https://prebid.adnxs.com/pbs/v1/auction',
                syncEndpoint: 'https://prebid.adnxs.com/pbs/v1/cookie_sync',
