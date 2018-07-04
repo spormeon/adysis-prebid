@@ -372,7 +372,7 @@ DOMReady(function () {
     	  priceGranularity: customConfigObject,
     	  consentManagement: {
               cmpApi: 'iab',
-              timeout: 3000,
+              timeout: 5000,
               allowAuctionWithoutConsent: true
             },
            s2sConfig: {
@@ -396,7 +396,7 @@ DOMReady(function () {
           enableSendAllBids: false, // Default will be `true` as of 1.0
           bidderSequence: 'random', // Default is random
     	  publisherDomain: 'golfwrx.com',
-    	  bidderTimeout: 2000,
+    	  bidderTimeout: 3000,
     	  pubcid: {expInterval: 525600},
     	   currency: {
    	       'adServerCurrency': "GBP",
