@@ -392,7 +392,6 @@ DOMReady(function () {
                 syncDelay: 6000, // 5 seconds after the auction
             },
           debug: true,
-          // cache: {url: "//prebid.adnxs.com/pbc/v1/cache"},
           enableSendAllBids: false, // Default will be `true` as of 1.0
           bidderSequence: 'random', // Default is random
     	  publisherDomain: 'golfwrx.com',
