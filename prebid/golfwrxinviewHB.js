@@ -281,7 +281,7 @@ DOMReady(function () {
       { bidder: 'aol',    labelAny: ['desktop'],      params: { placement: '6507338', network: '4436.1', server: 'adserver.adtech.de' } }, /* 970x90 */
       { bidder: 'aol',    labelAny: ['desktop', 'tablet'],      params: { placement: '6507341', network: '4436.1', server: 'adserver.adtech.de' } }, /* 468x60 */
       { bidder: 'aol',    labelAny: ['desktop', 'tablet', 'phone'],      params: { placement: '6507340', network: '4436.1', server: 'adserver.adtech.de' } }, /* 320x50 */
-      /* { bidder: 'featureforward', params: {pubId:28, siteId:6, placementId: '4' }}, */
+      /* { bidder: 'featureforward', params: {pubId:28, siteId:6, placementId: '4' } }, */
       /* { bidder: 'atomx',        params: { id: '3808200'} }, */ /* does all sizes, not working at moment */
       { bidder: 'appnexus',   labelAny: ['desktop', 'tablet', 'phone'],  params: { placementId: '11971351' } }, /* one placementId for all sizes */
       { bidder: 'rhythmone',  labelAny: ['desktop', 'tablet', 'phone'],  params: { placementId: '76184' } }, /* one placementId for all sizes */
