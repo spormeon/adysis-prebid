@@ -389,7 +389,7 @@ DOMReady(function () {
             userSync: {
                 iframeEnabled: true,
                 syncsPerBidder: 3, // and no more than 3 syncs at a time
-                syncDelay: 5000, // 5 seconds after the auction
+                syncDelay: 6000, // 5 seconds after the auction
             },
           debug: true,
           cache: {url: "//prebid.adnxs.com/pbc/v1/cache"},
