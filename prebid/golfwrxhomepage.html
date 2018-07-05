@@ -2026,12 +2026,53 @@ var SafeCommentsAjax = {"ajaxurl":"http:\/\/www.golfwrx.com\/wp-admin\/admin-aja
 		</section><section id="mvp_facebook_widget-4" class="mvp-side-widget mvp_facebook_widget"><div class="mvp-widget-home-head"><h4 class="mvp-widget-home-title"><span class="mvp-widget-home-title">Facebook</span></h4></div>			<div class="fb-page" data-href="https://www.facebook.com/golfwrx" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="true"><div class="fb-xfbml-parse-ignore"></div></div>
 			
 		</section>
-		<section id="dfp-ad-zone-300-11" class="mvp-side-widget adops" style="position: sticky; top: 74px; width: 330px;"> 
+		<div id="adbottomright">
+		<section id="adbottomright" class="mvp-side-widget adops"> 
 		<span class="mvp-ad-label">Advertisement</span>     
       <div class="ad-reporter-ahytrfg35423">  <!-- div for the chrome extension ads info grabber -->
           <div id="bottomrightSlot"></div>
           </div>      
     </section>
+    </div>
+    
+    <style>
+    /* Style the navbar */
+#adbottomright {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 100;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
+}
+    </style>
+    <script>
+ // When the user scrolls the page, execute myFunction 
+    window.onscroll = function() {myFunction()};
+
+    // Get the navbar
+    var adbottomright = document.getElementById("adbottomright");
+
+    // Get the offset position of the navbar
+    var sticky = adbottomright.offsetTop;
+
+    // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+    </script>
     	
     </div><!--mvp-side-wrap-->				</div><!--mvp-mmain-blog-out-->
 			</div><!--mvp-main-blog-cont-->
