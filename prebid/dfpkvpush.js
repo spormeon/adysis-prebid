@@ -23,6 +23,8 @@ var googletag = googletag || {};
    .addService(googletag.pubads())
    googletag.pubads().setTargeting("hb_pb","0.01");
    googletag.pubads().enableSingleRequest();
+   googletag.pubads().collapseEmptyDivs(true, true);
+   googletag.pubads().setCentering(true);
    googletag.enableServices();
  });
 
