@@ -21,7 +21,7 @@ var googletag = googletag || {};
    .addService(googletag.pubads())
    googletag.defineSlot("/1001824/prebid_test4", [[300, 600],[300, 250],[160, 600],[120, 600],[250, 250]], "bottomrightSlot")
    .addService(googletag.pubads())
-   googletag.pubads().setTargeting("hb_pb","0.11");
+   googletag.pubads().setTargeting("hb_pb","0.21");
    googletag.pubads().enableSingleRequest();
    googletag.pubads().collapseEmptyDivs(true, true);
    googletag.pubads().setCentering(true);
