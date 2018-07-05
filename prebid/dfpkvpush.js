@@ -24,3 +24,9 @@ var googletag = googletag || {};
    googletag.pubads().enableSingleRequest();
    googletag.enableServices();
  });
+
+ 
+ googletag.cmd.push(function() {
+	 	         googletag.display("topSlot");
+	 	         googletag.display("middlerightSlot");
+	 	      });
