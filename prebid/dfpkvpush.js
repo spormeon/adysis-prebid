@@ -15,20 +15,13 @@ var googletag = googletag || {};
  googletag.cmd.push(function() {
    googletag.defineSlot("/1001824/prebid_test2", [[970, 250],[970, 90],[728, 90],[468, 60],[320, 50],[234, 60]], "topSlot")
     .addService(googletag.pubads())
-     .setTargeting("hb_pb", "0.50");
    googletag.defineSlot("/1001824/prebid_test3", [[300, 600],[300, 250],[160, 600],[120, 600],[250, 250]], "toprightSlot")
      .addService(googletag.pubads())
-     .setTargeting("hb_pb", "0.50")
-     .setTargeting("age", "20-30");
    googletag.defineSlot("/1001824/prebid_test1", [[300, 600],[300, 250],[160, 600],[120, 600],[250, 250]], "middlerightSlot")
    .addService(googletag.pubads())
-   .setTargeting("hb_pb", "0.50")
-   .setTargeting("age", "20-30");
    googletag.defineSlot("/1001824/prebid_test4", [[300, 600],[300, 250],[160, 600],[120, 600],[250, 250]], "bottomrightSlot")
    .addService(googletag.pubads())
-   .setTargeting("hb_pb", "0.50")
-   .setTargeting("age", "20-30");
-   googletag.pubads().setTargeting("topic","basketball");
+   googletag.pubads().setTargeting("hb_pb","0.01");
    googletag.pubads().enableSingleRequest();
    googletag.enableServices();
  });
