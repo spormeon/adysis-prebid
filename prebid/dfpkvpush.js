@@ -7,8 +7,6 @@ var assertive_timeout = null;
 var assertive_layout = null;
 var assertive_userState = null;
 
-// example of supplying a custom var from a prev. defined var
-assertive_timeout = PREBID_TIMEOUT;
 
 // example of reading data from website and supplying as custom var
 var DOMReady = function(a,b,c){b=document,c='addEventListener';b[c]?b[c]('DOMContentLoaded',a):window.attachEvent('onload',a);};
