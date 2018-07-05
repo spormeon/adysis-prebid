@@ -36,5 +36,7 @@ var googletag = googletag || {};
  
  googletag.cmd.push(function() {
 	 	         googletag.display("topSlot");
+	 	        googletag.display("toprightSlot");
 	 	         googletag.display("middlerightSlot");
+	 	        googletag.display("bottomrightSlot");
 	 	      });
