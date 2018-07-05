@@ -1,0 +1,2318 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8" >
+<!-- Quantcast Choice. Consent Manager Tag -->
+<script type="text/javascript" async=true>
+    var elem = document.createElement('script');
+    elem.src = 'https://quantcast.mgr.consensu.org/cmp.js';
+    elem.async = true;
+    elem.type = "text/javascript";
+    var scpt = document.getElementsByTagName('script')[0];
+    scpt.parentNode.insertBefore(elem, scpt);
+    (function() {
+    var gdprAppliesGlobally = true;
+    function addFrame() {
+        if (!window.frames['__cmpLocator']) {
+        if (document.body) {
+            var body = document.body,
+                iframe = document.createElement('iframe');
+            iframe.style = 'display:none';
+            iframe.name = '__cmpLocator';
+            body.appendChild(iframe);
+        } else {
+            // In the case where this stub is located in the head,
+            // this allows us to inject the iframe more quickly than
+            // relying on DOMContentLoaded or other events.
+            setTimeout(addFrame, 5);
+        }
+        }
+    }
+    addFrame();
+    function cmpMsgHandler(event) {
+        var msgIsString = typeof event.data === "string";
+        var json;
+        if(msgIsString) {
+        json = event.data.indexOf("__cmpCall") != -1 ? JSON.parse(event.data) : {};
+        } else {
+        json = event.data;
+        }
+        if (json.__cmpCall) {
+        var i = json.__cmpCall;
+        window.__cmp(i.command, i.parameter, function(retValue, success) {
+            var returnMsg = {"__cmpReturn": {
+            "returnValue": retValue,
+            "success": success,
+            "callId": i.callId
+            }};
+            event.source.postMessage(msgIsString ?
+            JSON.stringify(returnMsg) : returnMsg, '*');
+        });
+        }
+    }
+    window.__cmp = function (c) {
+        var b = arguments;
+        if (!b.length) {
+        return __cmp.a;
+        }
+        else if (b[0] === 'ping') {
+        b[2]({"gdprAppliesGlobally": gdprAppliesGlobally,
+            "cmpLoaded": false}, true);
+        } else if (c == '__cmp')
+        return false;
+        else {
+        if (typeof __cmp.a === 'undefined') {
+            __cmp.a = [];
+        }
+        __cmp.a.push([].slice.apply(b));
+        }
+    }
+    window.__cmp.gdprAppliesGlobally = gdprAppliesGlobally;
+    window.__cmp.msgHandler = cmpMsgHandler;
+    if (window.addEventListener) {
+        window.addEventListener('message', cmpMsgHandler, false);
+    }
+    else {
+        window.attachEvent('onmessage', cmpMsgHandler);
+    }
+    })();
+    window.__cmp('init', {
+    		'Language': 'en',
+		'Initial Screen Reject Button Text': 'I do not accept',
+		'Initial Screen Accept Button Text': 'I accept',
+		'Purpose Screen Header Title Text': 'Privacy settings',
+		'Purpose Screen Body Text': 'You can set your consent preferences and determine how you want your data to be used based on the purposes below. You may set your preferences for us independently from those of third-party partners. Each purpose has a description so that you know how we and partners use your data.',
+		'Vendor Screen Body Text': 'You can set consent preferences for each individual third-party company below. Expand each company list item to see what purposes they use data for to help make your choices. In some cases, companies may disclose that they use your data without asking for your consent, based on their legitimate interests. You can click on their privacy policies for more information and to opt out.',
+		'Vendor Screen Accept All Button Text': 'Accept all',
+		'Vendor Screen Reject All Button Text': 'Reject all',
+		'Initial Screen Body Text': 'We and our partners use technology such as cookies on our site to personalise content and ads, provide social media features, and analyse our traffic. Click below to consent to the use of this technology across the web. You can change your mind and change your consent choices at anytime by returning to this site.',
+		'Initial Screen Body Text Option': 1,
+		'Publisher Name': 'Golfwrx',
+		'Publisher Purpose IDs': [1,2,3,4,5],
+		'UI Layout': 'banner',
+		'Display UI': 'inEU',
+		'Publisher Logo': 'http://www.golfwrx.com/wp-content/uploads/2017/11/flat_logo_168_r90.png',
+		'Consent Scope': 'service',
+		'Post Consent Page': 'http://www.golfwrx.com',
+		'Non-Consent Display Frequency': 5,
+    });
+</script>
+<!-- End Quantcast Choice. Consent Manager Tag -->
+     <style>
+        .qc-cmp-ui,
+        .qc-cmp-ui .qc-cmp-main-messaging,
+        .qc-cmp-ui .qc-cmp-messaging,
+        .qc-cmp-ui .qc-cmp-beta-messaging,
+        .qc-cmp-ui .qc-cmp-title,
+        .qc-cmp-ui .qc-cmp-sub-title,
+        .qc-cmp-ui .qc-cmp-purpose-info,
+        .qc-cmp-ui .qc-cmp-table,
+        .qc-cmp-ui .qc-cmp-table-header,
+        .qc-cmp-ui .qc-cmp-vendor-list,
+        .qc-cmp-ui .qc-cmp-vendor-list-title {
+            color: #a4adb4 !important;
+        }
+        .qc-cmp-ui a,
+        .qc-cmp-ui .qc-cmp-alt-action {
+          color: #a4adb4 !important;
+        }
+        .qc-cmp-small-toggle.qc-cmp-toggle-on,
+        .qc-cmp-toggle.qc-cmp-toggle-on {
+            background-color: #000000 !important;
+            border-color: #000000 !important;
+        }
+    </style>
+<script type="text/javascript" src="//d3s34vlfe7g7ew.cloudfront.net/dfpkvpush.js"></script> 
+
+<meta name="viewport" id="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+
+<link rel="icon" type="image/png" href="https://18d36c3e4ba3b1875186-e44bb3cee2f5b4ffb902dc91fba3134d.ssl.cf2.rackcdn.com/wrxicon2.png">
+<link rel="apple-touch-icon" href="https://18d36c3e4ba3b1875186-e44bb3cee2f5b4ffb902dc91fba3134d.ssl.cf2.rackcdn.com/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="57x57" href="https://18d36c3e4ba3b1875186-e44bb3cee2f5b4ffb902dc91fba3134d.ssl.cf2.rackcdn.com/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="https://18d36c3e4ba3b1875186-e44bb3cee2f5b4ffb902dc91fba3134d.ssl.cf2.rackcdn.com/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="https://18d36c3e4ba3b1875186-e44bb3cee2f5b4ffb902dc91fba3134d.ssl.cf2.rackcdn.com/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="https://18d36c3e4ba3b1875186-e44bb3cee2f5b4ffb902dc91fba3134d.ssl.cf2.rackcdn.com/apple-touch-icon-144x144.png" />
+
+<link rel="pingback" href="http://www.golfwrx.com/xmlrpc.php" />
+
+<meta property="og:description" content="Golf news, equipment, reviews, classifieds and discussion" />
+
+
+<script type="text/javascript" charset="utf-8">
+  //SWA: old method for background skin takeovers
+  function crazyWindowOpener(u){window.open(u);}
+  function rdmRevString() {
+    var l = 8;
+    var mask = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+    var result = '';
+    for (var i = l; i > 0; --i) result += mask[Math.floor(Math.random() * mask.length)];
+    return result;
+  };
+</script>
+
+<title>GolfWRX - Golf news, equipment, reviews, classifieds and discussion</title>
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="GolfWRX &raquo; Feed" href="http://www.golfwrx.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="GolfWRX &raquo; Comments Feed" href="http://www.golfwrx.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="GolfWRX &raquo; homepagezox1 Comments Feed" href="http://www.golfwrx.com/homepagezox1/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/www.golfwrx.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.8.3"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,56826,8203,55356,56819),0,0),c=j.toDataURL(),b!==c&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55358,56794,8205,9794,65039),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55358,56794,8203,9794,65039),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">	
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='wp-polls-css'  href='http://www.golfwrx.com/wp-content/plugins/wp-polls/polls-css.css?ver=2.63' type='text/css' media='all' />
+<link rel='stylesheet' id='mvp-custom-style-css'  href='//d3s34vlfe7g7ew.cloudfront.net/golfwrxstyle.css?ver=4.8.3' type='text/css' media='all' />
+<style id='mvp-custom-style-inline-css' type='text/css'>
+
+
+#mvp-wallpaper {
+	background: url() no-repeat 50% 0;
+	}
+
+#mvp-foot-copy a {
+	color: #0be6af;
+	}
+
+#mvp-content-main p a,
+.mvp-post-add-main p a {
+	box-shadow: inset 0 -4px 0 #0be6af;
+	}
+
+#mvp-content-main p a:hover,
+.mvp-post-add-main p a:hover {
+	background: #0be6af;
+	}
+
+a,
+a:visited,
+.post-info-name a,
+.woocommerce .woocommerce-breadcrumb a {
+	color: #ff005b;
+	}
+
+#mvp-side-wrap a:hover {
+	color: #ff005b;
+	}
+
+.mvp-fly-top:hover,
+.mvp-vid-box-wrap,
+ul.mvp-soc-mob-list li.mvp-soc-mob-com {
+	background: #0be6af;
+	}
+
+nav.mvp-fly-nav-menu ul li.menu-item-has-children:after,
+.mvp-feat1-left-wrap span.mvp-cd-cat,
+.mvp-widget-feat1-top-story span.mvp-cd-cat,
+.mvp-widget-feat2-left-cont span.mvp-cd-cat,
+.mvp-widget-dark-feat span.mvp-cd-cat,
+.mvp-widget-dark-sub span.mvp-cd-cat,
+.mvp-vid-wide-text span.mvp-cd-cat,
+.mvp-feat2-top-text span.mvp-cd-cat,
+.mvp-feat3-main-story span.mvp-cd-cat,
+.mvp-feat3-sub-text span.mvp-cd-cat,
+.mvp-feat4-main-text span.mvp-cd-cat,
+.woocommerce-message:before,
+.woocommerce-info:before,
+.woocommerce-message:before {
+	color: #0be6af;
+	}
+
+#searchform input,
+.mvp-authors-name {
+	border-bottom: 1px solid #0be6af;
+	}
+
+.mvp-fly-top:hover {
+	border-top: 1px solid #0be6af;
+	border-left: 1px solid #0be6af;
+	border-bottom: 1px solid #0be6af;
+	}
+
+.woocommerce .widget_price_filter .ui-slider .ui-slider-handle,
+.woocommerce #respond input#submit.alt,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce input.button.alt,
+.woocommerce #respond input#submit.alt:hover,
+.woocommerce a.button.alt:hover,
+.woocommerce button.button.alt:hover,
+.woocommerce input.button.alt:hover {
+	background-color: #0be6af;
+	}
+
+.woocommerce-error,
+.woocommerce-info,
+.woocommerce-message {
+	border-top-color: #0be6af;
+	}
+
+ul.mvp-feat1-list-buts li.active span.mvp-feat1-list-but,
+span.mvp-widget-home-title,
+span.mvp-post-cat,
+span.mvp-feat1-pop-head {
+	background: #ff005b;
+	}
+
+.woocommerce span.onsale {
+	background-color: #ff005b;
+	}
+
+.mvp-widget-feat2-side-more-but,
+.woocommerce .star-rating span:before,
+span.mvp-prev-next-label,
+.mvp-cat-date-wrap .sticky {
+	color: #ff005b !important;
+	}
+
+#mvp-main-nav-top,
+#mvp-fly-wrap,
+.mvp-soc-mob-right,
+#mvp-main-nav-small-cont {
+	background: #000000;
+	}
+
+#mvp-main-nav-small .mvp-fly-but-wrap span,
+#mvp-main-nav-small .mvp-search-but-wrap span,
+.mvp-nav-top-left .mvp-fly-but-wrap span,
+#mvp-fly-wrap .mvp-fly-but-wrap span {
+	background: #555555;
+	}
+
+.mvp-nav-top-right .mvp-nav-search-but,
+span.mvp-fly-soc-head,
+.mvp-soc-mob-right i,
+#mvp-main-nav-small span.mvp-nav-search-but,
+#mvp-main-nav-small .mvp-nav-menu ul li a  {
+	color: #555555;
+	}
+
+#mvp-main-nav-small .mvp-nav-menu ul li.menu-item-has-children a:after {
+	border-color: #555555 transparent transparent transparent;
+	}
+
+#mvp-nav-top-wrap span.mvp-nav-search-but:hover,
+#mvp-main-nav-small span.mvp-nav-search-but:hover {
+	color: #0be6af;
+	}
+
+#mvp-nav-top-wrap .mvp-fly-but-wrap:hover span,
+#mvp-main-nav-small .mvp-fly-but-wrap:hover span,
+span.mvp-woo-cart-num:hover {
+	background: #0be6af;
+	}
+
+#mvp-main-nav-bot-cont {
+	background: #ffffff;
+	}
+
+#mvp-nav-bot-wrap .mvp-fly-but-wrap span,
+#mvp-nav-bot-wrap .mvp-search-but-wrap span {
+	background: #000000;
+	}
+
+#mvp-nav-bot-wrap span.mvp-nav-search-but,
+#mvp-nav-bot-wrap .mvp-nav-menu ul li a {
+	color: #000000;
+	}
+
+#mvp-nav-bot-wrap .mvp-nav-menu ul li.menu-item-has-children a:after {
+	border-color: #000000 transparent transparent transparent;
+	}
+
+.mvp-nav-menu ul li:hover a {
+	border-bottom: 5px solid #0be6af;
+	}
+
+#mvp-nav-bot-wrap .mvp-fly-but-wrap:hover span {
+	background: #0be6af;
+	}
+
+#mvp-nav-bot-wrap span.mvp-nav-search-but:hover {
+	color: #0be6af;
+	}
+
+body,
+.mvp-feat1-feat-text p,
+.mvp-feat2-top-text p,
+.mvp-feat3-main-text p,
+.mvp-feat3-sub-text p,
+#searchform input,
+.mvp-author-info-text,
+span.mvp-post-excerpt,
+.mvp-nav-menu ul li ul.sub-menu li a,
+nav.mvp-fly-nav-menu ul li a,
+.mvp-ad-label,
+span.mvp-feat-caption,
+.mvp-post-tags a,
+.mvp-post-tags a:visited,
+span.mvp-author-box-name a,
+#mvp-author-box-text p,
+.mvp-post-gallery-text p,
+ul.mvp-soc-mob-list li span,
+#comments,
+h3#reply-title,
+h2.comments,
+#mvp-foot-copy p,
+span.mvp-fly-soc-head,
+.mvp-post-tags-header,
+span.mvp-prev-next-label,
+span.mvp-post-add-link-but,
+#mvp-comments-button a,
+#mvp-comments-button span.mvp-comment-but-text,
+.woocommerce ul.product_list_widget span.product-title,
+.woocommerce ul.product_list_widget li a,
+.woocommerce #reviews #comments ol.commentlist li .comment-text p.meta,
+.woocommerce div.product p.price,
+.woocommerce div.product p.price ins,
+.woocommerce div.product p.price del,
+.woocommerce ul.products li.product .price del,
+.woocommerce ul.products li.product .price ins,
+.woocommerce ul.products li.product .price,
+.woocommerce #respond input#submit,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button,
+.woocommerce .widget_price_filter .price_slider_amount .button,
+.woocommerce span.onsale,
+.woocommerce-review-link,
+#woo-content p.woocommerce-result-count,
+.woocommerce div.product .woocommerce-tabs ul.tabs li a,
+a.mvp-inf-more-but,
+span.mvp-cont-read-but,
+span.mvp-cd-cat,
+span.mvp-cd-date,
+.mvp-feat4-main-text p,
+span.mvp-woo-cart-num,
+span.mvp-widget-home-title2,
+.wp-caption,
+#mvp-content-main p.wp-caption-text,
+.gallery-caption,
+.mvp-post-add-main p.wp-caption-text,
+#bbpress-forums,
+#bbpress-forums p,
+.protected-post-form input {
+	font-family: 'Roboto', sans-serif;
+	}
+
+.mvp-blog-story-text p,
+span.mvp-author-page-desc,
+#mvp-404 p,
+.mvp-widget-feat1-bot-text p,
+.mvp-widget-feat2-left-text p,
+.mvp-flex-story-text p,
+.mvp-search-text p,
+#mvp-content-main p,
+.mvp-post-add-main p,
+.rwp-summary,
+.rwp-u-review__comment,
+.mvp-feat5-mid-main-text p,
+.mvp-feat5-small-main-text p {
+	font-family: 'Roboto', sans-serif;
+	}
+
+.mvp-nav-menu ul li a,
+#mvp-foot-menu ul li a {
+	font-family: 'Oswald', sans-serif;
+	}
+
+
+.mvp-feat1-sub-text h2,
+.mvp-feat1-pop-text h2,
+.mvp-feat1-list-text h2,
+.mvp-widget-feat1-top-text h2,
+.mvp-widget-feat1-bot-text h2,
+.mvp-widget-dark-feat-text h2,
+.mvp-widget-dark-sub-text h2,
+.mvp-widget-feat2-left-text h2,
+.mvp-widget-feat2-right-text h2,
+.mvp-blog-story-text h2,
+.mvp-flex-story-text h2,
+.mvp-vid-wide-more-text p,
+.mvp-prev-next-text p,
+.mvp-related-text,
+.mvp-post-more-text p,
+h2.mvp-authors-latest a,
+.mvp-feat2-bot-text h2,
+.mvp-feat3-sub-text h2,
+.mvp-feat3-main-text h2,
+.mvp-feat4-main-text h2,
+.mvp-feat5-text h2,
+.mvp-feat5-mid-main-text h2,
+.mvp-feat5-small-main-text h2,
+.mvp-feat5-mid-sub-text h2 {
+	font-family: 'Oswald', sans-serif;
+	}
+
+.mvp-feat2-top-text h2,
+.mvp-feat1-feat-text h2,
+h1.mvp-post-title,
+h1.mvp-post-title-wide,
+.mvp-drop-nav-title h4,
+#mvp-content-main blockquote p,
+.mvp-post-add-main blockquote p,
+#mvp-404 h1,
+#woo-content h1.page-title,
+.woocommerce div.product .product_title,
+.woocommerce ul.products li.product h3 {
+	font-family: 'Oswald', sans-serif;
+	}
+
+span.mvp-feat1-pop-head,
+.mvp-feat1-pop-text:before,
+span.mvp-feat1-list-but,
+span.mvp-widget-home-title,
+.mvp-widget-feat2-side-more,
+span.mvp-post-cat,
+span.mvp-page-head,
+h1.mvp-author-top-head,
+.mvp-authors-name,
+#mvp-content-main h1,
+#mvp-content-main h2,
+#mvp-content-main h3,
+#mvp-content-main h4,
+#mvp-content-main h5,
+#mvp-content-main h6,
+.woocommerce .related h2,
+.woocommerce div.product .woocommerce-tabs .panel h2,
+.woocommerce div.product .product_title,
+.mvp-feat5-side-list .mvp-feat1-list-img:after {
+	font-family: 'Roboto', sans-serif;
+	}
+
+	
+
+	#mvp-leader-wrap {
+		position: relative;
+		}
+	#mvp-site-main {
+		margin-top: 0;
+		}
+	#mvp-leader-wrap {
+		top: 0 !important;
+		}
+		
+
+	.mvp-nav-links {
+		display: none;
+		}
+		
+</style>
+<link rel='stylesheet' id='mvp-reset-css'  href='http://www.golfwrx.com/wp-content/themes/zox_news/css/reset.css?ver=4.8.3' type='text/css' media='all' />
+<link rel='stylesheet' id='fontawesome-css'  href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2?ver=4.8.3' type='text/css' media='all' />
+<link rel='stylesheet' id='mvp-fonts-css'  href='//fonts.googleapis.com/css?family=Advent+Pro%3A700%26subset%3Dlatin%2Clatin-ext%2Ccyrillic%2Ccyrillic-ext%2Cgreek-ext%2Cgreek%2Cvietnamese%7COpen+Sans%3A700%26subset%3Dlatin%2Clatin-ext%2Ccyrillic%2Ccyrillic-ext%2Cgreek-ext%2Cgreek%2Cvietnamese%7CAnton%3A400%26subset%3Dlatin%2Clatin-ext%2Ccyrillic%2Ccyrillic-ext%2Cgreek-ext%2Cgreek%2Cvietnamese%7COswald%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%26subset%3Dlatin%2Clatin-ext%2Ccyrillic%2Ccyrillic-ext%2Cgreek-ext%2Cgreek%2Cvietnamese%7COswald%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%26subset%3Dlatin%2Clatin-ext%2Ccyrillic%2Ccyrillic-ext%2Cgreek-ext%2Cgreek%2Cvietnamese%7CRoboto%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%26subset%3Dlatin%2Clatin-ext%2Ccyrillic%2Ccyrillic-ext%2Cgreek-ext%2Cgreek%2Cvietnamese%7CRoboto%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%26subset%3Dlatin%2Clatin-ext%2Ccyrillic%2Ccyrillic-ext%2Cgreek-ext%2Cgreek%2Cvietnamese%7CRoboto%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%26subset%3Dlatin%2Clatin-ext%2Ccyrillic%2Ccyrillic-ext%2Cgreek-ext%2Cgreek%2Cvietnamese%7COswald%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%26subset%3Dlatin%2Clatin-ext%2Ccyrillic%2Ccyrillic-ext%2Cgreek-ext%2Cgreek%2Cvietnamese' type='text/css' media='all' />
+<link rel='stylesheet' id='mvp-media-queries-css'  href='http://www.golfwrx.com/wp-content/themes/zox_news/css/media-queries.css?ver=4.8.3' type='text/css' media='all' />
+<link rel='stylesheet' id='lightboxStyle-css'  href='http://www.golfwrx.com/wp-content/plugins/lightbox-plus/css/shadowed/colorbox.css?ver=2.7' type='text/css' media='screen' />
+<script type='text/javascript' src='http://www.golfwrx.com/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='http://www.golfwrx.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var SafeCommentsAjax = {"ajaxurl":"http:\/\/www.golfwrx.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.golfwrx.com/wp-content/plugins/safe-report-comments/js/ajax.js?ver=4.8.3'></script>
+<link rel='https://api.w.org/' href='http://www.golfwrx.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.golfwrx.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.golfwrx.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.8.3" />
+<link rel="canonical" href="http://www.golfwrx.com/" />
+<link rel='shortlink' href='http://www.golfwrx.com/' />
+<link rel="alternate" type="application/json+oembed" href="http://www.golfwrx.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.golfwrx.com%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://www.golfwrx.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.golfwrx.com%2F&#038;format=xml" />
+<style type="text/css">
+.wp-polls .pollbar {
+	margin: 1px;
+	font-size: 8px;
+	line-height: 10px;
+	height: 10px;
+	background: #b50000;
+	border: 1px solid #cccccc;
+}
+</style>
+<meta name="generator" content="Powered by Visual Composer - drag and drop page builder for WordPress."/>
+<!--[if IE 8]><link rel="stylesheet" type="text/css" href="http://www.golfwrx.com/wp-content/plugins/js_composer/assets/css/vc-ie8.css" media="screen"><![endif]--><script type='text/javascript'>var _mmunch = {'front': false, 'page': false, 'post': false, 'category': false, 'author': false, 'search': false, 'attachment': false, 'tag': false};_mmunch['front'] = true;_mmunch['page'] = true; _mmunch['pageData'] = {"ID":478328,"post_name":"homepagezox1","post_title":"homepagezox1","post_type":"page","post_author":"8194","post_status":"publish"};</script><script data-cfasync="false" src="//s3.amazonaws.com/mailmunch/static/site.js" id="mailmunch-script" data-mailmunch-site-id="49128" async></script>
+
+  
+
+      <!-- normal everyday case -->
+    
+  
+  <!-- Begin comScore Tag -->
+  <script>
+    var _comscore = _comscore || [];
+    _comscore.push({ c1: "2", c2: "20631570" });
+    (function() {
+      var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+      s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+      el.parentNode.insertBefore(s, el);
+    })();
+  </script>
+  <noscript>
+    <img src="http://b.scorecardresearch.com/p?c1=2&c2=20631570&cv=2.0&cj=1" />
+  </noscript>
+  <!-- End comScore Tag -->
+  
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-362083-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+  
+  
+  
+  
+</head>
+<div id="skinSlot" style='margin:0px auto;'></div>  
+<body class="home page-template page-template-page-home page-template-page-home-php page page-id-478328 wpb-js-composer js-comp-ver-4.3.4 vc_responsive">
+	<div id="mvp-fly-wrap">
+	<div id="mvp-fly-menu-top" class="left relative">
+		<div class="mvp-fly-top-out left relative">
+			<div class="mvp-fly-top-in">
+				<div id="mvp-fly-logo" class="left relative">
+											<a href="http://www.golfwrx.com/"><img src="http://www.golfwrx.com/wp-content/uploads/2017/11/flat_logo_55tall.png" alt="GolfWRX" data-rjs="2" /></a>
+									</div><!--mvp-fly-logo-->
+			</div><!--mvp-fly-top-in-->
+			<div class="mvp-fly-but-wrap mvp-fly-but-menu mvp-fly-but-click">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div><!--mvp-fly-but-wrap-->
+		</div><!--mvp-fly-top-out-->
+	</div><!--mvp-fly-menu-top-->
+	<div id="mvp-fly-menu-wrap">
+		<nav class="mvp-fly-nav-menu left relative">
+			<div class="menu-secondary-right-menu-container"><ul id="menu-secondary-right-menu" class="menu"><li id="menu-item-478376" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-478376"><a href="//www.golfwrx.com">Home</a></li>
+<li id="menu-item-478366" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-478366"><a href="http://www.golfwrx.com/category/equipment/">Equipment</a></li>
+<li id="menu-item-478368" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-478368"><a href="http://www.golfwrx.com/category/instruction/">Instruction</a></li>
+<li id="menu-item-478380" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-478380"><a title="WITB" href="http://www.golfwrx.com/category/equipment/whats-in-the-bag-equipment/">WHATS IN THE BAG PICS</a></li>
+<li id="menu-item-478370" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-478370"><a href="http://www.golfwrx.com/category/news/tour-news/tour-photo-galleries/">Tour Photo Galleries</a></li>
+<li id="menu-item-478372" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-478372"><a href="http://www.golfwrx.com/category/19th-hole/">19th Hole</a></li>
+<li id="menu-item-478964" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-478964"><a href="http://www.golfwrx.com/category/opinion-and-analysis/podcasts/">Podcasts</a></li>
+<li id="menu-item-478386" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-478386"><a href="//www.golfwrx.com/forums/">Forums</a></li>
+<li id="menu-item-478394" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-478394"><a href="http://www.golfwrx.com/forums/forum/32-classifieds-for-sale-forum/">Classifieds</a></li>
+<li id="menu-item-478390" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-478390"><a href="//outfitted.golfwrx.com">Store</a></li>
+</ul></div>		</nav>
+	</div><!--mvp-fly-menu-wrap-->
+	<div id="mvp-fly-soc-wrap">
+		<span class="mvp-fly-soc-head">Connect with us</span>
+		<ul class="mvp-fly-soc-list left relative">
+							<li><a href="https://www.facebook.com/golfwrx" target="_blank" class="fa fa-facebook fa-2"></a></li>
+										<li><a href="https://twitter.com/golfwrx" target="_blank" class="fa fa-twitter fa-2"></a></li>
+													<li><a href="https://instagram.com/golfwrx" target="_blank" class="fa fa-instagram fa-2"></a></li>
+													<li><a href="https://www.youtube.com/OfficialGolfwrx" target="_blank" class="fa fa-youtube-play fa-2"></a></li>
+										<li><a href="https://www.linkedin.com/company/golfwrx.com" target="_blank" class="fa fa-linkedin fa-2"></a></li>
+								</ul>
+	</div><!--mvp-fly-soc-wrap-->
+</div><!--mvp-fly-wrap-->	<div id="mvp-site" class="left relative">
+		<div id="mvp-search-wrap">
+			<div id="mvp-search-box">
+				<form method="get" id="searchform" action="http://www.golfwrx.com/">
+	<input type="text" name="s" id="s" value="Search" onfocus='if (this.value == "Search") { this.value = ""; }' onblur='if (this.value == "") { this.value = "Search"; }' />
+	<input type="hidden" id="searchsubmit" value="Search" />
+</form>			</div><!--mvp-search-box-->
+			<div class="mvp-search-but-wrap mvp-search-click">
+				<span></span>
+				<span></span>
+			</div><!--mvp-search-but-wrap-->
+		</div><!--mvp-search-wrap-->
+				<div id="mvp-site-wall" class="left relative">
+			<!-- zzzzzzzzzzz: || mvp_post_layout: Template 1 || mvp_post_temp: -->				    <div id="mvp-leader-wrap">
+			<span class="mvp-ad-label">Advertisement</span>
+              <div class="ad-reporter-ahytrfg35423"> <!-- div for the chrome extension ads info grabber -->
+   <div id="topleaderSlot" style='margin:5px auto;'></div>  
+   </div>
+					    				    </div><!--mvp-leader-wrap-->
+										<div id="mvp-site-main" class="left relative">
+			<header id="mvp-main-head-wrap" class="left relative">
+									<nav id="mvp-main-nav-wrap" class="left relative">
+						<div id="mvp-main-nav-top" class="left relative">
+							<div class="mvp-main-box">
+								<div id="mvp-nav-top-wrap" class="left relative">
+									<div class="mvp-nav-top-right-out left relative">
+										<div class="mvp-nav-top-right-in">
+											<div class="mvp-nav-top-cont left relative">
+												<div class="mvp-nav-top-left-out relative">
+													<div class="mvp-nav-top-left">
+														<div class="mvp-nav-soc-wrap">
+																															<a href="https://www.facebook.com/golfwrx" target="_blank"><span class="mvp-nav-soc-but fa fa-facebook fa-2"></span></a>
+																																														<a href="https://twitter.com/golfwrx" target="_blank"><span class="mvp-nav-soc-but fa fa-twitter fa-2"></span></a>
+																																														<a href="https://instagram.com/golfwrx" target="_blank"><span class="mvp-nav-soc-but fa fa-instagram fa-2"></span></a>
+																																														<a href="https://www.youtube.com/OfficialGolfwrx" target="_blank"><span class="mvp-nav-soc-but fa fa-youtube-play fa-2"></span></a>
+																													</div><!--mvp-nav-soc-wrap-->
+														<div class="mvp-fly-but-wrap mvp-fly-but-click left relative">
+															<span></span>
+															<span></span>
+															<span></span>
+															<span></span>
+														</div><!--mvp-fly-but-wrap-->
+													</div><!--mvp-nav-top-left-->
+													<div class="mvp-nav-top-left-in">
+														<div class="mvp-nav-top-mid left relative" itemscope itemtype="http://schema.org/Organization">
+																															<a class="mvp-nav-logo-reg" itemprop="url" href="http://www.golfwrx.com/"><img itemprop="logo" src="http://www.golfwrx.com/wp-content/uploads/2017/11/flat_logo_168_r90.png" alt="GolfWRX" data-rjs="2" /></a>
+																																														<a class="mvp-nav-logo-small" href="http://www.golfwrx.com/"><img src="http://www.golfwrx.com/wp-content/uploads/2017/11/flat_logo_55tall.png" alt="GolfWRX" data-rjs="2" /></a>
+																																														<h1 class="mvp-logo-title">GolfWRX</h1>
+																																												</div><!--mvp-nav-top-mid-->
+													</div><!--mvp-nav-top-left-in-->
+												</div><!--mvp-nav-top-left-out-->
+											</div><!--mvp-nav-top-cont-->
+										</div><!--mvp-nav-top-right-in-->
+										<div class="mvp-nav-top-right">
+																						<span class="mvp-nav-search-but fa fa-search fa-2 mvp-search-click"></span>
+										</div><!--mvp-nav-top-right-->
+									</div><!--mvp-nav-top-right-out-->
+								</div><!--mvp-nav-top-wrap-->
+							</div><!--mvp-main-box-->
+						</div><!--mvp-main-nav-top-->
+						<div id="mvp-main-nav-bot" class="left relative">
+							<div id="mvp-main-nav-bot-cont" class="left">
+								<div class="mvp-main-box">
+									<div id="mvp-nav-bot-wrap" class="left">
+										<div class="mvp-nav-bot-right-out left">
+											<div class="mvp-nav-bot-right-in">
+												<div class="mvp-nav-bot-cont left">
+													<div class="mvp-nav-bot-left-out">
+														<div class="mvp-nav-bot-left left relative">
+															<div class="mvp-fly-but-wrap mvp-fly-but-click left relative">
+																<span></span>
+																<span></span>
+																<span></span>
+																<span></span>
+															</div><!--mvp-fly-but-wrap-->
+														</div><!--mvp-nav-bot-left-->
+														<div class="mvp-nav-bot-left-in">
+															<div class="mvp-nav-menu left">
+																<div class="menu-main-menu-container"><ul id="menu-main-menu" class="menu"><li id="menu-item-281541" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-281541"><a href="http://www.golfwrx.com/category/news/">News</a>
+<ul  class="sub-menu">
+	<li id="menu-item-4987" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4987"><a title="news" href="http://www.golfwrx.com/category/news/">Tour</a></li>
+	<li id="menu-item-478586" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-478586"><a href="http://www.golfwrx.com/category/opinion-and-analysis/">Opinion &#038; Analysis</a></li>
+	<li id="menu-item-478962" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-478962"><a href="http://www.golfwrx.com/category/opinion-and-analysis/podcasts/">Podcasts</a></li>
+</ul>
+</li>
+<li id="menu-item-16165" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16165"><a title="Equipment News" href="http://www.golfwrx.com/category/equipment/">Equipment</a></li>
+<li id="menu-item-236149" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-236149"><a href="http://www.golfwrx.com/category/instruction/">Instruction</a>
+<ul  class="sub-menu">
+	<li id="menu-item-393130" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-393130"><a href="http://www.golfwrx.com/category/instruction/">Instruction</a></li>
+	<li id="menu-item-393126" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-393126"><a href="http://www.golfwrx.com/category/videos/">Videos</a></li>
+</ul>
+</li>
+<li id="menu-item-478444" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-478444"><a href="http://www.golfwrx.com/category/equipment/whats-in-the-bag-equipment/">Whats in the Bag</a></li>
+<li id="menu-item-5023" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5023"><a title="  Forums" href="http://www.golfwrx.com/forums/">Forums</a>
+<ul  class="sub-menu">
+	<li id="menu-item-5025" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5025"><a href="http://www.golfwrx.com/forums/">Main Forum Index</a></li>
+	<li id="menu-item-5027" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5027"><a href="http://www.golfwrx.com/forums/forum/22-tour-and-pre-release-equipment/">Tour &#038; Pre-Release</a></li>
+	<li id="menu-item-5029" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5029"><a href="http://www.golfwrx.com/forums/forum/4-equipment/">Equipment Forum</a>
+	<ul  class="sub-menu">
+		<li id="menu-item-109492" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-109492"><a href="http://www.golfwrx.com/forums/forum/4-equipment/">Main Equipment Forum</a></li>
+		<li id="menu-item-5031" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5031"><a href="http://www.golfwrx.com/forums/forum/236-golfballs/">Golf Balls</a></li>
+		<li id="menu-item-5033" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5033"><a href="http://www.golfwrx.com/forums/forum/239-gpsrange-findersmobile-apps/">GPS/Range Finders/Mobile Apps</a></li>
+		<li id="menu-item-5037" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5037"><a href="http://www.golfwrx.com/forums/forum/26-putters/">Putters</a></li>
+		<li id="menu-item-5039" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5039"><a href="http://www.golfwrx.com/forums/forum/49-pga-witb-and-tournament-pics/">PGA WITB and Tournament Photos</a></li>
+		<li id="menu-item-5045" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5045"><a href="http://www.golfwrx.com/forums/forum/27-whats-in-the-bag-photo-edition/">Member What&#8217;s in the Bag Photos</a></li>
+	</ul>
+</li>
+	<li id="menu-item-5047" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5047"><a href="http://www.golfwrx.com/forums/forum/7-the-wrx-clubmaking-shop/">Clubmaking</a></li>
+	<li id="menu-item-5049" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5049"><a href="http://www.golfwrx.com/forums/forum/42-golf-style-and-fashion-shoes-clothes-etc/">Golf Style and Fashion</a></li>
+	<li id="menu-item-5051" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5051"><a href="http://www.golfwrx.com/forums/forum/5-tour-talk/">Tour Talk</a></li>
+	<li id="menu-item-5053" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5053"><a href="http://www.golfwrx.com/forums/forum/240-general-golf-talk/">General Golf Talk</a>
+	<ul  class="sub-menu">
+		<li id="menu-item-5055" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5055"><a href="http://www.golfwrx.com/forums/forum/52-juniorscollege-golf-talk/">Juniors &#038; College Golf Talk</a></li>
+		<li id="menu-item-5057" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5057"><a href="http://www.golfwrx.com/forums/forum/18-the-19th-hole/">19th Hole- Off Topic</a></li>
+	</ul>
+</li>
+	<li id="menu-item-5059" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5059"><a href="http://www.golfwrx.com/forums/forum/6-instruction-%26-academy/">Instruction</a></li>
+	<li id="menu-item-5061" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5061"><a href="http://www.golfwrx.com/forums/forum/135-courses-memberships-and-travel/">Courses &#038; Travel</a></li>
+	<li id="menu-item-5063" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5063"><a href="http://www.golfwrx.com/forums/forum/32-classifieds-for-sale-forum/">Classifieds Buy, Sell &#038; Trade</a></li>
+	<li id="menu-item-5065" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5065"><a href="http://www.golfwrx.com/forums/forum/34-deal-or-no-deal/">Real or Fake? Experts Advise</a></li>
+</ul>
+</li>
+<li id="menu-item-15039" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-15039"><a title="Classifieds" href="http://www.golfwrx.com/forums/forum/32-classifieds-for-sale-forum/">Classifieds</a>
+<ul  class="sub-menu">
+	<li id="menu-item-37115" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-37115"><a href="http://www.golfwrx.com/forums/forum/32-classifieds-for-sale-forum/">For Sale</a></li>
+	<li id="menu-item-37113" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-37113"><a href="http://www.golfwrx.com/forums/forum/246-golfwrx-mall-of-pro-shops/">Marketplace</a></li>
+	<li id="menu-item-61861" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-61861"><a href="http://outfitted.golfwrx.com">Official Store</a></li>
+</ul>
+</li>
+</ul></div>															</div><!--mvp-nav-menu-->
+														</div><!--mvp-nav-bot-left-in-->
+													</div><!--mvp-nav-bot-left-out-->
+												</div><!--mvp-nav-bot-cont-->
+											</div><!--mvp-nav-bot-right-in-->
+											<div class="mvp-nav-bot-right left relative">
+												<span class="mvp-nav-search-but fa fa-search fa-2 mvp-search-click"></span>
+											</div><!--mvp-nav-bot-right-->
+										</div><!--mvp-nav-bot-right-out-->
+									</div><!--mvp-nav-bot-wrap-->
+								</div><!--mvp-main-nav-bot-cont-->
+							</div><!--mvp-main-box-->
+						</div><!--mvp-main-nav-bot-->
+					</nav><!--mvp-main-nav-wrap-->
+							</header><!--mvp-main-head-wrap-->
+			<div id="mvp-main-body-wrap" class="left relative">		<div class="mvp-main-box">
+		<section id="mvp-feat1-wrap" class="left relative">
+			<div class="mvp-feat1-right-out left relative">
+				<div class="mvp-feat1-right-in">
+					<div class="mvp-feat1-main left relative">
+						<div class="mvp-feat1-left-wrap relative">
+															<a href="http://www.golfwrx.com/485180/callaway-launches-new-rogue-rogue-sub-zero-and-rogue-draw-drivers-and-fairway-woods/" rel="bookmark">
+								<div class="mvp-feat1-feat-wrap left relative">
+									<div class="mvp-feat1-feat-img left relative">
+																					<img width="560" height="600" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/CallawayRogueRogueSubZeroGolfWRX-560x600.jpg" class="attachment-mvp-port-thumb size-mvp-port-thumb wp-post-image" alt="" />																													</div><!--mvp-feat1-feat-img-->
+									<div class="mvp-feat1-feat-text left relative">
+										<div class="mvp-cat-date-wrap left relative">
+											<span class="mvp-cd-cat left relative">Equipment</span><span class="mvp-cd-date left relative">54 mins ago</span>
+										</div><!--mvp-cat-date-wrap-->
+																					<h2 class="mvp-stand-title">Callaway launches new Rogue, Rogue Sub Zero and Rogue Draw drivers, and fairway woods</h2>
+																				<p>With its Jailbreak technology, Callaway&#8217;s GBB Epic drivers were the No. 1-selling drivers in the United States in 2017; actually,...</p>
+									</div><!--mvp-feat1-feat-text-->
+								</div><!--mvp-feat1-feat-wrap-->
+								</a>
+														<div class="mvp-feat1-sub-wrap left relative">
+																	<a href="http://www.golfwrx.com/485138/mondays-photos-from-the-2018-careerbuilder-challenge/" rel="bookmark">
+									<div class="mvp-feat1-sub-cont left relative">
+										<div class="mvp-feat1-sub-img left relative">
+																							<img width="590" height="354" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/BettinardiHexperimental-590x354.jpg" class="mvp-reg-img wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/BettinardiHexperimental-590x354.jpg 590w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/BettinardiHexperimental-1000x600.jpg 1000w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/BettinardiHexperimental-400x240.jpg 400w" sizes="(max-width: 590px) 100vw, 590px" />												<img width="400" height="240" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/BettinardiHexperimental-400x240.jpg" class="mvp-mob-img wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/BettinardiHexperimental-400x240.jpg 400w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/BettinardiHexperimental-1000x600.jpg 1000w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/BettinardiHexperimental-590x354.jpg 590w" sizes="(max-width: 400px) 100vw, 400px" />																																		<div class="mvp-vid-box-wrap">
+													<i class="fa fa-2 fa-camera" aria-hidden="true"></i>
+												</div><!--mvp-vid-box-wrap-->
+																					</div><!--mvp-feat1-sub-img-->
+										<div class="mvp-feat1-sub-text">
+											<div class="mvp-cat-date-wrap left relative">
+												<span class="mvp-cd-cat left relative">Popular Photo Galleries</span><span class="mvp-cd-date left relative">12 hours ago</span>
+											</div><!--mvp-cat-date-wrap-->
+											<h2>Monday&#8217;s Photos from the 2018 CareerBuilder Challenge</h2>
+										</div><!--mvp-feat1-sub-text-->
+									</div><!--mvp-feat1-sub-cont-->
+									</a>
+																	<a href="http://www.golfwrx.com/485054/ping-launches-new-g400-max-driver-the-most-forgiving-driver-in-golf/" rel="bookmark">
+									<div class="mvp-feat1-sub-cont left relative">
+										<div class="mvp-feat1-sub-img left relative">
+																							<img width="590" height="354" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/3f7afd6f151ce257a364defae6953347-590x354.jpg" class="mvp-reg-img wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/3f7afd6f151ce257a364defae6953347-590x354.jpg 590w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/3f7afd6f151ce257a364defae6953347-1000x600.jpg 1000w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/3f7afd6f151ce257a364defae6953347-400x240.jpg 400w" sizes="(max-width: 590px) 100vw, 590px" />												<img width="400" height="240" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/3f7afd6f151ce257a364defae6953347-400x240.jpg" class="mvp-mob-img wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/3f7afd6f151ce257a364defae6953347-400x240.jpg 400w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/3f7afd6f151ce257a364defae6953347-1000x600.jpg 1000w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/3f7afd6f151ce257a364defae6953347-590x354.jpg 590w" sizes="(max-width: 400px) 100vw, 400px" />																																</div><!--mvp-feat1-sub-img-->
+										<div class="mvp-feat1-sub-text">
+											<div class="mvp-cat-date-wrap left relative">
+												<span class="mvp-cd-cat left relative">Equipment</span><span class="mvp-cd-date left relative">17 hours ago</span>
+											</div><!--mvp-cat-date-wrap-->
+											<h2>Ping launches new G400 Max driver, the &#8220;most forgiving driver in golf&#8221;</h2>
+										</div><!--mvp-feat1-sub-text-->
+									</div><!--mvp-feat1-sub-cont-->
+									</a>
+															</div><!--mvp-feat1-sub-wrap-->
+						</div><!--mvp-feat1-left-wrap-->
+						<div class="mvp-feat1-mid-wrap left relative">
+							<h3 class="mvp-feat1-pop-head"><span class="mvp-feat1-pop-head">Trending</span></h3>
+							<div class="mvp-feat1-pop-wrap left relative">
+																	<a href="http://www.golfwrx.com/483160/taylormade-launches-m3-and-m4-drivers-that-have-a-twist-face/" rel="bookmark">
+									<div class="mvp-feat1-pop-cont left relative">
+																					<div class="mvp-feat1-pop-img left relative">
+												<img width="400" height="240" src="http://wpmediars.golfwrx.com/wp-content/uploads/2017/12/TaylormadeM3M4twistFaceWRX-400x240.jpg" class="mvp-reg-img wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2017/12/TaylormadeM3M4twistFaceWRX-400x240.jpg 400w, http://wpmediars.golfwrx.com/wp-content/uploads/2017/12/TaylormadeM3M4twistFaceWRX-1000x600.jpg 1000w, http://wpmediars.golfwrx.com/wp-content/uploads/2017/12/TaylormadeM3M4twistFaceWRX-590x354.jpg 590w" sizes="(max-width: 400px) 100vw, 400px" />												<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2017/12/TaylormadeM3M4twistFaceWRX-80x80.jpg" class="mvp-mob-img wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2017/12/TaylormadeM3M4twistFaceWRX-80x80.jpg 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2017/12/TaylormadeM3M4twistFaceWRX-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px" />																							</div><!--mvp-feat1-pop-img-->
+																				<div class="mvp-feat1-pop-text left relative">
+											<div class="mvp-cat-date-wrap left relative">
+												<span class="mvp-cd-cat left relative">Equipment</span><span class="mvp-cd-date left relative">2 weeks ago</span>
+											</div><!--mvp-cat-date-wrap-->
+											<h2>TaylorMade launches M3 and M4 drivers that have a &#8220;Twist Face&#8221;</h2>
+										</div><!--mvp-feat1-pop-text-->
+									</div><!--mvp-feat1-pop-cont-->
+									</a>
+																	<a href="http://www.golfwrx.com/483540/that-one-time-dustin-johnson-got-super-protective-over-his-m3-weight-setup/" rel="bookmark">
+									<div class="mvp-feat1-pop-cont left relative">
+																					<div class="mvp-feat1-pop-img left relative">
+												<img width="400" height="240" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/DustinJohnsonM3driverweights-400x240.jpg" class="mvp-reg-img wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/DustinJohnsonM3driverweights-400x240.jpg 400w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/DustinJohnsonM3driverweights-1000x600.jpg 1000w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/DustinJohnsonM3driverweights-590x354.jpg 590w" sizes="(max-width: 400px) 100vw, 400px" />												<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/DustinJohnsonM3driverweights-80x80.jpg" class="mvp-mob-img wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/DustinJohnsonM3driverweights-80x80.jpg 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/DustinJohnsonM3driverweights-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px" />																							</div><!--mvp-feat1-pop-img-->
+																				<div class="mvp-feat1-pop-text left relative">
+											<div class="mvp-cat-date-wrap left relative">
+												<span class="mvp-cd-cat left relative">Equipment</span><span class="mvp-cd-date left relative">2 weeks ago</span>
+											</div><!--mvp-cat-date-wrap-->
+											<h2>That one time Dustin Johnson got super protective over his M3 weight setup</h2>
+										</div><!--mvp-feat1-pop-text-->
+									</div><!--mvp-feat1-pop-cont-->
+									</a>
+																	<a href="http://www.golfwrx.com/484588/michael-breed-explains-why-he-really-left-the-golf-channel/" rel="bookmark">
+									<div class="mvp-feat1-pop-cont left relative">
+																					<div class="mvp-feat1-pop-img left relative">
+												<img width="400" height="240" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/MichaelBreedGolfWRX-400x240.png" class="mvp-reg-img wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/MichaelBreedGolfWRX-400x240.png 400w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/MichaelBreedGolfWRX-1000x600.png 1000w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/MichaelBreedGolfWRX-590x354.png 590w" sizes="(max-width: 400px) 100vw, 400px" />												<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/MichaelBreedGolfWRX-80x80.png" class="mvp-mob-img wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/MichaelBreedGolfWRX-80x80.png 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/MichaelBreedGolfWRX-150x150.png 150w" sizes="(max-width: 80px) 100vw, 80px" />																							</div><!--mvp-feat1-pop-img-->
+																				<div class="mvp-feat1-pop-text left relative">
+											<div class="mvp-cat-date-wrap left relative">
+												<span class="mvp-cd-cat left relative">Podcasts</span><span class="mvp-cd-date left relative">6 days ago</span>
+											</div><!--mvp-cat-date-wrap-->
+											<h2>Michael Breed explains why he really left The Golf Channel</h2>
+										</div><!--mvp-feat1-pop-text-->
+									</div><!--mvp-feat1-pop-cont-->
+									</a>
+																	<a href="http://www.golfwrx.com/483428/spotted-callaway-rogue-and-rogue-pro-irons/" rel="bookmark">
+									<div class="mvp-feat1-pop-cont left relative">
+																					<div class="mvp-feat1-pop-img left relative">
+												<img width="400" height="240" src="http://wpmediars.golfwrx.com/wp-content/uploads/2017/12/CallawayRogueIrons-400x240.jpg" class="mvp-reg-img wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2017/12/CallawayRogueIrons-400x240.jpg 400w, http://wpmediars.golfwrx.com/wp-content/uploads/2017/12/CallawayRogueIrons-1000x600.jpg 1000w, http://wpmediars.golfwrx.com/wp-content/uploads/2017/12/CallawayRogueIrons-590x354.jpg 590w" sizes="(max-width: 400px) 100vw, 400px" />												<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2017/12/CallawayRogueIrons-80x80.jpg" class="mvp-mob-img wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2017/12/CallawayRogueIrons-80x80.jpg 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2017/12/CallawayRogueIrons-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px" />																							</div><!--mvp-feat1-pop-img-->
+																				<div class="mvp-feat1-pop-text left relative">
+											<div class="mvp-cat-date-wrap left relative">
+												<span class="mvp-cd-cat left relative">Equipment</span><span class="mvp-cd-date left relative">2 weeks ago</span>
+											</div><!--mvp-cat-date-wrap-->
+											<h2>SPOTTED: Callaway Rogue and Rogue Pro irons</h2>
+										</div><!--mvp-feat1-pop-text-->
+									</div><!--mvp-feat1-pop-cont-->
+									</a>
+																	<a href="http://www.golfwrx.com/484630/photos-from-the-2018-sony-open-in-hawaii/" rel="bookmark">
+									<div class="mvp-feat1-pop-cont left relative">
+																					<div class="mvp-feat1-pop-img left relative">
+												<img width="400" height="240" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/6a140d9caef77fc078bc9518bb62f4d7-1-400x240.jpg" class="mvp-reg-img wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/6a140d9caef77fc078bc9518bb62f4d7-1-400x240.jpg 400w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/6a140d9caef77fc078bc9518bb62f4d7-1-1000x600.jpg 1000w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/6a140d9caef77fc078bc9518bb62f4d7-1-590x354.jpg 590w" sizes="(max-width: 400px) 100vw, 400px" />												<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/6a140d9caef77fc078bc9518bb62f4d7-1-80x80.jpg" class="mvp-mob-img wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/6a140d9caef77fc078bc9518bb62f4d7-1-80x80.jpg 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/6a140d9caef77fc078bc9518bb62f4d7-1-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px" />																									<div class="mvp-vid-box-wrap mvp-vid-box-mid">
+														<i class="fa fa-2 fa-camera" aria-hidden="true"></i>
+													</div><!--mvp-vid-box-wrap-->
+																							</div><!--mvp-feat1-pop-img-->
+																				<div class="mvp-feat1-pop-text left relative">
+											<div class="mvp-cat-date-wrap left relative">
+												<span class="mvp-cd-cat left relative">Popular Photo Galleries</span><span class="mvp-cd-date left relative">5 days ago</span>
+											</div><!--mvp-cat-date-wrap-->
+											<h2>Photos from the 2018 Sony Open in Hawaii</h2>
+										</div><!--mvp-feat1-pop-text-->
+									</div><!--mvp-feat1-pop-cont-->
+									</a>
+															</div><!--mvp-feat1-pop-wrap-->
+						</div><!--mvp-feat1-mid-wrap-->
+					</div><!--mvp-feat1-main-->
+				</div><!--mvp-feat1-right-in-->
+				<div class="mvp-feat1-right-wrap left relative">
+					          						<div class="mvp-feat1-list-ad left relative">
+							<span class="mvp-ad-label">Advertisement</span>
+              <div class="ad-reporter-ahytrfg35423">  <!-- div for the chrome extension ads info grabber -->
+        <div id="toprightSlot"></div>
+        </div>
+													</div><!--mvp-feat1-list-ad-->
+										<div class="mvp-feat1-list-wrap left relative">
+						<div class="mvp-feat1-list-head-wrap left relative">
+							<ul class="mvp-feat1-list-buts left relative">
+								<li class="mvp-feat-col-tab"><a href="#mvp-feat-tab-col1"><span class="mvp-feat1-list-but">Latest</span></a></li>
+																	<li><a href="#mvp-feat-tab-col2"><span class="mvp-feat1-list-but">Videos</span></a></li>
+																									<li><a href="#mvp-feat-tab-col3"><span class="mvp-feat1-list-but">Galleries</span></a></li>
+															</ul>
+						</div><!--mvp-feat1-list-head-wrap-->
+						<div id="mvp-feat-tab-col1" class="mvp-feat1-list left relative mvp-tab-col-cont">
+															<a href="http://www.golfwrx.com/485088/final-round-coverage-of-sony-open-not-surprisingly-affected-by-strike/" rel="bookmark">
+								<div class="mvp-feat1-list-cont left relative">
+																			<div class="mvp-feat1-list-out relative">
+											<div class="mvp-feat1-list-img left relative">
+												<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/iTunesArtwork-512@3x-80x80.png" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/iTunesArtwork-512@3x-80x80.png 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/iTunesArtwork-512@3x-150x150.png 150w" sizes="(max-width: 80px) 100vw, 80px" />											</div><!--mvp-feat1-list-img-->
+											<div class="mvp-feat1-list-in">
+												<div class="mvp-feat1-list-text">
+													<div class="mvp-cat-date-wrap left relative">
+														<span class="mvp-cd-cat left relative">News</span><span class="mvp-cd-date left relative">10 hours ago</span>
+													</div><!--mvp-cat-date-wrap-->
+													<h2>Final-round coverage of Sony Open not surprisingly affected by strike</h2>
+												</div><!--mvp-feat1-list-text-->
+											</div><!--mvp-feat1-list-in-->
+										</div><!--mvp-feat1-list-out-->
+																	</div><!--mvp-feat1-list-cont-->
+								</a>
+															<a href="http://www.golfwrx.com/485108/pings-new-glide-2-0-stealth-wedges-and-vault-2-0-putters/" rel="bookmark">
+								<div class="mvp-feat1-list-cont left relative">
+																			<div class="mvp-feat1-list-out relative">
+											<div class="mvp-feat1-list-img left relative">
+												<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/PingStealthVault2.0-80x80.jpg" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/PingStealthVault2.0-80x80.jpg 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/PingStealthVault2.0-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px" />											</div><!--mvp-feat1-list-img-->
+											<div class="mvp-feat1-list-in">
+												<div class="mvp-feat1-list-text">
+													<div class="mvp-cat-date-wrap left relative">
+														<span class="mvp-cd-cat left relative">Equipment</span><span class="mvp-cd-date left relative">13 hours ago</span>
+													</div><!--mvp-cat-date-wrap-->
+													<h2>Ping&#8217;s new Glide 2.0 &#8220;Stealth&#8221; wedges, and Vault 2.0 putters</h2>
+												</div><!--mvp-feat1-list-text-->
+											</div><!--mvp-feat1-list-in-->
+										</div><!--mvp-feat1-list-out-->
+																	</div><!--mvp-feat1-list-cont-->
+								</a>
+															<a href="http://www.golfwrx.com/484704/tour-rundown-europe-storms-back-kizzire-takes-trophy-in-a-marathon-playoff/" rel="bookmark">
+								<div class="mvp-feat1-list-cont left relative">
+																			<div class="mvp-feat1-list-out relative">
+											<div class="mvp-feat1-list-img left relative">
+												<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/PattonKizzireSonyOpen-80x80.jpg" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/PattonKizzireSonyOpen-80x80.jpg 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/PattonKizzireSonyOpen-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px" />											</div><!--mvp-feat1-list-img-->
+											<div class="mvp-feat1-list-in">
+												<div class="mvp-feat1-list-text">
+													<div class="mvp-cat-date-wrap left relative">
+														<span class="mvp-cd-cat left relative">Tour News</span><span class="mvp-cd-date left relative">16 hours ago</span>
+													</div><!--mvp-cat-date-wrap-->
+													<h2>Tour Rundown: Europe storms back, Kizzire takes trophy in a marathon playoff</h2>
+												</div><!--mvp-feat1-list-text-->
+											</div><!--mvp-feat1-list-in-->
+										</div><!--mvp-feat1-list-out-->
+																	</div><!--mvp-feat1-list-cont-->
+								</a>
+															<a href="http://www.golfwrx.com/485072/pings-new-g700-irons-are-its-longest-highest-flying-irons-ever/" rel="bookmark">
+								<div class="mvp-feat1-list-cont left relative">
+																			<div class="mvp-feat1-list-out relative">
+											<div class="mvp-feat1-list-img left relative">
+												<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/PingG700irons-80x80.jpg" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/PingG700irons-80x80.jpg 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/PingG700irons-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px" />											</div><!--mvp-feat1-list-img-->
+											<div class="mvp-feat1-list-in">
+												<div class="mvp-feat1-list-text">
+													<div class="mvp-cat-date-wrap left relative">
+														<span class="mvp-cd-cat left relative">Equipment</span><span class="mvp-cd-date left relative">17 hours ago</span>
+													</div><!--mvp-cat-date-wrap-->
+													<h2>Ping&#8217;s new G700 irons are its &#8220;longest, highest flying&#8221; irons ever</h2>
+												</div><!--mvp-feat1-list-text-->
+											</div><!--mvp-feat1-list-in-->
+										</div><!--mvp-feat1-list-out-->
+																	</div><!--mvp-feat1-list-cont-->
+								</a>
+															<a href="http://www.golfwrx.com/485012/patton-kizzires-winning-witb-2018-sony-open-in-hawaii/" rel="bookmark">
+								<div class="mvp-feat1-list-cont left relative">
+																			<div class="mvp-feat1-list-out relative">
+											<div class="mvp-feat1-list-img left relative">
+												<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/PattonKizzireWinningWITB-80x80.jpg" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/PattonKizzireWinningWITB-80x80.jpg 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/PattonKizzireWinningWITB-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px" />											</div><!--mvp-feat1-list-img-->
+											<div class="mvp-feat1-list-in">
+												<div class="mvp-feat1-list-text">
+													<div class="mvp-cat-date-wrap left relative">
+														<span class="mvp-cd-cat left relative">pga tour</span><span class="mvp-cd-date left relative">1 day ago</span>
+													</div><!--mvp-cat-date-wrap-->
+													<h2>Patton Kizzire&#8217;s Winning WITB: 2018 Sony Open in Hawaii</h2>
+												</div><!--mvp-feat1-list-text-->
+											</div><!--mvp-feat1-list-in-->
+										</div><!--mvp-feat1-list-out-->
+																	</div><!--mvp-feat1-list-cont-->
+								</a>
+															<a href="http://www.golfwrx.com/484210/how-far-away-from-the-ball-should-you-be-at-address/" rel="bookmark">
+								<div class="mvp-feat1-list-cont left relative">
+																			<div class="mvp-feat1-list-out relative">
+											<div class="mvp-feat1-list-img left relative">
+												<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/How-Far-From-The-Ball-Thumb-80x80.jpg" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/How-Far-From-The-Ball-Thumb-80x80.jpg 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/How-Far-From-The-Ball-Thumb-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px" />											</div><!--mvp-feat1-list-img-->
+											<div class="mvp-feat1-list-in">
+												<div class="mvp-feat1-list-text">
+													<div class="mvp-cat-date-wrap left relative">
+														<span class="mvp-cd-cat left relative">Instruction</span><span class="mvp-cd-date left relative">2 days ago</span>
+													</div><!--mvp-cat-date-wrap-->
+													<h2>How Far Away from the Ball Should You Be at Address?</h2>
+												</div><!--mvp-feat1-list-text-->
+											</div><!--mvp-feat1-list-in-->
+										</div><!--mvp-feat1-list-out-->
+																	</div><!--mvp-feat1-list-cont-->
+								</a>
+															<a href="http://www.golfwrx.com/484978/rory-mcilroy-reveals-heart-problem-says-its-not-a-big-deal/" rel="bookmark">
+								<div class="mvp-feat1-list-cont left relative">
+																			<div class="mvp-feat1-list-out relative">
+											<div class="mvp-feat1-list-img left relative">
+												<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/GettyImages-841866424-1-80x80.jpg" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/GettyImages-841866424-1-80x80.jpg 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/GettyImages-841866424-1-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px" />											</div><!--mvp-feat1-list-img-->
+											<div class="mvp-feat1-list-in">
+												<div class="mvp-feat1-list-text">
+													<div class="mvp-cat-date-wrap left relative">
+														<span class="mvp-cd-cat left relative">News</span><span class="mvp-cd-date left relative">2 days ago</span>
+													</div><!--mvp-cat-date-wrap-->
+													<h2>Rory McIlroy reveals heart problem, says it&#8217;s not a big deal</h2>
+												</div><!--mvp-feat1-list-text-->
+											</div><!--mvp-feat1-list-in-->
+										</div><!--mvp-feat1-list-out-->
+																	</div><!--mvp-feat1-list-cont-->
+								</a>
+															<a href="http://www.golfwrx.com/479618/tour-pros-revealed-3-tests-to-see-how-you-stack-up/" rel="bookmark">
+								<div class="mvp-feat1-list-cont left relative">
+																			<div class="mvp-feat1-list-out relative">
+											<div class="mvp-feat1-list-img left relative">
+												<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2017/12/Rory_McIlroy_Stack_Up-80x80.jpg" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2017/12/Rory_McIlroy_Stack_Up-80x80.jpg 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2017/12/Rory_McIlroy_Stack_Up-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px" />											</div><!--mvp-feat1-list-img-->
+											<div class="mvp-feat1-list-in">
+												<div class="mvp-feat1-list-text">
+													<div class="mvp-cat-date-wrap left relative">
+														<span class="mvp-cd-cat left relative">Instruction</span><span class="mvp-cd-date left relative">2 days ago</span>
+													</div><!--mvp-cat-date-wrap-->
+													<h2>Tour Pros Revealed: 3 Tests to See How You Stack Up</h2>
+												</div><!--mvp-feat1-list-text-->
+											</div><!--mvp-feat1-list-in-->
+										</div><!--mvp-feat1-list-out-->
+																	</div><!--mvp-feat1-list-cont-->
+								</a>
+															<a href="http://www.golfwrx.com/482850/the-2-best-ways-to-control-the-club-face/" rel="bookmark">
+								<div class="mvp-feat1-list-cont left relative">
+																			<div class="mvp-feat1-list-out relative">
+											<div class="mvp-feat1-list-img left relative">
+												<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2017/12/FACE-ZAK-80x80.jpg" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2017/12/FACE-ZAK-80x80.jpg 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2017/12/FACE-ZAK-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px" />											</div><!--mvp-feat1-list-img-->
+											<div class="mvp-feat1-list-in">
+												<div class="mvp-feat1-list-text">
+													<div class="mvp-cat-date-wrap left relative">
+														<span class="mvp-cd-cat left relative">Instruction</span><span class="mvp-cd-date left relative">3 days ago</span>
+													</div><!--mvp-cat-date-wrap-->
+													<h2>The 2 Best Ways to Control the Club Face</h2>
+												</div><!--mvp-feat1-list-text-->
+											</div><!--mvp-feat1-list-in-->
+										</div><!--mvp-feat1-list-out-->
+																	</div><!--mvp-feat1-list-cont-->
+								</a>
+															<a href="http://www.golfwrx.com/484944/do-you-go-high-five-or-fist-bump-on-the-golf-course-yogolfwrx/" rel="bookmark">
+								<div class="mvp-feat1-list-cont left relative">
+																			<div class="mvp-feat1-list-out relative">
+											<div class="mvp-feat1-list-img left relative">
+												<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/YoGolfWRXHighFiveorPound-80x80.png" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/YoGolfWRXHighFiveorPound-80x80.png 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/YoGolfWRXHighFiveorPound-150x150.png 150w" sizes="(max-width: 80px) 100vw, 80px" />											</div><!--mvp-feat1-list-img-->
+											<div class="mvp-feat1-list-in">
+												<div class="mvp-feat1-list-text">
+													<div class="mvp-cat-date-wrap left relative">
+														<span class="mvp-cd-cat left relative">19th Hole</span><span class="mvp-cd-date left relative">4 days ago</span>
+													</div><!--mvp-cat-date-wrap-->
+													<h2>Do you go high-five or fist-bump on the golf course? #YoGolfWRX</h2>
+												</div><!--mvp-feat1-list-text-->
+											</div><!--mvp-feat1-list-in-->
+										</div><!--mvp-feat1-list-out-->
+																	</div><!--mvp-feat1-list-cont-->
+								</a>
+													</div><!--mvp-feat-tab-col1-->
+						<div id="mvp-feat-tab-col2" class="mvp-feat1-list left relative mvp-tab-col-cont">
+															<a href="http://www.golfwrx.com/484210/how-far-away-from-the-ball-should-you-be-at-address/" rel="bookmark">
+								<div class="mvp-feat1-list-cont left relative">
+																			<div class="mvp-feat1-list-out relative">
+											<div class="mvp-feat1-list-img left relative">
+												<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/How-Far-From-The-Ball-Thumb-80x80.jpg" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/How-Far-From-The-Ball-Thumb-80x80.jpg 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/How-Far-From-The-Ball-Thumb-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px" />											</div><!--mvp-feat1-list-img-->
+											<div class="mvp-feat1-list-in">
+												<div class="mvp-feat1-list-text">
+													<div class="mvp-cat-date-wrap left relative">
+														<span class="mvp-cd-cat left relative">Instruction</span><span class="mvp-cd-date left relative">2 days ago</span>
+													</div><!--mvp-cat-date-wrap-->
+													<h2>How Far Away from the Ball Should You Be at Address?</h2>
+												</div><!--mvp-feat1-list-text-->
+											</div><!--mvp-feat1-list-in-->
+										</div><!--mvp-feat1-list-out-->
+																	</div><!--mvp-feat1-list-cont-->
+								</a>
+															<a href="http://www.golfwrx.com/482850/the-2-best-ways-to-control-the-club-face/" rel="bookmark">
+								<div class="mvp-feat1-list-cont left relative">
+																			<div class="mvp-feat1-list-out relative">
+											<div class="mvp-feat1-list-img left relative">
+												<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2017/12/FACE-ZAK-80x80.jpg" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2017/12/FACE-ZAK-80x80.jpg 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2017/12/FACE-ZAK-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px" />											</div><!--mvp-feat1-list-img-->
+											<div class="mvp-feat1-list-in">
+												<div class="mvp-feat1-list-text">
+													<div class="mvp-cat-date-wrap left relative">
+														<span class="mvp-cd-cat left relative">Instruction</span><span class="mvp-cd-date left relative">3 days ago</span>
+													</div><!--mvp-cat-date-wrap-->
+													<h2>The 2 Best Ways to Control the Club Face</h2>
+												</div><!--mvp-feat1-list-text-->
+											</div><!--mvp-feat1-list-in-->
+										</div><!--mvp-feat1-list-out-->
+																	</div><!--mvp-feat1-list-cont-->
+								</a>
+															<a href="http://www.golfwrx.com/483608/watch-what-is-the-proper-tee-height-for-you/" rel="bookmark">
+								<div class="mvp-feat1-list-cont left relative">
+																			<div class="mvp-feat1-list-out relative">
+											<div class="mvp-feat1-list-img left relative">
+												<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/ShawnClementTeeHeight-80x80.jpg" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/ShawnClementTeeHeight-80x80.jpg 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/ShawnClementTeeHeight-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px" />											</div><!--mvp-feat1-list-img-->
+											<div class="mvp-feat1-list-in">
+												<div class="mvp-feat1-list-text">
+													<div class="mvp-cat-date-wrap left relative">
+														<span class="mvp-cd-cat left relative">Videos</span><span class="mvp-cd-date left relative">4 days ago</span>
+													</div><!--mvp-cat-date-wrap-->
+													<h2>WATCH: What is the proper tee height for you?</h2>
+												</div><!--mvp-feat1-list-text-->
+											</div><!--mvp-feat1-list-in-->
+										</div><!--mvp-feat1-list-out-->
+																	</div><!--mvp-feat1-list-cont-->
+								</a>
+															<a href="http://www.golfwrx.com/484068/lets-talk-fitting-length-lie-and-loft/" rel="bookmark">
+								<div class="mvp-feat1-list-cont left relative">
+																			<div class="mvp-feat1-list-out relative">
+											<div class="mvp-feat1-list-img left relative">
+												<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/3L_Barath_Video-80x80.png" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/3L_Barath_Video-80x80.png 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/3L_Barath_Video-150x150.png 150w" sizes="(max-width: 80px) 100vw, 80px" />											</div><!--mvp-feat1-list-img-->
+											<div class="mvp-feat1-list-in">
+												<div class="mvp-feat1-list-text">
+													<div class="mvp-cat-date-wrap left relative">
+														<span class="mvp-cd-cat left relative">Opinion &amp; Analysis</span><span class="mvp-cd-date left relative">5 days ago</span>
+													</div><!--mvp-cat-date-wrap-->
+													<h2>Let&#8217;s Talk Fitting: Length, Lie and Loft</h2>
+												</div><!--mvp-feat1-list-text-->
+											</div><!--mvp-feat1-list-in-->
+										</div><!--mvp-feat1-list-out-->
+																	</div><!--mvp-feat1-list-cont-->
+								</a>
+															<a href="http://www.golfwrx.com/484518/trackman-tuesday-episode-1-drive-it-longer/" rel="bookmark">
+								<div class="mvp-feat1-list-cont left relative">
+																			<div class="mvp-feat1-list-out relative">
+											<div class="mvp-feat1-list-img left relative">
+												<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/Trackman-Tues-ep-1-80x80.jpg" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/Trackman-Tues-ep-1-80x80.jpg 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/Trackman-Tues-ep-1-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px" />											</div><!--mvp-feat1-list-img-->
+											<div class="mvp-feat1-list-in">
+												<div class="mvp-feat1-list-text">
+													<div class="mvp-cat-date-wrap left relative">
+														<span class="mvp-cd-cat left relative">Instruction</span><span class="mvp-cd-date left relative">6 days ago</span>
+													</div><!--mvp-cat-date-wrap-->
+													<h2>Trackman Tuesday (Episode 1): Drive it Longer</h2>
+												</div><!--mvp-feat1-list-text-->
+											</div><!--mvp-feat1-list-in-->
+										</div><!--mvp-feat1-list-out-->
+																	</div><!--mvp-feat1-list-cont-->
+								</a>
+															<a href="http://www.golfwrx.com/484182/dustin-johnson-the-golf-swing-made-simple/" rel="bookmark">
+								<div class="mvp-feat1-list-cont left relative">
+																			<div class="mvp-feat1-list-out relative">
+											<div class="mvp-feat1-list-img left relative">
+												<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/MeandMyGolfDustinJohnson-80x80.jpg" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/MeandMyGolfDustinJohnson-80x80.jpg 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/MeandMyGolfDustinJohnson-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px" />											</div><!--mvp-feat1-list-img-->
+											<div class="mvp-feat1-list-in">
+												<div class="mvp-feat1-list-text">
+													<div class="mvp-cat-date-wrap left relative">
+														<span class="mvp-cd-cat left relative">Videos</span><span class="mvp-cd-date left relative">1 week ago</span>
+													</div><!--mvp-cat-date-wrap-->
+													<h2>Dustin Johnson: The golf swing made simple</h2>
+												</div><!--mvp-feat1-list-text-->
+											</div><!--mvp-feat1-list-in-->
+										</div><!--mvp-feat1-list-out-->
+																	</div><!--mvp-feat1-list-cont-->
+								</a>
+															<a href="http://www.golfwrx.com/482846/watch-3-drills-to-stop-you-from-swaying-too-much/" rel="bookmark">
+								<div class="mvp-feat1-list-cont left relative">
+																			<div class="mvp-feat1-list-out relative">
+											<div class="mvp-feat1-list-img left relative">
+												<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2017/12/STOMP-2-80x80.jpg" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2017/12/STOMP-2-80x80.jpg 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2017/12/STOMP-2-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px" />											</div><!--mvp-feat1-list-img-->
+											<div class="mvp-feat1-list-in">
+												<div class="mvp-feat1-list-text">
+													<div class="mvp-cat-date-wrap left relative">
+														<span class="mvp-cd-cat left relative">Videos</span><span class="mvp-cd-date left relative">1 week ago</span>
+													</div><!--mvp-cat-date-wrap-->
+													<h2>WATCH: 3 drills to stop you from swaying too much</h2>
+												</div><!--mvp-feat1-list-text-->
+											</div><!--mvp-feat1-list-in-->
+										</div><!--mvp-feat1-list-out-->
+																	</div><!--mvp-feat1-list-cont-->
+								</a>
+															<a href="http://www.golfwrx.com/483612/watch-talking-quality-control-of-iron-hosels/" rel="bookmark">
+								<div class="mvp-feat1-list-cont left relative">
+																			<div class="mvp-feat1-list-out relative">
+											<div class="mvp-feat1-list-img left relative">
+												<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/RyanBarathHoselBore-80x80.png" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/RyanBarathHoselBore-80x80.png 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/RyanBarathHoselBore-150x150.png 150w" sizes="(max-width: 80px) 100vw, 80px" />											</div><!--mvp-feat1-list-img-->
+											<div class="mvp-feat1-list-in">
+												<div class="mvp-feat1-list-text">
+													<div class="mvp-cat-date-wrap left relative">
+														<span class="mvp-cd-cat left relative">Videos</span><span class="mvp-cd-date left relative">2 weeks ago</span>
+													</div><!--mvp-cat-date-wrap-->
+													<h2>WATCH: Talking Quality Control of Iron Hosels</h2>
+												</div><!--mvp-feat1-list-text-->
+											</div><!--mvp-feat1-list-in-->
+										</div><!--mvp-feat1-list-out-->
+																	</div><!--mvp-feat1-list-cont-->
+								</a>
+															<a href="http://www.golfwrx.com/483642/watch-rory-mcilroy-on-how-to-hit-the-perfect-drive/" rel="bookmark">
+								<div class="mvp-feat1-list-cont left relative">
+																			<div class="mvp-feat1-list-out relative">
+											<div class="mvp-feat1-list-img left relative">
+												<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/RoryMcIlroyPerfectDrive-80x80.jpg" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/RoryMcIlroyPerfectDrive-80x80.jpg 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/RoryMcIlroyPerfectDrive-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px" />											</div><!--mvp-feat1-list-img-->
+											<div class="mvp-feat1-list-in">
+												<div class="mvp-feat1-list-text">
+													<div class="mvp-cat-date-wrap left relative">
+														<span class="mvp-cd-cat left relative">Videos</span><span class="mvp-cd-date left relative">2 weeks ago</span>
+													</div><!--mvp-cat-date-wrap-->
+													<h2>WATCH: Rory McIlroy on How to Hit the Perfect Drive</h2>
+												</div><!--mvp-feat1-list-text-->
+											</div><!--mvp-feat1-list-in-->
+										</div><!--mvp-feat1-list-out-->
+																	</div><!--mvp-feat1-list-cont-->
+								</a>
+															<a href="http://www.golfwrx.com/468262/how-to-groove-a-perfect-backswing/" rel="bookmark">
+								<div class="mvp-feat1-list-cont left relative">
+																			<div class="mvp-feat1-list-out relative">
+											<div class="mvp-feat1-list-img left relative">
+												<img width="80" height="45" src="http://wpmediars.golfwrx.com/wp-content/uploads/2017/08/maxresdefault8.jpg" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2017/08/maxresdefault8.jpg 1280w, http://wpmediars.golfwrx.com/wp-content/uploads/2017/08/maxresdefault8-300x169.jpg 300w, http://wpmediars.golfwrx.com/wp-content/uploads/2017/08/maxresdefault8-600x338.jpg 600w, http://wpmediars.golfwrx.com/wp-content/uploads/2017/08/maxresdefault8-747x420.jpg 747w, http://wpmediars.golfwrx.com/wp-content/uploads/2017/08/maxresdefault8-640x350.jpg 640w, http://wpmediars.golfwrx.com/wp-content/uploads/2017/08/maxresdefault8-681x383.jpg 681w, http://wpmediars.golfwrx.com/wp-content/uploads/2017/08/maxresdefault8-1021x580.jpg 1021w" sizes="(max-width: 80px) 100vw, 80px" />											</div><!--mvp-feat1-list-img-->
+											<div class="mvp-feat1-list-in">
+												<div class="mvp-feat1-list-text">
+													<div class="mvp-cat-date-wrap left relative">
+														<span class="mvp-cd-cat left relative">Instruction</span><span class="mvp-cd-date left relative">2 weeks ago</span>
+													</div><!--mvp-cat-date-wrap-->
+													<h2>How To Groove A Perfect Backswing</h2>
+												</div><!--mvp-feat1-list-text-->
+											</div><!--mvp-feat1-list-in-->
+										</div><!--mvp-feat1-list-out-->
+																	</div><!--mvp-feat1-list-cont-->
+								</a>
+													</div><!--mvp-feat-tab-col2-->
+						<div id="mvp-feat-tab-col3" class="mvp-feat1-list left relative mvp-tab-col-cont">
+															<a href="http://www.golfwrx.com/484630/photos-from-the-2018-sony-open-in-hawaii/" rel="bookmark">
+								<div class="mvp-feat1-list-cont left relative">
+																			<div class="mvp-feat1-list-out relative">
+											<div class="mvp-feat1-list-img left relative">
+												<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/6a140d9caef77fc078bc9518bb62f4d7-1-80x80.jpg" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/6a140d9caef77fc078bc9518bb62f4d7-1-80x80.jpg 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/6a140d9caef77fc078bc9518bb62f4d7-1-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px" />											</div><!--mvp-feat1-list-img-->
+											<div class="mvp-feat1-list-in">
+												<div class="mvp-feat1-list-text">
+													<div class="mvp-cat-date-wrap left relative">
+														<span class="mvp-cd-cat left relative">Popular Photo Galleries</span><span class="mvp-cd-date left relative">5 days ago</span>
+													</div><!--mvp-cat-date-wrap-->
+													<h2>Photos from the 2018 Sony Open in Hawaii</h2>
+												</div><!--mvp-feat1-list-text-->
+											</div><!--mvp-feat1-list-in-->
+										</div><!--mvp-feat1-list-out-->
+																	</div><!--mvp-feat1-list-cont-->
+								</a>
+															<a href="http://www.golfwrx.com/484072/dustin-johnsons-winning-witb-2018-sentry-tournament-of-champions/" rel="bookmark">
+								<div class="mvp-feat1-list-cont left relative">
+																			<div class="mvp-feat1-list-out relative">
+											<div class="mvp-feat1-list-img left relative">
+												<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/DustinJohnsonWITB2018New-80x80.jpg" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/DustinJohnsonWITB2018New-80x80.jpg 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/DustinJohnsonWITB2018New-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px" />											</div><!--mvp-feat1-list-img-->
+											<div class="mvp-feat1-list-in">
+												<div class="mvp-feat1-list-text">
+													<div class="mvp-cat-date-wrap left relative">
+														<span class="mvp-cd-cat left relative">pga tour</span><span class="mvp-cd-date left relative">1 week ago</span>
+													</div><!--mvp-cat-date-wrap-->
+													<h2>Dustin Johnson&#8217;s Winning WITB: 2018 Sentry Tournament of Champions</h2>
+												</div><!--mvp-feat1-list-text-->
+											</div><!--mvp-feat1-list-in-->
+										</div><!--mvp-feat1-list-out-->
+																	</div><!--mvp-feat1-list-cont-->
+								</a>
+															<a href="http://www.golfwrx.com/482336/thursdays-photos-from-the-2017-pnc-fatherson-challenge/" rel="bookmark">
+								<div class="mvp-feat1-list-cont left relative">
+																			<div class="mvp-feat1-list-out relative">
+											<div class="mvp-feat1-list-img left relative">
+												<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2017/12/DalyandLittleJohn-80x80.jpg" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2017/12/DalyandLittleJohn-80x80.jpg 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2017/12/DalyandLittleJohn-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px" />											</div><!--mvp-feat1-list-img-->
+											<div class="mvp-feat1-list-in">
+												<div class="mvp-feat1-list-text">
+													<div class="mvp-cat-date-wrap left relative">
+														<span class="mvp-cd-cat left relative">Popular Photo Galleries</span><span class="mvp-cd-date left relative">1 month ago</span>
+													</div><!--mvp-cat-date-wrap-->
+													<h2>Thursday&#8217;s Photos from the 2017 PNC Father/Son Challenge</h2>
+												</div><!--mvp-feat1-list-text-->
+											</div><!--mvp-feat1-list-in-->
+										</div><!--mvp-feat1-list-out-->
+																	</div><!--mvp-feat1-list-cont-->
+								</a>
+															<a href="http://www.golfwrx.com/481794/thursdays-photos-from-the-2017-qbe-shootout/" rel="bookmark">
+								<div class="mvp-feat1-list-cont left relative">
+																			<div class="mvp-feat1-list-out relative">
+											<div class="mvp-feat1-list-img left relative">
+												<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2017/12/QBEShootoutThursWRX-80x80.jpg" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2017/12/QBEShootoutThursWRX-80x80.jpg 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2017/12/QBEShootoutThursWRX-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px" />											</div><!--mvp-feat1-list-img-->
+											<div class="mvp-feat1-list-in">
+												<div class="mvp-feat1-list-text">
+													<div class="mvp-cat-date-wrap left relative">
+														<span class="mvp-cd-cat left relative">Popular Photo Galleries</span><span class="mvp-cd-date left relative">1 month ago</span>
+													</div><!--mvp-cat-date-wrap-->
+													<h2>Thursday&#8217;s Photos from the 2017 QBE Shootout</h2>
+												</div><!--mvp-feat1-list-text-->
+											</div><!--mvp-feat1-list-in-->
+										</div><!--mvp-feat1-list-out-->
+																	</div><!--mvp-feat1-list-cont-->
+								</a>
+															<a href="http://www.golfwrx.com/481718/wednesdays-photos-from-the-2017-qbe-shootout/" rel="bookmark">
+								<div class="mvp-feat1-list-cont left relative">
+																			<div class="mvp-feat1-list-out relative">
+											<div class="mvp-feat1-list-img left relative">
+												<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2017/12/QBEShootout2017-80x80.jpg" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2017/12/QBEShootout2017-80x80.jpg 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2017/12/QBEShootout2017-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px" />											</div><!--mvp-feat1-list-img-->
+											<div class="mvp-feat1-list-in">
+												<div class="mvp-feat1-list-text">
+													<div class="mvp-cat-date-wrap left relative">
+														<span class="mvp-cd-cat left relative">Popular Photo Galleries</span><span class="mvp-cd-date left relative">1 month ago</span>
+													</div><!--mvp-cat-date-wrap-->
+													<h2>Wednesday&#8217;s Photos from the 2017 QBE Shootout</h2>
+												</div><!--mvp-feat1-list-text-->
+											</div><!--mvp-feat1-list-in-->
+										</div><!--mvp-feat1-list-out-->
+																	</div><!--mvp-feat1-list-cont-->
+								</a>
+															<a href="http://www.golfwrx.com/479700/wednesdays-photos-from-the-2017-rsm-classic/" rel="bookmark">
+								<div class="mvp-feat1-list-cont left relative">
+																			<div class="mvp-feat1-list-out relative">
+											<div class="mvp-feat1-list-img left relative">
+												<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2017/11/WednesdayRSMtitleistC16-80x80.jpg" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2017/11/WednesdayRSMtitleistC16-80x80.jpg 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2017/11/WednesdayRSMtitleistC16-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px" />											</div><!--mvp-feat1-list-img-->
+											<div class="mvp-feat1-list-in">
+												<div class="mvp-feat1-list-text">
+													<div class="mvp-cat-date-wrap left relative">
+														<span class="mvp-cd-cat left relative">Popular Photo Galleries</span><span class="mvp-cd-date left relative">2 months ago</span>
+													</div><!--mvp-cat-date-wrap-->
+													<h2>Wednesday&#8217;s Photos from The 2017 RSM Classic</h2>
+												</div><!--mvp-feat1-list-text-->
+											</div><!--mvp-feat1-list-in-->
+										</div><!--mvp-feat1-list-out-->
+																	</div><!--mvp-feat1-list-cont-->
+								</a>
+															<a href="http://www.golfwrx.com/479524/tuesdays-photos-from-the-2017-rsm-classic/" rel="bookmark">
+								<div class="mvp-feat1-list-cont left relative">
+																			<div class="mvp-feat1-list-out relative">
+											<div class="mvp-feat1-list-img left relative">
+												<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2017/11/RSMTuesdayPhotos-80x80.jpg" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2017/11/RSMTuesdayPhotos-80x80.jpg 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2017/11/RSMTuesdayPhotos-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px" />											</div><!--mvp-feat1-list-img-->
+											<div class="mvp-feat1-list-in">
+												<div class="mvp-feat1-list-text">
+													<div class="mvp-cat-date-wrap left relative">
+														<span class="mvp-cd-cat left relative">Popular Photo Galleries</span><span class="mvp-cd-date left relative">2 months ago</span>
+													</div><!--mvp-cat-date-wrap-->
+													<h2>Tuesday&#8217;s Photos from the 2017 RSM Classic</h2>
+												</div><!--mvp-feat1-list-text-->
+											</div><!--mvp-feat1-list-in-->
+										</div><!--mvp-feat1-list-out-->
+																	</div><!--mvp-feat1-list-cont-->
+								</a>
+															<a href="http://www.golfwrx.com/479194/mondays-photos-from-the-2017-rsm-classic/" rel="bookmark">
+								<div class="mvp-feat1-list-cont left relative">
+																			<div class="mvp-feat1-list-out relative">
+											<div class="mvp-feat1-list-img left relative">
+												<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2017/11/f9ed6a5c266701f9a2029f0475e5af27-80x80.jpg" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2017/11/f9ed6a5c266701f9a2029f0475e5af27-80x80.jpg 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2017/11/f9ed6a5c266701f9a2029f0475e5af27-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px" />											</div><!--mvp-feat1-list-img-->
+											<div class="mvp-feat1-list-in">
+												<div class="mvp-feat1-list-text">
+													<div class="mvp-cat-date-wrap left relative">
+														<span class="mvp-cd-cat left relative">Popular Photo Galleries</span><span class="mvp-cd-date left relative">2 months ago</span>
+													</div><!--mvp-cat-date-wrap-->
+													<h2>Monday&#8217;s Photos from The 2017 RSM Classic</h2>
+												</div><!--mvp-feat1-list-text-->
+											</div><!--mvp-feat1-list-in-->
+										</div><!--mvp-feat1-list-out-->
+																	</div><!--mvp-feat1-list-cont-->
+								</a>
+															<a href="http://www.golfwrx.com/477040/wednesdays-photos-from-the-2017-shriners-hospitals-for-children-open/" rel="bookmark">
+								<div class="mvp-feat1-list-cont left relative">
+																			<div class="mvp-feat1-list-out relative">
+											<div class="mvp-feat1-list-img left relative">
+												<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2017/11/MizunoShrinersWRX-1-80x80.jpg" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2017/11/MizunoShrinersWRX-1-80x80.jpg 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2017/11/MizunoShrinersWRX-1-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px" />											</div><!--mvp-feat1-list-img-->
+											<div class="mvp-feat1-list-in">
+												<div class="mvp-feat1-list-text">
+													<div class="mvp-cat-date-wrap left relative">
+														<span class="mvp-cd-cat left relative">Popular Photo Galleries</span><span class="mvp-cd-date left relative">3 months ago</span>
+													</div><!--mvp-cat-date-wrap-->
+													<h2>Wednesday&#8217;s Photos from the 2017 Shriners Hospitals for Children Open</h2>
+												</div><!--mvp-feat1-list-text-->
+											</div><!--mvp-feat1-list-in-->
+										</div><!--mvp-feat1-list-out-->
+																	</div><!--mvp-feat1-list-cont-->
+								</a>
+															<a href="http://www.golfwrx.com/476888/tuesdays-photos-from-the-2017-shriners-hospitals-children-open/" rel="bookmark">
+								<div class="mvp-feat1-list-cont left relative">
+																			<div class="mvp-feat1-list-out relative">
+											<div class="mvp-feat1-list-img left relative">
+												<img width="80" height="45" src="http://wpmediars.golfwrx.com/wp-content/uploads/2017/10/VokeySM7GolfWRX.jpg" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2017/10/VokeySM7GolfWRX.jpg 1021w, http://wpmediars.golfwrx.com/wp-content/uploads/2017/10/VokeySM7GolfWRX-300x170.jpg 300w, http://wpmediars.golfwrx.com/wp-content/uploads/2017/10/VokeySM7GolfWRX-600x341.jpg 600w, http://wpmediars.golfwrx.com/wp-content/uploads/2017/10/VokeySM7GolfWRX-739x420.jpg 739w, http://wpmediars.golfwrx.com/wp-content/uploads/2017/10/VokeySM7GolfWRX-640x350.jpg 640w, http://wpmediars.golfwrx.com/wp-content/uploads/2017/10/VokeySM7GolfWRX-681x387.jpg 681w" sizes="(max-width: 80px) 100vw, 80px" />											</div><!--mvp-feat1-list-img-->
+											<div class="mvp-feat1-list-in">
+												<div class="mvp-feat1-list-text">
+													<div class="mvp-cat-date-wrap left relative">
+														<span class="mvp-cd-cat left relative">Popular Photo Galleries</span><span class="mvp-cd-date left relative">3 months ago</span>
+													</div><!--mvp-cat-date-wrap-->
+													<h2>Tuesday&#8217;s Photos from the 2017 Shriners Hospitals for Children Open</h2>
+												</div><!--mvp-feat1-list-text-->
+											</div><!--mvp-feat1-list-in-->
+										</div><!--mvp-feat1-list-out-->
+																	</div><!--mvp-feat1-list-cont-->
+								</a>
+													</div><!--mvp-feat-tab-col3-->
+					</div><!--mvp-feat1-list-wrap-->
+				</div><!--mvp-feat1-right-wrap-->
+			</div><!--mvp-feat1-right-out-->
+		</section><!--mvp-feat1-wrap-->
+	</div><!--mvp-main-box-->
+	<div id="mvp-home-widget-wrap" class="left relative">
+			</div><!--mvp-home-widget-wrap-->
+	<div class="mvp-main-blog-wrap left relative">
+		<div class="mvp-main-box">
+			<div class="mvp-main-blog-cont left relative">
+				<div class="mvp-widget-home-head">
+					<h4 class="mvp-widget-home-title">
+						<span class="mvp-widget-home-title">More News</span>
+					</h4>
+				</div><!--mvp-widget-home-head-->
+				<div class="mvp-main-blog-out left relative">
+					<div class="mvp-main-blog-in">
+						<div class="mvp-main-blog-body left relative">
+															<ul class="mvp-blog-story-list left relative infinite-content">
+																														<li class="mvp-blog-story-wrap left relative infinite-post">
+												<a href="http://www.golfwrx.com/485088/final-round-coverage-of-sony-open-not-surprisingly-affected-by-strike/" rel="bookmark">
+																									<div class="mvp-blog-story-out relative">
+														<div class="mvp-blog-story-img left relative">
+															<img width="400" height="240" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/iTunesArtwork-512@3x-400x240.png" class="mvp-reg-img lazy wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/iTunesArtwork-512@3x-400x240.png 400w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/iTunesArtwork-512@3x-590x354.png 590w" sizes="(max-width: 400px) 100vw, 400px" />															<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/iTunesArtwork-512@3x-80x80.png" class="mvp-mob-img lazy wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/iTunesArtwork-512@3x-80x80.png 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/iTunesArtwork-512@3x-150x150.png 150w" sizes="(max-width: 80px) 100vw, 80px" />																													</div><!--mvp-blog-story-img-->
+														<div class="mvp-blog-story-in">
+															<div class="mvp-blog-story-text left relative">
+																<div class="mvp-cat-date-wrap left relative">
+																																			<span class="mvp-cd-cat left relative">News</span><span class="mvp-cd-date left relative">10 hours ago</span>
+																																	</div><!--mvp-cat-date-wrap-->
+																<h2>Final-round coverage of Sony Open not surprisingly affected by strike</h2>
+																<p>Shortly before the final round of the Sony Open in Hawaii began, news that members of the telecast team would be striking filtered through the golf...</p>
+															</div><!--mvp-blog-story-text-->
+														</div><!--mvp-blog-story-in-->
+													</div><!--mvp-blog-story-out-->
+																								</a>
+											</li><!--mvp-blog-story-wrap-->
+																					<li class="mvp-blog-story-wrap left relative infinite-post">
+												<a href="http://www.golfwrx.com/485108/pings-new-glide-2-0-stealth-wedges-and-vault-2-0-putters/" rel="bookmark">
+																									<div class="mvp-blog-story-out relative">
+														<div class="mvp-blog-story-img left relative">
+															<img width="400" height="240" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/PingStealthVault2.0-400x240.jpg" class="mvp-reg-img lazy wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/PingStealthVault2.0-400x240.jpg 400w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/PingStealthVault2.0-1000x600.jpg 1000w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/PingStealthVault2.0-590x354.jpg 590w" sizes="(max-width: 400px) 100vw, 400px" />															<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/PingStealthVault2.0-80x80.jpg" class="mvp-mob-img lazy wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/PingStealthVault2.0-80x80.jpg 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/PingStealthVault2.0-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px" />																													</div><!--mvp-blog-story-img-->
+														<div class="mvp-blog-story-in">
+															<div class="mvp-blog-story-text left relative">
+																<div class="mvp-cat-date-wrap left relative">
+																																			<span class="mvp-cd-cat left relative">Equipment</span><span class="mvp-cd-date left relative">13 hours ago</span>
+																																	</div><!--mvp-cat-date-wrap-->
+																<h2>Ping&#8217;s new Glide 2.0 &#8220;Stealth&#8221; wedges, and Vault 2.0 putters</h2>
+																<p>Today, in addition to the G400 Max driver and the G700 irons, Ping also launched Glide 2.0 Stealth wedges, and the Vault 2.0 putters that we...</p>
+															</div><!--mvp-blog-story-text-->
+														</div><!--mvp-blog-story-in-->
+													</div><!--mvp-blog-story-out-->
+																								</a>
+											</li><!--mvp-blog-story-wrap-->
+																					<li class="mvp-blog-story-wrap left relative infinite-post">
+												<a href="http://www.golfwrx.com/484704/tour-rundown-europe-storms-back-kizzire-takes-trophy-in-a-marathon-playoff/" rel="bookmark">
+																									<div class="mvp-blog-story-out relative">
+														<div class="mvp-blog-story-img left relative">
+															<img width="400" height="240" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/PattonKizzireSonyOpen-400x240.jpg" class="mvp-reg-img lazy wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/PattonKizzireSonyOpen-400x240.jpg 400w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/PattonKizzireSonyOpen-1000x600.jpg 1000w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/PattonKizzireSonyOpen-590x354.jpg 590w" sizes="(max-width: 400px) 100vw, 400px" />															<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/PattonKizzireSonyOpen-80x80.jpg" class="mvp-mob-img lazy wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/PattonKizzireSonyOpen-80x80.jpg 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/PattonKizzireSonyOpen-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px" />																													</div><!--mvp-blog-story-img-->
+														<div class="mvp-blog-story-in">
+															<div class="mvp-blog-story-text left relative">
+																<div class="mvp-cat-date-wrap left relative">
+																																			<span class="mvp-cd-cat left relative">Tour News</span><span class="mvp-cd-date left relative">16 hours ago</span>
+																																	</div><!--mvp-cat-date-wrap-->
+																<h2>Tour Rundown: Europe storms back, Kizzire takes trophy in a marathon playoff</h2>
+																<p>The second week of 2018 returned a number of tours to action around the globe.  The Hawaiian-stretch concluded on the PGA Tour, while Europe began its...</p>
+															</div><!--mvp-blog-story-text-->
+														</div><!--mvp-blog-story-in-->
+													</div><!--mvp-blog-story-out-->
+																								</a>
+											</li><!--mvp-blog-story-wrap-->
+																					<li class="mvp-blog-story-wrap left relative infinite-post">
+												<a href="http://www.golfwrx.com/485072/pings-new-g700-irons-are-its-longest-highest-flying-irons-ever/" rel="bookmark">
+																									<div class="mvp-blog-story-out relative">
+														<div class="mvp-blog-story-img left relative">
+															<img width="400" height="240" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/PingG700irons-400x240.jpg" class="mvp-reg-img lazy wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/PingG700irons-400x240.jpg 400w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/PingG700irons-1000x600.jpg 1000w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/PingG700irons-590x354.jpg 590w" sizes="(max-width: 400px) 100vw, 400px" />															<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/PingG700irons-80x80.jpg" class="mvp-mob-img lazy wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/PingG700irons-80x80.jpg 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/PingG700irons-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px" />																													</div><!--mvp-blog-story-img-->
+														<div class="mvp-blog-story-in">
+															<div class="mvp-blog-story-text left relative">
+																<div class="mvp-cat-date-wrap left relative">
+																																			<span class="mvp-cd-cat left relative">Equipment</span><span class="mvp-cd-date left relative">17 hours ago</span>
+																																	</div><!--mvp-cat-date-wrap-->
+																<h2>Ping&#8217;s new G700 irons are its &#8220;longest, highest flying&#8221; irons ever</h2>
+																<p>On the same day Ping launched &#8220;the most forgiving driver in golf&#8221; with its G400 Max driver, it also launched the company&#8217;s &#8220;longest, highest flying irons...</p>
+															</div><!--mvp-blog-story-text-->
+														</div><!--mvp-blog-story-in-->
+													</div><!--mvp-blog-story-out-->
+																								</a>
+											</li><!--mvp-blog-story-wrap-->
+																					<li class="mvp-blog-story-wrap left relative infinite-post">
+												<a href="http://www.golfwrx.com/485012/patton-kizzires-winning-witb-2018-sony-open-in-hawaii/" rel="bookmark">
+																									<div class="mvp-blog-story-out relative">
+														<div class="mvp-blog-story-img left relative">
+															<img width="400" height="240" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/PattonKizzireWinningWITB-400x240.jpg" class="mvp-reg-img lazy wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/PattonKizzireWinningWITB-400x240.jpg 400w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/PattonKizzireWinningWITB-1000x600.jpg 1000w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/PattonKizzireWinningWITB-590x354.jpg 590w" sizes="(max-width: 400px) 100vw, 400px" />															<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/PattonKizzireWinningWITB-80x80.jpg" class="mvp-mob-img lazy wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/PattonKizzireWinningWITB-80x80.jpg 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/PattonKizzireWinningWITB-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px" />																													</div><!--mvp-blog-story-img-->
+														<div class="mvp-blog-story-in">
+															<div class="mvp-blog-story-text left relative">
+																<div class="mvp-cat-date-wrap left relative">
+																																			<span class="mvp-cd-cat left relative">pga tour</span><span class="mvp-cd-date left relative">1 day ago</span>
+																																	</div><!--mvp-cat-date-wrap-->
+																<h2>Patton Kizzire&#8217;s Winning WITB: 2018 Sony Open in Hawaii</h2>
+																<p>Driver: Titleist 917D3 (10.5 degrees) Shaft: Fujikura Atmos Tour Spec 6X 3 Wood: Titleist 917F2 (16.5 degrees) Shaft: Aldila Tour Blue TX-Flex Hybrid: Titleist 913H (19 degrees) Shaft: UST...</p>
+															</div><!--mvp-blog-story-text-->
+														</div><!--mvp-blog-story-in-->
+													</div><!--mvp-blog-story-out-->
+																								</a>
+											</li><!--mvp-blog-story-wrap-->
+																					<li class="mvp-blog-story-wrap left relative infinite-post">
+												<a href="http://www.golfwrx.com/484210/how-far-away-from-the-ball-should-you-be-at-address/" rel="bookmark">
+																									<div class="mvp-blog-story-out relative">
+														<div class="mvp-blog-story-img left relative">
+															<img width="400" height="240" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/How-Far-From-The-Ball-Thumb-400x240.jpg" class="mvp-reg-img lazy wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/How-Far-From-The-Ball-Thumb-400x240.jpg 400w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/How-Far-From-The-Ball-Thumb-1000x600.jpg 1000w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/How-Far-From-The-Ball-Thumb-590x354.jpg 590w" sizes="(max-width: 400px) 100vw, 400px" />															<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/How-Far-From-The-Ball-Thumb-80x80.jpg" class="mvp-mob-img lazy wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/How-Far-From-The-Ball-Thumb-80x80.jpg 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/How-Far-From-The-Ball-Thumb-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px" />																															<div class="mvp-vid-box-wrap mvp-vid-marg">
+																	<i class="fa fa-2 fa-play" aria-hidden="true"></i>
+																</div><!--mvp-vid-box-wrap-->
+																													</div><!--mvp-blog-story-img-->
+														<div class="mvp-blog-story-in">
+															<div class="mvp-blog-story-text left relative">
+																<div class="mvp-cat-date-wrap left relative">
+																																			<span class="mvp-cd-cat left relative">Instruction</span><span class="mvp-cd-date left relative">2 days ago</span>
+																																	</div><!--mvp-cat-date-wrap-->
+																<h2>How Far Away from the Ball Should You Be at Address?</h2>
+																<p>How far away from the ball should you be at address? This video is in response to a question from Tom McCord on Facebook. In this...</p>
+															</div><!--mvp-blog-story-text-->
+														</div><!--mvp-blog-story-in-->
+													</div><!--mvp-blog-story-out-->
+																								</a>
+											</li><!--mvp-blog-story-wrap-->
+																					<li class="mvp-blog-story-wrap left relative infinite-post">
+												<a href="http://www.golfwrx.com/484978/rory-mcilroy-reveals-heart-problem-says-its-not-a-big-deal/" rel="bookmark">
+																									<div class="mvp-blog-story-out relative">
+														<div class="mvp-blog-story-img left relative">
+															<img width="400" height="240" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/GettyImages-841866424-1-400x240.jpg" class="mvp-reg-img lazy wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/GettyImages-841866424-1-400x240.jpg 400w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/GettyImages-841866424-1-590x354.jpg 590w" sizes="(max-width: 400px) 100vw, 400px" />															<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/GettyImages-841866424-1-80x80.jpg" class="mvp-mob-img lazy wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/GettyImages-841866424-1-80x80.jpg 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/GettyImages-841866424-1-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px" />																													</div><!--mvp-blog-story-img-->
+														<div class="mvp-blog-story-in">
+															<div class="mvp-blog-story-text left relative">
+																<div class="mvp-cat-date-wrap left relative">
+																																			<span class="mvp-cd-cat left relative">News</span><span class="mvp-cd-date left relative">2 days ago</span>
+																																	</div><!--mvp-cat-date-wrap-->
+																<h2>Rory McIlroy reveals heart problem, says it&#8217;s not a big deal</h2>
+																<p>&#8220;The rib&#8217;s fine, no problems whatsoever,” Rory McIlroy told James Corrigan of The Telegraph. Great news for the Ulsterman’s fans on that front. However, the second...</p>
+															</div><!--mvp-blog-story-text-->
+														</div><!--mvp-blog-story-in-->
+													</div><!--mvp-blog-story-out-->
+																								</a>
+											</li><!--mvp-blog-story-wrap-->
+																					<li class="mvp-blog-story-wrap left relative infinite-post">
+												<a href="http://www.golfwrx.com/479618/tour-pros-revealed-3-tests-to-see-how-you-stack-up/" rel="bookmark">
+																									<div class="mvp-blog-story-out relative">
+														<div class="mvp-blog-story-img left relative">
+															<img width="400" height="240" src="http://wpmediars.golfwrx.com/wp-content/uploads/2017/12/Rory_McIlroy_Stack_Up-400x240.jpg" class="mvp-reg-img lazy wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2017/12/Rory_McIlroy_Stack_Up-400x240.jpg 400w, http://wpmediars.golfwrx.com/wp-content/uploads/2017/12/Rory_McIlroy_Stack_Up-1000x600.jpg 1000w, http://wpmediars.golfwrx.com/wp-content/uploads/2017/12/Rory_McIlroy_Stack_Up-590x354.jpg 590w" sizes="(max-width: 400px) 100vw, 400px" />															<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2017/12/Rory_McIlroy_Stack_Up-80x80.jpg" class="mvp-mob-img lazy wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2017/12/Rory_McIlroy_Stack_Up-80x80.jpg 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2017/12/Rory_McIlroy_Stack_Up-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px" />																													</div><!--mvp-blog-story-img-->
+														<div class="mvp-blog-story-in">
+															<div class="mvp-blog-story-text left relative">
+																<div class="mvp-cat-date-wrap left relative">
+																																			<span class="mvp-cd-cat left relative">Instruction</span><span class="mvp-cd-date left relative">2 days ago</span>
+																																	</div><!--mvp-cat-date-wrap-->
+																<h2>Tour Pros Revealed: 3 Tests to See How You Stack Up</h2>
+																<p>You want to be better at golf, more consistent and longer off the tee. I am sure a lot of you would love to stop hurting. You...</p>
+															</div><!--mvp-blog-story-text-->
+														</div><!--mvp-blog-story-in-->
+													</div><!--mvp-blog-story-out-->
+																								</a>
+											</li><!--mvp-blog-story-wrap-->
+																					<li class="mvp-blog-story-wrap left relative infinite-post">
+												<a href="http://www.golfwrx.com/482850/the-2-best-ways-to-control-the-club-face/" rel="bookmark">
+																									<div class="mvp-blog-story-out relative">
+														<div class="mvp-blog-story-img left relative">
+															<img width="400" height="240" src="http://wpmediars.golfwrx.com/wp-content/uploads/2017/12/FACE-ZAK-400x240.jpg" class="mvp-reg-img lazy wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2017/12/FACE-ZAK-400x240.jpg 400w, http://wpmediars.golfwrx.com/wp-content/uploads/2017/12/FACE-ZAK-1000x600.jpg 1000w, http://wpmediars.golfwrx.com/wp-content/uploads/2017/12/FACE-ZAK-590x354.jpg 590w" sizes="(max-width: 400px) 100vw, 400px" />															<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2017/12/FACE-ZAK-80x80.jpg" class="mvp-mob-img lazy wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2017/12/FACE-ZAK-80x80.jpg 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2017/12/FACE-ZAK-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px" />																															<div class="mvp-vid-box-wrap mvp-vid-marg">
+																	<i class="fa fa-2 fa-play" aria-hidden="true"></i>
+																</div><!--mvp-vid-box-wrap-->
+																													</div><!--mvp-blog-story-img-->
+														<div class="mvp-blog-story-in">
+															<div class="mvp-blog-story-text left relative">
+																<div class="mvp-cat-date-wrap left relative">
+																																			<span class="mvp-cd-cat left relative">Instruction</span><span class="mvp-cd-date left relative">3 days ago</span>
+																																	</div><!--mvp-cat-date-wrap-->
+																<h2>The 2 Best Ways to Control the Club Face</h2>
+																<p>In this video, I explain how to control the club face correctly in the golf swing. I offer two great explanations of common issues with club...</p>
+															</div><!--mvp-blog-story-text-->
+														</div><!--mvp-blog-story-in-->
+													</div><!--mvp-blog-story-out-->
+																								</a>
+											</li><!--mvp-blog-story-wrap-->
+																					<li class="mvp-blog-story-wrap left relative infinite-post">
+												<a href="http://www.golfwrx.com/484944/do-you-go-high-five-or-fist-bump-on-the-golf-course-yogolfwrx/" rel="bookmark">
+																									<div class="mvp-blog-story-out relative">
+														<div class="mvp-blog-story-img left relative">
+															<img width="400" height="240" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/YoGolfWRXHighFiveorPound-400x240.png" class="mvp-reg-img lazy wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/YoGolfWRXHighFiveorPound-400x240.png 400w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/YoGolfWRXHighFiveorPound-1000x600.png 1000w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/YoGolfWRXHighFiveorPound-590x354.png 590w" sizes="(max-width: 400px) 100vw, 400px" />															<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/YoGolfWRXHighFiveorPound-80x80.png" class="mvp-mob-img lazy wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/YoGolfWRXHighFiveorPound-80x80.png 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/YoGolfWRXHighFiveorPound-150x150.png 150w" sizes="(max-width: 80px) 100vw, 80px" />																													</div><!--mvp-blog-story-img-->
+														<div class="mvp-blog-story-in">
+															<div class="mvp-blog-story-text left relative">
+																<div class="mvp-cat-date-wrap left relative">
+																																			<span class="mvp-cd-cat left relative">19th Hole</span><span class="mvp-cd-date left relative">4 days ago</span>
+																																	</div><!--mvp-cat-date-wrap-->
+																<h2>Do you go high-five or fist-bump on the golf course? #YoGolfWRX</h2>
+																<p>Equipment expert Brian Knudson and Editor Andrew Tursky cover a wide variety of topics including Tiger&#8217;s best swing, high five vs. knuckles and logo up or...</p>
+															</div><!--mvp-blog-story-text-->
+														</div><!--mvp-blog-story-in-->
+													</div><!--mvp-blog-story-out-->
+																								</a>
+											</li><!--mvp-blog-story-wrap-->
+																					<li class="mvp-blog-story-wrap left relative infinite-post">
+												<a href="http://www.golfwrx.com/482996/the-long-and-winding-road-to-the-old-course/" rel="bookmark">
+																									<div class="mvp-blog-story-out relative">
+														<div class="mvp-blog-story-img left relative">
+															<img width="400" height="240" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/st_andrews_old_course-400x240.jpg" class="mvp-reg-img lazy wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/st_andrews_old_course-400x240.jpg 400w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/st_andrews_old_course-1000x600.jpg 1000w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/st_andrews_old_course-590x354.jpg 590w" sizes="(max-width: 400px) 100vw, 400px" />															<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/st_andrews_old_course-80x80.jpg" class="mvp-mob-img lazy wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/st_andrews_old_course-80x80.jpg 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/st_andrews_old_course-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px" />																													</div><!--mvp-blog-story-img-->
+														<div class="mvp-blog-story-in">
+															<div class="mvp-blog-story-text left relative">
+																<div class="mvp-cat-date-wrap left relative">
+																																			<span class="mvp-cd-cat left relative">Courses</span><span class="mvp-cd-date left relative">4 days ago</span>
+																																	</div><!--mvp-cat-date-wrap-->
+																<h2>The Long and Winding Road to The Old Course</h2>
+																<p>St. Andrews holds a special and historic place in every golfer&#8217;s imagination. Anyone who has the faintest chance to play St. Andrews should do whatever it...</p>
+															</div><!--mvp-blog-story-text-->
+														</div><!--mvp-blog-story-in-->
+													</div><!--mvp-blog-story-out-->
+																								</a>
+											</li><!--mvp-blog-story-wrap-->
+																					<li class="mvp-blog-story-wrap left relative infinite-post">
+												<a href="http://www.golfwrx.com/484924/parents-in-montana-cant-watch-their-children-golf-and-nobody-is-happy-about-it/" rel="bookmark">
+																									<div class="mvp-blog-story-out relative">
+														<div class="mvp-blog-story-img left relative">
+															<img width="400" height="240" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/GettyImages-805299128-400x240.jpg" class="mvp-reg-img lazy wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/GettyImages-805299128-400x240.jpg 400w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/GettyImages-805299128-590x354.jpg 590w" sizes="(max-width: 400px) 100vw, 400px" />															<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/GettyImages-805299128-80x80.jpg" class="mvp-mob-img lazy wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/GettyImages-805299128-80x80.jpg 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/GettyImages-805299128-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px" />																													</div><!--mvp-blog-story-img-->
+														<div class="mvp-blog-story-in">
+															<div class="mvp-blog-story-text left relative">
+																<div class="mvp-cat-date-wrap left relative">
+																																			<span class="mvp-cd-cat left relative">19th Hole</span><span class="mvp-cd-date left relative">4 days ago</span>
+																																	</div><!--mvp-cat-date-wrap-->
+																<h2>Parents in Montana can&#8217;t watch their children golf, and nobody is happy about it</h2>
+																<p>In Montana, as you may have heard from an irritated friend at some point during the past month, spectators cannot watch high school golf. Nick Petraccione...</p>
+															</div><!--mvp-blog-story-text-->
+														</div><!--mvp-blog-story-in-->
+													</div><!--mvp-blog-story-out-->
+																								</a>
+											</li><!--mvp-blog-story-wrap-->
+																					<li class="mvp-blog-story-wrap left relative infinite-post">
+												<a href="http://www.golfwrx.com/484892/scotty-cameron-the-return-of-the-laguna-putter/" rel="bookmark">
+																									<div class="mvp-blog-story-out relative">
+														<div class="mvp-blog-story-img left relative">
+															<img width="400" height="240" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/a56fe0bda957adf6e7a7d037bf793040-1-400x240.jpg" class="mvp-reg-img lazy wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/a56fe0bda957adf6e7a7d037bf793040-1-400x240.jpg 400w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/a56fe0bda957adf6e7a7d037bf793040-1-1000x600.jpg 1000w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/a56fe0bda957adf6e7a7d037bf793040-1-590x354.jpg 590w" sizes="(max-width: 400px) 100vw, 400px" />															<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/a56fe0bda957adf6e7a7d037bf793040-1-80x80.jpg" class="mvp-mob-img lazy wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/a56fe0bda957adf6e7a7d037bf793040-1-80x80.jpg 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/a56fe0bda957adf6e7a7d037bf793040-1-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px" />																													</div><!--mvp-blog-story-img-->
+														<div class="mvp-blog-story-in">
+															<div class="mvp-blog-story-text left relative">
+																<div class="mvp-cat-date-wrap left relative">
+																																			<span class="mvp-cd-cat left relative">Equipment</span><span class="mvp-cd-date left relative">4 days ago</span>
+																																	</div><!--mvp-cat-date-wrap-->
+																<h2>Scotty Cameron: The return of the &#8220;Laguna&#8221; putter?</h2>
+																<p>Scotty Cameron&#8217;s &#8220;Newport&#8221; putter model &#8212; named after Newport Beach, California &#8212; and its different variations are some of the most popular and winningest putters ever...</p>
+															</div><!--mvp-blog-story-text-->
+														</div><!--mvp-blog-story-in-->
+													</div><!--mvp-blog-story-out-->
+																								</a>
+											</li><!--mvp-blog-story-wrap-->
+																					<li class="mvp-blog-story-wrap left relative infinite-post">
+												<a href="http://www.golfwrx.com/483608/watch-what-is-the-proper-tee-height-for-you/" rel="bookmark">
+																									<div class="mvp-blog-story-out relative">
+														<div class="mvp-blog-story-img left relative">
+															<img width="400" height="240" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/ShawnClementTeeHeight-400x240.jpg" class="mvp-reg-img lazy wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/ShawnClementTeeHeight-400x240.jpg 400w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/ShawnClementTeeHeight-1000x600.jpg 1000w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/ShawnClementTeeHeight-590x354.jpg 590w" sizes="(max-width: 400px) 100vw, 400px" />															<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/ShawnClementTeeHeight-80x80.jpg" class="mvp-mob-img lazy wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/ShawnClementTeeHeight-80x80.jpg 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/ShawnClementTeeHeight-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px" />																															<div class="mvp-vid-box-wrap mvp-vid-marg">
+																	<i class="fa fa-2 fa-play" aria-hidden="true"></i>
+																</div><!--mvp-vid-box-wrap-->
+																													</div><!--mvp-blog-story-img-->
+														<div class="mvp-blog-story-in">
+															<div class="mvp-blog-story-text left relative">
+																<div class="mvp-cat-date-wrap left relative">
+																																			<span class="mvp-cd-cat left relative">Videos</span><span class="mvp-cd-date left relative">4 days ago</span>
+																																	</div><!--mvp-cat-date-wrap-->
+																<h2>WATCH: What is the proper tee height for you?</h2>
+																<p>Tee height can have a drastic effect on how your golf ball flies off the tee; especially when it comes to launch and spin rate. You...</p>
+															</div><!--mvp-blog-story-text-->
+														</div><!--mvp-blog-story-in-->
+													</div><!--mvp-blog-story-out-->
+																								</a>
+											</li><!--mvp-blog-story-wrap-->
+																					<li class="mvp-blog-story-wrap left relative infinite-post">
+												<a href="http://www.golfwrx.com/484860/does-your-worst-golf-shot-ever-top-these-horror-stories/" rel="bookmark">
+																									<div class="mvp-blog-story-out relative">
+														<div class="mvp-blog-story-img left relative">
+															<img width="400" height="227" src="http://wpmediars.golfwrx.com/wp-content/uploads/2016/07/divot-divot.jpg" class="mvp-reg-img lazy wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2016/07/divot-divot.jpg 1021w, http://wpmediars.golfwrx.com/wp-content/uploads/2016/07/divot-divot-300x170.jpg 300w, http://wpmediars.golfwrx.com/wp-content/uploads/2016/07/divot-divot-600x341.jpg 600w, http://wpmediars.golfwrx.com/wp-content/uploads/2016/07/divot-divot-739x420.jpg 739w, http://wpmediars.golfwrx.com/wp-content/uploads/2016/07/divot-divot-640x364.jpg 640w, http://wpmediars.golfwrx.com/wp-content/uploads/2016/07/divot-divot-681x387.jpg 681w" sizes="(max-width: 400px) 100vw, 400px" />															<img width="80" height="45" src="http://wpmediars.golfwrx.com/wp-content/uploads/2016/07/divot-divot.jpg" class="mvp-mob-img lazy wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2016/07/divot-divot.jpg 1021w, http://wpmediars.golfwrx.com/wp-content/uploads/2016/07/divot-divot-300x170.jpg 300w, http://wpmediars.golfwrx.com/wp-content/uploads/2016/07/divot-divot-600x341.jpg 600w, http://wpmediars.golfwrx.com/wp-content/uploads/2016/07/divot-divot-739x420.jpg 739w, http://wpmediars.golfwrx.com/wp-content/uploads/2016/07/divot-divot-640x350.jpg 640w, http://wpmediars.golfwrx.com/wp-content/uploads/2016/07/divot-divot-681x387.jpg 681w" sizes="(max-width: 80px) 100vw, 80px" />																													</div><!--mvp-blog-story-img-->
+														<div class="mvp-blog-story-in">
+															<div class="mvp-blog-story-text left relative">
+																<div class="mvp-cat-date-wrap left relative">
+																																			<span class="mvp-cd-cat left relative">19th Hole</span><span class="mvp-cd-date left relative">5 days ago</span>
+																																	</div><!--mvp-cat-date-wrap-->
+																<h2>Does your worst golf shot ever top these horror stories?</h2>
+																<p>We’ve all hit some golf shots that haunt our dreams. Not mere shanks, duffs, and chunks, but rather, awful shots compounded by horrific results. Jacked_Loft started...</p>
+															</div><!--mvp-blog-story-text-->
+														</div><!--mvp-blog-story-in-->
+													</div><!--mvp-blog-story-out-->
+																								</a>
+											</li><!--mvp-blog-story-wrap-->
+																											</ul>
+														<div class="mvp-inf-more-wrap left relative">
+																	<a href="#" class="mvp-inf-more-but">More Posts</a>
+																<div class="mvp-nav-links">
+									<div class="pagination"><span>Page 1 of 589</span><span class="current">1</span><a href='http://www.golfwrx.com/page/2/' class="inactive">2</a><a href='http://www.golfwrx.com/page/3/' class="inactive">3</a><a href='http://www.golfwrx.com/page/4/' class="inactive">4</a><a href='http://www.golfwrx.com/page/5/' class="inactive">5</a><a href="http://www.golfwrx.com/page/2/">Next &rsaquo;</a><a href='http://www.golfwrx.com/page/589/'>Last &raquo;</a></div>
+								</div><!--mvp-nav-links-->
+							</div><!--mvp-inf-more-wrap-->
+						</div><!--mvp-main-blog-body-->
+					</div><!--mvp-main-blog-in-->
+					<div id="mvp-side-wrap" class="left relative theiaStickySidebar">
+			<section id="dfp-ad-zone-300-12" class="mvp-side-widget adops"> 
+			<span class="mvp-ad-label">Advertisement</span>     
+      <div class="ad-reporter-ahytrfg35423">  <!-- div for the chrome extension ads info grabber -->
+      <div id="middlerightSlot"></div>
+      </div>
+      
+    </section><section id="mvp_tabber_widget-4" class="mvp-side-widget mvp_tabber_widget">
+			<div class="mvp-widget-tab-wrap left relative">
+				<div class="mvp-feat1-list-wrap left relative">
+					<div class="mvp-feat1-list-head-wrap left relative">
+						<ul class="mvp-feat1-list-buts left relative">
+							<li class="mvp-feat-col-tab"><a href="#mvp-tab-col1"><span class="mvp-feat1-list-but">Trending</span></a></li>
+															<li><a href="#mvp-tab-col2"><span class="mvp-feat1-list-but">Latest</span></a></li>
+																				</ul>
+					</div><!--mvp-feat1-list-head-wrap-->
+					<div id="mvp-tab-col1" class="mvp-feat1-list left relative mvp-tab-col-cont">
+																					<a href="http://www.golfwrx.com/483160/taylormade-launches-m3-and-m4-drivers-that-have-a-twist-face/" rel="bookmark">
+								<div class="mvp-feat1-list-cont left relative">
+																			<div class="mvp-feat1-list-out relative">
+											<div class="mvp-feat1-list-img left relative">
+												<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2017/12/TaylormadeM3M4twistFaceWRX-80x80.jpg" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2017/12/TaylormadeM3M4twistFaceWRX-80x80.jpg 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2017/12/TaylormadeM3M4twistFaceWRX-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px" />											</div><!--mvp-feat1-list-img-->
+											<div class="mvp-feat1-list-in">
+												<div class="mvp-feat1-list-text">
+													<div class="mvp-cat-date-wrap left relative">
+														<span class="mvp-cd-cat left relative">Equipment</span><span class="mvp-cd-date left relative">2 weeks ago</span>
+													</div><!--mvp-cat-date-wrap-->
+													<h2>TaylorMade launches M3 and M4 drivers that have a &#8220;Twist Face&#8221;</h2>
+												</div><!--mvp-feat1-list-text-->
+											</div><!--mvp-feat1-list-in-->
+										</div><!--mvp-feat1-list-out-->
+																	</div><!--mvp-feat1-list-cont-->
+								</a>
+															<a href="http://www.golfwrx.com/482672/why-dustin-johnson-has-a-64-degree-taylormade-hi-toe-wedge-in-his-bag/" rel="bookmark">
+								<div class="mvp-feat1-list-cont left relative">
+																			<div class="mvp-feat1-list-out relative">
+											<div class="mvp-feat1-list-img left relative">
+												<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2017/12/DustinJohnsonWITB2018-80x80.jpg" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2017/12/DustinJohnsonWITB2018-80x80.jpg 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2017/12/DustinJohnsonWITB2018-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px" />											</div><!--mvp-feat1-list-img-->
+											<div class="mvp-feat1-list-in">
+												<div class="mvp-feat1-list-text">
+													<div class="mvp-cat-date-wrap left relative">
+														<span class="mvp-cd-cat left relative">pga tour</span><span class="mvp-cd-date left relative">4 weeks ago</span>
+													</div><!--mvp-cat-date-wrap-->
+													<h2>Why Dustin Johnson has a 64-degree TaylorMade Hi-Toe wedge in his bag</h2>
+												</div><!--mvp-feat1-list-text-->
+											</div><!--mvp-feat1-list-in-->
+										</div><!--mvp-feat1-list-out-->
+																	</div><!--mvp-feat1-list-cont-->
+								</a>
+															<a href="http://www.golfwrx.com/478194/the-secret-to-practicing-like-a-tour-player/" rel="bookmark">
+								<div class="mvp-feat1-list-cont left relative">
+																			<div class="mvp-feat1-list-out relative">
+											<div class="mvp-feat1-list-img left relative">
+												<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2017/11/Practicing_Like_A_Tour_Player-80x80.jpg" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2017/11/Practicing_Like_A_Tour_Player-80x80.jpg 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2017/11/Practicing_Like_A_Tour_Player-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px" />											</div><!--mvp-feat1-list-img-->
+											<div class="mvp-feat1-list-in">
+												<div class="mvp-feat1-list-text">
+													<div class="mvp-cat-date-wrap left relative">
+														<span class="mvp-cd-cat left relative">Instruction</span><span class="mvp-cd-date left relative">3 weeks ago</span>
+													</div><!--mvp-cat-date-wrap-->
+													<h2>The Secret to Practicing Like A Tour Player</h2>
+												</div><!--mvp-feat1-list-text-->
+											</div><!--mvp-feat1-list-in-->
+										</div><!--mvp-feat1-list-out-->
+																	</div><!--mvp-feat1-list-cont-->
+								</a>
+															<a href="http://www.golfwrx.com/483540/that-one-time-dustin-johnson-got-super-protective-over-his-m3-weight-setup/" rel="bookmark">
+								<div class="mvp-feat1-list-cont left relative">
+																			<div class="mvp-feat1-list-out relative">
+											<div class="mvp-feat1-list-img left relative">
+												<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/DustinJohnsonM3driverweights-80x80.jpg" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/DustinJohnsonM3driverweights-80x80.jpg 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/DustinJohnsonM3driverweights-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px" />											</div><!--mvp-feat1-list-img-->
+											<div class="mvp-feat1-list-in">
+												<div class="mvp-feat1-list-text">
+													<div class="mvp-cat-date-wrap left relative">
+														<span class="mvp-cd-cat left relative">Equipment</span><span class="mvp-cd-date left relative">2 weeks ago</span>
+													</div><!--mvp-cat-date-wrap-->
+													<h2>That one time Dustin Johnson got super protective over his M3 weight setup</h2>
+												</div><!--mvp-feat1-list-text-->
+											</div><!--mvp-feat1-list-in-->
+										</div><!--mvp-feat1-list-out-->
+																	</div><!--mvp-feat1-list-cont-->
+								</a>
+															<a href="http://www.golfwrx.com/484588/michael-breed-explains-why-he-really-left-the-golf-channel/" rel="bookmark">
+								<div class="mvp-feat1-list-cont left relative">
+																			<div class="mvp-feat1-list-out relative">
+											<div class="mvp-feat1-list-img left relative">
+												<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/MichaelBreedGolfWRX-80x80.png" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/MichaelBreedGolfWRX-80x80.png 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/MichaelBreedGolfWRX-150x150.png 150w" sizes="(max-width: 80px) 100vw, 80px" />											</div><!--mvp-feat1-list-img-->
+											<div class="mvp-feat1-list-in">
+												<div class="mvp-feat1-list-text">
+													<div class="mvp-cat-date-wrap left relative">
+														<span class="mvp-cd-cat left relative">Podcasts</span><span class="mvp-cd-date left relative">6 days ago</span>
+													</div><!--mvp-cat-date-wrap-->
+													<h2>Michael Breed explains why he really left The Golf Channel</h2>
+												</div><!--mvp-feat1-list-text-->
+											</div><!--mvp-feat1-list-in-->
+										</div><!--mvp-feat1-list-out-->
+																	</div><!--mvp-feat1-list-cont-->
+								</a>
+															<a href="http://www.golfwrx.com/481538/3-reasons-you-should-watch-more-womens-golf-on-tv/" rel="bookmark">
+								<div class="mvp-feat1-list-cont left relative">
+																			<div class="mvp-feat1-list-out relative">
+											<div class="mvp-feat1-list-img left relative">
+												<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2017/12/LPGAgolfWatchGolfWRX-80x80.jpg" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2017/12/LPGAgolfWatchGolfWRX-80x80.jpg 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2017/12/LPGAgolfWatchGolfWRX-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px" />											</div><!--mvp-feat1-list-img-->
+											<div class="mvp-feat1-list-in">
+												<div class="mvp-feat1-list-text">
+													<div class="mvp-cat-date-wrap left relative">
+														<span class="mvp-cd-cat left relative">Opinion &amp; Analysis</span><span class="mvp-cd-date left relative">4 weeks ago</span>
+													</div><!--mvp-cat-date-wrap-->
+													<h2>3 Reasons you should watch more women&#8217;s golf on TV</h2>
+												</div><!--mvp-feat1-list-text-->
+											</div><!--mvp-feat1-list-in-->
+										</div><!--mvp-feat1-list-out-->
+																	</div><!--mvp-feat1-list-cont-->
+								</a>
+															<a href="http://www.golfwrx.com/483428/spotted-callaway-rogue-and-rogue-pro-irons/" rel="bookmark">
+								<div class="mvp-feat1-list-cont left relative">
+																			<div class="mvp-feat1-list-out relative">
+											<div class="mvp-feat1-list-img left relative">
+												<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2017/12/CallawayRogueIrons-80x80.jpg" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2017/12/CallawayRogueIrons-80x80.jpg 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2017/12/CallawayRogueIrons-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px" />											</div><!--mvp-feat1-list-img-->
+											<div class="mvp-feat1-list-in">
+												<div class="mvp-feat1-list-text">
+													<div class="mvp-cat-date-wrap left relative">
+														<span class="mvp-cd-cat left relative">Equipment</span><span class="mvp-cd-date left relative">2 weeks ago</span>
+													</div><!--mvp-cat-date-wrap-->
+													<h2>SPOTTED: Callaway Rogue and Rogue Pro irons</h2>
+												</div><!--mvp-feat1-list-text-->
+											</div><!--mvp-feat1-list-in-->
+										</div><!--mvp-feat1-list-out-->
+																	</div><!--mvp-feat1-list-cont-->
+								</a>
+															<a href="http://www.golfwrx.com/482818/spotted-a-taylormade-m3-driver-pops-up-on-instagram/" rel="bookmark">
+								<div class="mvp-feat1-list-cont left relative">
+																			<div class="mvp-feat1-list-out relative">
+											<div class="mvp-feat1-list-img left relative">
+												<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2017/12/TaylorMadeM32018golfwrx-80x80.png" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2017/12/TaylorMadeM32018golfwrx-80x80.png 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2017/12/TaylorMadeM32018golfwrx-150x150.png 150w" sizes="(max-width: 80px) 100vw, 80px" />											</div><!--mvp-feat1-list-img-->
+											<div class="mvp-feat1-list-in">
+												<div class="mvp-feat1-list-text">
+													<div class="mvp-cat-date-wrap left relative">
+														<span class="mvp-cd-cat left relative">Equipment</span><span class="mvp-cd-date left relative">4 weeks ago</span>
+													</div><!--mvp-cat-date-wrap-->
+													<h2>SPOTTED: A &#8220;TaylorMade M3&#8221; driver pops up on Instagram</h2>
+												</div><!--mvp-feat1-list-text-->
+											</div><!--mvp-feat1-list-in-->
+										</div><!--mvp-feat1-list-out-->
+																	</div><!--mvp-feat1-list-cont-->
+								</a>
+															<a href="http://www.golfwrx.com/484630/photos-from-the-2018-sony-open-in-hawaii/" rel="bookmark">
+								<div class="mvp-feat1-list-cont left relative">
+																			<div class="mvp-feat1-list-out relative">
+											<div class="mvp-feat1-list-img left relative">
+												<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/6a140d9caef77fc078bc9518bb62f4d7-1-80x80.jpg" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/6a140d9caef77fc078bc9518bb62f4d7-1-80x80.jpg 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/6a140d9caef77fc078bc9518bb62f4d7-1-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px" />											</div><!--mvp-feat1-list-img-->
+											<div class="mvp-feat1-list-in">
+												<div class="mvp-feat1-list-text">
+													<div class="mvp-cat-date-wrap left relative">
+														<span class="mvp-cd-cat left relative">Popular Photo Galleries</span><span class="mvp-cd-date left relative">5 days ago</span>
+													</div><!--mvp-cat-date-wrap-->
+													<h2>Photos from the 2018 Sony Open in Hawaii</h2>
+												</div><!--mvp-feat1-list-text-->
+											</div><!--mvp-feat1-list-in-->
+										</div><!--mvp-feat1-list-out-->
+																	</div><!--mvp-feat1-list-cont-->
+								</a>
+															<a href="http://www.golfwrx.com/484072/dustin-johnsons-winning-witb-2018-sentry-tournament-of-champions/" rel="bookmark">
+								<div class="mvp-feat1-list-cont left relative">
+																			<div class="mvp-feat1-list-out relative">
+											<div class="mvp-feat1-list-img left relative">
+												<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/DustinJohnsonWITB2018New-80x80.jpg" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/DustinJohnsonWITB2018New-80x80.jpg 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/DustinJohnsonWITB2018New-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px" />											</div><!--mvp-feat1-list-img-->
+											<div class="mvp-feat1-list-in">
+												<div class="mvp-feat1-list-text">
+													<div class="mvp-cat-date-wrap left relative">
+														<span class="mvp-cd-cat left relative">pga tour</span><span class="mvp-cd-date left relative">1 week ago</span>
+													</div><!--mvp-cat-date-wrap-->
+													<h2>Dustin Johnson&#8217;s Winning WITB: 2018 Sentry Tournament of Champions</h2>
+												</div><!--mvp-feat1-list-text-->
+											</div><!--mvp-feat1-list-in-->
+										</div><!--mvp-feat1-list-out-->
+																	</div><!--mvp-feat1-list-cont-->
+								</a>
+																		</div><!--mvp-tab-col1-->
+					<div id="mvp-tab-col2" class="mvp-feat1-list left relative mvp-tab-col-cont">
+																					<a href="http://www.golfwrx.com/485180/callaway-launches-new-rogue-rogue-sub-zero-and-rogue-draw-drivers-and-fairway-woods/" rel="bookmark">
+								<div class="mvp-feat1-list-cont left relative">
+																			<div class="mvp-feat1-list-out relative">
+											<div class="mvp-feat1-list-img left relative">
+												<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/CallawayRogueRogueSubZeroGolfWRX-80x80.jpg" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/CallawayRogueRogueSubZeroGolfWRX-80x80.jpg 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/CallawayRogueRogueSubZeroGolfWRX-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px" />											</div><!--mvp-feat1-list-img-->
+											<div class="mvp-feat1-list-in">
+												<div class="mvp-feat1-list-text">
+													<div class="mvp-cat-date-wrap left relative">
+														<span class="mvp-cd-cat left relative">Equipment</span><span class="mvp-cd-date left relative">54 mins ago</span>
+													</div><!--mvp-cat-date-wrap-->
+													<h2>Callaway launches new Rogue, Rogue Sub Zero and Rogue Draw drivers, and fairway woods</h2>
+												</div><!--mvp-feat1-list-text-->
+											</div><!--mvp-feat1-list-in-->
+										</div><!--mvp-feat1-list-out-->
+																	</div><!--mvp-feat1-list-cont-->
+								</a>
+															<a href="http://www.golfwrx.com/485088/final-round-coverage-of-sony-open-not-surprisingly-affected-by-strike/" rel="bookmark">
+								<div class="mvp-feat1-list-cont left relative">
+																			<div class="mvp-feat1-list-out relative">
+											<div class="mvp-feat1-list-img left relative">
+												<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/iTunesArtwork-512@3x-80x80.png" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/iTunesArtwork-512@3x-80x80.png 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/iTunesArtwork-512@3x-150x150.png 150w" sizes="(max-width: 80px) 100vw, 80px" />											</div><!--mvp-feat1-list-img-->
+											<div class="mvp-feat1-list-in">
+												<div class="mvp-feat1-list-text">
+													<div class="mvp-cat-date-wrap left relative">
+														<span class="mvp-cd-cat left relative">News</span><span class="mvp-cd-date left relative">10 hours ago</span>
+													</div><!--mvp-cat-date-wrap-->
+													<h2>Final-round coverage of Sony Open not surprisingly affected by strike</h2>
+												</div><!--mvp-feat1-list-text-->
+											</div><!--mvp-feat1-list-in-->
+										</div><!--mvp-feat1-list-out-->
+																	</div><!--mvp-feat1-list-cont-->
+								</a>
+															<a href="http://www.golfwrx.com/485138/mondays-photos-from-the-2018-careerbuilder-challenge/" rel="bookmark">
+								<div class="mvp-feat1-list-cont left relative">
+																			<div class="mvp-feat1-list-out relative">
+											<div class="mvp-feat1-list-img left relative">
+												<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/BettinardiHexperimental-80x80.jpg" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/BettinardiHexperimental-80x80.jpg 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/BettinardiHexperimental-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px" />											</div><!--mvp-feat1-list-img-->
+											<div class="mvp-feat1-list-in">
+												<div class="mvp-feat1-list-text">
+													<div class="mvp-cat-date-wrap left relative">
+														<span class="mvp-cd-cat left relative">Popular Photo Galleries</span><span class="mvp-cd-date left relative">12 hours ago</span>
+													</div><!--mvp-cat-date-wrap-->
+													<h2>Monday&#8217;s Photos from the 2018 CareerBuilder Challenge</h2>
+												</div><!--mvp-feat1-list-text-->
+											</div><!--mvp-feat1-list-in-->
+										</div><!--mvp-feat1-list-out-->
+																	</div><!--mvp-feat1-list-cont-->
+								</a>
+															<a href="http://www.golfwrx.com/485108/pings-new-glide-2-0-stealth-wedges-and-vault-2-0-putters/" rel="bookmark">
+								<div class="mvp-feat1-list-cont left relative">
+																			<div class="mvp-feat1-list-out relative">
+											<div class="mvp-feat1-list-img left relative">
+												<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/PingStealthVault2.0-80x80.jpg" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/PingStealthVault2.0-80x80.jpg 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/PingStealthVault2.0-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px" />											</div><!--mvp-feat1-list-img-->
+											<div class="mvp-feat1-list-in">
+												<div class="mvp-feat1-list-text">
+													<div class="mvp-cat-date-wrap left relative">
+														<span class="mvp-cd-cat left relative">Equipment</span><span class="mvp-cd-date left relative">13 hours ago</span>
+													</div><!--mvp-cat-date-wrap-->
+													<h2>Ping&#8217;s new Glide 2.0 &#8220;Stealth&#8221; wedges, and Vault 2.0 putters</h2>
+												</div><!--mvp-feat1-list-text-->
+											</div><!--mvp-feat1-list-in-->
+										</div><!--mvp-feat1-list-out-->
+																	</div><!--mvp-feat1-list-cont-->
+								</a>
+															<a href="http://www.golfwrx.com/484704/tour-rundown-europe-storms-back-kizzire-takes-trophy-in-a-marathon-playoff/" rel="bookmark">
+								<div class="mvp-feat1-list-cont left relative">
+																			<div class="mvp-feat1-list-out relative">
+											<div class="mvp-feat1-list-img left relative">
+												<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/PattonKizzireSonyOpen-80x80.jpg" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/PattonKizzireSonyOpen-80x80.jpg 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/PattonKizzireSonyOpen-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px" />											</div><!--mvp-feat1-list-img-->
+											<div class="mvp-feat1-list-in">
+												<div class="mvp-feat1-list-text">
+													<div class="mvp-cat-date-wrap left relative">
+														<span class="mvp-cd-cat left relative">Tour News</span><span class="mvp-cd-date left relative">16 hours ago</span>
+													</div><!--mvp-cat-date-wrap-->
+													<h2>Tour Rundown: Europe storms back, Kizzire takes trophy in a marathon playoff</h2>
+												</div><!--mvp-feat1-list-text-->
+											</div><!--mvp-feat1-list-in-->
+										</div><!--mvp-feat1-list-out-->
+																	</div><!--mvp-feat1-list-cont-->
+								</a>
+															<a href="http://www.golfwrx.com/485072/pings-new-g700-irons-are-its-longest-highest-flying-irons-ever/" rel="bookmark">
+								<div class="mvp-feat1-list-cont left relative">
+																			<div class="mvp-feat1-list-out relative">
+											<div class="mvp-feat1-list-img left relative">
+												<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/PingG700irons-80x80.jpg" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/PingG700irons-80x80.jpg 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/PingG700irons-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px" />											</div><!--mvp-feat1-list-img-->
+											<div class="mvp-feat1-list-in">
+												<div class="mvp-feat1-list-text">
+													<div class="mvp-cat-date-wrap left relative">
+														<span class="mvp-cd-cat left relative">Equipment</span><span class="mvp-cd-date left relative">17 hours ago</span>
+													</div><!--mvp-cat-date-wrap-->
+													<h2>Ping&#8217;s new G700 irons are its &#8220;longest, highest flying&#8221; irons ever</h2>
+												</div><!--mvp-feat1-list-text-->
+											</div><!--mvp-feat1-list-in-->
+										</div><!--mvp-feat1-list-out-->
+																	</div><!--mvp-feat1-list-cont-->
+								</a>
+															<a href="http://www.golfwrx.com/485054/ping-launches-new-g400-max-driver-the-most-forgiving-driver-in-golf/" rel="bookmark">
+								<div class="mvp-feat1-list-cont left relative">
+																			<div class="mvp-feat1-list-out relative">
+											<div class="mvp-feat1-list-img left relative">
+												<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/3f7afd6f151ce257a364defae6953347-80x80.jpg" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/3f7afd6f151ce257a364defae6953347-80x80.jpg 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/3f7afd6f151ce257a364defae6953347-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px" />											</div><!--mvp-feat1-list-img-->
+											<div class="mvp-feat1-list-in">
+												<div class="mvp-feat1-list-text">
+													<div class="mvp-cat-date-wrap left relative">
+														<span class="mvp-cd-cat left relative">Equipment</span><span class="mvp-cd-date left relative">17 hours ago</span>
+													</div><!--mvp-cat-date-wrap-->
+													<h2>Ping launches new G400 Max driver, the &#8220;most forgiving driver in golf&#8221;</h2>
+												</div><!--mvp-feat1-list-text-->
+											</div><!--mvp-feat1-list-in-->
+										</div><!--mvp-feat1-list-out-->
+																	</div><!--mvp-feat1-list-cont-->
+								</a>
+															<a href="http://www.golfwrx.com/485012/patton-kizzires-winning-witb-2018-sony-open-in-hawaii/" rel="bookmark">
+								<div class="mvp-feat1-list-cont left relative">
+																			<div class="mvp-feat1-list-out relative">
+											<div class="mvp-feat1-list-img left relative">
+												<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/PattonKizzireWinningWITB-80x80.jpg" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/PattonKizzireWinningWITB-80x80.jpg 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/PattonKizzireWinningWITB-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px" />											</div><!--mvp-feat1-list-img-->
+											<div class="mvp-feat1-list-in">
+												<div class="mvp-feat1-list-text">
+													<div class="mvp-cat-date-wrap left relative">
+														<span class="mvp-cd-cat left relative">pga tour</span><span class="mvp-cd-date left relative">1 day ago</span>
+													</div><!--mvp-cat-date-wrap-->
+													<h2>Patton Kizzire&#8217;s Winning WITB: 2018 Sony Open in Hawaii</h2>
+												</div><!--mvp-feat1-list-text-->
+											</div><!--mvp-feat1-list-in-->
+										</div><!--mvp-feat1-list-out-->
+																	</div><!--mvp-feat1-list-cont-->
+								</a>
+															<a href="http://www.golfwrx.com/484210/how-far-away-from-the-ball-should-you-be-at-address/" rel="bookmark">
+								<div class="mvp-feat1-list-cont left relative">
+																			<div class="mvp-feat1-list-out relative">
+											<div class="mvp-feat1-list-img left relative">
+												<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/How-Far-From-The-Ball-Thumb-80x80.jpg" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/How-Far-From-The-Ball-Thumb-80x80.jpg 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/How-Far-From-The-Ball-Thumb-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px" />											</div><!--mvp-feat1-list-img-->
+											<div class="mvp-feat1-list-in">
+												<div class="mvp-feat1-list-text">
+													<div class="mvp-cat-date-wrap left relative">
+														<span class="mvp-cd-cat left relative">Instruction</span><span class="mvp-cd-date left relative">2 days ago</span>
+													</div><!--mvp-cat-date-wrap-->
+													<h2>How Far Away from the Ball Should You Be at Address?</h2>
+												</div><!--mvp-feat1-list-text-->
+											</div><!--mvp-feat1-list-in-->
+										</div><!--mvp-feat1-list-out-->
+																	</div><!--mvp-feat1-list-cont-->
+								</a>
+															<a href="http://www.golfwrx.com/484978/rory-mcilroy-reveals-heart-problem-says-its-not-a-big-deal/" rel="bookmark">
+								<div class="mvp-feat1-list-cont left relative">
+																			<div class="mvp-feat1-list-out relative">
+											<div class="mvp-feat1-list-img left relative">
+												<img width="80" height="80" src="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/GettyImages-841866424-1-80x80.jpg" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt="" srcset="http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/GettyImages-841866424-1-80x80.jpg 80w, http://wpmediars.golfwrx.com/wp-content/uploads/2018/01/GettyImages-841866424-1-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px" />											</div><!--mvp-feat1-list-img-->
+											<div class="mvp-feat1-list-in">
+												<div class="mvp-feat1-list-text">
+													<div class="mvp-cat-date-wrap left relative">
+														<span class="mvp-cd-cat left relative">News</span><span class="mvp-cd-date left relative">2 days ago</span>
+													</div><!--mvp-cat-date-wrap-->
+													<h2>Rory McIlroy reveals heart problem, says it&#8217;s not a big deal</h2>
+												</div><!--mvp-feat1-list-text-->
+											</div><!--mvp-feat1-list-in-->
+										</div><!--mvp-feat1-list-out-->
+																	</div><!--mvp-feat1-list-cont-->
+								</a>
+																		</div><!--mvp-tab-col2-->
+					<div id="mvp-tab-col3" class="mvp-feat1-list left relative mvp-tab-col-cont">
+											</div><!--mvp-tab-col3-->
+				</div><!--mvp-feat1-list-wrap-->
+			</div><!--mvp-widget-tab-wrap-->
+
+		</section><section id="mvp_facebook_widget-4" class="mvp-side-widget mvp_facebook_widget"><div class="mvp-widget-home-head"><h4 class="mvp-widget-home-title"><span class="mvp-widget-home-title">Facebook</span></h4></div>			<div class="fb-page" data-href="https://www.facebook.com/golfwrx" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="true"><div class="fb-xfbml-parse-ignore"></div></div>
+			
+		</section>
+		<section id="dfp-ad-zone-300-11" class="mvp-side-widget adops"> 
+		<span class="mvp-ad-label">Advertisement</span>     
+      <div class="ad-reporter-ahytrfg35423">  <!-- div for the chrome extension ads info grabber -->
+          <div id="bottomrightSlot"></div>
+          </div>      
+    </section>
+    	
+    </div><!--mvp-side-wrap-->				</div><!--mvp-mmain-blog-out-->
+			</div><!--mvp-main-blog-cont-->
+		</div><!--mvp-main-box-->
+	</div><!--mvp-main-blog-wrap-->
+			</div><!--mvp-main-body-wrap-->
+			<footer id="mvp-foot-wrap" class="left relative">
+				<div id="mvp-foot-top" class="left relative">
+					<div class="mvp-main-box">
+						<div id="mvp-foot-logo" class="left relative">
+															<a href="http://www.golfwrx.com/"><img src="http://www.golfwrx.com/wp-content/uploads/2017/11/flat_logo_300_r150.png" alt="GolfWRX" data-rjs="2" /></a>
+													</div><!--mvp-foot-logo-->
+						<div id="mvp-foot-soc" class="left relative">
+							<ul class="mvp-foot-soc-list left relative">
+																	<li><a href="https://www.facebook.com/golfwrx" target="_blank" class="fa fa-facebook fa-2"></a></li>
+																									<li><a href="https://twitter.com/golfwrx" target="_blank" class="fa fa-twitter fa-2"></a></li>
+																																	<li><a href="https://instagram.com/golfwrx" target="_blank" class="fa fa-instagram fa-2"></a></li>
+																																	<li><a href="https://www.youtube.com/OfficialGolfwrx" target="_blank" class="fa fa-youtube-play fa-2"></a></li>
+																									<li><a href="https://www.linkedin.com/company/golfwrx.com" target="_blank" class="fa fa-linkedin fa-2"></a></li>
+																							</ul>
+						</div><!--mvp-foot-soc-->
+						<div id="mvp-foot-menu-wrap" class="left relative">
+							<div id="mvp-foot-menu" class="left relative">
+								<div class="menu-top-menu-container"><ul id="menu-top-menu" class="menu"><li id="menu-item-291457" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-291457"><a href="http://visitor.r20.constantcontact.com/d.jsp?llr=xr4nveeab&#038;p=oi&#038;m=1103963291191&#038;sit=lpvcu4rfb&#038;f=10a07bc2-956a-4903-a4f0-dbe15bd9e3ec">Newsletter Sign Up</a></li>
+<li id="menu-item-272971" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-272971"><a href="http://outfitted.golfwrx.com/">Store</a></li>
+<li id="menu-item-478452" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-478452"><a href="http://www.golfwrx.com/forums/index.php?app=core&#038;module=global&#038;section=register">Join GolfWRX</a></li>
+<li id="menu-item-478456" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-478456"><a href="http://www.golfwrx.com/who-is-golfwrx/">Who is GolfWRX</a></li>
+<li id="menu-item-478454" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-478454"><a href="http://www.golfwrx.com/write-for-golfwrx/">Write for WRX</a></li>
+<li id="menu-item-478448" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-478448"><a href="http://www.golfwrx.com/advertising/">Advertising</a></li>
+<li id="menu-item-478462" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-478462"><a href="http://www.golfwrx.com/rules-and-terms/">Rules &#038; Terms</a></li>
+<li id="menu-item-478462" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-478462"><a class="change-consent" onclick="window.__cmp('displayConsentUi');">Change Consent</a></li>
+</ul></div>							</div><!--mvp-foot-menu-->
+						</div><!--mvp-foot-menu-wrap-->
+					</div><!--mvp-main-box-->
+				</div><!--mvp-foot-top-->
+				<div id="mvp-foot-bot" class="left relative">
+					<div class="mvp-main-box">
+						<div id="mvp-foot-copy" class="left relative">
+							<p>Copyright © 2018 GolfWRX Holdings, LLC. All rights reserved.</p>
+						</div><!--mvp-foot-copy-->
+					</div><!--mvp-main-box-->
+				</div><!--mvp-foot-bot-->
+			</footer>
+		</div><!--mvp-site-main-->
+	</div><!--mvp-site-wall-->
+</div><!--mvp-site-->
+<div class="mvp-fly-top back-to-top">
+	<i class="fa fa-angle-up fa-3"></i>
+</div><!--mvp-fly-top-->
+<div class="mvp-fly-fade mvp-fly-but-click">
+</div><!--mvp-fly-fade-->
+	<!-- <script src="http://code.jquery.com/jquery-1.9.1.js"></script> -->
+	<script type="text/javascript">
+		var url = "http://www.golfwrx.com/wp-admin/admin-ajax.php";
+    var idp = 0;
+    // was always returning 250047 for some reason...
+    // var idp = ;
+		var cr_at = 0;
+		var again_time = 60 ;
+		var appidfb = "";		
+		var appidgp = "";		
+		var plugin_url = "http://www.golfwrx.com/wp-content/plugins/colorich-reaction";
+		
+		jQuery(document).ready(function(){
+						jQuery('.vote-slyte').css('font-size', '11px');
+			
+						jQuery('.vote-slyte').css('background', '#ffee00');
+									jQuery( ".vote-slyte" ).hover(				
+				function() {					
+					if(getCookie(idp+'_'+jQuery( this ).text()) == ''){
+				    	jQuery( this ).css('background', '#0077ee');
+				    }
+				}, function() {
+					if(getCookie(idp+'_'+jQuery( this ).text()) == ''){
+				    	jQuery( this ).css('background', '#ffee00');
+				    }
+				}
+			);
+									jQuery('.vote-slyte').css('color', '#000000');
+						jQuery( ".vote-slyte" ).hover(
+				function() {
+					if(getCookie(idp+'_'+jQuery( this ).text()) == ''){
+				    	jQuery( this ).css('color', '#ffffff');
+				    }
+				}, function() {
+					if(getCookie(idp+'_'+jQuery( this ).text()) == ''){
+				    	jQuery( this ).css('color', '#000000');
+				    }
+				}
+			);
+
+			colorich_onlod();
+		});
+		function colorich_onlod()
+		{
+		 	jQuery('.buzzfeed-buton li').each(function(index, el) {					 	 		
+		 		if(getCookie(idp+'_'+jQuery(el).find('.vote-slyte').text())){		 			
+		 			jQuery(el).find('.vote-slyte').css({
+		            	background: '#ccc',
+		            	color: '#fff',
+		            	cursor: 'default'
+		            });
+		 		}			 		
+		 	});
+		}
+	</script>
+		
+		<script type="text/javascript">
+						jQuery('.vote-slyte').css('font-family','Alef-Bold');	
+		
+			
+			
+				jQuery('.vote-slyte').css('font-size', 'Alef-Boldpx');					
+					</script>
+		<style type="text/css">
+								@font-face {
+						  font-family: "Alef-Bold";
+              src:  url(//www.golfwrx.com/wp-content/plugins/colorich-reaction/Font-gg/Alef-Bold.ttf) format("truetype");
+							/*font-family: "Alef-Bold"; */
+							/* src: url(http://www.golfwrx.com/wp-content/plugins/colorich-reaction/Font-gg/Alef-Bold.ttf) format("truetype"); */
+						}
+					</style>
+
+	<!-- Lightbox Plus Colorbox v2.7/1.5.9 - 2013.01.24 - Message: 1-->
+<script type="text/javascript">
+jQuery(document).ready(function($){
+  $("a[rel*=lightbox]").colorbox({speed:350,initialWidth:"300",initialHeight:"100",opacity:0.8,loop:false,scrolling:false,escKey:false,arrowKey:false,top:false,right:false,bottom:false,left:false});
+  $(".lbpModal").colorbox({transition:"none",innerWidth:"50%",innerHeight:"60%",initialWidth:"300",initialHeight:"100",opacity:0.8,iframe:true});
+});
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var pollsL10n = {"ajax_url":"http:\/\/www.golfwrx.com\/wp-admin\/admin-ajax.php","text_wait":"Your last request is still being processed. Please wait a while ...","text_valid":"Please choose a valid poll answer.","text_multiple":"Maximum number of choices allowed: ","show_loading":"1","show_fading":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.golfwrx.com/wp-content/plugins/wp-polls/polls-js.js?ver=2.63'></script>
+<script type='text/javascript' src='http://www.golfwrx.com/wp-content/themes/zox_news/js/mvpcustom.js?ver=4.8.3'></script>
+<script type='text/javascript'>
+
+	jQuery(document).ready(function($) {
+	$(window).load(function(){
+	var leaderHeight = $("#mvp-leader-wrap").outerHeight();
+	var logoHeight = $("#mvp-main-nav-top").outerHeight();
+	var botHeight = $("#mvp-main-nav-bot").outerHeight();
+	var navHeight = $("#mvp-main-head-wrap").outerHeight();
+	var headerHeight = navHeight + leaderHeight;
+	var aboveNav = leaderHeight + logoHeight;
+	var totalHeight = logoHeight + botHeight;
+	var previousScroll = 0;
+	$(window).scroll(function(event){
+			var scroll = $(this).scrollTop();
+			if ($(window).scrollTop() > aboveNav){
+				$("#mvp-main-nav-top").addClass("mvp-nav-small");
+				$("#mvp-main-nav-bot").css("margin-top", logoHeight );
+			} else {
+				$("#mvp-main-nav-top").removeClass("mvp-nav-small");
+				$("#mvp-main-nav-bot").css("margin-top","0");
+			}
+			if ($(window).scrollTop() > headerHeight){
+				$("#mvp-main-nav-top").addClass("mvp-fixed");
+				$("#mvp-main-nav-bot").addClass("mvp-fixed1");
+				$("#mvp-main-body-wrap").css("margin-top", totalHeight );
+				$("#mvp-main-nav-top").addClass("mvp-fixed-shadow");
+				$(".mvp-fly-top").addClass("mvp-to-top");
+	    		if(scroll < previousScroll) {
+					$("#mvp-main-nav-bot").addClass("mvp-fixed2");
+					$("#mvp-main-nav-top").removeClass("mvp-fixed-shadow");
+				} else {
+					$("#mvp-main-nav-bot").removeClass("mvp-fixed2");
+					$("#mvp-main-nav-top").addClass("mvp-fixed-shadow");
+				}
+			} else {
+				$("#mvp-main-nav-top").removeClass("mvp-fixed");
+				$("#mvp-main-nav-bot").removeClass("mvp-fixed1");
+				$("#mvp-main-nav-bot").removeClass("mvp-fixed2");
+				$("#mvp-main-body-wrap").css("margin-top","0");
+				$("#mvp-main-nav-top").removeClass("mvp-fixed-shadow");
+	    		$(".mvp-fly-top").removeClass("mvp-to-top");
+			}
+			previousScroll = scroll;
+	});
+	});
+	});
+	
+
+	jQuery(document).ready(function($) {
+	// Mobile Social Buttons More
+	$(window).load(function(){
+ 		$(".mvp-soc-mob-right").on("click", function(){
+			$("#mvp-soc-mob-wrap").toggleClass("mvp-soc-mob-more");
+  		});
+  	});
+	});
+  	
+
+	jQuery(document).ready(function($) {
+	$(".menu-item-has-children a").click(function(event){
+	  event.stopPropagation();
+	  location.href = this.href;
+  	});
+
+	$(".menu-item-has-children").click(function(){
+    	  $(this).addClass("toggled");
+    	  if($(".menu-item-has-children").hasClass("toggled"))
+    	  {
+    	  $(this).children("ul").toggle();
+	  $(".mvp-fly-nav-menu").getNiceScroll().resize();
+	  }
+	  $(this).toggleClass("tog-minus");
+    	  return false;
+  	});
+
+	// Main Menu Scroll
+	$(window).load(function(){
+	  $(".mvp-fly-nav-menu").niceScroll({cursorcolor:"#888",cursorwidth: 7,cursorborder: 0,zindex:999999});
+	});
+	});
+	
+
+	jQuery(document).ready(function($) {
+	$(".infinite-content").infinitescroll({
+	  navSelector: ".mvp-nav-links",
+	  nextSelector: ".mvp-nav-links a:first",
+	  itemSelector: ".infinite-post",
+	  errorCallback: function(){ $(".mvp-inf-more-but").css("display", "none") }
+	});
+	$(window).unbind(".infscr");
+	$(".mvp-inf-more-but").click(function(){
+   		$(".infinite-content").infinitescroll("retrieve");
+        	return false;
+	});
+	$(window).load(function(){
+		if ($(".mvp-nav-links a").length) {
+			$(".mvp-inf-more-but").css("display","inline-block");
+		} else {
+			$(".mvp-inf-more-but").css("display","none");
+		}
+	});
+	});
+	
+</script>
+<script type='text/javascript' src='http://www.golfwrx.com/wp-content/themes/zox_news/js/scripts.js?ver=4.8.3'></script>
+<script type='text/javascript' src='http://www.golfwrx.com/wp-content/themes/zox_news/js/retina.js?ver=4.8.3'></script>
+<script type='text/javascript' src='http://www.golfwrx.com/wp-content/themes/zox_news/js/jquery.infinitescroll.min.js?ver=4.8.3'></script>
+<script type='text/javascript' src='http://www.golfwrx.com/wp-includes/js/comment-reply.min.js?ver=4.8.3'></script>
+<script type='text/javascript' src='http://www.golfwrx.com/wp-content/plugins/lightbox-plus/js/jquery.colorbox.1.5.9.js?ver=1.5.9'></script>
+<script type='text/javascript' src='http://www.golfwrx.com/wp-includes/js/wp-embed.min.js?ver=4.8.3'></script>
+
+<!-- Quantcast Tag -->
+<script type="text/javascript">
+var _qevents = _qevents || [];
+
+(function() {
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem, scpt);
+})();
+
+_qevents.push({
+qacct:"p-27i1WJajxCGLc"
+});
+</script>
+
+<noscript>
+<div style="display:none;">
+<img src="//pixel.quantserve.com/pixel/p-27i1WJajxCGLc.gif" border="0" height="1" width="1" alt="Quantcast"/>
+</div>
+</noscript>
+<!-- End Quantcast tag -->
+<!-- Begin VigLink -->
+<script type="text/javascript">
+  var vglnk = { api_url: '//api.viglink.com/api', key: '202af8f4ce9f2b881bf497a8a3f5add2' };
+  (function(d, t) {
+    var s = d.createElement(t); s.type = 'text/javascript'; s.async = true;
+    s.src = ('https:' == document.location.protocol ? vglnk.api_url : '//cdn.viglink.com/api') + '/vglnk.js';
+    var r = d.getElementsByTagName(t)[0]; r.parentNode.insertBefore(s, r);
+  }(document, 'script'));
+</script>
+<!-- End VigLink -->
+</body>
+</html>
