@@ -13,7 +13,7 @@ var googletag = googletag || {};
  googletag.cmd = googletag.cmd || [];
  
  googletag.cmd.push(function() {
-   googletag.defineSlot("/1001824/prebid_test2", [[970, 250],[970, 90],[728, 90],[468, 60],[320, 50],[234, 60]], "topSlot")
+   googletag.defineSlot("/1001824/prebid_test2", [[970, 250],[970, 90],[728, 90],[468, 60],[320, 50],[234, 60]], "topleaderSlot")
     .addService(googletag.pubads())
    googletag.defineSlot("/1001824/prebid_test3", [[300, 600],[300, 250],[160, 600],[120, 600],[250, 250]], "toprightSlot")
      .addService(googletag.pubads())
@@ -28,7 +28,7 @@ var googletag = googletag || {};
 
  
  googletag.cmd.push(function() {
-	 	         googletag.display("topSlot");
+	 	         googletag.display("topleaderSlot");
 	 	        googletag.display("toprightSlot");
 	 	         googletag.display("middlerightSlot");
 	 	        googletag.display("bottomrightSlot");
