@@ -1,4 +1,4 @@
-var PREBID_TIMEOUT = 2200;
+var PREBID_TIMEOUT = 1500;
 
 //ASSERTIVE ANALYTICS SETTINGS - Version: 1.4.0
 var assertive_entityId = 'eE88aE2HtwKnXikcL';
@@ -379,7 +379,7 @@ DOMReady(function () {
                accountId: 'e31f627f-53a3-4288-9979-482d3c6ffc76',
                enabled: true,
                bidders: ['districtm', 'appnexus', 'sovrn'],
-               timeout: 1500,
+               timeout: 1200,
                adapter: 'prebidServer',
                endpoint: 'https://prebid.adnxs.com/pbs/v1/auction',
                syncEndpoint: 'https://prebid.adnxs.com/pbs/v1/cookie_sync',
@@ -395,7 +395,7 @@ DOMReady(function () {
           enableSendAllBids: false, // Default will be `true` as of 1.0
           bidderSequence: 'random', // Default is random
     	  publisherDomain: 'golfwrx.com',
-    	  bidderTimeout: 3000,
+    	  bidderTimeout: 2500,
     	  pubcid: {expInterval: 525600},
     	   currency: {
    	       'adServerCurrency': "GBP",
