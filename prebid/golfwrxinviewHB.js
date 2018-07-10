@@ -1,4 +1,4 @@
-var PREBID_TIMEOUT = 1500;
+var PREBID_TIMEOUT = 1800;
 
 //ASSERTIVE ANALYTICS SETTINGS - Version: 1.4.0
 var assertive_entityId = 'eE88aE2HtwKnXikcL';
@@ -324,7 +324,7 @@ DOMReady(function () {
 	        banner: {
 	            sizes: [
 	            	[1, 1]
-	            ],
+	            ]
 	        } 
 	    },
 	    bids: [
