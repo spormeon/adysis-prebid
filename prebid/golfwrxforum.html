@@ -7153,31 +7153,5 @@ qacct:"p-27i1WJajxCGLc"
 /*      .ipsBox { background: #BED2E9; }*/
 		</style>
 	</body>
-  <script type="text/javascript">
-    document.observe("dom:loaded", function() {
-      
-      console.log("dom:loaded -- setup dfp units");
-      
-      var callAds = function() {
-        var dfpslots=$$(".dfp-ad-class-fs");
-        if (dfpslots.length > 0) {
-          let fsPlacements = [];
-          dfpslots.each(function(slot){
-            const placement = {
-              slotId: slot.id,
-              placementName: slot.id 
-            }; //./placement
-            fsPlacements.push(placement);
-          }) //./dfpslots.each
-          if (fsPlacements.length > 0) {
-            freestar.newAdSlots(fsPlacements);
-          } //./fsPlacements.length
-        } //./dfpslots.each
-      }
-      freestar.initCallback = function() { callAds(); }
-
-      //var footerForumIds = [2,22,210,220,221,230,32,43];
-
-    }); //dom:loaded
-  </script>
+  
 </html>
