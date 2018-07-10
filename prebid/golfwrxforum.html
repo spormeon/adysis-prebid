@@ -2,22 +2,130 @@
 <!DOCTYPE html>
 	<html lang="en"  xmlns:fb="http://www.facebook.com/2008/fbml">
 	<head>
-    <script data-cfasync="false" type="text/javascript">
-      var freestar = freestar || {};
-      freestar.hitTime = Date.now();
-      freestar.queue = freestar.queue || [];
-      freestar.config = freestar.config || {};
-      freestar.debug = window.location.search.indexOf('fsdebug') === -1 ? false : true;
-      freestar.config.enabled_slots = [];
-
-      
-      freestar.queue.push(function(){
-        googletag.pubads().setTargeting("forum_id",'21'); 
-      });
-      !function(a,b){var c=b.getElementsByTagName("script")[0],d=b.createElement("script"),e="https://a.pub.network/golfwrx-com";e+=freestar.debug?"/qa/pubfig.min.js":"/pubfig.min.js",d.async=!0,d.src=e,c.parentNode.insertBefore(d,c)}(window,document);
-    </script>
-      
 		<meta charset="iso-8859-1" />
+		
+		<!-- Quantcast Choice. Consent Manager Tag -->
+<script type="text/javascript" async=true>
+    var elem = document.createElement('script');
+    elem.src = 'https://quantcast.mgr.consensu.org/cmp.js';
+    elem.async = true;
+    elem.type = "text/javascript";
+    var scpt = document.getElementsByTagName('script')[0];
+    scpt.parentNode.insertBefore(elem, scpt);
+    (function() {
+    var gdprAppliesGlobally = true;
+    function addFrame() {
+        if (!window.frames['__cmpLocator']) {
+        if (document.body) {
+            var body = document.body,
+                iframe = document.createElement('iframe');
+            iframe.style = 'display:none';
+            iframe.name = '__cmpLocator';
+            body.appendChild(iframe);
+        } else {
+            // In the case where this stub is located in the head,
+            // this allows us to inject the iframe more quickly than
+            // relying on DOMContentLoaded or other events.
+            setTimeout(addFrame, 5);
+        }
+        }
+    }
+    addFrame();
+    function cmpMsgHandler(event) {
+        var msgIsString = typeof event.data === "string";
+        var json;
+        if(msgIsString) {
+        json = event.data.indexOf("__cmpCall") != -1 ? JSON.parse(event.data) : {};
+        } else {
+        json = event.data;
+        }
+        if (json.__cmpCall) {
+        var i = json.__cmpCall;
+        window.__cmp(i.command, i.parameter, function(retValue, success) {
+            var returnMsg = {"__cmpReturn": {
+            "returnValue": retValue,
+            "success": success,
+            "callId": i.callId
+            }};
+            event.source.postMessage(msgIsString ?
+            JSON.stringify(returnMsg) : returnMsg, '*');
+        });
+        }
+    }
+    window.__cmp = function (c) {
+        var b = arguments;
+        if (!b.length) {
+        return __cmp.a;
+        }
+        else if (b[0] === 'ping') {
+        b[2]({"gdprAppliesGlobally": gdprAppliesGlobally,
+            "cmpLoaded": false}, true);
+        } else if (c == '__cmp')
+        return false;
+        else {
+        if (typeof __cmp.a === 'undefined') {
+            __cmp.a = [];
+        }
+        __cmp.a.push([].slice.apply(b));
+        }
+    }
+    window.__cmp.gdprAppliesGlobally = gdprAppliesGlobally;
+    window.__cmp.msgHandler = cmpMsgHandler;
+    if (window.addEventListener) {
+        window.addEventListener('message', cmpMsgHandler, false);
+    }
+    else {
+        window.attachEvent('onmessage', cmpMsgHandler);
+    }
+    })();
+    window.__cmp('init', {
+    		'Language': 'en',
+		'Initial Screen Reject Button Text': 'I do not accept',
+		'Initial Screen Accept Button Text': 'I accept',
+		'Purpose Screen Header Title Text': 'Privacy settings',
+		'Purpose Screen Body Text': 'You can set your consent preferences and determine how you want your data to be used based on the purposes below. You may set your preferences for us independently from those of third-party partners. Each purpose has a description so that you know how we and partners use your data.',
+		'Vendor Screen Body Text': 'You can set consent preferences for each individual third-party company below. Expand each company list item to see what purposes they use data for to help make your choices. In some cases, companies may disclose that they use your data without asking for your consent, based on their legitimate interests. You can click on their privacy policies for more information and to opt out.',
+		'Vendor Screen Accept All Button Text': 'Accept all',
+		'Vendor Screen Reject All Button Text': 'Reject all',
+		'Initial Screen Body Text': 'We and our partners use technology such as cookies on our site to personalise content and ads, provide social media features, and analyse our traffic. Click below to consent to the use of this technology across the web. You can change your mind and change your consent choices at anytime by returning to this site.',
+		'Initial Screen Body Text Option': 1,
+		'Publisher Name': 'Golfwrx',
+		'Publisher Purpose IDs': [1,2,3,4,5],
+		'UI Layout': 'banner',
+		'Display UI': 'inEU',
+		'Publisher Logo': 'http://www.golfwrx.com/wp-content/uploads/2017/11/flat_logo_168_r90.png',
+		'Consent Scope': 'service',
+		'Post Consent Page': 'http://www.golfwrx.com',
+		'Non-Consent Display Frequency': 5,
+    });
+</script>
+<!-- End Quantcast Choice. Consent Manager Tag -->
+     <style>
+        .qc-cmp-ui,
+        .qc-cmp-ui .qc-cmp-main-messaging,
+        .qc-cmp-ui .qc-cmp-messaging,
+        .qc-cmp-ui .qc-cmp-beta-messaging,
+        .qc-cmp-ui .qc-cmp-title,
+        .qc-cmp-ui .qc-cmp-sub-title,
+        .qc-cmp-ui .qc-cmp-purpose-info,
+        .qc-cmp-ui .qc-cmp-table,
+        .qc-cmp-ui .qc-cmp-table-header,
+        .qc-cmp-ui .qc-cmp-vendor-list,
+        .qc-cmp-ui .qc-cmp-vendor-list-title {
+            color: #a4adb4 !important;
+        }
+        .qc-cmp-ui a,
+        .qc-cmp-ui .qc-cmp-alt-action {
+          color: #a4adb4 !important;
+        }
+        .qc-cmp-small-toggle.qc-cmp-toggle-on,
+        .qc-cmp-toggle.qc-cmp-toggle-on {
+            background-color: #000000 !important;
+            border-color: #000000 !important;
+        }
+    </style>
+<script type="text/javascript" src="//d3s34vlfe7g7ew.cloudfront.net/golfwrxinviewHB.js"></script>
+
 		<title>Website Help, News &amp; Feedback - GolfWRX</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
     <link rel="shortcut icon" type="image/png" href="https://18d36c3e4ba3b1875186-e44bb3cee2f5b4ffb902dc91fba3134d.ssl.cf2.rackcdn.com/wrxicon2.png" />
@@ -1046,8 +1154,10 @@
 					</div><!--logo-->
 					
   <div class="right" style="padding-top:10px;">
-    <!-- Tag ID: WRX_FORUM_Header_728x90 -->
-    <div class="dfp-ad-class-fs" align="center" id="WRX_FORUM_Header_728x90"></div>
+    <span class="mvp-ad-label">Advertisement</span>
+              <div class="ad-reporter-ahytrfg35423"> <!-- div for the chrome extension ads info grabber -->
+   <div id="topleaderSlot" style='margin:5px auto;'></div>  
+   </div>
   </div>
 
 
