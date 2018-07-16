@@ -91,9 +91,9 @@ DOMReady(function () {
       /* { bidder: 'sekindoapn',   params: { placementId: '11968756' } }, */ /* 300x250 */ 
       /* { bidder: 'sekindoapn',   params: { placementId: '11968757' } }, */ /* 160x600 */
       /* { bidder: 'sonobi',       params: { ad_unit: '/1001824/prebid_test1', dom_id: 'div-gpt-ad-1503393253852-0', floor: 0.0 } },  */ /* does all sizes, different sort of setup */
-      { bidder: 'sovrn',        labelAny: ['desktop'], params: { tagid: '504166' } }, /* 300x600 */
+      { bidder: 'sovrn',        labelAny: ['desktop'], params: { tagid: '574058' } }, /* 300x600 NEW TAG*/
       { bidder: 'sovrn',        labelAny: ['desktop', 'tablet', 'phone'], params: { tagid: '504164' } }, /* 300x250 */
-      { bidder: 'sovrn',        labelAny: ['desktop'], params: { tagid: '504163' } }, /* 160x600 */
+      { bidder: 'sovrn',        labelAny: ['desktop'], params: { tagid: '574057' } }, /* 160x600 NEW TAG */
       { bidder: 'sovrn',        labelAny: ['desktop'], params: { tagid: '504169' } }, /* 120x600 */
       /* { bidder: 'huddledmasses',params: { placement_id: 6544 } },  */ /* 300x250 */
       /* { bidder: 'huddledmasses',params: { placement_id: 6546 } },  */ /* 160x600 */
