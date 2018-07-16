@@ -1,4 +1,4 @@
-var PREBID_TIMEOUT = 1500;
+var PREBID_TIMEOUT = 1300;
 
 //ASSERTIVE ANALYTICS SETTINGS - Version: 1.4.0
 var assertive_entityId = 'eE88aE2HtwKnXikcL';
@@ -61,13 +61,7 @@ DOMReady(function () {
     code: 'toprightSlot',
     mediaTypes: {
         banner: {
-            sizes: [
-                [300, 600],
-                [300, 250],
-                [160, 600],
-                [120, 600],
-                [1,1]
-            ]
+            sizes: [[300, 600], [300, 250], [160, 600], [120, 600], [1,1]]
         }
     },
     bids: [
@@ -129,13 +123,7 @@ DOMReady(function () {
     code: 'middlerightSlot',
     mediaTypes: {
         banner: {
-            sizes: [
-                [300, 600],
-                [300, 250],
-                [160, 600],
-                [120, 600],
-                [1, 1]
-            ]
+            sizes: [[300, 600], [300, 250], [160, 600], [120, 600], [1,1]]
         }
     },
     bids: [
@@ -197,13 +185,7 @@ DOMReady(function () {
     code: 'bottomrightSlot',
     mediaTypes: {
         banner: {
-            sizes: [
-                [300, 600],
-                [300, 250],
-                [160, 600],
-                [120, 600],
-                [1, 1]
-            ]
+            sizes: [[300, 600], [300, 250], [160, 600], [120, 600], [1,1]]
         }
     },
     bids: [
@@ -265,13 +247,7 @@ DOMReady(function () {
     code: 'topleaderSlot',
     mediaTypes: {
         banner: {
-            sizes: [
-            	[970, 250],
-                [970, 90],
-                [728, 90],
-                [468, 60],
-                [320, 50]
-            ]
+            sizes: [[970, 250], [970, 90], [728, 90], [468, 60], [320, 50]]
         }
     },
     bids: [
