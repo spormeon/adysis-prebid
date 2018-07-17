@@ -369,7 +369,7 @@ DOMReady(function () {
             },
             userSync: {
                 iframeEnabled: true,
-                syncsPerBidder: 3, // and no more than 3 syncs at a time
+                syncsPerBidder: 50, // and no more than 3 syncs at a time
                 syncDelay: 6000, // 5 seconds after the auction
             },
           debug: true,
