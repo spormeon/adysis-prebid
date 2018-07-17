@@ -359,7 +359,7 @@ DOMReady(function () {
            s2sConfig: {
                accountId: 'e31f627f-53a3-4288-9979-482d3c6ffc76',
                enabled: true,
-               bidders: ['districtm', 'appnexus', 'sovrn', 'somoaudience'],
+               bidders: ['districtm', 'appnexus', 'sovrn', 'somoAudience'],
                timeout: 1200,
                adapter: 'prebidServer',
                endpoint: 'https://prebid.adnxs.com/pbs/v1/auction',
