@@ -243,59 +243,7 @@
 
 
 
-<script type="text/javascript" charset="utf-8">
-  
-  document.observe("dom:loaded", function() {
 
-  	var _attach = window.IPBoard;
-
-  	if( typeof( _attach.prototype.attachTraditional != "undefined" ) )
-  	{
-
-  		_attach.prototype.attachTraditional.addMethods({
-  			processUpload: function( e )
-  			{
-  				$('attach_error_box').hide();
-  				var iFrameBox  = window.frames[ 'iframeAttach_' + this.options['attach_rel_id'] ].document.getElementById('iframeUploadBox');
-  				var iFrameForm = window.frames[ 'iframeAttach_' + this.options['attach_rel_id'] ].document.getElementById('iframeUploadForm');
-  				var box        = $('attach_' + this.options['attach_rel_id'] );
-  				var watermark = ($('watermark').checked)?1:0;
-
-  				window.frames[ 'iframeAttach_' + this.options['attach_rel_id'] ].document.getElementById('waitImg').style.display = 'inline-block';
-
-  				Debug.write( ipb.vars['base_url'] + "app=core&module=attach&section=attach&do=attachUploadiFrame&attach_rel_module=" +
-  									this.options['attach_rel_module'] + "&attach_rel_id=" + this.options['attach_rel_id'] + "&attach_post_key=" + 
-  									this.options['attach_post_key'] + "&forum_id=" + this.options['forum_id'] + '&fetch_all=1&watermark='+watermark );
-  				iFrameForm.action = ipb.vars['base_url'] + "app=core&module=attach&section=attach&do=attachUploadiFrame&attach_rel_module=" +
-  									this.options['attach_rel_module'] + "&attach_rel_id=" + this.options['attach_rel_id'] + "&attach_post_key=" + 
-  									this.options['attach_post_key'] + "&forum_id=" + this.options['forum_id'] + '&fetch_all=1&watermark='+watermark;
-
-  				iFrameForm.submit();
-  			}	
-
-  		});
-
-  		_attach.prototype.attachSWF.addMethods({
-  			_uploadStart: function( file )
-  			{
-
-  				var watermark = ($('watermark').checked)?1:0;
-  				this.obj.addPostParam('watermark', watermark);
-
-  				ipb.attach.startedUploading( this.id );
-
-  				Debug.write( "ips.attach.js: (ID " + this.id + ", uploadStart) " );
-  				/*this._buildBox( file );
-
-  				$( this.boxes[ file.index ] ).addClassName('in_progress');
-
-  				this._updateInfo( file.index, ipb.lang['uploading'] );*/
-  			}
-  		});
-  	}
-
-  });
-</script>
 	
 		
 			
