@@ -32,7 +32,7 @@ DOMReady(function () {
       var pbjsEl = document.createElement("script");
       pbjsEl.type = "text/javascript";
       pbjsEl.async = true;
-      pbjsEl.src = "//d3s34vlfe7g7ew.cloudfront.net/prebid1.15.0-25062018.js";
+      pbjsEl.src = "//d3s34vlfe7g7ew.cloudfront.net/prebid1.15.017-07-2018.js";
       var pbjsTargetEl = document.getElementsByTagName("head")[0];
       pbjsTargetEl.insertBefore(pbjsEl, pbjsTargetEl.firstChild);
   })();
@@ -291,7 +291,8 @@ DOMReady(function () {
       { bidder: 'gumgum',      labelAny: ['desktop'], params: { inSlot: '14605' } }, /*gumgum-970x90*/
       { bidder: 'gumgum',      labelAny: ['desktop', 'tablet'], params: { inSlot: '14604' } }, /*gumgum-728x90*/
       { bidder: 'gumgum',      labelAny: ['desktop', 'tablet', 'phone'], params: { inSlot: '14603' } }, /*gumgum-468x60*/
-      { bidder: 'gumgum',      labelAny: ['desktop', 'tablet', 'phone'], params: { inSlot: '14602' } } /*gumgum-320x50*/
+      { bidder: 'gumgum',      labelAny: ['desktop', 'tablet', 'phone'], params: { inSlot: '14602' } }, /*gumgum-320x50*/
+      { bidder: 'somoaudience',      labelAny: ['desktop'], params: { placementId: '7cd3a578076555b630cf3525595dbe33' } } /*somo-970x250*/
     ] //./bids
   },
   {
