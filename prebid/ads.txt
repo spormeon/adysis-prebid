@@ -162,4 +162,7 @@ powerlinks.com, 4d90617d-34a0-11e6-bd6a-0ae0ff90b829, DIRECT #native #banner #vi
 pubmatic.com, 156557, RESELLER
 smartadserver.com, 1827, RESELLER
 triplelift.com, 4320, DIRECT, 6c33edb13117fd86
+<-- somo audience -->
+somoaudience.com,601743624a78ace0c6a189f78337ab89,DIRECT
+mobileadtrading.com,601743624a78ace0c6a189f78337ab89,DIRECT
 
