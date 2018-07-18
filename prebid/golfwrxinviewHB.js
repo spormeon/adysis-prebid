@@ -119,7 +119,8 @@ DOMReady(function () {
       { bidder: 'somoaudience',      labelAny: ['desktop'], params: { placement_hash: 'cf17e3f3896fdd66f5382875847b4f0e' } }, /*300x600*/
       { bidder: 'somoaudience',      labelAny: ['desktop', 'tablet', 'phone'], params: { placement_hash: '1152340cac3268b0e737b49c1382cd2b' } }, /*300x250*/
       { bidder: 'somoaudience',      labelAny: ['desktop'], params: { placement_hash: '90f47aec2647cba6d85b667413a38f61' } }, /*160x600*/
-      { bidder: 'somoaudience',      labelAny: ['desktop'], params: { placement_hash: 'f90e06a5c41c0d7d8dda78b18b3bd7d8' } }  /*120x600*/
+      { bidder: 'somoaudience',      labelAny: ['desktop'], params: { placement_hash: 'f90e06a5c41c0d7d8dda78b18b3bd7d8' } },  /*120x600*/
+      { bidder: '33across',      labelAny: ['desktop', 'tablet', 'phone'], params: { siteId : 'siab', productId: 'cLN3UCBHar5OfDrkHcnlKl' } } /*All sizes*/
     ] //./bids
   },
   //new ad unit block
