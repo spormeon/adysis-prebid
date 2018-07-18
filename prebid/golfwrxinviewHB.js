@@ -374,7 +374,7 @@ DOMReady(function () {
                accountId: 'e31f627f-53a3-4288-9979-482d3c6ffc76',
                enabled: true,
                bidders: ['appnexus', 'somoaudience', 'sovrn', 'districtm', 'conversant', 'pulsepoint', 'brealtime'],
-               timeout: 1000,
+               timeout: 1200,
                adapter: 'prebidServer',
                endpoint: 'https://prebid.adnxs.com/pbs/v1/openrtb2/auction',
                syncEndpoint: 'https://prebid.adnxs.com/pbs/v1/cookie_sync',
