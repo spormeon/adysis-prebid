@@ -306,11 +306,11 @@ DOMReady(function () {
       { bidder: 'gumgum',      labelAny: ['desktop', 'tablet'], params: { inSlot: '14604' } }, /*gumgum-728x90*/
       { bidder: 'gumgum',      labelAny: ['desktop', 'tablet', 'phone'], params: { inSlot: '14603' } }, /*gumgum-468x60*/
       { bidder: 'gumgum',      labelAny: ['desktop', 'tablet', 'phone'], params: { inSlot: '14602' } }, /*gumgum-320x50*/
-      { bidder: 'somoaudience',      labelAny: ['desktop'], params: { placementId: '7cd3a578076555b630cf3525595dbe33' } }, /*somo-970x250*/
-      { bidder: 'somoaudience',      labelAny: ['desktop'], params: { placementId: '7ea46e02b3b69d777e1fe8f6a96a3af6' } }, /*somo-970x90*/
-      { bidder: 'somoaudience',      labelAny: ['desktop', 'tablet'], params: { placementId: '08068141ea62f58f5e86ec750e1b2c9c' } }, /*somo-728x90*/
-      { bidder: 'somoaudience',      labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '35dcb1ced18e7d865844af641e1c3b59' } }, /*somo-468x60*/
-      { bidder: 'somoaudience',      labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '69d91b86f5c09a59230594bb8b274e34' } } /*somo-320x50*/
+      { bidder: 'somoaudience',      labelAny: ['desktop'], params: { placement_hash: '7cd3a578076555b630cf3525595dbe33' } }, /*somo-970x250*/
+      { bidder: 'somoaudience',      labelAny: ['desktop'], params: { placement_hash: '7ea46e02b3b69d777e1fe8f6a96a3af6' } }, /*somo-970x90*/
+      { bidder: 'somoaudience',      labelAny: ['desktop', 'tablet'], params: { placement_hash: '08068141ea62f58f5e86ec750e1b2c9c' } }, /*somo-728x90*/
+      { bidder: 'somoaudience',      labelAny: ['desktop', 'tablet', 'phone'], params: { placement_hash: '35dcb1ced18e7d865844af641e1c3b59' } }, /*somo-468x60*/
+      { bidder: 'somoaudience',      labelAny: ['desktop', 'tablet', 'phone'], params: { placement_hash: '69d91b86f5c09a59230594bb8b274e34' } } /*somo-320x50*/
     ] //./bids
   },
   {
