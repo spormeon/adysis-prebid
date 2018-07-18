@@ -116,10 +116,10 @@ DOMReady(function () {
       { bidder: 'gumgum',      labelAny: ['desktop'], params: { inSlot: '14598' } }, /*gumgum-160x600*/
       { bidder: 'gumgum',      labelAny: ['desktop', 'tablet', 'phone'], params: { inSlot: '14600' } }, /*gumgum-300x250*/
       { bidder: 'gumgum',      labelAny: ['desktop'], params: { inSlot: '14601' } }, /*gumgum-300x600*/
-      { bidder: 'somoaudience',      labelAny: ['desktop'], params: { placementId: 'cf17e3f3896fdd66f5382875847b4f0e' } }, /*300x600*/
-      { bidder: 'somoaudience',      labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '1152340cac3268b0e737b49c1382cd2b' } }, /*300x250*/
-      { bidder: 'somoaudience',      labelAny: ['desktop'], params: { placementId: '90f47aec2647cba6d85b667413a38f61' } }, /*160x600*/
-      { bidder: 'somoaudience',      labelAny: ['desktop'], params: { placementId: 'f90e06a5c41c0d7d8dda78b18b3bd7d8' } }  /*120x600*/
+      { bidder: 'somoaudience',      labelAny: ['desktop'], params: { placement_hash: 'cf17e3f3896fdd66f5382875847b4f0e' } }, /*300x600*/
+      { bidder: 'somoaudience',      labelAny: ['desktop', 'tablet', 'phone'], params: { placement_hash: '1152340cac3268b0e737b49c1382cd2b' } }, /*300x250*/
+      { bidder: 'somoaudience',      labelAny: ['desktop'], params: { placement_hash: '90f47aec2647cba6d85b667413a38f61' } }, /*160x600*/
+      { bidder: 'somoaudience',      labelAny: ['desktop'], params: { placement_hash: 'f90e06a5c41c0d7d8dda78b18b3bd7d8' } }  /*120x600*/
     ] //./bids
   },
   //new ad unit block
@@ -182,10 +182,10 @@ DOMReady(function () {
       { bidder: 'gumgum',      labelAny: ['desktop'], params: { inSlot: '14598' } }, /*gumgum-160x600*/
       { bidder: 'gumgum',      labelAny: ['desktop', 'tablet', 'phone'], params: { inSlot: '14600' } }, /*gumgum-300x250*/
       { bidder: 'gumgum',      labelAny: ['desktop'], params: { inSlot: '14601' } }, /*gumgum-300x600*/
-      { bidder: 'somoaudience',      labelAny: ['desktop'], params: { placementId: 'cf17e3f3896fdd66f5382875847b4f0e' } }, /*300x600*/
-      { bidder: 'somoaudience',      labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '1152340cac3268b0e737b49c1382cd2b' } }, /*300x250*/
-      { bidder: 'somoaudience',      labelAny: ['desktop'], params: { placementId: '90f47aec2647cba6d85b667413a38f61' } }, /*160x600*/
-      { bidder: 'somoaudience',      labelAny: ['desktop'], params: { placementId: 'f90e06a5c41c0d7d8dda78b18b3bd7d8' } }  /*120x600*/
+      { bidder: 'somoaudience',      labelAny: ['desktop'], params: { placement_hash: 'cf17e3f3896fdd66f5382875847b4f0e' } }, /*300x600*/
+      { bidder: 'somoaudience',      labelAny: ['desktop', 'tablet', 'phone'], params: { placement_hash: '1152340cac3268b0e737b49c1382cd2b' } }, /*300x250*/
+      { bidder: 'somoaudience',      labelAny: ['desktop'], params: { placement_hash: '90f47aec2647cba6d85b667413a38f61' } }, /*160x600*/
+      { bidder: 'somoaudience',      labelAny: ['desktop'], params: { placement_hash: 'f90e06a5c41c0d7d8dda78b18b3bd7d8' } }  /*120x600*/
     ] //./bids
   },
   //new ad unit block
@@ -248,10 +248,10 @@ DOMReady(function () {
       { bidder: 'gumgum',      labelAny: ['desktop'], params: { inSlot: '14598' } }, /*gumgum-160x600*/
       { bidder: 'gumgum',      labelAny: ['desktop', 'tablet', 'phone'], params: { inSlot: '14600' } }, /*gumgum-300x250*/
       { bidder: 'gumgum',      labelAny: ['desktop'], params: { inSlot: '14601' } }, /*gumgum-300x600*/
-      { bidder: 'somoaudience',      labelAny: ['desktop'], params: { placementId: 'cf17e3f3896fdd66f5382875847b4f0e' } }, /*300x600*/
-      { bidder: 'somoaudience',      labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '1152340cac3268b0e737b49c1382cd2b' } }, /*300x250*/
-      { bidder: 'somoaudience',      labelAny: ['desktop'], params: { placementId: '90f47aec2647cba6d85b667413a38f61' } }, /*160x600*/
-      { bidder: 'somoaudience',      labelAny: ['desktop'], params: { placementId: 'f90e06a5c41c0d7d8dda78b18b3bd7d8' } }  /*120x600*/
+      { bidder: 'somoaudience',      labelAny: ['desktop'], params: { placement_hash: 'cf17e3f3896fdd66f5382875847b4f0e' } }, /*300x600*/
+      { bidder: 'somoaudience',      labelAny: ['desktop', 'tablet', 'phone'], params: { placement_hash: '1152340cac3268b0e737b49c1382cd2b' } }, /*300x250*/
+      { bidder: 'somoaudience',      labelAny: ['desktop'], params: { placement_hash: '90f47aec2647cba6d85b667413a38f61' } }, /*160x600*/
+      { bidder: 'somoaudience',      labelAny: ['desktop'], params: { placement_hash: 'f90e06a5c41c0d7d8dda78b18b3bd7d8' } }  /*120x600*/
     ] //./bids
   },
   //new ad unit block
