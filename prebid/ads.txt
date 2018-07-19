@@ -165,4 +165,30 @@ triplelift.com, 4320, DIRECT, 6c33edb13117fd86
 <-- somo audience -->
 somoaudience.com,601743624a78ace0c6a189f78337ab89,DIRECT
 mobileadtrading.com,601743624a78ace0c6a189f78337ab89,DIRECT
+<-- switch updated 19-07-2018 -->
+switchconcepts.com, aHN3aXRjaA==-a167, DIRECT
+appnexus.com, 1117, RESELLER
+pubmatic.com, 60568, RESELLER, 5d62403b186f2ace
+pubmatic.com, 37855, RESELLER, 5d62403b186f2ace
+pubmatic.com, 30666, RESELLER, 5d62403b186f2ace
+taboola.com, switchconceptopenrtb, RESELLER
+contextweb.com, 560031, RESELLER
+quantcast.com, switchconcepts , RESELLER
+rhythmone.com, 1934627955, RESELLER
+ssphwy.com, switchconcepts, RESELLER
+emxdgt.com, 59, RESELLER, 1e1d41537f7cad7f
+appnexus.com, 1356, RESELLER, f5ab79cb980f11d1
+experian.com, EXP_0122_A, RESELLER
+sovrn.com, 96786, RESELLER, fafdf38b16bf6b2b
+lijit.com, 96786, RESELLER, fafdf38b16bf6b2b
+appnexus.com, 1360, RESELLER, f5ab79cb980f11d1
+gumgum.com, 11645, RESELLER, ffdef49475d318a9
+openx.com, 538959099, RESELLER, 6a698e2ec38604c6
+openx.com, 539924617, RESELLER, 6a698e2ec38604c6
+pubmatic.com, 137711, RESELLER, 5d62403b186f2ace
+pubmatic.com, 156212, RESELLER, 5d62403b186f2ace
+pubmatic.com, 156700, RESELLER, 5d62403b186f2ace
+rubiconproject.com, 17960, RESELLER, 0bfd66d529a55807
+rubiconproject.com, 14766, RESELLER, 0bfd66d529a55807
+theagency.com, 1058, RESELLER
 
