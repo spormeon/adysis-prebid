@@ -482,34 +482,6 @@ DOMReady(function () {
     	      sizeMappings[key] = sizeMapping;
     	      console.log('created sizemapping ', key, ' ', sizeMappings[key]);
     	    });
-
-    	    googletag.cmd.push(function() {
-    	          // This will only register the slot. Ad will be fetched only 
-    	          // when refresh is called.
-    	          googletag.display('bottomrightSlot');
-    	        });
-    	 // Refresh the bottom slot when it is about to come into view.
-    	      var refreshed = false;
-
-    	      // Value of scrollY at which the ad is about to come into view.
-    	      var adAlmostVisibleScrollValue = 300;
-
-    	      // Warning: This is a sample implementation. Listening to onscroll without 
-    	      // any throttling might not be very efficient.
-    	      var listener = function() {
-    	        if (window.scrollY >= adAlmostVisibleScrollValue && !refreshed) {
-    	          googletag.cmd.push(function() {
-    	            googletag.pubads().refresh([bottomrightSlot]);
-    	          });
-    	          // Refresh the ad only once.
-    	          refreshed = true;
-
-    	          // Remove the listener now.
-    	          window.removeEventListener('scroll', listener);
-    	        }
-    	      }
-    	      window.addEventListener('scroll', listener);
-    	    
     	    
     	    googletag.pubads().enableSingleRequest();
     	    googletag.pubads().collapseEmptyDivs(true, true);
