@@ -502,7 +502,7 @@ DOMReady(function () {
     	    });
     	    Object.keys(config.definitons).forEach(function (key) {
     	      var def = config.definitons[key];
-    	      var slot = googletag.defineSlot(def.adUnitPath, def.size, key);
+    	      var slot = googletag.defineSlot(def.adUnitPath, key);
     	      slot.setTargeting('test', 'refresh');
     	      slot.defineSizeMapping(sizeMappings[def.sizeMapping]);
     	      slot.addService(googletag.pubads());
@@ -515,31 +515,31 @@ DOMReady(function () {
     	    definitons: {
     	      topleaderSlot: {
     	        adUnitPath: '/1001824/prebid_test2',
-    	        
+    	        // size: gpt_config.leaderboard_sizes,
     	        sizeMapping: 'mappingleaderslot',
     	        timeout: 45000,
     	      },
     	      toprightSlot: {
     	        adUnitPath: '/1001824/prebid_test3',
-    	        
+    	        // size: gpt_config.bigbox_sizes,
     	        sizeMapping: 'mappingbigboxslot',
     	        timeout: 45000,
     	      },
     	      middlerightSlot: {
     	        adUnitPath: '/1001824/prebid_test1',
-    	        
+    	        // size: gpt_config.bigbox_sizes,
     	        sizeMapping: 'mappingbigboxslot',
     	        timeout: 45000,
     	      },
     	      bottomrightSlot: {
     	        adUnitPath: '/1001824/prebid_test4',
-    	        
+    	        // size: gpt_config.bigbox_sizes,
     	        sizeMapping: 'mappingbigboxslot',
     	        timeout: 45000,
     	      },
     	      skinSlot: {
       	        adUnitPath: '/1001824/Golfwrx.com-HB/Golfwrx.com-HB-Skin',
-      	        
+      	        // size: gpt_config.skin_sizes,
       	        sizeMapping: 'mappingskinslot',
       	        timeout: 50000,
       	      },
