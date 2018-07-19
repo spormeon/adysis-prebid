@@ -2030,38 +2030,6 @@ var SafeCommentsAjax = {"ajaxurl":"http:\/\/www.golfwrx.com\/wp-admin\/admin-aja
 		<span class="mvp-ad-label">Advertisement</span>     
       <div class="ad-reporter-ahytrfg35423">  <!-- div for the chrome extension ads info grabber -->
           <div id="bottomrightSlot"></div>
-          <script>
-        googletag.cmd.push(function() {
-          // This will only register the slot. Ad will be fetched only 
-          // when refresh is called.
-          googletag.display('bottomrightSlot');
-        });
-      </script>
-    </div>
-
-    <script>
-      // Refresh the bottom slot when it is about to come into view.
-      var refreshed = false;
-
-      // Value of scrollY at which the ad is about to come into view.
-      var adAlmostVisibleScrollValue = 300;
-
-      // Warning: This is a sample implementation. Listening to onscroll without 
-      // any throttling might not be very efficient.
-      var listener = function() {
-        if (window.scrollY >= adAlmostVisibleScrollValue && !refreshed) {
-          googletag.cmd.push(function() {
-            googletag.pubads().refresh([bottomrightSlot]);
-          });
-          // Refresh the ad only once.
-          refreshed = true;
-
-          // Remove the listener now.
-          window.removeEventListener('scroll', listener);
-        }
-      }
-      window.addEventListener('scroll', listener);
-    </script>
           </div>      
     </section>
     	
