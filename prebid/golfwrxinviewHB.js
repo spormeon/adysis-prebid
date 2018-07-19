@@ -41,9 +41,9 @@ DOMReady(function () {
 
   var gpt_config = {
     // prebid_timeout: 3000, //left for reference but not using right now...
-    default_gbp_rate: 0.77, // not being used
-    latest_gbp_rate: 0.77414, //RATE AS AT 30-08-2017 , not being used, using newRate from the function
-    dynamically_lookup_gbp_rate: true,
+    // default_gbp_rate: 0.77, // not being used
+    // latest_gbp_rate: 0.77414, //RATE AS AT 30-08-2017 , not being used, using newRate from the function
+    // dynamically_lookup_gbp_rate: true,
     // mobileWidthBreakpoint: 640,
     // tabletWidthBreakpoint: 767,
     bigbox_sizes: [[300, 600], [300, 250], [160, 600], [120, 600],[250,250]],
