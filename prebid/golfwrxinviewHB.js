@@ -348,7 +348,7 @@ DOMReady(function () {
       pbjs.aliasBidder('appnexus','springserveAlias2'); // alias for bidder
       pbjs.aliasBidder('appnexus','districtm'); // alias for bidder
       // pbjs.setPriceGranularity("dense");   // not being used, being done in adserver targeting below, this needs to be tweaked once prices seen more
-      // pbjs.addAdUnits(adUnits);
+      pbjs.addAdUnits(adUnits);
       // pbjs.enableSendAllBids();
       
       const customConfigObject = {
@@ -515,31 +515,31 @@ DOMReady(function () {
     	    definitons: {
     	      topleaderSlot: {
     	        adUnitPath: '/1001824/prebid_test2',
-    	        size: gpt_config.leaderboard_sizes,
+    	        
     	        sizeMapping: 'mappingleaderslot',
     	        timeout: 45000,
     	      },
     	      toprightSlot: {
     	        adUnitPath: '/1001824/prebid_test3',
-    	        size: gpt_config.bigbox_sizes,
+    	        
     	        sizeMapping: 'mappingbigboxslot',
     	        timeout: 45000,
     	      },
     	      middlerightSlot: {
     	        adUnitPath: '/1001824/prebid_test1',
-    	        size: gpt_config.bigbox_sizes,
+    	        
     	        sizeMapping: 'mappingbigboxslot',
     	        timeout: 45000,
     	      },
     	      bottomrightSlot: {
     	        adUnitPath: '/1001824/prebid_test4',
-    	        size: gpt_config.bigbox_sizes,
+    	        
     	        sizeMapping: 'mappingbigboxslot',
     	        timeout: 45000,
     	      },
     	      skinSlot: {
       	        adUnitPath: '/1001824/Golfwrx.com-HB/Golfwrx.com-HB-Skin',
-      	        size: gpt_config.skin_sizes,
+      	        
       	        sizeMapping: 'mappingskinslot',
       	        timeout: 50000,
       	      },
