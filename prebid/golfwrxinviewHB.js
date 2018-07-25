@@ -1,4 +1,4 @@
-var PREBID_TIMEOUT = 1500;
+var PREBID_TIMEOUT = 1700;
 
 //ASSERTIVE ANALYTICS SETTINGS - Version: 1.4.0
 var assertive_entityId = 'eE88aE2HtwKnXikcL';
@@ -370,7 +370,7 @@ DOMReady(function () {
     	  priceGranularity: customConfigObject,
     	  consentManagement: {
               cmpApi: 'iab',
-              timeout: 4000,
+              timeout: 5000,
               allowAuctionWithoutConsent: true
             },
            cache: {url: "//prebid.adnxs.com/pbc/v1/cache"},
@@ -394,7 +394,7 @@ DOMReady(function () {
           enableSendAllBids: false, // Default will be `true` as of 1.0
           bidderSequence: 'random', // Default is random
     	  publisherDomain: 'golfwrx.com',
-    	  bidderTimeout: 2200,
+    	  bidderTimeout: 2500,
     	  pubcid: {expInterval: 525600},
     	   currency: {
    	       'adServerCurrency': "GBP",
