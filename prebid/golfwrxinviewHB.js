@@ -1,4 +1,4 @@
-var PREBID_TIMEOUT = 1700;
+var PREBID_TIMEOUT = (new Date().getUTCHours()%2 === 0) ? 1500 : 1700;
 
 //ASSERTIVE ANALYTICS SETTINGS - Version: 1.4.0
 var assertive_entityId = 'eE88aE2HtwKnXikcL';
