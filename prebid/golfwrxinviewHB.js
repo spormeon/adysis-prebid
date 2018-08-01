@@ -32,7 +32,7 @@ DOMReady(function () {
       var pbjsEl = document.createElement("script");
       pbjsEl.type = "text/javascript";
       pbjsEl.async = true;
-      pbjsEl.src = "//d3s34vlfe7g7ew.cloudfront.net/prebid1.16.0.-18-07-2018js.js";
+      pbjsEl.src = "//d3s34vlfe7g7ew.cloudfront.net/prebid1.18.0-01-08-2018.js";
       var pbjsTargetEl = document.getElementsByTagName("head")[0];
       pbjsTargetEl.insertBefore(pbjsEl, pbjsTargetEl.firstChild);
   })();
