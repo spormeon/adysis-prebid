@@ -1,4 +1,33 @@
-var PREBID_TIMEOUT = (new Date().getUTCHours()%2 === 0) ? 1500 : 1700;
+var timeoutMap = {
+   0 : 2100,
+   1 : 2100,
+   2 : 2100,
+   3 : 2000,
+   4 : 2000,
+   5 : 1900,
+   6 : 1900,
+   7 : 1800,
+   8 : 1800,
+   9 : 1800,
+  10 : 1700,
+  11 : 1500,
+  12 : 1500,
+  13 : 1500,
+  14 : 1500,
+  15 : 1500,
+  16 : 1700,
+  17 : 1700,
+  18 : 1700,
+  19 ; 1800,
+  20 : 1900,
+  21 : 1900,
+  22 : 2000,
+  23 ; 2000
+};
+
+var t = new Date().getUTCHours();
+
+var PREBID_TIMEOUT = timeoutMap[t];
 
 //ASSERTIVE ANALYTICS SETTINGS - Version: 1.4.0
 var assertive_entityId = 'eE88aE2HtwKnXikcL';
