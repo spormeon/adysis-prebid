@@ -27,7 +27,7 @@ var timeoutMap = {
 
 var t = new Date().getUTCHours();
 
-var PREBID_TIMEOUT = timeoutMap[t];
+PREBID_TIMEOUT = timeoutMap[t];
 
 //ASSERTIVE ANALYTICS SETTINGS - Version: 1.4.0
 var assertive_entityId = 'eE88aE2HtwKnXikcL';
