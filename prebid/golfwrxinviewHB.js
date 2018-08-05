@@ -588,7 +588,7 @@ DOMReady(function () {
       	        adUnitPath: '/1001824/Golfwrx.com-HB/Golfwrx.com-HB-Vid-test',
       	        size: 'mappinginreedvidslot',
       	        sizeMapping: 'mappinginreedvidslot',
-      	        timeout: 50000,
+      	        timeout: 30000,
       	      },
     	    },
     	    sizeMappings: {
@@ -635,6 +635,7 @@ DOMReady(function () {
         	        [
         	          [768, 500],
         	          [
+        	        	[728, 90],
         	            [300, 250],
         	            [1, 1]
         	          ]
