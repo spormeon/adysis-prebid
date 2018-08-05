@@ -367,7 +367,7 @@ DOMReady(function () {
 		        } 
 		    },
 		    bids: [
-		    	{ bidder: 'teads',     labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: 75853, pageId: 87372} },
+		    	{ bidder: 'teads',     labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '75853', pageId: '87372' } },
 		    	{ bidder: 'appnexus',   labelAny: ['desktop', 'tablet', 'phone'],  params: { placementId: '11971351' } } /* one placementId for all sizes */
 		] //./bids
 	   }
