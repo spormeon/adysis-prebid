@@ -370,6 +370,42 @@ DOMReady(function () {
 		    	{ bidder: 'teads',     labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '75853', pageId: '87372' } },
 		    	{ bidder: 'appnexus',   labelAny: ['desktop', 'tablet', 'phone'],  params: { placementId: '11971351' } } /* one placementId for all sizes */
 		] //./bids
+	   },
+	   {
+		    code: 'inreedvid1Slot',
+		    mediaTypes: {
+		        banner: {
+		            sizes: [[728, 90], [300, 250], [320, 50]]
+		        } 
+		    },
+		    bids: [
+		    	{ bidder: 'teads',     labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '75853', pageId: '87372' } },
+		    	{ bidder: 'appnexus',   labelAny: ['desktop', 'tablet', 'phone'],  params: { placementId: '11971351' } } /* one placementId for all sizes */
+		] //./bids
+	   },
+	   {
+		    code: 'inreedvid2Slot',
+		    mediaTypes: {
+		        banner: {
+		            sizes: [[728, 90], [300, 250], [320, 50]]
+		        } 
+		    },
+		    bids: [
+		    	{ bidder: 'teads',     labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '75853', pageId: '87372' } },
+		    	{ bidder: 'appnexus',   labelAny: ['desktop', 'tablet', 'phone'],  params: { placementId: '11971351' } } /* one placementId for all sizes */
+		] //./bids
+	   },
+	   {
+		    code: 'inreedvid3Slot',
+		    mediaTypes: {
+		        banner: {
+		            sizes: [[728, 90], [300, 250], [320, 50]]
+		        } 
+		    },
+		    bids: [
+		    	{ bidder: 'teads',     labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '75853', pageId: '87372' } },
+		    	{ bidder: 'appnexus',   labelAny: ['desktop', 'tablet', 'phone'],  params: { placementId: '11971351' } } /* one placementId for all sizes */
+		] //./bids
 	   }
   ]; //./adUnits
     
