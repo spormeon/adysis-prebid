@@ -201,4 +201,12 @@ improvedigital.com, 185, RESELLER
 openx.com, 539515125, RESELLER, 6a698e2ec38604c6 
 spotx.tv, 108933, RESELLER, 7842df1d2fe2db34 
 spotxchange.com, 108933, RESELLER, 7842df1d2fe2db34 
+<-- Amazon -->
+aps.amazon.com, {insert your UAM Pub ID found here}, DIRECT #display
+openx.com, 540191398, RESELLER, 6a698e2ec38604c6 #display
+pubmatic.com, 157150, RESELLER, 5d62403b186f2ace #display
+districtm.io, 100962, RESELLER #display
+appnexus.com, 1908, RESELLER, f5ab79cb980f11d1 #display
+yldbt.com, 5b522cc167f6b300b89dc6d3, RESELLER, cd184cb30abaabb5 #display
+coxmt.com, 2000068024302, RESELLER #display
 
