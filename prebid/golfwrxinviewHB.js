@@ -350,66 +350,64 @@ DOMReady(function () {
     ] //./bids
   },
   {
-	    code: 'skinSlot',
-	    mediaTypes: {
-	        banner: {
-	            sizes: [
-	            	[1, 1]
-	            ]
-	        } 
-	    },
-	    bids: [
-	      /* { bidder: 'justpremium', labelAny: ['desktop', 'tablet'], params: { zone: '50978', allow: ['wp', 'sa', 'pu', 'pd', 'pa', 'ms', 'mo', 'is', 'as', 'fa', 'fi', 'hi', 'cf'] } } */ /* wallpaper, video wallpaper */
-	    ] //./bids
-	  },
-	  {
-		    code: 'inreedvidSlot',
-		    mediaTypes: {
-		        banner: {
-		            sizes: [[728, 90], [300, 250], [320, 50]]
-		        } 
-		    },
-		    bids: [
-		    	{ bidder: 'teads',     labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '75853', pageId: '87372' } },
-		    	{ bidder: 'appnexus',   labelAny: ['desktop', 'tablet', 'phone'],  params: { placementId: '11971351' } } /* one placementId for all sizes */
-		] //./bids
-	   },
-	   {
-		    code: 'inreedvid1Slot',
-		    mediaTypes: {
-		        banner: {
-		            sizes: [[728, 90], [300, 250], [320, 50]]
-		        } 
-		    },
-		    bids: [
-		    	{ bidder: 'teads',     labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '75853', pageId: '87372' } },
-		    	{ bidder: 'appnexus',   labelAny: ['desktop', 'tablet', 'phone'],  params: { placementId: '11971351' } } /* one placementId for all sizes */
-		] //./bids
-	   },
-	   {
-		    code: 'inreedvid2Slot',
-		    mediaTypes: {
-		        banner: {
-		            sizes: [[728, 90], [300, 250], [320, 50]]
-		        } 
-		    },
-		    bids: [
-		    	{ bidder: 'teads',     labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '75853', pageId: '87372' } },
-		    	{ bidder: 'appnexus',   labelAny: ['desktop', 'tablet', 'phone'],  params: { placementId: '11971351' } } /* one placementId for all sizes */
-		] //./bids
-	   },
-	   {
-		    code: 'inreedvid3Slot',
-		    mediaTypes: {
-		        banner: {
-		            sizes: [[728, 90], [300, 250], [320, 50]]
-		        } 
-		    },
-		    bids: [
-		    	{ bidder: 'teads',     labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '75853', pageId: '87372' } },
-		    	{ bidder: 'appnexus',   labelAny: ['desktop', 'tablet', 'phone'],  params: { placementId: '11971351' } } /* one placementId for all sizes */
-		] //./bids
-	   }
+	code: 'skinSlot',
+	mediaTypes: {
+	    banner: {
+	        sizes: [[1, 1]]
+	    } 
+	},
+	bids: [
+	  /* { bidder: 'justpremium', labelAny: ['desktop', 'tablet'], params: { zone: '50978', allow: ['wp', 'sa', 'pu', 'pd', 'pa', 'ms', 'mo', 'is', 'as', 'fa', 'fi', 'hi', 'cf'] } } */ /* wallpaper, video wallpaper */
+	] //./bids
+   },
+   {
+    code: 'inreedvidSlot',
+    mediaTypes: {
+		banner: {
+		    sizes: [[728, 90], [300, 250], [320, 50]]
+		} 
+   },
+	bids: [
+	  { bidder: 'teads',     labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '75853', pageId: '87372' } },
+	  { bidder: 'appnexus',  labelAny: ['desktop', 'tablet', 'phone'],  params: { placementId: '11971351' } } /* one placementId for all sizes */
+    ] //./bids
+   },
+   {
+    code: 'inreedvid1Slot',
+    mediaTypes: {
+		banner: {
+		    sizes: [[728, 90], [300, 250], [320, 50]]
+		} 
+   },
+    bids: [
+	  { bidder: 'teads',     labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '75853', pageId: '87372' } },
+	  { bidder: 'appnexus',  labelAny: ['desktop', 'tablet', 'phone'],  params: { placementId: '11971351' } } /* one placementId for all sizes */
+	] //./bids
+   },
+   {
+    code: 'inreedvid2Slot',
+    mediaTypes: {
+		banner: {
+		    sizes: [[728, 90], [300, 250], [320, 50]]
+		} 
+   },
+    bids: [
+	  { bidder: 'teads',     labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '75853', pageId: '87372' } },
+	  { bidder: 'appnexus',  labelAny: ['desktop', 'tablet', 'phone'],  params: { placementId: '11971351' } } /* one placementId for all sizes */
+   ] //./bids
+  },
+  {
+   code: 'inreedvid3Slot',
+   mediaTypes: {
+	   banner: {
+		   sizes: [[728, 90], [300, 250], [320, 50]]
+	   } 
+   },
+    bids: [
+	  { bidder: 'teads',     labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '75853', pageId: '87372' } },
+	  { bidder: 'appnexus',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '11971351' } } /* one placementId for all sizes */
+   ] //./bids
+  }
   ]; //./adUnits
     
   var pbjs = pbjs || {};
@@ -629,19 +627,19 @@ DOMReady(function () {
       	        sizeMapping: 'mappinginreedvidslot',
       	        timeout: 30000,
       	      },
-      	    inreedvid1Slot: {
+      	      inreedvid1Slot: {
       	        adUnitPath: '/1001824/Golfwrx.com-HB/Golfwrx.com-HB-Vid-test',
       	        size: 'mappinginreedvidslot',
       	        sizeMapping: 'mappinginreedvidslot',
       	        timeout: 30000,
       	      },
-      	    inreedvid2Slot: {
+      	      inreedvid2Slot: {
       	        adUnitPath: '/1001824/Golfwrx.com-HB/Golfwrx.com-HB-Vid-test',
       	        size: 'mappinginreedvidslot',
       	        sizeMapping: 'mappinginreedvidslot',
       	        timeout: 30000,
       	      },
-      	    inreedvid3Slot: {
+      	      inreedvid3Slot: {
       	        adUnitPath: '/1001824/Golfwrx.com-HB/Golfwrx.com-HB-Vid-test',
       	        size: 'mappinginreedvidslot',
       	        sizeMapping: 'mappinginreedvidslot',
