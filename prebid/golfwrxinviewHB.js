@@ -14,7 +14,7 @@ var timeoutMap = {
   12 : 1500,
   13 : 1500,
   14 : 1500,
-  15 : 1500,
+  15 : 2000,
   16 : 1700,
   17 : 1700,
   18 : 1700,
@@ -456,7 +456,7 @@ DOMReady(function () {
     	  priceGranularity: customConfigObject,
     	  consentManagement: {
               cmpApi: 'iab',
-              timeout: 4000,
+              timeout: 5000,
               allowAuctionWithoutConsent: true
             },
            cache: {url: "//prebid.adnxs.com/pbc/v1/cache"},
@@ -464,7 +464,7 @@ DOMReady(function () {
                accountId: 'e31f627f-53a3-4288-9979-482d3c6ffc76',
                enabled: true,
                bidders: ['appnexus', 'somoaudience', 'sovrn', 'districtm', 'conversant', 'pulsepoint', 'brealtime'],
-               timeout: 1200,
+               timeout: 1500,
                adapter: 'prebidServer',
                endpoint: 'https://prebid.adnxs.com/pbs/v1/openrtb2/auction',
                syncEndpoint: 'https://prebid.adnxs.com/pbs/v1/cookie_sync',
