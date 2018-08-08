@@ -406,16 +406,16 @@ DOMReady(function () {
    ] //./bids
   },
   {
-		code: 'skinSlot',
-		mediaTypes: {
-		    banner: {
-		        sizes: [[1, 1]]
-		    } 
-		},
-		bids: [
-		  /* { bidder: 'justpremium', labelAny: ['desktop', 'tablet'], params: { zone: '50978', allow: ['wp', 'sa', 'pu', 'pd', 'pa', 'ms', 'mo', 'is', 'as', 'fa', 'fi', 'hi', 'cf'] } } */ /* wallpaper, video wallpaper */
-		] //./bids
-	   }
+   code: 'skinSlot',
+   mediaTypes: {
+	   banner: {
+		   sizes: [[1, 1]]
+	   } 
+   },
+	bids: [
+	  /* { bidder: 'justpremium', labelAny: ['desktop', 'tablet'], params: { zone: '50978', allow: ['wp', 'sa', 'pu', 'pd', 'pa', 'ms', 'mo', 'is', 'as', 'fa', 'fi', 'hi', 'cf'] } } */ /* wallpaper, video wallpaper */
+   ] //./bids
+  }
   ]; //./adUnits
     
   var pbjs = pbjs || {};
@@ -514,7 +514,6 @@ DOMReady(function () {
            sekindonUM:        { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.75; } }, // adjust the bid in real time before the auction takes place
            brealtime:         { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.80; } }, // adjust the bid in real time before the auction takes place
            springserveAlias2: { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.65; } }, // adjust the bid in real time before the auction takes place
-           
           };
           
           function initAdserver() {
@@ -661,77 +660,20 @@ DOMReady(function () {
     	        [[1, 1],[[320, 50],[234, 60]]],
     	      ],
     	      mappingbigboxslot: [
-    	        [
-    	          [1024, 768],
-    	          [
-    	            [300, 600],
-    	            [300, 250],
-    	            [160, 600],
-    	            [120, 600],
-    	            [250, 250],
-    	            [1,1]
-    	          ]
-    	        ],
-    	        [
-    	          [768, 500],
-    	          [
-    	            [300, 250],
-    	            [250, 250],
-    	            [1, 1]
-    	          ]
-    	        ],
-    	        [
-    	          [1, 1],
-    	          [
-    	            [300, 250],
-    	            [250, 250],
-    	            [1, 1]
-    	          ]
-    	        ],
+    	        [[1024, 768],[[300, 600],[300, 250],[160, 600],[120, 600],[250, 250],[1,1]]],
+    	        [[768, 500],[[300, 250],[250, 250],[1, 1]]],
+    	        [[1, 1],[[300, 250],[250, 250],[1, 1]]],
     	      ],
-    	    mappinginreedvidslot: [
-    	        [
-    	          [1024, 768],
-    	          [
-    	            [728, 90],
-    	            [300, 250]
-    	          ]
-    	        ],
-    	        [
-    	          [768, 500],
-    	          [
-    	        	[728, 90],
-    	            [300, 250]
-    	          ]
-    	        ],
-    	        [
-    	          [1, 1],
-    	          [
-    	            [300, 250],
-    	            [320, 50]
-    	          ]
-    	        ],
+    	      mappinginreedvidslot: [
+    	        [[1024, 768],[[728, 90],[300, 250]]],
+    	        [[768, 500],[[728, 90],[300, 250]]],
+    	        [[1, 1],[[300, 250],[320, 50]]],
     	      ],
-	      mappingskinslot: [
-  	        [
-  	          [1024, 768],
-  	          [
-  	            [1, 1]
+	          mappingskinslot: [
+  	            [[1024, 768],[[1, 1]]],
+  	            [[768, 500],[[1, 1]]],
+  	            [[1, 1],[[1, 1]]],
   	          ]
-  	        ],
-  	        [
-  	          [768, 500],
-  	          [
-  	            [1, 1]
-  	          ]
-  	        ],
-  	        [
-  	          [1, 1],
-  	          [
-  	            [1, 1]
-  	          ]
-  	        ],
-  	      ]
     	    }
     	  });
     	});
