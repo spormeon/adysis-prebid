@@ -349,17 +349,6 @@ DOMReady(function () {
       /* { bidder: '33across',      labelAny: ['desktop', 'tablet', 'phone'], params: { siteId : 'siab', productId: 'cLN3UCBHar5OfDrkHcnlKl' } } */ /*All sizes*/
     ] //./bids
   },
-  {
-	code: 'skinSlot',
-	mediaTypes: {
-	    banner: {
-	        sizes: [[1, 1]]
-	    } 
-	},
-	bids: [
-	  /* { bidder: 'justpremium', labelAny: ['desktop', 'tablet'], params: { zone: '50978', allow: ['wp', 'sa', 'pu', 'pd', 'pa', 'ms', 'mo', 'is', 'as', 'fa', 'fi', 'hi', 'cf'] } } */ /* wallpaper, video wallpaper */
-	] //./bids
-   },
    {
     code: 'inreedvidSlot',
     mediaTypes: {
@@ -415,7 +404,18 @@ DOMReady(function () {
 	  { bidder: 'brealtime', labelAny: ['desktop', 'tablet'], params: { placementId: '12002330' } },  /* 728x90 */
 	  { bidder: 'districtm', labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: 11937611 } } /* 300x600 - 300x250 - 160x600 */
    ] //./bids
-  }
+  },
+  {
+		code: 'skinSlot',
+		mediaTypes: {
+		    banner: {
+		        sizes: [[1, 1]]
+		    } 
+		},
+		bids: [
+		  /* { bidder: 'justpremium', labelAny: ['desktop', 'tablet'], params: { zone: '50978', allow: ['wp', 'sa', 'pu', 'pd', 'pa', 'ms', 'mo', 'is', 'as', 'fa', 'fi', 'hi', 'cf'] } } */ /* wallpaper, video wallpaper */
+		] //./bids
+	   }
   ]; //./adUnits
     
   var pbjs = pbjs || {};
@@ -623,112 +623,43 @@ DOMReady(function () {
     	        sizeMapping: 'mappingbigboxslot',
     	        timeout: 45000,
     	      },
-    	      skinSlot: {
-      	        adUnitPath: '/1001824/Golfwrx.com-HB/Golfwrx.com-HB-Skin',
-      	        size: 'mappingskinslot',
-      	        sizeMapping: 'mappingskinslot',
-      	        timeout: 50000,
-      	      },
       	      inreedvidSlot: {
       	        adUnitPath: '/1001824/Golfwrx.com-HB/Golfwrx.com-HB-Vid-test',
       	        size: 'mappinginreedvidslot',
       	        sizeMapping: 'mappinginreedvidslot',
-      	        timeout: 30000,
+      	        timeout: 45000,
       	      },
       	      inreedvid1Slot: {
       	        adUnitPath: '/1001824/Golfwrx.com-HB/Golfwrx.com-HB-Vid-test',
       	        size: 'mappinginreedvidslot',
       	        sizeMapping: 'mappinginreedvidslot',
-      	        timeout: 30000,
+      	        timeout: 45000,
       	      },
       	      inreedvid2Slot: {
       	        adUnitPath: '/1001824/Golfwrx.com-HB/Golfwrx.com-HB-Vid-test',
       	        size: 'mappinginreedvidslot',
       	        sizeMapping: 'mappinginreedvidslot',
-      	        timeout: 30000,
+      	        timeout: 45000,
       	      },
       	      inreedvid3Slot: {
       	        adUnitPath: '/1001824/Golfwrx.com-HB/Golfwrx.com-HB-Vid-test',
       	        size: 'mappinginreedvidslot',
       	        sizeMapping: 'mappinginreedvidslot',
-      	        timeout: 30000,
+      	        timeout: 45000,
+      	      },
+      	      skinSlot: {
+      	        adUnitPath: '/1001824/Golfwrx.com-HB/Golfwrx.com-HB-Skin',
+      	        size: 'mappingskinslot',
+      	        sizeMapping: 'mappingskinslot',
+      	        timeout: 50000,
       	      },
     	    },
     	    sizeMappings: {
     	      mappingleaderslot: [
-    	        [
-    	          [1024, 768],
-    	          [
-    	            [970, 250],
-    	            [970, 90],
-    	            [728, 90],
-    	            [468, 60],
-    	            [320, 50],
-    	            [234, 60],
-    	            [1, 1]
-    	          ]
-    	        ],
-    	        [
-    	          [768, 500],
-    	          [
-    	            [728, 90],
-    	            [468, 60],
-    	            [320, 50],
-    	            [234, 60],
-    	            [1, 1]
-    	          ]
-    	        ],
-    	        [
-    	          [1, 1],
-    	          [
-    	            [320, 50],
-    	            [234, 60]
-    	          ]
-    	        ],
+    	    	[[1024, 768],[[970, 250],[970, 90],[728, 90],[468, 60],[320, 50],[234, 60],[1, 1]]],
+    	        [[768, 500],[[728, 90],[468, 60],[320, 50],[234, 60],[1, 1]]],
+    	        [[1, 1],[[320, 50],[234, 60]]],
     	      ],
-    	      mappinginreedvidslot: [
-        	        [
-        	          [1024, 768],
-        	          [
-        	            [728, 90],
-        	            [300, 250]
-        	          ]
-        	        ],
-        	        [
-        	          [768, 500],
-        	          [
-        	        	[728, 90],
-        	            [300, 250]
-        	          ]
-        	        ],
-        	        [
-        	          [1, 1],
-        	          [
-        	            [300, 250],
-        	            [320, 50]
-        	          ]
-        	        ],
-        	      ],
-    	      mappingskinslot: [
-      	        [
-      	          [1024, 768],
-      	          [
-      	            [1, 1]
-      	          ]
-      	        ],
-      	        [
-      	          [768, 500],
-      	          [
-      	            [1, 1]
-      	          ]
-      	        ],
-      	        [
-      	          [1, 1],
-      	          [
-      	            [1, 1]
-      	          ]
-      	        ],
-      	      ],
     	      mappingbigboxslot: [
     	        [
     	          [1024, 768],
@@ -757,7 +688,50 @@ DOMReady(function () {
     	            [1, 1]
     	          ]
     	        ],
-    	      ]
+    	      ],
+    	    mappinginreedvidslot: [
+    	        [
+    	          [1024, 768],
+    	          [
+    	            [728, 90],
+    	            [300, 250]
+    	          ]
+    	        ],
+    	        [
+    	          [768, 500],
+    	          [
+    	        	[728, 90],
+    	            [300, 250]
+    	          ]
+    	        ],
+    	        [
+    	          [1, 1],
+    	          [
+    	            [300, 250],
+    	            [320, 50]
+    	          ]
+    	        ],
+    	      ],
+	      mappingskinslot: [
+  	        [
+  	          [1024, 768],
+  	          [
+  	            [1, 1]
+  	          ]
+  	        ],
+  	        [
+  	          [768, 500],
+  	          [
+  	            [1, 1]
+  	          ]
+  	        ],
+  	        [
+  	          [1, 1],
+  	          [
+  	            [1, 1]
+  	          ]
+  	        ],
+  	      ]
     	    }
     	  });
     	});
