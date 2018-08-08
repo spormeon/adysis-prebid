@@ -622,19 +622,19 @@ DOMReady(function () {
       	        timeout: 45000,
       	      },
       	      inreedvid1Slot: {
-      	        adUnitPath: '/1001824/Golfwrx.com-HB/Golfwrx.com-HB-Vid-test',
+      	        adUnitPath: '/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test1',
       	        size: 'mappinginreedvidslot',
       	        sizeMapping: 'mappinginreedvidslot',
       	        timeout: 45000,
       	      },
       	      inreedvid2Slot: {
-      	        adUnitPath: '/1001824/Golfwrx.com-HB/Golfwrx.com-HB-Vid-test',
+      	        adUnitPath: '/1001824/Golfwrx.com-HB/Golfwrx.comHb-Vid-test2',
       	        size: 'mappinginreedvidslot',
       	        sizeMapping: 'mappinginreedvidslot',
       	        timeout: 45000,
       	      },
       	      inreedvid3Slot: {
-      	        adUnitPath: '/1001824/Golfwrx.com-HB/Golfwrx.com-HB-Vid-test',
+      	        adUnitPath: '/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test3',
       	        size: 'mappinginreedvidslot',
       	        sizeMapping: 'mappinginreedvidslot',
       	        timeout: 45000,
