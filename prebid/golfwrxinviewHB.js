@@ -7,8 +7,8 @@ var timeoutMap = {
    5 : 1900,
    6 : 1900,
    7 : 1800,
-   8 : 1800,
-   9 : 1700,
+   8 : 1500,
+   9 : 1500,
   10 : 1500,
   11 : 1500,
   12 : 1500,
@@ -17,9 +17,9 @@ var timeoutMap = {
   15 : 1500,
   16 : 1500,
   17 : 1500,
-  18 : 1700,
-  19 : 1800,
-  20 : 1900,
+  18 : 1500,
+  19 : 1500,
+  20 : 1500,
   21 : 1900,
   22 : 2000,
   23 : 2000
@@ -358,8 +358,7 @@ DOMReady(function () {
    },
 	bids: [
 	  { bidder: 'teads',     labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '75853', pageId: '87372' } },
-	  { bidder: 'appnexus',  labelAny: ['desktop', 'tablet', 'phone'],  params: { placementId: '11971351' } }, /* one placementId for all sizes */
-	  { bidder: 'sekindoUM', labelAny: ['desktop'], params: { spaceId: '87709' } } /* 300x250 */ 
+	  { bidder: 'appnexus',  labelAny: ['desktop', 'tablet', 'phone'],  params: { placementId: '11971351' } } /* one placementId for all sizes */
     ] //./bids
    },
    {
