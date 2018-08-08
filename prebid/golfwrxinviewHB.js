@@ -418,7 +418,7 @@ DOMReady(function () {
 var googletag = googletag || {};
 googletag.cmd = googletag.cmd || [];
 googletag.cmd.push(function() {
-  // googletag.pubads().disableInitialLoad();
+googletag.pubads().disableInitialLoad();
 });
 
     pbjs.que.push(function() {
@@ -514,7 +514,7 @@ googletag.cmd.push(function() {
       googletag.cmd.push(function() {
         pbjs.que.push(function() {
           pbjs.setTargetingForGPTAsync();
-          googletag.pubads().refresh();
+          // googletag.pubads().refresh();
         });
       });
     }
