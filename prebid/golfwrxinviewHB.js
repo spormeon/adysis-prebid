@@ -415,7 +415,11 @@ DOMReady(function () {
             
 <!-- Prebid Boilerplate Section START. No Need to Edit. -->
 
-    
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+googletag.cmd.push(function() {
+  // googletag.pubads().disableInitialLoad();
+});
 
     pbjs.que.push(function() {
       pbjs.aliasBidder('appnexus','brealtime');  // alias for bidder
