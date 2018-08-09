@@ -266,3 +266,6 @@ lijit.com, 261822, RESELLER, fafdf38b16bf6b2b
 sonobi.com, 5138076052, RESELLER
 adtech.com, 11095, Reseller
 
+# Bizzclick
+bizzclick.com, 56, DIRECT
+
