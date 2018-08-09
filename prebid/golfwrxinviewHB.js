@@ -190,8 +190,8 @@ DOMReady(function () {
 			      { bidder: 'somoaudience',      labelAny: ['desktop', 'tablet'], params: { placement_hash: '08068141ea62f58f5e86ec750e1b2c9c' } }, /*somo-728x90*/
 			      { bidder: 'somoaudience',      labelAny: ['desktop', 'tablet', 'phone'], params: { placement_hash: '35dcb1ced18e7d865844af641e1c3b59' } }, /*somo-468x60*/
 			      { bidder: 'somoaudience',      labelAny: ['desktop', 'tablet', 'phone'], params: { placement_hash: '69d91b86f5c09a59230594bb8b274e34' } }, /*somo-320x50*/
-			      { bidder: '33across',      labelAny: ['desktop', 'tablet', 'phone'], params: { siteId : 'siab', productId: 'cLN3UCBHar5OfDrkHcnlKl' } }, /*All sizes*/
-			      { bidder: 'bizzclick',     labelAny: ['desktop', 'tablet', 'phone'], params: { placementId : '38' } } /*728x90*/
+			      { bidder: '33across',      labelAny: ['desktop', 'tablet', 'phone'], params: { siteId : 'siab', productId: 'cLN3UCBHar5OfDrkHcnlKl' } } /*All sizes*/
+			      /* { bidder: 'bizzclick',     labelAny: ['desktop', 'tablet', 'phone'], params: { placementId : '38' } } */ /*728x90*/
 			    ] //./bids
 			  },
   {
