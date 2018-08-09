@@ -134,6 +134,65 @@ DOMReady(function () {
 			  { bidder: 'appnexus',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '11971351' } } /* one placementId for all sizes */
 		   ] //./bids
 		  },
+		  {
+			    code: 'topleaderSlot',
+			    mediaTypes: {
+			        banner: {
+			            sizes: [[970, 250], [970, 90], [728, 90], [468, 60], [320, 50]]
+			        }
+			    },
+			    bids: [
+			      { bidder: 'aol',    labelAny: ['desktop', 'tablet'],      params: { placement: '4882887', network: '4436.1', server: 'adserver.adtech.de' } }, /* 728x90 */
+			      { bidder: 'aol',    labelAny: ['desktop'],      params: { placement: '6507337', network: '4436.1', server: 'adserver.adtech.de' } }, /* 970x250 */
+			      { bidder: 'aol',    labelAny: ['desktop'],      params: { placement: '6507338', network: '4436.1', server: 'adserver.adtech.de' } }, /* 970x90 */
+			      { bidder: 'aol',    labelAny: ['desktop', 'tablet'],      params: { placement: '6507341', network: '4436.1', server: 'adserver.adtech.de' } }, /* 468x60 */
+			      { bidder: 'aol',    labelAny: ['desktop', 'tablet', 'phone'],      params: { placement: '6507340', network: '4436.1', server: 'adserver.adtech.de' } }, /* 320x50 */
+			      /* { bidder: 'featureforward', params: {pubId:28, siteId:6, placementId: '4' } }, */
+			      /* { bidder: 'atomx',        params: { id: '3808200'} }, */ /* does all sizes, not working at moment */
+			      { bidder: 'appnexus',   labelAny: ['desktop', 'tablet', 'phone'],  params: { placementId: '11971351' } }, /* one placementId for all sizes */
+			      { bidder: 'rhythmone',  labelAny: ['desktop', 'tablet', 'phone'],  params: { placementId: '76184' } }, /* one placementId for all sizes */
+			      { bidder: 'brealtime',  labelAny: ['desktop'],  params: { placementId: '12002322' } },  /* 970x250 */
+			      { bidder: 'brealtime',  labelAny: ['desktop'],  params: { placementId: '12002329' } },  /* 970x90 */
+			      { bidder: 'brealtime',  labelAny: ['desktop', 'tablet'], params: { placementId: '12002330' } },  /* 728x90 */
+			      { bidder: 'brealtime',  labelAny: ['desktop', 'tablet'], params: { placementId: '12002331' } },  /* 468x60 */
+			      { bidder: 'brealtime',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '12002333' } },  /* 320x50 */
+			      { bidder: 'conversant', labelAny: ['desktop', 'tablet'], params: { site_id: '118233' } },  /* 728x90 */ 
+			      { bidder: 'districtm',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: 11937610 } }, /* 970x250 - 970x90 - 728x90 - 468x60 */
+			      { bidder: 'pulsepoint',   labelAny: ['desktop'], params: { cf: '970X250', cp: '561446', ct: '602634' } },
+			      { bidder: 'pulsepoint',   labelAny: ['desktop'], params: { cf: '970X90', cp: '561446', ct: '602642' } },
+			      { bidder: 'pulsepoint',   labelAny: ['desktop', 'tablet'], params: { cf: '728X90', cp: '561446', ct: '602643' } },
+			      { bidder: 'pulsepoint',   labelAny: ['desktop', 'tablet', 'phone'], params: { cf: '320X50', cp: '561446', ct: '602644' } },
+			      /* { bidder: 'sekindoUM',    labelAny: ['desktop'], params: { spaceId: '87690' } }, */ /* 970x250 */ 
+			      /* { bidder: 'sekindoUM',    labelAny: ['desktop'], params: { spaceId: '87691' } }, */ /* 728x90 */
+			      /* { bidder: 'sekindoapn',   labelAny: ['desktop'], params: { placementId: '11968754' } }, */ /* 970x250 */
+			      /* { bidder: 'sonobi',       params: { ad_unit: '/1001824/prebid_test2', dom_id: 'div-gpt-ad-1503393253852-1', floor: 0.5 } },  */ /* does all sizes, different sort of setup */ 
+			      { bidder: 'sovrn',        labelAny: ['desktop'], params: { tagId: '575684' } }, /* 970x250 */
+			      { bidder: 'sovrn',        labelAny: ['desktop', 'tablet'], params: { tagId: '574059' } }, /* 728x90 */
+			      { bidder: 'sovrn',        labelAny: ['desktop', 'tablet', 'phone'], params: { tagId: '575686' } }, /* 468x60 */
+			      { bidder: 'sovrn',        labelAny: ['desktop', 'tablet', 'phone'], params: { tagId: '575687' } }, /* 320x50 */
+			      /* { bidder: 'huddledmasses', labelAny: ['desktop', 'tablet'], params: { placement_id: 6545 } },  */ /* 728x90 */
+			      /* { bidder: 'smartyads',    labelAny: ['desktop', 'tablet'], params: { banner_id: 6379 } }, */ /*728x90*/
+			      /* { bidder: 'vertoz',       labelAny: ['desktop'], params: { placementId:'VZ-HB-Y968967V15GC66'} }, */ /* 970x250 */
+			      /* { bidder: 'vertoz',       labelAny: ['desktop', 'tablet'], params: { placementId:'VZ-HB-P786728VDF5C56'} },  */ /*7 28x90 */
+			      /* { bidder: 'springserveAlias2',  params: { placementId: '12463800'} }  */ /* 970x250 - 970x90 - 728x90  */
+			      /* { bidder: 'adsparc',      labelAny: ['desktop', 'tablet', 'phone'], params: { networkId: '9969', siteId: '1019801'} }, */ /*one placementId for all sizes*/
+			      /* { bidder: 'contentignite',      labelAny: ['desktop', 'tablet'], params: { accountID: '168237', zoneID: '316287'} }, */ /*728x90*/
+			      /* { bidder: 'contentignite',      labelAny: ['desktop', 'tablet', 'phone'], params: { accountID: '168237', zoneID: '316289'} }, */ /*320x50*/
+			      /* { bidder: 'fidelity',      labelAny: ['desktop', 'tablet'], params: { zoneid: '53862'} }, */ /*728x90*/
+			      /* { bidder: 'fidelity',      labelAny: ['desktop', 'tablet', 'phone'], params: { zoneid: '53865'} }, */ /*320x50*/
+			      /* { bidder: 'fidelity',      labelAny: ['desktop', 'tablet', 'phone'], params: { zoneid: '54663'} }, */ /*468x60*/
+			      { bidder: 'gumgum',      labelAny: ['desktop'], params: { inSlot: '14605' } }, /*gumgum-970x90*/
+			      { bidder: 'gumgum',      labelAny: ['desktop', 'tablet'], params: { inSlot: '14604' } }, /*gumgum-728x90*/
+			      { bidder: 'gumgum',      labelAny: ['desktop', 'tablet', 'phone'], params: { inSlot: '14603' } }, /*gumgum-468x60*/
+			      { bidder: 'gumgum',      labelAny: ['desktop', 'tablet', 'phone'], params: { inSlot: '14602' } } /*gumgum-320x50*/
+			      /* { bidder: 'somoaudience',      labelAny: ['desktop'], params: { placement_hash: '7cd3a578076555b630cf3525595dbe33' } }, */ /*somo-970x250*/
+			      /* { bidder: 'somoaudience',      labelAny: ['desktop'], params: { placement_hash: '7ea46e02b3b69d777e1fe8f6a96a3af6' } }, */ /*somo-970x90*/
+			      /* { bidder: 'somoaudience',      labelAny: ['desktop', 'tablet'], params: { placement_hash: '08068141ea62f58f5e86ec750e1b2c9c' } }, */ /*somo-728x90*/
+			      /* { bidder: 'somoaudience',      labelAny: ['desktop', 'tablet', 'phone'], params: { placement_hash: '35dcb1ced18e7d865844af641e1c3b59' } }, */ /*somo-468x60*/
+			      /* { bidder: 'somoaudience',      labelAny: ['desktop', 'tablet', 'phone'], params: { placement_hash: '69d91b86f5c09a59230594bb8b274e34' } } */ /*somo-320x50*/
+			      /* { bidder: '33across',      labelAny: ['desktop', 'tablet', 'phone'], params: { siteId : 'siab', productId: 'cLN3UCBHar5OfDrkHcnlKl' } } */ /*All sizes*/
+			    ] //./bids
+			  },
   {
     code: 'toprightSlot',
     mediaTypes: {
@@ -338,65 +397,6 @@ DOMReady(function () {
     ] //./bids
   },
   //new ad unit block
-  {
-    code: 'topleaderSlot',
-    mediaTypes: {
-        banner: {
-            sizes: [[970, 250], [970, 90], [728, 90], [468, 60], [320, 50]]
-        }
-    },
-    bids: [
-      { bidder: 'aol',    labelAny: ['desktop', 'tablet'],      params: { placement: '4882887', network: '4436.1', server: 'adserver.adtech.de' } }, /* 728x90 */
-      { bidder: 'aol',    labelAny: ['desktop'],      params: { placement: '6507337', network: '4436.1', server: 'adserver.adtech.de' } }, /* 970x250 */
-      { bidder: 'aol',    labelAny: ['desktop'],      params: { placement: '6507338', network: '4436.1', server: 'adserver.adtech.de' } }, /* 970x90 */
-      { bidder: 'aol',    labelAny: ['desktop', 'tablet'],      params: { placement: '6507341', network: '4436.1', server: 'adserver.adtech.de' } }, /* 468x60 */
-      { bidder: 'aol',    labelAny: ['desktop', 'tablet', 'phone'],      params: { placement: '6507340', network: '4436.1', server: 'adserver.adtech.de' } }, /* 320x50 */
-      /* { bidder: 'featureforward', params: {pubId:28, siteId:6, placementId: '4' } }, */
-      /* { bidder: 'atomx',        params: { id: '3808200'} }, */ /* does all sizes, not working at moment */
-      { bidder: 'appnexus',   labelAny: ['desktop', 'tablet', 'phone'],  params: { placementId: '11971351' } }, /* one placementId for all sizes */
-      { bidder: 'rhythmone',  labelAny: ['desktop', 'tablet', 'phone'],  params: { placementId: '76184' } }, /* one placementId for all sizes */
-      { bidder: 'brealtime',  labelAny: ['desktop'],  params: { placementId: '12002322' } },  /* 970x250 */
-      { bidder: 'brealtime',  labelAny: ['desktop'],  params: { placementId: '12002329' } },  /* 970x90 */
-      { bidder: 'brealtime',  labelAny: ['desktop', 'tablet'], params: { placementId: '12002330' } },  /* 728x90 */
-      { bidder: 'brealtime',  labelAny: ['desktop', 'tablet'], params: { placementId: '12002331' } },  /* 468x60 */
-      { bidder: 'brealtime',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '12002333' } },  /* 320x50 */
-      { bidder: 'conversant', labelAny: ['desktop', 'tablet'], params: { site_id: '118233' } },  /* 728x90 */ 
-      { bidder: 'districtm',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: 11937610 } }, /* 970x250 - 970x90 - 728x90 - 468x60 */
-      { bidder: 'pulsepoint',   labelAny: ['desktop'], params: { cf: '970X250', cp: '561446', ct: '602634' } },
-      { bidder: 'pulsepoint',   labelAny: ['desktop'], params: { cf: '970X90', cp: '561446', ct: '602642' } },
-      { bidder: 'pulsepoint',   labelAny: ['desktop', 'tablet'], params: { cf: '728X90', cp: '561446', ct: '602643' } },
-      { bidder: 'pulsepoint',   labelAny: ['desktop', 'tablet', 'phone'], params: { cf: '320X50', cp: '561446', ct: '602644' } },
-      /* { bidder: 'sekindoUM',    labelAny: ['desktop'], params: { spaceId: '87690' } }, */ /* 970x250 */ 
-      /* { bidder: 'sekindoUM',    labelAny: ['desktop'], params: { spaceId: '87691' } }, */ /* 728x90 */
-      /* { bidder: 'sekindoapn',   labelAny: ['desktop'], params: { placementId: '11968754' } }, */ /* 970x250 */
-      /* { bidder: 'sonobi',       params: { ad_unit: '/1001824/prebid_test2', dom_id: 'div-gpt-ad-1503393253852-1', floor: 0.5 } },  */ /* does all sizes, different sort of setup */ 
-      { bidder: 'sovrn',        labelAny: ['desktop'], params: { tagId: '575684' } }, /* 970x250 */
-      { bidder: 'sovrn',        labelAny: ['desktop', 'tablet'], params: { tagId: '574059' } }, /* 728x90 */
-      { bidder: 'sovrn',        labelAny: ['desktop', 'tablet', 'phone'], params: { tagId: '575686' } }, /* 468x60 */
-      { bidder: 'sovrn',        labelAny: ['desktop', 'tablet', 'phone'], params: { tagId: '575687' } }, /* 320x50 */
-      /* { bidder: 'huddledmasses', labelAny: ['desktop', 'tablet'], params: { placement_id: 6545 } },  */ /* 728x90 */
-      /* { bidder: 'smartyads',    labelAny: ['desktop', 'tablet'], params: { banner_id: 6379 } }, */ /*728x90*/
-      /* { bidder: 'vertoz',       labelAny: ['desktop'], params: { placementId:'VZ-HB-Y968967V15GC66'} }, */ /* 970x250 */
-      /* { bidder: 'vertoz',       labelAny: ['desktop', 'tablet'], params: { placementId:'VZ-HB-P786728VDF5C56'} },  */ /*7 28x90 */
-      /* { bidder: 'springserveAlias2',  params: { placementId: '12463800'} }  */ /* 970x250 - 970x90 - 728x90  */
-      /* { bidder: 'adsparc',      labelAny: ['desktop', 'tablet', 'phone'], params: { networkId: '9969', siteId: '1019801'} }, */ /*one placementId for all sizes*/
-      /* { bidder: 'contentignite',      labelAny: ['desktop', 'tablet'], params: { accountID: '168237', zoneID: '316287'} }, */ /*728x90*/
-      /* { bidder: 'contentignite',      labelAny: ['desktop', 'tablet', 'phone'], params: { accountID: '168237', zoneID: '316289'} }, */ /*320x50*/
-      /* { bidder: 'fidelity',      labelAny: ['desktop', 'tablet'], params: { zoneid: '53862'} }, */ /*728x90*/
-      /* { bidder: 'fidelity',      labelAny: ['desktop', 'tablet', 'phone'], params: { zoneid: '53865'} }, */ /*320x50*/
-      /* { bidder: 'fidelity',      labelAny: ['desktop', 'tablet', 'phone'], params: { zoneid: '54663'} }, */ /*468x60*/
-      { bidder: 'gumgum',      labelAny: ['desktop'], params: { inSlot: '14605' } }, /*gumgum-970x90*/
-      { bidder: 'gumgum',      labelAny: ['desktop', 'tablet'], params: { inSlot: '14604' } }, /*gumgum-728x90*/
-      { bidder: 'gumgum',      labelAny: ['desktop', 'tablet', 'phone'], params: { inSlot: '14603' } }, /*gumgum-468x60*/
-      { bidder: 'gumgum',      labelAny: ['desktop', 'tablet', 'phone'], params: { inSlot: '14602' } } /*gumgum-320x50*/
-      /* { bidder: 'somoaudience',      labelAny: ['desktop'], params: { placement_hash: '7cd3a578076555b630cf3525595dbe33' } }, */ /*somo-970x250*/
-      /* { bidder: 'somoaudience',      labelAny: ['desktop'], params: { placement_hash: '7ea46e02b3b69d777e1fe8f6a96a3af6' } }, */ /*somo-970x90*/
-      /* { bidder: 'somoaudience',      labelAny: ['desktop', 'tablet'], params: { placement_hash: '08068141ea62f58f5e86ec750e1b2c9c' } }, */ /*somo-728x90*/
-      /* { bidder: 'somoaudience',      labelAny: ['desktop', 'tablet', 'phone'], params: { placement_hash: '35dcb1ced18e7d865844af641e1c3b59' } }, */ /*somo-468x60*/
-      /* { bidder: 'somoaudience',      labelAny: ['desktop', 'tablet', 'phone'], params: { placement_hash: '69d91b86f5c09a59230594bb8b274e34' } } */ /*somo-320x50*/
-      /* { bidder: '33across',      labelAny: ['desktop', 'tablet', 'phone'], params: { siteId : 'siab', productId: 'cLN3UCBHar5OfDrkHcnlKl' } } */ /*All sizes*/
-    ] //./bids
-  },
   {
    code: 'skinSlot',
    mediaTypes: {
