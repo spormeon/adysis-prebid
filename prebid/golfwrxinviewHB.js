@@ -422,7 +422,7 @@ var pbjs = pbjs || {};
 pbjs.que = pbjs.que || [];
 
 
-    
+    pbjs.que.push(function() {
       pbjs.aliasBidder('appnexus','brealtime');  // alias for bidder
       pbjs.aliasBidder('appnexus','springserveAlias2'); // alias for bidder
       pbjs.aliasBidder('appnexus','districtm'); // alias for bidder
@@ -509,16 +509,7 @@ pbjs.que = pbjs.que || [];
            springserveAlias2: { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.65; } }, // adjust the bid in real time before the auction takes place
           };
           
-          function initAdserver() {
-      if (pbjs.adserverRequestSent) return;
-      pbjs.adserverRequestSent = true;
-      googletag.cmd.push(function() {
-        pbjs.que.push(function() {
-          pbjs.setTargetingForGPTAsync();
-          googletag.pubads().refresh();
-        });
-      });
-    }
+          
     
     setTimeout(function() { initAdserver(); }, PREBID_TIMEOUT);
   
