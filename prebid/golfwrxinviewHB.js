@@ -427,7 +427,7 @@ pbjs.que = pbjs.que || [];
       pbjs.aliasBidder('appnexus','springserveAlias2'); // alias for bidder
       pbjs.aliasBidder('appnexus','districtm'); // alias for bidder
       // pbjs.setPriceGranularity("dense");   // not being used, being done in adserver targeting below, this needs to be tweaked once prices seen more
-      // pbjs.addAdUnits(adUnits);
+      
       // pbjs.enableSendAllBids();
       
       const customConfigObject = {
@@ -514,6 +514,7 @@ pbjs.que = pbjs.que || [];
       pbjs.adserverRequestSent = true;
       googletag.cmd.push(function() {
         pbjs.que.push(function() {
+          pbjs.addAdUnits(adUnits);
           pbjs.setTargetingForGPTAsync();
           googletag.pubads().refresh();
         });
