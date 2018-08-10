@@ -418,9 +418,7 @@ DOMReady(function () {
 
 var googletag = googletag || {};
 googletag.cmd = googletag.cmd || [];
-googletag.cmd.push(function() {
-googletag.pubads().disableInitialLoad();
-});
+
 
     pbjs.que.push(function() {
       pbjs.aliasBidder('appnexus','brealtime');  // alias for bidder
