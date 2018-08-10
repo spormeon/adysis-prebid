@@ -417,6 +417,9 @@ DOMReady(function () {
 
 var googletag = googletag || {};
 googletag.cmd = googletag.cmd || [];
+googletag.cmd.push(function() {
+googletag.pubads().disableInitialLoad();
+});
 
 var pbjs = pbjs || {};
 pbjs.que = pbjs.que || [];
@@ -514,8 +517,8 @@ pbjs.que = pbjs.que || [];
       pbjs.adserverRequestSent = true;
       googletag.cmd.push(function() {
         pbjs.que.push(function() {
-          pbjs.setTargetingForGPTAsync([slot.getSlotElementId()]);
-          googletag.pubads().refresh([slot]);
+          pbjs.setTargetingForGPTAsync();
+          googletag.pubads().refresh();
         });
       });
     }
