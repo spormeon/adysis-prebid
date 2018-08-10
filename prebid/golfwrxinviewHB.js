@@ -411,13 +411,15 @@ DOMReady(function () {
   }
   ]; //./adUnits
     
-  var pbjs = pbjs || {};
-  pbjs.que = pbjs.que || [];
+ 
             
 <!-- Prebid Boilerplate Section START. No Need to Edit. -->
 
 var googletag = googletag || {};
 googletag.cmd = googletag.cmd || [];
+
+var pbjs = pbjs || {};
+pbjs.que = pbjs.que || [];
 
 
     pbjs.que.push(function() {
@@ -425,7 +427,7 @@ googletag.cmd = googletag.cmd || [];
       pbjs.aliasBidder('appnexus','springserveAlias2'); // alias for bidder
       pbjs.aliasBidder('appnexus','districtm'); // alias for bidder
       // pbjs.setPriceGranularity("dense");   // not being used, being done in adserver targeting below, this needs to be tweaked once prices seen more
-      pbjs.addAdUnits(adUnits);
+      // pbjs.addAdUnits(adUnits);
       // pbjs.enableSendAllBids();
       
       const customConfigObject = {
