@@ -422,7 +422,7 @@ var pbjs = pbjs || {};
 pbjs.que = pbjs.que || [];
 
 
-    pbjs.que.push(function() {
+    
       pbjs.aliasBidder('appnexus','brealtime');  // alias for bidder
       pbjs.aliasBidder('appnexus','springserveAlias2'); // alias for bidder
       pbjs.aliasBidder('appnexus','districtm'); // alias for bidder
