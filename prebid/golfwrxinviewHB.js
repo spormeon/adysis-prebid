@@ -415,7 +415,7 @@ bids: [
 	 } 
 },
 bids: [
- /* { bidder: 'justpremium', labelAny: ['desktop', 'tablet'], params: { zone: '50978', allow: ['wp', 'sa', 'pu', 'pd', 'pa', 'ms', 'mo', 'is', 'as', 'fa', 'fi', 'hi', 'cf'] } } */ /* wallpaper, video wallpaper */
+ { bidder: 'justpremium', labelAny: ['desktop', 'tablet'], params: { zone: '50978', allow: ['wp', 'sa', 'pu', 'pd', 'pa', 'ms', 'mo', 'is', 'as', 'fa', 'fi', 'hi', 'cf'] } } /* wallpaper, video wallpaper */
 ] //./bids
 }
 ]; //./adUnits
@@ -483,7 +483,7 @@ pbjs.que = pbjs.que || [];
           enableSendAllBids: false, // Default will be `true` as of 1.0
           bidderSequence: 'random', // Default is random
     	  publisherDomain: 'golfwrx.com',
-    	  bidderTimeout: 2200,
+    	  bidderTimeout: 2500,
     	  pubcid: {expInterval: 525600},
     	   currency: {
    	       'adServerCurrency': "GBP",
