@@ -564,7 +564,7 @@ pbjs.que = pbjs.que || [];
     	      });
     	      var sizeMapping = sizeMappingBuilder.build();
     	      sizeMappings[key] = sizeMapping;
-    	      console.log('created sizemapping ', key, ' ', sizeMappings[key]);
+    	      console.log('created sizemapping ', +key+ ' ', sizeMappings[key]);
     	    });
     	    
     	    googletag.pubads().enableSingleRequest();
