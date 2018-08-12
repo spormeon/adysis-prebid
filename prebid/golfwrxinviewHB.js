@@ -95,7 +95,8 @@ DOMReady(function () {
 },
 bids: [
  { bidder: 'teads',     labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '75853', pageId: '87372' } },
- { bidder: 'appnexus',  labelAny: ['desktop', 'tablet', 'phone'],  params: { placementId: '11971351' } } /* one placementId for all sizes */
+ { bidder: 'appnexus',  labelAny: ['desktop', 'tablet', 'phone'],  params: { placementId: '11971351' } }, /* one placementId for all sizes */
+ { bidder: 'districtm', labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: 11937611 } } /* 300x600 - 300x250 - 160x600 */  
 ] //./bids
 },
 //new ad unit block
@@ -108,7 +109,8 @@ bids: [
 },
 bids: [
  { bidder: 'teads',     labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '95333', pageId: '87372' } },
- { bidder: 'appnexus',  labelAny: ['desktop', 'tablet', 'phone'],  params: { placementId: '11971351' } } /* one placementId for all sizes */
+ { bidder: 'appnexus',  labelAny: ['desktop', 'tablet', 'phone'],  params: { placementId: '11971351' } }, /* one placementId for all sizes */
+ { bidder: 'districtm', labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: 11937611 } } /* 300x600 - 300x250 - 160x600 */  
 ] //./bids
 },
 //new ad unit block
@@ -121,7 +123,8 @@ bids: [
 },
 bids: [
  { bidder: 'teads',     labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '95334', pageId: '87372' } },
- { bidder: 'appnexus',  labelAny: ['desktop', 'tablet', 'phone'],  params: { placementId: '11971351' } } /* one placementId for all sizes */
+ { bidder: 'appnexus',  labelAny: ['desktop', 'tablet', 'phone'],  params: { placementId: '11971351' } }, /* one placementId for all sizes */
+ { bidder: 'districtm', labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: 11937611 } } /* 300x600 - 300x250 - 160x600 */  
 ] //./bids
 },
 //new ad unit block
@@ -134,7 +137,8 @@ bids: [
 },
 bids: [
  { bidder: 'teads',     labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '95335', pageId: '87372' } },
- { bidder: 'appnexus',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '11971351' } } /* one placementId for all sizes */
+ { bidder: 'appnexus',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '11971351' } }, /* one placementId for all sizes */
+ { bidder: 'districtm', labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: 11937611 } } /* 300x600 - 300x250 - 160x600 */  
 ] //./bids
 },
 //new ad unit block
@@ -626,25 +630,25 @@ pbjs.que = pbjs.que || [];
       	        adUnitPath: '/1001824/Golfwrx.com-HB/Golfwrx.com-HB-Vid-test',
       	        size: 'mappinginreedvidslot',
       	        sizeMapping: 'mappinginreedvidslot',
-      	        timeout: 1,
+      	        timeout: 40000,
       	      },
       	      inreedvid1Slot: {
       	        adUnitPath: '/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test1',
       	        size: 'mappinginreedvidslot',
       	        sizeMapping: 'mappinginreedvidslot',
-      	        timeout: 1,
+      	        timeout: 40000,
       	      },
       	      inreedvid2Slot: {
       	        adUnitPath: '/1001824/Golfwrx.com-HB/Golfwrx.comHb-Vid-test2',
       	        size: 'mappinginreedvidslot',
       	        sizeMapping: 'mappinginreedvidslot',
-      	        timeout: 1,
+      	        timeout: 40000,
       	      },
       	      inreedvid3Slot: {
       	        adUnitPath: '/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test3',
       	        size: 'mappinginreedvidslot',
       	        sizeMapping: 'mappinginreedvidslot',
-      	        timeout: 1,
+      	        timeout: 40000,
       	      },
       	      skinSlot: {
       	        adUnitPath: '/1001824/Golfwrx.com-HB/Golfwrx.com-HB-Skin',
