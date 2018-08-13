@@ -591,8 +591,8 @@ pbjs.que = pbjs.que || [];
     	    Object.keys(config.definitons).forEach(function (key) {
     	      var def = config.definitons[key];
     	      var slot = googletag.defineSlot(def.adUnitPath, def.size, key);
-    	      // slot.setTargeting('test', 'refresh');
-    	      slot.setTargeting(event.slot.getSlotElementId());
+    	      slot.setTargeting('test', 'refresh');
+    	      slot.setTargeting('');
     	      slot.defineSizeMapping(sizeMappings[def.sizeMapping]);
     	      slot.addService(googletag.pubads());
     	      googletag.display(key);
