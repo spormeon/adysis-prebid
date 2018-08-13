@@ -593,6 +593,7 @@ pbjs.que = pbjs.que || [];
     	      var slot = googletag.defineSlot(def.adUnitPath, def.size, key);
     	      slot.setTargeting('test', 'refresh');
     	      slot.setTargeting('event.slot');
+    	      pbjs.setTargetingForGPTAsync();
     	      slot.defineSizeMapping(sizeMappings[def.sizeMapping]);
     	      slot.addService(googletag.pubads());
     	      googletag.display(key);
