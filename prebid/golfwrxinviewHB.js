@@ -150,11 +150,11 @@ bids: [
 	 }
 },
 bids: [
- { bidder: 'aol',    labelAny: ['desktop', 'tablet'],      params: { placement: '4882887', network: '4436.1' } }, /* 728x90 */
- { bidder: 'aol',    labelAny: ['desktop'],      params: { placement: '6507337', network: '4436.1' } }, /* 970x250 */
- { bidder: 'aol',    labelAny: ['desktop'],      params: { placement: '6507338', network: '4436.1' } }, /* 970x90 */
- { bidder: 'aol',    labelAny: ['desktop', 'tablet'],      params: { placement: '6507341', network: '4436.1' } }, /* 468x60 */
- { bidder: 'aol',    labelAny: ['desktop', 'tablet', 'phone'],      params: { placement: '6507340', network: '4436.1' } }, /* 320x50 */
+ { bidder: 'aol',    labelAny: ['desktop', 'tablet'],      params: { placement: '4882887', network: '4436.1', server: 'adserver.adtech.de' } }, /* 728x90 */
+ { bidder: 'aol',    labelAny: ['desktop'],      params: { placement: '6507337', network: '4436.1', server: 'adserver.adtech.de' } }, /* 970x250 */
+ { bidder: 'aol',    labelAny: ['desktop'],      params: { placement: '6507338', network: '4436.1', server: 'adserver.adtech.de' } }, /* 970x90 */
+ { bidder: 'aol',    labelAny: ['desktop', 'tablet'],      params: { placement: '6507341', network: '4436.1', server: 'adserver.adtech.de' } }, /* 468x60 */
+ { bidder: 'aol',    labelAny: ['desktop', 'tablet', 'phone'],      params: { placement: '6507340', network: '4436.1', server: 'adserver.adtech.de' } }, /* 320x50 */
  /* { bidder: 'featureforward', params: {pubId:28, siteId:6, placementId: '4' } }, */
  /* { bidder: 'atomx',        params: { id: '3808200'} }, */ /* does all sizes, not working at moment */
  { bidder: 'appnexus',   labelAny: ['desktop', 'tablet', 'phone'],  params: { placementId: '11971351' } }, /* one placementId for all sizes */
@@ -211,10 +211,10 @@ bids: [
      }
 },
 bids: [
- { bidder: 'aol',          labelAny: ['desktop', 'tablet', 'phone'], params: { placement: '4882886', network: '4436.1' } }, /* 300x250 */   
- { bidder: 'aol',          labelAny: ['desktop'], params: { placement: '4882888', network: '4436.1' } }, /* 160x600 */ 
- { bidder: 'aol',          labelAny: ['desktop'], params: { placement: '5293857', network: '4436.1' } }, /* 300x600 */   
- { bidder: 'aol',          labelAny: ['desktop'], params: { placement: '6507339', network: '4436.1' } }, /* 120x600 */  
+ { bidder: 'aol',          labelAny: ['desktop', 'tablet', 'phone'], params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x250 */   
+ { bidder: 'aol',          labelAny: ['desktop'], params: { placement: '4882888', network: '4436.1', server: 'adserver.adtech.de' } }, /* 160x600 */ 
+ { bidder: 'aol',          labelAny: ['desktop'], params: { placement: '5293857', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x600 */   
+ { bidder: 'aol',          labelAny: ['desktop'], params: { placement: '6507339', network: '4436.1', server: 'adserver.adtech.de' } }, /* 120x600 */  
  /* { bidder: 'atomx',        params: { id: '3808201'} }, */ /* does all sizes, not working at moment */  
  /* { bidder: 'featureforward', params: {pubId:28, siteId:6, placementId: '3' }}, */  
  /* { bidder: 'switch',       params: { adUnitID: 6632, domain:'delivery.h.switchadhub.com' } }, */ /* 160x600, 120x600, 300x600, 300x250, 300x50 */   
@@ -279,10 +279,10 @@ bids: [
      }
 },
 bids: [
- { bidder: 'aol',          labelAny: ['desktop', 'tablet', 'phone'], params: { placement: '4882886', network: '4436.1' } }, /* 300x250 */ 
- { bidder: 'aol',          labelAny: ['desktop'], params: { placement: '4882888', network: '4436.1' } }, /* 160x600 */
- { bidder: 'aol',          labelAny: ['desktop'], params: { placement: '5293857', network: '4436.1' } }, /* 300x600 */   
- { bidder: 'aol',          labelAny: ['desktop'], params: { placement: '6507339', network: '4436.1' } }, /* 120x600 */  
+ { bidder: 'aol',          labelAny: ['desktop', 'tablet', 'phone'], params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x250 */ 
+ { bidder: 'aol',          labelAny: ['desktop'], params: { placement: '4882888', network: '4436.1', server: 'adserver.adtech.de' } }, /* 160x600 */
+ { bidder: 'aol',          labelAny: ['desktop'], params: { placement: '5293857', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x600 */   
+ { bidder: 'aol',          labelAny: ['desktop'], params: { placement: '6507339', network: '4436.1', server: 'adserver.adtech.de' } }, /* 120x600 */  
  /* { bidder: 'atomx',        params: { id: '3808201'} }, */ /* does all sizes, not working at moment */
  /* { bidder: 'featureforward', params: {pubId:28, siteId:6, placementId: '3' }}, */
  /* { bidder: 'switch',       params: { adUnitID: 6632, domain:'delivery.h.switchadhub.com' } }, */ /* 160x600, 120x600, 300x600, 300x250, 300x50 */
@@ -347,10 +347,10 @@ bids: [
      }
 },
 bids: [
- { bidder: 'aol',          labelAny: ['desktop', 'tablet', 'phone'], params: { placement: '4882886', network: '4436.1' } }, /* 300x250 */    
- { bidder: 'aol',          labelAny: ['desktop'], params: { placement: '4882888', network: '4436.1' } }, /* 160x600 */   
- { bidder: 'aol',          labelAny: ['desktop'], params: { placement: '5293857', network: '4436.1' } }, /* 300x600 */
- { bidder: 'aol',          labelAny: ['desktop'], params: { placement: '6507339', network: '4436.1' } }, /* 120x600 */
+ { bidder: 'aol',          labelAny: ['desktop', 'tablet', 'phone'], params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x250 */    
+ { bidder: 'aol',          labelAny: ['desktop'], params: { placement: '4882888', network: '4436.1', server: 'adserver.adtech.de' } }, /* 160x600 */   
+ { bidder: 'aol',          labelAny: ['desktop'], params: { placement: '5293857', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x600 */
+ { bidder: 'aol',          labelAny: ['desktop'], params: { placement: '6507339', network: '4436.1', server: 'adserver.adtech.de' } }, /* 120x600 */
  /* { bidder: 'atomx',        params: { id: '3808201'} }, */ /* does all sizes, not working at moment */
  /* { bidder: 'featureforward', params: {pubId:28, siteId:6, placementId: '3' }}, */
  /* { bidder: 'switch',       params: { adUnitID: 6632, domain:'delivery.h.switchadhub.com' } }, */ /* 160x600, 120x600, 300x600, 300x250, 300x50 */
@@ -483,7 +483,7 @@ pbjs.que = pbjs.que || [];
           enableSendAllBids: false, // Default will be `true` as of 1.0
           bidderSequence: 'random', // Default is random
     	  publisherDomain: 'golfwrx.com',
-    	  bidderTimeout: 2300,
+    	  bidderTimeout: 2500,
     	  pubcid: {expInterval: 525600},
     	   currency: {
    	       'adServerCurrency': "GBP",
