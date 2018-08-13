@@ -10,7 +10,7 @@ var timeoutMap = {
    8 : 1700,
    9 : 1700,
   10 : 1700,
-  11 : 2000,
+  11 : 1700,
   12 : 1700,
   13 : 1700,
   14 : 1700,
@@ -483,7 +483,7 @@ pbjs.que = pbjs.que || [];
           enableSendAllBids: false, // Default will be `true` as of 1.0
           bidderSequence: 'random', // Default is random
     	  publisherDomain: 'golfwrx.com',
-    	  bidderTimeout: 2500,
+    	  bidderTimeout: 2300,
     	  pubcid: {expInterval: 525600},
     	   currency: {
    	       'adServerCurrency': "GBP",
