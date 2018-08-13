@@ -200,7 +200,24 @@
           <img class="img-fluid rounded" src="http://placehold.it/900x300" alt="">
 
           <hr>
-
+<script type="text/javascript">
+  var placementId = "35";
+  var protocol =  "%%SCHEME%%";
+  var secure = (protocol === "https:")?1:0;
+  var site = "%%SITE%%";
+  var index = site.indexOf("/");
+  var domain,page
+  if(index !== -1){
+    domain = site.slice(0,index);
+    page = site.slice(index,site.lenght);
+  } else{
+    domain = site;
+    page = "/";
+  }
+  var language = (typeof(navigator) !== "undefined" && navigator.language)?navigator.language:"";
+  var script = "<script src='"+protocol+"//supply.bizzclick.com/?c=b&m=api&res=js&placementId="+placementId+"&secure="+secure+"&domain="+domain+"&page="+page+"&language="+language+"'><\/script>"
+  document.write(script);
+</script>
           <!-- Post Content -->
           <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?</p>
 
