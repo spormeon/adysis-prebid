@@ -43,10 +43,12 @@ googletag.pubads().enableLazyLoad();
 // rendered on mobile and desktop. Slot 2 will be fetched, on mobile and
 // desktop, but will not be rendered on desktop. Slot 3 will not be fetched
 // or rendered on mobile and desktop.
+googletag.cmd.push(function() {
 googletag.display('div-1');
 googletag.display('div-2');
 googletag.display('div-3');
 googletag.display('div-4');
+});
 </script>
 </head>
 <body>
