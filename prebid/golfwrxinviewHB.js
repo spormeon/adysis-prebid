@@ -65,6 +65,17 @@ DOMReady(function () {
       var pbjsTargetEl = document.getElementsByTagName("head")[0];
       pbjsTargetEl.insertBefore(pbjsEl, pbjsTargetEl.firstChild);
   })();
+  
+  (function () {
+      var gads = document.createElement('script');
+      gads.async = true;
+      gads.type = 'text/javascript';
+      var useSSL = 'https:' == document.location.protocol;
+      gads.src = (useSSL ? 'https:' : 'http:') +
+              '//www.googletagservices.com/tag/js/gpt.js';
+      var node = document.getElementsByTagName('script')[0];
+      node.parentNode.insertBefore(gads, node);
+  })();
 
 <!-- Prebid Config Section START -->
 
@@ -546,16 +557,7 @@ pbjs.setConfig({
   
   <!-- Prebid Boilerplate Section END -->
   
-    (function () {
-        var gads = document.createElement('script');
-        gads.async = true;
-        gads.type = 'text/javascript';
-        var useSSL = 'https:' == document.location.protocol;
-        gads.src = (useSSL ? 'https:' : 'http:') +
-                '//www.googletagservices.com/tag/js/gpt.js';
-        var node = document.getElementsByTagName('script')[0];
-        node.parentNode.insertBefore(gads, node);
-    })();
+    
   
     googletag.cmd.push(function () {
     	  (function (googletag, pbjs, config) {
