@@ -65,7 +65,7 @@ DOMReady(function () {
       var pbjsTargetEl = document.getElementsByTagName("head")[0];
       pbjsTargetEl.insertBefore(pbjsEl, pbjsTargetEl.firstChild);
   })();
-  
+//load up google gpt.js
   (function () {
       var gads = document.createElement('script');
       gads.async = true;
@@ -79,21 +79,7 @@ DOMReady(function () {
 
 <!-- Prebid Config Section START -->
 
-  var gpt_config = {
-    // prebid_timeout: 3000, //left for reference but not using right now...
-    // default_gbp_rate: 0.77, // not being used
-    // latest_gbp_rate: 0.77414, //RATE AS AT 30-08-2017 , not being used, using newRate from the function
-    // dynamically_lookup_gbp_rate: true,
-    // mobileWidthBreakpoint: 640,
-    // tabletWidthBreakpoint: 767,
-    bigbox_sizes: [[300, 600], [300, 250], [160, 600], [120, 600],[250,250]],
-    bigbox_sizes_tablet: [[300, 250],[250,250]],
-    bigbox_sizes_mobile: [[300, 250],[250,250]],
-    leaderboard_sizes: [[970, 250],[970, 90],[728, 90],[468,60],[320, 50],[234,60]],
-    leaderboard_sizes_tablet: [[728, 90],[468,60],[320, 50],[234,60]],
-    leaderboard_sizes_mobile: [[320, 50],[234,60]],
-    skin_sizes: [[1, 1]]
-  }; //./gpt_config
+  
  
   var adUnits = [
 //new ad unit block
