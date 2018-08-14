@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Lazy loading in GPT</title>
+
+    <script>googletag = window.googletag || {cmd: []};</script>
+    <script async src="//www.googletagservices.com/tag/js/gpt.js"></script>
+    <script>
 // The calls to construct slots and display contents. div-1 is on screen,
 // div-2 is 3 viewports down, div-3 is 12 viewports down.
 googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.com-HB-Vid-test', [[728, 90],[300, 250]], 'div-1').
@@ -19,7 +28,22 @@ googletag.pubads().enableLazyLoad({
   renderMarginPercent: 200,  // Render slots within 2 viewports.
   mobileScaling: 2.0  // Double the above values on mobile.
 });
-
+</script>
+</head>
+<body>
+  <h1>Lazy loading in GPT</h1>
+  
+   <div id="div-1">
+      <script>
+        // Load the top ad as soon as possible. No lazy loading required here.
+        googletag.display('div-1');
+      </script>
+    </div>
+  <br/>
+  <!-- Large div to make the bottom ad go below the fold. -->
+    <div id="veryLongDiv" style="width: 200px; height: 1000px">intentionally left blank</div>
+      </body>
+</html>
 // As defined by lazy load settings, initially Slot 1 will be fetched and
 // rendered on mobile and desktop. Slot 2 will be fetched, on mobile and
 // desktop, but will not be rendered on desktop. Slot 3 will not be fetched
