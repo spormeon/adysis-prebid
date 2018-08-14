@@ -438,27 +438,6 @@ bids: [
  
             
 <!-- Prebid Boilerplate Section START. No Need to Edit. -->
-
-var googletag = googletag || {};
-googletag.cmd = googletag.cmd || [];
-
-
-
-
-var pbjs = pbjs || {};
-pbjs.que = pbjs.que || [];
-
-pbjs.bidderSettings = { 
-        aol:               { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.85; } }, // adjust the bid in real time before the auction takes place
-        districtm:         { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.90; } }, // adjust the bid in real time before the auction takes place
-        sekindonUM:        { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.75; } }, // adjust the bid in real time before the auction takes place
-        brealtime:         { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.80; } }, // adjust the bid in real time before the auction takes place
-        springserveAlias2: { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.65; } }, // adjust the bid in real time before the auction takes place
-       };
-pbjs.aliasBidder('appnexus','brealtime');  // alias for bidder
-pbjs.aliasBidder('appnexus','springserveAlias2'); // alias for bidder
-pbjs.aliasBidder('appnexus','districtm'); // alias for bidder
-
 const customConfigObject = {
 		  "buckets" : [{
 		      "precision": 2,  //default is 2 if omitted - means 2.1234 rounded to 2 decimal places = 2.12
@@ -474,6 +453,33 @@ const customConfigObject = {
 		    }]
 		};
 
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+googletag.cmd.push(function() {
+    googletag.pubads().disableInitialLoad();
+});
+
+var pbjs = pbjs || {};
+pbjs.que = pbjs.que || [];
+
+pbjs.que.push(function() {
+	
+// pbjs.setPriceGranularity("dense");   // not being used, being done in adserver targeting below, this needs to be tweaked once prices seen more
+pbjs.addAdUnits(adUnits);
+// pbjs.enableSendAllBids();
+	
+pbjs.aliasBidder('appnexus','brealtime');  // alias for bidder	
+pbjs.aliasBidder('appnexus','springserveAlias2'); // alias for bidder	
+pbjs.aliasBidder('appnexus','districtm'); // alias for bidder	
+
+pbjs.bidderSettings = { 
+	        aol:               { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.85; } }, // adjust the bid in real time before the auction takes place
+	        districtm:         { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.90; } }, // adjust the bid in real time before the auction takes place
+	        sekindonUM:        { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.75; } }, // adjust the bid in real time before the auction takes place
+	        brealtime:         { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.80; } }, // adjust the bid in real time before the auction takes place
+	        springserveAlias2: { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.65; } }, // adjust the bid in real time before the auction takes place
+	       };	
+	
 pbjs.setConfig({
 	  priceGranularity: customConfigObject,
 	  consentManagement: {
@@ -523,26 +529,14 @@ sizesSupported: [[300, 250], [320, 50], [1, 1]],
 labels: ['phone']
 }]
 		  
+});  
+      
+pbjs.requestBids({
+    bidsBackHandler: initAdserver
+  });
 });
-
-pbjs.que.push(function() {
-      
-// pbjs.setPriceGranularity("dense");   // not being used, being done in adserver targeting below, this needs to be tweaked once prices seen more
-pbjs.addAdUnits(adUnits);
-// pbjs.enableSendAllBids();
-      
-      
-      
-      
-      
-      pbjs.requestBids({
-        bidsBackHandler: initAdserver
-      });
-    });
-    
-      
-          
-          function initAdserver() {
+ 
+function initAdserver() {
       if (pbjs.adserverRequestSent) return;
       pbjs.adserverRequestSent = true;
       googletag.cmd.push(function() {
@@ -550,10 +544,10 @@ pbjs.addAdUnits(adUnits);
           pbjs.setTargetingForGPTAsync();
           googletag.pubads().refresh();
         });
-      });
-    }
+    });
+}
     
-    setTimeout(function() { initAdserver(); }, PREBID_TIMEOUT);
+setTimeout(function() { initAdserver(); }, PREBID_TIMEOUT);
   
   <!-- Prebid Boilerplate Section END -->
   
