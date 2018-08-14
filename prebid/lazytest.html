@@ -20,46 +20,52 @@
     <script>
 // The calls to construct slots and display contents. div-1 is on screen,
 // div-2 is 3 viewports down, div-3 is 12 viewports down.
-googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.com-HB-Vid-test', [[728, 90],[300, 250]], 'div-1').
-  addService(googletag.pubads());
-googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.com-HB-Vid-test1', [[728, 90],[300, 250]], 'div-2').
-  addService(googletag.pubads());
-googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.com-HB-Vid-test2', [[728, 90],[300, 250]], 'div-3').
-  addService(googletag.pubads());
-googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.com-HB-Vid-test3', [[728, 90],[300, 250]], 'div-4').
-  addService(googletag.pubads());
-googletag.enableServices();
-// Enable lazy loading with defaults.
-googletag.pubads().enableLazyLoad();
-// Enable without lazy fetching, overriding last call.
-// googletag.pubads().enableLazyLoad({fetchMarginPercent: -1});
-// Enable lazy loading with...
-// googletag.pubads().enableLazyLoad({
-//  fetchMarginPercent: 500,  // Fetch slots within 5 viewports.
-//  renderMarginPercent: 200,  // Render slots within 2 viewports.
-//  mobileScaling: 2.0  // Double the above values on mobile.
-// });
+var inreedvidSlot, inreedvid1Slot, inreedvid2Slot, inreedvid3Slot; +       googletag.cmd.push(function() {
+    	  inreedvidSlot = googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.com-HB-Vid-test', [300, 250], 'inreedvidSlot').addService(googletag.pubads());
+    	  inreedvid1Slot = googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test1', [728, 90], 'inreedvid1Slot').addService(googletag.pubads());
+    	  inreedvid2Slot = googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test2', [728, 90], 'inreedvid2Slot').addService(googletag.pubads());
+    	  inreedvid3Slot = googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test3', [728, 90], 'inreedvid3Slot').addService(googletag.pubads());
+        googletag.pubads().disableInitialLoad();
+        googletag.pubads().collapseEmptyDivs(true, true);
+        googletag.pubads().setCentering(true);
+        googletag.enableServices();
+      });
+
+googletag.pubads().enableLazyLoad({
+	  fetchMarginPercent: 500,  // Fetch slots within 5 viewports.
+	  renderMarginPercent: 200,  // Render slots within 2 viewports.
+	  mobileScaling: 2.0  // Double the above values on mobile.
+	});
+
 // As defined by lazy load settings, initially Slot 1 will be fetched and
 // rendered on mobile and desktop. Slot 2 will be fetched, on mobile and
 // desktop, but will not be rendered on desktop. Slot 3 will not be fetched
 // or rendered on mobile and desktop.
 googletag.cmd.push(function() {
-googletag.display('div-1');
-googletag.display('div-2');
-googletag.display('div-3');
-googletag.display('div-4');
+googletag.display('inreedvidSlot');
+googletag.display('inreedvid1Slot');
+googletag.display('inreedvid2Slot');
+googletag.display('inreedvid3Slot');
 });
 </script>
 </head>
 <body>
   <h1>Lazy loading in GPT</h1>
   
-   <div id="div-1">
+   <div id="inreedSlot">
       
     </div>
   <br/>
   <!-- Large div to make the bottom ad go below the fold. -->
     <div id="veryLongDiv" style="width: 200px; height: 1000px">intentionally left blank</div>
+    
+    <div id="inreed1Slot">
+    <div id="veryLongDiv" style="width: 200px; height: 1000px">intentionally left blank</div>
+    
+    <div id="inreed2Slot">
+    <div id="veryLongDiv" style="width: 200px; height: 1000px">intentionally left blank</div>
+    
+    <div id="inreed3Slot">
       </body>
 </html>
 
