@@ -57,6 +57,8 @@
         if (window.scrollY >= adAlmostVisibleScrollValue && !refreshed) {
           googletag.cmd.push(function() {
             googletag.pubads().refresh([inreedvid1Slot]);
+            googletag.pubads().refresh([inreedvid2Slot]);
+            googletag.pubads().refresh([inreedvid3Slot]);
           });
           // Refresh the ad only once.
           refreshed = true;
