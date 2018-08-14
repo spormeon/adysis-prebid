@@ -428,8 +428,7 @@ bids: [
             
 <!-- Prebid Boilerplate Section START. No Need to Edit. -->
 
-var googletag = googletag || {};
-googletag.cmd = googletag.cmd || [];
+
 
 
 var pbjs = pbjs || {};
