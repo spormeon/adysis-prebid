@@ -12,7 +12,7 @@ var timeoutMap = {
   10 : 2500,
   11 : 2500,
   12 : 3000,
-  13 : 3000,
+  13 : 3200,
   14 : 2000,
   15 : 1700,
   16 : 1500,
@@ -494,7 +494,7 @@ debug: true,
 enableSendAllBids: false, // Default will be `true` as of 1.0
 bidderSequence: 'random', // Default is random
 	  publisherDomain: 'golfwrx.com',
-	  bidderTimeout: 3000,
+	  bidderTimeout: 3500,
 	  pubcid: {expInterval: 525600},
 	   currency: {
 	       'adServerCurrency': "GBP",
