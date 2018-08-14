@@ -1,0 +1,30 @@
+// The calls to construct slots and display contents. div-1 is on screen,
+// div-2 is 3 viewports down, div-3 is 12 viewports down.
+googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.com-HB-Vid-test', [[728, 90],[300, 250]], 'div-1').
+  addService(googletag.pubads());
+googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.com-HB-Vid-test1', [[728, 90],[300, 250]], 'div-2').
+  addService(googletag.pubads());
+googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.com-HB-Vid-test2', [[728, 90],[300, 250]], 'div-3').
+  addService(googletag.pubads());
+googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.com-HB-Vid-test3', [[728, 90],[300, 250]], 'div-4').
+  addService(googletag.pubads());
+  
+// Enable lazy loading with defaults.
+googletag.pubads().enableLazyLoad();
+// Enable without lazy fetching, overriding last call.
+googletag.pubads().enableLazyLoad({fetchMarginPercent: -1});
+// Enable lazy loading with...
+googletag.pubads().enableLazyLoad({
+  fetchMarginPercent: 500,  // Fetch slots within 5 viewports.
+  renderMarginPercent: 200,  // Render slots within 2 viewports.
+  mobileScaling: 2.0  // Double the above values on mobile.
+});
+
+// As defined by lazy load settings, initially Slot 1 will be fetched and
+// rendered on mobile and desktop. Slot 2 will be fetched, on mobile and
+// desktop, but will not be rendered on desktop. Slot 3 will not be fetched
+// or rendered on mobile and desktop.
+googletag.display('div-1');
+googletag.display('div-2');
+googletag.display('div-3');
+googletag.display('div-4');
