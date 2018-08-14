@@ -92,9 +92,10 @@ DOMReady(function () {
 },
 bids: [
  { bidder: 'teads',     labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '75853', pageId: '87372' } },
- { bidder: 'appnexus',  labelAny: ['desktop', 'tablet', 'phone'],  params: { placementId: '11971351' } }, /* one placementId for all sizes */
+ { bidder: 'appnexus',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '11971351' } }, /* one placementId for all sizes */
  { bidder: 'districtm', labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: 11937611 } }, /* 300x600 - 300x250 - 160x600 */ 
- { bidder: 'aol',       labelAny: ['desktop', 'tablet', 'phone'], params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } } /* 300x250 */ 
+ { bidder: 'aol',       labelAny: ['desktop', 'tablet', 'phone'], params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x250 */ 
+ { bidder: 'brealtime', labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '12002335' } }  /* 300x250 */   
 ] //./bids
 },
 //new ad unit block
@@ -107,9 +108,10 @@ bids: [
 },
 bids: [
  { bidder: 'teads',     labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '95333', pageId: '87372' } },
- { bidder: 'appnexus',  labelAny: ['desktop', 'tablet', 'phone'],  params: { placementId: '11971351' } }, /* one placementId for all sizes */
+ { bidder: 'appnexus',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '11971351' } }, /* one placementId for all sizes */
  { bidder: 'districtm', labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: 11937611 } }, /* 300x600 - 300x250 - 160x600 */  
- { bidder: 'aol',       labelAny: ['desktop', 'tablet', 'phone'], params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } } /* 300x250 */ 
+ { bidder: 'aol',       labelAny: ['desktop', 'tablet', 'phone'], params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x250 */ 
+ { bidder: 'brealtime', labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '12002335' } }  /* 300x250 */   
 ] //./bids
 },
 //new ad unit block
@@ -122,9 +124,10 @@ bids: [
 },
 bids: [
  { bidder: 'teads',     labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '95334', pageId: '87372' } },
- { bidder: 'appnexus',  labelAny: ['desktop', 'tablet', 'phone'],  params: { placementId: '11971351' } }, /* one placementId for all sizes */
+ { bidder: 'appnexus',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '11971351' } }, /* one placementId for all sizes */
  { bidder: 'districtm', labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: 11937611 } }, /* 300x600 - 300x250 - 160x600 */ 
- { bidder: 'aol',       labelAny: ['desktop', 'tablet', 'phone'], params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } } /* 300x250 */ 
+ { bidder: 'aol',       labelAny: ['desktop', 'tablet', 'phone'], params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x250 */
+ { bidder: 'brealtime', labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '12002335' } }  /* 300x250 */   
 ] //./bids
 },
 //new ad unit block
@@ -139,7 +142,8 @@ bids: [
  { bidder: 'teads',     labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '95335', pageId: '87372' } },
  { bidder: 'appnexus',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '11971351' } }, /* one placementId for all sizes */
  { bidder: 'districtm', labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: 11937611 } }, /* 300x600 - 300x250 - 160x600 */ 
- { bidder: 'aol',       labelAny: ['desktop', 'tablet', 'phone'], params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } } /* 300x250 */ 
+ { bidder: 'aol',       labelAny: ['desktop', 'tablet', 'phone'], params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x250 */ 
+ { bidder: 'brealtime', labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '12002335' } }  /* 300x250 */   
 ] //./bids
 },
 //new ad unit block
