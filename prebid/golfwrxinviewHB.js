@@ -536,8 +536,8 @@ pbjs.setConfig({
       pbjs.adserverRequestSent = true;
       googletag.cmd.push(function() {
         pbjs.que.push(function() {
-          pbjs.setTargetingForGPTAsync();
-          googletag.pubads().refresh();
+          pbjs.setTargetingForGPTAsync([slot.getSlotElementId()]);
+          googletag.pubads().refresh([slot]);
         });
       });
     }
