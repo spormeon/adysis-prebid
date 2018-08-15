@@ -168,17 +168,7 @@
                     allowAuctionWithoutConsent: true
                   },
                  cache: {url: "//prebid.adnxs.com/pbc/v1/cache"},
-                 s2sConfig: {
-                     accountId: 'e31f627f-53a3-4288-9979-482d3c6ffc76',
-                     enabled: true,
-                     bidders: ['appnexus', 'somoaudience', 'sovrn', 'districtm', 'conversant', 'pulsepoint', 'brealtime'],
-                     timeout: 1300,
-                     adapter: 'prebidServer',
-                     endpoint: 'https://prebid.adnxs.com/pbs/v1/openrtb2/auction',
-                     syncEndpoint: 'https://prebid.adnxs.com/pbs/v1/cookie_sync',
-                     cookieSet: true,
-                     cookiesetUrl: 'https://acdn.adnxs.com/cookieset/cs.js'
-                  },
+                 
                   userSync: {
                       iframeEnabled: true,
                       syncsPerBidder: 50, // and no more than 3 syncs at a time
