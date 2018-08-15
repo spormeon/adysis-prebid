@@ -261,6 +261,7 @@ $(document).ready(function(){
 	  $('<div class="ad-reporter-ahytrfg35423">Advertisement<div id="inreedvid1Slot"></div><div>').insertAfter('.mvp-main-box p:nth-child(20) ');
 	  $('<div class="ad-reporter-ahytrfg35423">Advertisement<div id="inreedvid2Slot"></div><div>').insertAfter('.mvp-main-box p:nth-child(40) ');
 	  $('<div class="ad-reporter-ahytrfg35423">Advertisement<div id="inreedvid3Slot"></div><div>').insertAfter('.mvp-main-box p:nth-child(60) ');
+	  $( "<div class="ad-reporter-ahytrfg35423">Advertisement<div id="inreedvidSlot"></div><div>" ).insertAfter( "div.mvp-content-main p:eq(1)" );
 });
 
 // ASSERTIVE ANALYTICS - Version: 1.5.1
