@@ -103,10 +103,7 @@ var timeoutMap = {
             	 { bidder: 'somoaudience', params: { placement_hash: '1152340cac3268b0e737b49c1382cd2b' } }, /*300x250*/
             	 { bidder: '33across',   params: { siteId : 'cLN3UCBHar5OfDrkHcnlKl', productId: 'siab' } }, /*All sizes*/
             	 { bidder: 'rhythmone',  params: { placementId: '76184' } }, /* one placementId for all sizes */
-            	 { bidder: "ix",         params: { siteId: "281563", size: [300, 250] } },
-            	 { bidder: "audienceNetwork",params: { placementId: "782113131936517_1062614423886385" } }
-
-
+            	 { bidder: "ix",         params: { siteId: "281563", size: [300, 250] } }
             	] //./bids
             	},
             	//new ad unit block
