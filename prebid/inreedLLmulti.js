@@ -42,7 +42,7 @@ var timeoutMap = {
 		  15 : 1700,
 		  16 : 1500,
 		  17 : 1000,
-		  18 : 1000,
+		  18 : 800,
 		  19 : 1100,
 		  20 : 1000,
 		  21 : 1500,
@@ -101,7 +101,7 @@ var timeoutMap = {
             	 { bidder: 'pulsepoint', params: { cf: '300X250', cp: '561446', ct: '602639' } }, /* 300x250 */
             	 { bidder: 'sovrn',      params: { tagId: '575683' } }, /* 300x250 */
             	 { bidder: 'somoaudience', params: { placement_hash: '1152340cac3268b0e737b49c1382cd2b' } }, /*300x250*/
-            	 { bidder: '33across',   params: { siteId : 'cLN3UCBHar5OfDrkHcnlKl', productId: 'siab' } }, /*All sizes*/
+            	 // { bidder: '33across',   params: { siteId : 'cLN3UCBHar5OfDrkHcnlKl', productId: 'siab' } }, /*All sizes*/
             	 { bidder: 'rhythmone',  params: { placementId: '76184' } }, /* one placementId for all sizes */
             	 { bidder: "ix",         params: { siteId: "281563", size: [300, 250] } }
             	 // { bidder: "yieldmo",    params: { placementId: "1990667709809591856" } } /* no adapter in file */
@@ -126,7 +126,7 @@ var timeoutMap = {
             	 { bidder: 'pulsepoint', params: { cf: '300X250', cp: '561446', ct: '602639' } }, /* 300x250 */
             	 { bidder: 'sovrn',      params: { tagId: '575683' } }, /* 300x250 */
             	 { bidder: 'somoaudience', params: { placement_hash: '1152340cac3268b0e737b49c1382cd2b' } }, /*300x250*/
-            	 { bidder: '33across',   params: { siteId : 'cLN3UCBHar5OfDrkHcnlKl', productId: 'siab' } }, /*All sizes*/
+            	 // { bidder: '33across',   params: { siteId : 'cLN3UCBHar5OfDrkHcnlKl', productId: 'siab' } }, /*All sizes*/
             	 { bidder: "ix",         params: { siteId: "281563", size: [300, 250] } }
             	] //./bids
             	},
@@ -148,7 +148,7 @@ var timeoutMap = {
             	 { bidder: 'pulsepoint', params: { cf: '300X250', cp: '561446', ct: '602639' } }, /* 300x250 */
             	 { bidder: 'sovrn',      params: { tagId: '575683' } }, /* 300x250 */
             	 { bidder: 'somoaudience', params: { placement_hash: '1152340cac3268b0e737b49c1382cd2b' } }, /*300x250*/
-            	 { bidder: '33across',   params: { siteId : 'cLN3UCBHar5OfDrkHcnlKl', productId: 'siab' } }, /*All sizes*/
+            	 // { bidder: '33across',   params: { siteId : 'cLN3UCBHar5OfDrkHcnlKl', productId: 'siab' } }, /*All sizes*/
             	 { bidder: "ix",         params: { siteId: "281563", size: [300, 250] } }
             	] //./bids
             	},
@@ -170,7 +170,7 @@ var timeoutMap = {
             	 { bidder: 'pulsepoint', params: { cf: '300X250', cp: '561446', ct: '602639' } }, /* 300x250 */
             	 { bidder: 'sovrn',      params: { tagId: '575683' } }, /* 300x250 */
             	 { bidder: 'somoaudience', params: { placement_hash: '1152340cac3268b0e737b49c1382cd2b' } }, /*300x250*/
-            	 { bidder: '33across',   params: { siteId : 'cLN3UCBHar5OfDrkHcnlKl', productId: 'siab' } }, /*All sizes*/
+            	 // { bidder: '33across',   params: { siteId : 'cLN3UCBHar5OfDrkHcnlKl', productId: 'siab' } }, /*All sizes*/
             	 { bidder: "ix",         params: { siteId: "281563", size: [300, 250] } }
             	] //./bids
             	}
