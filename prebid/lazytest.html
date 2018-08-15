@@ -4,19 +4,8 @@
     <meta charset="UTF-8">
     <title>Lazy loading in GPT</title>
 
-    <script type="text/javascript">
-  var googletag = googletag || {};
-  googletag.cmd = googletag.cmd || [];
-  (function() {
-    var gads = document.createElement("script");
-    gads.async = true;
-    gads.type = "text/javascript";
-    var useSSL = "https:" == document.location.protocol;
-    gads.src = (useSSL ? "https:" : "http:") + "//www.googletagservices.com/tag/js/gpt.js";
-    var node =document.getElementsByTagName("script")[0];
-    node.parentNode.insertBefore(gads, node);
-   })();
-</script>
+    <script>googletag = window.googletag || {cmd: []};</script>
+    <script async src="//www.googletagservices.com/tag/js/gpt.js"></script>
     <script>
 // The calls to construct slots and display contents. div-1 is on screen,
 // div-2 is 3 viewports down, div-3 is 12 viewports down.
