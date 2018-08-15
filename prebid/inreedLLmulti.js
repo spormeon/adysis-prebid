@@ -41,7 +41,7 @@ var timeoutMap = {
 		  14 : 1500,
 		  15 : 1700,
 		  16 : 1500,
-		  17 : 1100,
+		  17 : 1000,
 		  18 : 1200,
 		  19 : 1100,
 		  20 : 1000,
@@ -102,6 +102,7 @@ var timeoutMap = {
             	 { bidder: 'sovrn',      params: { tagId: '575683' } }, /* 300x250 */
             	 { bidder: 'somoaudience', params: { placement_hash: '1152340cac3268b0e737b49c1382cd2b' } }, /*300x250*/
             	 { bidder: '33across',   params: { siteId : 'cLN3UCBHar5OfDrkHcnlKl', productId: 'siab' } }, /*All sizes*/
+            	 { bidder: 'rhythmone',  params: { placementId: '76184' } }, /* one placementId for all sizes */
             	 { bidder: "ix",         params: { siteId: "281563", size: [300, 250] } }
 
             	] //./bids
@@ -222,7 +223,7 @@ var timeoutMap = {
                  s2sConfig: {
                      accountId: 'e31f627f-53a3-4288-9979-482d3c6ffc76',
                      enabled: true,
-                     bidders: ['appnexus', 'somoaudience', 'sovrn', 'districtm', 'conversant', 'pulsepoint', 'brealtime', 'ix'],
+                     bidders: ['appnexus', 'somoaudience', 'sovrn', 'districtm', 'conversant', 'pulsepoint', 'brealtime', 'indexExchange'],
                      timeout: 1000,
                      adapter: 'prebidServer',
                      endpoint: 'https://prebid.adnxs.com/pbs/v1/openrtb2/auction',
