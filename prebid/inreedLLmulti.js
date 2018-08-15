@@ -96,7 +96,12 @@ var timeoutMap = {
             	 { bidder: 'appnexus',   params: { placementId: '11971351' } }, /* one placementId for all sizes */
             	 { bidder: 'districtm',  params: { placementId: 11937611 } }, /* 300x600 - 300x250 - 160x600 */ 
             	 { bidder: 'aol',        params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x250 */ 
-            	 { bidder: 'brealtime',  params: { placementId: '12002335' } }  /* 300x250 */   
+            	 { bidder: 'brealtime',  params: { placementId: '12002335' } },  /* 300x250 */   
+            	 { bidder: 'conversant', params: { site_id: '118233' } },  /* 300x250 */ 
+            	 { bidder: 'pulsepoint', params: { cf: '300X250', cp: '561446', ct: '602639' } }, /* 300x250 */
+            	 { bidder: 'sovrn',      params: { tagId: '575683' } }, /* 300x250 */
+            	 { bidder: 'somoaudience', params: { placement_hash: '1152340cac3268b0e737b49c1382cd2b' } }, /*300x250*/
+            	 { bidder: '33across',   params: { siteId : 'cLN3UCBHar5OfDrkHcnlKl', productId: 'siab' } } /*All sizes*/
             	] //./bids
             	},
             	//new ad unit block
@@ -112,7 +117,12 @@ var timeoutMap = {
             	 { bidder: 'appnexus',   params: { placementId: '11971351' } }, /* one placementId for all sizes */
             	 { bidder: 'districtm',  params: { placementId: 11937611 } }, /* 300x600 - 300x250 - 160x600 */  
             	 { bidder: 'aol',        params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x250 */ 
-            	 { bidder: 'brealtime',  params: { placementId: '12002335' } }  /* 300x250 */   
+            	 { bidder: 'brealtime',  params: { placementId: '12002335' } },  /* 300x250 */ 
+            	 { bidder: 'conversant', params: { site_id: '118233' } },  /* 300x250 */ 
+            	 { bidder: 'pulsepoint', params: { cf: '300X250', cp: '561446', ct: '602639' } }, /* 300x250 */
+            	 { bidder: 'sovrn',      params: { tagId: '575683' } }, /* 300x250 */
+            	 { bidder: 'somoaudience', params: { placement_hash: '1152340cac3268b0e737b49c1382cd2b' } }, /*300x250*/
+            	 { bidder: '33across',   params: { siteId : 'cLN3UCBHar5OfDrkHcnlKl', productId: 'siab' } } /*All sizes*/
             	] //./bids
             	},
             	//new ad unit block
@@ -128,7 +138,12 @@ var timeoutMap = {
             	 { bidder: 'appnexus',   params: { placementId: '11971351' } }, /* one placementId for all sizes */
             	 { bidder: 'districtm',  params: { placementId: 11937611 } }, /* 300x600 - 300x250 - 160x600 */ 
             	 { bidder: 'aol',        params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x250 */
-            	 { bidder: 'brealtime',  params: { placementId: '12002335' } }  /* 300x250 */   
+            	 { bidder: 'brealtime',  params: { placementId: '12002335' } },  /* 300x250 */ 
+            	 { bidder: 'conversant', params: { site_id: '118233' } },  /* 300x250 */ 
+            	 { bidder: 'pulsepoint', params: { cf: '300X250', cp: '561446', ct: '602639' } }, /* 300x250 */
+            	 { bidder: 'sovrn',      params: { tagId: '575683' } }, /* 300x250 */
+            	 { bidder: 'somoaudience', params: { placement_hash: '1152340cac3268b0e737b49c1382cd2b' } }, /*300x250*/
+            	 { bidder: '33across',   params: { siteId : 'cLN3UCBHar5OfDrkHcnlKl', productId: 'siab' } } /*All sizes*/
             	] //./bids
             	},
             	//new ad unit block
@@ -144,7 +159,12 @@ var timeoutMap = {
             	 { bidder: 'appnexus',   params: { placementId: '11971351' } }, /* one placementId for all sizes */
             	 { bidder: 'districtm',  params: { placementId: 11937611 } }, /* 300x600 - 300x250 - 160x600 */ 
             	 { bidder: 'aol',        params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x250 */ 
-            	 { bidder: 'brealtime',  params: { placementId: '12002335' } }  /* 300x250 */   
+            	 { bidder: 'brealtime',  params: { placementId: '12002335' } },  /* 300x250 */  
+            	 { bidder: 'conversant', params: { site_id: '118233' } },  /* 300x250 */ 
+            	 { bidder: 'pulsepoint', params: { cf: '300X250', cp: '561446', ct: '602639' } }, /* 300x250 */
+            	 { bidder: 'sovrn',      params: { tagId: '575683' } }, /* 300x250 */
+            	 { bidder: 'somoaudience', params: { placement_hash: '1152340cac3268b0e737b49c1382cd2b' } }, /*300x250*/
+            	 { bidder: '33across',   params: { siteId : 'cLN3UCBHar5OfDrkHcnlKl', productId: 'siab' } } /*All sizes*/
             	] //./bids
             	}
            ];
