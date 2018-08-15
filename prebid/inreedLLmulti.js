@@ -317,9 +317,9 @@ googletag.display('inreedvid3Slot');
 });
 // have to add 1 on to the child (number) because the div counts as 1 in the string
 $(document).ready(function(){
-	  $('<div class="ad-reporter-ahytrfg35423">Advertisement<div id="inreedvidSlot"></div><div>').insertAfter('.mvp-main-box p:eq(0) ');
-	  $('<div class="ad-reporter-ahytrfg35423">Advertisement<div id="inreedvid1Slot"></div><div>').insertAfter('.mvp-main-box p:eq(20) ');
-	  $('<div class="ad-reporter-ahytrfg35423">Advertisement<div id="inreedvid2Slot"></div><div>').insertAfter('.mvp-main-box p:eq(40) ');
+	  $('<div class="ad-reporter-ahytrfg35423">Advertisement<div id="inreedvidSlot"></div><div>').insertAfter('.mvp-main-box p:nth-child(3) ');
+	  $('<div class="ad-reporter-ahytrfg35423">Advertisement<div id="inreedvid1Slot"></div><div>').insertAfter('.mvp-main-box p:nth-child(20) ');
+	  $('<div class="ad-reporter-ahytrfg35423">Advertisement<div id="inreedvid2Slot"></div><div>').insertAfter('.mvp-main-box p:nth-child(40) ');
 	  $('<div class="ad-reporter-ahytrfg35423">Advertisement<div id="inreedvid3Slot"></div><div>').insertAfter('.mvp-main-box p:nth-child(60) ');
 });
 // ASSERTIVE ANALYTICS - Version: 1.5.1
