@@ -29,7 +29,11 @@ googletag.cmd.push(function() {
 
 
     
-googletag.pubads().enableLazyLoad();
+    	  googletag.pubads().enableLazyLoad({
+    		  fetchMarginPercent: 0,  // Fetch slots within 5 viewports.
+    		  renderMarginPercent: 0,  // Render slots within 2 viewports.
+    		  mobileScaling: 2.0  // Double the above values on mobile.
+    		});
 // googletag.pubads().enableSingleRequest();
 googletag.pubads().collapseEmptyDivs(true, true);
 googletag.pubads().setCentering(true);
