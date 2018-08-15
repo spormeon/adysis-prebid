@@ -30,21 +30,18 @@ googletag.pubads().enableAsyncRendering();
 
     
 googletag.pubads().enableLazyLoad();
-googletag.pubads().enableSingleRequest();
+// googletag.pubads().enableSingleRequest();
 googletag.pubads().collapseEmptyDivs(true, true);
 googletag.pubads().setCentering(true);
 // googletag.pubads().disableInitialLoad();
-googletag.enableServices();
+// googletag.enableServices();
 // As defined by lazy load settings, initially Slot 1 will be fetched and
 // rendered on mobile and desktop. Slot 2 will be fetched, on mobile and
 // desktop, but will not be rendered on desktop. Slot 3 will not be fetched
 // or rendered on mobile and desktop.
 
 
-googletag.display('inreedvid1Slot');
-googletag.display('inreedvid2Slot');
-googletag.display('inreedvid3Slot');
-});
+
 </script>
 </head>
 <body>
@@ -52,7 +49,7 @@ googletag.display('inreedvid3Slot');
   
    <div id="inreedvidSlot"> 
    <script>
-          googletag.display('inreedvid1Slot');
+          googletag.display('inreedvidSlot');
       </script>
     </div>
   <br/>
@@ -60,16 +57,25 @@ googletag.display('inreedvid3Slot');
     <div id="veryLongDiv" style="width: 200px; height: 1000px">intentionally left blank</div>
     
     <div id="inreedvid1Slot">
+     <script>
+          googletag.display('inreedvid1Slot');
+      </script>
     </div>
   <br/>
     <div id="veryLongDiv" style="width: 200px; height: 1000px">intentionally left blank</div>
     
     <div id="inreedvid2Slot">
+     <script>
+          googletag.display('inreedvid2Slot');
+      </script>
     </div>
   <br/>
     <div id="veryLongDiv" style="width: 200px; height: 1000px">intentionally left blank</div>
     
     <div id="inreedvid3Slot">
+     <script>
+          googletag.display('inreedvid3Slot');
+      </script>
     </div>
   <br/>
       </body>
