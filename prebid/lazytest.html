@@ -22,6 +22,136 @@
     node.parentNode.insertBefore(gads, node);
    })();
 </script>
+
+<script>
+
+//load up prebid.js,  I think we need to load this earlier
+(function() {
+    var pbjsEl = document.createElement("script");
+    pbjsEl.type = "text/javascript";
+    pbjsEl.async = true;
+    pbjsEl.src = "//d3s34vlfe7g7ew.cloudfront.net/prebid_teads.js";
+    var pbjsTargetEl = document.getElementsByTagName("head")[0];
+    pbjsTargetEl.insertBefore(pbjsEl, pbjsTargetEl.firstChild);
+})();
+            var div_1_sizes = [
+                [300, 250],
+                [300, 600]
+            ];
+            
+            var PREBID_TIMEOUT = 1000;
+            var FAILSAFE_TIMEOUT = 3000;
+
+            var adUnits = [
+            	//new ad unit block
+            	{
+            	 code: 'inreedvidSlot',
+            	 mediaTypes: {
+            		 banner: {
+            			 sizes: [[728, 90], [300, 250], [320, 50]]
+            		 } 
+            	},
+            	bids: [
+            	 { bidder: 'teads',     labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '75853', pageId: '87372' } },
+            	 { bidder: 'appnexus',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '11971351' } }, /* one placementId for all sizes */
+            	 { bidder: 'districtm', labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: 11937611 } }, /* 300x600 - 300x250 - 160x600 */ 
+            	 { bidder: 'aol',       labelAny: ['desktop', 'tablet', 'phone'], params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x250 */ 
+            	 { bidder: 'brealtime', labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '12002335' } }  /* 300x250 */   
+            	] //./bids
+            	},
+            	//new ad unit block
+            	{
+            	 code: 'inreedvid1Slot',
+            	 mediaTypes: {
+            		 banner: {
+            			 sizes: [[728, 90], [300, 250], [320, 50]]
+            		 } 
+            	},
+            	bids: [
+            	 { bidder: 'teads',     labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '95333', pageId: '87372' } },
+            	 { bidder: 'appnexus',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '11971351' } }, /* one placementId for all sizes */
+            	 { bidder: 'districtm', labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: 11937611 } }, /* 300x600 - 300x250 - 160x600 */  
+            	 { bidder: 'aol',       labelAny: ['desktop', 'tablet', 'phone'], params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x250 */ 
+            	 { bidder: 'brealtime', labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '12002335' } }  /* 300x250 */   
+            	] //./bids
+            	},
+            	//new ad unit block
+            	{
+            	 code: 'inreedvid2Slot',
+            	 mediaTypes: {
+            	     banner: {
+            			 sizes: [[728, 90], [300, 250], [320, 50]]
+            		 } 
+            	},
+            	bids: [
+            	 { bidder: 'teads',     labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '95334', pageId: '87372' } },
+            	 { bidder: 'appnexus',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '11971351' } }, /* one placementId for all sizes */
+            	 { bidder: 'districtm', labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: 11937611 } }, /* 300x600 - 300x250 - 160x600 */ 
+            	 { bidder: 'aol',       labelAny: ['desktop', 'tablet', 'phone'], params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x250 */
+            	 { bidder: 'brealtime', labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '12002335' } }  /* 300x250 */   
+            	] //./bids
+            	},
+            	//new ad unit block
+            	{
+            	 code: 'inreedvid3Slot',
+            	 mediaTypes: {
+            		 banner: {
+            			 sizes: [[728, 90], [300, 250], [320, 50]]
+            		 } 
+            	},
+            	bids: [
+            	 { bidder: 'teads',     labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '95335', pageId: '87372' } },
+            	 { bidder: 'appnexus',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '11971351' } }, /* one placementId for all sizes */
+            	 { bidder: 'districtm', labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: 11937611 } }, /* 300x600 - 300x250 - 160x600 */ 
+            	 { bidder: 'aol',       labelAny: ['desktop', 'tablet', 'phone'], params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x250 */ 
+            	 { bidder: 'brealtime', labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '12002335' } }  /* 300x250 */   
+            	] //./bids
+            	}
+           ];
+
+            // ======== DO NOT EDIT BELOW THIS LINE =========== //
+            var googletag = googletag || {};
+            googletag.cmd = googletag.cmd || [];
+            googletag.cmd.push(function() {
+                googletag.pubads().disableInitialLoad();
+            });
+
+            var pbjs = pbjs || {};
+            pbjs.que = pbjs.que || [];
+
+            pbjs.que.push(function() {
+                pbjs.addAdUnits(adUnits);
+                pbjs.requestBids({
+                    bidsBackHandler: initAdserver,
+                    timeout: PREBID_TIMEOUT
+                });
+            });
+
+            function initAdserver() {
+                if (pbjs.initAdserverSet) return;
+                pbjs.initAdserverSet = true;
+                googletag.cmd.push(function() {
+                    pbjs.que.push(function() {
+                        pbjs.setTargetingForGPTAsync();
+                        googletag.pubads().refresh();
+                    });
+                });
+            }
+            // in case PBJS doesn't load
+            setTimeout(function() {
+                initAdserver();
+            }, FAILSAFE_TIMEOUT);
+
+
+
+
+
+</script>
+
+
+
+
+
     <script>
 // The calls to construct slots and display contents. div-1 is on screen,
 // div-2 is 3 viewports down, div-3 is 12 viewports down.
