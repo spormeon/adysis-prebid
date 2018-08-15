@@ -1,4 +1,4 @@
-//load up  Quantcast Choice. Consent Manager Tag
+//load up  Quantcast Choice. Consent Manager  Tag
 var elem = document.createElement('script');
     elem.src = 'https://quantcast.mgr.consensu.org/cmp.js';
     elem.async = true;
