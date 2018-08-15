@@ -104,7 +104,7 @@ var timeoutMap = {
             	 { bidder: '33across',   params: { siteId : 'cLN3UCBHar5OfDrkHcnlKl', productId: 'siab' } }, /*All sizes*/
             	 { bidder: 'rhythmone',  params: { placementId: '76184' } }, /* one placementId for all sizes */
             	 { bidder: "ix",         params: { siteId: "281563", size: [300, 250] } },
-            	 { bidder: "audienceNetwork",params: { placementId: "782113131936517_1062614423886385" } },
+            	 { bidder: "audienceNetwork",params: { placementId: "782113131936517_1062614423886385" } }
 
 
             	] //./bids
