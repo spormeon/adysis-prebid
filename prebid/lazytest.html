@@ -243,6 +243,21 @@
            ];
 
             // ======== DO NOT EDIT BELOW THIS LINE =========== //
+            const customConfigObject = {
+		  "buckets" : [{
+		      "precision": 2,  //default is 2 if omitted - means 2.1234 rounded to 2 decimal places = 2.12
+		      "min" : 0,
+		      "max" : 2,
+		      "increment" : 0.01  // from $0 to $5, 1-cent increments
+		    },
+		    {
+		      "precision": 2,
+		      "min" : 2.1,
+		      "max" : 20,
+		      "increment" : 0.10  // from $5 to $20, round down to the previous 10-cent increment
+		    }]
+		};
+            
             var googletag = googletag || {};
             googletag.cmd = googletag.cmd || [];
             googletag.cmd.push(function() {
@@ -254,6 +269,68 @@
 
             pbjs.que.push(function() {
                 pbjs.addAdUnits(adUnits);
+                
+                pbjs.aliasBidder('appnexus','brealtime');  // alias for bidder	
+                pbjs.aliasBidder('appnexus','springserveAlias2'); // alias for bidder	
+                pbjs.aliasBidder('appnexus','districtm'); // alias for bidder	
+
+                pbjs.bidderSettings = { 
+                	        aol:               { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.85; } }, // adjust the bid in real time before the auction takes place
+                	        districtm:         { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.90; } }, // adjust the bid in real time before the auction takes place
+                	        sekindonUM:        { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.75; } }, // adjust the bid in real time before the auction takes place
+                	        brealtime:         { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.80; } }, // adjust the bid in real time before the auction takes place
+                	        springserveAlias2: { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.65; } }, // adjust the bid in real time before the auction takes place
+                	       };	
+                	
+                pbjs.setConfig({
+                	  priceGranularity: customConfigObject,
+                	  consentManagement: {
+                    cmpApi: 'iab',
+                    timeout: 5000,
+                    allowAuctionWithoutConsent: true
+                  },
+                 cache: {url: "//prebid.adnxs.com/pbc/v1/cache"},
+                 s2sConfig: {
+                     accountId: 'e31f627f-53a3-4288-9979-482d3c6ffc76',
+                     enabled: true,
+                     bidders: ['appnexus', 'somoaudience', 'sovrn', 'districtm', 'conversant', 'pulsepoint', 'brealtime'],
+                     timeout: 1300,
+                     adapter: 'prebidServer',
+                     endpoint: 'https://prebid.adnxs.com/pbs/v1/openrtb2/auction',
+                     syncEndpoint: 'https://prebid.adnxs.com/pbs/v1/cookie_sync',
+                     cookieSet: true,
+                     cookiesetUrl: 'https://acdn.adnxs.com/cookieset/cs.js'
+                  },
+                  userSync: {
+                      iframeEnabled: true,
+                      syncsPerBidder: 50, // and no more than 3 syncs at a time
+                      syncDelay: 6000, // 5 seconds after the auction
+                  },
+                debug: true,
+                enableSendAllBids: false, // Default will be `true` as of 1.0
+                bidderSequence: 'random', // Default is random
+                	  publisherDomain: 'golfwrx.com',
+                	  bidderTimeout: 3500,
+                	  pubcid: {expInterval: 525600},
+                	   currency: {
+                	       'adServerCurrency': "GBP",
+                	       'granularityMultiplier': 1,
+                	       'conversionRateFile': 'https://currency.prebid.org/latest.json',
+                	    },
+                	 sizeConfig: [{
+                mediaQuery: '(min-width: 769px)',
+                sizesSupported: [[970, 250], [970, 90], [728, 90], [468, 60], [320, 50], [300, 600], [300, 250], [160, 600], [120, 600], [1, 1]],
+                labels: ['desktop']
+                }, {
+                mediaQuery: '(min-width: 500px) and (max-width: 768px)',
+                sizesSupported: [[728, 90], [468, 60], [320, 50], [300, 250], [1, 1]],
+                labels: ['tablet']
+                }, {
+                mediaQuery: '(min-width: 1px) and (max-width: 499px)',
+                sizesSupported: [[300, 250], [320, 50], [1, 1]],
+                labels: ['phone']
+                }]
+                
                 pbjs.requestBids({
                     bidsBackHandler: initAdserver,
                     timeout: PREBID_TIMEOUT
