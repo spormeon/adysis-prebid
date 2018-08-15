@@ -91,17 +91,7 @@ var elem = document.createElement('script');
 		'Post Consent Page': 'http://www.golfwrx.com',
 		'Non-Consent Display Frequency': 5,
     });
-  //load up jquery 1.8.3.js
-    (function () {
-      var gads = document.createElement('script');
-      gads.async = true;
-      gads.type = 'text/javascript';
-      var useSSL = 'https:' == document.location.protocol;
-      gads.src = (useSSL ? 'https:' : 'http:') +
-              '//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js';
-      var node = document.getElementsByTagName('script')[0];
-      node.parentNode.insertBefore(gads, node);
-    })();   
+   
 //load up prebid.js,  I think we need to load this earlier
 (function() {
     var pbjsEl = document.createElement("script");
