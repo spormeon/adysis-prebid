@@ -145,7 +145,7 @@
            
             
             var PREBID_TIMEOUT = 1500;
-            var FAILSAFE_TIMEOUT = 3000;
+            
             
             
           //ASSERTIVE ANALYTICS SETTINGS - Version: 1.4.0
@@ -348,10 +348,7 @@
                     });
                 });
             }
-            // in case PBJS doesn't load
-            setTimeout(function() {
-                initAdserver();
-            }, FAILSAFE_TIMEOUT);
+            
 
 // The calls to construct slots and display contents. div-1 is on screen,
 // div-2 is 3 viewports down, div-3 is 12 viewports down.
