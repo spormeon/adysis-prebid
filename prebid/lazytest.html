@@ -9,19 +9,7 @@
 			  crossorigin="anonymous"></script>
 		
 		
-    <script type="text/javascript">
-  var googletag = googletag || {};
-  googletag.cmd = googletag.cmd || [];
-  (function() {
-    var gads = document.createElement("script");
-    gads.async = true;
-    gads.type = "text/javascript";
-    var useSSL = "https:" == document.location.protocol;
-    gads.src = (useSSL ? "https:" : "http:") + "//www.googletagservices.com/tag/js/gpt.js";
-    var node =document.getElementsByTagName("script")[0];
-    node.parentNode.insertBefore(gads, node);
-   })();
-</script>
+    <script async src="//www.googletagservices.com/tag/js/gpt.js"></script>
 
 <script>
 
@@ -34,10 +22,7 @@
     var pbjsTargetEl = document.getElementsByTagName("head")[0];
     pbjsTargetEl.insertBefore(pbjsEl, pbjsTargetEl.firstChild);
 })();
-            var div_1_sizes = [
-                [300, 250],
-                [300, 600]
-            ];
+           
             
             var PREBID_TIMEOUT = 1000;
             var FAILSAFE_TIMEOUT = 3000;
@@ -52,11 +37,11 @@
             		 } 
             	},
             	bids: [
-            	 { bidder: 'teads',     labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '75853', pageId: '87372' } },
-            	 { bidder: 'appnexus',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '11971351' } }, /* one placementId for all sizes */
-            	 { bidder: 'districtm', labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: 11937611 } }, /* 300x600 - 300x250 - 160x600 */ 
-            	 { bidder: 'aol',       labelAny: ['desktop', 'tablet', 'phone'], params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x250 */ 
-            	 { bidder: 'brealtime', labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '12002335' } }  /* 300x250 */   
+            	 { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
+            	 { bidder: 'appnexus',   params: { placementId: '11971351' } }, /* one placementId for all sizes */
+            	 { bidder: 'districtm',  params: { placementId: 11937611 } }, /* 300x600 - 300x250 - 160x600 */ 
+            	 { bidder: 'aol',        params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x250 */ 
+            	 { bidder: 'brealtime',  params: { placementId: '12002335' } }  /* 300x250 */   
             	] //./bids
             	},
             	//new ad unit block
@@ -68,11 +53,11 @@
             		 } 
             	},
             	bids: [
-            	 { bidder: 'teads',     labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '95333', pageId: '87372' } },
-            	 { bidder: 'appnexus',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '11971351' } }, /* one placementId for all sizes */
-            	 { bidder: 'districtm', labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: 11937611 } }, /* 300x600 - 300x250 - 160x600 */  
-            	 { bidder: 'aol',       labelAny: ['desktop', 'tablet', 'phone'], params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x250 */ 
-            	 { bidder: 'brealtime', labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '12002335' } }  /* 300x250 */   
+            	 { bidder: 'teads',      params: { placementId: '95333', pageId: '87372' } },
+            	 { bidder: 'appnexus',   params: { placementId: '11971351' } }, /* one placementId for all sizes */
+            	 { bidder: 'districtm',  params: { placementId: 11937611 } }, /* 300x600 - 300x250 - 160x600 */  
+            	 { bidder: 'aol',        params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x250 */ 
+            	 { bidder: 'brealtime',  params: { placementId: '12002335' } }  /* 300x250 */   
             	] //./bids
             	},
             	//new ad unit block
@@ -84,11 +69,11 @@
             		 } 
             	},
             	bids: [
-            	 { bidder: 'teads',     labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '95334', pageId: '87372' } },
-            	 { bidder: 'appnexus',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '11971351' } }, /* one placementId for all sizes */
-            	 { bidder: 'districtm', labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: 11937611 } }, /* 300x600 - 300x250 - 160x600 */ 
-            	 { bidder: 'aol',       labelAny: ['desktop', 'tablet', 'phone'], params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x250 */
-            	 { bidder: 'brealtime', labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '12002335' } }  /* 300x250 */   
+            	 { bidder: 'teads',      params: { placementId: '95334', pageId: '87372' } },
+            	 { bidder: 'appnexus',   params: { placementId: '11971351' } }, /* one placementId for all sizes */
+            	 { bidder: 'districtm',  params: { placementId: 11937611 } }, /* 300x600 - 300x250 - 160x600 */ 
+            	 { bidder: 'aol',        params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x250 */
+            	 { bidder: 'brealtime',  params: { placementId: '12002335' } }  /* 300x250 */   
             	] //./bids
             	},
             	//new ad unit block
@@ -100,11 +85,11 @@
             		 } 
             	},
             	bids: [
-            	 { bidder: 'teads',     labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '95335', pageId: '87372' } },
-            	 { bidder: 'appnexus',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '11971351' } }, /* one placementId for all sizes */
-            	 { bidder: 'districtm', labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: 11937611 } }, /* 300x600 - 300x250 - 160x600 */ 
-            	 { bidder: 'aol',       labelAny: ['desktop', 'tablet', 'phone'], params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x250 */ 
-            	 { bidder: 'brealtime', labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '12002335' } }  /* 300x250 */   
+            	 { bidder: 'teads',      params: { placementId: '95335', pageId: '87372' } },
+            	 { bidder: 'appnexus',   params: { placementId: '11971351' } }, /* one placementId for all sizes */
+            	 { bidder: 'districtm',  params: { placementId: 11937611 } }, /* 300x600 - 300x250 - 160x600 */ 
+            	 { bidder: 'aol',        params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x250 */ 
+            	 { bidder: 'brealtime',  params: { placementId: '12002335' } }  /* 300x250 */   
             	] //./bids
             	}
            ];
