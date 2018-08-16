@@ -38,9 +38,9 @@ var timeoutMap = {
 		  10 : 1100,
 		  11 : 1000,
 		  12 : 1000,
-		  13 : 1200,
-		  14 : 1500,
-		  15 : 1700,
+		  13 : 1100,
+		  14 : 1100,
+		  15 : 1100,
 		  16 : 1500,
 		  17 : 1000,
 		  18 : 1000,
@@ -296,8 +296,8 @@ googletag.cmd.push(function() {
     	  inreedvid2Slot = googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test2', [[300, 250],[728,90]], 'inreedvid2Slot').addService(googletag.pubads());
     	  inreedvid3Slot = googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test3', [[300, 250],[728,90]], 'inreedvid3Slot').addService(googletag.pubads()); 
 googletag.pubads().enableLazyLoad({
-    	fetchMarginPercent: 30,  // Fetch slots within 5 viewports.
-    	renderMarginPercent: 5000,  // Render slots within 2 viewports.
+    	fetchMarginPercent: 20,  // Fetch slots within 5 viewports.
+    	renderMarginPercent: 10,  // Render slots within 2 viewports.
     	mobileScaling: 1.5  // Double the above values on mobile.
 });
 googletag.pubads().enableSingleRequest();
