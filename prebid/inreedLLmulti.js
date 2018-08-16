@@ -90,6 +90,15 @@ var timeoutMap = {
             		 banner: { sizes: [[728, 90], [300, 250], [320, 50]] },
             	     video:  { context: 'outstream', playerSize: [640, 480] }, 
             	 },
+            	 renderer: {
+            	        url: 'http://cdn.adnxs.com/renderer/video/ANOutstreamVideo.js',
+            	        render: function (bid) {
+            	            ANOutstreamVideo.renderAd({
+            	                targetId: bid.adUnitCode,
+            	                adResponse: bid.adResponse,
+            	            });
+            	        }
+            	    },
             	bids: [
             	 { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
             	 { bidder: 'appnexus',   params: { placementId: '11971351' } }, /* one placementId for all sizes */
