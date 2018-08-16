@@ -87,8 +87,8 @@ var timeoutMap = {
             	{
             	 code: 'inreedvidSlot',
             	 mediaTypes: {
-            		 banner: { sizes: [[728, 90], [300, 250], [320, 50]] },
-            	     video:  { context: 'outstream', mimes: ['video/mp4'], playerSize: [300, 250] }, 
+            		 banner: { sizes: [[728, 90], [640, 480], [300, 250], [320, 50]] },
+            	     video:  { context: 'outstream', mimes: ['video/mp4'], playerSize: [640, 480] }, 
             	 },
             	 renderer: {
             	        url: 'http://cdn.adnxs.com/renderer/video/ANOutstreamVideo.js',
@@ -300,10 +300,10 @@ var timeoutMap = {
 // The calls to construct slots and display contents. div-1 is on screen,
 // div-2 is 3 viewports down, div-3 is 12 viewports down.
 googletag.cmd.push(function() {
-    	  inreedvidSlot = googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.com-HB-Vid-test',  [[300, 250],[728,90]], 'inreedvidSlot').addService(googletag.pubads());
-    	  inreedvid1Slot = googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test1', [[300, 250],[728,90]], 'inreedvid1Slot').addService(googletag.pubads());
-    	  inreedvid2Slot = googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test2', [[300, 250],[728,90]], 'inreedvid2Slot').addService(googletag.pubads());
-    	  inreedvid3Slot = googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test3', [[300, 250],[728,90]], 'inreedvid3Slot').addService(googletag.pubads()); 
+    	  inreedvidSlot = googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.com-HB-Vid-test',  [[300, 250],[728,90],[640,480]], 'inreedvidSlot').addService(googletag.pubads());
+    	  inreedvid1Slot = googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test1', [[300, 250],[728,90],[640,480]], 'inreedvid1Slot').addService(googletag.pubads());
+    	  inreedvid2Slot = googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test2', [[300, 250],[728,90],[640,480]], 'inreedvid2Slot').addService(googletag.pubads());
+    	  inreedvid3Slot = googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test3', [[300, 250],[728,90],[640,480]], 'inreedvid3Slot').addService(googletag.pubads()); 
 googletag.pubads().enableLazyLoad({
     	fetchMarginPercent: 20,  // Fetch slots within 30 viewports.
     	renderMarginPercent: 10,  // Render slots within 5000 viewports.
