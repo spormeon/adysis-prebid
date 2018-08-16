@@ -105,7 +105,7 @@ var timeoutMap = {
             	 { bidder: 'districtm',  params: { placementId: 11937611 } }, /* 300x600 - 300x250 - 160x600 */ 
             	 { bidder: 'aol',        params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x250 */ 
             	 // { bidder: 'brealtime',  params: { placementId: '12002335' } },  /* 300x250 */   
-            	 // { bidder: 'conversant', params: { site_id: '118233', mimes: ['video/mp4'] } },  /* 300x250 */ 
+            	 // { bidder: 'conversant', params: { site_id: '118233', mimes: ['video/x-ms-wmv', 'video/mp4'] } },  /* 300x250 */ 
             	 { bidder: 'pulsepoint', params: { cf: '300X250', cp: '561446', ct: '602639' } }, /* 300x250 */
             	 { bidder: 'sovrn',      params: { tagId: '575683' } }, /* 300x250 */
             	 { bidder: 'somoaudience', params: { placement_hash: '1152340cac3268b0e737b49c1382cd2b' } }, /*300x250*/
@@ -113,10 +113,10 @@ var timeoutMap = {
             	 { bidder: 'rhythmone',  params: { placementId: '76184' } }, /* one placementId for all sizes */
             	 // { bidder: "ix",         params: { siteId: "281563", size: [300, 250] } },
             	 // { bidder: "yieldmo",    params: { placementId: "1990667709809591856" } } /* no adapter in file */
-            	 { bidder: 'gumgum',     params: { inSlot: '14600' } }, /*gumgum-300x250*/
+            	 { bidder: 'gumgum',     params: { inSlot: '14600' } } /*gumgum-300x250*/
             	 // { bidder: 'undertone',  params: { publisherId: '3660' } }
-            	 { bidder: 'appnexus',   params: { placementId: '13232361', video: { skippable: true, playback_methods: ['auto_play_sound_off'] } } },
-            	 { bidder: 'districtm',  params: { placementId: 11937611, video: { skippable: true, playback_methods: ['auto_play_sound_off'] } } }
+            	 // { bidder: 'appnexus',   params: { placementId: '13232361', video: { skippable: true, playback_methods: ['auto_play_sound_off'] } } },
+            	 // { bidder: 'districtm',  params: { placementId: 11937611, video: { skippable: true, playback_methods: ['auto_play_sound_off'] } } }
             	] //./bids
             	},
             	//new ad unit block
