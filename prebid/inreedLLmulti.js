@@ -87,10 +87,9 @@ var timeoutMap = {
             	{
             	 code: 'inreedvidSlot',
             	 mediaTypes: {
-            		 banner: {
-            			 sizes: [[728, 90], [300, 250], [320, 50]]
-            		 } 
-            	},
+            		 banner: { sizes: [[728, 90], [300, 250], [320, 50]] },
+            	     video:  { context: 'outstream', playerSize: [640, 480] }, 
+            	 },
             	bids: [
             	 { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
             	 { bidder: 'appnexus',   params: { placementId: '11971351' } }, /* one placementId for all sizes */
@@ -218,7 +217,7 @@ var timeoutMap = {
                 	        sekindonUM:        { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.75; } }, // adjust the bid in real time before the auction takes place
                 	        brealtime:         { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.80; } }, // adjust the bid in real time before the auction takes place
                 	        springserveAlias2: { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.65; } }, // adjust the bid in real time before the auction takes place
-                	        teads:             { bidCpmAdjustment : function(bidCpm){ return bidCpm * 1.00; } }, // adjust the bid in real time before the auction takes place
+                	        teads:             { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.10; } }, // adjust the bid in real time before the auction takes place
                 	       };	
                 	
                 pbjs.setConfig({
@@ -296,8 +295,8 @@ googletag.cmd.push(function() {
     	  inreedvid2Slot = googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test2', [[300, 250],[728,90]], 'inreedvid2Slot').addService(googletag.pubads());
     	  inreedvid3Slot = googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test3', [[300, 250],[728,90]], 'inreedvid3Slot').addService(googletag.pubads()); 
 googletag.pubads().enableLazyLoad({
-    	fetchMarginPercent: 20,  // Fetch slots within 5 viewports.
-    	renderMarginPercent: 10,  // Render slots within 2 viewports.
+    	fetchMarginPercent: 20,  // Fetch slots within 30 viewports.
+    	renderMarginPercent: 10,  // Render slots within 5000 viewports.
     	mobileScaling: 1.5  // Double the above values on mobile.
 });
 googletag.pubads().enableSingleRequest();
