@@ -87,7 +87,7 @@ var timeoutMap = {
             	{
             	 code: 'inreedvidSlot',
             	 mediaTypes: {
-            		 banner: { sizes: [[728, 90], [300, 250], [320, 50], [1, 1]] },
+            		 banner: { sizes: [[728, 90], [300, 250], [320, 50]] },
             	     video:  { context: 'outstream', mimes: ['video/mp4'], playerSize: [300, 250] } 
             	 },
             	 renderer: {
