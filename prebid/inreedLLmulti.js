@@ -88,7 +88,7 @@ var timeoutMap = {
             	 code: 'inreedvidSlot',
             	 mediaTypes: {
             		 banner: { sizes: [[728, 90], [300, 250], [320, 50], [1, 1]] },
-            	     video:  { context: 'outstream', playerSize: [640, 480] }, 
+            	     video:  { context: 'outstream', playerSize: [640, 480] } 
             	 },
             	 renderer: {
             	        url: 'http://cdn.adnxs.com/renderer/video/ANOutstreamVideo.js',
