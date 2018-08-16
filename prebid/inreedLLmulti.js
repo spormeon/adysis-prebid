@@ -296,8 +296,8 @@ googletag.cmd.push(function() {
     	  inreedvid2Slot = googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test2', [[300, 250],[728,90]], 'inreedvid2Slot').addService(googletag.pubads());
     	  inreedvid3Slot = googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test3', [[300, 250],[728,90]], 'inreedvid3Slot').addService(googletag.pubads()); 
 googletag.pubads().enableLazyLoad({
-    	fetchMarginPercent: 20,  // Fetch slots within 5 viewports.
-    	renderMarginPercent: 15,  // Render slots within 2 viewports.
+    	fetchMarginPercent: 30,  // Fetch slots within 5 viewports.
+    	renderMarginPercent: 25,  // Render slots within 2 viewports.
     	mobileScaling: 1.5  // Double the above values on mobile.
 });
 googletag.pubads().enableSingleRequest();
