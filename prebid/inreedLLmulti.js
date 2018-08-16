@@ -291,7 +291,7 @@ var timeoutMap = {
 // The calls to construct slots and display contents. div-1 is on screen,
 // div-2 is 3 viewports down, div-3 is 12 viewports down.
 googletag.cmd.push(function() {
-googletag.pubads().enableAsyncRendering();
+// googletag.pubads().enableAsyncRendering();
     	  inreedvidSlot = googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.com-HB-Vid-test', [[300, 250],[728,90]], 'inreedvidSlot').addService(googletag.pubads());
     	  inreedvid1Slot = googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test1', [[300, 250],[728,90]], 'inreedvid1Slot').addService(googletag.pubads());
     	  inreedvid2Slot = googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test2', [[300, 250],[728,90]], 'inreedvid2Slot').addService(googletag.pubads());
@@ -299,7 +299,7 @@ googletag.pubads().enableAsyncRendering();
 googletag.pubads().enableLazyLoad({
     	fetchMarginPercent: 10,  // Fetch slots within 5 viewports.
     	renderMarginPercent: 5,  // Render slots within 2 viewports.
-    	mobileScaling: 2.0  // Double the above values on mobile.
+    	mobileScaling: 1.5  // Double the above values on mobile.
 });
 googletag.pubads().enableSingleRequest();
 googletag.pubads().collapseEmptyDivs(true, true);
