@@ -228,7 +228,7 @@ var timeoutMap = {
                     timeout: 5000,
                     allowAuctionWithoutConsent: true
                   },
-                 cache: {url: "//prebid.adnxs.com/pbc/v1/cache"},
+                 // cache: {url: "//prebid.adnxs.com/pbc/v1/cache"},
                  s2sConfig: {
                      accountId: 'e31f627f-53a3-4288-9979-482d3c6ffc76',
                      enabled: true,
@@ -291,7 +291,6 @@ var timeoutMap = {
 // The calls to construct slots and display contents. div-1 is on screen,
 // div-2 is 3 viewports down, div-3 is 12 viewports down.
 googletag.cmd.push(function() {
-// googletag.pubads().enableAsyncRendering();
     	  inreedvidSlot = googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.com-HB-Vid-test', [[300, 250],[728,90]], 'inreedvidSlot').addService(googletag.pubads());
     	  inreedvid1Slot = googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test1', [[300, 250],[728,90]], 'inreedvid1Slot').addService(googletag.pubads());
     	  inreedvid2Slot = googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test2', [[300, 250],[728,90]], 'inreedvid2Slot').addService(googletag.pubads());
@@ -305,6 +304,7 @@ googletag.pubads().enableSingleRequest();
 googletag.pubads().collapseEmptyDivs(true, true);
 googletag.pubads().setCentering(true);
 googletag.pubads().enableVideoAds();
+// googletag.pubads().enableAsyncRendering();
 // googletag.pubads().disableInitialLoad();
 googletag.enableServices();
 // As defined by lazy load settings, initially Slot 1 will be fetched and
