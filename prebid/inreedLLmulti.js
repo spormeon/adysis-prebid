@@ -304,6 +304,7 @@ googletag.pubads().enableLazyLoad({
 googletag.pubads().enableSingleRequest();
 googletag.pubads().collapseEmptyDivs(true, true);
 googletag.pubads().setCentering(true);
+googletag.pubads().enableVideoAds();
 // googletag.pubads().disableInitialLoad();
 googletag.enableServices();
 // As defined by lazy load settings, initially Slot 1 will be fetched and
