@@ -104,10 +104,10 @@ var timeoutMap = {
             	 { bidder: 'rhythmone',  params: { placementId: '76184' } }, /* one placementId for all sizes */
             	 // { bidder: "ix",         params: { siteId: "281563", size: [300, 250] } },
             	 // { bidder: "yieldmo",    params: { placementId: "1990667709809591856" } } /* no adapter in file */
-            	 { bidder: 'gumgum',     params: { inSlot: '14600' } }, /*gumgum-300x250*/
+            	 { bidder: 'gumgum',     params: { inSlot: '14600' } } /*gumgum-300x250*/
             	 // { bidder: 'undertone',  params: { publisherId: '3660' } }
-            	 { bidder: 'appnexus',   params: { placementId: '13232361', video: { skippable: true, playback_methods: ['auto_play_sound_off'] } } },
-            	 { bidder: 'districtm',  params: { placementId: 11937611, video: { skippable: true, playback_methods: ['auto_play_sound_off'] } } }
+            	 // { bidder: 'appnexus',   params: { placementId: '13232361', video: { skippable: true, playback_methods: ['auto_play_sound_off'] } } },
+            	 // { bidder: 'districtm',  params: { placementId: 11937611, video: { skippable: true, playback_methods: ['auto_play_sound_off'] } } }
             	] //./bids
             	},
             	//new ad unit block
