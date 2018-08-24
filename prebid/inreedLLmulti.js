@@ -92,7 +92,7 @@ var timeoutMap = {
             	 },
             	bids: [
             	 { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
-            	 // { bidder: 'appnexus',   params: { placementId: '11971351' } }, /* one placementId for all sizes */
+            	 { bidder: 'appnexus',   params: { placementId: '11971351' } }, /* one placementId for all sizes */
             	 { bidder: 'districtm',  params: { placementId: 11937611 } }, /* 300x600 - 300x250 - 160x600 */ 
             	 { bidder: 'aol',        params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x250 */ 
             	 // { bidder: 'brealtime',  params: { placementId: '12002335' } },  /* 300x250 */   
@@ -107,7 +107,8 @@ var timeoutMap = {
             	 { bidder: 'gumgum',     params: { inSlot: '14600' } }, /*gumgum-300x250*/
             	 // { bidder: 'undertone',  params: { publisherId: '3660' } }
             	 { bidder: 'appnexus',   params: { placementId: '13232392', video: { skippable: true, playback_method: ['auto_play_sound_off'] } } },
-            	 { bidder: 'districtm',  params: { placementId:  11937611,  video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }
+            	 { bidder: 'districtm',  params: { placementId:  11937611,  video: { skippable: true, playback_method: ['auto_play_sound_off'] } } },
+            	 { bidder: 'unruly',     params: { targetingUUID: '6f15e139-5f18-49a1-b52f-87e5e69ee65e', siteId: 1081534 } }
             	] //./bids
             	},
             	//new ad unit block
@@ -232,7 +233,7 @@ var timeoutMap = {
                  s2sConfig: {
                      accountId: 'e31f627f-53a3-4288-9979-482d3c6ffc76',
                      enabled: true,
-                     bidders: ['appnexus', 'somoaudience', 'districtm', 'conversant', 'pulsepoint'],
+                     bidders: ['somoaudience', 'districtm', 'conversant', 'pulsepoint'],
                      timeout: 1000,
                      adapter: 'prebidServer',
                      endpoint: 'https://prebid.adnxs.com/pbs/v1/openrtb2/auction',
