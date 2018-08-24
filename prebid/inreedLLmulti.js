@@ -88,7 +88,7 @@ var timeoutMap = {
             	 code: 'inreedvidSlot',
             	 mediaTypes: {
             		 banner: { sizes: [[728, 90], [300, 250], [320, 50]] },
-            	     video:  { context: 'outstream', playerSize: [640,480] }, 
+            	     video:  { context: 'outstream', playerSize: [550,310] }, 
             	 },
             	bids: [
             	 { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
@@ -258,7 +258,7 @@ var timeoutMap = {
                 	    },
                 	 sizeConfig: [{
                 mediaQuery: '(min-width: 769px)',
-                sizesSupported: [[970, 250], [970, 90], [728, 90], [640, 480], [468, 60], [320, 50], [300, 600], [300, 250], [160, 600], [120, 600], [1, 1]],
+                sizesSupported: [[970, 250], [970, 90], [728, 90], [640, 480], [550, 310], [468, 60], [320, 50], [300, 600], [300, 250], [160, 600], [120, 600], [1, 1]],
                 labels: ['desktop']
                 }, {
                 mediaQuery: '(min-width: 500px) and (max-width: 768px)',
