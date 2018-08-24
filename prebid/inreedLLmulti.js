@@ -88,7 +88,7 @@ var timeoutMap = {
             	 code: 'inreedvidSlot',
             	 mediaTypes: {
             		 banner: { sizes: [[728, 90], [300, 250], [320, 50]] },
-            	     video:  { context: 'outstream', mimes: ["video/x-flv", "video/mp4", "application/x-shockwave-flash", "application/javascript"], playerSize: [300,250] }, 
+            	     video:  { context: 'outstream', playerSize: [300,250] }, 
             	 },
             	bids: [
             	 // { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
@@ -106,7 +106,7 @@ var timeoutMap = {
             	 // { bidder: "yieldmo",    params: { placementId: "1990667709809591856" } } /* no adapter in file */
             	 { bidder: 'gumgum',     params: { inSlot: '14600' } }, /*gumgum-300x250*/
             	 // { bidder: 'undertone',  params: { publisherId: '3660' } }
-            	 { bidder: 'appnexus',   params: { placementId: '13232392', video: { skippable: true, playback_methods: ['auto_play_sound_off'] } } },
+            	 { bidder: 'appnexus',   params: { placementId: '13232392' } },
             	 // { bidder: 'districtm',  params: { placementId: 11937611, video: { skippable: true, playback_methods: ['auto_play_sound_off'] } } }
             	] //./bids
             	},
@@ -232,7 +232,7 @@ var timeoutMap = {
                  s2sConfig: {
                      accountId: 'e31f627f-53a3-4288-9979-482d3c6ffc76',
                      enabled: true,
-                     bidders: ['appnexus', 'somoaudience', 'districtm', 'conversant', 'pulsepoint'],
+                     bidders: ['somoaudience', 'districtm', 'conversant', 'pulsepoint'],
                      timeout: 1000,
                      adapter: 'prebidServer',
                      endpoint: 'https://prebid.adnxs.com/pbs/v1/openrtb2/auction',
