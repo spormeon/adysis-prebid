@@ -91,7 +91,7 @@ var timeoutMap = {
             	     video:  { context: 'outstream', mimes: ["video/x-flv", "video/mp4", "application/x-shockwave-flash", "application/javascript"], protocols: [1, 2, 3, 4, 5, 6, 7, 8], playbackmethod: [2], playerSize: [550,310] }, 
             	 },
             	bids: [
-            	 // { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
+            	 { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
             	 // { bidder: 'appnexus',   params: { placementId: '11971351' } }, /* one placementId for all sizes */
             	 { bidder: 'districtm',  params: { placementId: 11937611 } }, /* 300x600 - 300x250 - 160x600 */ 
             	 { bidder: 'aol',        params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x250 */ 
@@ -106,9 +106,9 @@ var timeoutMap = {
             	 // { bidder: "yieldmo",    params: { placementId: "1990667709809591856" } } /* no adapter in file */
             	 { bidder: 'gumgum',     params: { inSlot: '14600' } }, /*gumgum-300x250*/
             	 // { bidder: 'undertone',  params: { publisherId: '3660' } }
-            	 // { bidder: 'appnexus',   params: { placementId: '13232392', video: { skippable: true, playback_method: ['auto_play_sound_off'] } } },
-            	 { bidder: 'districtm',  params: { placementId:  11937611,  video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }
-            	 // { bidder: 'unruly',     params: { targetingUUID: '6f15e139-5f18-49a1-b52f-87e5e69ee65e', siteId: 1081534 } }
+            	 { bidder: 'appnexus',   params: { placementId: '13232392', video: { skippable: true, playback_method: ['auto_play_sound_off'] } } },
+            	 { bidder: 'districtm',  params: { placementId:  11937611,  video: { skippable: true, playback_method: ['auto_play_sound_off'] } } },
+            	 { bidder: 'unruly',     params: { targetingUUID: '6f15e139-5f18-49a1-b52f-87e5e69ee65e', siteId: 1081534 } }
             	] //./bids
             	},
             	//new ad unit block
@@ -220,7 +220,7 @@ var timeoutMap = {
                 	        brealtime:         { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.80; } }, // adjust the bid in real time before the auction takes place
                 	        springserveAlias2: { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.65; } }, // adjust the bid in real time before the auction takes place
                 	        teads:             { bidCpmAdjustment : function(bidCpm){ return bidCpm * 2.67972835; } }, // adjust the bid in real time before the auction takes place
-                	        unruly:             { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.4; } }, // adjust the bid in real time before the auction takes place
+                	        unruly:             { bidCpmAdjustment : function(bidCpm){ return bidCpm * 1.0; } }, // adjust the bid in real time before the auction takes place
                 	       };	
                 	
                 pbjs.setConfig({
