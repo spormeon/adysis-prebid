@@ -106,7 +106,7 @@ var timeoutMap = {
             	 // { bidder: "yieldmo",    params: { placementId: "1990667709809591856" } } /* no adapter in file */
             	 { bidder: 'gumgum',     params: { inSlot: '14600' } }, /*gumgum-300x250*/
             	 // { bidder: 'undertone',  params: { publisherId: '3660' } }
-            	 { bidder: 'appnexus',   params: { placementId: '13232392', video: { skippable: true, playback_method: ['auto_play_sound_off'] } } },
+            	 { bidder: 'appnexus',   params: { placementId: '13232392' } },
             	 { bidder: 'districtm',  params: { placementId:  11937611,  video: { skippable: true, playback_method: ['auto_play_sound_off'] } } },
             	 { bidder: 'unruly',     params: { targetingUUID: '6f15e139-5f18-49a1-b52f-87e5e69ee65e', siteId: 1081534 } }
             	] //./bids
