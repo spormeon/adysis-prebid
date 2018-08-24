@@ -218,7 +218,7 @@ var timeoutMap = {
                 	        sekindonUM:        { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.75; } }, // adjust the bid in real time before the auction takes place
                 	        brealtime:         { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.80; } }, // adjust the bid in real time before the auction takes place
                 	        springserveAlias2: { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.65; } }, // adjust the bid in real time before the auction takes place
-                	        teads:             { bidCpmAdjustment : function(bidCpm){ return bidCpm * 1.68; } }, // adjust the bid in real time before the auction takes place
+                	        teads:             { bidCpmAdjustment : function(bidCpm){ return bidCpm * 1.67972835; } }, // adjust the bid in real time before the auction takes place
                 	       };	
                 	
                 pbjs.setConfig({
