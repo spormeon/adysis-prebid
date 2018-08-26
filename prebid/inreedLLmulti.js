@@ -319,7 +319,8 @@ googletag.display('inreedvid2Slot');
 googletag.display('inreedvid3Slot');
 });
 // have to add 1 on to the child (number) because the div counts as 1 in the string
-$(document).ready(function(){
+$(window).on('load', function() {
+    console.log('All assets are loaded')
 	  $('<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvidSlot" style="width:590px; height: auto; text-align: center; margin: auto;" ></div></div>').insertAfter('#mvp-main-body p:nth-child(3) ');
 	  $('<div class="advertisement">Advertisement</div><div class="ad-reporter-ahytrfg35423"><div id="inreedvid1Slot"></div></div>').insertAfter('#mvp-main-body p:nth-child(20) ');
 	  $('<div class="advertisement">Advertisement</div><div class="ad-reporter-ahytrfg35423"><div id="inreedvid2Slot"></div></div>').insertAfter('#mvp-main-body p:nth-child(40) ');
