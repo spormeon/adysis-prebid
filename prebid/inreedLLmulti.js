@@ -226,7 +226,7 @@ var timeoutMap = {
                 	        brealtime:         { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.80; } }, // adjust the bid in real time before the auction takes place
                 	        springserveAlias2: { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.65; } }, // adjust the bid in real time before the auction takes place
                 	        teads:             { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.67972835; } }, // adjust the bid in real time before the auction takes place
-                	        unruly:             { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.3; } }, // adjust the bid in real time before the auction takes place
+                	        unruly:            { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.3; } }, // adjust the bid in real time before the auction takes place
                 	       };	
                 	
                 pbjs.setConfig({
@@ -304,8 +304,8 @@ googletag.cmd.push(function() {
     	  inreedvid2Slot = googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test2', [[300, 250],[728,90],[1,1]], 'inreedvid2Slot').addService(googletag.pubads());
     	  inreedvid3Slot = googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test3', [[300, 250],[728,90],[1,1]], 'inreedvid3Slot').addService(googletag.pubads()); 
 googletag.pubads().enableLazyLoad({
-    	fetchMarginPercent: 30,  // Fetch slots within 30 viewports.
-    	renderMarginPercent: 10,  // Render slots within 5000 viewports.
+    	fetchMarginPercent: 50,  // Fetch slots within 30 viewports.
+    	renderMarginPercent: 30,  // Render slots within 5000 viewports.
     	mobileScaling: 1.0  // Double the above values on mobile.
 });
 googletag.pubads().enableSingleRequest();
