@@ -301,17 +301,17 @@ googletag.cmd.push(function() {
     	  inreedvid1Slot = googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test1', [[300, 250],[728,90],[1,1]], 'inreedvid1Slot').addService(googletag.pubads());
     	  inreedvid2Slot = googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test2', [[300, 250],[728,90],[1,1]], 'inreedvid2Slot').addService(googletag.pubads());
     	  inreedvid3Slot = googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test3', [[300, 250],[728,90],[1,1]], 'inreedvid3Slot').addService(googletag.pubads()); 
+googletag.pubads().enableLazyLoad({
+    	fetchMarginPercent: 35,  // Fetch slots within 30 viewports.
+    	renderMarginPercent: 30,  // Render slots within 5000 viewports.
+    	mobileScaling: 1.0  // Double the above values on mobile.
+});
 googletag.pubads().enableSingleRequest();
 googletag.pubads().collapseEmptyDivs(true, true);
 googletag.pubads().setCentering(true);
 googletag.pubads().enableVideoAds();
 // googletag.pubads().enableAsyncRendering();
 // googletag.pubads().disableInitialLoad();
-googletag.pubads().enableLazyLoad({
-    	fetchMarginPercent: 35,  // Fetch slots within 30 viewports.
-    	renderMarginPercent: 30,  // Render slots within 5000 viewports.
-    	mobileScaling: 1.0  // Double the above values on mobile.
-});
 googletag.enableServices();
 // As defined by lazy load settings, initially Slot 1 will be fetched and
 // rendered on mobile and desktop. Slot 2 will be fetched, on mobile and
