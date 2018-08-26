@@ -102,7 +102,7 @@ var timeoutMap = {
             	 { bidder: 'somoaudience', params: { placement_hash: '1152340cac3268b0e737b49c1382cd2b' } }, /*300x250*/
             	 // { bidder: '33across',   params: { siteId : 'cLN3UCBHar5OfDrkHcnlKl', productId: 'siab' } }, /*All sizes*/
             	 { bidder: 'rhythmone',  params: { placementId: '76184' } }, /* one placementId for all sizes */
-            	 // { bidder: "ix",         params: { siteId: "281563", size: [300, 250] } },
+            	 { bidder: "ix",         params: { siteId: "281563", size: [300, 250] } },
             	 // { bidder: "yieldmo",    params: { placementId: "1990667709809591856" } } /* no adapter in file */
             	 { bidder: 'gumgum',     params: { inSlot: '14600' } }, /*gumgum-300x250*/
             	 // { bidder: 'undertone',  params: { publisherId: '3660' } }
@@ -300,7 +300,7 @@ googletag.cmd.push(function() {
 googletag.pubads().enableLazyLoad({
     	fetchMarginPercent: 30,  // Fetch slots within 30 viewports.
     	renderMarginPercent: 10,  // Render slots within 5000 viewports.
-    	mobileScaling: 1.5  // Double the above values on mobile.
+    	mobileScaling: 1.0  // Double the above values on mobile.
 });
 googletag.pubads().enableSingleRequest();
 googletag.pubads().collapseEmptyDivs(true, true);
