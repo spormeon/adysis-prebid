@@ -238,7 +238,7 @@ var timeoutMap = {
                  s2sConfig: {
                      accountId: 'e31f627f-53a3-4288-9979-482d3c6ffc76',
                      enabled: true,
-                     bidders: ['somoaudience', 'districtm', 'conversant', 'pulsepoint'],
+                     bidders: ['somoaudience', 'districtm', 'conversant', 'pulsepoint', 'appnexus'],
                      timeout: 1000,
                      adapter: 'prebidServer',
                      endpoint: 'https://prebid.adnxs.com/pbs/v1/openrtb2/auction',
@@ -306,7 +306,7 @@ googletag.pubads().enableLazyLoad({
     	renderMarginPercent: 30,  // Render slots within 5000 viewports.
     	mobileScaling: 1.0  // Double the above values on mobile.
 });
-// googletag.pubads().enableSingleRequest();
+googletag.pubads().enableSingleRequest();
 googletag.pubads().collapseEmptyDivs(true, true);
 googletag.pubads().setCentering(true);
 googletag.pubads().enableVideoAds();
