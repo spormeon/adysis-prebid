@@ -292,7 +292,7 @@ $(document).ready(function(){
    $('<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvidSlot" style="width:590px; height: auto; text-align: center; margin: auto;" ></div></div>').insertAfter('#mvp-content-body  p:nth-child(1) ');
    $('<div class="advertisement">Advertisement</div><div class="ad-reporter-ahytrfg35423"><div id="inreedvid1Slot"></div></div>').insertAfter('#mvp-content-body p:nth-child(2) ');
    $('<div class="advertisement">Advertisement</div><div class="ad-reporter-ahytrfg35423"><div id="inreedvid2Slot"></div></div>').insertAfter('#mvp-content-body p:nth-child(3) ');
-   $('<div class="advertisement">Advertisement</div><div class="ad-reporter-ahytrfg35423"><div id="inreedvid3Slot"></div></div>').insertAfter('#mvp-content-body p:nth-child(6) ');                     
+   $('<div class="advertisement">Advertisement</div><div class="ad-reporter-ahytrfg35423"><div id="inreedvid3Slot"></div></div>').insertAfter('#mvp-content-body p:nth-child(4) ');                     
 // The calls to construct slots and display contents. div-1 is on screen,
 // div-2 is 3 viewports down, div-3 is 12 viewports down.
 googletag.cmd.push(function() {
