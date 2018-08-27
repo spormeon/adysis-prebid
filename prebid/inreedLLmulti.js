@@ -120,7 +120,7 @@ var timeoutMap = {
             	bids: [
             	 { bidder: 'teads',      params: { placementId: '95333', pageId: '87372' } },
             	 { bidder: 'appnexus',   params: { placementId: '11971351' } }, /* one placementId for all sizes */
-            	 { bidder: 'districtm',  params: { placementId: 11937611 } }, /* 300x600 - 300x250 - 160x600 */  
+            	 // { bidder: 'districtm',  params: { placementId: 11937611 } }, /* 300x600 - 300x250 - 160x600 */  
             	 { bidder: 'aol',        params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x250 */ 
             	 // { bidder: 'brealtime',  params: { placementId: '12002335' } },  /* 300x250 */ 
             	 { bidder: 'conversant', params: { site_id: '118233' } },  /* 300x250 */ 
@@ -143,7 +143,7 @@ var timeoutMap = {
             	bids: [
             	 { bidder: 'teads',      params: { placementId: '95334', pageId: '87372' } },
             	 { bidder: 'appnexus',   params: { placementId: '11971351' } }, /* one placementId for all sizes */
-            	 { bidder: 'districtm',  params: { placementId: 11937611 } }, /* 300x600 - 300x250 - 160x600 */ 
+            	 // { bidder: 'districtm',  params: { placementId: 11937611 } }, /* 300x600 - 300x250 - 160x600 */ 
             	 { bidder: 'aol',        params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x250 */
             	 // { bidder: 'brealtime',  params: { placementId: '12002335' } },  /* 300x250 */ 
             	 { bidder: 'conversant', params: { site_id: '118233' } },  /* 300x250 */ 
@@ -166,7 +166,7 @@ var timeoutMap = {
             	bids: [
             	 { bidder: 'teads',      params: { placementId: '95335', pageId: '87372' } },
             	 { bidder: 'appnexus',   params: { placementId: '11971351' } }, /* one placementId for all sizes */
-            	 { bidder: 'districtm',  params: { placementId: 11937611 } }, /* 300x600 - 300x250 - 160x600 */ 
+            	 // { bidder: 'districtm',  params: { placementId: 11937611 } }, /* 300x600 - 300x250 - 160x600 */ 
             	 { bidder: 'aol',        params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x250 */ 
             	 // { bidder: 'brealtime',  params: { placementId: '12002335' } },  /* 300x250 */  
             	 { bidder: 'conversant', params: { site_id: '118233' } },  /* 300x250 */ 
