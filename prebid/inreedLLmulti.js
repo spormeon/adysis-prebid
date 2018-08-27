@@ -287,12 +287,7 @@ var timeoutMap = {
                     });
                 });
             }
-// have to add 1 on to the child (number) because the div counts as 1 in the string
-$(document).ready(function(){
-   $('<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvidSlot" style="width:590px; height: auto; text-align: center; margin: auto;" ></div></div>').insertAfter('#mvp-content-body  p:nth-child(1) ');
-   $('<div class="advertisement">Advertisement</div><div class="ad-reporter-ahytrfg35423"><div id="inreedvid1Slot"></div></div>').insertAfter('#mvp-content-body p:nth-child(2) ');
-   $('<div class="advertisement">Advertisement</div><div class="ad-reporter-ahytrfg35423"><div id="inreedvid2Slot"></div></div>').insertAfter('#mvp-content-body p:nth-child(3) ');
-   $('<div class="advertisement">Advertisement</div><div class="ad-reporter-ahytrfg35423"><div id="inreedvid3Slot"></div></div>').insertAfter('#mvp-content-body p:nth-child(4) ');                     
+                     
 // The calls to construct slots and display contents. div-1 is on screen,
 // div-2 is 3 viewports down, div-3 is 12 viewports down.
 googletag.cmd.push(function() {
@@ -300,6 +295,12 @@ googletag.cmd.push(function() {
     	  inreedvid1Slot = googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test1', [[300, 250],[728,90],[1,1]], 'inreedvid1Slot').addService(googletag.pubads());
     	  inreedvid2Slot = googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test2', [[300, 250],[728,90],[1,1]], 'inreedvid2Slot').addService(googletag.pubads());
     	  inreedvid3Slot = googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test3', [[300, 250],[728,90],[1,1]], 'inreedvid3Slot').addService(googletag.pubads()); 
+    	// have to add 1 on to the child (number) because the div counts as 1 in the string
+    	  $(document).ready(function(){
+    	     $('<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvidSlot" style="width:590px; height: auto; text-align: center; margin: auto;" ></div></div>').insertAfter('#mvp-content-body  p:nth-child(1) ');
+    	     $('<div class="advertisement">Advertisement</div><div class="ad-reporter-ahytrfg35423"><div id="inreedvid1Slot"></div></div>').insertAfter('#mvp-content-body p:nth-child(3) ');
+    	     $('<div class="advertisement">Advertisement</div><div class="ad-reporter-ahytrfg35423"><div id="inreedvid2Slot"></div></div>').insertAfter('#mvp-content-body p:nth-child(5) ');
+    	     $('<div class="advertisement">Advertisement</div><div class="ad-reporter-ahytrfg35423"><div id="inreedvid3Slot"></div></div>').insertAfter('#mvp-content-body p:nth-child(7) ');
 googletag.pubads().enableLazyLoad({
     	fetchMarginPercent: 35,  // Fetch slots within 30 viewports.
     	renderMarginPercent: 30,  // Render slots within 5000 viewports.
