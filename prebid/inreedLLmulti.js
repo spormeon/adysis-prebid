@@ -1,6 +1,6 @@
 // have to add 1 on to the child (number) because the div counts as 1 in the string
 $(document).ready(function(){
-	  $('<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvidSlot" style="width:590px; height: auto; text-align: center; margin: auto;" ></div></div>').insertAfter('#mvp-content-body-top #mvp-content-main #mvp-main-body  p:nth-child(3) ');
+	  $('<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvidSlot" style="width:590px; height: auto; text-align: center; margin: auto;" ></div></div>').insertAfter('#mvp-main-body  p:nth-child(3) ');
 	  $('<div class="advertisement">Advertisement</div><div class="ad-reporter-ahytrfg35423"><div id="inreedvid1Slot"></div></div>').insertAfter('#mvp-main-body p:nth-child(20) ');
 	  $('<div class="advertisement">Advertisement</div><div class="ad-reporter-ahytrfg35423"><div id="inreedvid2Slot"></div></div>').insertAfter('#mvp-main-body p:nth-child(40) ');
 	  $('<div class="advertisement">Advertisement</div><div class="ad-reporter-ahytrfg35423"><div id="inreedvid3Slot"></div></div>').insertAfter('#mvp-main-body p:nth-child(60) ');
@@ -110,7 +110,7 @@ var timeoutMap = {
             	 // { bidder: "yieldmo",    params: { placementId: "1990667709809591856" } } /* no adapter in file */
             	 { bidder: 'gumgum',     params: { inSlot: '14600' } }, /*gumgum-300x250*/
             	 // { bidder: 'undertone',  params: { publisherId: '3660' } }
-            	 // { bidder: 'appnexus',   params: { placementId: '13232392' } }, /* demo video placement, always returns a vid, only works client side */
+            	 { bidder: 'appnexus',   params: { placementId: '13232392' } }, /* demo video placement, always returns a vid, only works client side */
             	 // { bidder: 'districtm',  params: { placementId:  11937611,  video: { skippable: true, playback_method: ['auto_play_sound_off'] } } },
             	 { bidder: 'unruly',     params: { targetingUUID: '6f15e139-5f18-49a1-b52f-87e5e69ee65e', siteId: 1081534 } }
             	] //./bids
