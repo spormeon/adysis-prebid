@@ -218,7 +218,7 @@ var timeoutMap = {
                 	        brealtime:         { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.80; } }, // adjust the bid in real time before the auction takes place
                 	        springserveAlias2: { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.65; } }, // adjust the bid in real time before the auction takes place
                 	        teads:             { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.67972835; } }, // adjust the bid in real time before the auction takes place
-                	        unruly:            { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.1; } }, // adjust the bid in real time before the auction takes place
+                	        unruly:            { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.2; } }, // adjust the bid in real time before the auction takes place
                 	       };	
                 	
                 pbjs.setConfig({
@@ -290,7 +290,7 @@ var timeoutMap = {
 // have to add 1 on to the child (number) because the div counts as 1 in the string
 $(document).ready(function(){
    $('<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvidSlot"></div></div><br>').insertAfter('#mvp-content-body p:nth-child(2)');
-   $('<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvid1Slot"></div></div><br>').insertAfter('#mvp-content-body p:nth-child(5)');
+   $('<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvid1Slot"></div></div><br>').insertAfter('#mvp-content-body p:nth-child(6)');
    $('<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvid2Slot"></div></div><br>').insertAfter('#mvp-content-body p:nth-child(10)');
    $('<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvid3Slot"></div></div><br>').insertAfter('#mvp-content-body p:nth-child(14)');                     
 // The calls to construct slots and display contents. div-1 is on screen,
