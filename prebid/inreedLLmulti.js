@@ -1,10 +1,4 @@
-// have to add 1 on to the child (number) because the div counts as 1 in the string
-$(document).ready(function(){
-	  $('<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvidSlot" style="width:590px; height: auto; text-align: center; margin: auto;" ></div></div>').insertAfter('#mvp-main-body  p:nth-child(3) ');
-	  $('<div class="advertisement">Advertisement</div><div class="ad-reporter-ahytrfg35423"><div id="inreedvid1Slot"></div></div>').insertAfter('#mvp-main-body p:nth-child(20) ');
-	  $('<div class="advertisement">Advertisement</div><div class="ad-reporter-ahytrfg35423"><div id="inreedvid2Slot"></div></div>').insertAfter('#mvp-main-body p:nth-child(40) ');
-	  $('<div class="advertisement">Advertisement</div><div class="ad-reporter-ahytrfg35423"><div id="inreedvid3Slot"></div></div>').insertAfter('#mvp-main-body p:nth-child(60) ');
-});
+
    
 //load up prebid.js,  I think we need to load this earlier
 (function() {
@@ -91,7 +85,7 @@ var timeoutMap = {
             	{
             	 code: 'inreedvidSlot',
             	 mediaTypes: {
-            		 
+            		 banner: { sizes: [[728, 90], [300, 250], [320, 50]] }, 
             	     video:  { context: 'outstream', mimes: ["video/x-flv", "video/mp4", "application/x-shockwave-flash", "application/javascript"], protocols: [1, 2, 3, 4, 5, 6, 7, 8], playbackmethod: [2], playerSize: [550,310] }, 
             	 },
             	bids: [
@@ -293,7 +287,12 @@ var timeoutMap = {
                     });
                 });
             }
-            
+// have to add 1 on to the child (number) because the div counts as 1 in the string
+$(document).ready(function(){
+   $('<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvidSlot" style="width:590px; height: auto; text-align: center; margin: auto;" ></div></div>').insertAfter('#mvp-main-body  p:nth-child(3) ');
+   $('<div class="advertisement">Advertisement</div><div class="ad-reporter-ahytrfg35423"><div id="inreedvid1Slot"></div></div>').insertAfter('#mvp-main-body p:nth-child(20) ');
+   $('<div class="advertisement">Advertisement</div><div class="ad-reporter-ahytrfg35423"><div id="inreedvid2Slot"></div></div>').insertAfter('#mvp-main-body p:nth-child(40) ');
+   $('<div class="advertisement">Advertisement</div><div class="ad-reporter-ahytrfg35423"><div id="inreedvid3Slot"></div></div>').insertAfter('#mvp-main-body p:nth-child(60) ');                     
 // The calls to construct slots and display contents. div-1 is on screen,
 // div-2 is 3 viewports down, div-3 is 12 viewports down.
 googletag.cmd.push(function() {
@@ -321,6 +320,7 @@ googletag.display('inreedvidSlot');
 googletag.display('inreedvid1Slot');
 googletag.display('inreedvid2Slot');
 googletag.display('inreedvid3Slot');
+});
 });
 
 // ASSERTIVE ANALYTICS - Version: 1.5.1
