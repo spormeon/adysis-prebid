@@ -110,7 +110,7 @@ var timeoutMap = {
             	 // { bidder: "yieldmo",    params: { placementId: "1990667709809591856" } } /* no adapter in file */
             	 { bidder: 'gumgum',     params: { inSlot: '14600' } }, /*gumgum-300x250*/
             	 // { bidder: 'undertone',  params: { publisherId: '3660' } }
-            	 { bidder: 'appnexus',   params: { placementId: '13232392' } }, /* demo video placement, always returns a vid, only works client side */
+            	 { bidder: 'appnexus',   params: { placementId: '13232392',  video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }, /* demo video placement, always returns a vid, only works client side */
             	 // { bidder: 'districtm',  params: { placementId:  11937611,  video: { skippable: true, playback_method: ['auto_play_sound_off'] } } },
             	 { bidder: 'unruly',     params: { targetingUUID: '6f15e139-5f18-49a1-b52f-87e5e69ee65e', siteId: 1081534 } }
             	] //./bids
@@ -224,7 +224,7 @@ var timeoutMap = {
                 	        brealtime:         { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.80; } }, // adjust the bid in real time before the auction takes place
                 	        springserveAlias2: { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.65; } }, // adjust the bid in real time before the auction takes place
                 	        teads:             { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.67972835; } }, // adjust the bid in real time before the auction takes place
-                	        unruly:            { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.3; } }, // adjust the bid in real time before the auction takes place
+                	        unruly:            { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.2; } }, // adjust the bid in real time before the auction takes place
                 	       };	
                 	
                 pbjs.setConfig({
