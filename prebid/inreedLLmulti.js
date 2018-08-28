@@ -86,7 +86,7 @@ var timeoutMap = {
             	 code: 'inreedvidSlot',
             	 mediaTypes: {
             		 banner: { sizes: [[970, 250], [728, 90], [300, 250], [320, 50]] }, 
-            	     video:  { context: 'outstream', mimes: ["video/x-flv", "video/mp4", "application/x-shockwave-flash", "application/javascript"], protocols: [1, 2, 3, 4, 5, 6, 7, 8], playbackmethod: [2], playerSize: [550,310] }, 
+            	     video:  { context: 'outstream', mimes: ["video/x-flv", "video/mp4", "application/x-shockwave-flash", "application/javascript"], protocols: [1, 2, 3, 4, 5, 6, 7, 8], playbackmethod: [2], playerSize: [640,480] }, 
             	 },
             	bids: [
             	 { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
@@ -215,6 +215,7 @@ var timeoutMap = {
                 	        springserveAlias2: { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.65; } }, // adjust the bid in real time before the auction takes place
                 	        teads:             { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.27972835; } }, // adjust the bid in real time before the auction takes place
                 	        unruly:            { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.06; } }, // adjust the bid in real time before the auction takes place
+                	        appnexus:          { bidCpmAdjustment : function(bidCpm){ return bidCpm * 10.00; } }, // adjust the bid in real time before the auction takes place
                 	       };	
                 	
                 pbjs.setConfig({
