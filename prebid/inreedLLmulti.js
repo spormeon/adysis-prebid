@@ -86,7 +86,7 @@ var timeoutMap = {
             	 code: 'inreedvidSlot',
             	 mediaTypes: {
             		 banner: { sizes: [[970, 250], [728, 90], [300, 250], [320, 50]] }, 
-            	     video:  { context: 'outstream', playerSize: [640, 480], mimes: ["video/x-flv", "video/mp4", "application/x-shockwave-flash", "application/javascript"] },
+            	     video:  { context: 'outstream', playerSize: [300, 250], mimes: ["video/x-flv", "video/mp4", "application/x-shockwave-flash", "application/javascript"] },
             	 },
             	bids: [
             	 { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
