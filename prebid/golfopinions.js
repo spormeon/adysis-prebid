@@ -302,7 +302,7 @@ googletag.pubads().enableLazyLoad({
     	renderMarginPercent: 40,  // Render slots within 5000 viewports.
     	mobileScaling: 1.0  // Double the above values on mobile.
 });
-googletag.pubads().enableSingleRequest();
+// googletag.pubads().enableSingleRequest();
 googletag.pubads().collapseEmptyDivs(true, true);
 googletag.pubads().setCentering(true);
 googletag.pubads().enableVideoAds();
