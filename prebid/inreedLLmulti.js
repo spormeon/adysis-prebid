@@ -1,8 +1,9 @@
+(function() {
 var script = document.createElement('script');
 script.src = '//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js';
 script.type = 'text/javascript';
 document.getElementsByTagName('head')[0].appendChild(script);
-  
+})();
 //load up prebid.js,  I think we need to load this earlier
 (function() {
     var pbjsEl = document.createElement("script");
