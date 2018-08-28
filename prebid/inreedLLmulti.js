@@ -136,7 +136,7 @@ var timeoutMap = {
             	 code: 'inreedvid2Slot',
             	 mediaTypes: {
             	     banner: { sizes: [[728, 90], [300, 250], [320, 50]] },
-            	     video:  { context: 'outstream', playerSize: [640,490], mimes: ["video/x-flv", "video/mp4", "application/x-shockwave-flash", "application/javascript"], },
+            	     
             	},
             	bids: [
             	 { bidder: 'teads',      params: { placementId: '95334', pageId: '87372' } },
@@ -157,9 +157,7 @@ var timeoutMap = {
             	{
             	 code: 'inreedvid3Slot',
             	 mediaTypes: {
-            		 banner: {
-            			 sizes: [[728, 90], [300, 250], [320, 50]]
-            		 } 
+            		 banner: { sizes: [[728, 90], [300, 250], [320, 50]] }, 
             	},
             	bids: [
             	 { bidder: 'teads',      params: { placementId: '95335', pageId: '87372' } },
