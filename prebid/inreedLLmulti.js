@@ -113,14 +113,13 @@ var timeoutMap = {
             	{
             	 code: 'inreedvid1Slot',
             	 mediaTypes: {
-            		 banner: {
-            			 sizes: [[728, 90], [300, 250], [320, 50]]
-            		 } 
+            		 banner: { sizes: [[728, 90], [300, 250], [320, 50]] },
+            		 video:  { context: 'outstream', playerSize: [550,310] },
             	},
             	bids: [
             	 { bidder: 'teads',      params: { placementId: '95333', pageId: '87372' } },
             	 { bidder: 'appnexus',   params: { placementId: '11971351' } }, /* one placementId for all sizes */
-            	 // { bidder: 'districtm',  params: { placementId: 11937611 } }, /* 300x600 - 300x250 - 160x600 */  
+            	 { bidder: 'districtm',  params: { placementId: 11937611 } }, /* 300x600 - 300x250 - 160x600 */  
             	 { bidder: 'aol',        params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x250 */ 
             	 // { bidder: 'brealtime',  params: { placementId: '12002335' } },  /* 300x250 */ 
             	 { bidder: 'conversant', params: { site_id: '118233' } },  /* 300x250 */ 
@@ -217,8 +216,8 @@ var timeoutMap = {
                 	        sekindonUM:        { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.75; } }, // adjust the bid in real time before the auction takes place
                 	        brealtime:         { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.80; } }, // adjust the bid in real time before the auction takes place
                 	        springserveAlias2: { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.65; } }, // adjust the bid in real time before the auction takes place
-                	        teads:             { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.67972835; } }, // adjust the bid in real time before the auction takes place
-                	        unruly:            { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.02; } }, // adjust the bid in real time before the auction takes place
+                	        teads:             { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.47972835; } }, // adjust the bid in real time before the auction takes place
+                	        unruly:            { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.06; } }, // adjust the bid in real time before the auction takes place
                 	       };	
                 	
                 pbjs.setConfig({
