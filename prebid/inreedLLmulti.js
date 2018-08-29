@@ -90,17 +90,8 @@ var timeoutMap = {
             	 code: 'inreedvidSlot',
             	 mediaTypes: {
             		 banner: { sizes: [[970, 250], [728, 90], [300, 250], [320, 50]] }, 
-            	     video:  { context: 'outstream', playerSize: [640, 480], mimes: ["video/x-flv", "video/mp4", "application/x-shockwave-flash", "application/javascript"] }
-            	 },
-            	 renderer: {
-            	        url: 'http://cdn.adnxs.com/renderer/video/ANOutstreamVideo.js',
-            	        render: function (bid) {
-            	            ANOutstreamVideo.renderAd({
-            	                targetId: bid.adUnitCode,
-            	                adResponse: bid.adResponse,
-            	            });
-            	        }
-            	    },
+            	     video:  { context: 'outstream', playerSize: [640, 480], mimes: ["video/x-flv", "video/mp4", "application/x-shockwave-flash", "application/javascript"] },
+            	},
             	bids: [
             	 { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
             	 { bidder: 'appnexus',   params: { placementId: '11971351',  video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }, /* one placementId for all sizes */
