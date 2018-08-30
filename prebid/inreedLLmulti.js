@@ -25,7 +25,8 @@ document.getElementsByTagName('head')[0].appendChild(script);
   var node = document.getElementsByTagName('script')[0];
   node.parentNode.insertBefore(gads, node);
 })(); 
-      
+
+//  1000 def brings back bigger bids in Uk
 var timeoutMap = {
 		   0 : 1100,
 		   1 : 1100,
@@ -38,7 +39,7 @@ var timeoutMap = {
 		   8 : 1000,
 		   9 : 1000,
 		  10 : 1000,
-		  11 : 1000,
+		  11 : 900,
 		  12 : 1100,
 		  13 : 1300,
 		  14 : 1300,
