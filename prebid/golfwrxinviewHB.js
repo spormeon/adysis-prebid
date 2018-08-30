@@ -416,7 +416,7 @@ bids: [
  code: 'skinSlot',
  mediaTypes: {
 	 banner: {
-		 sizes: [[1, 1], [1800, 1000]]
+		 sizes: [[1, 1], [1800, 1000], [1600, 1050]]
 	 } 
 },
 bids: [
@@ -508,7 +508,7 @@ bidderSequence: 'random', // Default is random
 	    },
 	 sizeConfig: [{
 mediaQuery: '(min-width: 769px)',
-sizesSupported: [[970, 250], [970, 90], [728, 90], [468, 60], [320, 50], [300, 600], [300, 250], [160, 600], [120, 600], [1, 1], [1800, 1000]],
+sizesSupported: [[970, 250], [970, 90], [728, 90], [468, 60], [320, 50], [300, 600], [300, 250], [160, 600], [120, 600], [1, 1], [1800, 1000], [1600, 1050]],
 labels: ['desktop']
 }, {
 mediaQuery: '(min-width: 500px) and (max-width: 768px)',
@@ -673,7 +673,7 @@ setTimeout(function() { initAdserver(); }, PREBID_TIMEOUT);
     	        [[1, 1],[[300, 250],[320, 50]]],
     	      ],
 	          mappingskinslot: [
-  	            [[1024, 768],[[1, 1],[1800, 1000]]],
+  	            [[1024, 768],[[1, 1],[1800, 1000],[1600, 1050]]],
   	            [[768, 500],[[1, 1]]],
   	            [[1, 1],[[1, 1]]],
   	          ]
