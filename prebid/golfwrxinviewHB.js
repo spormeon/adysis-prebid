@@ -416,11 +416,12 @@ bids: [
  code: 'skinSlot',
  mediaTypes: {
 	 banner: {
-		 sizes: [[1, 1]]
+		 sizes: [[1, 1], [1800, 1000]]
 	 } 
 },
 bids: [
- { bidder: 'justpremium', labelAny: ['desktop', 'tablet'], params: { zone: '50978', allow: ['wp', 'sa', 'pu', 'pd', 'pa', 'ms', 'mo', 'is', 'as', 'fa', 'fi', 'hi', 'cf'] } } /* wallpaper, video wallpaper */
+ { bidder: 'justpremium', labelAny: ['desktop', 'tablet'], params: { zone: '50978', allow: ['wp', 'sa', 'pu', 'pd', 'pa', 'ms', 'mo', 'is', 'as', 'fa', 'fi', 'hi', 'cf'] } }, /* wallpaper, video wallpaper */
+ { bidder: 'appnexus',    labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '11971351' } } /* one placementId for all sizes */
 ] //./bids
 }
 ]; //./adUnits
@@ -507,7 +508,7 @@ bidderSequence: 'random', // Default is random
 	    },
 	 sizeConfig: [{
 mediaQuery: '(min-width: 769px)',
-sizesSupported: [[970, 250], [970, 90], [728, 90], [468, 60], [320, 50], [300, 600], [300, 250], [160, 600], [120, 600], [1, 1]],
+sizesSupported: [[970, 250], [970, 90], [728, 90], [468, 60], [320, 50], [300, 600], [300, 250], [160, 600], [120, 600], [1, 1], [1800, 1000]],
 labels: ['desktop']
 }, {
 mediaQuery: '(min-width: 500px) and (max-width: 768px)',
@@ -672,7 +673,7 @@ setTimeout(function() { initAdserver(); }, PREBID_TIMEOUT);
     	        [[1, 1],[[300, 250],[320, 50]]],
     	      ],
 	          mappingskinslot: [
-  	            [[1024, 768],[[1, 1]]],
+  	            [[1024, 768],[[1, 1],[1800, 1000]]],
   	            [[768, 500],[[1, 1]]],
   	            [[1, 1],[[1, 1]]],
   	          ]
