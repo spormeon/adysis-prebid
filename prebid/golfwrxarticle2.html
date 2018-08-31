@@ -183,7 +183,27 @@ div.advertisement {
   }(document.createElement('script'), document.getElementsByTagName('script')[0], '//cdn.taboola.com/libtrc/golfwrx/loader.js');
 </script>
 
+<!--facebook comments plugin -->
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '385670531590301',
+      xfbml      : true,
+      version    : 'v2.2'
+    });
+  };
 
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = '//connect.facebook.net/en_US/sdk.js';
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+<style type='text/css' media='screen'>
+  .fb-comments, .fb-comments * { width:100% !important; }
+</style>
 
 
 <script type="text/javascript" charset="utf-8">
