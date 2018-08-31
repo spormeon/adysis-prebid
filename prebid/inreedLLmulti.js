@@ -70,20 +70,7 @@ var timeoutMap = {
             // example of supplying a custom var from a prev. defined var
             assertive_timeout = PREBID_TIMEOUT;
 
-            // example of reading data from website and supplying as custom var
-            var DOMReady = function(a,b,c){b=document,c='addEventListener';b[c]?b[c]('DOMContentLoaded',a):window.attachEvent('onload',a);};
-            DOMReady(function () {
-                try {
-                    var innerHTML = document.querySelector('body > div.navbar ul.nav > li:last-child > a').innerHTML;
-                    if ( innerHTML === "Logout" ) {
-                        assertive_userState = 'Anonymous';
-                    } else if ( innerHTML === "Register" ) {
-                        assertive_userState = 'LoggedIn';
-                    }
-                } catch(e) {
-                    console.log(e);
-                }
-            });
+           
 
             var adUnits = [
             	//new ad unit block
