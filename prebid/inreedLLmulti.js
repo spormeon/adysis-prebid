@@ -167,6 +167,19 @@ var timeoutMap = {
             	 // { bidder: "ix",         params: { siteId: "281563", size: [300, 250] } },
             	 { bidder: 'gumgum',     params: { inSlot: '14600' } } /*gumgum-300x250*/
             	] //./bids
+            	},
+            	//new ad unit block
+            	{
+            	 code: 'skinSlot',
+            	 mediaTypes: {
+            		 banner: {
+            			 sizes: [[1, 1], [1800, 1000], [1600, 1050]]
+            		 } 
+            	},
+            	bids: [
+            	 { bidder: 'justpremium', labelAny: ['desktop', 'tablet'], params: { zone: '50978', allow: ['wp', 'sa', 'pu', 'pd', 'pa', 'ms', 'mo', 'is', 'as', 'fa', 'fi', 'hi', 'cf'] } }, /* wallpaper, video wallpaper */
+            	 { bidder: 'appnexus',    labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '11971351' } } /* one placementId for all sizes */
+            	] //./bids
             	}
            ];
             // ======== DO NOT EDIT BELOW THIS LINE =========== //
@@ -290,7 +303,8 @@ googletag.cmd.push(function() {
     	  inreedvidSlot = googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.com-HB-Vid-test',  [[300, 250],[728,90],[1,1],[970,250], [640, 480]], 'inreedvidSlot').addService(googletag.pubads());
     	  inreedvid1Slot = googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test1', [[300, 250],[728,90],[1,1],[970,250], [640, 480]], 'inreedvid1Slot').addService(googletag.pubads());
     	  inreedvid2Slot = googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test2', [[300, 250],[728,90],[1,1]], 'inreedvid2Slot').addService(googletag.pubads());
-    	  inreedvid3Slot = googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test3', [[300, 250],[728,90],[1,1]], 'inreedvid3Slot').addService(googletag.pubads()); 
+    	  inreedvid3Slot = googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test3', [[300, 250],[728,90],[1,1]], 'inreedvid3Slot').addService(googletag.pubads());
+    	  skinSlot = googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.com-HB-Skin', [[1, 1],[1800, 1000],[1600, 1050]], 'skinSlot').addService(googletag.pubads());
 googletag.pubads().enableLazyLoad({
     	fetchMarginPercent: 55,  // Fetch slots within 30 viewports.
     	renderMarginPercent: 30,  // Render slots within 5000 viewports.
@@ -311,6 +325,7 @@ googletag.display('inreedvidSlot');
 googletag.display('inreedvid1Slot');
 googletag.display('inreedvid2Slot');
 googletag.display('inreedvid3Slot');
+googletag.display('skinSlot');
 });
 });
 
