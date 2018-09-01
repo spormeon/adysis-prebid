@@ -323,8 +323,9 @@ googletag.display('inreedvidSlot');
 googletag.display('inreedvid1Slot');
 googletag.display('inreedvid2Slot');
 googletag.display('inreedvid3Slot');
-googletag.display('skinSlot');
+
 });
+googletag.display('skinSlot');
 });
 
 // ASSERTIVE ANALYTICS - Version: 1.5.1
