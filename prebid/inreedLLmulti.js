@@ -172,9 +172,7 @@ var timeoutMap = {
             	{
             	 code: 'skinSlot',
             	 mediaTypes: {
-            		 banner: {
-            			 sizes: [[1, 1], [1800, 1000], [1600, 1050]]
-            		 } 
+            		 banner: { sizes: [[1, 1], [1800, 1000], [1600, 1050]] },
             	},
             	bids: [
             	 { bidder: 'justpremium', labelAny: ['desktop', 'tablet'], params: { zone: '50978', allow: ['wp', 'sa', 'pu', 'pd', 'pa', 'ms', 'mo', 'is', 'as', 'fa', 'fi', 'hi', 'cf'] } }, /* wallpaper, video wallpaper */
