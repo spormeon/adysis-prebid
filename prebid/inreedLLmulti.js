@@ -99,7 +99,6 @@ var timeoutMap = {
             	 { bidder: 'gumgum',     params: { inSlot: '14600' } }, /*gumgum-300x250*/
             	 // { bidder: 'undertone',  params: { publisherId: '3660' } }
             	 // { bidder: 'unruly',     params: { targetingUUID: '6f15e139-5f18-49a1-b52f-87e5e69ee65e', siteId: 1081534 } },
-            	 { bidder: 'sekindoUM',    labelAny: ['desktop'], params: { spaceId: '87709' } }, /* 300x250 */ 
             	 { bidder: 'contentignite',      labelAny: ['desktop', 'tablet', 'phone'], params: { accountID: '168237', zoneID: '316288'} } /*300x250*/
             	] //./bids
             	},
@@ -144,7 +143,8 @@ var timeoutMap = {
             	 { bidder: 'somoaudience', params: { placement_hash: '1152340cac3268b0e737b49c1382cd2b' } }, /*300x250*/
             	 // { bidder: '33across',   params: { siteId : 'cLN3UCBHar5OfDrkHcnlKl', productId: 'siab' } }, /*All sizes*/
             	 // { bidder: "ix",         params: { siteId: "281563", size: [300, 250] } },
-            	 { bidder: 'gumgum',     params: { inSlot: '14600' } } /*gumgum-300x250*/
+            	 { bidder: 'gumgum',     params: { inSlot: '14600' } }, /*gumgum-300x250*/
+            	 { bidder: 'sekindoUM',    labelAny: ['desktop'], params: { spaceId: '87709' } }, /* 300x250 */ 
             	] //./bids
             	},
             	//new ad unit block
