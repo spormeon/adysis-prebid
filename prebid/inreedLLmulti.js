@@ -168,17 +168,6 @@ var timeoutMap = {
             	 // { bidder: "ix",         params: { siteId: "281563", size: [300, 250] } },
             	 { bidder: 'gumgum',     params: { inSlot: '14600' } } /*gumgum-300x250*/
             	] //./bids
-            	},
-            	//new ad unit block
-            	{
-            	 code: 'skinSlot',
-            	 mediaTypes: {
-            		 banner: { sizes: [[1, 1], [1800, 1000], [1600, 1050]] },
-            	},
-            	bids: [
-            	 { bidder: 'justpremium', params: { zone: '50978', allow: ['wp', 'sa', 'pu', 'pd', 'pa', 'ms', 'mo', 'is', 'as', 'fa', 'fi', 'hi', 'cf'] } }, /* wallpaper, video wallpaper */
-            	 { bidder: 'appnexus',    params: { placementId: '11971351' } } /* one placementId for all sizes */
-            	] //./bids
             	}
            ];
             // ======== DO NOT EDIT BELOW THIS LINE =========== //
@@ -296,7 +285,7 @@ $(document).ready(function(){
    $('<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvid1Slot"></div></div><br>').insertAfter('#mvp-content-main p:nth-child(6)');
    $('<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvid2Slot"></div></div><br>').insertAfter('#mvp-content-main p:nth-child(10)');
    $('<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvid3Slot"></div></div><br>').insertAfter('#mvp-content-main p:nth-child(18)'); 
-   $('<div class="ad-reporter-ahytrfg35423"><div id="skinSlot"></div></div>').insertAfter('#mvp-fly-wrap');
+   
 // The calls to construct slots and display contents. div-1 is on screen,
 // div-2 is 3 viewports down, div-3 is 12 viewports down.
 googletag.cmd.push(function() {
@@ -304,7 +293,7 @@ googletag.cmd.push(function() {
     	  inreedvid1Slot = googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test1', [[300, 250],[728,90],[1,1],[970,250], [640, 480]], 'inreedvid1Slot').addService(googletag.pubads());
     	  inreedvid2Slot = googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test2', [[300, 250],[728,90],[1,1]], 'inreedvid2Slot').addService(googletag.pubads());
     	  inreedvid3Slot = googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test3', [[300, 250],[728,90],[1,1]], 'inreedvid3Slot').addService(googletag.pubads());
-    	  skinSlot = googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.com-HB-Skin', [[1, 1],[1800, 1000],[1600, 1050]], 'skinSlot').addService(googletag.pubads());
+    	  
 googletag.pubads().enableLazyLoad({
     	fetchMarginPercent: 55,  // Fetch slots within 30 viewports.
     	renderMarginPercent: 30,  // Render slots within 5000 viewports.
@@ -325,7 +314,7 @@ googletag.display('inreedvidSlot');
 googletag.display('inreedvid1Slot');
 googletag.display('inreedvid2Slot');
 googletag.display('inreedvid3Slot');
-googletag.display('skinSlot');
+
 });
 });
 
