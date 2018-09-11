@@ -229,8 +229,8 @@ var timeoutMap = {
                      adapter: 'prebidServer',
                      endpoint: 'https://prebid.adnxs.com/pbs/v1/openrtb2/auction',
                      syncEndpoint: 'https://prebid.adnxs.com/pbs/v1/cookie_sync',
-                     cookieSet: true,
-                     cookiesetUrl: 'https://acdn.adnxs.com/cookieset/cs.js'
+                     // cookieSet: true,
+                     // cookiesetUrl: 'https://acdn.adnxs.com/cookieset/cs.js'
                   },
                   userSync: {
                       iframeEnabled: true,
