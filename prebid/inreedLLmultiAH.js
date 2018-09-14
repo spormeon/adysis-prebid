@@ -178,6 +178,17 @@ var timeoutMap = {
             	 { bidder: 'justpremium', params: { zone: '50978', allow: ['wp', 'sa', 'pu', 'pd', 'pa', 'ms', 'mo', 'is', 'as', 'fa', 'fi', 'hi', 'cf'] } }, /* wallpaper, video wallpaper */
             	 { bidder: 'appnexus',    params: { placementId: '11971351' } } /* one placementId for all sizes */
             	] //./bids
+            	},
+            	//new ad unit block
+            	{
+            	 code: 'middlerightSlot',
+            	 mediaTypes: {
+            		 banner: { sizes: [[1, 1], [300, 250]] },
+            	},
+            	bids: [
+            	 // { bidder: 'justpremium', params: { zone: '50978', allow: ['wp', 'sa', 'pu', 'pd', 'pa', 'ms', 'mo', 'is', 'as', 'fa', 'fi', 'hi', 'cf'] } }, /* wallpaper, video wallpaper */
+            	 // { bidder: 'appnexus',    params: { placementId: '11971351' } } /* one placementId for all sizes */
+            	] //./bids
             	}
            ];
             // ======== DO NOT EDIT BELOW THIS LINE =========== //
