@@ -96,11 +96,11 @@ var timeoutMap = {
             	 { bidder: 'rhythmone',  params: { placementId: '76184' } }, /* one placementId for all sizes */
             	 // { bidder: "ix",         params: { siteId: "281563", size: [300, 250] } },
             	 // { bidder: "yieldmo",    params: { placementId: "1990667709809591856" } } /* no adapter in file */
-            	 { bidder: 'gumgum',     params: { inSlot: '14600' } }, /*gumgum-300x250*/
+            	 { bidder: 'gumgum',     params: { inSlot: '14600' } } /*gumgum-300x250*/
             	 // { bidder: 'undertone',  params: { publisherId: '3660' } }
             	 // { bidder: 'unruly',     params: { targetingUUID: '6f15e139-5f18-49a1-b52f-87e5e69ee65e', siteId: 1081534 } },
             	 // { bidder: 'contentignite',      labelAny: ['desktop', 'tablet', 'phone'], params: { accountID: '168237', zoneID: '316288'} } /*300x250*/
-            	 { bidder: 'vi',         params: { pubId: 'tfd_headerbidding_test', lang: 'en-US', cat: 'IAB17', bidFloor: 0.01 } }
+            	 // { bidder: 'vi',         params: { pubId: 'tfd_headerbidding_test', lang: 'en-US', cat: 'IAB17', bidFloor: 0.01 } }
             	] //./bids
             	},
             	//new ad unit block
@@ -122,8 +122,8 @@ var timeoutMap = {
             	 { bidder: 'somoaudience', params: { placement_hash: '1152340cac3268b0e737b49c1382cd2b' } }, /*300x250*/
             	 // { bidder: '33across',   params: { siteId : 'cLN3UCBHar5OfDrkHcnlKl', productId: 'siab' } }, /*All sizes*/
             	 // { bidder: "ix",         params: { siteId: "281563", size: [300, 250] } },
-            	 { bidder: 'gumgum',     params: { inSlot: '14600' } }, /*gumgum-300x250*/
-            	 { bidder: 'vi',         params: { pubId: '272766657673392', lang: 'en-US', cat: 'IAB17', bidFloor: 0.01 } }
+            	 { bidder: 'gumgum',     params: { inSlot: '14600' } } /*gumgum-300x250*/
+            	 // { bidder: 'vi',         params: { pubId: '272766657673392', lang: 'en-US', cat: 'IAB17', bidFloor: 0.01 } }
             	] //./bids
             	},
             	//new ad unit block
@@ -145,9 +145,9 @@ var timeoutMap = {
             	 { bidder: 'somoaudience', params: { placement_hash: '1152340cac3268b0e737b49c1382cd2b' } }, /*300x250*/
             	 // { bidder: '33across',   params: { siteId : 'cLN3UCBHar5OfDrkHcnlKl', productId: 'siab' } }, /*All sizes*/
             	 // { bidder: "ix",         params: { siteId: "281563", size: [300, 250] } },
-            	 { bidder: 'gumgum',     params: { inSlot: '14600' } }, /*gumgum-300x250*/
+            	 { bidder: 'gumgum',     params: { inSlot: '14600' } } /*gumgum-300x250*/
             	 // { bidder: 'sekindoUM',    labelAny: ['desktop'], params: { spaceId: '87709' } }, /* 300x250 */ 
-            	 { bidder: 'vi',         params: { pubId: '272766657673392', lang: 'en-US', cat: 'IAB17', bidFloor: 0.01 } }
+            	 // { bidder: 'vi',         params: { pubId: '272766657673392', lang: 'en-US', cat: 'IAB17', bidFloor: 0.01 } }
             	] //./bids
             	},
             	//new ad unit block
@@ -168,8 +168,8 @@ var timeoutMap = {
             	 { bidder: 'somoaudience', params: { placement_hash: '1152340cac3268b0e737b49c1382cd2b' } }, /*300x250*/
             	 // { bidder: '33across',   params: { siteId : 'cLN3UCBHar5OfDrkHcnlKl', productId: 'siab' } }, /*All sizes*/
             	 // { bidder: "ix",         params: { siteId: "281563", size: [300, 250] } },
-            	 { bidder: 'gumgum',     params: { inSlot: '14600' } }, /*gumgum-300x250*/
-            	 { bidder: 'vi',         params: { pubId: '272766657673392', lang: 'en-US', cat: 'IAB17', bidFloor: 0.01 } }
+            	 { bidder: 'gumgum',     params: { inSlot: '14600' } } /*gumgum-300x250*/
+            	 // { bidder: 'vi',         params: { pubId: '272766657673392', lang: 'en-US', cat: 'IAB17', bidFloor: 0.01 } }
             	] //./bids
             	}
            ];
@@ -285,9 +285,9 @@ var timeoutMap = {
 // have to add 1 on to the child (number) because the div counts as 1 in the string, # for div , . for class
 $(document).ready(function(){
    $('<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvidSlot"></div></div><br>').insertAfter('.entry-content p:nth-child(1)');
-   $('<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvid1Slot"></div></div><br>').insertAfter('.entry-content p:nth-child(3)');
+   $('<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvid1Slot"></div></div><br>').insertAfter('.entry-content p:nth-child(4)');
    $('<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvid2Slot"></div></div><br>').insertAfter('.entry-content p:nth-child(7)');
-   $('<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvid3Slot"></div></div><br>').insertAfter('.entry-content p:nth-child(10)'); 
+   $('<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvid3Slot"></div></div><br>').insertAfter('.entry-content p:nth-child(11)'); 
    
 // The calls to construct slots and display contents. div-1 is on screen,
 // div-2 is 3 viewports down, div-3 is 12 viewports down.
