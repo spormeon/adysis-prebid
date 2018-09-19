@@ -122,7 +122,8 @@ var timeoutMap = {
             	 { bidder: 'somoaudience', params: { placement_hash: '1152340cac3268b0e737b49c1382cd2b' } }, /*300x250*/
             	 // { bidder: '33across',   params: { siteId : 'cLN3UCBHar5OfDrkHcnlKl', productId: 'siab' } }, /*All sizes*/
             	 // { bidder: "ix",         params: { siteId: "281563", size: [300, 250] } },
-            	 { bidder: 'gumgum',     params: { inSlot: '14600' } } /*gumgum-300x250*/
+            	 { bidder: 'gumgum',     params: { inSlot: '14600' } }, /*gumgum-300x250*/
+            	 { bidder: 'vi',         params: { pubId: '272766657673392', lang: 'en-US', cat: 'IAB17', bidFloor: 0.01 } }
             	] //./bids
             	},
             	//new ad unit block
@@ -144,8 +145,9 @@ var timeoutMap = {
             	 { bidder: 'somoaudience', params: { placement_hash: '1152340cac3268b0e737b49c1382cd2b' } }, /*300x250*/
             	 // { bidder: '33across',   params: { siteId : 'cLN3UCBHar5OfDrkHcnlKl', productId: 'siab' } }, /*All sizes*/
             	 // { bidder: "ix",         params: { siteId: "281563", size: [300, 250] } },
-            	 { bidder: 'gumgum',     params: { inSlot: '14600' } } /*gumgum-300x250*/
+            	 { bidder: 'gumgum',     params: { inSlot: '14600' } }, /*gumgum-300x250*/
             	 // { bidder: 'sekindoUM',    labelAny: ['desktop'], params: { spaceId: '87709' } }, /* 300x250 */ 
+            	 { bidder: 'vi',         params: { pubId: '272766657673392', lang: 'en-US', cat: 'IAB17', bidFloor: 0.01 } }
             	] //./bids
             	},
             	//new ad unit block
@@ -166,7 +168,8 @@ var timeoutMap = {
             	 { bidder: 'somoaudience', params: { placement_hash: '1152340cac3268b0e737b49c1382cd2b' } }, /*300x250*/
             	 // { bidder: '33across',   params: { siteId : 'cLN3UCBHar5OfDrkHcnlKl', productId: 'siab' } }, /*All sizes*/
             	 // { bidder: "ix",         params: { siteId: "281563", size: [300, 250] } },
-            	 { bidder: 'gumgum',     params: { inSlot: '14600' } } /*gumgum-300x250*/
+            	 { bidder: 'gumgum',     params: { inSlot: '14600' } }, /*gumgum-300x250*/
+            	 { bidder: 'vi',         params: { pubId: '272766657673392', lang: 'en-US', cat: 'IAB17', bidFloor: 0.01 } }
             	] //./bids
             	}
            ];
