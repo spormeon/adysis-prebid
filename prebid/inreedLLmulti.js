@@ -96,11 +96,11 @@ var timeoutMap = {
             	 { bidder: 'rhythmone',  params: { placementId: '76184' } }, /* one placementId for all sizes */
             	 // { bidder: "ix",         params: { siteId: "281563", size: [300, 250] } },
             	 // { bidder: "yieldmo",    params: { placementId: "1990667709809591856" } } /* no adapter in file */
-            	 { bidder: 'gumgum',     params: { inSlot: '14600' } } /*gumgum-300x250*/
+            	 { bidder: 'gumgum',     params: { inSlot: '14600' } }, /*gumgum-300x250*/
             	 // { bidder: 'undertone',  params: { publisherId: '3660' } }
             	 // { bidder: 'unruly',     params: { targetingUUID: '6f15e139-5f18-49a1-b52f-87e5e69ee65e', siteId: 1081534 } },
             	 // { bidder: 'contentignite',      labelAny: ['desktop', 'tablet', 'phone'], params: { accountID: '168237', zoneID: '316288'} } /*300x250*/
-            	 // { bidder: 'vi',         params: { pubId: '535034733735961', lang: 'en-US', cat: 'IAB17', bidFloor: 0.01 } }
+            	 { bidder: 'vi',         params: { pubId: '272766657673392', lang: 'en-US', cat: 'IAB17', bidFloor: 0.01 } }
             	] //./bids
             	},
             	//new ad unit block
