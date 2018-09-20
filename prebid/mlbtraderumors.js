@@ -77,7 +77,7 @@ var timeoutMap = {
             	{
             	 code: 'inreedvidSlot',
             	 mediaTypes: {
-            		 banner: { sizes: [[728, 90], [300, 250], [250, 250], [468, 60], [320, 50]] }, 
+            		 banner: { sizes: [[300, 250], [250, 250], [468, 60], [320, 50]] }, 
             	     // video:  { context: 'outstream', playerSize: [640, 480], mimes: ["video/x-flv", "video/mp4", "application/x-shockwave-flash", "application/javascript"] },
             	},
             	bids: [
@@ -107,7 +107,7 @@ var timeoutMap = {
             	{
             	 code: 'inreedvid1Slot',
             	 mediaTypes: {
-            		 banner: { sizes: [[728, 90], [300, 250], [320, 50]] },
+            		 banner: { sizes: [[300, 250], [250, 250], [468, 60], [320, 50]] },
             		 video:  { context: 'outstream', mimes: ["video/x-flv", "video/mp4", "application/x-shockwave-flash", "application/javascript"], protocols: [1, 2, 3, 4, 5, 6, 7, 8], playbackmethod: [2], playerSize: [640, 480] }, 
             	},
             	bids: [
@@ -130,7 +130,7 @@ var timeoutMap = {
             	{
             	 code: 'inreedvid2Slot',
             	 mediaTypes: {
-            	     banner: { sizes: [[728, 90], [300, 250], [320, 50]] },
+            	     banner: { sizes: [[300, 250], [250, 250], [468, 60], [320, 50]] },
             	     
             	},
             	bids: [
@@ -154,7 +154,7 @@ var timeoutMap = {
             	{
             	 code: 'inreedvid3Slot',
             	 mediaTypes: {
-            		 banner: { sizes: [[728, 90], [300, 250], [320, 50]] }, 
+            		 banner: { sizes: [[300, 250], [250, 250], [468, 60], [320, 50]] }, 
             	},
             	bids: [
             	 { bidder: 'teads',      params: { placementId: '95335', pageId: '87372' } },
@@ -292,10 +292,10 @@ $(document).ready(function(){
 // The calls to construct slots and display contents. div-1 is on screen,
 // div-2 is 3 viewports down, div-3 is 12 viewports down.
 googletag.cmd.push(function() {
-    	  inreedvidSlot = googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.com-HB-Vid-test',  [[300,250],[250,250],[728,90],[468,60],[320,50],[1,1],[640,480]], 'inreedvidSlot').addService(googletag.pubads());
-    	  inreedvid1Slot = googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test1', [[300,250],[728,90],[1,1],[970,250], [640, 480]], 'inreedvid1Slot').addService(googletag.pubads());
-    	  inreedvid2Slot = googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test2', [[300,250],[728,90],[1,1]], 'inreedvid2Slot').addService(googletag.pubads());
-    	  inreedvid3Slot = googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test3', [[300,250],[728,90],[1,1]], 'inreedvid3Slot').addService(googletag.pubads());
+    	  inreedvidSlot = googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.com-HB-Vid-test',  [[300,250],[250,250],[468,60],[320,50],[1,1],[640,480]], 'inreedvidSlot').addService(googletag.pubads());
+    	  inreedvid1Slot = googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test1', [[300,250],[250,250],[468,60],[320,50],[1,1],[640,480]], 'inreedvid1Slot').addService(googletag.pubads());
+    	  inreedvid2Slot = googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test2', [[300,250],[250,250],[468,60],[320,50],[1,1],[640,480]], 'inreedvid2Slot').addService(googletag.pubads());
+    	  inreedvid3Slot = googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test3', [[300,250],[250,250],[468,60],[320,50],[1,1],[640,480]], 'inreedvid3Slot').addService(googletag.pubads());
     	  
 googletag.pubads().enableLazyLoad({
     	fetchMarginPercent: 25,  // Fetch slots within 30 viewports.
