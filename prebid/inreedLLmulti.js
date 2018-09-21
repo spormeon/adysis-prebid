@@ -284,7 +284,7 @@ var timeoutMap = {
             }
 // have to add 1 on to the child (number) because the div counts as 1 in the string
 $(document).ready(function(){
-   $('<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvidSlot" style="height:250px; width:300px; background:#000000"></div></div><br>').insertAfter('#mvp-content-main p:nth-child(2)');
+   $('<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvidSlot" style="height:250px; width:300px"></div></div><br>').insertAfter('#mvp-content-main p:nth-child(2)');
    $('<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvid1Slot"></div></div><br>').insertAfter('#mvp-content-main p:nth-child(6)');
    $('<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvid2Slot"></div></div><br>').insertAfter('#mvp-content-main p:nth-child(10)');
    $('<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvid3Slot"></div></div><br>').insertAfter('#mvp-content-main p:nth-child(18)'); 
