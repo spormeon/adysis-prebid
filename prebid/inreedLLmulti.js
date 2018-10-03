@@ -303,7 +303,7 @@ googletag.pubads().enableLazyLoad({
     	mobileScaling: 1.0  // Double the above values on mobile.
 });
 googletag.pubads().setForceSafeFrame(true);
-googletag.pubads().setSafeFrameConfig({sandbox: true});
+// googletag.pubads().setSafeFrameConfig({sandbox: true});
 googletag.pubads().enableSingleRequest();
 // googletag.pubads().collapseEmptyDivs(true, true);
 googletag.pubads().setCentering(true);
