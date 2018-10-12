@@ -296,13 +296,13 @@ googletag.cmd.push(function() {
     	  inreedvid1Slot = googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test1', [[300,250],[728,90],[1,1],[970,250], [640, 480]], 'inreedvid1Slot').addService(googletag.pubads());
     	  inreedvid2Slot = googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test2', [[300,250],[728,90],[1,1]], 'inreedvid2Slot').addService(googletag.pubads());
     	  inreedvid3Slot = googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test3', [[300,250],[728,90],[1,1]], 'inreedvid3Slot').addService(googletag.pubads());
-googletag.pubads().setForceSafeFrame(true);
-   var pageConfig = {
-    allowOverlayExpansion: true,
-    allowPushExpansion: true,
-    sandbox: true
+//googletag.pubads().setForceSafeFrame(true);
+//  var pageConfig = {
+//    allowOverlayExpansion: true,
+//    allowPushExpansion: true,
+//    sandbox: true
 };
-googletag.pubads().setSafeFrameConfig(pageConfig);
+// googletag.pubads().setSafeFrameConfig(pageConfig);
 // googletag.pubads().setSafeFrameConfig({sandbox: true});
     	  
 googletag.pubads().enableLazyLoad({
