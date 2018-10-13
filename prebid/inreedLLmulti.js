@@ -111,7 +111,7 @@ var timeoutMap = {
             		 video:  { context: 'outstream', mimes: ["video/x-flv", "video/mp4", "application/x-shockwave-flash", "application/javascript"], protocols: [1, 2, 3, 4, 5, 6, 7, 8], playbackmethod: [2], playerSize: [640, 480] }, 
             	},
             	bids: [
-            	 { bidder: 'teads',      params: { placementId: '95333', pageId: '87372' } },
+            	 { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
             	 { bidder: 'appnexus',   params: { placementId: '11971351',  video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }, /* one placementId for all sizes */
             	 { bidder: 'districtm',  params: { placementId: 11937611 } }, /* 300x600 - 300x250 - 160x600 */  
             	 { bidder: 'aol',        params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x250 */ 
@@ -134,7 +134,7 @@ var timeoutMap = {
             	     
             	},
             	bids: [
-            	 { bidder: 'teads',      params: { placementId: '95334', pageId: '87372' } },
+            	 { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
             	 { bidder: 'appnexus',   params: { placementId: '11971351' } }, /* one placementId for all sizes */
             	 { bidder: 'districtm',  params: { placementId: 11937611 } }, /* 300x600 - 300x250 - 160x600 */ 
             	 { bidder: 'aol',        params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x250 */
@@ -157,7 +157,7 @@ var timeoutMap = {
             		 banner: { sizes: [[728, 90], [300, 250], [320, 50]] }, 
             	},
             	bids: [
-            	 { bidder: 'teads',      params: { placementId: '95335', pageId: '87372' } },
+            	 { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
             	 { bidder: 'appnexus',   params: { placementId: '11971351' } }, /* one placementId for all sizes */
             	 { bidder: 'districtm',  params: { placementId: 11937611 } }, /* 300x600 - 300x250 - 160x600 */ 
             	 { bidder: 'aol',        params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x250 */ 
