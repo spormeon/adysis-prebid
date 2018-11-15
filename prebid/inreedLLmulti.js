@@ -249,11 +249,11 @@ var timeoutMap = {
                 	   currency: {
                 	       'adServerCurrency': "GBP",
                 	       'granularityMultiplier': 1,
-                	       'conversionRateFile': 'https://currency.prebid.org/latest.json',
+                	       'conversionRateFile': 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json',
                 	    },
                 	 sizeConfig: [{
                 mediaQuery: '(min-width: 769px)',
-                sizesSupported: [[970, 250], [970, 90], [728, 90], [640, 480], [640, 390], [550, 310], [468, 60], [320, 50], [300, 600], [300, 250], [160, 600], [120, 600], [1, 1], [1800, 1000], [1600, 1050]],
+                sizesSupported: [[728, 90], [640, 480], [640, 390], [550, 310], [468, 60], [320, 50], [300, 600], [300, 250], [160, 600], [120, 600], [1, 1], [1800, 1000], [1600, 1050]],
                 labels: ['desktop']
                 }, {
                 mediaQuery: '(min-width: 500px) and (max-width: 768px)',
