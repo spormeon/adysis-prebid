@@ -9,7 +9,7 @@ document.getElementsByTagName('head')[0].appendChild(script);
     var pbjsEl = document.createElement("script");
     pbjsEl.type = "text/javascript";
     pbjsEl.async = true;
-    pbjsEl.src = "//d3s34vlfe7g7ew.cloudfront.net/prebid_teads.js";
+    pbjsEl.src = "//d3s34vlfe7g7ew.cloudfront.net/prebid2.5.1.js";
     var pbjsTargetEl = document.getElementsByTagName("head")[0];
     pbjsTargetEl.insertBefore(pbjsEl, pbjsTargetEl.firstChild);
 })();
