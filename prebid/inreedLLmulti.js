@@ -1,9 +1,11 @@
-function dynamicallyLoadScript(url) {
-    var script = document.createElement("script");  // create a script DOM node
-    script.src = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js";  // set its src to the provided URL
+(function () {
+var head= document.getElementsByTagName('head')[0];
+   var script= document.createElement('script');
+   script.type= 'text/javascript';
+   script.src= 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js';
+   head.appendChild(script);
+})();
 
-    document.head.appendChild(script);  // add it to the end of the head section of the page (could change 'head' to 'body' to add it to the end of the body section instead)
-}
 
 //load up google gpt.js
 (function () {
