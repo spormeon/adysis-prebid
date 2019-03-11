@@ -1,19 +1,3 @@
-(function() {
-var script = document.createElement('script');
-script.src = '//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js';
-script.type = 'text/javascript';
-document.getElementsByTagName('head')[0].appendChild(script);
-})();
-//load up prebid.js,  I think we need to load this earlier
-(function() {
-    var pbjsEl = document.createElement("script");
-    pbjsEl.type = "text/javascript";
-    pbjsEl.async = true;
-    pbjsEl.src = "//d3s34vlfe7g7ew.cloudfront.net/prebid2.0.0.js";
-    var pbjsTargetEl = document.getElementsByTagName("head")[0];
-    pbjsTargetEl.insertBefore(pbjsEl, pbjsTargetEl.firstChild);
-})();
-           
 //load up google gpt.js
 (function () {
   var gads = document.createElement('script');
@@ -25,6 +9,15 @@ document.getElementsByTagName('head')[0].appendChild(script);
   var node = document.getElementsByTagName('script')[0];
   node.parentNode.insertBefore(gads, node);
 })(); 
+//load up prebid.js,  I think we need to load this earlier
+(function() {
+    var pbjsEl = document.createElement("script");
+    pbjsEl.type = "text/javascript";
+    pbjsEl.async = true;
+    pbjsEl.src = "//d3s34vlfe7g7ew.cloudfront.net/prebid_2.0.0.js";
+    var pbjsTargetEl = document.getElementsByTagName("head")[0];
+    pbjsTargetEl.insertBefore(pbjsEl, pbjsTargetEl.firstChild);
+})();
 
 //  1000 def brings back bigger bids in Uk
 var timeoutMap = {
