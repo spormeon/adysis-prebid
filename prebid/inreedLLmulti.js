@@ -19,8 +19,17 @@
     pbjsTargetEl.insertBefore(pbjsEl, pbjsTargetEl.firstChild);
 })();
 
-var script = document.createElement('script');script.src = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js";document.getElementsByTagName('head')[0].appendChild(script);
+var jq = document.createElement("script");
 
+jq.addEventListener("load", proceed); // pass my hoisted function
+jq.src = "//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js";
+document.querySelector("head").appendChild(jq);
+
+function proceed () {
+    // jQuery load complete, do your magic
+
+
+}
 //have to add 1 on to the child (number) because the div counts as 1 in the string
   $(document).ready(function(){
      $('<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvidSlot"></div></div><br>').insertAfter('#mvp-content-main p:nth-child(2)');
