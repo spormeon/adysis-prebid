@@ -19,16 +19,6 @@
     pbjsTargetEl.insertBefore(pbjsEl, pbjsTargetEl.firstChild);
 })();
 
-//load up Jquery,  I think we need to load this earlier
-(function() {
-    var jquery = document.createElement("script");
-    jquery.type = "text/javascript";
-    jquery.async = true;
-    jquery.src = "//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js";
-    var TargetJquery = document.getElementsByTagName("head")[0];
-    TargetJquery.insertBefore(jquery, TargetJquery.firstChild);
-})();
-
 var script = document.createElement('script');script.src = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js";document.getElementsByTagName('head')[0].appendChild(script);
 
 //have to add 1 on to the child (number) because the div counts as 1 in the string
