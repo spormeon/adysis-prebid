@@ -1,9 +1,10 @@
+(function () {
 var jq = document.createElement("script");
 
 jq.addEventListener("load", proceed); // pass my hoisted function
 jq.src = "//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js";
 document.querySelector("head").appendChild(jq);
-
+})(); 
 function proceed () {
     // jQuery load complete, do your magic
 
