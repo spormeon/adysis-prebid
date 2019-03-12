@@ -20,7 +20,13 @@
     pbjsTargetEl.insertBefore(pbjsEl, pbjsTargetEl.firstChild);
 })();
  
-
+//have to add 1 on to the child (number) because the div counts as 1 in the string
+window.addEventListener('load',function(){
+          document.querySelector('#mvp-content-main p:nth-child(2)').insertAdjacentHTML('afterbegin','<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvidSlot"></div></div><br>');
+          document.querySelector('#mvp-content-main p:nth-child(3)').insertAdjacentHTML('afterbegin','<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvid1Slot"></div></div><br>');
+          document.querySelector('#mvp-content-main p:nth-child(5)').insertAdjacentHTML('afterbegin','<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvid2Slot"></div></div><br>');
+          document.querySelector('#mvp-content-main p:nth-child(7)').insertAdjacentHTML('afterbegin','<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvid3Slot"></div></div><br>');
+});
 
 //  1000 def brings back bigger bids in Uk
 var timeoutMap = {
@@ -296,13 +302,7 @@ googletag.cmd.push(function() {
 // googletag.pubads().setSafeFrameConfig(pageConfig);
 // googletag.pubads().setSafeFrameConfig({sandbox: true});
 
-//have to add 1 on to the child (number) because the div counts as 1 in the string
-window.addEventListener('load',function(){
-          document.querySelector('#mvp-content-main p:nth-child(1)').insertAdjacentHTML('afterbegin','<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvidSlot"></div></div><br>');
-          document.querySelector('#mvp-content-main p:nth-child(3)').insertAdjacentHTML('afterbegin','<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvid1Slot"></div></div><br>');
-          document.querySelector('#mvp-content-main p:nth-child(5)').insertAdjacentHTML('afterbegin','<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvid2Slot"></div></div><br>');
-          document.querySelector('#mvp-content-main p:nth-child(7)').insertAdjacentHTML('afterbegin','<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvid3Slot"></div></div><br>');
-})   	  
+   	  
 googletag.pubads().enableLazyLoad({
     	fetchMarginPercent: 25,  // Fetch slots within 30 viewports.
     	renderMarginPercent: 20,  // Render slots within 5000 viewports.
