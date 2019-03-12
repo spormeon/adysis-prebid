@@ -20,13 +20,14 @@
 })();
 
 
+//have to add 1 on to the child (number) because the div counts as 1 in the string
 
   
   window.addEventListener('load',function(){
-	    document.querySelector('#mvp-content-main p:nth-child(1)').insertAdjacentHTML('afterend','<div class="ad-reporter-ahytrfg35423">Advertisement<div id="inreedvidSlot"></div><div>');
-	    document.querySelector('.mvp-main-box p:nth-child(20)').insertAdjacentHTML('afterend','<div class="ad-reporter-ahytrfg35423">Advertisement<div id="inreedvid1Slot"></div><div>');
-	    document.querySelector('.mvp-main-box p:nth-child(40) ').insertAdjacentHTML('afterend','<div class="ad-reporter-ahytrfg35423">Advertisement<div id="inreedvid2Slot"></div><div>');
-	    document.querySelector('.mvp-main-box p:nth-child(60) ').insertAdjacentHTML('afterend','<div class="ad-reporter-ahytrfg35423">Advertisement<div id="inreedvid3Slot"></div><div>');
+	    document.querySelector('#mvp-content-main p:nth-child(1)').insertAdjacentHTML('afterend','<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvidSlot"></div></div><br>');
+	    document.querySelector('#mvp-content-main p:nth-child(20)').insertAdjacentHTML('afterend','<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvid1Slot"></div></div><br>');
+	    document.querySelector('#mvp-content-main p:nth-child(40)').insertAdjacentHTML('afterend','<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvid2Slot"></div></div><br>');
+	    document.querySelector('#mvp-content-main p:nth-child(60)').insertAdjacentHTML('afterend','<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvid3Slot"></div></div><br>');
 	})
 //  1000 def brings back bigger bids in Uk
 var timeoutMap = {
