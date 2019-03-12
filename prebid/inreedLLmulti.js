@@ -11,13 +11,7 @@
   var node = document.getElementsByTagName('script')[0];
   node.parentNode.insertBefore(gads, node);
 })(); 
-window.addEventListener('load',function(){
-    document.querySelector('#mvp-content-main p:nth-child(2)').insertAdjacentHTML('afterbegin','<br><div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvidSlot"></div></div><br>');
-    document.querySelector('#mvp-content-main p:nth-child(6)').insertAdjacentHTML('afterbegin','<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvid1Slot"></div></div><br>');
-    document.querySelector('#mvp-content-main p:nth-child(10)').insertAdjacentHTML('afterbegin','<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvid2Slot"></div></div><br>');
-    document.querySelector('#mvp-content-main p:nth-child(14)').insertAdjacentHTML('afterbegin','<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvid3Slot"></div></div><br>');
-          
-});
+
 //load up prebid.js,  I think we need to load this earlier
 (function() {
     var pbjsEl = document.createElement("script");
@@ -28,7 +22,12 @@ window.addEventListener('load',function(){
     pbjsTargetEl.insertBefore(pbjsEl, pbjsTargetEl.firstChild);
 })();
  
-
+window.addEventListener('load',function(){
+    document.querySelector('#mvp-content-main p:nth-child(1)').insertAdjacentHTML('afterend','<div class="ad-reporter-ahytrfg35423">Advertisement<div id="inreedvidSlot"></div><div>');
+    document.querySelector('.mvp-main-box p:nth-child(20)').insertAdjacentHTML('afterend','<div class="ad-reporter-ahytrfg35423">Advertisement<div id="inreedvid1Slot"></div><div>');
+    document.querySelector('.mvp-main-box p:nth-child(40) ').insertAdjacentHTML('afterend','<div class="ad-reporter-ahytrfg35423">Advertisement<div id="inreedvid2Slot"></div><div>');
+    document.querySelector('.mvp-main-box p:nth-child(60) ').insertAdjacentHTML('afterend','<div class="ad-reporter-ahytrfg35423">Advertisement<div id="inreedvid3Slot"></div><div>');
+})
 
 //  1000 def brings back bigger bids in Uk
 var timeoutMap = {
