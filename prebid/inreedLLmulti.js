@@ -10,15 +10,6 @@
   node.parentNode.insertBefore(gads, node);
 })(); 
 
-//have to add 1 on to the child (number) because the div counts as 1 in the string
-window.addEventListener('load',function(){
-	    document.querySelector('#mvp-content-main p:nth-child(1)').insertAdjacentHTML('afterend','<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvidSlot"></div></div><br>');
-	    document.querySelector('#mvp-content-main p:nth-child(3)').insertAdjacentHTML('afterend','<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvid1Slot"></div></div><br>');
-	    document.querySelector('#mvp-content-main p:nth-child(5)').insertAdjacentHTML('afterend','<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvid2Slot"></div></div><br>');
-	    document.querySelector('#mvp-content-main p:nth-child(7)').insertAdjacentHTML('afterend','<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvid3Slot"></div></div><br>');
-})
-
-
 //load up prebid.js,  I think we need to load this earlier
 (function() {
     var pbjsEl = document.createElement("script");
@@ -28,7 +19,16 @@ window.addEventListener('load',function(){
     var pbjsTargetEl = document.getElementsByTagName("head")[0];
     pbjsTargetEl.insertBefore(pbjsEl, pbjsTargetEl.firstChild);
 })();
-  
+ 
+//have to add 1 on to the child (number) because the div counts as 1 in the string
+window.addEventListener('load',function(){
+	    document.querySelector('#mvp-content-main p:nth-child(1)').insertAdjacentHTML('afterend','<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvidSlot"></div></div><br>');
+	    document.querySelector('#mvp-content-main p:nth-child(3)').insertAdjacentHTML('afterend','<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvid1Slot"></div></div><br>');
+	    document.querySelector('#mvp-content-main p:nth-child(5)').insertAdjacentHTML('afterend','<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvid2Slot"></div></div><br>');
+	    document.querySelector('#mvp-content-main p:nth-child(7)').insertAdjacentHTML('afterend','<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvid3Slot"></div></div><br>');
+})
+
+
 //  1000 def brings back bigger bids in Uk
 var timeoutMap = {
 		   0 : 1100,
