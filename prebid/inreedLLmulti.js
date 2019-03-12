@@ -23,10 +23,10 @@
 })();
  
 window.addEventListener('load',function(){
-    document.querySelector('#mvp-content-main p:nth-child(1)').insertAdjacentHTML('afterend','<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvidSlot"></div></div><br>');
-    document.querySelector('#mvp-content-main p:nth-child(2)').insertAdjacentHTML('afterend','<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvid1Slot"></div></div><br>');
-    document.querySelector('#mvp-content-main p:nth-child(3)').insertAdjacentHTML('afterend','<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvid2Slot"></div></div><br>');
-    document.querySelector('#mvp-content-main p:nth-child(4)').insertAdjacentHTML('afterend','<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvid3Slot"></div></div><br>');
+    document.querySelector('#mvp-content-main p:nth-child(2)').insertAdjacentHTML('beforeend','<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvidSlot"></div></div><br>');
+    document.querySelector('#mvp-content-main p:nth-child(6)').insertAdjacentHTML('beforeend','<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvid1Slot"></div></div><br>');
+    document.querySelector('#mvp-content-main p:nth-child(10)').insertAdjacentHTML('beforeend','<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvid2Slot"></div></div><br>');
+    document.querySelector('#mvp-content-main p:nth-child(14)').insertAdjacentHTML('beforeend','<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvid3Slot"></div></div><br>');
 })
 
 //  1000 def brings back bigger bids in Uk
