@@ -18,7 +18,7 @@
     pbjsEl.type = "text/javascript";
     pbjsEl.async = true;
     pbjsEl.src = "//d3s34vlfe7g7ew.cloudfront.net/prebid_teads.js";
-    var pbjsTargetEl = document.getElementsByTagName("head")[0];
+    var pbjsTargetEl = document.getElementsByTagName("footerbid")[0];
     pbjsTargetEl.insertBefore(pbjsEl, pbjsTargetEl.firstChild);
 })();
  
