@@ -1,11 +1,3 @@
-//have to add 1 on to the child (number) because the div counts as 1 in the string
-window.addEventListener('load',function(){
-	    document.querySelector('#mvp-content-main p:nth-child(1)').insertAdjacentHTML('afterend','<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvidSlot"></div></div><br>');
-	    document.querySelector('#mvp-content-main p:nth-child(3)').insertAdjacentHTML('afterend','<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvid1Slot"></div></div><br>');
-	    document.querySelector('#mvp-content-main p:nth-child(5)').insertAdjacentHTML('afterend','<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvid2Slot"></div></div><br>');
-	    document.querySelector('#mvp-content-main p:nth-child(7)').insertAdjacentHTML('afterend','<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvid3Slot"></div></div><br>');
-})
-
 //load up google gpt.js
 (function () {
   var gads = document.createElement('script');
@@ -17,6 +9,16 @@ window.addEventListener('load',function(){
   var node = document.getElementsByTagName('script')[0];
   node.parentNode.insertBefore(gads, node);
 })(); 
+
+//have to add 1 on to the child (number) because the div counts as 1 in the string
+window.addEventListener('load',function(){
+	    document.querySelector('#mvp-content-main p:nth-child(1)').insertAdjacentHTML('afterend','<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvidSlot"></div></div><br>');
+	    document.querySelector('#mvp-content-main p:nth-child(3)').insertAdjacentHTML('afterend','<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvid1Slot"></div></div><br>');
+	    document.querySelector('#mvp-content-main p:nth-child(5)').insertAdjacentHTML('afterend','<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvid2Slot"></div></div><br>');
+	    document.querySelector('#mvp-content-main p:nth-child(7)').insertAdjacentHTML('afterend','<div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvid3Slot"></div></div><br>');
+})
+
+
 //load up prebid.js,  I think we need to load this earlier
 (function() {
     var pbjsEl = document.createElement("script");
@@ -38,9 +40,9 @@ var timeoutMap = {
 		   6 : 800,
 		   7 : 800,
 		   8 : 800,
-		   9 : 1000,
-		  10 : 1000,
-		  11 : 1000,
+		   9 : 800,
+		  10 : 800,
+		  11 : 800,
 		  12 : 600,
 		  13 : 600,
 		  14 : 1000,
