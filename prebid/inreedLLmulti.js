@@ -66,7 +66,7 @@ var timeoutMap = {
             // example of supplying a custom var from a prev. defined var
             assertive_timeout = PREBID_TIMEOUT;
 
-           
+       var FAILSAFE_TIMEOUT = 3000;   
 
             var adUnits = [
             	//new ad unit block
@@ -274,10 +274,16 @@ var timeoutMap = {
                 googletag.cmd.push(function() {
                     pbjs.que.push(function() {
                         pbjs.setTargetingForGPTAsync();
-                        // googletag.pubads().refresh();
+                        googletag.pubads().refresh();
                     });
                 });
             }
+            
+         // in case PBJS doesn't load
+            setTimeout(function() {
+                initAdserver();
+            }, FAILSAFE_TIMEOUT);
+            
 //have to add 1 on to the child (number) because the div counts as 1 in the string
 document.addEventListener('ready',function(){
            document.querySelector('#mvp-content-main p:nth-child(2)').insertAdjacentHTML('afterbegin','<br><div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvidSlot"></div></div><br>');
@@ -301,7 +307,7 @@ googletag.cmd.push(function() {
 // };
 // googletag.pubads().setSafeFrameConfig(pageConfig);
 // googletag.pubads().setSafeFrameConfig({sandbox: true});
-googletag.pubads().refresh();
+
    	  
 googletag.pubads().enableLazyLoad({
     	fetchMarginPercent: 25,  // Fetch slots within 30 viewports.
