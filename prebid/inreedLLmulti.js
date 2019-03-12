@@ -301,7 +301,7 @@ googletag.cmd.push(function() {
 // };
 // googletag.pubads().setSafeFrameConfig(pageConfig);
 // googletag.pubads().setSafeFrameConfig({sandbox: true});
-
+googletag.pubads().refresh();
    	  
 googletag.pubads().enableLazyLoad({
     	fetchMarginPercent: 25,  // Fetch slots within 30 viewports.
