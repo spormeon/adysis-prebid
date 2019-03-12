@@ -74,7 +74,7 @@ var timeoutMap = {
             // example of supplying a custom var from a prev. defined var
             assertive_timeout = PREBID_TIMEOUT;
 
-       var FAILSAFE_TIMEOUT = 3000;   
+       var FAILSAFE_TIMEOUT = 5000;   
 
             var adUnits = [
             	//new ad unit block
@@ -224,7 +224,7 @@ var timeoutMap = {
                 	  priceGranularity: customConfigObject,
                 	  consentManagement: {
                     cmpApi: 'iab',
-                    timeout: 5000,
+                    timeout: 3000,
                     allowAuctionWithoutConsent: true
                   },
                  // cache: {url: "//prebid.adnxs.com/pbc/v1/cache"},
