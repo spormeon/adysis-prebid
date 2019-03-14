@@ -32,21 +32,21 @@ window.addEventListener('load',function(){
 
 //  1000 def brings back bigger bids in Uk
 var timeoutMap = {
-		   0 : 1200,
-		   1 : 1200,
-		   2 : 1200,
-		   3 : 1200,
-		   4 : 1200,
-		   5 : 1200,
-		   6 : 1200,
-		   7 : 1200,
-		   8 : 1200,
-		   9 : 1200,
-		  10 : 1200,
-		  11 : 1200,
-		  12 : 1200,
-		  13 : 1200,
-		  14 : 1200,
+		   0 : 1400,
+		   1 : 1400,
+		   2 : 1400,
+		   3 : 1400,
+		   4 : 1400,
+		   5 : 1400,
+		   6 : 1400,
+		   7 : 1400,
+		   8 : 1400,
+		   9 : 1400,
+		  10 : 1400,
+		  11 : 1400,
+		  12 : 1400,
+		  13 : 1400,
+		  14 : 1400,
 		  15 : 1200,
 		  16 : 1200,
 		  17 : 1200,
@@ -74,7 +74,7 @@ var timeoutMap = {
             // example of supplying a custom var from a prev. defined var
             assertive_timeout = PREBID_TIMEOUT;
 
-       var FAILSAFE_TIMEOUT = 5000;   
+       var FAILSAFE_TIMEOUT = 4000;   
 
             var adUnits = [
             	//new ad unit block
@@ -224,14 +224,14 @@ var timeoutMap = {
                 	  priceGranularity: customConfigObject,
                 	  consentManagement: {
                     cmpApi: 'iab',
-                    timeout: 3000,
+                    timeout: 3500,
                     allowAuctionWithoutConsent: true
                   },
                  // cache: {url: "//prebid.adnxs.com/pbc/v1/cache"},
                  s2sConfig: {
                      accountId: 'e31f627f-53a3-4288-9979-482d3c6ffc76',
-                     enabled: false,
-                     bidders: [],
+                     enabled: true,
+                     bidders: [appnexus, districtm],
                      timeout: 800,
                      adapter: 'prebidServer',
                      endpoint: 'https://prebid.adnxs.com/pbs/v1/openrtb2/auction',
@@ -241,7 +241,7 @@ var timeoutMap = {
                   },
                   userSync: {
                       iframeEnabled: true,
-                      syncsPerBidder: 50, // and no more than 3 syncs at a time
+                      syncsPerBidder: 10, // and no more than 3 syncs at a time
                       syncDelay: 6000, // 5 seconds after the auction
                   },
                 debug: true,
