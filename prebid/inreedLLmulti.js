@@ -329,7 +329,7 @@ googletag.pubads().setCentering(true);
 googletag.pubads().refresh([inreedvidSlot]);
 // googletag.pubads().enableVideoAds();
 // googletag.pubads().enableAsyncRendering();
-// googletag.pubads().disableInitialLoad();
+googletag.pubads().disableInitialLoad();
 googletag.enableServices();
 // As defined by lazy load settings, initially Slot 1 will be fetched and
 // rendered on mobile and desktop. Slot 2 will be fetched, on mobile and
