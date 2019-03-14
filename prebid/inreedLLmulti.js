@@ -74,7 +74,7 @@ var timeoutMap = {
             // example of supplying a custom var from a prev. defined var
             assertive_timeout = PREBID_TIMEOUT;
 
-       var FAILSAFE_TIMEOUT = 4000;   
+       var FAILSAFE_TIMEOUT = 3000;   
 
             var adUnits = [
             	//new ad unit block
