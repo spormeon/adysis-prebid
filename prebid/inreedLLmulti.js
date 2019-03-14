@@ -224,7 +224,7 @@ var timeoutMap = {
                 	  priceGranularity: customConfigObject,
                 	  consentManagement: {
                     cmpApi: 'iab',
-                    timeout: 3500,
+                    timeout: 5000,
                     allowAuctionWithoutConsent: true
                   },
                  // cache: {url: "//prebid.adnxs.com/pbc/v1/cache"},
