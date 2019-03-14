@@ -325,7 +325,7 @@ googletag.pubads().enableLazyLoad({
 googletag.pubads().enableSingleRequest();
 googletag.pubads().collapseEmptyDivs(true, true);
 googletag.pubads().setCentering(true);
-googletag.pubads().enableVideoAds();
+// googletag.pubads().enableVideoAds();
 // googletag.pubads().enableAsyncRendering();
 // googletag.pubads().disableInitialLoad();
 googletag.enableServices();
