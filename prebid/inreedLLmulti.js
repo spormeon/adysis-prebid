@@ -92,7 +92,7 @@ var timeoutMap = {
             	},
             	bids: [
             	 { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
-            	 { bidder: 'appnexus',   params: { placementId: '11971351', video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }, /* one placementId for all sizes */
+            	 { bidder: 'appnexus',   params: { placementId: '11971351' } }, /* one placementId for all sizes */
             	 // { bidder: 'appnexus',   params: { placementId: '13232392'} }, /* demo video placement, always returns a vid, only works client side, pretty sure having this on lifts Teads to bidding higher */
             	 { bidder: 'districtm',  params: { placementId: 11937611 } }, /* 300x600 - 300x250 - 160x600 */ 
             	 { bidder: 'districtm',  params: { placementId: 11937611, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } },
@@ -125,7 +125,7 @@ var timeoutMap = {
             	},
             	bids: [
             	 { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
-            	 { bidder: 'appnexus',   params: { placementId: '11971351',  video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }, /* one placementId for all sizes */
+            	 { bidder: 'appnexus',   params: { placementId: '11971351' } }, /* one placementId for all sizes */
             	 { bidder: 'districtm',  params: { placementId: 11937611 } }, /* 300x600 - 300x250 - 160x600 */  
             	 { bidder: 'aol',        params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x250 */ 
             	 // { bidder: 'brealtime',  params: { placementId: '12002335' } },  /* 300x250 */ 
