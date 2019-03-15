@@ -266,8 +266,8 @@ var timeoutMap = {
                       syncsPerBidder: 50, // and no more than 3 syncs at a time
                       syncDelay: 6000, // 5 seconds after the auction
                       filterSettings: {  
-                      iframe: { bidders: ['districtm', 'districtmDMX', 'appnexus', 'aol'], filter: 'include' },
-                      image:  { bidders: ['districtm', 'districtmDMX', 'appnexus', 'aol'], filter: 'include' } 
+                      iframe: { bidders: ['pulsepoint'], filter: 'exclude' },
+                      image:  { bidders: ['pulsepoint'], filter: 'exclude' } 
                       },
                   },
                 debug: true,
