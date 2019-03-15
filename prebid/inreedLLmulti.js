@@ -82,12 +82,12 @@ var timeoutMap = {
             	 code: 'inreedvidSlot',
             	 mediaTypes: {
             		 banner: { sizes: [[728, 90], [300, 250], [250, 250], [468, 60], [320, 50]] }, 
-            	     video:  { context: 'outstream', playerSize: [640, 480], mimes: ["video/x-flv", "video/mp4", "application/x-shockwave-flash", "application/javascript"] },
+            	     video:  { context: 'outstream', playerSize: [640, 480] },
             	},
             	bids: [
             	 { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
-            	 { bidder: 'appnexus',   params: { placementId: '11971351', video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }, /* one placementId for all sizes */
-            	 // { bidder: 'appnexus',   params: { placementId: '13232392',  video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }, /* demo video placement, always returns a vid, only works client side */
+            	 // { bidder: 'appnexus',   params: { placementId: '11971351', video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }, /* one placementId for all sizes */
+            	 { bidder: 'appnexus',   params: { placementId: '13232392'} }, /* demo video placement, always returns a vid, only works client side */
             	 // { bidder: 'districtm',  params: { placementId: 11937611 } }, /* 300x600 - 300x250 - 160x600 */ 
             	 { bidder: 'districtm',  params: { placementId: 11937611 } },
             	 { bidder: 'aol',        params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x250 */ 
