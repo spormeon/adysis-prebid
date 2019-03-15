@@ -311,7 +311,7 @@ var timeoutMap = {
 // The calls to construct slots and display contents. div-1 is on screen,
 // div-2 is 3 viewports down, div-3 is 12 viewports down.
 googletag.cmd.push(function() {
-    	  inreedvidSlot = googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.com-HB-Vid-test',  [[300,250],[250,250],[728,90],[468,60],[320,50],[1,1]], 'inreedvidSlot').addService(googletag.pubads());
+    	  inreedvidSlot = googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.com-HB-Vid-test',  [[300,250],[250,250],[728,90],[468,60],[320,50],[1,1],[550,310]], 'inreedvidSlot').addService(googletag.pubads());
     	  inreedvid1Slot = googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test1', [[300,250],[250,250],[728,90],[468,60],[320,50],[1,1],[640,480]], 'inreedvid1Slot').addService(googletag.pubads());
     	  inreedvid2Slot = googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test2', [[300,250],[250,250],[728,90],[468,60],[320,50],[1,1],[640,480]], 'inreedvid2Slot').addService(googletag.pubads());
     	  inreedvid3Slot = googletag.defineSlot('/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test3', [[300,250],[250,250],[728,90],[468,60],[320,50],[1,1],[640,480]], 'inreedvid3Slot').addService(googletag.pubads());
