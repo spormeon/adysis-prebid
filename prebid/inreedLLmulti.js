@@ -1,10 +1,3 @@
-// background.js
-browser.runtime.onMessage.addListener(message => {
-  console.log("background: onMessage", message);
-
-  // Add this line:
-  return Promise.resolve("Dummy response to keep the console quiet");
-});
 //have to add 1 on to the child (number) because the div counts as 1 in the string 
 window.addEventListener('DOMContentLoaded',function(){
     document.querySelector('#mvp-content-main p:nth-child(2)').insertAdjacentHTML('afterbegin','<br><div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvidSlot"></div></div><br>');
