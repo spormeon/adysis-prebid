@@ -81,8 +81,8 @@ var timeoutMap = {
             	{
             	 code: 'inreedvidSlot',
             	 mediaTypes: {
-            		 banner: { sizes: [[728, 90], [300, 250], [250, 250], [468, 60], [320, 50]] }, 
-            	     video:  { context: 'outstream', playerSize: [550, 310], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript'], playbackmethod: [2], minduration: 1,
+            		 
+            	     video:  { context: 'outstream', playerSize: [550, 310], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', "video/webm"], playbackmethod: [2], minduration: 1,
             	            maxduration: 30,
             	            protocols: [1, 2],
             	            w: 1,
@@ -255,7 +255,7 @@ var timeoutMap = {
                      timeout: 1000,
                      adapter: 'prebidServer',
                      endpoint: 'https://prebid.adnxs.com/pbs/v1/openrtb2/auction',
-                     // syncEndpoint: 'https://prebid.adnxs.com/pbs/v1/cookie_sync',
+                     syncEndpoint: 'https://prebid.adnxs.com/pbs/v1/cookie_sync',
                      // cookieSet: true,
                      // cookiesetUrl: 'https://acdn.adnxs.com/cookieset/cs.js'
                   },
