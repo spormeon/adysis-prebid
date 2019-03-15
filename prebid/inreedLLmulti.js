@@ -233,7 +233,7 @@ var timeoutMap = {
                 pbjs.bidderSettings = { 
                 	        aol:               { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.85; } }, // adjust the bid in real time before the auction takes place
                 	        districtm:         { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.90; } }, // adjust the bid in real time before the auction takes place
-                	        districtmDMX:       { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.90; } }, // adjust the bid in real time before the auction takes place
+                	        districtmDMX:      { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.90; } }, // adjust the bid in real time before the auction takes place
                 	        sekindonUM:        { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.75; } }, // adjust the bid in real time before the auction takes place
                 	        brealtime:         { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.80; } }, // adjust the bid in real time before the auction takes place
                 	        springserveAlias2: { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.65; } }, // adjust the bid in real time before the auction takes place
@@ -265,6 +265,12 @@ var timeoutMap = {
                       iframeEnabled: true,
                       syncsPerBidder: 50, // and no more than 3 syncs at a time
                       syncDelay: 6000, // 5 seconds after the auction
+                      filterSettings: {
+                          iframe: {
+                              bidders: ['districtm', 'districtmDMX', 'appnexus', 'aol'],
+                              filter: 'include'
+                          }
+                      }
                   },
                 debug: true,
                 enableSendAllBids: false, // Default will be `true` as of 1.0
