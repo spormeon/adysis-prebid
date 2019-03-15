@@ -114,7 +114,7 @@ var timeoutMap = {
             	 code: 'inreedvid1Slot',
             	 mediaTypes: {
             		 banner: { sizes: [[728, 90], [300, 250], [320, 50]] },
-            		 video:  { context: 'outstream', mimes: ["video/x-flv", "video/mp4", "application/x-shockwave-flash", "application/javascript"], protocols: [1, 2, 3, 4, 5, 6, 7, 8], playbackmethod: [2], playerSize: [640, 480] }, 
+            		 video:  { context: 'outstream', mimes: ["video/x-flv", "video/mp4", "application/x-shockwave-flash", "application/javascript"], protocols: [1, 2, 3, 4, 5, 6, 7, 8], playbackmethod: [2], playerSize: [550, 310] }, 
             	},
             	bids: [
             	 { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
