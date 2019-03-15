@@ -6,7 +6,7 @@ window.addEventListener('DOMContentLoaded',function(){
     document.querySelector('.richcontent p:nth-child(10)').insertAdjacentHTML('afterbegin','<br><div class="ad-reporter-ahytrfg35423"><div id="advertisement">Advertisement</div><div id="inreedvid2Slot"></div></div><br>');
     document.querySelector('.richcontent p:nth-child(14)').insertAdjacentHTML('afterbegin','<br><div class="ad-reporter-ahytrfg35423"><div id="advertisement">Advertisement</div><div id="inreedvid3Slot"></div></div><br>');
 });
-document.getElementById('advertisement').style.color = "blue";
+window.getElementById('advertisement').style.color = "blue";
 //load up google gpt.js
 (function () {
   var gads = document.createElement('script');
