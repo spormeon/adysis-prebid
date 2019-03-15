@@ -92,7 +92,7 @@ var timeoutMap = {
             	},
             	bids: [
             	 { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
-            	 // { bidder: 'appnexus',   params: { placementId: '11971351', video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }, /* one placementId for all sizes */
+            	 { bidder: 'appnexus',   params: { placementId: '11971351', video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }, /* one placementId for all sizes */
             	 // { bidder: 'appnexus',   params: { placementId: '13232392'} }, /* demo video placement, always returns a vid, only works client side, pretty sure having this on lifts Teads to bidding higher */
             	 { bidder: 'districtm',  params: { placementId: 11937611 } }, /* 300x600 - 300x250 - 160x600 */ 
             	 { bidder: 'districtm',  params: { placementId: 11937611 } },
