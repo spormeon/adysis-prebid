@@ -95,9 +95,11 @@ var timeoutMap = {
             	 // { bidder: 'conversant', params: { site_id: '118233' } },  /* 300x250 */ 
             	 { bidder: 'pulsepoint', params: { cf: '300X250', cp: '561446', ct: '602639' } }, /* 300x250 */
             	 { bidder: 'sovrn',      params: { tagid: '575683' } }, /* 300x250 */
-            	 // { bidder: 'somoaudience', params: { placement_hash: '1152340cac3268b0e737b49c1382cd2b' } }, /*300x250*/
+            	 { bidder: 'somoaudience', params: { placement_hash: '1152340cac3268b0e737b49c1382cd2b' } }, /*300x250*/
             	 { bidder: '33across',   params: { siteId : 'cLN3UCBHar5OfDrkHcnlKl', productId: 'siab' } }, /*All sizes*/
             	 { bidder: 'rhythmone',  params: { placementId: '76184' } }, /* one placementId for all sizes */
+            	 { bidder: 'adsparc',      labelAny: ['desktop', 'tablet', 'phone'], params: { networkId: '9969', siteId: '1019801'} }, /*one placementId for all sizes*/	
+            	 { bidder: 'komoona',      labelAny: ['desktop', 'tablet', 'phone'], params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: '2d14facbe61621faad0c7b2aa0458cff' } },  /* Golfwrx.com _KB 300x250 */
             	 // { bidder: "ix",         params: { siteId: "281563", size: [300, 250] } },
             	 // { bidder: "yieldmo",    params: { placementId: "1990667709809591856" } } /* no adapter in file */
             	 { bidder: 'gumgum',     params: { inSlot: '14600' } } /*gumgum-300x250*/
@@ -123,9 +125,11 @@ var timeoutMap = {
             	 // { bidder: 'conversant', params: { site_id: '118233' } },  /* 300x250 */ 
             	 { bidder: 'pulsepoint', params: { cf: '300X250', cp: '561446', ct: '602639' } }, /* 300x250 */
             	 { bidder: 'sovrn',      params: { tagid: '575683' } }, /* 300x250 */
-            	 // { bidder: 'somoaudience', params: { placement_hash: '1152340cac3268b0e737b49c1382cd2b' } }, /*300x250*/
+            	 { bidder: 'somoaudience', params: { placement_hash: '1152340cac3268b0e737b49c1382cd2b' } }, /*300x250*/
             	 { bidder: '33across',   params: { siteId : 'cLN3UCBHar5OfDrkHcnlKl', productId: 'siab' } }, /*All sizes*/
             	 { bidder: 'rhythmone',  params: { placementId: '76184' } }, /* one placementId for all sizes */
+            	 { bidder: 'adsparc',      labelAny: ['desktop', 'tablet', 'phone'], params: { networkId: '9969', siteId: '1019801'} }, /*one placementId for all sizes*/	
+            	 { bidder: 'komoona',      labelAny: ['desktop', 'tablet', 'phone'], params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: '2d14facbe61621faad0c7b2aa0458cff' } },  /* Golfwrx.com _KB 300x250 */
             	 // { bidder: "ix",         params: { siteId: "281563", size: [300, 250] } },
             	 { bidder: 'gumgum',     params: { inSlot: '14600' } } /*gumgum-300x250*/
             	 // { bidder: 'contentignite',      labelAny: ['desktop', 'tablet', 'phone'], params: { accountID: '168237', zoneID: '316288'} } /*300x250*/
@@ -148,9 +152,11 @@ var timeoutMap = {
             	 // { bidder: 'conversant', params: { site_id: '118233' } },  /* 300x250 */ 
             	 { bidder: 'pulsepoint', params: { cf: '300X250', cp: '561446', ct: '602639' } }, /* 300x250 */
             	 { bidder: 'sovrn',      params: { tagid: '575683' } }, /* 300x250 */
-            	 // { bidder: 'somoaudience', params: { placement_hash: '1152340cac3268b0e737b49c1382cd2b' } }, /*300x250*/
+            	 { bidder: 'somoaudience', params: { placement_hash: '1152340cac3268b0e737b49c1382cd2b' } }, /*300x250*/
             	 { bidder: '33across',   params: { siteId : 'cLN3UCBHar5OfDrkHcnlKl', productId: 'siab' } }, /*All sizes*/
             	 { bidder: 'rhythmone',  params: { placementId: '76184' } }, /* one placementId for all sizes */
+            	 { bidder: 'adsparc',      labelAny: ['desktop', 'tablet', 'phone'], params: { networkId: '9969', siteId: '1019801'} }, /*one placementId for all sizes*/	
+            	 { bidder: 'komoona',      labelAny: ['desktop', 'tablet', 'phone'], params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: '2d14facbe61621faad0c7b2aa0458cff' } },  /* Golfwrx.com _KB 300x250 */
             	 // { bidder: "ix",         params: { siteId: "281563", size: [300, 250] } },
             	 { bidder: 'gumgum',     params: { inSlot: '14600' } }, /*gumgum-300x250*/
             	 { bidder: 'contentignite',      labelAny: ['desktop', 'tablet', 'phone'], params: { accountID: '168237', zoneID: '316288'} } /*300x250*/
@@ -173,9 +179,11 @@ var timeoutMap = {
             	 // { bidder: 'conversant', params: { site_id: '118233' } },  /* 300x250 */ 
             	 { bidder: 'pulsepoint', params: { cf: '300X250', cp: '561446', ct: '602639' } }, /* 300x250 */
             	 { bidder: 'sovrn',      params: { tagid: '575683' } }, /* 300x250 */
-            	 // { bidder: 'somoaudience', params: { placement_hash: '1152340cac3268b0e737b49c1382cd2b' } }, /*300x250*/
+            	 { bidder: 'somoaudience', params: { placement_hash: '1152340cac3268b0e737b49c1382cd2b' } }, /*300x250*/
             	 { bidder: '33across',   params: { siteId : 'cLN3UCBHar5OfDrkHcnlKl', productId: 'siab' } }, /*All sizes*/
             	 { bidder: 'rhythmone',  params: { placementId: '76184' } }, /* one placementId for all sizes */
+            	 { bidder: 'adsparc',      labelAny: ['desktop', 'tablet', 'phone'], params: { networkId: '9969', siteId: '1019801'} }, /*one placementId for all sizes*/	
+            	 { bidder: 'komoona',      labelAny: ['desktop', 'tablet', 'phone'], params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: '2d14facbe61621faad0c7b2aa0458cff' } },  /* Golfwrx.com _KB 300x250 */
             	 // { bidder: "ix",         params: { siteId: "281563", size: [300, 250] } },
             	 { bidder: 'gumgum',     params: { inSlot: '14600' } }, /*gumgum-300x250*/
             	 { bidder: 'contentignite',      labelAny: ['desktop', 'tablet', 'phone'], params: { accountID: '168237', zoneID: '316288'} } /*300x250*/
