@@ -268,7 +268,7 @@ var timeoutMap = {
                       syncDelay: 6000, // 5 seconds after the auction
                       filterSettings: {  
                       iframe: { bidders: ['pulsepoint'], filter: 'exclude' },
-                      image:  { bidders: [], filter: 'exclude' } 
+                      image:  { bidders: ['*'], filter: 'exclude' } 
                       },
                   },
                 debug: true,
