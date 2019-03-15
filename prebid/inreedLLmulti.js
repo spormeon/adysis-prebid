@@ -265,12 +265,10 @@ var timeoutMap = {
                       iframeEnabled: true,
                       syncsPerBidder: 50, // and no more than 3 syncs at a time
                       syncDelay: 6000, // 5 seconds after the auction
-                      filterSettings: {
-                          iframe: {
-                              bidders: ['districtm', 'districtmDMX', 'appnexus', 'aol'],
-                              filter: 'include'
-                          }
-                      }
+                      filterSettings: {  
+                      iframe: { bidders: ['districtm', 'districtmDMX', 'appnexus', 'aol'], filter: 'include' },
+                      image:  { bidders: ['districtm', 'districtmDMX', 'appnexus', 'aol'], filter: 'include' } 
+                      },
                   },
                 debug: true,
                 enableSendAllBids: false, // Default will be `true` as of 1.0
