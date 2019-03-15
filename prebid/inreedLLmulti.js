@@ -96,7 +96,7 @@ var timeoutMap = {
             	 // { bidder: 'appnexus',   params: { placementId: '13232392'} }, /* demo video placement, always returns a vid, only works client side, pretty sure having this on lifts Teads to bidding higher */
             	 { bidder: 'districtm',  params: { placementId: 11937611 } }, /* 300x600 - 300x250 - 160x600 */ 
             	 { bidder: 'districtm',  params: { placementId: 11937611, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } },
-            	 { bidder: 'districtDMX',  params: { dmxid: 171413, memberid: 100041  } }, /* 300x600 - 300x250 - 160x600 */ 
+            	 { bidder: 'districtmDMX',  params: { dmxid: 171413, memberid: 100041  } }, /* 300x600 - 300x250 - 160x600 */ 
             	 { bidder: 'aol',        params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x250 */ 
             	 // { bidder: 'brealtime',  params: { placementId: '12002335' } },  /* 300x250 */   
             	 // { bidder: 'conversant', params: { site_id: '118233' } },  /* 300x250 */ 
@@ -233,7 +233,7 @@ var timeoutMap = {
                 pbjs.bidderSettings = { 
                 	        aol:               { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.85; } }, // adjust the bid in real time before the auction takes place
                 	        districtm:         { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.90; } }, // adjust the bid in real time before the auction takes place
-                	        districtDMX:       { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.90; } }, // adjust the bid in real time before the auction takes place
+                	        districtmDMX:       { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.90; } }, // adjust the bid in real time before the auction takes place
                 	        sekindonUM:        { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.75; } }, // adjust the bid in real time before the auction takes place
                 	        brealtime:         { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.80; } }, // adjust the bid in real time before the auction takes place
                 	        springserveAlias2: { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.65; } }, // adjust the bid in real time before the auction takes place
