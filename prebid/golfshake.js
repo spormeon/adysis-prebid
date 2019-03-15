@@ -1,4 +1,4 @@
-import indexStyle from '/advert.css';
+import './advert.css';
 //have to add 1 on to the child (number) because the div counts as 1 in the string 
 window.addEventListener('DOMContentLoaded',function(){
     document.querySelector('.richcontent p:nth-child(2)').insertAdjacentHTML('afterbegin','<br><div class="ad-reporter-ahytrfg35423"><div class="advertisement">Advertisement</div><div id="inreedvidSlot"></div></div><br>');
