@@ -380,7 +380,7 @@ googletag.cmd.push(function () {
 	  })(window.googletag, window.pbjs, {
 	    definitons: {
 	      inreedvidSlot: {
-	        adUnitPath: '/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test',
+	        adUnitPath: '/1001824/Golfwrx.com-HB/Golfwrx.com-HB-Vid-test',
 	        size: 'mappinginreedvidslot',
 	        sizeMapping: 'mappinginreedvidslot',
 	        timeout: 40000,
