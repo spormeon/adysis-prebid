@@ -585,7 +585,7 @@ setTimeout(function() { initAdserver(); }, PREBID_TIMEOUT);
     	    googletag.pubads().enableLazyLoad({
     	    	fetchMarginPercent: 25,  // Fetch slots within 30 viewports.
     	    	renderMarginPercent: 20,  // Render slots within 5000 viewports.
-    	    	mobileScaling: 1.0  // Double the above values on mobile.
+    	    	mobileScaling: 0.1  // Double the above values on mobile.
     	    });
     	    googletag.enableServices();
     	    googletag.pubads().addEventListener('impressionViewable', function (event) {
