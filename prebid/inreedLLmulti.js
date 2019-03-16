@@ -82,7 +82,7 @@ var timeoutMap = {
             	 code: 'inreedvidSlot',
             	 mediaTypes: {
             		 banner: { sizes: [[728, 90], [300, 250], [250, 250], [468, 60], [320, 50]] }, 
-            	     video:  { context: 'intstream', playerSize: [640, 480], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', "video/webm"], playbackmethod: [2], minduration: 1,
+            	     video:  { context: 'outstream', playerSize: [640, 480], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', "video/webm"], playbackmethod: [2], minduration: 1,
             	            maxduration: 30,
             	            protocols: [1, 2],
             	            w: 1,
