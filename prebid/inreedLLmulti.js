@@ -88,7 +88,7 @@ var timeoutMap = {
             	            w: 1,
             	            h: 1,
             	            startdelay: 1,
-            	            placement: 1, },
+            	            placement: 1 },
             	},
             	bids: [
             	 { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
