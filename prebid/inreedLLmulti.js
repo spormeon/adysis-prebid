@@ -255,7 +255,7 @@ var timeoutMap = {
                      syncEndpoint: 'https://prebid.adnxs.com/pbs/v1/cookie_sync',
                      // cookieSet: true,
                      // cookiesetUrl: 'https://acdn.adnxs.com/cookieset/cs.js'
-                     cache: {url: "//prebid.adnxs.com/pbc/v1/cache"},
+                     // cache: {url: "//prebid.adnxs.com/pbc/v1/cache"},
                   },
                   userSync: {
                       iframeEnabled: true,
