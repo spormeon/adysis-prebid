@@ -82,7 +82,7 @@ var timeoutMap = {
             	 code: 'inreedvidSlot',
             	 mediaTypes: {
             		 banner: { sizes: [[728, 90], [300, 250], [250, 250], [468, 60], [320, 50]] }, 
-            	     video:  { context: 'outstream', playerSize: [550, 310], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', "video/webm"], playbackmethod: [2], minduration: 1,
+            	     video:  { context: 'intstream', playerSize: [640, 480], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', "video/webm"], playbackmethod: [2], minduration: 1,
             	            maxduration: 30,
             	            protocols: [1, 2],
             	            w: 1,
@@ -92,8 +92,8 @@ var timeoutMap = {
             	},
             	bids: [
             	 { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
-            	 { bidder: 'appnexus',   params: { placementId: '11971351' } }, /* one placementId for all sizes */
-            	 // { bidder: 'appnexus',   params: { placementId: '13232392'} }, /* demo video placement, always returns a vid, only works client side, pretty sure having this on lifts Teads to bidding higher */
+            	 // { bidder: 'appnexus',   params: { placementId: '11971351' } }, /* one placementId for all sizes */
+            	 { bidder: 'appnexus',   params: { placementId: '13232392'} }, /* demo video placement, always returns a vid, only works client side, pretty sure having this on lifts Teads to bidding higher */
             	 { bidder: 'districtm',  params: { placementId: 11937611 } }, /* 300x600 - 300x250 - 160x600 */ 
             	 { bidder: 'districtm',  params: { placementId: 11937611, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } },
             	 { bidder: 'districtmDMX',  params: { dmxid: 171413, memberid: 100041  } }, /* 300x600 - 300x250 - 160x600 */ 
@@ -121,7 +121,7 @@ var timeoutMap = {
             	 code: 'inreedvid1Slot',
             	 mediaTypes: {
             		 banner: { sizes: [[728, 90], [300, 250], [320, 50]] },
-            		 video:  { context: 'outstream', mimes: ["video/x-flv", "video/mp4", "application/x-shockwave-flash", "application/javascript"], protocols: [1, 2, 3, 4, 5, 6, 7, 8], playbackmethod: [2], playerSize: [550, 310] }, 
+            		 video:  { context: 'outtstream', mimes: ["video/x-flv", "video/mp4", "application/x-shockwave-flash", "application/javascript"], protocols: [1, 2, 3, 4, 5, 6, 7, 8], playbackmethod: [2], playerSize: [550, 310] }, 
             	},
             	bids: [
             	 { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
@@ -253,14 +253,14 @@ var timeoutMap = {
                  s2sConfig: {
                      accountId: 'e31f627f-53a3-4288-9979-482d3c6ffc76',
                      enabled: true,
-                     bidders: ['somoaudience', 'sovrn', 'districtm', 'conversant', 'pulsepoint', 'brealtime', '33across'],
+                     bidders: ['appnexus', 'somoaudience', 'sovrn', 'districtm', 'conversant', 'pulsepoint', 'brealtime', '33across'],
                      timeout: 900,
                      adapter: 'prebidServer',
                      endpoint: 'https://prebid.adnxs.com/pbs/v1/openrtb2/auction',
-                     // syncEndpoint: 'https://prebid.adnxs.com/pbs/v1/cookie_sync',
+                     syncEndpoint: 'https://prebid.adnxs.com/pbs/v1/cookie_sync',
                      // cookieSet: true,
                      // cookiesetUrl: 'https://acdn.adnxs.com/cookieset/cs.js'
-                     // cache: {url: "//prebid.adnxs.com/pbc/v1/cache"},
+                     cache: {url: "//prebid.adnxs.com/pbc/v1/cache"},
                   },
                   userSync: {
                       iframeEnabled: true,
