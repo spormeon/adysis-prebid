@@ -1,6 +1,6 @@
 var site_config = {
-    refresh_rate: 40000,
-    FAILSAFE_TIMEOUT: 5000,
+    refresh_rate: 40000,  //denoted in milliseonds 40secs=40000...
+    FAILSAFE_TIMEOUT: 5000,   //denoted in milliseonds 5secs=5000...
     leaderboard_sizes_mobile: [[320, 50],[234,60]]
   }; //./site_config
 //have to add 1 on to the child (number) because the div counts as 1 in the string 
