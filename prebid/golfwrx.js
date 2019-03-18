@@ -1,3 +1,8 @@
+var site_config = {
+    refresh_rate: 40000,
+    FAILSAFE_TIMEOUT: 5000,
+    leaderboard_sizes_mobile: [[320, 50],[234,60]]
+  }; //./site_config
 //have to add 1 on to the child (number) because the div counts as 1 in the string 
 window.addEventListener('DOMContentLoaded',function(){
     document.querySelector('#mvp-content-main p:nth-child(2)').insertAdjacentHTML('afterbegin','<br><div class="ad-reporter-ahytrfg35423"><div id="advertisement" style="border: 0pt none; margin: auto; text-align: center; color: #999; text-transform: uppercase; font-family: sans-serif; font-size: 9px; font-weight: 400; letter-spacing: .2em; line-height: 1; margin-top: 0px; position: relative; top: -4px;">Advertisement</div><div id="inreedvidSlot"></div></div><br>');
@@ -74,7 +79,7 @@ var timeoutMap = {
             // example of supplying a custom var from a prev. defined var
             assertive_timeout = PREBID_TIMEOUT;
 
-       var FAILSAFE_TIMEOUT = 5000;   
+          
 
             var adUnits = [
             	//new ad unit block
@@ -315,7 +320,7 @@ var timeoutMap = {
          // in case PBJS doesn't load
             setTimeout(function() {
                 initAdserver();
-            }, FAILSAFE_TIMEOUT);
+            }, 'site_config.FAILSAFE_TIMEOUT');
 
 googletag.cmd.push(function () {
 	  (function (googletag, pbjs, config) {
@@ -383,25 +388,25 @@ googletag.cmd.push(function () {
 	        adUnitPath: '/1001824/Golfwrx.com-HB/Golfwrx.com-HB-Vid-test',
 	        size: 'mappinginreedvidslot',
 	        sizeMapping: 'mappinginreedvidslot',
-	        timeout: 40000,
+	        timeout: 'site_config.refresh_rate',
 	      },
 	      inreedvid1Slot: {
 	        adUnitPath: '/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test1',
 	        size: 'mappinginreedvidslot',
 	        sizeMapping: 'mappinginreedvidslot',
-	        timeout: 40000,
+	        timeout: 'site_config.refresh_rate',
 	      },
 	      inreedvid2Slot: {
 	        adUnitPath: '/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test2',
 	        size: 'mappinginreedvidslot',
 	        sizeMapping: 'mappinginreedvidslot',
-	        timeout: 40000,
+	        timeout: 'site_config.refresh_rate',
 	      },
 	      inreedvid3Slot: {
 	        adUnitPath: '/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test3',
 	        size: 'mappinginreedvidslot',
 	        sizeMapping: 'mappinginreedvidslot',
-	        timeout: 40000,
+	        timeout: 'site_config.refresh_rate',
 	      },
 	    },
 	    sizeMappings: {
