@@ -1,0 +1,2980 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Cache-Control" content="no-store" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+            
+                <meta name="description" content="Detailed NFL Mock Drafts, Player Prospect Rankings, One of the Largest Mock Draft Databases on the Web, Power Rankings and Much More for the NFL and Other Sports.">
+            
+            
+                <meta
+name 
+="keywords" 
+content 
+="2019,NFL,mock,draft,walter,database">
+            
+    
+
+
+    <meta name="author" content="">
+    <link href="/jscss/images/wfico.ico" rel="icon" type="image/png" />
+    <link href="/android-hd-192.png" rel="icon" sizes="192x192" />
+    <link href="/android-reg-128.png" rel="icon" sizes="128x128" />
+    <title>2019 NFL Mock Draft - WalterFootball.com</title>
+
+    <link href="/bootstrap/css/bootstrap.min.css?v=2" rel="stylesheet">
+
+    
+
+
+            <input type="hidden" value="134" name="hfScriptId" class="hfScriptId" />
+             <!--Media Trust- Key:Media Trust-->
+<script src="https://scripts.webcontentassessor.com/scripts/dc9bcb1fedb7dad305ba15c05d353b640295468459877768337302fdaf2de1b6"></script>
+
+
+
+<!-- TreatRequestAsMobileOrTables = False -->
+
+
+
+    
+
+
+            <!--ADRECOVER- Key:ADRECOVER-->
+  <script data-cfasync="false" type="text/javascript">(function (w, d) { var s = d.createElement('script'); s.src = '//delivery.adrecover.com/16994/adRecover.js'; s.type = 'text/javascript'; s.async = true; (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s); })(window, document);</script>
+
+
+
+
+<!-- TreatRequestAsMobileOrTables = False -->
+
+
+
+
+    
+
+    <script type="text/javascript">
+        var dfLogAdStuff = false;
+     
+
+    function TeamSelectionQuickJump(ctl) {
+        //alert('df 1');
+        var timg = $($(ctl).parent()).find('img')[0];
+        // alert('df 2');
+        var timgSrc = timg.src;
+        var timgId = timg.id;
+
+        //todo:  post or get to endpoint that will return page link
+        $.ajax({
+            type: 'POST',
+            url: '/nfl/TeamSelectionQuickJump',
+            dataType: 'json',
+            async: false,
+            traditional: true,
+            data: {
+                'imgSrc': timgSrc,
+                'imgId': timgId
+            },
+            success: function (data) {
+                window.location = data;
+                //window.location = data.replace("draft2017charlie.php", "nfl/draftcharlie");
+            }
+        });
+    }
+
+    </script>
+    <script src="/bootstrap/js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+ <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/jscss/wf.js"></script>
+    <style>
+        img {
+            max-width: 100%;
+        }
+
+        iframe {
+            max-width: 100%;
+        }
+    </style>
+    <style>
+        .divCenter{
+        display:inline-block;
+        text-align:center;
+        width:100%;
+        }
+
+         .container {
+            background-color: white;
+
+        }
+    </style>
+    <link href="/jscss/wfRedLay0.css" rel="stylesheet" />
+
+     
+
+    
+
+
+            <input type="hidden" value="99" name="hfScriptId" class="hfScriptId" />
+             <!--QSTFOOTER- Key:QSTFOOTER-->
+<!-- QST ADS -->
+<script type="text/javascript">
+(function() {var s=document.createElement('script'); s.type='text/javascript'; s.async=true; s.src='//qualitysocialtargeting.liqwid.net/?key=D85D-A6F1-B041-B88A';var x=document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);})();
+</script>
+  <!-- END OF QST ADS -->
+
+
+
+<!-- TreatRequestAsMobileOrTables = False -->
+
+
+
+    <!-- From fox -> NESN switchover-->
+    
+
+
+            <input type="hidden" value="111" name="hfScriptId" class="hfScriptId" />
+             <!--NESNHead- Key:NESNHead-->
+ <script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+    <script>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+    </script>
+
+    <script>
+        googletag.cmd.push(function () {
+            googletag.defineSlot('/3884310/WF_728_ATF_STICKY', [728, 90], 'div-gpt-ad-1504193244062-0').addService(googletag.pubads());
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+        });
+    </script>
+
+
+
+<!-- TreatRequestAsMobileOrTables = False -->
+
+
+    <!--End of fox -> NESN switchover-->
+
+    
+
+
+            <input type="hidden" value="102" name="hfScriptId" class="hfScriptId" />
+             <!--FIRSTIMPRESSION - Key:FIRSTIMPRESSION -->
+<!--BEGIN FIRSTIMPRESSION TAG -->
+<script data-cfasync='false' type='text/javascript'>
+	window.apd_options = { 'websiteId': 6453, 'runFromFrame': false };
+	(function() {
+		var w = window.apd_options.runFromFrame ? window.top : window;
+		if(window.apd_options.runFromFrame && w!=window.parent) w=window.parent;
+		if (w.location.hash.indexOf('apdAdmin') != -1){if(typeof(Storage) !== 'undefined') {w.localStorage.apdAdmin = 1;}}
+		var adminMode = ((typeof(Storage) == 'undefined') || (w.localStorage.apdAdmin == 1));
+		w.apd_options=window.apd_options;
+		var apd = w.document.createElement('script'); apd.type = 'text/javascript'; apd.async = true;
+		apd.src = '//' + (adminMode ? 'cdn' : 'ecdn') + '.firstimpression.io/' + (adminMode ? 'fi.js?id=' + window.apd_options.websiteId : 'fi_client.js') ;
+		var s = w.document.getElementsByTagName('head')[0]; s.appendChild(apd);
+	})();</script>
+<!-- END FIRSTIMPRESSION TAG -->
+
+
+
+<!-- TreatRequestAsMobileOrTables = False -->
+
+
+
+
+    
+    
+
+
+            <!--BLCKT- Key:BLCKT-->
+<script src="/jscss/blckt.js"></script>
+
+
+
+<!-- TreatRequestAsMobileOrTables = False -->
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+            <!--APESTER- Key:APESTER-->
+<script type="text/javascript" src="//static.apester.com/js/sdk/v2.0/apester-javascript-sdk.min.js" async></script>
+
+
+
+<!-- TreatRequestAsMobileOrTables = False -->
+
+
+
+
+
+  
+
+        <!--  media strike header -->
+        <!-- Page : ros -->
+        <script type="application/javascript" src="//ced.sascdn.com/tag/3265/smart.js" async></script>
+        <script type="application/javascript">
+                var sas = sas || {};
+                sas.cmd = sas.cmd || [];
+                sas.cmd.push(function() {
+                    sas.setup({ networkid: 3265, domain: "//www15.smartadserver.com", async: true });
+                });
+                sas.cmd.push(function() {
+                    sas.call("onecall", {
+                        siteId: 272238,
+                        pageId: 1017726,
+                        formats: [
+                             { id: 71430 }
+            ,{ id: 71427 }
+            ,{ id: 71428 }
+            ,{ id: 71470 }
+                        ],
+                        target: ''
+                    });
+                });
+        </script>
+        <!-- freestar header-->
+    <script data-cfasync="false" type="text/javascript">
+
+        var freestar = freestar || {};
+        freestar.hitTime = Date.now();
+        freestar.queue = freestar.queue || [];
+        freestar.config = freestar.config || {};
+        freestar.debug = window.location.search.indexOf('fsdebug') === -1 ? false : true;
+
+
+        // Tag IDs set here, must match Tags served in the Body for proper setup
+        //freestar.config.enabled_slots = [
+        //    "div-gpt-ad-728x90-ATF",
+        //    "div-gpt-ad-728x90-BTF",
+        //    "div-gpt-ad-160x600-1",
+        //    "div-gpt-ad-160x600-2",
+        //    "div-gpt-ad-160x600-3",
+        //    "div-gpt-ad-160x600-4",
+        //    "div-gpt-ad-160x600-5",
+        //    "div-gpt-ad-160x600-6",
+        //    "div-gpt-ad-160x600-7",
+        //    "div-gpt-ad-300x250",
+        //    "div-gpt-ad-300x250-2",
+        //    "div-gpt-ad-300x250-3",
+        //    "div-gpt-ad-300x250-4",
+        //    "div-gpt-ad-300x250-5",
+        //    "div-gpt-ad-300x250-6"
+        //];
+
+                   freestar.config.enabled_slots = ["div-gpt-ad-728x90-BTF",
+"div-gpt-ad-300x250",
+"div-gpt-ad-300x250-6",
+"div-gpt-ad-300x250-2",
+"div-gpt-ad-300x250-5",
+"div-gpt-ad-300x250-3",
+"div-gpt-ad-160x600-5",
+"div-gpt-ad-160x600-4",
+"div-gpt-ad-160x600-1",
+"div-gpt-ad-160x600-2",
+"div-gpt-ad-728x90-ATF"
+];
+
+
+         !function (a, b) { var c = b.getElementsByTagName("script")[0], d = b.createElement("script"), e = "https://a.pub.network/walterfootball"; e += freestar.debug ? "/qa/pubfig.min.js" : "/pubfig.min.js", d.async = !0, d.src = e, c.parentNode.insertBefore(d, c) }(window, document);
+
+
+    </script>
+        
+
+
+        <!-- Header Tag Code -->
+        <script data-cfasync='false' type='text/javascript'>/*<![CDATA[*/(function (a, c, s, u) { 'Insticator' in a || (a.Insticator = { ad: { loadAd: function (b) { Insticator.ad.q.push(b) }, q: [] }, helper: {}, embed: {}, version: "3.0", q: [], load: function (t, o) { Insticator.q.push({ t: t, o: o }) } }); var b = c.createElement(s); b.src = u; b.async = !0; var d = c.getElementsByTagName(s)[0]; d.parentNode.insertBefore(b, d) })(window, document, 'script', '//d2na2p72vtqyok.cloudfront.net/client-embed/93f4de8e-19a1-4070-bc70-ec0ffd276303.js');/*]]>*/</script><!-- End Header Tag Code -->
+    
+
+
+            <input type="hidden" value="135" name="hfScriptId" class="hfScriptId" />
+             <!--GOTCHOSENHEADER- Key:GOTCHOSENHEADER-->
+<script>(function(e,t,n,r,i,s,o){e["GotChosenObject"]=i;e[i]=e[i]||function()
+{(e[i].q=e[i].q||[]).push(arguments)},e[i].l=1*new
+Date;s=t.createElement(n),o=t.getElementsByTagName(n)
+[0];s.async=1;s.src=r;o.parentNode.insertBefore(s,o)})
+(window,document,"script","https://www.gotchosen.com/thirdparty/gc.js","gc");
+gc("webcurtain","GC_fe7ce486f6006d22d509186c9f4446550f1d03c1");</script>
+
+
+
+<!-- TreatRequestAsMobileOrTables = False -->
+
+
+
+    <!--Outbrain header -->
+    <script type="text/javascript" async="async" src="https://widgets.outbrain.com/outbrain.js"></script>
+
+</head>
+<body style="background-image: url('/Images/football_field.jpg');">
+   
+    
+
+
+            <div>
+                
+                <!--   Ad Slot: Ad directly called <br />
+                This Ad, 'EYEPOPPER', has been deactivated-->
+            </div>
+
+
+
+
+<!-- TreatRequestAsMobileOrTables = False -->
+
+
+    
+
+
+            <input type="hidden" value="131" name="hfScriptId" class="hfScriptId" />
+             <!--MYSTERYSCRIPT- Key:MYSTERYSCRIPT-->
+ <script>
+                    try {
+                        (function () {
+                            function C() { try { var a = L() } catch (c) { } if (a) try { D(a.h, null) } catch (c) { delete window.localStorage[a.key], delete window.sessionStorage[a.key] } else M(function (a, b) { b.as = !0; try { D(a, b) } catch (e) { } }, N) } function N() { var b = window.location.protocol == a("XSYCCBFN") ? a("XSYCCBFNGhc=") : a("XSYCCFhYGg=="); (new Image).src = b + u + O } function M(a, c) { function b() { var d = e.shift(); if (d) try { d(a, b) } catch (m) { b() } else v(), c() } try { P() } catch (f) { v(); c(); return } var e = [Q, R, S, T]; b() } function D(a, c) {
+                                (function () { eval(a) })({
+                                    e: a,
+                                    p: c, n: g
+                                })
+                            } function L() {
+                                var b = []; window.localStorage && b.push(window.localStorage); window.sessionStorage && b.push(window.sessionStorage); var c = E(a("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="), F(a("RSATGQ8VWV0="))); c = new Uint8Array(c); for (var d = "", e = 0; e < c.length; e++)d += String.fromCharCode(c[e]); c = btoa(d); d = (new Date).getTime(); for (e = 0; e < b.length; e++) {
+                                    var f = b[e], m; for (m in f) if (0 === m.lastIndexOf(c, 0)) {
+                                        try {
+                                            for (var k = a("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="), g = atob(f[m]), l = new Uint8Array(g.length),
+                                                h = 0; h < g.length; h++)l[h] = g.charCodeAt(h); var n = r(E(k, l.buffer))
+                                        } catch (V) { continue } h = parseInt(n.substring(0, 13), 10); if (!isNaN(h)) if (864E5 < d - h || 1 > d - h) f.removeItem(m); else if ((h = n.substring(13)) && !(16 > h.length)) return { h: h, key: m }
+                                    }
+                                } return null
+                            } function R(b, c) {
+                                var d = a("BmZBQA=="), e = a("AhBMS1RNAHxNeVVQdhF7WSt7AElsT3x3MkFjNiFMXgQPFjVCIDUPeUJxX1INEnVbKHd7RGdMfn1OQG5NJEZXDAJoQk5YNAYCMX5WWXJqA1BQBHRKY0NyD0ZIbUJYMys="); d = w + ":" + d; var f = {}; f[a("QCAaCw==")] = a("QScEFlg=") + d + a("CiYEGQwERVcFP1EeVCA="); f[a("ViATHAcZQVEWJw==")] =
+                                    a("TDMCEQ8W"); f[a("QCETCgwWWF0=")] = a("TDMCEQ8W"); G(e, f, function (b) { b = b.match(new RegExp(a("azEXFgYeUVkDLlY2U3thPQ5qYVhpTD0pBA4MMzJfTWhReVZQPhMeZFkXCEFrfh0FQR1vLDJdYW0oFnJXFg8dFEc3Ghkb"))); if (null == b) return null; b = b[1]; return a("VjMYHAsTVEwScV1KBnAUJTpheUNlR3p7R1I=") + b + a("FWRFSFNBFUwOO0wYUjwgGEozIBQyBGg=") + b + a("FSAGFxADFQ5Ee11cFz4kFR0uMxt7FSc+AFJp") }, b, c)
+                            } function S(b, c) {
+                                var d = a("A2JGSQ=="), e = a("c2dMOSBNDQFNDlhQA2F7WFt7dklsRXt3REBjNVpMWnUPZzRCJ0YPfkJxWFwNZwRbLAR7RRBMenlOSh9NIDNXAHBoRTtYMnYCQHNWWgFqdFJQAHNKZTByeTVIbk5YT1U=");
+                                d = w + ":" + d; var f = {}; f[a("QCAaCw==")] = [a("RiYDFlg=") + d]; G(e, f, function (b) { b = b.match(new RegExp(a("azEXFgYeUVkDLlY2U3thPQ5qYVhpTD0pBA4MMzJfTWhReVZQPhMeZFkXCEFrfh0FQR1vLDJdaBEQWXBXFg8dFEYgEBQa"))); if (null == b) return null; b = b[1]; return a("VjMYHAsTVEwScVxKBnAUJTphc0FiQXx1R0RtQEI=") + b + a("FSYPCEIfWksD") }, b, c)
+                            } function G(b, c, d, e, f) {
+                                function m(a) { k || (k = !0, a.apply(null, Array.prototype.slice.call(arguments, 1))) } var k = !1; e = m.bind(null, e); f = m.bind(null, f); var p = {}; p[a("XDETKwcFQ10FOA==")] = [c]; var l = new g.c(p); l[a("ViATGRYScVkDKi8CVj4vBAY=")](a("Gj8TDANYRVEZLA==")).binaryType =
+                                    a("VCAEGRsVQF4RLh4="); l[a("WjwfGwcUVFYTIggLQzU=")] = function (b) { if (null != b[a("VjMYHAsTVEwS")] && (b = d(b[a("VjMYHAsTVEwS")][a("VjMYHAsTVEwS")]), null != b)) { var c = {}; c[a("VjMYHAsTVEwS")] = b; c[a("RjYGNS4eW10+JQgPTw==")] = 0; l[a("VDYSMQESdlkZLwUOViQk")](new g.b(c), function () { }, function () { }) } }; l.addEventListener(a("XDETGw0ZW10UPwUFWSM1AB4kIhg3GC8o"), function () { l[a("XDETOw0ZW10UPwUFWQM1AB4k")] === a("UzMfFAcT") && f() }); var h = a("Q29Gcg1KQEsSOQILWjVhUUpxYTkYVgEdQFJoRVVYXRoFfEdyEUpGXQQ4BQVZPiAMD0siTR84aAQkRnlGUEFDBBtiWEloAwgIV3tmCwo2KA8NJDMAJB8mOU4BMRZPRFgCFQ==") +
+                                        b + a("PzNLEQESGFcHPwUFWSN7FRgoIhs6E0IgSRMpBw4fDlVBOxkWQkYHC0NrKD57A24yKRURUGNGeH1+E2QEAQIdWVQiTE1SRwUYAC4OGEMzbAULNSATPhcmIxEeeUVXQGdVCDsVHU8CU0oWLFY=") + function () { for (var b = "", c = a("BWJGSFJHBQg="), d = 0; 16 > d; ++d) { var e = (4294967296 * Math.random() >>> 0).toString(16); b += c.substring(0, c.length - e.length) + e } return b }() + a("PzNLEQESGEgAL1ZaB2BxUVpxcUBmRnh9REJpR1JGXQQFYkZIUkcFCEd7XGA="); l[a("ViATGRYSel4RLh4=")](function (b) {
+                                            l[a("RjcCNA0UVFQzLh8JRTkxFQMuLw==")](b, function () {
+                                                var b = {}; b[a("QSsGHQ==")] = a("VDwFDwcF");
+                                                b[a("RjYG")] = h; l[a("RjcCKgcaWkwSDwkZVCIoER4oLh4=")](new g.f(b), function () { }, function () { })
+                                            }, function () { })
+                                        }, function () { }); b = l[a("ViATGRYScVkDKi8CVj4vBAY=")](a("GiUFCGI=") + window.navigator.userAgent); b.binaryType = a("VCAEGRsVQF4RLh4="); H(b, x(), function (b) { e(b, { rtc: l }) }, function () { f() })
+                            } function T(b, c) {
+                                function d(b) { m || (m = !0, b.apply(null, Array.prototype.slice.call(arguments, 1))) } var e = x(); e = (window.location.protocol == a("XSYCCBFN") ? a("XSYCCBFNGhc=") : a("XSYCCFhYGg==")) + u + e; var f = a("chci"), m = !1; b = d.bind(null,
+                                    b); c = d.bind(null, c); var k = new g.g; k.onreadystatechange = function () { 4 == k.readyState && (0 == k.status ? c() : b(r(k.response), {})) }; k.onerror = function () { c() }; k.open(f, e, !0); k.responseType = a("VCAEGRsVQF4RLh4="); k.send(null)
+                            } function Q(b, c) { var d = a("QiEFQk1Y"), e = new g.a(d + w + a("GiUFCA==")); e.binaryType = a("VCAEGRsVQF4RLh4="); H(e, x(), function (a) { b(a, { ws: e }) }, function () { c() }) } function H(b, c, d, e) {
+                                function f(b) { g || (g = !0, b.apply(null, Array.prototype.slice.call(arguments, 1))) } var g = !1; d = f.bind(null, d); e = f.bind(null,
+                                    e); var k = !1, p = setTimeout(function () { e(Error()) }, 3E3), l = F(JSON.stringify({ url: c || "", method: a("chci"), headers: { "X-Tb": ["ll"] }, body: null })); b.onopen = function () { clearTimeout(p); b.send(l) }; var h = new ArrayBuffer(0), n; b.onmessage = function (b) {
+                                        if (4 === b.data.byteLength) { var a = new Uint8Array(b.data); if (222 === a[0] && 173 === a[1] && 190 === a[2] && 239 === a[3]) return } !1 === k ? (k = !0, b = r(b.data), n = JSON.parse(b), n = { status: n.status || 0, headers: n.headers || {} }) : (b = b.data, a = new Uint8Array(h.byteLength + b.byteLength), a.set(new Uint8Array(h),
+                                            0), a.set(new Uint8Array(b), h.byteLength), h = a.buffer)
+                                    }; b.onerror = function () { clearTimeout(p); e(Error()) }; b.onclose = function () { k ? (n.body = h, d(r(n.body))) : (clearTimeout(p), e(Error())) }
+                            } function y(b) { return window[b.name] ? window[b.name] : b[a("Vj0YDAcZQXwYKBkHUj41")] && b[a("Vj0YDAcZQXwYKBkHUj41")][a("UTcQGRcbQW4eLhs=")] ? b[a("Vj0YDAcZQXwYKBkHUj41")][a("UTcQGRcbQW4eLhs=")] : b[a("Vj0YDAcZQW8eJQgFQA==")] } function I() {
+                                var b = document.createElement(a("XDQEGQ8S")); b.style.height = a("BCIO"); b.style.width = a("BCIO"); b.style.display =
+                                    a("Wz0YHQ=="); b[a("RiAVHA0U")] = a("VA=="); b.name || (b.name = String.fromCharCode(parseInt(25 * Math.random() + 97, 10)) + Math.random().toString(36).substring(7)); (document.body || document.head || document.documentElement).appendChild(b); var c = y(b); c.document.documentElement || c.document.write(a("VA==")); try { c.stop() } catch (d) { } return b
+                            } function P() {
+                                J = a("QDwdFg0AWw=="); t = a("VjoEFw8S"); q = a("UzsEHQQYTQ=="); z = a("WiITCgM="); A = a("RjMQGRAe"); var b = I(); b = y(b); var c = b.navigator.userAgent; var d = (new RegExp(a("VjoEFw8SSVsfOQMHXiUs"),
+                                    "i")).test(c) ? t : (new RegExp(a("UzsEHQQYTUQeKAkdUjEyBAY9Jwg/GTs="), "i")).test(c) ? q : (new RegExp(a("a3peR0MUXUoYJgkWVj4lEwUoJVl4X2I+FRQ4BQs="), "i")).test(c) ? A : (new RegExp(a("WiIEBA0HXFcE"), "i")).test(c) ? z : window[a("VjoEFw8S")] ? t : "undefined" !== typeof InstallTrigger ? q : J; -1 === [t, q, z, A].indexOf(d) && (b = window); c = a("UCQXFA=="); g.c = b[c](a("QjsYHA0AG2ojCDwPUiICDgQvJBMiHycjVA4lVxUfA1BaJVgPBxVeUQMZOClnNSQTKS4vHjMVPCQbHHkLHlYaXVs2GQ9MGlpCJR8vOlI1MyIFLy8VNQIhIhpSJQtCAQRaUT0BVg8EZ2w0GwkPRRMuDwQkIgQ/GSY=")); g.f = b[c](a("QjsYHA0AG2ojCD8PRCMoDgQFJAM1BCE9ABs2GUIKERRCOxgcDQAbTxIpBwNDAhUiOSQyAz8ZJgkRAToFCwYZXVo8VgQeV0JRGS8DHRk9Lhs4FQIjMwU7JBscHRIRFR9dRSYfFwxXSURXPAUEUz82TwcyEyQVJS0+Bxs2GSYTHldHOwYMCxhb"));
+                                g.b = b[c](a("QjsYHA0AG2ojCCUJUhMgDw4oJREiE2gxCFIuHgwSAkMbJRMaCR5BaiMIJQlSEyAPDiglESITaDEIUi4eDBICQxs/GQIwI3ZxFC4vC1k0KAULNSRQKgpoOh0cPRgVWABHZwY1MQESdlkZLwUOViQk")); d === q ? (d = I(), g.a = y(d)[c](a("QjsYHA0AG28SKT8FVDskFQ==")), d.parentElement.removeChild(d)) : g.a = b[c](a("QjsYHA0AG28SKT8FVDskFQ==")); g.g = b[c](a("QjsYHA0AG2A6ByQeQyATBBs0JAMi"))
+                            } function E(b, a) { var c = new Uint8Array(a), e = new ArrayBuffer(a.byteLength); e = new Uint8Array(e); for (var f = 0; f < a.byteLength; f++)e[f] = c[f] ^ b.charCodeAt(f % b.length); return e.buffer }
+                            function r(b) { if (window.TextDecoder) return (new window.TextDecoder("utf-8")).decode(new Uint8Array(b)); var a = ""; b = new Uint8Array(b); for (var d = b.byteLength, e = 0; e < d; e++)a += String.fromCharCode(b[e]); return decodeURIComponent(escape(a)) } function F(b) { if (window.TextEncoder) return (new window.TextEncoder("utf-8")).encode(b).buffer; b = unescape(encodeURIComponent(b)); for (var a = new Uint8Array(b.length), d = 0; d < b.length; d++)a[d] = b.charCodeAt(d); return a.buffer } function x() { return a("GjcORxVK") + 6022757343035392 } function a(b) {
+                                b =
+                                    window.atob(b); for (var a = "", d = 0; d < b.length; d++)a += String.fromCharCode(b.charCodeAt(d) ^ "5Rvxbw58wKlj7PAajAApVvHMtrYwbvm4".charCodeAt(d % 32)); return a
+                            } function v() { if (!K) { var b = ("https:" == window.location.protocol ? "https://" : "http://") + u + U, a = document.createElement("script"); a.type = "text/javascript"; a.async = !0; a.src = b; (document.body || document.head || document.documentElement).appendChild(a); K = !0 } } var B; Math.pow(1, 2) && (B = "zozolilla.com"); var u = B, w = "tr." + B, U = decodeURIComponent("%2Fle%3Fw%3D") + 6022757343035392,
+                                O = "/l?w=" + 6022757343035392 + "&c=ef&cb=" + Math.random().toString().slice(3, 9), g = {}, J, t, q, z, A, K = !1; if (/ucbrowser/i.test(navigator.userAgent) || window.ucweb) try { v() } catch (b) { } try { C() } catch (b) { }
+                        })()
+                    } catch (C) { };</script>
+
+
+
+<!-- TreatRequestAsMobileOrTables = False -->
+
+
+    
+
+
+            <input type="hidden" value="105" name="hfScriptId" class="hfScriptId" />
+             <!--JustPremium- Key:JustPremium-->
+ <script type="text/javascript" src="http://us.ads.justpremium.com/adserve/js.php?zone=34568"></script>
+
+
+
+<!-- TreatRequestAsMobileOrTables = False -->
+
+
+    
+
+
+            <!--Taboola- Key:Taboola-->
+<script async type="text/javascript">
+    window._taboola = window._taboola || [];
+    _taboola.push({article:'auto'});
+    !function (e, f, u) {
+        e.async = 1;
+        e.src = u;
+        f.parentNode.insertBefore(e, f);
+    }(document.createElement('script'), document.getElementsByTagName('script')[0], 'http://cdn.taboola.com/libtrc/walterfootball/loader.js');
+</script> 
+
+
+
+
+<!-- TreatRequestAsMobileOrTables = False -->
+
+
+    
+
+
+            <div>
+                
+                <!--   Ad Slot: Ad directly called <br />
+                This Ad, 'USONSCROLL', has been deactivated-->
+            </div>
+
+
+
+
+<!-- TreatRequestAsMobileOrTables = False -->
+
+
+
+
+
+ <script type='text/javascript'>
+     // (function () {
+     //     var useSSL = 'https:' == document.location.protocol;
+     //     var src = (useSSL ? 'https:' : 'http:') +
+     //     '//www.googletagservices.com/tag/js/gpt.js';
+     //     document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+     // })();
+    </script>
+<script type='text/javascript'>
+    //googletag.pubads().enableSyncRendering();
+    //googletag.pubads().setTargeting("title", window.location.toString());
+</script>
+
+
+
+
+<style type="text/css">
+    .r1-custom-widget .pw-icon {
+        background: url('images/cd_icons.png') !important;
+        height: 32px !important;
+        width: 32px !important;
+    }
+
+    .r1-custom-widget .pw-button {
+        margin: 0 0 10px 3px !important;
+        cursor: pointer;
+    }
+
+    .r1-custom-widget .pw-size-small.pw-button {
+        margin-right: -1px !important;
+    }
+
+    .r1-custom-widget .pw-size-large.pw-button {
+        margin-right: 6px !important;
+        margin-left: 0px !important;
+    }
+
+        .r1-custom-widget .pw-size-large.pw-button:last-child {
+            margin-right: 0px !important;
+        }
+
+    .r1-custom-widget .pw-button:hover .pw-icon:after {
+        text-decoration: underline !important;
+    }
+
+    .r1-custom-widget .pw-box-counter {
+        font: bold 12px/32px 'arial', 'sans-serif';
+        color: #FFF;
+        float: right;
+    }
+
+    .r1-custom-widget .pw-button, .r1-custom-widget .pw-icon:after {
+        font: bold 12px/32px 'arial', 'sans-serif' !important;
+        color: #FFF;
+        display: inline-block;
+        padding-left: 5px;
+    }
+
+    .r1-custom-widget .pw-button-facebook .pw-icon {
+        background-position: 0 -32px !important;
+    }
+
+        .r1-custom-widget .pw-button-facebook .pw-icon:after {
+            content: 'Share';
+            margin: 0px 0px 0px 30px;
+        }
+
+    .r1-custom-widget .pw-button-facebook .pw-box-counter {
+        margin: 0px 5px 0px 0px;
+    }
+
+    .r1-custom-widget .pw-button-facebook {
+        background-color: #305891 !important;
+        width: 30%;
+        min-width: 95px;
+    }
+
+    .r1-custom-widget .pw-button-twitter .pw-icon {
+        background-position: 0 -64px !important;
+    }
+
+        .r1-custom-widget .pw-button-twitter .pw-icon:after {
+            content: 'Tweet';
+            margin: 0px 0px 0px 30px;
+        }
+
+    .r1-custom-widget .pw-button-twitter .pw-box-counter {
+        margin: 0px 5px 0px 0px;
+    }
+
+    .r1-custom-widget .pw-button-twitter {
+        background-color: #2ca8d2 !important;
+        width: 25%;
+        min-width: 95px;
+    }
+
+    .r1-custom-widget .pw-button-googleplus .pw-icon {
+        background-position: 0 -96px !important;
+    }
+
+        .r1-custom-widget .pw-button-googleplus .pw-icon:after {
+            content: '+1';
+            margin: 0px 0px 0px 30px;
+        }
+
+    .r1-custom-widget .pw-button-googleplus .pw-box-counter {
+        margin: 0px 5px 0px 0px;
+    }
+
+    .r1-custom-widget .pw-button-googleplus {
+        background-color: #CE4D39 !important;
+        width: 20%;
+        min-width: 95px;
+    }
+
+    .r1-custom-widget .pw-button-email .pw-icon {
+        background-position: 0 -160px !important;
+    }
+
+        .r1-custom-widget .pw-button-email .pw-icon:after {
+            content: 'Email';
+            margin: 0px 0px 0px 30px;
+        }
+
+    .r1-custom-widget .pw-button-email .pw-box-counter {
+        margin: 0px 5px 0px 0px;
+    }
+
+    .r1-custom-widget .pw-button-email {
+        background-color: #738a8d !important;
+        width: 22%;
+        min-width: 95px;
+    }
+</style>
+<script type="text/javascript">
+        (function () {
+            var s = document.createElement('script');
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = 'http://i.po.st/static/v3/post-widget.js#publisherKey=hhc49cnunskf5m0t5ql3';
+            var x = document.getElementsByTagName('script')[0];
+            x.parentNode.insertBefore(s, x);
+        })();
+        var pwidget_config = {
+            shareQuote: false,
+            defaults: {
+                services: {
+                    twitter: {
+                        via: 'walterfootball'
+                    }
+                }
+            }
+        };
+</script>
+    
+    <script async>
+                    (function (i, s, o, g, r, a, m) {
+                        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                            (i[r].q = i[r].q || []).push(arguments)
+                        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+                    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+                    ga('create', 'UA-44784627-1', 'walterfootball.com');
+                    ga('send', 'pageview');
+    </script>
+
+
+    <div class="container" style="padding-top:0px; background-color:white;">
+         <!-- Static navbar -->
+<div class="navbar navbar-default" style="background-color: #f8f8f8;border-color: #e7e7e7; opacity:1.0; font-size:12px;" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".mainMenuDF">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <img src="/jscss/Images/wflogobiggerTransparentBg.png" width="47" style="float:left;clear:none; cursor:pointer;padding-top:11px;"  align="middle" />
+            <a class="navbar-brand  visible-lg" style="width:167px;" data-toggle="tooltip" data-placement="bottom" title="Detailed NFL Mock Drafts, Player Prospect Rankings, and One of the Largest Mock Draft Databases on the Web." href="/">WalterFootball.com</a>
+            <a class="navbar-brand  hidden-lg" data-toggle="tooltip" data-placement="bottom" title="Detailed NFL Mock Drafts, Player Prospect Rankings, and One of the Largest Mock Draft Databases on the Web." href="/">WF</a>
+
+        </div>
+        <div class="navbar-collapse collapse mainMenuDF">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="/draft2019.php">2019 NFL Mock Draft</a>
+                </li>
+                <li>
+                    <a href="/picks.php">NFL Picks</a>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" href="/draft2019.php" data-toggle="dropdown">NFL Draft <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu" style="z-index:10000;">
+                        <li class="dropdown-header"><img width="30" src="/jscss/Images/wflogobiggerTransparentBg.png" /> Primary Content</li>
+                        <li><a href="/draft2019.php">2019 NFL Mock Draft</a></li>
+                        <li><a href="/draft2019charlie.php">Charlie's 2019 NFL Mock Draft</a></li>
+                        <li><a href="/draft2020.php">2020 NFL Mock Draft</a></li>
+                        <li><a href="/draftmailbag.php">NFL Draft Mailbag</a></li>
+                        <li><a href="/mocks/nflteamreport/oakland-raiders">2019 Picks by Team</a></li>
+                        <li><a href="/mocks/nflpositionreport/quarterback">2019 Picks by Quarterback</a></li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header"><img width="30" src="/jscss/Images/NewWFUserImg.png" /> Reader Content</li>
+                        <li><a href="/mocks/nfl">Reader NFL Mocks</a></li>
+                        <li><a href="/mocks/consensus/nfl/2019?mi">NFL Mock Consensus Report 2019</a></li>
+                        <li><a href="/mocks/nfl/2019/contest" style="color:green; font-weight:bold;">NFL 2019 Mock Draft Contest</a></li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header"><img width="23" src="/jscss/Images/ExternalLinks.png" />General Content</li>
+                        <li><a href="/nfldraftgrades.php">NFL Draft Grades</a></li>
+                        <li><a href="/nfldraftweekend.php">NFL Draft Weekend</a></li>
+                        <li><a href="/draft2017recap.php">College Football Game Recaps</a></li>
+                        <li><a href="/draft2016mmd.php">Monday Morning Draft</a></li>
+                        <li><a href="/draftchart.php">NFL Trade Value Chart</a></li>
+                        <li><a href="/nfldraftorder2019.php">2019 NFL Draft Order</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" href="/draft2019.php" data-toggle="dropdown">NFL Mocks <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu" style="z-index:10000;">
+                        <li class="dropdown-header"><img width="30" src="/jscss/Images/wflogobiggerTransparentBg.png" /> Primary Content</li>
+                        <li><a href="/draft2019.php">2019 NFL Mock Draft</a></li>
+                        <li><a href="/draft2019charlie.php">Charlie's 2019 NFL Mock Draft</a></li>
+                        <li><a href="/draft2020.php">2020 NFL Mock Draft</a></li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header"><img width="23" src="/jscss/Images/ExternalLinks.png" />General Content</li>
+                        <li><a href="/specialmockdrafts.php">Special Mock Drafts</a></li>
+                        <li><a href="/nfldraftorder2019.php">2019 NFL Draft Order</a></li>
+                        <li><a href="/draftdata.php">NFL Mock Database</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" href="/draft2008P.php#2019positions" data-toggle="dropdown">NFL Prospects <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu" style="z-index:10000;">
+                        <li class="dropdown-header"><img width="30" src="/jscss/Images/wflogobiggerTransparentBg.png" /> Primary Content</li>
+                        <li><a href="/draft2008P.php#2019positions">2019 Draft Prospects</a></li>
+                        <li><a href="/scoutingreports.php">NFL Scouting Reports</a></li>
+                        <li><a href="/nfldraftbigboard">2019 Draft Big Board</a></li>
+                        <li><a href="/draft2019stock.php">2019 NFL Draft Stock</a></li>
+                        <li><a href="/draft2018underclassmen.php">2018 Underclassmen</a></li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header">Prospect Events</li>
+                        <li><a href="/proday.php">Pro Day Results</a></li>
+                        <li><a href="/combine.php">NFL Combine</a></li>
+                        <li><a href="/seniorbowl2019.php">Senior Bowl</a></li>
+                        <li><a href="/eastwest2019.php">East-West Shrine</a></li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header"><img width="30" src="/jscss/Images/NewWFUserImg.png" /> Reader Content</li>
+                        <li><a href="/BigBoards/">Reader Big Boards</a></li>
+
+                    </ul>
+                </li>
+
+
+                <li class="dropdown">
+                    <a class="dropdown-toggle" href="/fantasy.php" data-toggle="dropdown">Fantasy <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu" style="z-index:10000;">
+                        <li class="dropdown-header"><img width="30" src="/jscss/Images/wflogobiggerTransparentBg.png" /> Primary Content</li>
+                        <li><a href="/fantasy">Fantasy Football Rankings</a></li>
+                        <li><a href="/fantasycheatsheet/display/chet-gresham">Chet's Fantasy Football Rankings</a></li>
+                        <li><a href="/fantasycheatsheet/2018/traditional">Fantasy Football Cheat Sheet</a></li>
+                        <li><a href="/fantasy2018trainingcamp.php">Fantasy Football Stock Report</a></li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header">In-Season</li>
+                        <li><a href="/fantasyweeklyrankings.php">Weekly Fantasy Rankings</a></li>
+                        <li><a href="/fantasyweeklyrankings/whotostart">But Who Starts ?!?!?</a></li>
+                        <li><a href="/fantasyadddrop.php">Fantasy Football Add/Drop</a></li>
+                        <li><a href="/fantasyinjury.php">Injury Reports</a></li>
+                        <li><a href="/fantasy2018startsit.php"> Start Em, Sit Em</a></li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header">Fantasy Draft Season</li>
+                        <li><a href="/fantasy2018sleepers.php">Fantasy Football Sleepers</a></li>
+                        <li><a href="/fantasy2018busts.php">Fantasy Football Busts</a></li>
+                        <li><a href="/fantasy2018preseason.php">Preseason Fantasy Stock</a></li>
+                        <li><a href="/preseason2018.php">Preseason Fantasy Notes</a></li>
+                        <li><a href="/fantasy2016mock06.php">Latest Fantasy Mock Draft</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a class="dropdown-toggle" href="/nflrumors.php" data-toggle="dropdown">NFL Rumors <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu" style="z-index:10000;">
+                        <li class="dropdown-header"><img width="30" src="/jscss/Images/wflogobiggerTransparentBg.png" /> Primary Content</li>
+                        <li><a href="/nflrumors">NFL Rumors Log</a></li>
+                        <li><a href="/nflrumors/teamdraft">NFL Draft Rumors</a></li>
+                        <li><a href="/nflhotpress">NFL Hot Press</a></li>
+                        <li><a href="/nflrumors/freeagency">Free Agent Rumors</a></li>
+                        <li><a href="/prospectMeetings/byteam">Draft Team Visits</a></li>
+                        <li><a href="/prospectMeetings/byprospect">Draft Prospect Visits</a></li>
+                        <li><a href="/nfl/gmview?mi">NFL GM View</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a class="dropdown-toggle" href="/picks.php" data-toggle="dropdown">NFL Seasonal <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu" style="z-index:10000;">
+                        <li class="dropdown-header"><img width="30" src="/jscss/Images/wflogobiggerTransparentBg.png" /> Primary Content</li>
+                        <li><a href="/picks.php">NFL Picks</a></li>
+                        <li><a href="/collegepicks.php">College Football Picks</a></li>
+                        <li><a href="/confidencepool.php">Confidence Pool Picks</a></li>
+                        <li><a href="/bettingtrends.php">NFL Betting Trends</a></li>
+                        <li><a href="/nflbettingprops2016.php">NFL Betting Props</a></li>
+                        <li><a href="/betrules.php">Betting FAQ</a></li>
+
+                        <li class="divider"></li>
+                        <li class="dropdown-header">NFL Season</li>
+                        <li><a href="/nflpowerrankings.php">NFL Power Rankings</a></li>
+                        <li><a href="/nflreview.php">NFL Game Recaps</a></li>
+                        <li><a href="/nfltop100_2016.php">Top 100 NFL Players Recap</a></li>
+                        
+                        <li><a style="color:green; font-weight:bold;" href="/survivor">Survivor Contest</a></li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header">NFL Offseason</li>
+                        <li><a href="/freeagents.php">NFL Free Agent Tracker</a></li>
+                        <li><a href="/freeagentsigninggrades.php">Free Agent Grades</a></li>
+                        <li><a href="/offseason.php">NFL Season Previews</a></li>
+                        <li><a href="/offseason.php">NFL Team Needs</a></li>
+                        <li><a href="/rookieforecast.php">Rookie Forecast</a></li>
+                        <li><a href="/draft2016freeagent.php">Free Agent Mock Draft</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="https://www.covers.com/sports/nfl/odds" title="Covers.com: nfl odds">NFL Odds</a>
+                </li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+    <div class="container-fluid">
+        <div class="navbar-header" style="padding-left:15px;">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".subMenuDF">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <img src="/jscss/Images/wfPodcast.png" width="33" style="clear:none; float:left; padding-top:3px;padding-right:3px; cursor:pointer;padding-top:11px;"  align="middle" />
+            <a data-toggle="tooltip" class="navbar-brand" data-placement="bottom" title="WalterFootball.com Podcasts" href="http://walterfootball.com/podcasting.php">Podcasts</a>
+            
+
+        </div>
+        <div class="navbar-collapse collapse subMenuDF">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" href="/nbadraft2019mock.php" data-toggle="dropdown">NBA Draft <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu" style="z-index:10000;">
+                        <li class="dropdown-header"><img width="30" src="/jscss/Images/wflogobiggerTransparentBg.png" /> Primary Content</li>
+                        <li><a href="/nbadraft2019mock.php">2019 NBA Mock Draft</a></li>
+                        <li><a href="/nbadraft2019mikemock.php">2019 NBA Mock Draft - Mike</a></li>
+                        <li><a href="/nbadraftgrades.php">Live NBA Draft Grades</a></li>
+                        <li><a href="/nbatradegrades.php">NBA Trade Grades</a></li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header"><img width="30" src="/jscss/Images/NewWFUserImg.png" /> Reader Content</li>
+                        <li><a href="/mocks/nba">Reader Mock Drafts</a></li>
+                        
+                        <li class="divider"></li>
+                        <li class="dropdown-header"><img width="23" src="/jscss/Images/ExternalLinks.png" />General Content</li>
+                        <li><a href="/nba/positiondraftreport/center">NBA Mocks by Position</a></li>
+                        <li><a href="/nba/teamdraftreport/new-york-knicks">NBA Mocks by Team</a></li>
+                        <li><a href="/nbadraftrankings.php">2016 NBA Draft Prospect Rankings</a></li>
+                        <li><a href="/nbadraftdata.php">NBA Mock Draft Database</a></li>
+                        <li><a href="/nba/teamneeds">NBA Team Needs Report</a></li>
+                        <li><a href="/mocks/consensus/nba/2019">Mock Consensus Report 2019</a></li>
+
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" href="/NBA.php" data-toggle="dropdown">NBA Season <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu" style="z-index:10000;">
+                        <li class="dropdown-header"><img width="30" src="/jscss/Images/wflogobiggerTransparentBg.png" /> Primary Content</li>
+                        <li><a href="/nba.php">NBA Picks</a></li>
+                        <li><a href="/nba/pickemwfdevteam?mi">WFDevTeam's Official NBA Picks</a></li>
+                        <li><a href="/nbafanduel/picks">NBA Fan Duel Value Picks - Chet Gresham</a></li>
+                        <li><a href="/collegebasketballpicks.php">College Basketball Picks</a></li>
+                        <li><a href="/nba/pickem?mi">Track your NBA Picks</a></li>
+                        <li><a href="/nba/pickemleaderboard?mi">NBA Reader Picks Leaderboard</a></li>
+                        <li><a href="/nbapowerrankingsmike.php">NBA Power Rankings</a></li>
+                        <li><a href="/nba/powerrankingsbyschedulestrength">NBA Calculated Power Rankings</a></li>
+                        <li><a href="/nba/teamstandings">NBA Team Standings</a></li>
+                        
+                        <li><a href="/ncaatournament.php">NCAA Tournament Picks</a></li>
+                        <li><a href="/bracketology.php"> 2016 NCAA Tournament Bracketology</a></li>
+                        
+                        <li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header"><img width="30" src="/jscss/Images/NewWFUserImg.png" /> Reader Content</li>
+                        <li><a href="/nba/powerrankings">Reader NBA Power Rankings</a></li>
+                        <li><a href="/nba/pickem?mi2">NBA Pick Em</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="https://forum.walterfootball.com">
+                        Forum
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" href="/picks.php" data-toggle="dropdown">Draft Weekend<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu" style="z-index:10000;">
+                        <li class="dropdown-header"><img width="30" src="/jscss/Images/wflogobiggerTransparentBg.png" /> Primary Content</li>
+                        <li><a href="/nfldraftgrades.php">Live NFL Draft Grades</a></li>
+                        <li><a href="/draftblog.php">Live Draft Blog</a></li>
+                        <li><a href="/draft2015redraft_2.php">Walt's Mock Re-Draft: Rounds 2-3</a></li>
+                        <li><a href="/draft2015charlieredraft_2.php">Charlie's Mock Re-Draft Rounds 2-3</a></li>
+                        <li><a href="/draft2015day2preview.php">NFL Draft Day 2 Preview</a></li>
+                        <li><a href="/draft2015tradegrades.php">NFL Draft Trade Grades</a></li>
+                        <li><a href="/draft2015redraft_4.php">Walt's Mock Re-Draft: Round 4</a></li>
+                        <li><a href="/draft2015charlieredraft_4.php">Charlie's Mock Re-Draft: Round 4</a></li>
+                        <li><a href="/draft2015udfa.php">UDFA Signings</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" href="/jerksoftheweek.php" data-toggle="dropdown">Jerks/Debacled<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu" style="z-index:10000;">
+                        <li class="dropdown-header"><img width="30" src="/jscss/Images/wflogobiggerTransparentBg.png" /> Primary Content</li>
+                        <li><a href="/jerksoftheweek.php">Jerks of the Week</a></li>
+                        <li><a href="/emmitt2013.php">Emmitt on the Brink</a></li>
+                        <li><a href="/emmitt.php">Emmitt Anthology</a></li>
+                        <li><a href="/draft2015emmitt.php">Emmitt's 2015 Mock</a></li>
+                        <li><a href="/draft2014emmitt.php">Emmitt's 2014 Mock</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown">
+                        Featured Writers<span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" style="z-index:10000;">
+                        <li class="dropdown-header"><img width="30" src="/jscss/Images/wflogobiggerTransparentBg.png" /> Charlie Campbell</li>
+                        <li><a href="/draft2019charlie.php">NFL Draft 2019</a></li>
+                        <li><a href="/nfldraftbigboard">NFF Draft Big Board</a></li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header"><img width="30" src="/jscss/Images/wflogobiggerTransparentBg.png" /> Chet Gresham</li>
+                        <li><a href="/fantasycheatsheet/display/chet-gresham">Fantasy Rankings / Cheat Sheet</a></li>
+                        <li><a href="/fantasyweeklyrankingschet/qb">Fantasy Weekly Rankings</a></li>
+                        
+                        <li class="divider"></li>
+                        <li>
+                            <a href="/twitter" title="WalterFootball.com Twitter Accounts">
+                                <img border="0" align="left" alt=" " width="18" title="WalterFootball.com Twitter Accounts" src="http://walterfootball.com/images/twitter.jpg" />
+                                Tweets
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" href="http://forum.walterfootball.com/" data-toggle="dropdown">
+                        Community<span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" style="z-index: 10000;">
+                        <li><a href="http://forum.walterfootball.com/">Forum</a></li>
+                        <li><a href="/readercontent">Recent Reader Content</a></li>
+                        <li><a href="/mocks">Reader Mock Drafts</a></li>
+                        <li><a href="/powerrankings">Reader Power Rankings</a></li>
+                        <li><a href="/openrant">Open Ranting</a></li>
+
+                        
+                        <li><a href="/flinks.php">Links</a></li>
+                        <li><a href="/wf/reportissue"><img src="/jscss/images/wfdevteam.png" width="17" alt="WFDevTeam Logo" /> Report Issue(s)</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="http://player.walterfootball.com/" title="Link to a page of related videos">Videos</a>
+                </li>
+             
+                        <li class="dropdown" style="background-color:transparent;">
+                                <a href="/gateway/index/returnhere">
+                                    <img src="http://walterfootball.com/Uploads/Anony.jpg" width="18" />
+                                    Login
+                                </a>
+                        </li>
+
+
+</ul>
+        </div><!--/.nav-collapse -->
+    </div>   
+</div>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+        <div style="display: block; text-align: center;">
+            <div style="position: absolute;">
+                
+
+
+            <input type="hidden" value="49" name="hfScriptId" class="hfScriptId" />
+             <!--TopBannerAd- Key:TopBannerAd-->
+<!-- WalterFootball_728x90_ATF -->
+<div align="center" id="div-gpt-ad-728x90-ATF">
+    <script data-cfasync="false" type='text/javascript'>
+        freestar.queue.push(function () { googletag.display('div-gpt-ad-728x90-ATF'); });
+    </script>
+</div>
+
+
+
+
+<!-- TreatRequestAsMobileOrTables = False -->
+
+
+            </div>
+            <div style="height: 90px; display: inline-block; line-height: 90px; margin: auto;">
+            </div>
+        </div>
+
+        <div style="height: 7px; line-height: 7px;">&nbsp;</div>
+
+
+  
+
+        <div id="contentTable">
+
+            <div id="contentRow">
+                <div class="contentCell" style="vertical-align:top; padding-top:0px; padding-left:5px; margin-top:0px; min-width:275px; max-width:775px; background-color:white; border-radius:5px;">
+                    <br />
+
+                   
+
+                    
+
+
+
+<h1 style="text-align:center;">    
+    2019 NFL Mock Draft    
+</h1>
+
+
+
+<br /><br />
+
+
+<script type="text/javascript">
+    function dropdown(gourl) {
+        window.location = gourl.value;
+        return false;
+    }
+</script>
+
+
+<style>
+    blockquote {
+        font-size: 12px;
+        border-left: none;
+    }
+
+        blockquote a, .noclass, blockquote a:hover, .noclass:hover {
+            color: blue;
+            text-decoration: underline;
+        }
+
+            blockquote a:visited, .noclass {
+                color: #551A8B;
+                text-decoration: underline;
+            }
+
+    td {
+        vertical-align: top;
+    }
+
+    a:visited {
+        color: #551A8B;
+    }
+</style>
+
+
+
+
+
+    <style>
+        .content-block {
+            padding-left: 15px;
+        }
+    </style>
+
+
+
+<div class='content-block' id="MainContentBlock">
+
+
+Last update: <b> Tuesday, March 19, 2019.    </b> Major changes.  
+<br>  Next update: Occasionally.  Follow me <a href="http://twitter.com/walterfootball" target = "blank"> @walterfootball</a> for updates.   <br> <br>
+
+
+The order of this 2019 NFL Mock Draft is based on the real <a href="/nfldraftorder2019.php"> 2019 NFL Draft Order</a>. <br> <br>
+
+
+
+
+
+<!-- Begin js tags AdTrue for walterfootball.com_728x90 - Do not Modify -->
+<div id="adtrue_tag_6884"></div>
+<script data-cfasync='false' type='text/javascript' src='//cdn.adtrue.com/rtb/async.js' async></script>
+<script type="text/javascript">
+    var adtrue_tags = window.adtrue_tags || [];
+    adtrue_tags.push({
+        tag_id: 6884,
+        width: 728,
+        height: 90
+    });
+</script>
+<!-- End Tags -->
+
+<br> <br>
+
+
+
+
+
+<div id="snack_ldb"></div>
+
+
+
+<br>
+
+ 
+
+
+
+<br>
+<div class = 'article'>
+
+<b> NFL Draft Recent Links:</b> <br> </div>
+<div class = 'small'> 
+
+
+
+
+
+
+
+<b> 2019 NFL Mock Draft</b> (UPDATED 3/20): <a href="/draft2019.php">Round 1</a> /<a href="/draft2019_1.php">Picks 17-32</a> /<a href="/draft2019_2.php">Round 2</a> /<a href="/draft2019_3.php">Round 3</a>  /<a href="/draft2019_4.php">Round 4</a> /<a href="/draft2019_5.php">Round 5</a> /<a href="/draft2019_6.php">Round 6</a>  <br>
+
+Other 2019 Mock Drafts: <a href="/draft2019charlie.php">Charlie Campbell (3/18)</a> /<a href="/draft2019freeagent.php">Free Agent Mock (3/10)</a> /<a href="/draft2019seniorbowl.php">Senior Bowl Mock (1/26)</a>  /<a href="/draft2019video.php">Video Mock (1/8)</a>  /<a href="/draft2019overreaction.php">Overreaction Mock (12/31)</a>   <br>
+
+<b> 2020 NFL Mock Draft</b> (UPDATED 2/14): <a href="/draft2020.php">Round 1</a> /<a href="/draft2020_1.php">Picks 17-32</a>    <br>
+
+Other 2020 Mock Drafts: <a href="/draft2020charlie.php">Charlie Campbell (2/24)</a>    <br>
+
+
+<b> 2021 NFL Mock Draft</b> (UPDATED 2/21): <a href="/draft2021.php">Round 1</a> /<a href="/draft2021_1.php">Picks 17-32</a>    <br>
+
+<b> 2018 NFL Mock Draft</b> (UPDATED 4/26): <a href="/draft2018.php">Round 1</a> /<a href="/draft2018_1.php">Picks 17-32</a> /<a href="/draft2018_2.php">Round 2</a> /<a href="/draft2018_3.php">Round 3</a> /<a href="/draft2018_4.php">Round 4</a>  /<a href="/draft2018_5.php">Round 5</a>  /<a href="/draft2018_6.php">Round 6</a>  /<a href="/draft2018_7.php">Round 7</a> <br>
+
+2018 NFL Mock Re-Draft (UPDATED 4/27): <a href="/draft2018redraft_4.php">Walt Round 4</a> /<a href="/draft2018redraft_5.php">Walt Round 5</a> /<a href="/draft2018charlieredraft_4.php">Charlie Round 4</a> /<a href="/draft2018charlieredraft_5.php">Charlie Round 5</a> /<a href="/draft2018redraft_2.php">Walt Round 2</a> /<a href="/draft2018redraft_3.php">Walt Round 3</a> /<a href="/draft2018charlieredraft_2.php">Charlie Round 2</a> /<a href="/draft2018charlieredraft_3.php">Charlie Round 3</a> <br>
+
+Other 2018 Mock Drafts: <a href="/draft2018charlie.php">Charlie Campbell (4/26)</a> /<a href="/draft2018combo.php">Combo (5/6)</a> /<a href="/draft2018goals.php">Goals (4/21)</a> /<a href="/draft2018not.php">Not Mock (4/20)</a> /<a href="/draft2018emmitt.php">Emmitt Mock (4/15)</a> /<a href="/draft2018trades.php">Trades Mock (4/13)</a> /<a href="/draft2018backward.php">Backward Mock (4/8)</a> /<a href="/draft2018aprilfools.php">April Fools Mock (4/1)</a> /<a href="/draft2018reader.php">Reader Mock</a> /<a href="/draft2018freeagent.php">Free Agent Mock (3/11)</a> /<a href="/draft2018seniorbowl.php">Senior Bowl (1/27)</a>   <br>
+
+ 
+<a href="/draft2014redraft.php"> 2014 NFL Draft Re-Mock</a> /
+<a href="/draft2013redraft.php"> 2013 NFL Draft Re-Mock</a> / 
+<a href="/draft2012redraft.php"> 2012 NFL Draft Re-Mock</a> / 
+<a href="/draft2011redraft.php"> 2011 NFL Draft Re-Mock</a> / <a href="/draft2010redraft.php"> 2010 NFL Draft Re-Mock</a> / <a href="/draft2009redraft.php"> 2009 NFL Draft Re-Mock</a> / <a href="/draft2008redraft.php"> 2008 NFL Draft Re-Mock</a> / <a href="/draft2007redraft.php"> 2007 NFL Draft Re-Mock</a> / <a href="/draft2006redraft.php"> 2006 NFL Draft Re-Mock</a> / <a href="/draft2005redraft.php"> 2005 NFL Draft Re-Mock</a> / <a href="/draft2004redraft.php"> 2004 NFL Draft Re-Mock</a> / <a href="/draft2003redraft.php"> 2003 NFL Draft Re-Mock</a> / <a href="/draft2002redraft.php"> 2002 NFL Draft Re-Mock</a> / <a href="/draft2008P.php"> 2018 NFL Draft Prospect Rankings</a> / <a href="/nflrumors.php"> NFL Rumors</a> <br>
+
+
+(More links to previous NFL mock drafts at the bottom of this page) <br> <br>
+</div>
+<ol>
+
+
+
+<br> 
+
+
+*** 2019 NFL MOCK DRAFT (6 rounds) updated March 19. This mock draft will be updated occasionally. Check out old versions of this 2019 NFL Mock Draft in the  <a href="/draft2019archive.php">archived mock section</a>. Follow <a href="http://twitter.com/walterfootball" target = "blank"> @walterfootball</a> for NFL Draft updates. *** 
+<br>
+
+
+<br>                    <center>
+                        
+
+
+            <input type="hidden" value="44" name="hfScriptId" class="hfScriptId" />
+             <!--Ad True Banner- Key:Ad True Banner-->
+<!-- Tag ID: div-gpt-ad-728x90-BTF -->
+<div align="center" id="div-gpt-ad-728x90-BTF">
+    <script data-cfasync="false" type='text/javascript'>
+        freestar.queue.push(function () { googletag.display('div-gpt-ad-728x90-BTF'); });
+    </script>
+</div>
+
+
+
+
+<!-- TreatRequestAsMobileOrTables = False -->
+
+
+                    </center>
+<br>
+
+
+
+<li> <img src="/images/fball/cardinalsb_logo.gif">
+<b> Arizona Cardinals:    <a href="/scoutingreport2019kmurray.php">Kyler Murray</a>, QB/WR, Oklahoma  </b> <img src="/college/Oklahoma_logo.gif" VALIGN = "top">     
+<br>
+
+It's becoming increasingly apparent that one of two things will happen with the first-overall pick in the 2019 NFL Draft: <br> <br>
+
+1. The Cardinals will select Kyler Murray and trade Josh Rosen. <br> <br>
+
+2. Arizona will trade this pick to a team - probably the Raiders - that will want to choose Murray. <br> <br>
+
+Either way, Murray will be the top choice in the wake of his positive measurements at the combine. I'm going to lean toward the Cardinals taking him in the wake of Kliff Kingsbury telling everyone at the combine that his team picking Murray is a "done deal." This could be a smoke screen, and if so, I think it'll work because the Raiders love Murray and would love to obtain him.  <br> <br>
+
+Murray has vaulted into the top spot of the draft because of his positive measurement at the combine. Because Murray was listed at 5-foot-10 at Oklahoma, it seemed like there was a legitimate chance he would be something like 5-8 7/8, but 5-10 1/8 is a big deal, as it's not much shorter than what Russell Wilson is.
+
+
+<br> <br> Follow <a href="http://twitter.com/walterfootball" target = "blank">@walterfootball</a> for updates. Also, you can <a href="https://www.patreon.com/walterfootball" target = "blank">Support Us on Patreon</a> here!
+
+
+<br> <br>
+
+</b></li>                    <center>
+                        
+
+
+            <input type="hidden" value="77" name="hfScriptId" class="hfScriptId" />
+             <!--April300- Key:April300-->
+<div id = 'vdo_ai_div'></div><script>(function(v,d,o,ai){ai=d.createElement('script');ai.defer=true;ai.async=true;ai.src=v.location.protocol+o;d.head.appendChild(ai);})(window, document, '//a.vdo.ai/core/walterfootball-ic/vdo.ai.js?vdo=34');</script>
+
+
+
+<!-- TreatRequestAsMobileOrTables = False -->
+
+
+                    </center>
+<li> <img src="/images/fball/49ersb_logo.gif">
+<b> San Francisco 49ers:  <a href="/scoutingreport2019qwilliams.php">Quinnen Williams</a>, DT, Alabama </b> <img src="/college/Alabama_logo.gif" VALIGN = "top">   
+<br>
+
+The 49ers are currently deciding between Nick Bosa and Quinnen Williams. Charlie Campbell reported a week ago in the <a href="/NFLHotPress">NFL Hot Press</a>, as well as the mock draft video below, that the 49ers appeared as though they were falling in love with Williams. Charlie's report looks even better in the wake of the 49ers acquiring Dee Ford from the Chiefs for a 2020 second-round pick. <br> <br>
+
+
+Williams had a breakout performance this season, and sources Charlie Campbell spoke to early in the season believed Williams would be a high first-round pick. Williams is now a likely top-five selection. <br> <br>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/PAKBl6pMDKY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+ 
+
+<br> <br>  <u> <i> Pick change;  previously Nick Bosa, DE </i> </u> 
+
+<br> <br>
+
+</b></li>
+
+
+<li> <img src="/images/fball/jetsb_logo.gif">
+<b> New York Jets:   Nick Bosa, DE, Ohio State  </b> <img src="/college/OhioState_logo.gif" VALIGN = "top">    
+<br>
+
+The Jets would love to trade down, but perhaps Nick Bosa falling to No. 3 would entice them to stay put. New York tried to sign Anthony Barr to a big contract in free agency to fill a huge void it has at edge rusher. Barr, however, changed his mind and returned to the Vikings. With a lacking presence at outside linebacker, the Jets could fill a huge need by selecting Bosa at this spot. <br> <br>
+
+Bosa has a tremendous skill set, and he was off to a great start in 2018 before injuring his knee. He's a likely top-three pick.
+
+
+<br> <br>  <u> <i> Pick change;  previously Montez Sweat, DE/OLB </i> </u> 
+
+<br> <br>
+
+</b></li>
+
+
+
+<br>
+<center>                    <center>
+                        
+
+
+            <input type="hidden" value="55" name="hfScriptId" class="hfScriptId" />
+             <!--AdsDaqInline- Key:AdsDaqInline-->
+ 
+<script async src="https://cdn.ad.plus/player/adplus.js"></script>
+<script>(function(){var i='t-RelmwzorImE3pryvs5_VbuPbfkXL4VHl_TQ92O1uxw-1puWBJw';document.write('<div id="'+i+'"></div>');(playerPro=window.playerPro||[]).push(i);})();</script>
+
+
+<br> <br> <br>
+
+
+
+<script type="text/javascript"><!--
+	e9 = new Object();
+    e9.size = "300x250";
+//--></script>
+<script type="text/javascript" src="//tags.expo9.exponential.com/tags/walterfootballcom/ROS/tags.js"></script>
+
+
+
+<!-- TreatRequestAsMobileOrTables = False -->
+
+
+                    </center>
+</center>
+<br>
+
+
+
+<li> <img src="/images/fball/raidersb_logo.gif">
+<b> Oakland Raiders: <a href="/scoutingreport2019dhaskins.php">Dwayne Haskins</a>, QB, Ohio State  </b> <img src="/college/OhioState_logo.gif" VALIGN = "top">   
+<br>
+
+
+Charlie Campbell reported that the Raiders like Dwayne Haskins. They may not take him - with five-and-a-half weeks to go, they still have plenty of time to decide - but he's at least a top option for them at No. 4. Jon Gruden spent the entire year yelling at Derek Carr and may want to bring in his own quarterback. <br> <br>
+
+Dwayne Haskins has a tremendous skill set, but is not a finished product at the moment. However, with Justin Herbert going back to school, he's the top quarterback prospect in this class after Kyler Murray.
+
+
+<br> <br>  <u> <i> Pick change;  previously Quinnen Williams, DT </i> </u> 
+
+<br> <br>
+
+</b></li>
+
+
+<li> <img src="/images/fball/Bucsb_logo.gif">
+<b> Tampa Bay Buccaneers:  <a href="/scoutingreport2019jallen.php">Josh Allen</a>, DE/LB, Kentucky </b> <img src="/college/Kentucky_logo.gif" VALIGN = "top">   
+<br>
+
+I'm sure the Buccaneers would love to trade down, but they may have trouble passing on an elite talent like Josh Allen. The Kentucky product is the best player available, and he also fills a huge need to provide a boost to a lacking pass rush. With the Buccaneers transitioning to a hybrid defense, Allen would be a great fit. <br> <br>
+
+Josh Allen can basically play anywhere you want him to on defense. He's a terrific player, as he was the primary reason why Kentucky was in contention for the SEC East title so late into the season. He's compared to as a hybrid of Leonard Floyd and Zach Cunningham, as he can play in coverage and also rush the quarterback effectively on the edge.
+
+
+<br> <br>
+
+</b></li>
+
+
+
+<br>
+<center>                    <center>
+                        
+
+
+            <input type="hidden" value="56" name="hfScriptId" class="hfScriptId" />
+             <!--Yard300- Key:Yard300-->
+<!-- WalterFootball_300x250_300x600 ~-->
+<div align="center" id="div-gpt-ad-300x250">
+    <script data-cfasync="false" type='text/javascript'>
+        freestar.queue.push(function () { googletag.display('div-gpt-ad-300x250'); });
+    </script>
+</div>
+
+
+
+
+<!-- TreatRequestAsMobileOrTables = False -->
+
+
+                    </center>
+</center>
+<br>
+
+
+
+<li> <img src="/images/fball/giantsb_logo.gif">
+<b> New York Giants: Rashan Gary, DE/DT, Michigan  </b> <img src="/college/Michigan_logo.gif" VALIGN = "top">   
+<br>
+
+Reports have surfaced that the Giants don't like Dwayne Haskins, so they won't be projected to trade up in this mock draft. Perhaps they'll take the top athlete available. Rashan Gary would fill a need at one of the defensive end spots on New York's three-man front. <br> <br>
+
+Gary is an athletic freak. He wasn't extremely productive during his time at Michigan, but he has tremendous upside.
+
+<br> <br>  <u> <i> Pick change;  previously Dwayne Haskins, QB </i> </u> 
+
+<br> <br>
+
+</b></li>
+
+
+<li> <img src="/images/fball/jaguarsb_logo.gif">
+<b> Jacksonville Jaguars:  <a href="/scoutingreport2019jtaylor.php">Jawaan Taylor</a>, OT, Florida  </b> <img src="/college/Florida_logo.gif" VALIGN = "top">   
+<br>
+
+The Jaguars spent big money on Nick Foles. It would be foolish not to upgrade his offensive line. Left tackle Cam Robinson is a question mark, but the huge void up front is at right tackle. Jacksonville currently doesn't have a viable player at this position. This pick could fill right tackle spot, with Jawaan Taylor sliding into that position. Taylor could also play the blind side, shifting Robinson to right tackle. <br> <br>
+
+Jawaan Taylor has some great feet for his size (6-5, 340) and likely will be the first tackle off the board.
+
+
+<br> <br>  <u> <i> Pick change;  previously Rashan Gary, DE/DT </i> </u> 
+
+<br> <br>
+
+</b></li>
+
+
+
+
+<br>
+<center>                    <center>
+                        
+
+
+            <input type="hidden" value="57" name="hfScriptId" class="hfScriptId" />
+             <!--ThirdBox- Key:ThirdBox-->
+<!-- WalterFootball_300x250_300x600 -->
+<div align="center" id="div-gpt-ad-300x250-5">
+    <script data-cfasync="false" type='text/javascript'>
+        freestar.queue.push(function () { googletag.display('div-gpt-ad-300x250-5'); });
+    </script>
+</div>
+
+
+<br> <br>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 300x250, created 1/28/08 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-8944303032351449"
+     data-ad-slot="4280440796"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+
+<!-- TreatRequestAsMobileOrTables = False -->
+
+
+                    </center>
+</center>
+<br>
+
+
+
+<li> <img src="/images/fball/lionsb_logo.gif">
+<b> Detroit Lions:  <a href="/scoutingreport2019dwhite.php">Devin White</a>, LB, LSU </b> <img src="/college/LSU_logo.gif" VALIGN = "top">      
+<br>
+
+The Lions have one of the worst linebacking corps in the NFL. They can't cover anyone over the middle of the field. They need to add a player who can become the leader of their defensive unit at the position. If they do so, perhaps they'll finally be able to compete with some of the top teams in their division. <br> <br>
+
+Devin White was extremely productive this past season, logging 133 tackles. A projected running back, White is still learning the position, which is crazy considering how great he was in 2017. White is already generating a buzz for the 2019 NFL Draft, as Charlie Campbell reported in the <a href="/NFLHotPress">NFL Hot Press</a>. 
+ 
+
+<br> <br>
+
+</b></li>
+
+
+<li> <img src="/images/fball/billsb_logo.gif">
+<b> Buffalo Bills:  <a href="/scoutingreport2019cwilkins.php">Christian Wilkins</a>, DT, Clemson  </b> <img src="/college/Clemson_logo.gif" VALIGN = "top">  
+<br>
+
+The Bills need some offensive play-makers and blockers - though less so after free agency - but I can't imagine them passing up on Christian Wilkins or Ed Oliver if either is available. With Kyle Williams retired, Buffalo needs a dominant presence in the interior of the defensive line, and Wilkins or Oliver can provide that. <br> <br>
+
+Christian Wilkins has superior speed and athleticism as an interior disruptor. He was unstoppable in the national championship.
+
+
+<br> <br>  <u> <i> Pick change;  previously Ed Oliver, DT </i> </u> 
+
+<br> <br>
+
+</b></li>
+
+
+
+<br>                    <center>
+                        
+
+
+            <input type="hidden" value="67" name="hfScriptId" class="hfScriptId" />
+             <!--spormeon300- Key:spormeon300-->
+<script src='https://www.googletagservices.com/tag/js/gpt.js'>
+  googletag.pubads().set("page_url", "www.walterfootball.com").definePassback('/90814396/walterfootball_300x250_ATF', [300, 250]).display();
+</script>
+
+
+
+<!-- TreatRequestAsMobileOrTables = False -->
+
+
+                    </center>
+<br>
+
+
+
+<li> <img src="/images/fball/broncosb_logo.gif">
+<b> Denver Broncos: <a href="/scoutingreport2019dlock.php">Drew Lock</a>, QB, Missouri  </b> <img src="/college/Missouri_logo.gif" VALIGN = "top">    
+<br>
+
+Charlie Campbell was the first to report in the <a href="/seniorbowl2019rumors.php">Senior Bowl Rumors</a> page that the Broncos like Drew Lock more than any other quarterback, so it sounds like Lock could be the pick if available. <br> <br>
+
+Drew Lock has a great arm and can make any throw, but he really needs to work on his field vision and accuracy. He should probably be taken in the second round, but we've seen teams reach for quarterbacks over the years. And besides, teams like Lock's gritty attitude and work ethic. He loves football, so he'll try hard to improve his flaws.
+
+
+
+<br> <br>
+
+</b></li>
+
+
+<li> <img src="/images/fball/bengalsb_logo.gif">
+<b> Cincinnati Bengals:  <a href="/scoutingreport2019bburns.php">Brian Burns</a>, DE/OLB, Florida State  </b> <img src="/college/FloridaState_logo.gif" VALIGN = "top">     
+<br>
+
+This is a reach for sure, but it's not like the Bengals haven't done that before. Cincinnati tends to favor rare athletes - see the John Ross pick - and that could be said of Brian Burns, who was very impressive at the combine. The Bengals have been scouting edge rushers to improve their defensive line, so this pick makes sense for multiple reasons. <br> <br>
+
+Brian Burns needs to bulk up quite a bit, but he has a long frame, so he has the potential to fill out. Some mock drafts had Burns as a top-10 pick, but sources Charlie Campbell has spoken to believe Burns is a second-round prospect (read more in the <a href="/NFLHotPress">NFL Hot Press</a>.) That said, there aren't 32 first-round prospects in this class, so someone like Burns could sneak into the opening frame if a team likes him enough (or loves him enough, as shown in this scenario.)
+
+<br> <br>  <u> <i> Pick change;  previously Jawaan Taylor, OT </i> </u> 
+
+<br> <br>
+
+</b></li>                    <center>
+                        
+
+
+            <input type="hidden" value="66" name="hfScriptId" class="hfScriptId" />
+             <!--VFN- Key:VFN-->
+<script src='https://www.googletagservices.com/tag/js/gpt.js'>
+  googletag.pubads().set("page_url", "www.walterfootball.com").definePassback('/90814396/walterfootball_300x600_ATF', [300, 600]).display();
+</script>
+ 
+
+<br> <br>
+
+
+<div id="snack_dmpu"></div>
+
+
+
+<!-- TreatRequestAsMobileOrTables = False -->
+
+
+                    </center>
+<li> <img src="/images/fball/packersb_logo.gif">
+<b> Green Bay Packers:   <a href="/scoutingreport2019tjhockenson.php">T.J. Hockenson</a>, TE, Iowa  </b> <img src="/college/Iowa_logo.gif" VALIGN = "top">  
+<br>
+
+The Packers have done a good job of bolstering their defense in free agency, acquiring Za'Darius Smith, Preston Smith and Adrian Amos. They haven't touched their offense outside of obtaining one guard, so perhaps they'll focus on that side of the ball with this pick. If so, selecting a blue-chip tight end to give Aaron Rodgers a reliable, intermediate target, would make lots of sense. <br> <br>
+
+T.J. Hockenson is considered the top all-around tight end in the 2019 NFL Draft class. He's a very talented receiver and a skilled blocker as well. He was great at the combine.
+ 
+<br> <br>  <u> <i> Pick change;  previously Clelin Ferrell, DE </i> </u> 
+
+<br> <br>
+
+</b></li>
+
+
+<li> <img src="/images/fball/dolphinsb_logo.gif">
+<b> Miami Dolphins:  <a href="/scoutingreport2019dmetcalf.php">D.K. Metcalf</a>, WR, Ole Miss  </b> <img src="/college/Mississippi_logo.gif" VALIGN = "top">   
+<br>
+
+
+If the Dolphins truly plan on tanking in 2019 to land Tua Tagovailoa in the 2020 NFL Draft, they should make sure that Tagovailoa has a legitimate No. 1 receiver to throw to. They can obtain that sort of a play-maker with this pick. <br> <br>
+
+D.K. Metcalf didn't look like a No. 1 receiver at Ole Miss, as he was unproductive while running poor routes. However, he posted elite numbers at the combine, displaying a ridiculous amount of upside.
+
+
+<br> <br>
+
+</b></li>                    <center>
+                        
+
+
+            <input type="hidden" value="80" name="hfScriptId" class="hfScriptId" />
+             <!--SixthAd- Key:SixthAd-->
+<script type="text/javascript"><!--
+ e9 = new Object();
+    e9.size = "300x250,300x600";
+//--></script>
+<script type="text/javascript" src="http://tags.expo9.exponential.com/tags/walterfootballcom/BTF/tags.js"></script>
+
+
+
+<!-- TreatRequestAsMobileOrTables = False -->
+
+
+                    </center>
+<li> <img src="/images/fball/falconsb_logo.gif">
+<b> Atlanta Falcons:  <a href="/scoutingreport2019eoliver.php">Ed Oliver</a>, DT, Houston  </b> <img src="/college/Houston_logo.gif" VALIGN = "top">     
+<br>
+
+The Falcons were expected to address their defensive line during the previous draft, but they didn't do enough to improve that area. They'll need to make amends for that next spring. <br> <br>
+
+Ed Oliver was a highly productive defensive lineman for Houston, recording a ridiculous 22.5 TFLs as a freshman. He was a monster this past season before getting hurt. He once projected to be a top-five pick in the 2019 NFL Draft, but could still be chosen in the top half of the opening frame.
+
+<br> <br>  <u> <i> Pick change;  previously Christian Wilkins, DT </i> </u> 
+
+<br> <br>
+
+</b></li>
+
+
+<li> <img src="/images/fball/redskinsb_logo.gif"> 
+<b> Washington Redskins:   <a href="/scoutingreport2019danieljones.php">Daniel Jones</a>, QB, Duke  </b> <img src="/college/Duke_logo.gif" VALIGN = "top">   
+<br>
+
+If the Cardinals trade Josh Rosen, the Redskins will be the favorite to acquire him. They traded for Case Keenum, but still need a young quarterback. Rosen would make a ton of sense. If they can't get Rosen, they'll have to select a quarterback with this pick. <br> <br>
+
+Daniel Jones has positive arm strength and athleticism, and he could be a top-15 pick because of his upside. In fact, Charlie Campbell reported that three NFL general managers believd he'd be the first quarterback taken in the 2019 NFL Draft when polled during the Senior Bowl. Some are comparing him to Carson Wentz.
+
+
+<br> <br>
+
+
+</b></li>                    <center>
+                        
+
+
+            <input type="hidden" value="76" name="hfScriptId" class="hfScriptId" />
+             <!--Solo300- Key:Solo300-->
+<!-- BEGIN TH IAB CODE -->
+
+<script type="text/javascript">
+
+document.writeln('<ins>\r\n<scr'+'ipt type="text/javascript" src="https://tradehouse.advertserve.com/servlet/view/banner/javascript/zone?zid=139&friendly=true&pid=0&refresh=30&refresh_limit=15&referrer='+encodeURIComponent((window!=top&&window.location.ancestorOrigins)?window.location.ancestorOrigins[window.location.ancestorOrigins.length-1]:document.location)+'"></scr'+'ipt>\r\n</ins>');
+
+</script>
+
+<!-- END TH IAB CODE -->
+
+
+
+<!-- TreatRequestAsMobileOrTables = False -->
+
+
+                    </center>
+<li> <img src="/images/fball/panthersb_logo.gif">
+<b> Carolina Panthers:  <a href="/scoutingreport2019msweat.php">Montez Sweat</a>, DE/OLB, Mississippi State  </b> <img src="/college/MississippiState_logo.gif" VALIGN = "top">   
+<br>
+
+A week ago, the Panthers didn't think that Montez Sweat would fall to them at No. 16, and correctly so. Sweat, following his terrific combine, was seen as a top-eight prospect. Unfortunately, Sweat was medically red flagged for a heart condition. This caused Maurice Hurst to fall to Day 3, but it doesn't sound like Sweat's problem is as dire as Hurst's. Still, Sweat could fall to the middle or end of the opening round. The Panthers could take a chance on him to fix their edge-rushing problem.  
+
+
+<br> <br>  <u> <i> Pick change;  previously Greg Little, OT </i> </u> 
+
+<br> <br>
+
+</b></li>                    <center>
+                        
+
+
+            <input type="hidden" value="45" name="hfScriptId" class="hfScriptId" />
+             <!--Sekindo Inline Tall- Key:Sekindo Inline Tall-->
+<!-- WalterFootball_300x250_300x600 -->
+<div align="center" id="div-gpt-ad-300x250-3">
+    <script data-cfasync="false" type='text/javascript'>
+        freestar.queue.push(function () { googletag.display('div-gpt-ad-300x250-3'); });
+    </script>
+</div>
+
+
+
+<!-- TreatRequestAsMobileOrTables = False -->
+
+
+                    </center>
+<font size = 3>
+
+
+<br>
+Go to <b> <a href="/draft2019_1.php"> 2019 NFL Mock Draft: Picks 17-32</a>   </b> <br>
+<br> <i> Sorry for cutting this into two halves; I've received complaints about load times and putting the mock draft on two pages saves bandwidth. </i>
+<br> <br>
+
+
+
+
+<br>
+<center>                    <center>
+                        
+
+
+            <input type="hidden" value="72" name="hfScriptId" class="hfScriptId" />
+             <!--Carambo - the ad rambo- Key:Carambo - the ad rambo-->
+<!-- BEGIN TH IAB CODE -->
+
+<script type="text/javascript">
+
+document.writeln('<ins>\r\n<scr'+'ipt type="text/javascript" src="https://tradehouse.advertserve.com/servlet/view/banner/javascript/zone?zid=16&friendly=true&pid=0&refresh=30&refresh_limit=15&referrer='+encodeURIComponent((window!=top&&window.location.ancestorOrigins)?window.location.ancestorOrigins[window.location.ancestorOrigins.length-1]:document.location)+'"></scr'+'ipt>\r\n</ins>');
+
+</script>
+
+<!-- END TH IAB CODE -->
+
+
+
+<!-- TreatRequestAsMobileOrTables = False -->
+
+
+                    </center>
+</center>
+<br>
+
+
+
+
+</font> 
+
+
+
+
+
+
+</ol>
+
+
+
+
+
+
+<font size = 2>
+
+
+
+
+Go to <a href="/draft2019_2.php"> 2019 NFL Mock Draft: Round 2</a> | Go to <a href="/draft2019_3.php"> 2019 NFL Mock Draft: Round 3</a>
+<br> <br> <br>
+
+Go to <a href="/draft2019_4.php"> 2019 NFL Mock Draft: Round 4</a> | Go to <a href="/draft2019_5.php"> 2019 NFL Mock Draft: Round 5</a>  
+<br> <br> <br>
+
+Go to <a href="/draft2020.php"> 2020 NFL Mock Draft</a>  | Go to <a href="/draft2019charlie.php"> 2019 NFL Mock Draft: Charlie Campbell</a>
+<br> <br> <br>
+
+
+
+<br>
+<center>                    <center>
+                        
+
+
+            <input type="hidden" value="88" name="hfScriptId" class="hfScriptId" />
+             <!--Sekindo Inline 336- Key:Sekindo Inline 336-->
+<script type="text/javascript"><!--
+	e9 = new Object();
+    e9.size = "728x90";
+//--></script>
+<script type="text/javascript" src="//tags.expo9.exponential.com/tags/walterfootballcom/BTF/tags.js"></script>
+
+
+
+<!-- TreatRequestAsMobileOrTables = False -->
+
+
+                    </center>
+</center>
+<br> <br>                    <center>
+                        
+
+
+            <input type="hidden" value="58" name="hfScriptId" class="hfScriptId" />
+             <!--TabooInjection- Key:TabooInjection-->
+<br>  <br> <b><font size = "6"> <a href = "#comment">Comment...</a></b>  </font>
+<br> <br>  <br> 
+
+ 
+
+<div class="OUTBRAIN" data-widget-id= "TF_5" data-src = " " data-ob-template="WalterFootballInc." ></div>
+
+
+
+ 
+
+
+
+
+
+
+
+<!-- TreatRequestAsMobileOrTables = False -->
+
+
+                    </center>
+<div id="comments"><span style="font-weight:bold; font-size:17pt;">LOADING COMMENTS...</span></div><br>
+
+
+ 
+
+
+
+
+
+
+</font>
+
+<br> <br> 
+
+
+
+
+<font size = 4>
+
+
+
+
+
+
+
+
+
+
+
+<br> <br><font size = 4>
+  
+
+
+
+
+<b> <a href="http://walterfootball.com/draft2019.php"> 2019 NFL Mock Draft</a> </b> - March 13 <br> <br> <br>
+
+
+<b> <a href="http://walterfootball.com/nflpowerrankings.php"> NFL Power Rankings</a> </b> - Feb. 18 <br>  <br> <br>
+
+
+<b> <a href="http://walterfootball.com/fantasy2019runningbacks.php"> Fantasy Football Rankings</a> </b>  - Feb. 16 <br> <br> <br>
+
+
+
+
+<b> <a href="http://walterfootball.com/draft2020.php"> 2020 NFL Mock Draft</a> </b> - Feb. 14 <br> <br> <br>
+
+
+
+
+
+<b> <a href="http://walterfootball.com/picks.php"> NFL Picks</a> </b>  - Feb. 4 <br> <br> <br>
+
+
+
+ 
+
+
+<b> <a href="http://walterfootball.com/nbadraft2019mock.php"> 2019 NBA Mock Draft</a> </b> - Aug. 13 <br>  <br> <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+ 
+ 
+
+</font></font>
+
+
+
+
+
+<br>
+<br>
+<div class = 'article'>
+<br>
+<br>
+<b> NFL Draft Links:</b> </div> <br> <div class = 'article'>
+My 2003 Mock Draft (UPDATED 4/24): <a href="/draft2003.php"> Round 1</a>
+
+/<a href="/draft2003_2.php"> Round 2</a>/<a href="/draft2003_3.php"> Round 3</a>  <br>
+<a href="/draft2003G.php">
+2003 NFL Draft Grades </a>  (Re-graded 6/8/08)  
+
+  <br>
+My 2004 Mock Draft (UPDATED 4/24): <a href="/draft2004.php"> Round 1</a>
+
+/<a href="/draft2004_2.php"> Round 2</a>/<a href="/draft2004_3.php"> Round 3</a>  <br>
+<a href="/draft2004P.php">
+2004 NFL Draft Prospects</a>/
+
+
+<a href="/draft2004G.php">
+2004 NFL Draft Grades </a> (Re-graded 6/6/08)  
+
+  <br>
+My 2005 Mock Draft (UPDATED 4/23): <a href="/draft2005.php"> Round 1</a>
+
+/<a href="/draft2005_2.php"> Round 2</a>/<a href="/draft2005_3.php"> Round 3</a>  <br>
+<a href="/draft2005P.php">
+2005 NFL Draft Prospects  </a>
+
+  <br>
+<a href="/draft2005G.php">
+2005 NFL Draft Grades</a> (Re-graded 6/4/08) 
+
+  <br>
+My 2006 Mock Draft (UPDATED 4/28): <a href="/draft2006.php"> Round 1</a>
+
+/<a href="/draft2006_2.php"> Round 2</a>/<a href="/draft2006_3.php"> Round 3</a>  <br>
+<a href="/draft2006P.php">
+2006 NFL Draft Prospects (UPDATED 4/28) </a>
+
+  <br>
+<a href="/draft2006G.php">
+2006 NFL Draft Grades (Re-graded on 7/3) </a>
+
+  <br>
+My 2007 Mock Draft (UPDATED 4/28): <a href="/draft2007.php"> Round 1</a>
+
+/<a href="/draft2007_2.php"> Round 2</a>/<a href="/draft2007_3.php"> Round 3</a>/<a href="/draft2007_4.php"> Round 4</a>/<a href="/draft2007_5.php"> Round 5</a>/<a href="/draft2007_6.php"> Round 6</a>/<a href="/draft2007_7.php"> Round 7</a>  <br>
+Other 2007 Mock Drafts:<a href="/draft2007_APR.php">April Fools</a> <br>
+<a href="/draft2007P.php">
+2007 NFL Draft Prospects (UPDATED 4/24)</a>/<a href="/kenny2007
+
+_40.php">Kenny Ortiz's Top 40 Prospects</a> 
+
+  <br>
+<a href="/combine2007.php"> 2007 NFL Combine and Pro Day Results </a> <br>
+<a href="/draft2007GRADE.php"> 2007 NFL Draft Grades</a> <br>
+2008 Mock Draft (UPDATED 4/26): <a href="/draft2008.php"> Round 1</a>
+
+/<a href="/draft2008_2.php"> Round 2</a>/<a href="/draft2008_3.php"> Round 3</a>/<a href="/draft2008_4.php">Round 4</a>/<a href="/draft2008_5.php">Round 5</a>/<a href="/draft2008_6.php">Round 6</a>/<a href="/draft2008_7.php">Round 7</a> 
+
+  <br>
+Alternative 2008 Mock Draft (UPDATED 4/7): <a href="/draft2008alt.php"> Round 1</a>
+
+/<a href="/draft2008alt2.php">Round 2</a>  <br>
+<a href="/draft2008redraft.php"> 2008 NFL Re-Draft - Round 3</a> (UPDATED 4/27)  <br>
+
+<a href="/draft2008P.php"> 2008 NFL Draft Prospects (UPDATED 8/5)</a> <br>
+Other 2008 Mock Drafts: <a href="/draft2008matt.php">Matt McGuire (4/25)</a>/ <a href="/draft2008_CRAIG.php">Craig Smith (4/22)</a>/ <a href="/draft2008emmitt.php">Emmitt Smith (4/21)</a>/ <a href="/draft2008mattshock.php">Matt McGuire Shocker (4/21)</a>/ <a href="/draft2008mattback.php">Matt McGuire Backwards (4/19)</a>/ <a href="/draft2008forum.php">Forum Mock (4/15)</a>/ <a href="/draft2008aprilfools.php">April Fools (4/1)</a>  <br>
+2009 Mock Draft (UPDATED 4/25): <a href="/draft2009.php"> Round 1</a>
+
+/<a href="/draft2009_2.php">Round 2</a> /<a href="/draft2009_3.php">Round 3</a> /<a href="/draft2009_4.php">Round 4</a> /<a href="/draft2009_5.php">Round 5</a> /<a href="/draft2009_6.php">Round 6</a> /<a href="/draft2009_7.php">Round 7</a> <br>
+Other 2009 Mock Drafts: <a href="/draft2009redraft.php">Re-Draft (4/26)</a> /<a href="/draft2009matt.php">Matt McGuire (4/25)</a> /<a href="/draft2009reader.php">Reader Mock (4/25)</a> /<a href="/draft2009hunter.php">Hunter Ansley (4/24)</a> /<a href="/draft2009backward.php">Backward Mock (4/19)</a> /<a href="/draft2009emmitt.php">Emmitt Smith (4/16)</a> /<a href="/draft2009celebrity.php">Celebrity Mock (4/9)</a> /<a href="/draft2009aprilfools.php">April Fools (4/1)</a> /<a href="/draft2009expert.php">Experts (3/30)</a> /<a href="/draft2009kffl.php">KFFL (3/14)</a> <br>
+2010 NFL Mock Draft (UPDATED 4/22): <a href="/draft2010.php">Round 1</a> /<a href="/draft2010_1.php">Picks 17-32</a> /<a href="/draft2010_2.php">Round 2</a> /<a href="/draft2010_3.php">Round 3</a> /<a href="/draft2010_4.php">Round 4</a> /<a href="/draft2010_5.php">Round 5</a> /<a href="/draft2010_6.php">Round 6</a> /<a href="/draft2010_7.php">Round 7</a>		<br>
+
+2010 NFL Mock Re-Draft Day 3 (4/24): <a href="/draft2010redraft_4.php">Round 4 (Walt's)</a> / <a href="/draft2010redraftmatt_4.php">Round 4 (Matt's)</a>  <br>
+
+2010 NFL Mock Re-Draft Day 2 (4/23): <a href="/draft2010redraft_2.php">Round 2 (Walt's)</a> / <a href="/draft2010redraft_3.php">Round 3 (Walt's)</a> / <a href="/draft2010redraftmatt_2.php">Round 2 (Matt's)</a> / <a href="/draft2010redraft_3.php">Round 3 (Matt's)</a>  <br>
+
+
+
+Other 2010 Mock Drafts: <a href="/draft2010matt.php">Matt McGuire (4/22) /<a href="/draft2010backward.php">Backward Mock (4/20)</a> /<a href="/draft2010emmitt.php">Emmitt Mock (4/17)</a> /<a href="/draft2010celebrity.php">Celebrity Mock (4/8)</a> /<a href="/draft2010experts.php">Experts (3/17)</a> /<a href="/draft2010reader.php">Reader (4/13)</a> /<a href="/draft2010consensus.php">Consensus (2/25)</a></a> <br>
+
+2011 NFL Mock Draft (UPDATED 4/28): <a href="/draft2011.php">Round 1</a> /<a href="/draft2011_1.php">Picks 17-32</a> /<a href="/draft2011_2.php">Round 2</a> /<a href="/draft2011_3.php">Round 3</a> /<a href="/draft2011_4.php">Round 4</a> /<a href="/draft2011_5.php">Round 5</a> /<a href="/draft2011_6.php">Round 6</a> /<a href="/draft2011_7.php">Round 7</a> <br>
+
+2011 NFL Mock Re-Draft (UPDATED 4/30): <a href="/draft2011redraft_4.php">Round 4</a> /<a href="/draft2011redraft_5.php">Round 5</a> /<a href="/draft2011redraft_2.php">Round 2</a> /<a href="/draft2011redraft_3.php">Round 3</a> <br>
+
+Other 2011 Mock Drafts: <a href="/draft2011freeagency.php">Free Agency (5/9)</a> /<a href="/draft2011greg.php">Greg Cox (4/28)</a> /<a href="/draft2011backward.php">Backward Mock (4/22)</a> /<a href="/draft2011emmitt.php">Emmitt Mock (4/21)</a> /<a href="/draft2011teamboards.php">Team Big Boards (4/21)</a> /<a href="/draft2011celebrity.php">Celebrity Mock (4/13)</a> /<a href="/draft2011expert.php">Experts (4/7)</a> /<a href="/draft2011not.php">Not Mock (4/6)</a> /<a href="/draft2011aprilfools.php">April Fools Mock (4/1)</a> /<a href="/draft2012greg.php">Greg Cox's 2012 Mock (2/22)</a> /<a href="/draft2011matt.php">Matt McGuire (1/8)</a>  <br>
+
+
+2012 NFL Mock Draft  (UPDATED 4/26): <a href="/draft2012.php">Round 1</a> /<a href="/draft2012_1.php">Picks 17-32</a> /<a href="/draft2012_2.php">Round 2</a> /<a href="/draft2012_3.php">Round 3</a> /<a href="/draft2012_4.php">Round 4</a> /<a href="/draft2012_5.php">Round 5</a> /<a href="/draft2012_6.php">Round 6</a> /<a href="/draft2012_7.php">Round 7</a> <br>
+
+2012 NFL Mock Re-Draft (UPDATED 4/28): <a href="/draft2012redraft_4.php">Walt Round 4</a> /<a href="/draft2012redraft_5.php">Walt Round 5</a> /<a href="/draft2012charlieredraft_4.php">Charlie Round 4</a> /<a href="/draft2012charlieredraft_5.php">Charlie Round 5</a> /<a href="/draft2012redraft_2.php">Walt Round 2</a> /<a href="/draft2012redraft_3.php">Walt Round 3</a> /<a href="/draft2012charlieredraft_2.php">Charlie Round 2</a> /<a href="/draft2012charlieredraft_3.php">Charlie Round 3</a> <br>
+
+
+Other 2012 Mock Drafts: <a href="/draft2012charlie.php">Charlie Campbell (4/26)</a> /<a href="/draft2012pickhistory.php">Pick History (4/23)</a> /<a href="/draft2012emmitt.php">Emmitt Mock (4/19)</a> /<a href="/draft2012not.php">Not Mock (4/19)</a> /<a href="/draft2012backward.php">Backward Mock (4/17)</a> /<a href="/draft2012celebrity.php">Celebrity (4/15)</a> /<a href="/draft2012goals.php">Goals (4/10)</a> /<a href="/draft2012aprilfools.php">April Fools Mock (4/1)</a> /<a href="/draft2012reader.php">Reader Mock (4/1)</a> /<a href="/draft2012freeagency.php">Free Agent Mock (3/6)</a> /<a href="/draft2012greg.php">Greg Cox (9/9)</a>   <br>
+
+
+<b> 2013 NFL Mock Draft</b> (UPDATED 4/25): <a href="/draft2013.php">Round 1</a> /<a href="/draft2013_1.php">Picks 17-32</a> /<a href="/draft2013_2.php">Round 2</a> /<a href="/draft2013_3.php">Round 3</a> /<a href="/draft2013_4.php">Round 4</a> /<a href="/draft2013_5.php">Round 5</a> /<a href="/draft2013_6.php">Round 6</a> /<a href="/draft2013_7.php">Round 7</a> <br>
+
+2013 NFL Mock Re-Draft (UPDATED 4/27): <a href="/draft2013redraft_4.php">Walt Round 4</a> /<a href="/draft2013redraft_5.php">Walt Round 5</a> /<a href="/draft2013charlieredraft_4.php">Charlie Round 4</a> /<a href="/draft2013charlieredraft_5.php">Charlie Round 5</a> /<a href="/draft2013redraft_2.php">Walt Round 2</a> /<a href="/draft2013redraft_3.php">Walt Round 3</a> /<a href="/draft2013charlieredraft_2.php">Charlie Round 2</a> /<a href="/draft2013charlieredraft_3.php">Charlie Round 3</a> <br>
+
+Other 2013 Mock Drafts: <a href="/draft2013charlie.php">Charlie Campbell (4/25)</a> /<a href="/draft2013gm.php">GM Mock (4/21)</a> /<a href="/draft2013charlietrades.php">Charlie's Trade Mock (4/20)</a> /<a href="/draft2013goals.php">Goals (4/19)</a> /<a href="/draft2013rapidreader.php">Rapid Reader Mock (4/18)</a> /<a href="/draft2013emmitt.php">Emmitt Mock (4/14)</a> /<a href="/draft2013not.php">Not Mock (4/13)</a> /<a href="/draft2013pickhistory.php">Pick History (4/5)</a> /<a href="/draft2013backward.php">Backward Mock (4/4)</a> /<a href="/draft2013aprilfools.php">April Fools Mock (4/1)</a> /<a href="/draft2013reader.php">Reader Mock</a> /<a href="/draft2013freeagency.php">Free Agent Mock (3/7)</a> /<a href="/draft2013archive.php">Archived 2013 NFL Mock Drafts</a>    <br>
+
+<b> 2014 NFL Mock Draft</b> (UPDATE 5/8): <a href="/draft2014.php">Round 1</a> /<a href="/draft2014_1.php">Picks 17-32</a> /<a href="/draft2014_2.php">Round 2</a> /<a href="/draft2014_3.php">Round 3</a> /<a href="/draft2014_4.php">Round 4</a> /<a href="/draft2014_5.php">Round 5</a> /<a href="/draft2014_6.php">Round 6</a> /<a href="/draft2014_7.php">Round 7</a><br>
+
+2014 NFL Mock Re-Draft (UPDATED 5/10): <a href="/draft2014redraft_4.php">Walt Round 4</a> /<a href="/draft2014redraft_5.php">Walt Round 5</a> /<a href="/draft2014charlieredraft_4.php">Charlie Round 4</a> /<a href="/draft2014charlieredraft_5.php">Charlie Round 5</a> /<a href="/draft2014redraft_2.php">Walt Round 2</a> /<a href="/draft2014redraft_3.php">Walt Round 3</a> /<a href="/draft2014charlieredraft_2.php">Charlie Round 2</a> /<a href="/draft2014charlieredraft_3.php">Charlie Round 3</a> <br>
+
+Other 2014 Mock Drafts: <a href="/draft2014charlie.php">Charlie Campbell (5/8)</a> /<a href="/draft2014goals.php">Goals (5/3)</a> /<a href="/draft2014not.php">Not Mock (4/27)</a> /<a href="/draft2014emmitt.php">Emmitt Mock (4/20)</a> /<a href="/draft2014trades.php">Trades Mock (4/13)</a> /<a href="/draft2014celebrity.php">Celebrity Mock (4/11)</a> /<a href="/draft2014backward.php">Backward Mock (4/4)</a> /<a href="/draft2014aprilfools.php">April Fools Mock (4/1)</a> /<a href="/draft2014reader.php">Reader Mock</a> /<a href="/draft2014freeagent.php">Free Agent Mock (3/6)</a> /<a href="/draft2014overreaction.php">Overreaction Mock (12/30)</a>     <br>
+
+<b> 2015 NFL Mock Draft</b> (UPDATED 4/30): <a href="/draft2015.php">Round 1</a> /<a href="/draft2015_1.php">Picks 17-32</a>  /<a href="/draft2015_2.php">Round 2</a>  /<a href="/draft2015_3.php">Round 3</a> /<a href="/draft2015_4.php">Round 4</a> /<a href="/draft2015_5.php">Round 5</a> /<a href="/draft2015_6.php">Round 6</a> /<a href="/draft2015_7.php">Round 7</a> <br>
+
+2015 NFL Mock Re-Draft (UPDATED 5/2): <a href="/draft2015redraft_4.php">Walt Round 4</a> /<a href="/draft2015redraft_5.php">Walt Round 5</a> /<a href="/draft2015charlieredraft_4.php">Charlie Round 4</a> /<a href="/draft2015charlieredraft_5.php">Charlie Round 5</a> /<a href="/draft2015redraft_2.php">Walt Round 2</a> /<a href="/draft2015redraft_3.php">Walt Round 3</a> /<a href="/draft2015charlieredraft_2.php">Charlie Round 2</a> /<a href="/draft2015charlieredraft_3.php">Charlie Round 3</a> <br>
+
+Other 2015 Mock Drafts: <a href="/draft2015charlie.php">Charlie Campbell (4/30)</a> /<a href="/draft2015goals.php">Goals (4/25)</a> /<a href="/draft2015not.php">Not Mock (4/19)</a> /<a href="/draft2015emmitt.php">Emmitt Mock (4/17)</a> /<a href="/draft2015trades.php">Trades Mock (4/12)</a> /<a href="/draft2015celebrity.php">Celebrity Mock (4/10)</a> /<a href="/draft2015backward.php">Backward Mock (4/3)</a> /<a href="/draft2015aprilfools.php">April Fools Mock (4/1)</a> /<a href="/draft2015freeagent.php">Free Agent Mock (3/5)</a> /<a href="/draft2015overreaction.php">Overreaction Mock (12/29)</a>    <br>
+
+
+
+
+<b> 2016 NFL Mock Draft</b> (UPDATED 4/28): <a href="/draft2016.php">Round 1</a> /<a href="/draft2016_1.php">Picks 17-32</a> /<a href="/draft2016_2.php">Round 2</a> /<a href="/draft2016_3.php">Round 3</a> /<a href="/draft2016_4.php">Round 4</a> /<a href="/draft2016_5.php">Round 5</a> /<a href="/draft2016_6.php">Round 6</a> /<a href="/draft2016_7.php">Round 7</a>   <br>
+
+2016 NFL Mock Re-Draft (UPDATED 4/30): <a href="/draft2016redraft_4.php">Walt Round 4</a> /<a href="/draft2016redraft_5.php">Walt Round 5</a> /<a href="/draft2016charlieredraft_4.php">Charlie Round 4</a> /<a href="/draft2016charlieredraft_5.php">Charlie Round 5</a> /<a href="/draft2016redraft_2.php">Walt Round 2</a> /<a href="/draft2016redraft_3.php">Walt Round 3</a> /<a href="/draft2016charlieredraft_2.php">Charlie Round 2</a> /<a href="/draft2016charlieredraft_3.php">Charlie Round 3</a> <br>
+
+
+Other 2016 Mock Drafts: <a href="/draft2016charlie.php">Charlie Campbell (4/28)</a> /<a href="/draft2016combo.php">Combo (5/8)</a> /<a href="/draft2016goals.php">Goals (4/23)</a> /<a href="/draft2016not.php">Not Mock (4/22)</a> /<a href="/draft2016emmitt.php">Emmitt Mock (4/17)</a> /<a href="/draft2016trades.php">Trades Mock (4/16)</a> /<a href="/draft2016celebrity.php">Celebrity Mock (4/10)</a> /<a href="/draft2016backward.php">Backward Mock (4/7)</a> /<a href="/draft2016aprilfools.php">April Fools Mock (4/1)</a> /<a href="/draft2016reader.php">Reader Mock</a> /<a href="/draft2016freeagent.php">Free Agent Mock (3/6)</a> /<a href="/draft2016overreaction.php">Overreaction Mock (1/4)</a>   <br>
+
+<b> 2017 NFL Mock Draft</b> (UPDATED 4/27): <a href="/draft2017.php">Round 1</a> /<a href="/draft2017_1.php">Picks 17-32</a> /<a href="/draft2017_2.php">Round 2</a> /<a href="/draft2017_3.php">Round 3</a> /<a href="/draft2017_4.php">Round 4</a> /<a href="/draft2017_5.php">Round 5</a> /<a href="/draft2017_6.php">Round 6</a> /<a href="/draft2017_7.php">Round 7</a>  <br>
+
+2017 NFL Mock Re-Draft (UPDATED 4/29): <a href="/draft2017redraft_4.php">Walt Round 4</a> /<a href="/draft2017redraft_5.php">Walt Round 5</a> /<a href="/draft2017charlieredraft_4.php">Charlie Round 4</a> /<a href="/draft2017charlieredraft_5.php">Charlie Round 5</a> /<a href="/draft2017redraft_2.php">Walt Round 2</a> /<a href="/draft2017redraft_3.php">Walt Round 3</a> /<a href="/draft2017charlieredraft_2.php">Charlie Round 2</a> /<a href="/draft2017charlieredraft_3.php">Charlie Round 3</a> <br>
+
+
+Other 2017 Mock Drafts: <a href="/draft2017charlie.php">Charlie Campbell (4/27)</a> /<a href="/draft2017combo.php">Combo (5/7)</a> /<a href="/draft2017goals.php">Goals (4/22)</a> /<a href="/draft2017not.php">Not Mock (4/21)</a> /<a href="/draft2017emmitt.php">Emmitt Mock (4/16)</a> /<a href="/draft2017backward.php">Backward Mock (4/9)</a> /<a href="/draft2017celebrity.php">Celebrity Mock (4/7)</a> /<a href="/draft2017aprilfools.php">April Fools Mock (4/1)</a> /<a href="/draft2017reader.php">Reader Mock</a> /<a href="/draft2017freeagent.php">Free Agent Mock (3/7)</a> /<a href="/draft2017overreaction.php">Overreaction Mock (1/2)</a>   <br>
+
+<b> 2018 NFL Mock Draft</b> (UPDATED 4/26): <a href="/draft2018.php">Round 1</a> /<a href="/draft2018_1.php">Picks 17-32</a> /<a href="/draft2018_2.php">Round 2</a> /<a href="/draft2018_3.php">Round 3</a> /<a href="/draft2018_4.php">Round 4</a>  /<a href="/draft2018_5.php">Round 5</a>  /<a href="/draft2018_6.php">Round 6</a> /<a href="/draft2018_7.php">Round 7</a> <br>
+
+2018 NFL Mock Re-Draft (UPDATED 4/28): <a href="/draft2018redraft_4.php">Walt Round 4</a> /<a href="/draft2018redraft_5.php">Walt Round 5</a> /<a href="/draft2018charlieredraft_4.php">Charlie Round 4</a> /<a href="/draft2018charlieredraft_5.php">Charlie Round 5</a> /<a href="/draft2018redraft_2.php">Walt Round 2</a> /<a href="/draft2018redraft_3.php">Walt Round 3</a> /<a href="/draft2018charlieredraft_2.php">Charlie Round 2</a> /<a href="/draft2018charlieredraft_3.php">Charlie Round 3</a> <br>
+
+
+Other 2018 Mock Drafts: <a href="/draft2018charlie.php">Charlie Campbell (4/26)</a> /<a href="/draft2018combo.php">Combo (5/6)</a> /<a href="/draft2018goals.php">Goals (4/21)</a> /<a href="/draft2018not.php">Not Mock (4/20)</a> /<a href="/draft2018emmitt.php">Emmitt Mock (4/15)</a> /<a href="/draft2018trades.php">Trades Mock (4/13)</a> /<a href="/draft2018backward.php">Backward Mock (4/8)</a> /<a href="/draft2018aprilfools.php">April Fools Mock (4/1)</a> /<a href="/draft2018reader.php">Reader Mock</a> /<a href="/draft2018freeagent.php">Free Agent Mock (3/11)</a> /<a href="/draft2018seniorbowl.php">Senior Bowl (1/27)</a>   <br>
+
+<b> 2019 NFL Mock Draft</b> (UPDATED 3/20): <a href="/draft2019.php">Round 1</a> /<a href="/draft2019_1.php">Picks 17-32</a> /<a href="/draft2019_2.php">Round 2</a> /<a href="/draft2019_3.php">Round 3</a> /<a href="/draft2019_4.php">Round 4</a>  /<a href="/draft2019_5.php">Round 5</a> /<a href="/draft2019_6.php">Round 6</a> <br>
+
+Other 2019 Mock Drafts: <a href="/draft2019charlie.php">Charlie Campbell (3/18)</a> /<a href="/draft2019freeagent.php">Free Agent Mock (3/10)</a> /<a href="/draft2019seniorbowl.php">Senior Bowl Mock (1/26)</a>  /<a href="/draft2019video.php">Video Mock (1/8)</a> /<a href="/draft2019overreaction.php">Overreaction Mock (12/31)</a>    <br>
+
+<b> 2020 NFL Mock Draft</b> (UPDATED 2/14): <a href="/draft2020.php">Round 1</a> /<a href="/draft2020_1.php">Picks 17-32</a>    <br>
+
+Other 2020 Mock Drafts: <a href="/draft2020charlie.php">Charlie Campbell (2/24)</a>    <br>
+
+<b> 2021 NFL Mock Draft</b> (UPDATED 2/21): <a href="/draft2021.php">Round 1</a> /<a href="/draft2021_1.php">Picks 17-32</a>    <br>
+
+
+
+<a href="/draft2014redraft.php"> 2014 NFL Draft Re-Mock</a> /
+<a href="/draft2013redraft.php"> 2013 NFL Draft Re-Mock</a> / 
+<a href="/draft2012redraft.php"> 2012 NFL Draft Re-Mock</a> /
+<a href="/draft2011redraft.php"> 2011 NFL Draft Re-Mock</a> / <a href="/draft2010redraft.php"> 2010 NFL Draft Re-Mock</a> / <a href="/draft2009redraft.php"> 2009 NFL Draft Re-Mock</a> / <a href="/draft2008redraft.php"> 2008 NFL Draft Re-Mock</a> / <a href="/draft2007redraft.php"> 2007 NFL Draft Re-Mock</a> / <a href="/draft2006redraft.php"> 2006 NFL Draft Re-Mock</a> / <a href="/draft2005redraft.php"> 2005 NFL Draft Re-Mock</a> / <a href="/draft2004redraft.php"> 2004 NFL Draft Re-Mock</a> / <a href="/draft2003redraft.php"> 2003 NFL Draft Re-Mock</a> / <a href="/draft2002redraft.php"> 2002 NFL Draft Re-Mock</a> <br>
+
+
+
+<br> <br>
+
+ 
+
+</div>
+
+</div>
+
+
+
+        <br />
+        <hr />
+        <br />
+        <script type="text/javascript">
+
+
+            var cmtPH = $("#comments");
+
+            if (cmtPH.length == 0) {
+                //alert('for picks recirc');    
+                $("<div class='recirculation-container'></div>").insertBefore($('#comment'));
+              //  $("<div id='comment'></div>").insertBefore($('#comment'));
+                $("<h3>Our New Comment Board - <a href='/gateway/index/returnhere'>Login is the Same</a></h3>").insertBefore($('#comment'));
+                $("#comment").html("");
+            }
+            else
+            {
+                //alert('for rest recirc'); 
+                $("<div class='recirculation-container'></div>").insertBefore($('#comments'));
+                $("<div id='comment'></div>").insertBefore($('#comments'));
+                $("<h3>Our New Comment Board - <a href='/gateway/index/returnhere'>Login is the Same</a></h3>").insertBefore($('#comments'));
+                $("#comments").html("");
+            }
+
+           
+        </script>
+<script type="text/javascript">
+             function startSSO() {
+                 //alert('startingSSO');
+
+                 var callback = function (codeA, completeSSOCallback) {
+
+
+                     // call your backend to receive codeB and return it
+                     // to Spot.IM via completeSSOCallback function
+                     $.ajax({
+                         method: 'POST',
+                         url: '/sso/Spot', // put your backend endpoint here
+                         data: { 'code_a': codeA },
+                         success: function (response) {
+
+                             if (response != "")// && response.constructor === Object && response.status && response.result) {
+                             {
+                         //        alert('result:' + response);
+                                 completeSSOCallback(response);
+                             }
+                         }
+                     });
+                 };
+
+                // alert('in sso 2');
+                 window.SPOTIM.startSSO(callback).then(function (result) {
+
+                     // result.type === 'SSO_Complete'
+                     // or
+                     // result.type === 'SSO_AlreadyLoggedIn'
+                 })
+                     .catch(function (reason) {
+                         // reason contains error details
+                     });
+             }
+
+             function AutoSignOut() {
+
+                 if (window.SPOTIM && window.SPOTIM.logout) {
+                     window.SPOTIM.logout();
+                 }
+             }
+
+
+
+
+                 
+
+                if (window.SPOTIM && window.SPOTIM.startSSO) {
+                    AutoSignOut();
+                } else {
+                    document.addEventListener('spot-im-api-ready', AutoSignOut, false);
+                }
+
+                 
+
+
+           
+
+
+
+
+</script>
+
+<div data-spotim-module="recirculation" data-spot-id="sp_riGuxVEQ"></div>
+<script async src="https://recirculation.spot.im/spot/sp_riGuxVEQ"></script>
+
+
+
+<div id="comments-content">
+
+
+        <script async src="https://launcher.spot.im/spot/sp_riGuxVEQ"
+                data-spotim-module="spotim-launcher"
+                data-post-url="http://walterfootball.com/draft2019.php"
+                data-post-id="StaticPage_2955"></script>
+
+
+</div>
+
+<script>
+    var cmtPH = $("#comments");
+
+    if (cmtPH.length == 0) {
+        //alert('for picks');    
+        $("#comment").html("");
+        $("#comments-content").detach().appendTo("#comment");
+    }
+    else
+    {
+        //alert('for rest');
+        $("#comments").html("");
+        $("#comments-content").detach().appendTo("#comments");
+    } 
+</script>        <br />
+        <hr />
+        <br />
+
+
+
+        <div style="height:200px;line-height:200px;">&nbsp;</div>
+
+
+
+
+                    <div class="clear"></div>
+                    <br /><br />
+                    <hr />
+                    <br /><br />
+
+                    <div style="height:125px;line-height:125px;">&nbsp;</div>
+
+                    <div class='content-block' style="text-align:center;">
+                        <hr />
+                        <div class="center">
+                            <font color="black" size="5">
+                                &copy; 1999-2019 <a href="mailto:wpc112@gmail.com"> Walter Cherepinsky </a>:
+                                all rights reserved
+                            </font>
+                            <br />
+                            <a href="privacy.php"> Privacy Policy</a>
+                            <br />
+                            <font color="red" size="5" onclick="alert('doc ready:' + dfDocReady);alert('window loaded:' + dfWindowLoad);"> 2 </font>
+                            <font color="gold" size="5" onclick="ReparsePage('65803');">
+                                5
+                            </font>
+                            <font color="black" size="5"> 9 </font> <a href="#" onclick="return KillVideoAdsAfterTheFact(true);" id="videoKilledTheRadioStart" title="0" style="cursor:pointer; color:ivory;">df</a>
+                            <br />
+
+                            <script src="/jscss/footer.js?d5" type="text/javascript"></script>
+
+                            
+
+                        </div>
+                        
+
+
+            <input type="hidden" value="85" name="hfScriptId" class="hfScriptId" />
+             <!--SOVRNSTICKY- Key:SOVRNSTICKY-->
+<script src='//get.s-onetag.com/eb0eae8c-fd1d-443d-b7f3-8bc18e204062/tag.min.js' async defer></script>
+
+
+
+<!-- TreatRequestAsMobileOrTables = False -->
+
+
+                        
+
+
+            <!--Comscore- Key:Comscore-->
+<!-- Begin comScore Tag -->
+<script  async>
+    document.write(unescape("%3Cscript src='" + (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js' %3E%3C/script%3E"));
+</script>
+
+<script>
+  COMSCORE.beacon({
+    c1:2,
+    c2:"6035210",
+    c3:"",
+    c4:"www.walterfootball.com",
+    c5:"",
+    c6:"",
+    c15:""
+  });
+</script>
+<noscript>
+  <img src="http://b.scorecardresearch.com/b?c1=2&c2=6035210&c3=&c4=www.walterfootball.com&c5=&c6=&c15=&cv=1.3&cj=1" style="display:none" width="0" height="0" alt="" />
+</noscript>
+<!-- End comScore Tag -->
+
+
+
+
+<!-- TreatRequestAsMobileOrTables = False -->
+
+
+
+
+                     
+
+                        <center>
+                            <form method="get" action="http://www.google.com/custom" target="_top">
+                                <table bgcolor="#ffffff">
+                                    <tr>
+
+                                        <td valign="top" height="32" align="center">
+                                            <a href="http://www.google.com/">
+                                                <img src="http://www.google.com/logos/Logo_25wht.gif" border="0" alt="Google" align="middle" />
+                                            </a>
+                                            <input type="text" name="q" size="31" maxlength="255" value="" />
+                                            <input type="submit" name="sa" value="Search" />
+                                            <input type="hidden" name="client" value="pub-8944303032351449" />
+                                            <input type="hidden" name="forid" value="1">
+                                            <input type="hidden" name="ie" value="ISO-8859-1" />
+                                            <input type="hidden" name="oe" value="ISO-8859-1" />
+                                            <input type="hidden" name="cof" value="GALT:#008000;GL:1;DIV:#336699;VLC:663399;AH:center;BGC:FFFFFF;LBGC:336699;ALC:0000FF;LC:0000FF;T:000000;GFNT:0000FF;GIMP:0000FF;FORID:1;" />
+                                            <input type="hidden" name="hl" value="en" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </form>
+                        </center>
+                        <br />
+                        <h4>WalterFootball.com is part of the NESN digital network.</h4>
+
+                        <br />
+                        <br />
+                        <div class="divCenter">
+                            
+
+
+            <input type="hidden" value="78" name="hfScriptId" class="hfScriptId" />
+             <!--Adosio Floater- Key:Adosio Floater-->
+<script type='text/javascript'>
+if(document.location.protocol=='http:'){
+var Tynt=Tynt||[];Tynt.push('a2_NMCuaOr5yYoacwqm_6l');
+ 
+(function(){var h,s=document.createElement('script');s.src='http://cdn.tynt.com/ti.js';
+h=document.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);})();}
+</script>
+
+
+
+<!-- TreatRequestAsMobileOrTables = False -->
+
+
+                        </div>
+                        <div class="divCenter">
+                            
+
+
+            <div>
+                
+                <!--   Ad Slot: Ad directly called <br />
+                This Ad, 'Top10Sports', has been deactivated-->
+            </div>
+
+
+
+
+<!-- TreatRequestAsMobileOrTables = False -->
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="contentCell" style="width:10px;">&nbsp;</div>
+
+                <div class="contentCell" id="RightMarginBlock" style="max-width:400px;">
+
+                    
+                    
+
+
+            <input type="hidden" value="109" name="hfScriptId" class="hfScriptId" />
+             <!--NESN Top Righ- Key:NESN Top Righ-->
+<!-- Insticator API Fire Widget --><div id="insticator-container"><div id="div-insticator-ad-1"></div><div id="insticator-embed"></div><div id="div-insticator-ad-2"></div><script data-cfasync='false' type="text/javascript">/*<![CDATA[*/Insticator.ad.loadAd("div-insticator-ad-1");Insticator.ad.loadAd("div-insticator-ad-2");Insticator.load("em",{id : "8cda8f3a-5805-4cc9-a891-6d035e53a557"})/*]]>*/</script></div><!-- End Insticator API Fire Widget -->
+
+<br> <br> <br> <br> <br> <br> <br> <br> <br>
+
+
+
+<!-- TreatRequestAsMobileOrTables = False -->
+
+
+
+
+
+                    <div class="divCenter" style="background-color:#ba0000;">
+                        
+
+
+            <input type="hidden" value="137" name="hfScriptId" class="hfScriptId" />
+             <!--RMARGININSTICATOR- Key:RMARGININSTICATOR-->
+<!--Carambola Script --> 
+<img height='0' width='0' alt='' src='//pixel.carambo.la/Pixel/wltr13/110449/0/1/0' style='display:block;width:0;height:0;' />   
+<script data-cfasync="false" class="carambola_InContent" type="text/javascript" cbola_wid="0">  
+(function (i,d,s,o,m,r,c,l,w,q,y,h,g) {  
+var e=d.getElementById(r);if(e===null){  
+var t = d.createElement(o); t.src = g + Math.floor(Math.random() * 1000); t.id = r; t.setAttribute(m, s);t.async = 1;var n=d.getElementsByTagName(o)[0];n.parentNode.insertBefore(t, n); 
+var dt=new Date().getTime();  
+try{i[l][w+y](h,i[l][q+y](h)+'&'+dt);}catch(er){i[h]=dt;}  
+} else if(typeof i[c]!=='undefined'){i[c]++}  
+else{i[c]=1;}  
+})(window, document, 'InContent', 'script', 'mediaType', 'carambola_proxy','Cbola_IC','localStorage','set','get','Item','cbolaDt','//route.carambo.la/inimage/getlayer?pid=wltr13&did=110449&wid=0&rdn=')  
+</script>
+
+
+<br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+
+
+
+<!-- TreatRequestAsMobileOrTables = False -->
+
+
+                    </div>
+
+
+                    <div class="divCenter" style="background-color:#ba0000;">
+                        
+
+
+            <input type="hidden" value="98" name="hfScriptId" class="hfScriptId" />
+             <!--Right Margin 0- Key:Right Margin 0-->
+<!-- WalterFootball_160x600 -->
+<div align="center" id="div-gpt-ad-160x600-1">
+    <script data-cfasync="false" type='text/javascript'>
+        freestar.queue.push(function () { googletag.display('div-gpt-ad-160x600-1'); });
+    </script>
+</div>
+
+
+
+<!-- TreatRequestAsMobileOrTables = False -->
+
+
+                    </div>
+                    <br />
+                    <div style="height:200px;line-height:200px;">&nbsp;</div>
+
+
+
+
+                   
+                    <!-- Begin MailChimp Signup Form -->
+                    <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
+                    <style type="text/css">
+                                         #mc_embed_signup {
+                                             background: #fff;
+                                             clear: left;
+                                             font: 14px Helvetica,Arial,sans-serif;
+                                             padding: 5px;
+                                             border: solid thin silver;
+                                             border-radius: 5px;
+                                             text-align: center;
+                                         }
+                                         /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+                        We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+                    </style>
+
+
+
+                    <div id="mc_embed_signup" style="max-width:300px;">
+                        <form action="https://walterfootball.us19.list-manage.com/subscribe/post?u=bdff7ddab6fe1a1a917dc4380&amp;id=70d517e830" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                            <div id="mc_embed_signup_scroll">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <img src="/jscss/Images/wflogobiggerTransparentBg.png" width="57" />
+                                        </td>
+                                        <td align="left">
+                                            <label for="mce-EMAIL">Subscribe Mailing List</label><br />
+                                            <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+                                            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_bdff7ddab6fe1a1a917dc4380_70d517e830" tabindex="-1" value=""></div>
+                                            <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                                        </td>
+                                        <td>
+                                            <a href="https://mailchimp.com"><img src="/jscss/Images/mailchimp.png" width="57" /></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3" align="left">
+                                            <br />
+                                            <p>
+                                            Our Newsletter is written by <a href="/writers/index/chet-gresham">Chet Gresham</a> and is delivered via <a href="https://mailchimp.com">MailChimp</a>.
+                                            </p>
+                                            <p>
+                                            If you are already registered with the site you are already subscribed. This form is for those that don't want to register for the site.  
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </table>
+                              
+                            </div>
+                        </form>
+                    </div>
+                    <div style="height:200px;line-height:200px;">&nbsp;</div>
+                    <!--End mc_embed_signup-->
+
+                                       
+                    
+
+
+            <!--TWITTERRMARGIN- Key:TWITTERRMARGIN-->
+<div class="OUTBRAIN" data-widget-id= "GS_5" data-src = " " data-ob-template="WalterFootballInc." ></div>
+
+
+
+<!-- TreatRequestAsMobileOrTables = False -->
+
+  
+
+                                     
+                                    
+
+                    <div style="height:200px;line-height:200px;">&nbsp;</div>
+                   
+                 
+
+
+
+                                    
+
+
+            <input type="hidden" value="63" name="hfScriptId" class="hfScriptId" />
+             <!--RightMarginLongOne- Key:RightMarginLongOne-->
+<script src='https://www.googletagservices.com/tag/js/gpt.js'>
+  googletag.pubads().set("page_url", "www.walterfootball.com").definePassback('/90814396/walterfootball_160x600_ATF', [160, 600]).display();
+</script>
+
+
+
+<!-- TreatRequestAsMobileOrTables = False -->
+
+
+                                    <div style="height:100px;line-height:300px;">&nbsp;</div>
+                                    
+
+
+            <input type="hidden" value="64" name="hfScriptId" class="hfScriptId" />
+             <!--RightMarginLongTwo- Key:RightMarginLongTwo-->
+<script src='https://www.googletagservices.com/tag/js/gpt.js'>
+  googletag.pubads().set("page_url", "www.walterfootball.com").definePassback('/90814396/walterfootball_160x600_ATF', [160, 600]).display();
+</script>
+
+
+
+<!-- TreatRequestAsMobileOrTables = False -->
+
+
+                                    <div style="height:100px;line-height:300px;">&nbsp;</div>
+                                <br /><br />
+                                
+
+
+            <input type="hidden" value="82" name="hfScriptId" class="hfScriptId" />
+             <!--LONNIE- Key:LONNIE-->
+<!-- WalterFootball_160x600 -->
+<div align="center" id="div-gpt-ad-160x600-2">
+    <script data-cfasync="false" type='text/javascript'>
+        freestar.queue.push(function () { googletag.display('div-gpt-ad-160x600-2'); });
+    </script>
+</div>
+
+
+
+<!-- TreatRequestAsMobileOrTables = False -->
+
+
+                                <br /><br />
+
+    <div style="height:150px;line-height:300px;">&nbsp;</div>
+    <table width="160" border="0" cellpadding="2">
+        <tr>
+            <td bgcolor="white">
+                <a href="http://twitter.com/walterfootball" target="blank"> WalterFootball.com Now on Twitter</a>:
+                <br /><br />
+                <a href="https://twitter.com/walterfootball" target="_blank"><img src="http://walterfootball.com/images/twitter.jpg" border="0" alt="WalterFootball.com Twitter" align="left" /> </a>
+                <br /><br />
+                <a href="http://walterfootball.com/rss.xml" target="blank"> Subscribe to the WalterFootball.com RSS Feed</a>:
+                <br /><br />
+                <a href="http://walterfootball.com/rss.xml" target="_blank"><img src="http://walterfootball.com/images/rss.jpg" border="0" alt="Walterfootball.com RSS Feed" align="left" />  </a>
+            </td>
+        </tr>
+    </table>   
+    <div style="height:150px;line-height:300px;">&nbsp;</div>
+                                   <div style="height:200px;line-height:200px;">&nbsp;</div>
+                                    
+
+
+            <input type="hidden" value="65" name="hfScriptId" class="hfScriptId" />
+             <!--RightMarginLongThree- Key:RightMarginLongThree-->
+<script type="text/javascript"><!--
+   e9 = new Object();
+   e9.size = "160x600,120x600";
+   e9.noAd = 1;
+//--></script>
+<script type="text/javascript" src="http://tags.expo9.exponential.com/tags/walterfootballcom/ROS/tags.js"></script>
+
+
+
+<br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <Br> <br> <br> <br> <br>
+
+
+<script type="text/javascript" id="xsu1l8fc">
+(function(){
+  var s = document.createElement("script");
+  s.type = "text/javascript";
+  s.src = "//notewayas.com/t.js?i=ucjabj5lszuabwyvvet&cb=" + (new String(Math.random())).substring(2,8) + (((new Date()).getTime()));
+  d = document.getElementById("xsu1l8fc");
+  d.parentNode.insertBefore(s, d);
+})();
+</script>
+<noscript><a href="//notewayas.com/link?i=ucjabj5lszuabwyvvet"><img src="//notewayas.com/img?i=ucjabj5lszuabwyvvet" border="0"></a></noscript>
+
+
+
+
+
+
+
+<!-- TreatRequestAsMobileOrTables = False -->
+
+
+                                    <div style="height:100px;line-height:300px;">&nbsp;</div>
+                                    
+
+
+            <input type="hidden" value="101" name="hfScriptId" class="hfScriptId" />
+             <!--RMARGIN6- Key:RMARGIN6-->
+<br> <br> <br> <br>
+
+<!-- WalterFootball_160x600 -->
+<div align="center" id="div-gpt-ad-160x600-5">
+    <script data-cfasync="false" type='text/javascript'>
+        freestar.queue.push(function () { googletag.display('div-gpt-ad-160x600-5'); });
+    </script>
+</div>
+
+<br> <br> <br> <br> <br>  <br> <br> <br> <br> <br> <br>
+<br> <br> <br> <br> <br>  <br> <br> <br> <br> <br> <br>
+<br> <br> <br> <br> <br>  <br> <br> <br> <br> <br> <br>
+
+<div id="snack_dex1"></div>
+
+<script id="snack_ads" src="https://cdn-header-bidding.snack-media.com/assets/js/snack-loader/1258" crossorigin="anonymous"></script> 
+
+
+
+<!-- TreatRequestAsMobileOrTables = False -->
+
+
+                                    <div style="height:100px;line-height:300px;">&nbsp;</div>
+
+    <div style="height:175px;line-height:300px;">&nbsp;</div>   
+    <table width="160" border="0" cellpadding="2">
+        <tr>
+            <td width="100%" bgcolor="white">
+                <font size=2>
+                    Support Walt's Other Site: <br /> <br />
+                    <a href="http://prosalesguide.com/" target="blank" rel="nofollow">Sales Tips and Sales Advice</a> - Tons of sales tips, sales techniques and sales advice, including a Sales Mock Draft: The 32 Worst Things You Can Do in Sales.
+                </font>
+            </td>
+        </tr>
+    </table>
+                                <div style="height:200px;line-height:200px;">&nbsp;</div>
+                                    
+
+
+            <div>
+                
+                <!--   Ad Slot: Ad directly called <br />
+                This Ad, 'RMARGIN4', has been deactivated-->
+            </div>
+
+
+
+
+<!-- TreatRequestAsMobileOrTables = False -->
+
+
+                                    <div style="height:100px;line-height:300px;">&nbsp;</div>
+                                    
+
+
+            <input type="hidden" value="116" name="hfScriptId" class="hfScriptId" />
+             <!--EYEPOPPER160- Key:EYEPOPPER160-->
+<br> <br> <br> <br> <br>  <br> <br> <br> <br> <br> <br>
+<br> <br> <br> <br> <br>  <br> <br> <br> <br> <br> <br>
+<br> <br> <br> <br> <br>  <br> <br> <br> <br> <br> <br>
+
+
+<!-- BEGIN TH IAB CODE -->
+
+<script type="text/javascript">
+
+document.writeln('<ins>\r\n<scr'+'ipt type="text/javascript" src="http://tradehouse.advertserve.com/servlet/view/banner/javascript/zone?zid=15&friendly=true&pid=0&refresh=400&refresh_limit=1&random=%%CACHEBUSTER%%&encode=1&origin='+encodeURIComponent((window!=top&&window.location.ancestorOrigins)?window.location.ancestorOrigins[window.location.ancestorOrigins.length-1]:document.location)+'&referrer=%%REFERRER_URL_UNESC%%&cturl=%%CLICK_URL_UNESC%%"></scr'+'ipt>\r\n</ins>');
+
+</script>
+
+<!-- END TH IAB CODE -->
+
+
+
+<!-- TreatRequestAsMobileOrTables = False -->
+
+
+                                    <div style="height:100px;line-height:300px;">&nbsp;</div>
+                                    
+
+
+            <div>
+                
+                <!--   Ad Slot: Ad directly called <br />
+                This Ad, 'RMARGINGOOGLE', has been deactivated-->
+            </div>
+
+
+
+
+<!-- TreatRequestAsMobileOrTables = False -->
+
+
+                                    <div style="height:100px;line-height:300px;">&nbsp;</div>
+                                    
+
+
+            <div>
+                
+                <!--   Ad Slot: Ad directly called <br />
+                This Ad, 'RMARGINCONTENTAD', has been deactivated-->
+            </div>
+
+
+
+
+<!-- TreatRequestAsMobileOrTables = False -->
+
+
+                                    <div style="height:100px;line-height:300px;">&nbsp;</div>
+                                    
+
+
+            <input type="hidden" value="84" name="hfScriptId" class="hfScriptId" />
+             <!--YARDEXTRA- Key:YARDEXTRA-->
+<!-- WalterFootball_160x600 -->
+<div align="center" id="div-gpt-ad-160x600-4">
+    <script data-cfasync="false" type='text/javascript'>
+        freestar.queue.push(function () { googletag.display('div-gpt-ad-160x600-4'); });
+    </script>
+</div>
+
+
+
+<!-- TreatRequestAsMobileOrTables = False -->
+
+
+                                    <div style="height:100px;line-height:300px;">&nbsp;</div>
+                                    
+
+
+            <div>
+                
+                <!--   Ad Slot: Ad directly called <br />
+                This Ad, 'ADTRUEMARGIN', has been deactivated-->
+            </div>
+
+
+
+
+<!-- TreatRequestAsMobileOrTables = False -->
+
+
+                                    <div style="height:100px;line-height:300px;">&nbsp;</div>
+                                    
+
+
+            <div>
+                
+                <!--   Ad Slot: Ad directly called <br />
+                This Ad, 'FREESTARRMARGIN4', has been deactivated-->
+            </div>
+
+
+
+
+<!-- TreatRequestAsMobileOrTables = False -->
+
+
+                                    <div style="height:100px;line-height:300px;">&nbsp;</div>
+
+                    <br />
+                    <br />
+                    <div class="divCenter">
+                        
+
+
+            <input type="hidden" value="79" name="hfScriptId" class="hfScriptId" />
+             <!--Snackbar- Key:Snackbar-->
+   <script type="text/javascript"><!-- e9 = new Object(); e9.snackbar = true; //--></script>
+                        <script type="text/javascript" src="http://tags.expo9.exponential.com/tags/walterfootballcom/Snackbar/tags.js"></script>
+
+
+
+
+<!-- TreatRequestAsMobileOrTables = False -->
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+        </div><!--/row-->
+
+
+    </div><!--/.container-->
+
+    <script type="text/javascript">
+                                    var wftws = 0;
+                                    function ExpandTaggingWidget(c) {
+                                        if (wftws == 0) {
+                                            wftws = 1;
+                                            $('#divAllTags').show('size');
+                                        }
+                                        else {
+                                            wftws = 0;
+                                            $('#divAllTags').hide('size');
+                                        }
+                                    }
+
+                                    function ReparsePage(id) {
+                                        $.ajax({
+                                            url: "/article/ReparsePage",
+                                            data: { id: id },
+                                            cache: false, dataType: "html", success: function (data) { alert('it worked'); },
+                                            error: function (jqXHR, textStatus, errorThrown)
+                                            { alert('it did not work'); }
+                                        });
+                                    }
+    </script>
+
+
+
+
+    <div class="divCenter">
+        
+
+
+            <div>
+                
+                <!--   Ad Slot: Ad directly called <br />
+                This Ad, 'ADIPLY', has been deactivated-->
+            </div>
+
+
+
+
+<!-- TreatRequestAsMobileOrTables = False -->
+
+
+    </div>
+
+    <div class="divCenter">
+        
+
+
+            <input type="hidden" value="89" name="hfScriptId" class="hfScriptId" />
+             <!--contentad- Key:contentad-->
+<div id="contentad266780"></div>
+<script type="text/javascript">
+    (function(d) {
+        var params =
+        {
+            id: "2aa826e3-f636-44ae-8ec7-136ee1f9b71b",
+            d:  "d2FsdGVyZm9vdGJhbGwuY29t",
+            wid: "266780",
+            exitPopMobile: true,
+            cb: (new Date()).getTime()
+        };
+
+        var qs=[];
+        for(var key in params) qs.push(key+'='+encodeURIComponent(params[key]));
+        var s = d.createElement('script');s.type='text/javascript';s.async=true;
+        var p = 'https:' == document.location.protocol ? 'https' : 'http';
+        s.src = p + "://api.content-ad.net/Scripts/widget2.aspx?" + qs.join('&');
+        d.getElementById("contentad266780").appendChild(s);
+    })(document);
+</script>
+
+
+
+<!-- TreatRequestAsMobileOrTables = False -->
+
+
+    </div>
+
+
+
+    
+
+
+            <input type="hidden" value="96" name="hfScriptId" class="hfScriptId" />
+             <!--Adosia Right Scroller- Key:Adosia Right Scroller-->
+<!-- scroll unit - right margin adhesive -->
+ <script type="text/javascript">
+  var adosia_proto = ('https:' == document.location.protocol ? 'https://' : 'http://'); var adosia_viewscroll_path = "adosia.com/adscroll/viewscroll-min.js";
+  if (typeof window.adosia_uniqueid != 'function') { window.adosia_uniqueid = function(){ var rndl = String.fromCharCode(65 + Math.floor(Math.random() * 26)); var did = rndl + Date.now(); return did; }; }
+ 
+  if (typeof window.adosia_asyncVScript != 'function') {
+   window.adosia_asyncVScript = function(url, loaded) {
+    var script = document.createElement('script'); script.src = url; var head = document.getElementsByTagName('head')[0], done = false;
+    script.onload = script.onreadystatechange = function() {
+     if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) { done = true; if (loaded) { loaded(); } script.onload = script.onreadystatechange = null; head.removeChild(script); };
+    }; head.appendChild(script);
+   }; window.adosia_asyncVScript(adosia_proto + adosia_viewscroll_path);
+  }
+ 
+  (function() {
+   var adosia_uuid = window.adosia_uniqueid();
+   var adosia_options = [];
+   adosia_options['uuid'] = adosia_uuid;
+   adosia_options['adosia_client_id'] = "2d133d2c58ea12aac4fab072b35862f3";
+   adosia_options['adosia_tagkey'] = "a9a56bb57113bed4784d34b209521c23";
+   adosia_options['view_mode'] = "scroll";
+   adosia_options['vm_wrapper'] = ".container";
+   adosia_options['vm_top'] = "80";
+   adosia_options['vm_side'] = "right";
+   adosia_options['vm_sizes'] = "160x600";
+   adosia_options['adscroll_debug'] = true;
+   adosia_options['has_init'] = false;
+   window.adosia_vtags = ( typeof window.adosia_vtags != 'undefined' && window.adosia_vtags instanceof Array ) ? window.adosia_vtags : [];
+   window.adosia_vtags.push(adosia_options);
+  })();
+ </script>
+
+
+
+<!-- TreatRequestAsMobileOrTables = False -->
+
+
+    
+
+
+            <div>
+                
+                <!--   Ad Slot: Ad directly called <br />
+                This Ad, 'ADOSIALEFTADHESIVE', has been deactivated-->
+            </div>
+
+
+
+
+<!-- TreatRequestAsMobileOrTables = False -->
+
+
+    
+
+
+            <div>
+                
+                <!--   Ad Slot: Ad directly called <br />
+                This Ad, 'REVSHIFTER', has been deactivated-->
+            </div>
+
+
+
+
+<!-- TreatRequestAsMobileOrTables = False -->
+
+
+
+    
+
+
+            <input type="hidden" value="118" name="hfScriptId" class="hfScriptId" />
+             <!--UNDERDOG- Key:UNDERDOG-->
+<!--- UNDERDOGMEDIA EDGE_WalterFootball.com JavaScript ADCODE START---> 
+
+<script data-cfasync="false" language="javascript" async src="//udmserve.net/udm/img.fetch?sid=12959;tid=1;dt=6;"></script>
+
+<!--- UNDERDOGMEDIA EDGE_WalterFootball.com JavaScript ADCODE END---> 
+
+
+
+<!-- TreatRequestAsMobileOrTables = False -->
+
+
+
+    
+
+
+            <div>
+                
+                <!--   Ad Slot: Ad directly called <br />
+                This Ad, 'VDO', has been deactivated-->
+            </div>
+
+
+
+
+<!-- TreatRequestAsMobileOrTables = False -->
+
+
+    
+    
+
+
+            <div>
+                
+                <!--   Ad Slot: Ad directly called <br />
+                This Ad, 'TRADEHOUSE', has been deactivated-->
+            </div>
+
+
+
+
+<!-- TreatRequestAsMobileOrTables = False -->
+
+
+
+
+    <br />
+    <!-- ~adaudit~
+1. Ad directly called|134|MEDIATRUST|True|A|
+2. Ad directly called|128|ADRECOVER|True|NotAD|
+3. Ad directly called|99|QSTFOOTER|True|A|
+4. Ad directly called|111|NESNHEAD|True|A|
+5. Ad directly called|102|FIRSTIMPRESSION|True|A|
+6. Ad directly called|129|BLCKT|True|NotAD|
+7. Ad directly called|130|APESTER|True|NotAD|
+8. Ad directly called|135|GOTCHOSENHEADER|True|A|
+9. Ad directly called|112|EYEPOPPER|False|AD|
+10. Ad directly called|131|MYSTERYSCRIPT|True|A|
+11. Ad directly called|105|JUSTPREMIUM|True|A|
+12. Ad directly called|48|TABOOLAHEAD|True|NotAD|
+13. Ad directly called|132|USONSCROLL|False|AD|
+14. Ad directly called|49|DBLCLICKBANNER|True|A|
+15. Ad directly called|85|SOVRNSTICKY|True|A|
+16. Ad directly called|59|COMSCORE|True|NotAD|
+17. Ad directly called|78|ADOSIOFLOAT|True|A|
+18. Ad directly called|91|Top10Sports|False|AD|
+19. Ad directly called|109|NESNTR|True|A|
+20. Ad directly called|137|RMARGININSTICATOR|True|A|
+21. Ad directly called|98|RMARGIN0|True|A|
+22. Ad directly called|133|TWITTERRMARGIN|True|NotAD|
+23. Ad directly called|63|RMARGIN1|True|A|
+24. Ad directly called|64|RMARGIN2|True|A|
+25. Ad directly called|82|LONNIE|True|A|
+26. Ad directly called|65|RMARGIN3|True|A|
+27. Ad directly called|101|RMARGIN6|True|A|
+28. Ad directly called|70|RMARGIN4|False|AD|
+29. Ad directly called|116|EYEPOPPER160|True|A|
+30. Ad directly called|68|RMARGINGOOGLE|False|AD|
+31. Ad directly called|92|RMARGINCONTENTAD|False|AD|
+32. Ad directly called|84|YARDEXTRA|True|A|
+33. Ad directly called|42|ADTRUEMARGIN|False|AD|
+34. Ad directly called|110|FREESTARRMARGIN4|False|AD|
+35. Ad directly called|79|SNACKBAR|True|A|
+36. Ad directly called|81|ADIPLY|False|AD|
+37. Ad directly called|89|CONTENTAD|True|A|
+38. Ad directly called|96|ADOSIARIGHTSCROLL|True|A|
+39. Ad directly called|94|ADOSIALEFTADHESIVE|False|AD|
+40. Ad directly called|107|REVSHIFTER|False|AD|
+41. Ad directly called|118|UNDERDOG|True|A|
+42. Ad directly called|121|VDO|False|AD|
+43. Ad directly called|120|TRADEHOUSE|False|AD|
+
+    -->
+
+ <footerbid>
+<script type="text/javascript" src="//adops.adysis.com/walterfootball.js"></script>
+</footerbid>   
+</body>
+</html>
