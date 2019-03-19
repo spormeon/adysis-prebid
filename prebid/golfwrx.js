@@ -238,11 +238,11 @@ var timeoutMap = {
                 	        districtm:         { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.90; } }, // adjust the bid in real time before the auction takes place
                 	        districtmDMX:      { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.90; } }, // adjust the bid in real time before the auction takes place
                 	        sekindonUM:        { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.75; } }, // adjust the bid in real time before the auction takes place
-                	        brealtime:         { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.80; } }, // adjust the bid in real time before the auction takes place
-                	        springserveAlias2: { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.65; } }, // adjust the bid in real time before the auction takes place
-                	        teads:             { bidCpmAdjustment : function(bidCpm){ return bidCpm * 1.00; } }, // adjust the bid in real time before the auction takes place
-                	        unruly:            { bidCpmAdjustment : function(bidCpm){ return bidCpm * 1.00; } }, // adjust the bid in real time before the auction takes place
-                	        appnexus:          { bidCpmAdjustment : function(bidCpm){ return bidCpm * 1.00; } }, // adjust the bid in real time before the auction takes place
+                	        // brealtime:         { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.80; } }, // adjust the bid in real time before the auction takes place
+                	        // springserveAlias2: { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.65; } }, // adjust the bid in real time before the auction takes place
+                	        teads:             { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.98; } }, // adjust the bid in real time before the auction takes place
+                	        // unruly:            { bidCpmAdjustment : function(bidCpm){ return bidCpm * 1.00; } }, // adjust the bid in real time before the auction takes place
+                	        // appnexus:          { bidCpmAdjustment : function(bidCpm){ return bidCpm * 1.00; } }, // adjust the bid in real time before the auction takes place
                 	       };	
                 	
                 pbjs.setConfig({
@@ -256,7 +256,7 @@ var timeoutMap = {
                  s2sConfig: {
                      accountId: 'e31f627f-53a3-4288-9979-482d3c6ffc76',
                      enabled: true,
-                     bidders: ['somoaudience', 'sovrn', 'districtm', 'conversant', 'pulsepoint', 'brealtime', '33across'],
+                     bidders: ['somoaudience', 'sovrn', 'conversant', 'pulsepoint'],
                      timeout: 900,
                      adapter: 'prebidServer',
                      endpoint: 'https://prebid.adnxs.com/pbs/v1/openrtb2/auction',
