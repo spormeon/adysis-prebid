@@ -86,7 +86,7 @@ var timeoutMap = {
             	{
             	 code: 'inreedvidSlot',
             	 mediaTypes: {
-            		 banner: { sizes: [[550,310],[728, 90], [300, 250], [250, 250], [468, 60], [320, 50]] }, 
+            		 banner: { sizes: [[728, 90], [300, 250], [250, 250], [468, 60], [320, 50]] }, 
             	     video:  { context: 'outstream', playerSize: [550, 310], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', "video/webm"], playbackmethod: [2] },
             	},
             	bids: [
@@ -107,10 +107,10 @@ var timeoutMap = {
             	 { bidder: 'adsparc',      labelAny: ['desktop', 'tablet', 'phone'], params: { networkId: '9969', siteId: '1019801'} }, /*one placementId for all sizes*/	
             	 { bidder: 'komoona',      labelAny: ['desktop', 'tablet', 'phone'], params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: '2d14facbe61621faad0c7b2aa0458cff' } },  /* Golfwrx.com _KB 300x250 */
             	 { bidder: "ix",         params: { siteId: "281563", size: [300, 250] } },
-            	 { bidder: "yieldmo",    params: { placementId: "1990667709809591856" } }, /* no adapter in file */
+            	 // { bidder: "yieldmo",    params: { placementId: "1990667709809591856" } }, /* no adapter in file */
             	 { bidder: 'gumgum',     params: { inSlot: '14600' } }, /*gumgum-300x250*/
             	 // { bidder: 'undertone',  params: { publisherId: '3660' } }
-            	 { bidder: 'unruly',     params: { targetingUUID: '6f15e139-5f18-49a1-b52f-87e5e69ee65e', siteId: 1081534 } },
+            	 { bidder: 'unruly',     params: { targetingUUID: '6f15e139-5f18-49a1-b52f-87e5e69ee65e', siteId: 1081534, featureOverrides: { canRunUnmissable: true } } },
             	 { bidder: 'contentignite',      labelAny: ['desktop', 'tablet', 'phone'], params: { accountID: '168237', zoneID: '316288'} }, /*300x250*/
             	 { bidder: 'vi',         params: { pubId: 'tfd_headerbidding_test', lang: 'en-US', cat: 'IAB17', bidFloor: 0.01 } }
             	 // { bidder: 'onefiftytwomedia', params: { aid: 331133 } }
@@ -412,7 +412,7 @@ googletag.cmd.push(function () {
 	    },
 	    sizeMappings: {
 	      mappinginreedvidslot: [
-	        [[1024, 768],[[300,250],[250,250],[728,90],[468,60],[320,50],[1,1],[550,310],[640,480]]],
+	        [[1024, 768],[[300,250],[250,250],[728,90],[468,60],[320,50],[1,1],[550,310]]],
 	        [[768, 500],[[728,90],[300,250],[250,250],[468,60],[320,50],[1,1],[550,310],[640,480]]],
 	        [[1, 1],[[300,250],[250,250],[320,50],[1,1]]],
 	      ]
