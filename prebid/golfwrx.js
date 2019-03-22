@@ -98,7 +98,7 @@ var timeoutMap = {
             	 { bidder: 'districtmDMX',  params: { dmxid: 171413, memberid: 100041  } }, /* 300x600 - 300x250 - 160x600 */ 
             	 { bidder: 'aol',        params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x250 */ 
             	 // { bidder: 'brealtime',  params: { placementId: '12002335' } },  /* 300x250 */   
-            	 // { bidder: 'conversant', params: { site_id: '118233' } },  /* 300x250 */ 
+            	 { bidder: 'conversant', params: { site_id: '118233' } },  /* 300x250 */ 
             	 { bidder: 'pulsepoint', params: { cf: '300X250', cp: '561446', ct: '602639' } }, /* 300x250 */
             	 { bidder: 'sovrn',      params: { tagid: '575683' } }, /* 300x250 */
             	 { bidder: 'somoaudience', params: { placement_hash: '1152340cac3268b0e737b49c1382cd2b' } }, /*300x250*/
@@ -106,13 +106,13 @@ var timeoutMap = {
             	 { bidder: 'rhythmone',  params: { placementId: '76184' } }, /* one placementId for all sizes */
             	 { bidder: 'adsparc',      labelAny: ['desktop', 'tablet', 'phone'], params: { networkId: '9969', siteId: '1019801'} }, /*one placementId for all sizes*/	
             	 { bidder: 'komoona',      labelAny: ['desktop', 'tablet', 'phone'], params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: '2d14facbe61621faad0c7b2aa0458cff' } },  /* Golfwrx.com _KB 300x250 */
-            	 // { bidder: "ix",         params: { siteId: "281563", size: [300, 250] } },
-            	 // { bidder: "yieldmo",    params: { placementId: "1990667709809591856" } } /* no adapter in file */
+            	 { bidder: "ix",         params: { siteId: "281563", size: [300, 250] } },
+            	 { bidder: "yieldmo",    params: { placementId: "1990667709809591856" } }, /* no adapter in file */
             	 { bidder: 'gumgum',     params: { inSlot: '14600' } }, /*gumgum-300x250*/
             	 // { bidder: 'undertone',  params: { publisherId: '3660' } }
             	 { bidder: 'unruly',     params: { targetingUUID: '6f15e139-5f18-49a1-b52f-87e5e69ee65e', siteId: 1081534 } },
-            	 // { bidder: 'contentignite',      labelAny: ['desktop', 'tablet', 'phone'], params: { accountID: '168237', zoneID: '316288'} } /*300x250*/
-            	 // { bidder: 'vi',         params: { pubId: 'tfd_headerbidding_test', lang: 'en-US', cat: 'IAB17', bidFloor: 0.01 } },
+            	 { bidder: 'contentignite',      labelAny: ['desktop', 'tablet', 'phone'], params: { accountID: '168237', zoneID: '316288'} }, /*300x250*/
+            	 { bidder: 'vi',         params: { pubId: 'tfd_headerbidding_test', lang: 'en-US', cat: 'IAB17', bidFloor: 0.01 } }
             	 // { bidder: 'onefiftytwomedia', params: { aid: 331133 } }
             	] //./bids
             	},
@@ -242,7 +242,7 @@ var timeoutMap = {
                 	        // brealtime:         { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.80; } }, // adjust the bid in real time before the auction takes place
                 	        // springserveAlias2: { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.65; } }, // adjust the bid in real time before the auction takes place
                 	        teads:             { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.98; } }, // adjust the bid in real time before the auction takes place
-                	        // unruly:            { bidCpmAdjustment : function(bidCpm){ return bidCpm * 1.00; } }, // adjust the bid in real time before the auction takes place
+                	        unruly:            { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.05; } }, // adjust the bid in real time before the auction takes place
                 	        // appnexus:          { bidCpmAdjustment : function(bidCpm){ return bidCpm * 1.00; } }, // adjust the bid in real time before the auction takes place
                 	       };	
                 	
