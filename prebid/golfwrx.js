@@ -234,7 +234,8 @@ var timeoutMap = {
                 
                 pbjs.aliasBidder('appnexus','brealtime');  // alias for bidder	
                 pbjs.aliasBidder('appnexus','springserveAlias2'); // alias for bidder	
-                pbjs.aliasBidder('appnexus','districtm'); // alias for bidder	
+                pbjs.aliasBidder('appnexus','districtm'); // alias for bidder
+                pbjs.aliasBidder('gamoshi','viewdeos'); // alias for bidder	
 
                 pbjs.bidderSettings = { 
                 	        aol:               { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.85; } }, // adjust the bid in real time before the auction takes place
