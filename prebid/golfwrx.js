@@ -111,7 +111,8 @@ var timeoutMap = {
             	 { bidder: 'gumgum',     params: { inSlot: '14600' } }, /*gumgum-300x250*/
             	 // { bidder: 'undertone',  params: { publisherId: '3660' } }
             	 { bidder: 'unruly',     params: { targetingUUID: '6f15e139-5f18-49a1-b52f-87e5e69ee65e', siteId: 1081534, featureOverrides: { canRunUnmissable: true } } },
-            	 { bidder: 'contentignite',      labelAny: ['desktop', 'tablet', 'phone'], params: { accountID: '168237', zoneID: '316288'} } /*300x250*/
+            	 { bidder: 'contentignite',      labelAny: ['desktop', 'tablet', 'phone'], params: { accountID: '168237', zoneID: '316288'} }, /*300x250*/
+            	 { bidder: 'viewdeos',      labelAny: ['desktop', 'tablet', 'phone'], params: { supplyPartnerId: '1985'} } /*300x250*/
             	 // { bidder: 'vi',         params: { pubId: '535034733735961', lang: 'en-US', cat: 'IAB17', bidFloor: 0.01 } }
             	 // { bidder: 'onefiftytwomedia', params: { aid: 331133 } }
             	] //./bids
