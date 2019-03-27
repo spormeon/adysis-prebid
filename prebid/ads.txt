@@ -66,10 +66,21 @@ Advertising.com, 23598, RESELLER
 
 # viewdeos
 advertising.com, 12287, RESELLER
-beachfront.com, beachfront_4174, RESELLER
+beachfront.com, 4174, RESELLER, e2541279e8e2ca4d
+pubmatic.com, 156377, RESELLER, 5d62403b186f2ace
+google.com, pub-7171208642811509, DIRECT, f08c47fec0942fa0
 google.com, pub-1062972861553303, RESELLER, f08c47fec0942fa0
-google.com, pub-8544626876536809, RESELLER, f08c47fec0942fa0
-fyber.com, e6e94829fdc031615ca9be992ce2e8e2, RESELLER
+google.com, mb-app-pub-1062972861553303, RESELLER, f08c47fec0942fa0
+google.com, video-pub-1062972861553303, RESELLER, f08c47fec0942fa0
+appnexus.com, 7847, DIRECT, f5ab79cb980f11d1
+districtm.io, 101099, DIRECT, 3fd707be9c4527c3
+appnexus.com, 1908, RESELLER, f5ab79cb980f11d1
+google.com, pub-9685734445476814, RESELLER, f08c47fec0942fa0
+pubmatic.com, 148803, DIRECT, 5d62403b186f2ace
+openx.com, 537144083 , RESELLER, 6a698e2ec38604c6
+openx.com, 540251318, RESELLER, 6a698e2ec38604c6
+rubiconproject.com, 17262, RESELLER, 0bfd66d529a55807
+adtech.com, 10329, DIRECT
 
 # switch updates
 rubiconproject.com, 14766, RESELLER
