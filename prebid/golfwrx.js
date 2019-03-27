@@ -112,7 +112,7 @@ var timeoutMap = {
             	 // { bidder: "yieldmo",    params: { placementId: "1990667709809591856" } }, /* no adapter in file */
             	 { bidder: 'gumgum',     params: { inSlot: '14600' } }, /*gumgum-300x250*/
             	 { bidder: 'undertone',  params: { publisherId: '3660' } },
-            	 { bidder: 'unruly',     params: { targetingUUID: '6f15e139-5f18-49a1-b52f-87e5e69ee65e', siteId: 1081534, featureOverrides: { canRunUnmissable: true } } },
+            	 { bidder: 'unruly',     params: { targetingUUID: '23984444', siteId: 15145, featureOverrides: { canRunUnmissable: true } } },
             	 { bidder: 'contentignite',      labelAny: ['desktop', 'tablet', 'phone'], params: { accountID: '168237', zoneID: '316288'} } /*300x250*/
             	 // { bidder: 'viewdeos',      labelAny: ['desktop', 'tablet', 'phone'], params: { supplyPartnerId: '1985'} } /* oustream  */
             	 // { bidder: 'vi',         params: { pubId: '535034733735961', lang: 'en-US', cat: 'IAB17', bidFloor: 0.01 } }
@@ -123,7 +123,7 @@ var timeoutMap = {
             	{
             	 code: 'inreedvid1Slot',
             	 mediaTypes: {
-            		 banner: { sizes: [[550,310],[728, 90], [300, 250], [250, 250], [468, 60], [320, 50]] },
+            		 banner: { sizes: [[728, 90], [300, 250], [250, 250], [468, 60], [320, 50]] },
             		 video:  { context: 'outstream', playerSize: [550, 310], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', "video/webm"], playbackmethod: [2] }, 
             	},
             	bids: [
@@ -155,7 +155,7 @@ var timeoutMap = {
             	{
             	 code: 'inreedvid2Slot',
             	 mediaTypes: {
-            	     banner: { sizes: [[550,310],[728, 90], [300, 250], [250, 250], [468, 60], [320, 50]] },
+            	     banner: { sizes: [[728, 90], [300, 250], [250, 250], [468, 60], [320, 50]] },
             	     
             	},
             	bids: [
@@ -186,7 +186,7 @@ var timeoutMap = {
             	{
             	 code: 'inreedvid3Slot',
             	 mediaTypes: {
-            		 banner: { sizes: [[550,310],[728, 90], [300, 250], [250, 250], [468, 60], [320, 50]] }, 
+            		 banner: { sizes: [[728, 90], [300, 250], [250, 250], [468, 60], [320, 50]] }, 
             	},
             	bids: [
             	 { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
