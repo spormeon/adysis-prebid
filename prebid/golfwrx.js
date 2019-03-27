@@ -3,6 +3,10 @@ var site_config = {
     FAILSAFE_TIMEOUT: 5000,   //denoted in milliseonds 5secs=5000...
     leaderboard_sizes_mobile: [[320, 50],[234,60]]
   }; //./site_config
+// unruly player config //
+window.top.unruly = window.top.unruly || {}
+window.top.unruly.native = window.top.unruly.native || {}
+window.top.unruly.native.onAdLoaded = () => {window.top.document.querySelector('.unruly_ia_disclosure_text').style['background-color'] = '#C7897B'}
 //have to add 1 on to the child (number) because the div counts as 1 in the string 
 window.addEventListener('DOMContentLoaded',function(){
     document.querySelector('#mvp-content-main p:nth-child(2)').insertAdjacentHTML('afterbegin','<br><div class="ad-reporter-ahytrfg35423"><div id="advertisement" style="border: 0pt none; margin: auto; text-align: center; color: #999; text-transform: uppercase; font-family: sans-serif; font-size: 9px; font-weight: 400; letter-spacing: .2em; line-height: 1; margin-top: 0px; position: relative; top: -4px;">Advertisement</div><div id="inreedvidSlot"></div></div><br>');
@@ -253,14 +257,15 @@ var timeoutMap = {
 
                 pbjs.bidderSettings = { 
                 	        aol:               { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.85; } }, // adjust the bid in real time before the auction takes place
-                	        districtm:         { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.90; } }, // adjust the bid in real time before the auction takes place
+                	        districtm:         { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.88; } }, // adjust the bid in real time before the auction takes place
                 	        districtmDMX:      { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.90; } }, // adjust the bid in real time before the auction takes place
                 	        sekindonUM:        { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.75; } }, // adjust the bid in real time before the auction takes place
                 	        // brealtime:         { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.80; } }, // adjust the bid in real time before the auction takes place
                 	        // springserveAlias2: { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.65; } }, // adjust the bid in real time before the auction takes place
-                	        teads:             { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.98; } }, // adjust the bid in real time before the auction takes place
+                	        teads:             { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.94; } }, // adjust the bid in real time before the auction takes place
                 	        unruly:            { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.95; } }, // adjust the bid in real time before the auction takes place
                 	        viewdeos:          { bidCpmAdjustment : function(bidCpm){ return bidCpm * 1.00; } }, // adjust the bid in real time before the auction takes place
+                	        sovrn:             { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.95; } }, // adjust the bid in real time before the auction takes place
                 	        // appnexus:       { bidCpmAdjustment : function(bidCpm){ return bidCpm * 1.00; } }, // adjust the bid in real time before the auction takes place
                 	       };	
                 	
