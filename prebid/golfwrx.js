@@ -114,7 +114,7 @@ var timeoutMap = {
             	 { bidder: 'undertone',  params: { publisherId: '3660' } },
             	 { bidder: 'unruly',     params: { targetingUUID: '23984444', siteId: 15145, featureOverrides: { canRunUnmissable: true } } },
             	 { bidder: 'contentignite',      labelAny: ['desktop', 'tablet', 'phone'], params: { accountID: '168237', zoneID: '316288'} }, /*300x250*/
-            	 { bidder: 'viewdeos',      labelAny: ['desktop', 'tablet', 'phone'], params: { supplyPartnerId: '1985'} } /* oustream  */
+            	 { bidder: 'viewdeos',      labelAny: ['desktop', 'tablet', 'phone'], params: { supplyPartnerId: 1985} } /* oustream  */
             	 // { bidder: 'vi',         params: { pubId: '535034733735961', lang: 'en-US', cat: 'IAB17', bidFloor: 0.01 } }
             	 // { bidder: 'onefiftytwomedia', params: { aid: 331133 } }
             	] //./bids
@@ -268,7 +268,7 @@ var timeoutMap = {
                  s2sConfig: {
                      accountId: 'e31f627f-53a3-4288-9979-482d3c6ffc76',
                      enabled: true,
-                     bidders: ['somoaudience', 'sovrn', 'conversant', 'gamoshi'],
+                     bidders: ['somoaudience', 'sovrn', 'conversant'],
                      timeout: 900,
                      adapter: 'prebidServer',
                      endpoint: 'https://prebid.adnxs.com/pbs/v1/openrtb2/auction',
