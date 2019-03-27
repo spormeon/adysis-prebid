@@ -259,8 +259,9 @@ var timeoutMap = {
                 	        // brealtime:         { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.80; } }, // adjust the bid in real time before the auction takes place
                 	        // springserveAlias2: { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.65; } }, // adjust the bid in real time before the auction takes place
                 	        teads:             { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.98; } }, // adjust the bid in real time before the auction takes place
-                	        unruly:            { bidCpmAdjustment : function(bidCpm){ return bidCpm * 1.00; } }, // adjust the bid in real time before the auction takes place
-                	        // appnexus:          { bidCpmAdjustment : function(bidCpm){ return bidCpm * 1.00; } }, // adjust the bid in real time before the auction takes place
+                	        unruly:            { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.95; } }, // adjust the bid in real time before the auction takes place
+                	        viewdeos:          { bidCpmAdjustment : function(bidCpm){ return bidCpm * 1.00; } }, // adjust the bid in real time before the auction takes place
+                	        // appnexus:       { bidCpmAdjustment : function(bidCpm){ return bidCpm * 1.00; } }, // adjust the bid in real time before the auction takes place
                 	       };	
                 	
                 pbjs.setConfig({
@@ -304,7 +305,7 @@ var timeoutMap = {
                 	    },
                 	 sizeConfig: [{
                 mediaQuery: '(min-width: 769px)',
-                sizesSupported: [[728, 90], [640, 480], [640, 390], [550, 310], [468, 60], [320, 50], [300, 600], [300, 250], [250, 250], [160, 600], [120, 600], [1, 1], [1800, 1000], [1600, 1050]],
+                sizesSupported: [[728, 90], [550, 310], [468, 60], [320, 50], [300, 250], [250, 250], [1, 1]],
                 labels: ['desktop']
                 }, {
                 mediaQuery: '(min-width: 500px) and (max-width: 768px)',
