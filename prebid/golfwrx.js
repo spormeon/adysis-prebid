@@ -264,7 +264,7 @@ var timeoutMap = {
                     timeout: 5000,
                     allowAuctionWithoutConsent: true
                   },
-                 
+                 cache: {url: "//prebid.adnxs.com/pbc/v1/cache"},
                  s2sConfig: {
                      accountId: 'e31f627f-53a3-4288-9979-482d3c6ffc76',
                      enabled: true,
@@ -275,7 +275,6 @@ var timeoutMap = {
                      syncEndpoint: 'https://prebid.adnxs.com/pbs/v1/cookie_sync',
                      cookieSet: true,
                      cookiesetUrl: 'https://acdn.adnxs.com/cookieset/cs.js'
-                     cache: {url: "//prebid.adnxs.com/pbc/v1/cache"}
                   },
                   userSync: {
                       iframeEnabled: true,
