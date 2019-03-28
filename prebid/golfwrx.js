@@ -57,7 +57,7 @@ var timeoutMap = {
 		  13 : 2000,
 		  14 : 1300,
 		  15 : 1800,
-		  16 : 1800,
+		  16 : 1400,
 		  17 : 1500,
 		  18 : 1500,
 		  19 : 1500,
@@ -112,7 +112,7 @@ var timeoutMap = {
             	 { bidder: 'komoona',      labelAny: ['desktop', 'tablet', 'phone'], params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: '2d14facbe61621faad0c7b2aa0458cff' } },  /* Golfwrx.com _KB 300x250 */
             	 { bidder: "ix",         params: { siteId: "281563", size: [300, 250] } },
             	 // { bidder: 'sekindoUM',    labelAny: ['desktop'], params: { spaceId: '87709' } }, /* 300x250 */ 
-            	 { bidder: 'atomx',        params: { id: '5136354'} }, /* does all sizes, not working at moment */
+            	 { bidder: 'atomx',        params: { id: 5136354} }, /* does all sizes, not working at moment */
             	 // { bidder: "yieldmo",    params: { placementId: "1990667709809591856" } }, /* no adapter in file */
             	 { bidder: 'gumgum',     params: { inSlot: '14600' } }, /*gumgum-300x250*/
             	 { bidder: 'undertone',  params: { publisherId: '3660' } },
