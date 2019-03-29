@@ -101,7 +101,7 @@ var timeoutMap = {
             	 { bidder: 'districtm',  params: { placementId: 11937611, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } },
             	 // { bidder: 'districtmDMX',  params: { dmxid: 171413, memberid: 100041  } }, /* 300x600 - 300x250 - 160x600 */ 
             	 { bidder: 'districtmDMX',  params: { dmxid: 345036, memberid: 100041  } }, /* outstream */ 
-            	 { bidder: 'aol',        params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x250 */ 
+            	 { bidder: 'aol',        params: { placement: '4882886', network: '4436.1', server: 'adserver-eu.adtech.advertising.com' } }, /* 300x250 */ 
             	 // { bidder: 'brealtime',  params: { placementId: '12002335' } },  /* 300x250 */   
             	 { bidder: 'conversant', params: { site_id: '118233' } },  /* 300x250 */ 
             	 { bidder: 'pulsepoint', params: { cf: '300X250', cp: '561446', ct: '602639' } }, /* 300x250 */
