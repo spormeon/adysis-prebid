@@ -254,10 +254,12 @@ var timeoutMap = {
                 pbjs.aliasBidder('appnexus','brealtime');  // alias for bidder	
                 pbjs.aliasBidder('appnexus','springserveAlias2'); // alias for bidder	
                 pbjs.aliasBidder('appnexus','districtm'); // alias for bidder
-                pbjs.aliasBidder('gamoshi','viewdeos'); // alias for bidder	
+                pbjs.aliasBidder('gamoshi','viewdeos'); // alias for bidder
+                pbjs.aliasBidder('onedisplay','aol'); // alias for bidder
 
                 pbjs.bidderSettings = { 
                 	        aol:               { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.85; } }, // adjust the bid in real time before the auction takes place
+                	        onedisplay:        { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.85; } }, // adjust the bid in real time before the auction takes place
                 	        districtm:         { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.88; } }, // adjust the bid in real time before the auction takes place
                 	        districtmDMX:      { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.90; } }, // adjust the bid in real time before the auction takes place
                 	        sekindonUM:        { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.75; } }, // adjust the bid in real time before the auction takes place
