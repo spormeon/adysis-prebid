@@ -90,11 +90,9 @@ var timeoutMap = {
             	{
             	 code: 'inreedvidSlot',
             	 mediaTypes: {
-            		 banner: { sizes: [[300, 250], [728, 90], [250, 250], [468, 60], [320, 50]] },
-            	     video:  { context: 'outstream', playerSize: [300, 250], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', "video/webm"], playbackmethod: [2] }
+            		 banner: { sizes: [[728, 90], [300, 250], [250, 250], [468, 60], [320, 50]] },
+            	     video:  { context: 'outstream', playerSize: [550, 310] },
             	 },
-            	     
-            	
             	bids: [
             	 { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
             	 { bidder: 'appnexus',   params: { placementId: '11971351', allowSmallerSizes: true, usePaymentRule: true, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }, /* one placementId for all sizes */
