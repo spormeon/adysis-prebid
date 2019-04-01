@@ -121,7 +121,7 @@ var timeoutMap = {
             	 { bidder: 'undertone',  params: { publisherId: '3660' } },
             	 { bidder: 'unruly',     params: { targetingUUID: '23984444', siteId: 15145, featureOverrides: { canRunUnmissable: true } } },
             	 { bidder: 'contentignite',      labelAny: ['desktop', 'tablet', 'phone'], params: { accountID: '168237', zoneID: '316288'} }, /*300x250*/
-            	 { bidder: 'gamoshi',      params: { supplyPartnerId: '1985', rendererUrl: 'https://s.viewdeos.io/video/latest/renderer.js' } } /* oustream  */
+            	 { bidder: 'viewdeos',      params: { supplyPartnerId: '1985', rendererUrl: 'https://s.viewdeos.io/video/latest/renderer.js' } } /* oustream  */
             	 // { bidder: 'vi',         params: { pubId: '535034733735961', lang: 'en-US', cat: 'IAB17', bidFloor: 0.01 } }
             	 // { bidder: 'onefiftytwomedia', params: { aid: 331133 } }
             	] //./bids
@@ -256,7 +256,7 @@ var timeoutMap = {
                 pbjs.aliasBidder('appnexus','brealtime');  // alias for bidder	
                 pbjs.aliasBidder('appnexus','springserveAlias2'); // alias for bidder	
                 pbjs.aliasBidder('appnexus','districtm'); // alias for bidder
-                pbjs.aliasBidder('gamoshi','viewdeos'); // alias for bidder
+                // pbjs.aliasBidder('gamoshi','viewdeos'); // alias for bidder
                 pbjs.aliasBidder('onedisplay','aol'); // alias for bidder
 
                 pbjs.bidderSettings = { 
