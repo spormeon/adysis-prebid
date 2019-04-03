@@ -254,7 +254,7 @@ var timeoutMap = {
                 pbjs.aliasBidder('appnexus','brealtime');  // alias for bidder	
                 pbjs.aliasBidder('appnexus','springserveAlias2'); // alias for bidder	
                 pbjs.aliasBidder('appnexus','districtm'); // alias for bidder
-                // pbjs.aliasBidder('gamoshi','viewdeos'); // alias for bidder
+                pbjs.aliasBidder('gamoshi','viewdeos'); // alias for bidder
                 pbjs.aliasBidder('onedisplay','aol'); // alias for bidder
 
                 pbjs.bidderSettings = { 
