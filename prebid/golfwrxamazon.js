@@ -32,6 +32,7 @@ window.addEventListener('DOMContentLoaded',function(){
     var pbjsEl = document.createElement("script");
     pbjsEl.type = "text/javascript";
     pbjsEl.async = true;
+    pbjsEl.rel = "preload"
     pbjsEl.src = "//adops.adysis.com/prebid2.7.0.js";
     var pbjsTargetEl = document.getElementsByTagName("footerbid")[0];
     pbjsTargetEl.insertBefore(pbjsEl, pbjsTargetEl.firstChild);
