@@ -132,9 +132,10 @@ var timeoutMap = {
             	 },
             	bids: [
             	 { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
-            	 { bidder: 'appnexus',   params: { placementId: '11971351', allowSmallerSizes: true, usePaymentRule: true, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }, /* one placementId for all sizes */
+            	 { bidder: 'appnexus',   params: { placementId: '11971351', allowSmallerSizes: true, usePaymentRule: true} }, /* one placementId for all sizes */
+            	 // { bidder: 'appnexus',   params: { placementId: '11971351', allowSmallerSizes: true, usePaymentRule: true, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }, /* one placementId for all sizes */
             	 // { bidder: 'appnexus',   params: { placementId: '13232392', video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }, /* demo video placement, always returns a vid, only works client side, pretty sure having this on lifts Teads to bidding higher */
-            	 // { bidder: 'districtm',  params: { placementId: 11937611, , allowSmallerSizes: true } }, /* 300x600 - 300x250 - 160x600 */ 
+            	 // { bidder: 'districtm',  params: { placementId: 11937611, allowSmallerSizes: true } }, /* 300x600 - 300x250 - 160x600 */ 
             	 { bidder: 'districtm',  params: { placementId: 11937611, allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } },
             	 // { bidder: 'districtmDMX',  params: { dmxid: 171413, memberid: 100041  } }, /* 300x600 - 300x250 - 160x600 */ 
             	 { bidder: 'districtmDMX',  params: { dmxid: 345036, memberid: 100041  } }, /* outstream */ 
