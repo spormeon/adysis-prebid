@@ -161,7 +161,7 @@ var timeoutMap = {
             	 { bidder: 'vi',         params: { pubId: '535034733735961', lang: 'en-US', cat: 'IAB17', bidFloor: 0.01 } },
             	 // { bidder: 'onefiftytwomedia', params: { aid: 331133 } }
             	 { bidder: 'ucfunnel',   params: { adid: 'ad-E2BBB7E7B69BD226F93D69A83686264' } },
-            	 { bidder: 'beachfront', params: {appId: '46f09c62-f3f1-4ead-f957-f91964be6f02', bidfloor: 0.01, } }
+            	 { bidder: 'beachfront', params: { appId: '11bc5dd5-7421-4dd8-c926-40fa653bec76', bidfloor: 0.01, } }
             	] //./bids
             	},
             	//new ad unit block
