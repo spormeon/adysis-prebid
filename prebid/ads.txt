@@ -328,3 +328,6 @@ adtech.com,12068,RESELLER
 districtm.io,100962,RESELLER
 rhythmone.com,1654642120,RESELLER,a670c89d4a324e47
 
+#beachfront
+beachfront.com, 13048, DIRECT, e2541279e8e2ca4d
+
