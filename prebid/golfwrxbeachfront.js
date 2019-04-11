@@ -192,7 +192,7 @@ var timeoutMap = {
             	 // { bidder: 'viewdeos',      params: { supplyPartnerId: '1985', rendererUrl: 'https://s.viewdeos.io/video/latest/renderer.js' } } /* oustream  */
             	 // { bidder: 'sekindoUM',    labelAny: ['desktop'], params: { spaceId: '87709' } }, /* 300x250 */ 
             	 // { bidder: 'vi',         params: { pubId: '272766657673392', lang: 'en-US', cat: 'IAB17', bidFloor: 0.01 } },
-            	 { bidder: 'beachfront', params: { appId: '83d77824-262e-4d13-ae0e-56f8f54bf934', bidfloor: 0.01, video: { appId: '83d77824-262e-4d13-ae0e-56f8f54bf934', mimes: ["video/x-flv", "video/mp4", "application/x-shockwave-flash", "application/javascript", "video/webm"], playbackmethod: 2, maxduration: 30 } } }
+            	 { bidder: 'beachfront', params: { video: { appId: '83d77824-262e-4d13-ae0e-56f8f54bf934', bidfloor: 0.01, mimes: ["video/x-flv", "video/mp4", "application/x-shockwave-flash", "application/javascript", "video/webm"], playbackmethod: 2, maxduration: 30 } } }
             	] //./bids
             	},
             	//new ad unit block
@@ -225,7 +225,7 @@ var timeoutMap = {
             	 // { bidder: 'contentignite',      labelAny: ['desktop', 'tablet', 'phone'], params: { accountID: '168237', zoneID: '316288'} }, /*300x250*/
             	 // { bidder: 'viewdeos',      params: { supplyPartnerId: '1985', rendererUrl: 'https://s.viewdeos.io/video/latest/renderer.js' } } /* oustream  */
             	 // { bidder: 'vi',         params: { pubId: '272766657673392', lang: 'en-US', cat: 'IAB17', bidFloor: 0.01 } },
-            	 { bidder: 'beachfront', params: { appId: '83d77824-262e-4d13-ae0e-56f8f54bf934', bidfloor: 0.01, } }
+            		{ bidder: 'beachfront', params: { video: { appId: '83d77824-262e-4d13-ae0e-56f8f54bf934', bidfloor: 0.01, mimes: ["video/x-flv", "video/mp4", "application/x-shockwave-flash", "application/javascript", "video/webm"], playbackmethod: 2, maxduration: 30 } } }
             	] //./bids
             	}
            ];
