@@ -160,8 +160,8 @@ var timeoutMap = {
             	 // { bidder: 'viewdeos',      params: { supplyPartnerId: '1985', rendererUrl: 'https://s.viewdeos.io/video/latest/renderer.js' } } /* oustream  */
             	 { bidder: 'vi',         params: { pubId: '535034733735961', lang: 'en-US', cat: 'IAB1', bidFloor: 0.01 } },
             	 // { bidder: 'onefiftytwomedia', params: { aid: 331133 } }
-            	 { bidder: 'ucfunnel',   params: { adid: 'ad-E2BBB7E7B69BD226F93D69A83686264' } },
-            	 { bidder: 'beachfront', params: { appId: '11bc5dd5-7421-4dd8-c926-40fa653bec76', bidfloor: 0.01, } }
+            	 { bidder: 'ucfunnel',   params: { adid: 'ad-E2BBB7E7B69BD226F93D69A83686264' } }
+            	 // { bidder: 'beachfront', params: { appId: '11bc5dd5-7421-4dd8-c926-40fa653bec76', bidfloor: 0.01, } }
             	] //./bids
             	},
             	//new ad unit block
