@@ -309,6 +309,7 @@ var timeoutMap = {
                 	        unruly:            { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.95; } }, // adjust the bid in real time before the auction takes place
                 	        viewdeos:          { bidCpmAdjustment : function(bidCpm){ return bidCpm * 1.00; } }, // adjust the bid in real time before the auction takes place
                 	        sovrn:             { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.95; } }, // adjust the bid in real time before the auction takes place
+                	        beachfront:             { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.75; } }, // adjust the bid in real time before the auction takes place
                 	        // appnexus:       { bidCpmAdjustment : function(bidCpm){ return bidCpm * 1.00; } }, // adjust the bid in real time before the auction takes place
                 	       };	
                 	
