@@ -416,6 +416,7 @@ googletag.cmd.push(function () {
 	    });
 	    
 	    googletag.pubads().enableSingleRequest();
+	    googletag.enableServices();
 	    googletag.pubads().collapseEmptyDivs(true, true);
 	    googletag.pubads().setCentering(true);
 	    // googletag.pubads().disableInitialLoad();
@@ -424,7 +425,7 @@ googletag.cmd.push(function () {
 	    	renderMarginPercent: 20,  // Render slots within 5000 viewports.
 	    	mobileScaling: 0.1  // Double the above values on mobile.
 	    });
-	    googletag.enableServices();
+	    
 	    googletag.pubads().addEventListener('impressionViewable', function (event) {
 	      var elementId = event.slot.getSlotElementId();
 	      var slotConfig = slots[elementId];
