@@ -414,10 +414,7 @@ googletag.cmd.push(function () {
 	      sizeMappings[key] = sizeMapping;
 	      console.log('created sizemapping ', + key + ' ' + sizeMappings[key]);
 	    });
-	    
 	    googletag.pubads().enableSingleRequest();
-	    googletag.enableServices();
-	    googletag.pubads().collapseEmptyDivs(true, true);
 	    googletag.pubads().setCentering(true);
 	    // googletag.pubads().disableInitialLoad();
 	    googletag.pubads().enableLazyLoad({
@@ -425,7 +422,8 @@ googletag.cmd.push(function () {
 	    	renderMarginPercent: 20,  // Render slots within 5000 viewports.
 	    	mobileScaling: 0.1  // Double the above values on mobile.
 	    });
-	    
+	    googletag.pubads().collapseEmptyDivs(true, true);
+	    googletag.enableServices();
 	    googletag.pubads().addEventListener('impressionViewable', function (event) {
 	      var elementId = event.slot.getSlotElementId();
 	      var slotConfig = slots[elementId];
