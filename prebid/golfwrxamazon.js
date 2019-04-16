@@ -415,7 +415,7 @@ googletag.cmd.push(function () {
 	      console.log('created sizemapping ', + key + ' ' + sizeMappings[key]);
 	    });
 	    googletag.pubads().enableSingleRequest();
-	    googletag.pubads().collapseEmptyDivs(true, true);
+	    googletag.pubads().collapseEmptyDivs(true);
 	    googletag.pubads().setCentering(true);
 	    // googletag.pubads().disableInitialLoad();
 	    googletag.pubads().enableLazyLoad({
