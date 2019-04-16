@@ -414,14 +414,15 @@ googletag.cmd.push(function () {
 	      sizeMappings[key] = sizeMapping;
 	      console.log('created sizemapping ', + key + ' ' + sizeMappings[key]);
 	    });
-	    googletag.pubads().enableSingleRequest();
-	    googletag.pubads().setCentering(true);
-	    // googletag.pubads().disableInitialLoad();
+	    
 	    googletag.pubads().enableLazyLoad({
 	    	fetchMarginPercent: 25,  // Fetch slots within 30 viewports.
 	    	renderMarginPercent: 20,  // Render slots within 5000 viewports.
 	    	mobileScaling: 0.1  // Double the above values on mobile.
 	    });
+	    googletag.pubads().enableSingleRequest();
+	    googletag.pubads().setCentering(true);
+	    // googletag.pubads().disableInitialLoad();
 	    googletag.pubads().collapseEmptyDivs(true, true);
 	    googletag.enableServices();
 	    googletag.pubads().addEventListener('impressionViewable', function (event) {
