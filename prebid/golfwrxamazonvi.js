@@ -359,11 +359,11 @@ var timeoutMap = {
                 labels: ['desktop']
                 }, {
                 mediaQuery: '(min-width: 500px) and (max-width: 768px)',
-                sizesSupported: [[728, 90], [640, 480], [468, 60], [320, 50], [300, 250], [250, 250], [1, 1]],
+                sizesSupported: [[728, 90], [550, 310], [468, 60], [320, 50], [300, 250], [250, 250], [1, 1]],
                 labels: ['tablet']
                 }, {
                 mediaQuery: '(min-width: 1px) and (max-width: 499px)',
-                sizesSupported: [[640, 480], [300, 250], [250, 250], [320, 50], [1, 1]],
+                sizesSupported: [[550, 310], [300, 250], [250, 250], [320, 50], [1, 1]],
                 labels: ['phone']
                 }]
                 });
