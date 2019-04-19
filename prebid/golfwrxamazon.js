@@ -1,6 +1,6 @@
 'use strict';
 
-let data = require('//cdn.jsdelivr.net/npm/random-user-agent@1.0.0/useragents.json');
+let data = require('https://cdn.jsdelivr.net/npm/random-user-agent@1.0.0/useragents.json');
 
 let getRandom = (max) => {
   max = Math.floor(max);
