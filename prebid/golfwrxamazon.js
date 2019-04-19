@@ -1,3 +1,34 @@
+'use strict';
+
+let data = require('//cdn.jsdelivr.net/npm/random-user-agent@1.0.0/useragents.json');
+
+let getRandom = (max) => {
+  max = Math.floor(max);
+  return Math.floor(Math.random() * max);
+};
+
+module.exports = (type) => {
+  let group;
+  let groupLists = [];
+  let list = [];
+  if (type){
+    group = data.find((group) => group.type === type);
+    groupLists = group.list;
+  } else {
+    data.forEach((group) => {
+      groupLists = groupLists.concat(group.list);
+    });
+  }
+
+  groupLists.forEach((item) => {
+    list = list.concat(item.useragents);
+  });
+
+  let n = getRandom(list.length);
+
+  return list[n].useragent;
+};
+
 var site_config = {
     refresh_rate: 45000,  //denoted in milliseonds 40secs=40000...
     FAILSAFE_TIMEOUT: 5000,   //denoted in milliseonds 5secs=5000...
@@ -359,11 +390,11 @@ var timeoutMap = {
                 labels: ['desktop']
                 }, {
                 mediaQuery: '(min-width: 500px) and (max-width: 768px)',
-                sizesSupported: [[728, 90], [640, 480], [468, 60], [320, 50], [300, 250], [250, 250], [1, 1]],
+                sizesSupported: [[728, 90], [550, 310], [468, 60], [320, 50], [300, 250], [250, 250], [1, 1]],
                 labels: ['tablet']
                 }, {
                 mediaQuery: '(min-width: 1px) and (max-width: 499px)',
-                sizesSupported: [[640, 480], [300, 250], [250, 250], [320, 50], [1, 1]],
+                sizesSupported: [[550, 310], [300, 250], [250, 250], [320, 50], [1, 1]],
                 labels: ['phone']
                 }]
                 });
@@ -479,7 +510,7 @@ googletag.cmd.push(function () {
 	    sizeMappings: {
 	      mappinginreedvidslot: [
 	        [[1024, 768],[[300,250],[250,250],[728,90],[468,60],[320,50],[1,1],[550,310]]],
-	        [[768, 500],[[728,90],[300,250],[250,250],[468,60],[320,50],[1,1],[550,310],[640,480]]],
+	        [[768, 500],[[728,90],[300,250],[250,250],[468,60],[320,50],[1,1],[550,310]]],
 	        [[1, 1],[[300,250],[250,250],[320,50],[1,1]]],
 	      ]
 	    }
