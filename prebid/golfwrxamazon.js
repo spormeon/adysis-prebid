@@ -1,6 +1,6 @@
 'use strict';
 
-let data = require('./useragents.json');
+let data = require('/useragents.json');
 
 let getRandom = (max) => {
   max = Math.floor(max);
