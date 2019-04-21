@@ -138,7 +138,7 @@ var timeoutMap = {
 
 				var t = new Date().getUTCHours();
 
-				useBidCache = usebidcacheMap[t];
+				USERBIDCACHE = usebidcacheMap[t];
                
           //ASSERTIVE ANALYTICS SETTINGS - Version: 1.4.0
             var assertive_entityId = 'FHkAkgiDWrXm4dZFw';
@@ -151,7 +151,7 @@ var timeoutMap = {
 
             // example of supplying a custom var from a prev. defined var
             assertive_timeout = PREBID_TIMEOUT;
-            assertive_custom1 = useBidCacheState;
+            assertive_custom1 = USERBIDCACHE;
           
 
             var adUnits = [
@@ -374,7 +374,7 @@ var timeoutMap = {
                       },
                   },
                 debug: true,
-                useBidCache: useBidCacheState,
+                useBidCache: USERBIDCACHE,
                 enableSendAllBids: false, // Default will be `true` as of 1.0
                 bidderSequence: 'random', // Default is random
                 	  publisherDomain: 'golfwrx.com',
