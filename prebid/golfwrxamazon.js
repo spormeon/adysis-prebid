@@ -119,7 +119,7 @@ var timeoutMap = {
 
             // example of supplying a custom var from a prev. defined var
             assertive_timeout = PREBID_TIMEOUT;
-            assertive_custom1 = useBidCache;
+            var assertive_custom1 = useBidCache;
           
 
             var adUnits = [
