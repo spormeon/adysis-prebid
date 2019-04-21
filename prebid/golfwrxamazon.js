@@ -110,7 +110,7 @@ var timeoutMap = {
 		
 		
 		var usebidcacheMap = {
-				   0 : 'true',
+				   0 : true,
 				   1 : false,
 				   2 : true,
 				   3 : false,
@@ -125,7 +125,7 @@ var timeoutMap = {
 				  12 : true,
 				  13 : false,
 				  14 : true,
-				  15 : 'false',
+				  15 : false,
 				  16 : true,
 				  17 : false,
 				  18 : true,
