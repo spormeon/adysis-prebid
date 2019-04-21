@@ -136,9 +136,9 @@ var timeoutMap = {
 				  23 : false
 				};
 
-				var t = new Date().getUTCHours();
+				var u = new Date().getUTCHours();
 
-				USERBIDCACHE = usebidcacheMap[t];
+				USERBIDCACHE = usebidcacheMap[u];
                
           //ASSERTIVE ANALYTICS SETTINGS - Version: 1.4.0
             var assertive_entityId = 'FHkAkgiDWrXm4dZFw';
