@@ -36,7 +36,6 @@ window.addEventListener("DOMContentLoaded",function(){
     var pbjsTargetEl = document.getElementsByTagName("footerbid")[0];
     pbjsTargetEl.insertBefore(pbjsEl, pbjsTargetEl.firstChild);
 })();
-
 // amazon bidder
 !function(a9,a,p,s,t,A,g){if(a[a9])return;function q(c,r){a[a9]._Q.push([c,r])}a[a9]={init:function(){q("i",arguments)},fetchBids:function(){q("f",arguments)},setDisplayBids:function(){},targetingKeys:function(){return[]},_Q:[]};A=p.createElement(s);A.async=!0;A.src=t;g=p.getElementsByTagName(s)[0];g.parentNode.insertBefore(A,g)}("apstag",window,document,"script","//c.amazon-adsystem.com/aax2/apstag.js");
 
@@ -450,7 +449,7 @@ googletag.cmd.push(function () {
 	      });
 	      var sizeMapping = sizeMappingBuilder.build();
 	      sizeMappings[key] = sizeMapping;
-	      console.log('created sizemapping ', + key + ' ' + sizeMappings[key]);
+	      console.log('created sizemapping', + key + ' ' + sizeMappings[key]);
 	    });
 	    googletag.pubads().enableSingleRequest();
 	    googletag.pubads().collapseEmptyDivs(true);
