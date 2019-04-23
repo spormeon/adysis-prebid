@@ -138,7 +138,7 @@ var timeoutMap = {
 				var u = new Date().getUTCHours();
 
 				USERBIDCACHE = usebidcacheMap[u];
-				console.log('user bid cache', USERBIDCACHE);
+				console.log('user bid cache:', USERBIDCACHE);
 				
           //ASSERTIVE ANALYTICS SETTINGS - Version: 1.4.0
             var assertive_entityId = 'FHkAkgiDWrXm4dZFw';
