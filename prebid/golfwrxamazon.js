@@ -449,7 +449,7 @@ googletag.cmd.push(function () {
 	      });
 	      var sizeMapping = sizeMappingBuilder.build();
 	      sizeMappings[key] = sizeMapping;
-	      console.log('created sizemapping', + key + sizeMappings[key]);
+	      console.log('created sizemapping', sizeMappings[key]);
 	    });
 	    googletag.pubads().enableSingleRequest();
 	    googletag.pubads().collapseEmptyDivs(true);
