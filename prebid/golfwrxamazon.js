@@ -120,7 +120,7 @@ var timeoutMap = {
 				   8 : true,
 				   9 : false,
 				  10 : true,
-				  11 : false,
+				  11 : true,
 				  12 : true,
 				  13 : false,
 				  14 : true,
@@ -139,7 +139,6 @@ var timeoutMap = {
 
 				USERBIDCACHE = usebidcacheMap[u];
 				console.log('user bid cache', USERBIDCACHE);
-				console.log('user bid cache', useBidCache);
 				
           //ASSERTIVE ANALYTICS SETTINGS - Version: 1.4.0
             var assertive_entityId = 'FHkAkgiDWrXm4dZFw';
