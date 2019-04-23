@@ -139,6 +139,8 @@ var timeoutMap = {
 
 				USERBIDCACHE = usebidcacheMap[u];
 				console.log('user bid cache', USERBIDCACHE);
+				console.log('user bid cache', useBidCache);
+				
           //ASSERTIVE ANALYTICS SETTINGS - Version: 1.4.0
             var assertive_entityId = 'FHkAkgiDWrXm4dZFw';
             var assertive_debug = 0; // append the query string 'assertiveYield=debug' or add this local storage entry 'localStorage.setItem("assertiveYield", "debug")' to enable dynamically
