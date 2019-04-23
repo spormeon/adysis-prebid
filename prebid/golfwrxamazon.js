@@ -407,8 +407,7 @@ var timeoutMap = {
                 
                 pbjs.requestBids({
                     bidsBackHandler: initAdserver,
-                    timeout: PREBID_TIMEOUT,
-                    bidcache: USERBIDCACHE
+                    timeout: PREBID_TIMEOUT
                 });
             });
 
