@@ -436,6 +436,7 @@ googletag.cmd.push(function () {
 	      pbjs.que.push(function() {
 	        pbjs.requestBids({
 	          timeout: PREBID_TIMEOUT,
+	          bidcache: USERBIDCACHE,
 	          adUnitCodes: [slot.getSlotElementId()],
 	          bidsBackHandler: function() {
 	            pbjs.setTargetingForGPTAsync([slot.getSlotElementId()]);
