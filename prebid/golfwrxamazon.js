@@ -379,7 +379,7 @@ var timeoutMap = {
                       },
                   },
                 debug: true,
-                useBidCache: true,
+                useBidCache: USERBIDCACHE,
                 enableSendAllBids: false, // Default will be `true` as of 1.0
                 bidderSequence: 'random', // Default is random
                 	  publisherDomain: 'golfwrx.com',
