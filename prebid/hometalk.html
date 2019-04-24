@@ -1,0 +1,874 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, height=device-height, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <script type="text/javascript">
+        // Handle out of date IE
+        // IE11 does not contain 'MSIE' in its useragent
+        if(window.navigator.userAgent.toLowerCase().indexOf('msie') > -1){
+            window.location.pathname = '/outdated.html';
+        }
+
+        // If browser does not support CSS grid layout, redirect to outdated browser page
+        var testElem = document.createElement('div');
+        if (testElem && testElem.style.gridColumn === undefined && testElem.style.msGridColumn === undefined) {
+            // This is being disabled until we decide a better way of handling outdated browsers
+            //window.location.pathname = '/outdated.html';
+        }
+
+        // Polyfills for old browsers
+        // This is before the bootstrap because it's quicker to load (CDN). So let the bootstrap download while this is executing
+        if (typeof window.URL !== 'function' || typeof window.URLSearchParams !== 'function' || !('searchParams' in URL.prototype) || !('origin' in URL.prototype) || typeof window.fetch !== 'function') {
+            document.write('<script type="text/javascript" src="\/\/www.hometalk.com\/resources\/combined\/js\/polyfills.227be36112b079e46d90.9014.js"><\/script>');
+        }
+
+        var timestamp = Date.now();
+        var QS = window.location.search;
+        if (QS){
+            QS = '&' + QS.substr(1);
+        }
+        var currentPath = location.pathname;
+        document.write('<script type="text/javascript" src="/api/app/bootstrap?format=jsonp&ts='
+            + timestamp + QS + '&referrer=' + encodeURIComponent(document.referrer)
+            + '&screen_width=' + window.innerWidth
+            + '&current_path=' + encodeURIComponent(currentPath)+ '"><\/script>');
+    </script>
+    <script>
+        if (! window.HT_BOOTSTRAP) {
+            window.HT_BOOTSTRAP = {"USER":{"id":0,"features":{"daily_follow_email":{"email_version":"1","push_into_list":""},"gtm_data_partners":{"enabled":"off"},"track_time_on_site_stateless":{"enabled":""},"track_time_on_page":{"enabled":""},"sticky_post_ad":{"enabled":"0"},"video_ads_schedule":{"value":"midroll","KVP_name":"video_ads_schedule","KVP_value":"midroll","KVP_rules":"{pagetypes:all}{platforms:all}"},"material_mandatory_post":{"enabled":"1"},"header_footer_next_scrolling_rules":{"enabled":"1","header_scroll_down":"","header_scroll_up":"","header_load_page":"1","header_scroll_to_related_posts":"1","next_scroll_down":"1","next_scroll_up":"1","next_load_page":"1","next_scroll_to_related_posts":"","footer_scroll_down":"1","footer_scroll_up":"1","footer_load_page":"1","footer_scroll_to_related_posts":""},"ads_reporting":{"enabled":""},"captcha":{"post":"","comment":"","discussion":"","question":""},"reactify":{"activity_redesign":"1","slideshow_redesign":"","homepage_redesign":"1","memberpage_redesign":"1","searchresults_redesign":"1","discussionsfeed_redesign":"1","discussion_redesign":"1","categorypage_redesign":"1","categoriesmainpage_redesign":"1","shareboxpost":"","shareboxdiscussion_redesign":"1","shareboxgallery":"1","accountsettings":"","contentapprovaltool":"1","shareboxpost_redesign":"1","notifications_redesign":"1","accountsettings_redesign":"1","pinterestlibrary_redesign":"1","unsubscribe_redesign":"1","shareboxgallery_redesign":"1"},"page_views_tracking":{"enabled":""},"marketplace_diy_help_page":{"enabled":"1","virtual":"","physical":"1","step_question_title":"Choose the project you need DIY help with","page_title":"Team Up with a skilled Hometalker in your area","page_placeholder":"What do you need help with?","step_offer_title":"","step_offer_virtual_description":"","step_offer_physical_description":"","step_details_title":"Add your info so we can match you with a Hometalker","step_success_title":"Awesome!","step_success_sub-title":"One of our DIY matchmakers will be in touch with you in the next 24 hours.","step_success_subscribe_text":"Get great DIY ideas to your inbox","page_sub_title":"Choose what you need DIY help with","question_page_placeholder":"(Optional)","page_main_btn":"Get started","value_proposition_position":"3","how_it_works_position":"1","video_position":"2","faq_position":"4","conclusion_position":"6","value_proposition_1_title":"Get a look you\u2019ll love","value_proposition_1_sub_title":"Work together to create a customized look for less.","value_proposition_2_title":"Get past step #1","value_proposition_2_sub_title":"Team Up to get everything you need for a smooth start.","value_proposition_3_title":"Get rid of \u201cI can\u2019t!\u201d","value_proposition_3_sub_title":"Begin with hands-on help to avoid common mistakes and pitfalls.","value_proposition_button_text":"Get DIY help","how_it_works_header":"DIY help includes","how_it_works_1_title":"Plan & material list","how_it_works_1_sub_title":"An experienced DIYer will Team Up with you to design a plan & create a supply list for your project","how_it_works_2_title":"Hands-on help","how_it_works_2_sub_title":"They'll be right in the action with you, to show you techniques & prevent any pitfalls along the way","how_it_works_3_title":"New DIY skills","how_it_works_3_sub_title":"When you Team Up, you'll learn new skills that you'll be able to use again and again","how_it_works_button_text":"Let's Team Up","video_header":"Watch DIY help in action","testimonials_header":"Success stories","faq_header":"Frequently asked questions","faq_1_question":"Are these Hometalkers vetted?","faq_1_answer":"Hometalk performs a thorough background check on anyone who applies to offer DIY help. We contact each Hometalker personally via phone and verify that their information is accurate and the projects they post belong to them.","faq_2_question":"Is travel time included in the price?","faq_2_answer":"Yes, travel time is included in the price.","faq_3_question":"Will I need to pay extra for the materials?","faq_3_answer":"Before you Team Up, the Hometalker will send you a prep sheet that will include a list of materials you need to purchase for your project.","faq_4_question":"How do I offer DIY help?","faq_4_answer":"Just reach out to miriam@hometalk.com to start the process.","faq_5_question":"","faq_5_answer":"","faq_6_question":"","faq_6_answer":"","faq_7_question":"","faq_7_answer":"","conclusion_header":"Doing it yourself doesn't mean doing it alone","conclusion_button_text":"Let's Team Up","become_diyer_cta_position":"5","become_diyer_cta_text":"Want to empower others to tackle their projects?","become_diyer_button_cta_text":"Offer DIY help","become_diyer_button_link":"https:\/\/www.helpers.hometalk.com\/become-a-diyer","diyer_results_title":"These Hometalkers are ready to Team Up","diyer_results_subtitle":"Choose one to see more info","matching_animation_text":"Finding the best Hometalkers for your project","video_link":"https:\/\/cdn.jwplayer.com\/videos\/0ZnioUkX.mp4","diyer_feed_enabled":"1","nobackground":"1","show_header":"1","hometalkers_feed_title":"Skilled Hometalkers in Houston","hometalkers_feed_sub_title":"Team Up with a local Hometalker to get DIY help","remove_description_step":"1","step2_onlyZipCodeVersion":"1","project_match_flow":"1","show_zip_input":"","project_match_flow_title":"Let's DIY together","project_match_flow_sub_title":"Now you can Team Up with a Hometalker to get your project done","project_match_flow_project_type_project_design":"1","project_match_flow_project_type_virtual_help":"","action_btn_text":"Start a project"},"creator_profile":{"diy_can_help_position":"two","ask_question_position":"one","my_offers_position":"three","about_position":"five","diy_can_help_title":"My projects","ask_question_title":"Message me","my_offers_title":"Let\u2019s Team Up to tackle your project","about_title":"About me","reviews_position":"four","ask_question_text":"Have a project you'd like to do? Tell me about it, and we'll see if I can help you get it done!","show_projects_on_overview":"0","projects_diy_can_help_position":"three","projects_ask_question_position":"five","projects_my_offers_position":"one","projects_reviews_position":"four","projects_about_position":"two","faq_position":"six"},"marketplace_orders_process":{"order_button":"Team Up","confirm_button":"Submit","show_details_screen":"","show_details_screen_before_payment_screen":"","show_name_field":"1","show_phone_field":"1","show_street_address_field":"1","show_city_field":"1","show_state_field":"1","show_zip_code_field":"1","show_project_details_field":"1","show_image_upload_field":"","fill_in_details_title":"Add your details","fill_in_details_form_next_btn_text":"Next","placeholder_project_details_field":"What is your #1 goal in joining this workshop?","details_box_title":"","details_box_subtitle":"","image_upload_title":"","order_button_with_promotion":"Book with discount","project_fill_in_details_title":"Add your details","project_details_box_subtitle":"","project_placeholder_project_details_field":"Notes","show_how_it_works_details":"","how_service_works_details_title":"","how_service_works_details_one":"","how_service_works_details_two":"","how_service_works_details_three":"","how_service_works_details_four":"","how_service_works_details_icon_text_one":"","how_service_works_details_icon_text_two":"","how_service_works_details_icon_text_three":"","how_service_works_details_btn_text":"","display_payment_policy":"1","payment_policy_one":"If you're not happy with the workshop, you can receive a full refund at any time","payment_policy_two":"","payment_policy_title":"Payment Policy","details_page_green_text_display":"","details_page_green_text":"","success_screen_headline":"Your payment was successful!","success_screen_message":"","display_button":""},"htd11628_testing_ad_slots_for_redesign":{"enabled":"0"},"force_login_level_3":{"enabled":""},"visit_my_blog_card":{"button_text":"Go","CTA_text":"Want more details about this and other DIY projects? Check out my blog post!"},"action_login_level":{"comment":"1","post":"0","marketplace":"0","diy_session":"1","marketplace_access_payment_source":"1","edit_account_settings":"1"},"htd12948_hotjar":{"enabled":"0"},"overview_post_photo_lightbox":[],"happiness_banner":{"strong-text":"Your happiness is our top priority","headline-text":"","list-item-check":"Start a challenge","list-item-smiley":"If you're not happy, pick a new one!","list-item-dollar":"We have a 10 day refund policy","text-1":"","text-2":""},"video_atf_new_popular_posts":{"enabled":"1"},"team_up_button_activity_page":{"button_link":"","button_text":"","enabled":""},"video_autoplay":{"jwplayer":"1","youtube":"1","muted":"1"},"flexible_marketing_adunit":{"KVP_name":"flexible_marketing_a","KVP_value":"flexible_marketing_adunit_default","KVP_rules":"{pagetypes:all}{platforms:all}"},"show_sticky_bar_on_top":{"KVP_name":"show_sticky_bar_on_t","KVP_value":"show_sticky_bar_on_top_default","KVP_rules":"{pagetypes:all}{platforms:all}"},"blogger_traffic_dashboard":{"MainTitle":"Blogger Traffic Program Dashboard","SubTitle":"To find out more about the Blogger Traffic Program,","SubTitleLinkText":"click here","SubTitleLinkURL":"http:\/\/bloggers.hometalk.com\/traffic-program","StatsTitle":"Your Stats","StatsVisitCount":"total visits to your blog","StatsFeaturesCount":"features to date","StatsLastQualifed":"Last Qualification","StatsNextFeature":"BTP Feature Status","StatsStatusNotEligible":"Not eligible","StatsStatusScheduled":"Scheduled","StatsStatusInTheQueue":"In the queue","StatsReasonEligibleLinks":"No qualified links","StatsReasonEligiblePosts":"Not enough posts","StatsReasonEligibleFeatured":"Featured within last 30 days","LinksTitle":"Blog Links","LinksText":"Place 3 links to projects on your blog that you\u2019d like Hometalk to share with our audience. These links must match your domain EXACTLY (including www and\/or http).","LinksButtonText":"Update","PostsTitle":"Posts that count toward your next feature","PostsText":"Below are your Hometalk posts that may count toward your next BTP feature. Remember, only posts marked with a quality score of 2 are actually eligible.","PostsReviewButtonText":"Update","PostFixInstructions":"Please fix this issue and then click update.","PostsNoPosts":"You currently have no posts toward your next feature.","PostsNoPostsLinkText":"Post a project!!","PostsNoPostsLinkURL":"sharebox\/post","StatsBonusFeature":"Bonus Feature Status"},"prebid_isolation":{"enabled":"","list":""},"prebid_analysis":{"enabled":""},"advelvet_floor":{"KVP_name":"advelvet_floor","KVP_value":"advelvet_floor_default","KVP_rules":"{pagetypes:all}{platforms:all}"},"turn_off_ads":{"enabled":""},"post_next_button_removal":{"enabled":""},"appsettings_testing_ad_units":{"enabled":"0","KVP_name":"appsettings_testing","KVP_value":"off","KVP_rules":"{pagetypes:all}{platforms:all}"},"cms_slot_logged_in_hp":{"under_header":"","under_category":""},"cms_pages":{"test":""},"cms_popup":{"enabled":"1","signup_component":"popup_signup_source_FE_stage1"},"vertical_slideshow_features":[],"show_location_link":{"enabled":"","enabled_on_lo_hp":"","emphasize":"","KVP_name":"show_location_link","KVP_value":"DONT_show_location_link_default","KVP_rules":"{pagetypes:all}{platforms:all}","label":"","url":""},"marketplace_teamup_lp_new":{"enabled":"1","value_proposition_position":"","how_it_works_position":"1","faq_position":"","video_position":"","hero_photo_position":"","value_proposition_1_title":"","value_proposition_1_sub_title":"Unique design options, customized especially for you","value_proposition_2_title":"","value_proposition_2_sub_title":"From start to finish in two weeks!","value_proposition_3_title":"","value_proposition_3_sub_title":"Transparent and more affordable pricing from vetted contractors","how_it_works_header":"Renovations have never been simpler","how_it_works_1_title":"Designing your space","how_it_works_1_sub_title":"Your designer works with you via video chat to customize a design plan based on your style and preferences.","how_it_works_2_title":"Customizing your project","how_it_works_2_sub_title":"We take measurements and give a final quote, so we can prepare all the necessary elements for your transformation.","how_it_works_3_title":"Making it happen","how_it_works_3_sub_title":"Your space is renovated by one of our trusted contractors, and now you have a brand new room!","faq_header":"","faq_1_question":"","faq_1_answer":"","faq_2_question":"","faq_2_answer":"","faq_3_question":"","faq_3_answer":"","faq_4_question":"","faq_4_answer":"","faq_5_question":"","faq_5_answer":"","faq_6_question":"","faq_6_answer":"","faq_7_question":"","faq_7_answer":"","video_link":"","video_header":"","hero_photo_title":"","cta_button_text":"Get a quick estimate","cms_popup_name":"","bottom_section_title":"Get a beautiful space that\u2019s just right for you","show_logo":"","top_cms_component_name":"LP_CTA_CARD","sortable_cms_component_name":"LP_BULLETS_CARD","sortable_component_position":"2","button_link":"https:\/\/hometalk.typeform.com\/to\/bdKGlF"},"facebook_button_on_photo":{"enabled":"1"},"pushly":{"enabled":"0","KVP_name":"pushly","KVP_value":"off","KVP_rules":"{pagetypes:all}{platforms:all}"},"vss_back_button":{"enabled":"0","KVP_name":"vss_back_button","KVP_value":"off_vss_back","KVP_rules":"{pagetypes:all}{platforms:all}"},"welcome_email":{"template_name":"welcome-version7","se_suffix":"house"},"main_category_title_description":{"title":"DIY Projects & Ideas","description":"Find hundreds of DIY projects for your home and garden that you can actually do. Whether you're an experienced DIYer or an ambitious beginner, these DIY ideas will enable you to create the home you love while saving time & money."},"Consistent_Session":{"items":""},"marketplace_sticky_footer_get_leads":{"enabled":"","button_text":"","link":"","cms_pop_up":"","footer_text":""},"adnimation":{"KVP_name":"adnimation","KVP_value":"on","KVP_rules":"{pagetypes:all}{platforms:all}"},"DistrictMADX":{"KVP_name":"DistrictMADX","KVP_value":"off","KVP_rules":"{pagetypes:all}{platforms:all}"},"cmsPopupTriggers":{"pageNumberEquals":"1","timeSession":"","timeOnPage":"15","KVP_name":"cmsPopupTriggers","KVP_value":"other_1_15","KVP_rules":"{pagetypes:all}{platforms:all}"},"stickybar_order":[],"pushly_fallback":{"timer":"30"},"cms_slot_post_page":{"aboveQOP":"profile_picture","newslot":"prop_card_cm","organize_pantry":"profile_picture_meggie","profile_picture_jenni":"profile_picture_jenni","profile_picture_sales_page":"profile_picture_jenni_sales_page","gardening_cta_card":"gardening_cta_card","gardening_cta_1":"gardening_cta_1","organizing_cta_large":"organizing_cta_large","furniture_painting_cta":"furniture_painting_cta","furniture_painting_cta_large":"furniture_painting_cta_large"},"feature_discovery":{"sticky_bar":"0"},"cms_slot_profile_page":[],"cms_slot_slideshow_page":{"aboveTitle":""},"cms_slot_shop_page":[],"bottom_of_page_simplified":{"enable":"0","KVP_name":"bottom_of_page_simpl","KVP_value":"bottom_of_page_simplified_default","KVP_rules":"{pagetypes:all}{platforms:all}","load_more_related":"0","skip_to_related":"0"},"networx_leadgen_V2":{"KVP_name":"networx_leadgen2","KVP_value":"networx_leadgen_default2","KVP_rules":"{pagetypes:all}{platforms:all}"},"vss_card_layout":{"redesigned":"","KVP_name":"vss_card_layout","KVP_value":"vss_card_layout_non_redesigned","KVP_rules":"{pagetypes:all}{platforms:all}","seemore":"1"},"ebda":{"KVP_name":"ebda","KVP_value":"ebda_on","KVP_rules":"{pagetypes:all}{platforms:all}"},"video_ads_prebid":{"spotx":"0","index_exchange":"1","KVP_name":"video_ads_prebid","KVP_value":"video_ads_prebid_default","KVP_rules":"{pagetypes:all}{platforms:all}"},"community_send":{"KVP_name":"community_send","KVP_value":"community_send_default","KVP_rules":"{pagetypes:all}{platforms:all}"},"use_welcome_email_from_emailbuilder":{"enabled":""},"blockThrough":{"enabled":"0","KVP_name":"blockThrough","KVP_value":"blockThrough_Off","KVP_rules":"{pagetypes:all}{platforms:all}"},"adx_video_demand":{"KVP_name":"adx_video_demand","KVP_value":"adx_video_demand_off","KVP_rules":"{pagetypes:all}{platforms:all}"},"extended_card":{"show":"","KVP_name":"extended_card","KVP_value":"regular_card_default","KVP_rules":"{pagetypes:all}{platforms:all}"},"prebid_platform_load":{"amazon":"on","prebid":"on"},"adsDynamicSlotTest":{"testType":"none","KVP_name":"adsDynamicSlotTest","KVP_value":"default","KVP_rules":"{pagetypes:all}{platforms:all}"},"delay_gtm_tags":{"delay":"0"},"confiant_scanner":{"dfp":"0","prebid":"1"},"confiant_sandbox":{"enabled":"1"},"inactive_workshops":{"ids":"1167,1161,1160,1158,1155,1154,1153,1152,1149,1146,1144,1143,1142,1140,1139,1136,1134,1132,1129,1123"},"explore_topics":{"enabled":""}},"feature_tracking":[],"utm_vars":[],"comments_count":0,"referrer_group":"direct","marketplace_engagement":[]},"DATETIME":{"day":"24","month":"04","year":"2019","ms":1556088508323},"SUPER_MODE":null,"SIGNED_UP":null,"ADS":{"dfp_kvp":"","ad_floors":[],"ad_floor_seed":null,"video_ads_config":{"players":{"default":{"vpaidmode":"enabled","client":"googima","skipmessage":"","skiptext":"","creativeTimeout":"5000","requestTimeout":"15000","admessage":"","midrollOffset":"20","forceNonLinearFullSlot":"0"}},"testPage":{"postId":null,"tag":null}}},"TRACK":{"utm_vars":[],"visit_data":{"ip":"66.249.91.35","user_agent":"Mediapartners-Google","latitude":36.292099999999998,"longitude":-95.312899999999999,"country_name":"US","country_code":"US","city":"Pryor","region":null,"metro_code":null,"gdpr":false,"gdpr_restricted":false}},"DEBUG_LIGHTBOX":false,"CSRF":"9a96f5f766ed6b6c77d033f827056c9c","PROMOTION":false,"SETTINGS":{"ads":{"version_id":"112","data":{"regular":{"bidding_platforms":[{"filters":{"page_type":"post","platform":"tablet"},"values":["a9","adex","prebid"]},{"filters":{"platform":"tablet","page_type":"post_video"},"values":["a9","adex","prebid"]},{"filters":{"platform":"tablet"},"values":["a9","adex","prebid"]},{"filters":{"page_type":"slideshow_vertical","platform":"tablet"},"values":["a9","adex","prebid"]},{"filters":{},"values":["a9","adex","prebid"]},{"filters":{"page_type":"post","platform":"desktop"},"values":["a9","adex","prebid"]},{"filters":{"platform":"desktop"},"values":["a9","adex","prebid"]},{"filters":{"page_type":"slideshow_vertical","platform":"desktop"},"values":["a9","adex","prebid"]},{"filters":{"platform":"desktop","page_type":"post_video"},"values":["a9","adex","prebid"]},{"filters":{"platform":"phone"},"values":["a9","adex","prebid"]},{"filters":{"platform":"phone","page_type":"post_video"},"values":["a9","adex","prebid"]},{"filters":{"page_type":"slideshow_vertical","platform":"phone"},"values":["a9","adex","prebid"]},{"filters":{"platform":"phone","page_type":"post"},"values":["a9","adex","prebid"]}],"prebid_partners":[{"filters":{"page_type":"post","platform":"tablet"},"values":["appnexus","conversant","openx","audienceNetwork","indexExchange","onedisplay","sonobi"]},{"filters":{"platform":"tablet","page_type":"post_video"},"values":["appnexus","conversant","openx","audienceNetwork","indexExchange","onedisplay","sonobi"]},{"filters":{"platform":"tablet"},"values":["appnexus","conversant","openx","audienceNetwork","indexExchange","onedisplay","sonobi"]},{"filters":{"page_type":"slideshow_vertical","platform":"tablet"},"values":["appnexus","conversant","openx","audienceNetwork","indexExchange","onedisplay","sonobi"]},{"filters":{},"values":["appnexus","audienceNetwork","conversant","indexExchange","medianet","onedisplay","openx","sonobi"]},{"filters":{"page_type":"post","platform":"desktop"},"values":["appnexus","conversant","openx","indexExchange","onedisplay","sonobi","medianet"]},{"filters":{"platform":"desktop"},"values":["appnexus","conversant","openx","indexExchange","onedisplay","sonobi","medianet"]},{"filters":{"page_type":"slideshow_vertical","platform":"desktop"},"values":["appnexus","conversant","openx","indexExchange","onedisplay","sonobi","medianet"]},{"filters":{"platform":"desktop","page_type":"post_video"},"values":["appnexus","conversant","openx","indexExchange","onedisplay","sonobi","medianet"]},{"filters":{"platform":"phone"},"values":["appnexus","conversant","openx","audienceNetwork","indexExchange","onedisplay","sonobi"]},{"filters":{"platform":"phone","page_type":"post_video"},"values":["appnexus","conversant","openx","audienceNetwork","indexExchange","onedisplay","sonobi"]},{"filters":{"page_type":"slideshow_vertical","platform":"phone"},"values":["appnexus","conversant","openx","audienceNetwork","indexExchange","onedisplay","sonobi"]},{"filters":{"platform":"phone","page_type":"post"},"values":["appnexus","conversant","openx","audienceNetwork","indexExchange","onedisplay","sonobi"]}],"prebid_timeout":[{"filters":{"page_type":"post","platform":"tablet"},"values":["1000"]},{"filters":{"platform":"tablet","page_type":"post_video"},"values":["1000"]},{"filters":{"platform":"tablet"},"values":["1000"]},{"filters":{"page_type":"slideshow_vertical","platform":"tablet"},"values":["1000"]},{"filters":{},"values":["1000"]},{"filters":{"page_type":"post","platform":"desktop"},"values":["1000"]},{"filters":{"platform":"desktop"},"values":["1000"]},{"filters":{"page_type":"slideshow_vertical","platform":"desktop"},"values":["1000"]},{"filters":{"platform":"desktop","page_type":"post_video"},"values":["1000"]},{"filters":{"platform":"phone"},"values":["1000"]},{"filters":{"platform":"phone","page_type":"post_video"},"values":["1000"]},{"filters":{"page_type":"slideshow_vertical","platform":"phone"},"values":["1000"]},{"filters":{"platform":"phone","page_type":"post"},"values":["1000"]}],"inviewport_refresh":[{"filters":{"page_type":"post","platform":"tablet"},"values":["20000"]},{"filters":{"platform":"tablet","page_type":"post_video"},"values":["20000"]},{"filters":{"platform":"tablet"},"values":["20000"]},{"filters":{"page_type":"slideshow_vertical","platform":"tablet"},"values":["20000"]},{"filters":{},"values":["20000"]},{"filters":{"page_type":"post","platform":"desktop"},"values":["20000"]},{"filters":{"platform":"desktop"},"values":["20000"]},{"filters":{"page_type":"slideshow_vertical","platform":"desktop"},"values":["20000"]},{"filters":{"platform":"desktop","page_type":"post_video"},"values":["20000"]},{"filters":{"platform":"phone"},"values":["20000"]},{"filters":{"platform":"phone","page_type":"post_video"},"values":["20000"]},{"filters":{"page_type":"slideshow_vertical","platform":"phone"},"values":["20000"]},{"filters":{"platform":"phone","page_type":"post"},"values":["20000"]}],"throttle":[{"filters":{"page_type":"post","platform":"tablet"},"values":["0"]},{"filters":{"platform":"tablet","page_type":"post_video"},"values":["0"]},{"filters":{"platform":"tablet"},"values":["0"]},{"filters":{},"values":["0"]},{"filters":{"page_type":"post","platform":"desktop"},"values":["0"]},{"filters":{"platform":"desktop"},"values":["0"]},{"filters":{"platform":"desktop","page_type":"post_video"},"values":["0"]},{"filters":{"platform":"phone"},"values":["0"]},{"filters":{"platform":"phone","page_type":"post_video"},"values":["0"]},{"filters":{"platform":"phone","page_type":"post"},"values":["0"]}],"ad_content_ratio":[{"filters":{"page_type":"slideshow_vertical","platform":"tablet"},"values":["1"]},{"filters":{},"values":["2"]},{"filters":{"page_type":"slideshow_vertical","platform":"desktop"},"values":["1"]},{"filters":{"page_type":"slideshow_vertical","platform":"phone"},"values":["1"]}],"ad_sidebar_count":[{"filters":{"page_type":"slideshow_vertical","platform":"tablet"},"values":["2"]},{"filters":{},"values":["2"]},{"filters":{"page_type":"slideshow_vertical","platform":"phone"},"values":["2"]}],"ad_preload_ahead":[{"filters":{"page_type":"slideshow_vertical","platform":"tablet"},"values":["4"]},{"filters":{},"values":["4"]},{"filters":{"page_type":"slideshow_vertical","platform":"phone"},"values":["4"]}],"ad_preload_before":[{"filters":{"page_type":"slideshow_vertical","platform":"tablet"},"values":["4"]},{"filters":{},"values":["3"]},{"filters":{"page_type":"slideshow_vertical","platform":"desktop"},"values":["4"]},{"filters":{"page_type":"slideshow_vertical","platform":"phone"},"values":["4"]}],"ad_prebid_ahead":[{"filters":{"page_type":"slideshow_vertical","platform":"tablet"},"values":["6"]},{"filters":{},"values":["6"]},{"filters":{"page_type":"slideshow_vertical","platform":"phone"},"values":["6"]}],"ad_prebid_at_once":[{"filters":{"page_type":"slideshow_vertical","platform":"tablet"},"values":["5"]},{"filters":{},"values":["5"]},{"filters":{"page_type":"slideshow_vertical","platform":"phone"},"values":["5"]}],"ads_per_ad_row":[{"filters":{},"values":["1"]}],"num_images_to_render_at_once":[{"filters":{},"values":["12"]}],"is_prebid_bidding_ordered":[{"filters":{},"values":["no"]},{"filters":{"platform":"phone","page_type":"post"},"values":["yes"]}]},"testing":{"bidding_platforms":[{"filters":{},"values":["a9","adex","prebid"]},{"filters":{"platform":"desktop"},"values":["a9","adex","prebid"]},{"filters":{"page_type":"post","platform":"desktop"},"values":["a9","adex","prebid"]},{"filters":{"platform":"desktop","page_type":"post_video"},"values":["a9","adex","prebid"]},{"filters":{"page_type":"slideshow_vertical","platform":"desktop"},"values":["a9","adex","prebid"]},{"filters":{"page_type":"post","platform":"tablet"},"values":["a9","adex","prebid"]},{"filters":{"platform":"tablet","page_type":"post_video"},"values":["a9","adex","prebid"]},{"filters":{"platform":"tablet"},"values":["a9","adex","prebid"]},{"filters":{"page_type":"slideshow_vertical","platform":"tablet"},"values":["a9","adex","prebid"]},{"filters":{"platform":"phone"},"values":["a9","adex","prebid"]},{"filters":{"platform":"phone","page_type":"post"},"values":["a9","adex","prebid"]},{"filters":{"platform":"phone","page_type":"post_video"},"values":["a9","adex","prebid"]},{"filters":{"page_type":"slideshow_vertical","platform":"phone"},"values":["a9","adex","prebid"]}],"prebid_partners":[{"filters":{},"values":["appnexus","audienceNetwork","conversant","indexExchange","medianet","onedisplay","openx","sonobi"]},{"filters":{"platform":"desktop"},"values":["appnexus","conversant","openx","indexExchange","onedisplay","sonobi","medianet"]},{"filters":{"page_type":"post","platform":"desktop"},"values":["appnexus","conversant","openx","indexExchange","onedisplay","sonobi","medianet"]},{"filters":{"platform":"desktop","page_type":"post_video"},"values":["appnexus","conversant","openx","indexExchange","onedisplay","sonobi","medianet"]},{"filters":{"page_type":"slideshow_vertical","platform":"desktop"},"values":["appnexus","conversant","openx","indexExchange","onedisplay","sonobi","medianet"]},{"filters":{"page_type":"post","platform":"tablet"},"values":["appnexus","conversant","openx","audienceNetwork","indexExchange","onedisplay","sonobi","medianet"]},{"filters":{"platform":"tablet","page_type":"post_video"},"values":["appnexus","conversant","openx","audienceNetwork","indexExchange","onedisplay","sonobi","medianet"]},{"filters":{"platform":"tablet"},"values":["appnexus","conversant","openx","audienceNetwork","indexExchange","onedisplay","sonobi","medianet"]},{"filters":{"page_type":"slideshow_vertical","platform":"tablet"},"values":["appnexus","conversant","openx","audienceNetwork","indexExchange","onedisplay","sonobi","medianet"]},{"filters":{"platform":"phone"},"values":["appnexus","conversant","openx","audienceNetwork","indexExchange","onedisplay","sonobi"]},{"filters":{"platform":"phone","page_type":"post"},"values":["appnexus","conversant","openx","audienceNetwork","indexExchange","onedisplay","sonobi"]},{"filters":{"platform":"phone","page_type":"post_video"},"values":["appnexus","conversant","openx","audienceNetwork","indexExchange","onedisplay","sonobi"]},{"filters":{"page_type":"slideshow_vertical","platform":"phone"},"values":["appnexus","conversant","openx","audienceNetwork","indexExchange","onedisplay","sonobi"]}],"prebid_timeout":[{"filters":{},"values":["1000"]},{"filters":{"platform":"desktop"},"values":["1000"]},{"filters":{"page_type":"post","platform":"desktop"},"values":["1000"]},{"filters":{"platform":"desktop","page_type":"post_video"},"values":["1000"]},{"filters":{"page_type":"slideshow_vertical","platform":"desktop"},"values":["1000"]},{"filters":{"page_type":"post","platform":"tablet"},"values":["1000"]},{"filters":{"platform":"tablet","page_type":"post_video"},"values":["1000"]},{"filters":{"platform":"tablet"},"values":["1000"]},{"filters":{"page_type":"slideshow_vertical","platform":"tablet"},"values":["1000"]},{"filters":{"platform":"phone"},"values":["1000"]},{"filters":{"platform":"phone","page_type":"post"},"values":["1000"]},{"filters":{"platform":"phone","page_type":"post_video"},"values":["800"]},{"filters":{"page_type":"slideshow_vertical","platform":"phone"},"values":["1000"]}],"inviewport_refresh":[{"filters":{},"values":["20000"]},{"filters":{"platform":"desktop"},"values":["20000"]},{"filters":{"page_type":"post","platform":"desktop"},"values":["20000"]},{"filters":{"platform":"desktop","page_type":"post_video"},"values":["20000"]},{"filters":{"page_type":"slideshow_vertical","platform":"desktop"},"values":["20000"]},{"filters":{"page_type":"post","platform":"tablet"},"values":["20000"]},{"filters":{"platform":"tablet","page_type":"post_video"},"values":["20000"]},{"filters":{"platform":"tablet"},"values":["20000"]},{"filters":{"page_type":"slideshow_vertical","platform":"tablet"},"values":["20000"]},{"filters":{"platform":"phone"},"values":["20000"]},{"filters":{"platform":"phone","page_type":"post"},"values":["20000"]},{"filters":{"platform":"phone","page_type":"post_video"},"values":["20000"]},{"filters":{"page_type":"slideshow_vertical","platform":"phone"},"values":["20000"]}],"throttle":[{"filters":{},"values":["0"]},{"filters":{"platform":"desktop"},"values":["0"]},{"filters":{"page_type":"post","platform":"desktop"},"values":["0"]},{"filters":{"platform":"desktop","page_type":"post_video"},"values":["0"]},{"filters":{"page_type":"post","platform":"tablet"},"values":["0"]},{"filters":{"platform":"tablet","page_type":"post_video"},"values":["0"]},{"filters":{"platform":"tablet"},"values":["0"]},{"filters":{"platform":"phone"},"values":["0"]},{"filters":{"platform":"phone","page_type":"post"},"values":["0"]},{"filters":{"platform":"phone","page_type":"post_video"},"values":["0"]}],"ad_content_ratio":[{"filters":{},"values":["2"]},{"filters":{"page_type":"slideshow_vertical","platform":"desktop"},"values":["1"]},{"filters":{"page_type":"slideshow_vertical","platform":"tablet"},"values":["1"]},{"filters":{"page_type":"slideshow_vertical","platform":"phone"},"values":["1"]}],"ad_sidebar_count":[{"filters":{},"values":["2"]},{"filters":{"page_type":"slideshow_vertical","platform":"tablet"},"values":["2"]},{"filters":{"page_type":"slideshow_vertical","platform":"phone"},"values":["2"]}],"ad_preload_ahead":[{"filters":{},"values":["4"]},{"filters":{"page_type":"slideshow_vertical","platform":"tablet"},"values":["4"]},{"filters":{"page_type":"slideshow_vertical","platform":"phone"},"values":["4"]}],"ad_preload_before":[{"filters":{},"values":["3"]},{"filters":{"page_type":"slideshow_vertical","platform":"desktop"},"values":["4"]},{"filters":{"page_type":"slideshow_vertical","platform":"tablet"},"values":["4"]},{"filters":{"page_type":"slideshow_vertical","platform":"phone"},"values":["4"]}],"ad_prebid_ahead":[{"filters":{},"values":["6"]},{"filters":{"page_type":"slideshow_vertical","platform":"tablet"},"values":["6"]},{"filters":{"page_type":"slideshow_vertical","platform":"phone"},"values":["6"]}],"ad_prebid_at_once":[{"filters":{},"values":["5"]},{"filters":{"page_type":"slideshow_vertical","platform":"tablet"},"values":["5"]},{"filters":{"page_type":"slideshow_vertical","platform":"phone"},"values":["5"]}],"ads_per_ad_row":[{"filters":{},"values":["1"]}],"num_images_to_render_at_once":[{"filters":{},"values":["12"]}],"is_prebid_bidding_ordered":[{"filters":{},"values":["no"]}]},"regular2":{"bidding_platforms":[{"filters":{"platform":"phone"},"values":["a9","adex","prebid"]},{"filters":{"page_type":"post","platform":"tablet"},"values":["a9","adex","prebid"]},{"filters":{"platform":"tablet","page_type":"post_video"},"values":["a9","adex","prebid"]},{"filters":{"platform":"tablet"},"values":["a9","adex","prebid"]},{"filters":{"page_type":"slideshow_vertical","platform":"tablet"},"values":["a9","adex","prebid"]},{"filters":{"page_type":"slideshow_vertical","platform":"phone"},"values":["a9","adex","prebid"]},{"filters":{},"values":["a9","adex","prebid"]},{"filters":{"platform":"phone","page_type":"post_video"},"values":["a9","adex","prebid"]},{"filters":{"platform":"desktop"},"values":["a9","adex","prebid"]},{"filters":{"page_type":"post","platform":"desktop"},"values":["a9","adex","prebid"]},{"filters":{"platform":"desktop","page_type":"post_video"},"values":["a9","adex","prebid"]},{"filters":{"page_type":"slideshow_vertical","platform":"desktop"},"values":["a9","adex","prebid"]},{"filters":{"platform":"phone","page_type":"post"},"values":["a9","adex","prebid"]}],"prebid_partners":[{"filters":{"platform":"phone"},"values":["appnexus","conversant","openx","audienceNetwork","indexExchange","onedisplay","sonobi"]},{"filters":{"page_type":"post","platform":"tablet"},"values":["appnexus","conversant","openx","audienceNetwork","indexExchange","onedisplay","sonobi"]},{"filters":{"platform":"tablet","page_type":"post_video"},"values":["appnexus","conversant","openx","audienceNetwork","indexExchange","onedisplay","sonobi"]},{"filters":{"platform":"tablet"},"values":["appnexus","conversant","openx","audienceNetwork","indexExchange","onedisplay","sonobi"]},{"filters":{"page_type":"slideshow_vertical","platform":"tablet"},"values":["appnexus","conversant","openx","audienceNetwork","indexExchange","onedisplay","sonobi"]},{"filters":{"page_type":"slideshow_vertical","platform":"phone"},"values":["appnexus","conversant","openx","audienceNetwork","indexExchange","onedisplay","sonobi"]},{"filters":{},"values":["appnexus","audienceNetwork","conversant","indexExchange","medianet","onedisplay","openx","sonobi"]},{"filters":{"platform":"phone","page_type":"post_video"},"values":["appnexus","conversant","openx","audienceNetwork","indexExchange","onedisplay","sonobi"]},{"filters":{"platform":"desktop"},"values":["appnexus","conversant","openx","indexExchange","onedisplay","sonobi","medianet"]},{"filters":{"page_type":"post","platform":"desktop"},"values":["appnexus","conversant","openx","indexExchange","onedisplay","sonobi","medianet"]},{"filters":{"platform":"desktop","page_type":"post_video"},"values":["appnexus","conversant","openx","indexExchange","onedisplay","sonobi","medianet"]},{"filters":{"page_type":"slideshow_vertical","platform":"desktop"},"values":["appnexus","conversant","openx","indexExchange","onedisplay","sonobi","medianet"]},{"filters":{"platform":"phone","page_type":"post"},"values":["appnexus","conversant","openx","audienceNetwork","indexExchange","onedisplay","sonobi"]}],"prebid_timeout":[{"filters":{"platform":"phone"},"values":["1000"]},{"filters":{"page_type":"post","platform":"tablet"},"values":["1000"]},{"filters":{"platform":"tablet","page_type":"post_video"},"values":["1000"]},{"filters":{"platform":"tablet"},"values":["1000"]},{"filters":{"page_type":"slideshow_vertical","platform":"tablet"},"values":["1000"]},{"filters":{"page_type":"slideshow_vertical","platform":"phone"},"values":["1000"]},{"filters":{},"values":["1000"]},{"filters":{"platform":"phone","page_type":"post_video"},"values":["2500"]},{"filters":{"platform":"desktop"},"values":["1000"]},{"filters":{"page_type":"post","platform":"desktop"},"values":["1000"]},{"filters":{"platform":"desktop","page_type":"post_video"},"values":["1000"]},{"filters":{"page_type":"slideshow_vertical","platform":"desktop"},"values":["1000"]},{"filters":{"platform":"phone","page_type":"post"},"values":["1000"]}],"inviewport_refresh":[{"filters":{"platform":"phone"},"values":["20000"]},{"filters":{"page_type":"post","platform":"tablet"},"values":["20000"]},{"filters":{"platform":"tablet","page_type":"post_video"},"values":["20000"]},{"filters":{"platform":"tablet"},"values":["20000"]},{"filters":{"page_type":"slideshow_vertical","platform":"tablet"},"values":["20000"]},{"filters":{"page_type":"slideshow_vertical","platform":"phone"},"values":["20000"]},{"filters":{},"values":["20000"]},{"filters":{"platform":"phone","page_type":"post_video"},"values":["20000"]},{"filters":{"platform":"desktop"},"values":["20000"]},{"filters":{"page_type":"post","platform":"desktop"},"values":["20000"]},{"filters":{"platform":"desktop","page_type":"post_video"},"values":["20000"]},{"filters":{"page_type":"slideshow_vertical","platform":"desktop"},"values":["20000"]},{"filters":{"platform":"phone","page_type":"post"},"values":["20000"]}],"throttle":[{"filters":{"platform":"phone"},"values":["0"]},{"filters":{"page_type":"post","platform":"tablet"},"values":["0"]},{"filters":{"platform":"tablet","page_type":"post_video"},"values":["0"]},{"filters":{"platform":"tablet"},"values":["0"]},{"filters":{},"values":["0"]},{"filters":{"platform":"phone","page_type":"post_video"},"values":["0"]},{"filters":{"platform":"desktop"},"values":["0"]},{"filters":{"page_type":"post","platform":"desktop"},"values":["0"]},{"filters":{"platform":"desktop","page_type":"post_video"},"values":["0"]},{"filters":{"platform":"phone","page_type":"post"},"values":["0"]}],"ad_content_ratio":[{"filters":{"page_type":"slideshow_vertical","platform":"tablet"},"values":["1"]},{"filters":{"page_type":"slideshow_vertical","platform":"phone"},"values":["1"]},{"filters":{},"values":["2"]},{"filters":{"page_type":"slideshow_vertical","platform":"desktop"},"values":["1"]}],"ad_sidebar_count":[{"filters":{"page_type":"slideshow_vertical","platform":"tablet"},"values":["2"]},{"filters":{"page_type":"slideshow_vertical","platform":"phone"},"values":["2"]},{"filters":{},"values":["2"]}],"ad_preload_ahead":[{"filters":{"page_type":"slideshow_vertical","platform":"tablet"},"values":["4"]},{"filters":{"page_type":"slideshow_vertical","platform":"phone"},"values":["4"]},{"filters":{},"values":["4"]}],"ad_preload_before":[{"filters":{"page_type":"slideshow_vertical","platform":"tablet"},"values":["4"]},{"filters":{"page_type":"slideshow_vertical","platform":"phone"},"values":["4"]},{"filters":{},"values":["3"]},{"filters":{"page_type":"slideshow_vertical","platform":"desktop"},"values":["4"]}],"ad_prebid_ahead":[{"filters":{"page_type":"slideshow_vertical","platform":"tablet"},"values":["6"]},{"filters":{"page_type":"slideshow_vertical","platform":"phone"},"values":["6"]},{"filters":{},"values":["6"]}],"ad_prebid_at_once":[{"filters":{"page_type":"slideshow_vertical","platform":"tablet"},"values":["5"]},{"filters":{"page_type":"slideshow_vertical","platform":"phone"},"values":["5"]},{"filters":{},"values":["5"]}],"ads_per_ad_row":[{"filters":{},"values":["1"]}],"num_images_to_render_at_once":[{"filters":{},"values":["12"]}],"is_prebid_bidding_ordered":[{"filters":{},"values":["no"]}]}}}},"IS_BOT":true,"SIZE":7003};
+        }
+
+        window.googletag = window.googletag || {};
+        googletag.cmd = googletag.cmd || [];
+        // Init for GTM
+        window.dataLayer = window.dataLayer || [];
+    </script>
+    
+    <title>How to Care for Leather Furniture | Hometalk</title>
+<meta name="description" content="We both have a couple leather pieces in our homes and love the warmth and texture they bring to our spaces. However, leather does require some maintenance in or…">
+<meta name="robots" content="noindex, follow">
+<meta property="og:title" content="How to Care for Leather Furniture">
+<meta property="og:description" content="We both have a couple leather pieces in our homes and love the warmth and texture they bring to our spaces. However, leather does require some maintenance in order to keep it conditioned and looking its best.
+Here's our step-by-step process to care for our leather furniture and what you should be doing on a weekly and monthly basis.
+Every week, we recommend wiping down your leather furniture with a microfiber cloth. This helps pick up all of the dust and debris on the surface and keeps…">
+<link rel="canonical" href="https://www.hometalk.com/39783153/how-to-care-for-leather-furniture?expand_all_questions=1">
+
+    <link rel="manifest" href="/manifest.json" />
+    <base href="/">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="generated_at" content="2019-04-24 02:48:28" />
+    <meta name="HandheldFriendly" content="True"/>
+    <meta name="MobileOptimized" content="320"/>
+    <meta property="fb:app_id" content="126323344079075"/>
+    <meta property="fb:pages" content="201765839840980"/>
+    <meta name="format-detection" content="telephone=no, email=no"/>
+    <meta name="apple-mobile-web-app-capable" content="no"/>
+    <meta name="fragment" content="!">
+    <meta property="fb:admins" content="505307788"/>
+    <meta property="fb:admins" content="100004211465816"/>
+
+    <meta property="og:type" content="article"/>
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="628"/>
+    <meta property="og:site_name" content="Hometalk.com"/>
+
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://www.hometalk.com/resources/m/ico/apple-touch-icon-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://www.hometalk.com/resources/m/ico/apple-touch-icon-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://www.hometalk.com/resources/m/ico/apple-touch-icon-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="https://www.hometalk.com/resources/m/ico/apple-touch-icon-57.png"/>
+    <link rel="shortcut icon" href="https://www.hometalk.com/ht_favicon.ico"/>
+    <link rel="publisher" href="https://plus.google.com/+Hometalk/"/>
+
+    
+<link type="text/css" rel="stylesheet" href="//www.hometalk.com/resources/combined/css/ht-redesign.a3d8566b3927ec7842e3a16ed5dc1022.9014.css" />
+
+    <script type="text/javascript">
+        var pbjs = pbjs || {};
+        pbjs.que = pbjs.que || [];
+        var htConsts = {"A_HOST":"https:\/\/www.hometalk.com","SITE_URL":"https:\/\/www.hometalk.com","B_HOST":"https:\/\/cdn-fastly.hometalk.com","KEEP_ALIVE_URL":"\/keep_alive","js_errors_url":"\/js_errors","track_ht_url":"\/trackht\/track_action","crawler_url":"\/m\/crawler.php?_escaped_fragment_=","GOOGLE_CLIENT_ID":"940261022464-4na39lbrj28poumf7h9mbuctrj4di7qa.apps.googleusercontent.com","S3_WRITE_BUCKET_KEY":"AKIAJHGRIJ2GCL4QMI6A","S3_WRITE_BUCKET_SECRET":"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","S3_VIDEO_TEMP_BUCKET":"htlk.video.temp","topKeywords":[{"id":"371","display_name":"Decorate","mod_rewrite":"decorate","color":"santorini","hide":"0"},{"id":"49155","display_name":"Celebrate","mod_rewrite":"celebrate","color":"cadetlight","hide":"0"},{"id":"50565","display_name":"Make Over","mod_rewrite":"make-over","color":"oceanlight","hide":"0"},{"id":"49305","display_name":"Furnish","mod_rewrite":"furnish","color":"sugarplum","hide":"0"},{"id":"3080","display_name":"Paint","mod_rewrite":"paint","color":"sugarplumlight","hide":"0"},{"id":"50796","display_name":"Upcycle","mod_rewrite":"upcycle","color":"santorini","hide":"0"},{"id":"4580","display_name":"Garden","mod_rewrite":"garden","color":"terracottadark","hide":"0"},{"id":"49122","display_name":"Build","mod_rewrite":"build","color":"rosedark","hide":"0"},{"id":"35393","display_name":"Organize","mod_rewrite":"organize","color":"hometalkdark","hide":"0"},{"id":"18458","display_name":"Clean","mod_rewrite":"clean","color":"terracotta","hide":"0"},{"id":"1439","display_name":"Repair","mod_rewrite":"repair","color":"nuttylight","hide":"0"},{"id":"2129","display_name":"Tile","mod_rewrite":"tile","color":"cobalt","hide":"0"}],"FB_MESSENGER_PAGE_ID":"201765839840980","FB_MESSENGER_APP_ID":"438993716486644","PROXY_CACHE_URL":"\/\/hometalk.global.ssl.fastly.net","API_URL":"\/api","METRICS_URL":"https:\/\/www-direct.hometalk.com\/eventLogger","EVENT_STREAM_URL":"https:\/\/www-direct.hometalk.com\/eventStream","SESSION_COOKIE_NAME":"SESSION_IDv2","TRACKJS_TOKEN":"d9d272c862854a2eb5d38476be14fc6c","ENV":"live","GA_ACCOUNT":"UA-341850-31","DISCUSSION_TYPES":["question","tip","review","experience","unpublishedQuestion","unpublishedTip","unpublishedReview","unpublishedExperience"],"DRAFT_TYPES":["draftPost","draftDiscussion","draftGallery"],"UNPUBLISHED_DISCUSSION_TYPES":["unpublishedQuestion","unpublishedTip","unpublishedReview","unpublishedExperience"],"EMPTY_TYPES":["emptyPost","emptyDiscussion","emptyGallery","emptyGuide"],"FACEBOOK_APP_ID":126323344079075,"JWPLAYER_PATH":"\/resources\/js\/libs\/jwplayer-v8.8.1\/","JWPLAYER_KEY":"gYA8Pz7qKlyminJfOlJT0PCAOJV98aPBrVSS0OIqBrw5WMWE","MIN_NUM_POST":3,"PAYPAL_CLIENT_ID":"AZUr8REKobYbZsrbzrJighwk0qQ4bhekyluedlwPggImkoO_LHGrPxxAE7riydWEy_w49UGPLgYQ6kSI","INTERCOM_APP_ID":"cr0bjkpy","DIYSESSION_ON":true,"STRIPE_CLIENT_ID":"ca_C9Dw7YK1xTGjsgNr8Mn8iHJ0ZsdGuoK1","STRIPE_PUBLISHABLE_KEY":"pk_live_6olMONLG19TKODLDLWwUlhZW","RECAPTCHA_SITE_KEY":"6Le4lTUUAAAAAFhiJ-EBj7OhoUapNcXuu0RMxzt6","IS_DEV":0,"IS_LIVE":1,"IS_STAGING":0,"LOGIN_LEVELS":{"LL_SLG":1,"LL_LONG_TERM_COOKIE":2,"LL_LOGIN_SESSION":3,"LL_MFA_DEVICE":4,"LL_MFA_SESSION":5},"ACTION_LOGIN_LEVELS":{"browse":"0","save":"1","follow":"1","like_comment":"1","post":"2","create_slideshow":"2","ask":"1","comment":"1","reply":"1","qop":"1","edit_account_settings":"2","edit_post":"2","delete_post":"2","edit_discussion":"1","marketplace":"3","diy_session":"2","marketplace_access_payment_source":"2"},"PROMOTION_BUFFER_HOURS":4,"ADMIN_STATUS_LIST_FLOW":"","HOTJAR_SITE_ID":903666,"LANDING_URL":"teamup","USE_TOPUPS_API":false,"CMS_PAGES":[{"id":"1","name":"bedroom-makeover","url":"bedroom-makeover","title":"bedroom-makeover","description":"cta-page to display options of design","page_type":"cms","created_at":"2019-01-20 03:51:23","created_by":null,"deactivated_at":null,"component_name":"bedroom-makeover","active":null}],"LIMIT_DISCUSSION_COMMENTS":250,"GTM_ID":"GTM-TJRDC7","NOTIFICATION_STORAGE":"notification_status_storage","PUSHLY_DOMAIN_KEY":"SyQnj5ThdSz3T69zy7juMgrYy54qOXyTghGR","AD_UNITS":{"adUnitSlotsDesktopRegular":["\/\/www.hometalk.com\/resources\/combined\/js\/adUnitSlotsDesktopRegular.6183cf4076246b90991e45ce741e3dbe.9014.js"],"adUnitSlotsDesktopTesting":["\/\/www.hometalk.com\/resources\/combined\/js\/adUnitSlotsDesktopTesting.4dcf2a1ddb31e440a2b7482c61840491.9014.js"],"adUnitSlotsPhoneRegular":["\/\/www.hometalk.com\/resources\/combined\/js\/adUnitSlotsPhoneRegular.15dc82d24c87b3fcd68203c735ee8ac1.9014.js"],"adUnitSlotsPhoneTesting":["\/\/www.hometalk.com\/resources\/combined\/js\/adUnitSlotsPhoneTesting.2e71c7ef9905a3a1455c4d5bf9340d23.9014.js"],"adUnitSlotsTabletRegular":["\/\/www.hometalk.com\/resources\/combined\/js\/adUnitSlotsTabletRegular.b505373d563f52bf7c918e5e9605a825.9014.js"],"adUnitSlotsTabletTesting":["\/\/www.hometalk.com\/resources\/combined\/js\/adUnitSlotsTabletTesting.02a4df7e912d65759950ace5fd5e970f.9014.js"],"prebidAdUnitsDesktopRegular":["\/\/www.hometalk.com\/resources\/combined\/js\/prebidAdUnitsDesktopRegular.4e613f112ed0f5d5c33cc6aa10856672.9014.js"],"prebidAdUnitsDesktopTesting":["\/\/www.hometalk.com\/resources\/combined\/js\/prebidAdUnitsDesktopTesting.c665abe5155da6ed86a71aac31ca64db.9014.js"],"prebidAdUnitsPhoneRegular":["\/\/www.hometalk.com\/resources\/combined\/js\/prebidAdUnitsPhoneRegular.7452231f4679d47d4e0b94a7662473ef.9014.js"],"prebidAdUnitsPhoneTesting":["\/\/www.hometalk.com\/resources\/combined\/js\/prebidAdUnitsPhoneTesting.eb2e8f0ecdf90d4d417a41ea348c6af8.9014.js"],"prebidAdUnitsTabletRegular":["\/\/www.hometalk.com\/resources\/combined\/js\/prebidAdUnitsTabletRegular.cae057b6780a892eb817bab4feec7e91.9014.js"],"prebidAdUnitsTabletTesting":["\/\/www.hometalk.com\/resources\/combined\/js\/prebidAdUnitsTabletTesting.216357734188b0b8c49117d9ac3cdac5.9014.js"]}};
+        var preloadServerData = {"activityItem":{"id":39783153,"type":"post","summary":"How to Care for Leather Furniture","site_url":"\/39783153\/how-to-care-for-leather-furniture","indexable":false,"formatted_text":"<p>We both have a couple leather pieces in our homes and love the warmth and texture they bring to our spaces. However, leather does require some maintenance in order to keep it conditioned and looking its best.","text":"<p>We both have a couple leather pieces in our homes and love the warmth and texture they bring to our spaces. However, leather does require some maintenance in order to keep it conditioned and looking its best.","quality":1,"likes_count":0,"replies_count":2,"impressions_count":303,"media_count":6,"media":[{"id":5147284,"alt":"how to care for leather furniture","formatted_text":"<p>Here's our step-by-step process to care for our leather furniture and what you should be doing on a weekly and monthly basis.","text":"<p>Here's our step-by-step process to care for our leather furniture and what you should be doing on a weekly and monthly basis.","formatted_title":"","featured":false,"width":1024,"height":683,"order":1,"ratio":1.4990000000000001,"source":"https:\/\/cdn-fastly.hometalk.com\/media\/2018\/10\/31\/5147284\/how-to-care-for-leather-furniture.jpg","title":"","type":"photo","link":null,"path":"2018\/10\/31\/5147284.jpg","duration":null,"syndication_post_id":null},{"id":5147285,"alt":"how to care for leather furniture","formatted_text":"<p>Every week, we recommend wiping down your leather furniture with a microfiber cloth. This helps pick up all of the dust and debris on the surface and keeps your leather looking shiny!","text":"<p>Every week, we recommend wiping down your leather furniture with a microfiber cloth. This helps pick up all of the dust and debris on the surface and keeps your leather looking shiny!","formatted_title":"","featured":false,"width":1200,"height":800,"order":2,"ratio":1.5,"source":"https:\/\/cdn-fastly.hometalk.com\/media\/2018\/10\/31\/5147285\/how-to-care-for-leather-furniture.jpg","title":"","type":"photo","link":null,"path":"2018\/10\/31\/5147285.jpg","duration":null,"syndication_post_id":null},{"id":5147288,"alt":"how to care for leather furniture","formatted_text":"<p>About once a month we remove the cushions and vacuum up any debris that fall in the cracks. This should only take a few minutes!","text":"<p>About once a month we remove the cushions and vacuum up any debris that fall in the cracks. This should only take a few minutes!","formatted_title":"","featured":false,"width":1200,"height":800,"order":3,"ratio":1.5,"source":"https:\/\/cdn-fastly.hometalk.com\/media\/2018\/10\/31\/5147288\/how-to-care-for-leather-furniture.jpg","title":"","type":"photo","link":null,"path":"2018\/10\/31\/5147288.jpg","duration":null,"syndication_post_id":null},{"id":5147291,"alt":"how to care for leather furniture","formatted_text":"<p>Finally, you need to condition the leather once a month or so. This prevents the leather from getting dry and cracking. It will make the leather a little darker at first (like in the above picture), but it should dry evenly. (You may want to test it in a small area first, just to be sure!).","text":"<p>Finally, you need to condition the leather once a month or so. This prevents the leather from getting dry and cracking. It will make the leather a little darker at first (like in the above picture), but it should dry evenly. (You may want to test it in a small area first, just to be sure!).","formatted_title":"","featured":false,"width":1200,"height":800,"order":4,"ratio":1.5,"source":"https:\/\/cdn-fastly.hometalk.com\/media\/2018\/10\/31\/5147291\/how-to-care-for-leather-furniture.jpg","title":"","type":"photo","link":null,"path":"2018\/10\/31\/5147291.jpg","duration":null,"syndication_post_id":null},{"id":5147297,"alt":"how to care for leather furniture","formatted_text":"<p>Take the leather conditioner ), put some on a microfiber cloth, and apply it in a circular motion all over your furniture. Be sure to do a light coat and then once it dries buff it!","text":"<p>Take the leather conditioner ), put some on a microfiber cloth, and apply it in a circular motion all over your furniture. Be sure to do a light coat and then once it dries buff it!","formatted_title":"","featured":false,"width":1200,"height":800,"order":5,"ratio":1.5,"source":"https:\/\/cdn-fastly.hometalk.com\/media\/2018\/10\/31\/5147297\/how-to-care-for-leather-furniture.jpg","title":"","type":"photo","link":null,"path":"2018\/10\/31\/5147297.jpg","duration":null,"syndication_post_id":null},{"id":5147298,"alt":"how to care for leather furniture","formatted_text":"<p>You'll be left with a well-conditioned piece that will last for years and years to come (as long as you take care of it!).<p><br><p>For the full steps to this project, .","text":"<p>You'll be left with a well-conditioned piece that will last for years and years to come (as long as you take care of it!).<p><br><p>For the full steps to this project, .","formatted_title":"","featured":false,"width":800,"height":1200,"order":6,"ratio":0.66700000000000004,"source":"https:\/\/cdn-fastly.hometalk.com\/media\/2018\/10\/31\/5147298\/how-to-care-for-leather-furniture.jpg","title":"","type":"photo","link":null,"path":"2018\/10\/31\/5147298.jpg","duration":null,"syndication_post_id":null}],"time":"10 Minutes","cost":"10","url":"https:\/\/thediyplaybook.com\/2018\/10\/how-to-care-for-leather-furniture.html","created_at":"2018-10-31T10:32:52-04:00","published_at":"2018-10-31T10:45:00-04:00","difficulty":"Easy","meta_title":"How to Care for Leather Furniture","marketing_title":"How to Care for Leather Furniture","marketing_description":"We both have a couple leather pieces in our homes and love the warmth and texture they bring to our spaces. However, leather does require some maintenance in or\u2026","social_title":"How to Care for Leather Furniture","social_description":"We both have a couple leather pieces in our homes and love the warmth and texture they bring to our spaces. However, leather does require some maintenance in order to keep it conditioned and looking its best.\nHere's our step-by-step process to care for our leather furniture and what you should be doing on a weekly and monthly basis.\nEvery week, we recommend wiping down your leather furniture with a microfiber cloth. This helps pick up all of the dust and debris on the surface and keeps\u2026","materials":[{"id":3369924,"material":"Microfiber Cloth","purchased_at":"","created_at":"2018-10-31T10:44:47-04:00","media":null,"media_link":"","price":null,"on_sale":"0","fast_shipping":"0","admin_generated":0,"material_order":"1","updated_at":"2018-11-01 09:47:46"},{"id":3369927,"material":"Vacuum","purchased_at":"","created_at":"2018-10-31T10:44:47-04:00","media":null,"media_link":"","price":null,"on_sale":"0","fast_shipping":"0","admin_generated":0,"material_order":"2","updated_at":"2018-11-01 09:47:46"},{"id":3369930,"material":"Leather Conditioner","purchased_at":"","created_at":"2018-10-31T10:44:47-04:00","media":null,"media_link":"","price":null,"on_sale":"0","fast_shipping":"0","admin_generated":0,"material_order":"3","updated_at":"2018-11-01 09:47:46"}],"structures":[],"admin_materials":[{"id":3359877,"material":"Microfiber Cloth","purchased_at":"https:\/\/www.amazon.com\/gp\/search?linkCode=xm2&SubscriptionId=AKIAIQMDIE7UW5PCUAOQ&keywords=Microfiber%20Cloth&tag=diyplaybook-ag-creator-20&creative=386001&url=search-alias%3Daws-amazon-aps&camp=2025","created_at":"2018-10-31T10:45:12-04:00","media":null,"media_link":"https:\/\/images-na.ssl-images-amazon.com\/images\/I\/51hwOHNW89L._SL75_.jpg","price":"13.49","on_sale":null,"fast_shipping":null,"admin_generated":2,"material_order":"1","updated_at":"2019-04-14 22:12:55"},{"id":3359880,"material":"Vacuum","purchased_at":"https:\/\/www.amazon.com\/gp\/search?linkCode=xm2&SubscriptionId=AKIAIQMDIE7UW5PCUAOQ&keywords=Vacuum&tag=diyplaybook-ag-creator-20&creative=386001&url=search-alias%3Daws-amazon-aps&camp=2025","created_at":"2018-10-31T10:45:13-04:00","media":null,"media_link":"https:\/\/images-na.ssl-images-amazon.com\/images\/I\/41QEpuDLElL._SL75_.jpg","price":"85.79","on_sale":null,"fast_shipping":null,"admin_generated":2,"material_order":"2","updated_at":"2019-04-14 22:12:55"},{"id":3359883,"material":"Leather Conditioner","purchased_at":"https:\/\/www.amazon.com\/gp\/search?linkCode=xm2&SubscriptionId=AKIAIQMDIE7UW5PCUAOQ&keywords=Leather%20Conditioner&tag=diyplaybook-ag-creator-20&creative=386001&url=search-alias%3Daws-amazon-aps&camp=2025","created_at":"2018-10-31T10:45:13-04:00","media":null,"media_link":"https:\/\/images-na.ssl-images-amazon.com\/images\/I\/518iRSZ9jFL._SL75_.jpg","price":"16.99","on_sale":null,"fast_shipping":null,"admin_generated":2,"material_order":"3","updated_at":"2019-04-14 22:12:55"}],"hashtags":[],"breadcrumb_combination":[{"id":"18458","name":"Clean","stemmed_name":",clean,","display_name":"Clean","display_discussion_name":"Clean","approved":"1","cache_timestamp":"2019-04-23 06:33:22","mod_rewrite":"clean","color":"terracotta","hide":"0","level":1,"url":"\/categories\/clean"},{"id":"95","name":"Furniture","stemmed_name":",furnitur,","display_name":"Furniture","display_discussion_name":"Furniture","approved":"1","cache_timestamp":"2019-04-23 16:46:12","mod_rewrite":"furniture","color":"cobaltdark","hide":"0","level":2,"url":"\/categories\/clean\/furniture"},{"id":"3761","name":"Couches","stemmed_name":",couch,","display_name":"Couches","display_discussion_name":"Couches","approved":"1","cache_timestamp":"2019-04-03 03:49:41","mod_rewrite":"couches","color":"sugarplumdark","hide":"0","level":3,"url":"\/categories\/clean\/furniture\/couches"}],"post_quality":2,"shares":{"facebook":0,"pinterest":0,"twitter":0},"saves_count":9,"social_photo":{"id":5147284,"type":"photo","source":"https:\/\/cdn-fastly.hometalk.com\/media\/2018\/10\/31\/5147284\/how-to-care-for-leather-furniture.jpg","path":"2018\/10\/31\/5147284.jpg","object_class":"Model_Media_Photo"},"social_pin_photos":[],"writer":{"id":299661,"name":"The DIY Playbook","site_url":"\/member\/299661\/diyplaybook","profile_photo":"https:\/\/cdn-fastly.hometalk.com\/media\/profile\/2019\/04\/14\/299661_4.jpg","is_hometalk_helper":false,"is_tutorial_team":false,"is_hometalk_expert":false,"is_hometalk_supervisor":false,"is_creator":false,"mod_rewrite":"diyplaybook","indexable":true,"location":"Chicago, IL","member_title":"Blogger","member_type":"blogger","is_employee":false,"website":"https:\/\/thediyplaybook.com","posts_count":107},"related_gallery":{"id":20831610,"cover_photo":{"id":3521092,"type":"photo","site_url":"\/20831610\/s-these-are-the-pantry-organizing-hacks-that-you-ve-been-waiting-for","source":"https:\/\/cdn-fastly.hometalk.com\/media\/2016\/08\/29\/3521092\/s-these-are-the-pantry-organizing-hacks-that-you-ve-been-waiting-for-closet-organizing.jpg","alt":"s these are the pantry organizing hacks that you ve been waiting for, closet, organizing","path":"2016\/08\/29\/3521092.jpg","title":"","formatted_title":"","text":null,"is_liked":false,"is_clipped":false,"ratio":0.68799999999999994,"width":634,"height":922,"link":null,"link_text":"","order":1,"duration":null,"featured":false},"site_url":"\/20831610\/s-these-are-the-pantry-organizing-hacks-that-you-ve-been-waiting-for","summary":"These Are the Pantry Organizing Hacks That You've Been Waiting For"},"visual_quality":1,"top_comment_question_count":4,"materials_approved":"0","materials_rev_share":{"id":"475","member":{"id":299661,"site_url":"\/member\/299661\/diyplaybook","name":"The DIY Playbook"},"tag_name":"diyplaybook-ag-creator-20","partner":"amazon","materials_allowed":"1","payment_type":"paypal","payment_info":"diyplaybook@gmail.com","created_at":"2017-11-29 10:44:33","added_to_affiliate":"1"},"formatted_time":"10 Minutes","is_allowed_for_syndication":false,"questions":[{"id":7089144,"type":"question","text":"<p>What would you use for leather conditioner? Thanks for the quick reply.","created_at":"2019-02-04T16:27:26-05:00","likes_count":0,"writer":{"id":20618209,"name":"Frieda Vaghar Farshchian","site_url":"\/member\/20618209\/friedavagharfarshchian","profile_photo":"https:\/\/cdn-fastly.hometalk.com\/media\/profile\/2017\/02\/13\/20618209_1.jpg","is_hometalk_helper":false,"is_tutorial_team":false,"is_hometalk_expert":false,"is_hometalk_supervisor":false,"is_creator":false,"mod_rewrite":"friedavagharfarshchian","indexable":false,"location":"","member_title":"","member_type":"member","is_employee":false,"website":null},"media_count":0,"media":[],"replies_count":0,"replies":[{"id":7096550,"comment_parent_id":7089144,"comment_type":"answer","text":"<p>All details are in the blog post with a direct link to the product we used.","created_at":"2019-02-06T13:16:51-05:00","likes_count":0,"media":[],"media_count":0,"writer":{"id":299661,"name":"The DIY Playbook","site_url":"\/member\/299661\/diyplaybook","profile_photo":"https:\/\/cdn-fastly.hometalk.com\/media\/profile\/2019\/04\/14\/299661_4.jpg","is_hometalk_helper":false,"is_tutorial_team":false,"is_hometalk_expert":false,"is_hometalk_supervisor":false,"is_creator":false,"mod_rewrite":"diyplaybook","indexable":true,"location":"Chicago, IL","member_title":"Blogger","member_type":"blogger","is_employee":false,"website":"https:\/\/thediyplaybook.com"},"analysis_flag":"1","spam_status":"unchecked","type":"answer","is_reply":true,"links":{"posts":[],"members":[]},"helpful_count":0}],"analysis_flag":"1","spam_status":"unchecked","rule":{"id":null,"grade":null},"helpful_count":0,"links":{"posts":[],"members":[]}},{"id":6763205,"type":"question","text":"<p>My leather chaise has tiny little tears on the head rest where the former owners furbaby laid and apparently \u201cstretched\u201d, digging little nail tips into the leather.  Bought it anyhow because other then that, the piece is like new.  Any ideas about how to repair or at least hide these little boo boos?  I will contact a leather shop if need be, but love how creative all of you are!  Thanks!","created_at":"2018-11-05T09:11:26-05:00","likes_count":0,"writer":{"id":308481,"name":"Ruth Ann","site_url":"\/member\/308481\/6468j","profile_photo":"https:\/\/cdn-fastly.hometalk.com\/media\/profile\/2016\/02\/23\/308481_1.jpg","is_hometalk_helper":false,"is_tutorial_team":false,"is_hometalk_expert":false,"is_hometalk_supervisor":false,"is_creator":false,"mod_rewrite":"6468j","indexable":false,"location":"Greenbush, MI","member_title":"","member_type":"member","is_employee":false,"website":null},"media_count":0,"media":[],"replies_count":1,"replies":[{"id":6784747,"comment_parent_id":6763205,"comment_type":"answer","text":"<p>I followed this to fix small scratches<p><a href=\"https:\/\/www.guyabouthome.com\/repair-leather-couch-scratch-tear\/\" target=\"_blank\" rel=\"nofollow noopener\">https:\/\/www.guyabouthome.com\/repair-leather-couch-scratch-tear\/<\/a>","created_at":"2018-11-11T05:35:37-05:00","likes_count":2,"media":[],"media_count":0,"writer":{"id":17731261,"name":"Dawn","site_url":"\/member\/17731261\/dawn1620414","profile_photo":"https:\/\/cdn-fastly.hometalk.com\/media\/profile\/2017\/06\/19\/17731261_1.jpg","is_hometalk_helper":false,"is_tutorial_team":false,"is_hometalk_expert":false,"is_hometalk_supervisor":false,"is_creator":false,"mod_rewrite":"dawn1620414","indexable":false,"location":"","member_title":"","member_type":"member","is_employee":false,"website":null},"analysis_flag":"1","spam_status":"unchecked","type":"answer","is_reply":true,"links":{"posts":[],"members":[]},"helpful_count":0}],"analysis_flag":"1","spam_status":"unchecked","rule":{"id":null,"grade":null},"helpful_count":0,"links":{"posts":[],"members":[]}}],"unapprovedQuestions":[],"comments":[{"id":6758200,"type":"comment","text":"<p>Very nice! Thanks for sharing <img style=\" width: 24px; margin: 1px; vertical-align: bottom;\" src=\"https:\/\/cdn.jsdelivr.net\/emojione\/assets\/3.1\/png\/32\/1f44d.png\" alt=\" \" \/>","created_at":"2018-11-04T05:26:07-05:00","likes_count":1,"writer":{"id":33900912,"name":"Katelyn","site_url":"\/member\/33900912\/katelyn1614403","profile_photo":"https:\/\/cdn-fastly.hometalk.com\/media\/profile\/2018\/08\/06\/33900912_2.jpg","is_hometalk_helper":true,"is_tutorial_team":false,"is_hometalk_expert":false,"is_hometalk_supervisor":false,"is_creator":false,"mod_rewrite":"katelyn1614403","indexable":true,"location":"Jamaica, NY","member_title":"Blogger","member_type":"blogger","is_employee":true,"website":"https:\/\/www.hometalk.com"},"media_count":0,"media":[],"replies_count":0,"replies":[],"analysis_flag":"1","spam_status":"unchecked","rule":{"id":null,"grade":null},"helpful_count":0,"links":{"posts":[],"members":[]}},{"id":6744604,"type":"comment","text":"<p>Super tips. A lot of people assume leather doesn't need any care or don't do it right and it starts to crack and peel. Great share.","created_at":"2018-10-31T10:51:40-04:00","likes_count":1,"writer":{"id":4736240,"name":"William","site_url":"\/member\/4736240\/william79","profile_photo":"https:\/\/cdn-fastly.hometalk.com\/resources\/imgs-responsive\/avatar-letters\/avatar-W-F1C40F.png","is_hometalk_helper":true,"is_tutorial_team":false,"is_hometalk_expert":false,"is_hometalk_supervisor":false,"is_creator":false,"mod_rewrite":"william79","indexable":false,"location":"Burbank, IL","member_title":"","member_type":"member","is_employee":false,"website":null},"media_count":0,"media":[],"replies_count":0,"replies":[],"analysis_flag":"1","spam_status":"unchecked","rule":{"id":null,"grade":null},"helpful_count":0,"links":{"posts":[],"members":[]}}],"unapprovedComments":[],"top_replies_count":2,"questions_count":2,"word_count":"245","has_photos":true,"num_videos":0,"comment_question_count":6,"breadcrumbs_info":["Clean,Repair","Furniture,Furniture","Couches,Leather"],"cover_photo":{"id":5147284,"type":"photo","site_url":"\/39783153\/how-to-care-for-leather-furniture","source":"https:\/\/cdn-fastly.hometalk.com\/media\/2018\/10\/31\/5147284\/how-to-care-for-leather-furniture.jpg","alt":"how to care for leather furniture","path":"2018\/10\/31\/5147284.jpg","title":"","formatted_title":"","text":"<p>Here's our step-by-step process to care for our leather furniture and what you should be doing on a weekly and monthly basis.","is_liked":false,"is_clipped":false,"ratio":1.4990000000000001,"width":1024,"height":683,"link":null,"link_text":"","order":1,"duration":null,"featured":false}}};
+        var serverRoute = '';
+    </script>
+
+    <script>
+        var prebidAdUnits = {} , adUnitSlots = {};
+        window.adsTesting = 'Regular'; // (window.HT_BOOTSTRAP && window.HT_BOOTSTRAP.USER && window.HT_BOOTSTRAP.USER.features
+            // && window.HT_BOOTSTRAP.USER.features.appsettings_testing_ad_units && window.HT_BOOTSTRAP.USER.features.appsettings_testing_ad_units.enabled == '1') ? 'Testing' : 'Regular';
+        window.adUnits = function() {
+            return {
+                prebidAdUnits: prebidAdUnits,
+                adUnitSlots: adUnitSlots
+            };
+        };
+        ///function will move out when we will load the ad files in non blocking mode
+        function getScreenPlatform() {
+            //table appear twice for future split between tabletPortrait and tabletLandscape
+            var sizeToPlatformMap =[{1025: "Desktop"} , {801: "Tablet"} , {768: "Tablet"} ,{0: "Phone"}];
+            for (var i = 0; i < sizeToPlatformMap.length; i++) {
+                var set = sizeToPlatformMap[i];
+                if (window.innerWidth >= Object.keys(set)[0]) {
+                    return set[Object.keys(set)[0]];
+                }
+            }
+        }
+        var adUnitsFiles = {"adUnitSlotsDesktopRegular":["\/\/www.hometalk.com\/resources\/combined\/js\/adUnitSlotsDesktopRegular.6183cf4076246b90991e45ce741e3dbe.9014.js"],"adUnitSlotsDesktopTesting":["\/\/www.hometalk.com\/resources\/combined\/js\/adUnitSlotsDesktopTesting.4dcf2a1ddb31e440a2b7482c61840491.9014.js"],"adUnitSlotsPhoneRegular":["\/\/www.hometalk.com\/resources\/combined\/js\/adUnitSlotsPhoneRegular.15dc82d24c87b3fcd68203c735ee8ac1.9014.js"],"adUnitSlotsPhoneTesting":["\/\/www.hometalk.com\/resources\/combined\/js\/adUnitSlotsPhoneTesting.2e71c7ef9905a3a1455c4d5bf9340d23.9014.js"],"adUnitSlotsTabletRegular":["\/\/www.hometalk.com\/resources\/combined\/js\/adUnitSlotsTabletRegular.b505373d563f52bf7c918e5e9605a825.9014.js"],"adUnitSlotsTabletTesting":["\/\/www.hometalk.com\/resources\/combined\/js\/adUnitSlotsTabletTesting.02a4df7e912d65759950ace5fd5e970f.9014.js"],"prebidAdUnitsDesktopRegular":["\/\/www.hometalk.com\/resources\/combined\/js\/prebidAdUnitsDesktopRegular.4e613f112ed0f5d5c33cc6aa10856672.9014.js"],"prebidAdUnitsDesktopTesting":["\/\/www.hometalk.com\/resources\/combined\/js\/prebidAdUnitsDesktopTesting.c665abe5155da6ed86a71aac31ca64db.9014.js"],"prebidAdUnitsPhoneRegular":["\/\/www.hometalk.com\/resources\/combined\/js\/prebidAdUnitsPhoneRegular.7452231f4679d47d4e0b94a7662473ef.9014.js"],"prebidAdUnitsPhoneTesting":["\/\/www.hometalk.com\/resources\/combined\/js\/prebidAdUnitsPhoneTesting.eb2e8f0ecdf90d4d417a41ea348c6af8.9014.js"],"prebidAdUnitsTabletRegular":["\/\/www.hometalk.com\/resources\/combined\/js\/prebidAdUnitsTabletRegular.cae057b6780a892eb817bab4feec7e91.9014.js"],"prebidAdUnitsTabletTesting":["\/\/www.hometalk.com\/resources\/combined\/js\/prebidAdUnitsTabletTesting.216357734188b0b8c49117d9ac3cdac5.9014.js"],"prebidLib":["\/\/www.hometalk.com\/resources\/combined\/js\/prebid.0a24d007a612720c7b643242b8d575f2.9014.js"]};
+
+        document.write('<script type="text/javascript" src="' + adUnitsFiles['adUnitSlots' + getScreenPlatform() + window.adsTesting][0] + '"><\/script>' +
+            '<script type="text/javascript" src="' + adUnitsFiles['prebidAdUnits' + getScreenPlatform() + window.adsTesting][0] + '"><\/script>');
+
+        //load prebid library
+        const prebidLoad = (HT_BOOTSTRAP && HT_BOOTSTRAP.USER && HT_BOOTSTRAP.USER.features &&
+        HT_BOOTSTRAP.USER.features.prebid_platform_load) ? HT_BOOTSTRAP.USER.features.prebid_platform_load.prebid : 'on';
+
+        if (location.pathname !== "/"|| prebidLoad !== 'lazy'){
+            const prebidScript = document.createElement('script');
+
+            prebidScript.src = adUnitsFiles['prebidLib'];
+            document.head.appendChild(prebidScript);
+        }
+    </script>
+    <script id="schema_markup" type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"HowTo","name":"How to Care for Leather Furniture","author":{"@type":"Person","name":"The DIY Playbook"},"dateCreated":"2018-10-31T10:32:52-04:00","text":"<p>We both have a couple leather pieces in our homes and love the warmth and texture they bring to our spaces. However, leather does require some maintenance in order to keep it conditioned and looking its best.","commentCount":2,"estimatedCost":{"@type":"MonetaryAmount","currency":"USD","value":"10"},"supply":[{"@type":"HowToSupply","name":"Microfiber Cloth"},{"@type":"HowToSupply","name":"Vacuum"},{"@type":"HowToSupply","name":"Leather Conditioner"}]}</script>
+    <!-- Preload fonts -->
+    <link href="https://www.hometalk.com/resources/fonts/OpenSans-Regular.woff2" rel="preload" as="font" crossorigin="anonymous"/>
+    <link href="https://www.hometalk.com/resources/fonts/Montserrat-SemiBold.woff2" rel="preload" as="font" crossorigin="anonymous"/>
+    <link href="https://www.hometalk.com/resources/fonts/HometalkMobiFont-v62.woff2" rel="preload" as="font" crossorigin="anonymous"/>
+    <link href="https://www.hometalk.com/resources/fonts/OpenSans-Semibold.woff2" rel="preload" as="font" crossorigin="anonymous"/>
+
+    <link rel="preconnect" href="https://cdn-fastly.hometalk.com"/>
+    <link rel="preconnect" href="https://www-direct.hometalk.com"/>
+
+    <link rel="preconnect" href="https://c.amazon-adsystem.com"/>
+    <link rel="preconnect" href="https://www.googletagmanager.com"/>
+    <link rel="preconnect" href="https://connect.facebook.net"/>
+    <link rel="preconnect" href="https://www.google-analytics.com"/>
+
+</head>
+<body class="activity-page">
+    <div id="app-container"><div><div class="mhead-container sans-small-slideshow" id="PageTop"><div class="mhead-wrapper tr_zone" data-tr_zone="header">
+<div class="header-basis">
+<a class="logo  sl-site-logo" href="https://www.hometalk.com/" data-ht-track="Logo" aria-label="Home"><i class="ics-logo"></i></a><a href="https://www.hometalk.com/search/posts" class="search-link sl-search-link" data-ht-logger="{action:'click_search-link'}"><i class="ics-search"></i></a><div class="search-site-block"><form name="searchForm">
+<button type="button" class="sl-search-btn tr_zone" data-tr_zone="header_undefined" aria-label="Search"><i class="ics-search"></i></button><div class="react-autosuggest__container">
+<input type="search" autocomplete="off" role="combobox" aria-autocomplete="list" aria-owns="react-autowhatever-1" aria-expanded="false" class="auto-complete-words" maxlength="70" placeholder="Find your next project!" value=""><div id="react-autowhatever-1"></div>
+</div>
+</form></div>
+</div>
+<ul class="menu-explore"><li class="explore-link ">
+<a data-ht-track="Explore Projects" class="sl-open-menu">Explore Projects <i class="ics-arrow-down"></i></a><div class="explore-topics-dropdown tr_zone" data-tr_zone="left_menu"><ul>
+<li><a href="https://www.hometalk.com/categories/make-over" class="sl-browse-make-over" data-ht-track="Menu Item">Make Over</a></li>
+<li><a href="https://www.hometalk.com/categories/build" class="sl-browse-build" data-ht-track="Menu Item">Build</a></li>
+<li><a href="https://www.hometalk.com/categories/garden" class="sl-browse-garden" data-ht-track="Menu Item">Garden</a></li>
+<li><a href="https://www.hometalk.com/categories/organize" class="sl-browse-organize" data-ht-track="Menu Item">Organize</a></li>
+<li><a href="https://www.hometalk.com/categories/repair" class="sl-browse-repair" data-ht-track="Menu Item">Repair</a></li>
+<li><a href="https://www.hometalk.com/categories/upcycle" class="sl-browse-upcycle" data-ht-track="Menu Item">Upcycle</a></li>
+<li><a href="https://www.hometalk.com/categories/decorate" class="sl-browse-decorate" data-ht-track="Menu Item">Decorate</a></li>
+<li><a href="https://www.hometalk.com/categories/clean" class="sl-browse-clean" data-ht-track="Menu Item">Clean</a></li>
+<li><a href="https://www.hometalk.com/categories/paint" class="sl-browse-paint" data-ht-track="Menu Item">Paint</a></li>
+<li><a href="https://www.hometalk.com/categories/tile" class="sl-browse-tile" data-ht-track="Menu Item">Tile</a></li>
+<li><a href="https://www.hometalk.com/categories/furnish" class="sl-browse-furnish" data-ht-track="Menu Item">Furnish</a></li>
+<li><a href="https://www.hometalk.com/categories/celebrate" class="sl-browse-celebrate" data-ht-track="Menu Item">Celebrate</a></li>
+</ul></div>
+</li></ul>
+<ul class="menu-actions">
+<li class="menu-link"><a class="sl-hdr-post-btn" rel="nofollow" data-ht-track="Create A Post">+ Post Project</a></li>
+<li class="menu-link"><a class="sl-start-discussion-header" href="https://www.hometalk.com/discussions" data-ht-track="Start Discussion">DIY Forum</a></li>
+<li class="join-button signup-flyout ">
+<a class="button tertiary-button link-class sl-login-link" rel="nofollow">Join Now</a><div class="signup-bubble bubble-pop tr_zone" data-tr_zone="bubble_signup">
+<div class="sign-up-btn-wrap">
+<a rel="nofollow" data-ht-track="Click Signup" class="button primary-button sl-signup-btn">Sign Up</a><a class="button facebook-button sl-facebook-login" data-ht-track="Facebook Login Signup"><i class="ics-facebook"></i> Sign In with Facebook</a>
+</div>
+<span class="already-member">Already a member? <a class="sl-login-link" rel="nofollow" data-ht-track="Click Login">Log In</a></span><div class="footer">
+<a href="https://www.about.hometalk.com" target="_blank" data-ht-track="click_about">About Us</a><span class="separator">•</span><a href="https://www.about.hometalk.com/contact-us" target="_blank" data-ht-track="click_contact">Contact</a>
+</div>
+</div>
+</li>
+</ul>
+</div></div></div>
+<div class="content-wrap"><div class="main-page-wrap sl-activity-wrap" id="ActivityMainPage"><div class="container-wrap">
+<div class="top-leaderboard-wrap "><div></div></div>
+<div class="activity-page-header tr_zone" data-tr_zone="activity_header">
+<div class="breadcrumbs-component-wrap sl-breadcrumbs-wrap"><ul class="breadcrumbs-component">
+<li class="breadcrumb"><a href="https://www.hometalk.com/categories/clean" class="sl-level-1">Clean</a></li>
+<li class="breadcrumb"><a href="https://www.hometalk.com/categories/clean/furniture" class="sl-level-2">Furniture</a></li>
+<li class="breadcrumb"><a href="https://www.hometalk.com/categories/clean/furniture/couches" class="sl-level-3">Couches</a></li>
+</ul></div>
+<div class="author-card sl-author-card">
+<a class="avatar sl-avatar" href="https://www.hometalk.com/member/299661/diyplaybook" data-ht-track="Thumbnail"><img src="https://cdn-fastly.hometalk.com/media/profile/2019/04/14/299661_4.jpg?size=91x91" alt="The DIY Playbook" nopin="nopin"></a><div class="author-card-details">
+<a class="username sl-username" href="https://www.hometalk.com/member/299661/diyplaybook" data-ht-track="Member Name">The DIY Playbook</a><ul class="author-extra-details">
+<li>Hometalker</li>
+<li>Chicago, IL</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="page-with-sidebar">
+<div class="activity-content-wrap sl-activity-wrap">
+<div class="project-post-main-wrap">
+<h1 class="sl-post-title post-title">How to Care for Leather Furniture</h1>
+<div class="project-post-stats sl-project-post-stats">
+<div class="in-stats-item sl-post-materials">
+<i class="ics-stats-materials sl-stats-materials stats-icon"></i>3 Materials</div>
+<div class="in-stats-item sl-post-cost">
+<i class="ics-stats-cost sl-stats-cost stats-icon"></i>$10</div>
+<div class="in-stats-item sl-post-time">
+<i class="ics-time sl-stats-time stats-icon"></i>10 Minutes</div>
+<div class="in-stats-item sl-post-difficulty">
+<i class="ics-stats-level sl-stats-level stats-icon"></i>Easy</div>
+</div>
+<hr class="under-stats-border">
+<div class="project-block-body tr_zone" data-tr_zone="activity_body">
+<div class="project-text-block"><span class="sl-post-text"><p>We both have a couple leather pieces in our homes and love the warmth and texture they bring to our spaces. However, leather does require some maintenance in order to keep it conditioned and looking its best.</p></span></div>
+<div class="media-component"><div><div class="media-wrap"><span class="photo-wrap sl-photo-wrap"><div class="share-buttons ">
+<a href="javascript:" class="button float-button share-button sb-button sb-facebook" aria-label="Share on Facebook" data-ht-track="Share Facebook Overlay"><i class="ics-facebook"></i></a><a href="javascript:" class="button float-button share-button sb-button sb-pinterest " data-ht-track='{"action":"Share Pinterest Overlay Syndication","Shared URL":"/39783153/how-to-care-for-leather-furniture","Shared Media ID":5147284}' aria-label="Pin this photo"><i class="ics-pinterest"></i></a>
+</div>
+<a href="https://www.hometalk.com/post/39783153/media?id=5147284" data-ht-track="Photo Post"><picture><source media="(max-width: 481px)" srcset="https://cdn-fastly.hometalk.com/media/2018/10/31/5147284/how-to-care-for-leather-furniture.jpg?size=414x575&amp;nocrop=1"><source media="(min-width: 481px) and (max-width:1024px)" srcset="https://cdn-fastly.hometalk.com/media/2018/10/31/5147284/how-to-care-for-leather-furniture.jpg?size=650x832&amp;nocrop=1"><source media="(min-width: 1024px)" srcset="https://cdn-fastly.hometalk.com/media/2018/10/31/5147284/how-to-care-for-leather-furniture.jpg?size=720x845&amp;nocrop=1"><img src="https://cdn-fastly.hometalk.com/media/2018/10/31/5147284/how-to-care-for-leather-furniture.jpg?size=720x845&amp;nocrop=1" class="after-load post-img media-item-track" alt="how to care for leather furniture"></source></source></source></picture></a></span></div></div></div>
+<div class="sl-post-text-1 project-text-block"><p>Here's our step-by-step process to care for our leather furniture and what you should be doing on a weekly and monthly basis.</p></div>
+<div class="media-component"><div><div class="media-wrap"><span class="photo-wrap sl-photo-wrap"><div class="share-buttons ">
+<a href="javascript:" class="button float-button share-button sb-button sb-facebook" aria-label="Share on Facebook" data-ht-track="Share Facebook Overlay"><i class="ics-facebook"></i></a><a href="javascript:" class="button float-button share-button sb-button sb-pinterest " data-ht-track='{"action":"Share Pinterest Overlay Syndication","Shared URL":"/39783153/how-to-care-for-leather-furniture","Shared Media ID":5147285}' aria-label="Pin this photo"><i class="ics-pinterest"></i></a>
+</div>
+<a href="https://www.hometalk.com/post/39783153/media?id=5147285" data-ht-track="Photo Post"><picture><source media="(max-width: 481px)" srcset="https://cdn-fastly.hometalk.com/media/2018/10/31/5147285/how-to-care-for-leather-furniture.jpg?size=414x575&amp;nocrop=1"><source media="(min-width: 481px) and (max-width:1024px)" srcset="https://cdn-fastly.hometalk.com/media/2018/10/31/5147285/how-to-care-for-leather-furniture.jpg?size=650x832&amp;nocrop=1"><source media="(min-width: 1024px)" srcset="https://cdn-fastly.hometalk.com/media/2018/10/31/5147285/how-to-care-for-leather-furniture.jpg?size=720x845&amp;nocrop=1"><img src="https://cdn-fastly.hometalk.com/media/2018/10/31/5147285/how-to-care-for-leather-furniture.jpg?size=720x845&amp;nocrop=1" class="after-load post-img media-item-track" alt="how to care for leather furniture"></source></source></source></picture></a></span></div></div></div>
+<div class="sl-post-text-2 project-text-block"><p>Every week, we recommend wiping down your leather furniture with a microfiber cloth. This helps pick up all of the dust and debris on the surface and keeps your leather looking shiny!</p></div>
+<div><div class="project-ad-wrap"></div></div>
+<div class="media-component"><div><div class="media-wrap"><span class="photo-wrap sl-photo-wrap"><div class="share-buttons ">
+<a href="javascript:" class="button float-button share-button sb-button sb-facebook" aria-label="Share on Facebook" data-ht-track="Share Facebook Overlay"><i class="ics-facebook"></i></a><a href="javascript:" class="button float-button share-button sb-button sb-pinterest " data-ht-track='{"action":"Share Pinterest Overlay Syndication","Shared URL":"/39783153/how-to-care-for-leather-furniture","Shared Media ID":5147288}' aria-label="Pin this photo"><i class="ics-pinterest"></i></a>
+</div>
+<a href="https://www.hometalk.com/post/39783153/media?id=5147288" data-ht-track="Photo Post"><picture><source media="(max-width: 481px)" data-srcset="" srcset="https://cdn-fastly.hometalk.com/media/2018/10/31/5147288/how-to-care-for-leather-furniture.jpg?size=414x575&amp;nocrop=1"><source media="(min-width: 481px) and (max-width:1024px)" data-srcset="" srcset="https://cdn-fastly.hometalk.com/media/2018/10/31/5147288/how-to-care-for-leather-furniture.jpg?size=650x832&amp;nocrop=1"><source media="(min-width: 1024px)" data-srcset="" srcset="https://cdn-fastly.hometalk.com/media/2018/10/31/5147288/how-to-care-for-leather-furniture.jpg?size=720x845&amp;nocrop=1"><img data-src="" src="https://cdn-fastly.hometalk.com/media/2018/10/31/5147288/how-to-care-for-leather-furniture.jpg?size=720x845&amp;nocrop=1" class="post-img media-item-track" alt="how to care for leather furniture"></source></source></source></picture></a></span></div></div></div>
+<div class="sl-post-text-3 project-text-block"><p>About once a month we remove the cushions and vacuum up any debris that fall in the cracks. This should only take a few minutes!</p></div>
+<div class="media-component"><div><div class="media-wrap"><span class="photo-wrap sl-photo-wrap"><div class="share-buttons ">
+<a href="javascript:" class="button float-button share-button sb-button sb-facebook" aria-label="Share on Facebook" data-ht-track="Share Facebook Overlay"><i class="ics-facebook"></i></a><a href="javascript:" class="button float-button share-button sb-button sb-pinterest " data-ht-track='{"action":"Share Pinterest Overlay Syndication","Shared URL":"/39783153/how-to-care-for-leather-furniture","Shared Media ID":5147291}' aria-label="Pin this photo"><i class="ics-pinterest"></i></a>
+</div>
+<a href="https://www.hometalk.com/post/39783153/media?id=5147291" data-ht-track="Photo Post"><picture><source media="(max-width: 481px)" data-srcset="https://cdn-fastly.hometalk.com/media/2018/10/31/5147291/how-to-care-for-leather-furniture.jpg?size=414x575&amp;nocrop=1" srcset=""><source media="(min-width: 481px) and (max-width:1024px)" data-srcset="https://cdn-fastly.hometalk.com/media/2018/10/31/5147291/how-to-care-for-leather-furniture.jpg?size=650x832&amp;nocrop=1" srcset=""><source media="(min-width: 1024px)" data-srcset="https://cdn-fastly.hometalk.com/media/2018/10/31/5147291/how-to-care-for-leather-furniture.jpg?size=720x845&amp;nocrop=1" srcset=""><img data-src="https://cdn-fastly.hometalk.com/media/2018/10/31/5147291/how-to-care-for-leather-furniture.jpg?size=720x845&amp;nocrop=1" src="" class="post-img media-item-track" alt="how to care for leather furniture"></source></source></source></picture></a></span></div></div></div>
+<div class="sl-post-text-4 project-text-block"><p>Finally, you need to condition the leather once a month or so. This prevents the leather from getting dry and cracking. It will make the leather a little darker at first (like in the above picture), but it should dry evenly. (You may want to test it in a small area first, just to be sure!).</p></div>
+<div class="media-component"><div><div class="media-wrap"><span class="photo-wrap sl-photo-wrap"><div class="share-buttons ">
+<a href="javascript:" class="button float-button share-button sb-button sb-facebook" aria-label="Share on Facebook" data-ht-track="Share Facebook Overlay"><i class="ics-facebook"></i></a><a href="javascript:" class="button float-button share-button sb-button sb-pinterest " data-ht-track='{"action":"Share Pinterest Overlay Syndication","Shared URL":"/39783153/how-to-care-for-leather-furniture","Shared Media ID":5147297}' aria-label="Pin this photo"><i class="ics-pinterest"></i></a>
+</div>
+<a href="https://www.hometalk.com/post/39783153/media?id=5147297" data-ht-track="Photo Post"><picture><source media="(max-width: 481px)" data-srcset="https://cdn-fastly.hometalk.com/media/2018/10/31/5147297/how-to-care-for-leather-furniture.jpg?size=414x575&amp;nocrop=1" srcset=""><source media="(min-width: 481px) and (max-width:1024px)" data-srcset="https://cdn-fastly.hometalk.com/media/2018/10/31/5147297/how-to-care-for-leather-furniture.jpg?size=650x832&amp;nocrop=1" srcset=""><source media="(min-width: 1024px)" data-srcset="https://cdn-fastly.hometalk.com/media/2018/10/31/5147297/how-to-care-for-leather-furniture.jpg?size=720x845&amp;nocrop=1" srcset=""><img data-src="https://cdn-fastly.hometalk.com/media/2018/10/31/5147297/how-to-care-for-leather-furniture.jpg?size=720x845&amp;nocrop=1" src="" class="post-img media-item-track" alt="how to care for leather furniture"></source></source></source></picture></a></span></div></div></div>
+<div class="sl-post-text-5 project-text-block"><p>Take the leather conditioner ), put some on a microfiber cloth, and apply it in a circular motion all over your furniture. Be sure to do a light coat and then once it dries buff it!</p></div>
+<div class="media-component"><div><div class="media-wrap"><span class="photo-wrap sl-photo-wrap"><div class="share-buttons ">
+<a href="javascript:" class="button float-button share-button sb-button sb-facebook" aria-label="Share on Facebook" data-ht-track="Share Facebook Overlay"><i class="ics-facebook"></i></a><a href="javascript:" class="button float-button share-button sb-button sb-pinterest " data-ht-track='{"action":"Share Pinterest Overlay Syndication","Shared URL":"/39783153/how-to-care-for-leather-furniture","Shared Media ID":5147298}' aria-label="Pin this photo"><i class="ics-pinterest"></i></a>
+</div>
+<a href="https://www.hometalk.com/post/39783153/media?id=5147298" data-ht-track="Photo Post"><picture><source media="(max-width: 481px)" data-srcset="https://cdn-fastly.hometalk.com/media/2018/10/31/5147298/how-to-care-for-leather-furniture.jpg?size=414x575&amp;nocrop=1" srcset=""><source media="(min-width: 481px) and (max-width:1024px)" data-srcset="https://cdn-fastly.hometalk.com/media/2018/10/31/5147298/how-to-care-for-leather-furniture.jpg?size=650x832&amp;nocrop=1" srcset=""><source media="(min-width: 1024px)" data-srcset="https://cdn-fastly.hometalk.com/media/2018/10/31/5147298/how-to-care-for-leather-furniture.jpg?size=720x845&amp;nocrop=1" srcset=""><img data-src="https://cdn-fastly.hometalk.com/media/2018/10/31/5147298/how-to-care-for-leather-furniture.jpg?size=720x845&amp;nocrop=1" src="" class="post-img media-item-track" alt="how to care for leather furniture"></source></source></source></picture></a></span></div></div></div>
+<div class="sl-post-text-6 project-text-block">
+<p>You'll be left with a well-conditioned piece that will last for years and years to come (as long as you take care of it!).</p>
+<p><br></p>
+<p>For the full steps to this project, .</p>
+</div>
+</div>
+<div id="MaterialWidget"></div>
+<span style="font-size: 0px;"></span><div class="project-materials-block card tr_zone" data-tr_zone="materials_list">
+<header><h2 class="title">Suggested materials:</h2></header><ul class="listul">
+<li class="sl-material-list"><span>Microfiber Cloth</span></li>
+<li class="sl-material-list"><span>Vacuum</span></li>
+<li class="sl-material-list"><span>Leather Conditioner</span></li>
+</ul>
+</div>
+<div class="hash-tag-wrap"><div></div></div>
+<div class="card blogger-widget activity-book-me-widget flex-column flex-align-center flex-justify-center sl-blogger-widget">
+<span class="avatar relative"><img src="https://cdn-fastly.hometalk.com/media/profile/2019/04/14/299661_4.jpg?size=91x91" alt="The DIY Playbook" nopin="nopin"></span><p class="sub-title">Want more details about this and other DIY projects? Check out my blog post!</p>
+<a target="_blank" rel="nofollow" class="button primary-button sl-go-button">Go</a>
+</div>
+<div id="BookMeOrQoP"></div>
+</div>
+<span style="font-size: 0px;"></span><div class="comments-section sl-qop-box tr_zone" data-tr_zone="questions_box">
+<div class="page-header-section"><header><h2 class="title">Have a question about this project?</h2>
+<div class="hdr-cta"><a href="javascript:" data-ht-track="Ask A Q Questions Box" class="button primary-button large sl-ask-btn">Ask a Question</a></div></header></div>
+<div class="flex"><div class="comments-showing">
+<span class="sl-qop-count">2</span>  questions</div></div>
+<ul class="comments-list">
+<li id="cid-6763205" class="comment-item   not-expanded  sl-qop ">
+<div class="comment"><span class="comment-wrapper"><div class="comment-header">
+<a class="avatar sl-avatar " href="https://www.hometalk.com/member/308481/6468j" data-ht-track="Thumbnail"><img data-src="https://cdn-fastly.hometalk.com/media/profile/2016/02/23/308481_1.jpg?size=50x50" src="" class="" avatar="Ruth Ann" width="43" height="43" nopin="nopin"></a><div class="comment-stats">
+<a href="https://www.hometalk.com/member/308481/6468j" class="username sl-username " data-ht-track="Member Name">Ruth Ann</a><div class="comment-time-stamp">
+<i class="ics-clock sl-stats-time"></i>on Nov 5, 2018</div>
+</div>
+</div>
+<div class="comment-content">
+<p class="sl-comment-text"></p>
+<p>My leather chaise has tiny little tears on the head rest where the former owners furbaby laid and apparently “stretched”, digging little nail tips into the leather.  Bought it anyhow because other then that, the piece is like new.  Any ideas about how to repair or at least hide these little boo boos?  I will contact a leather shop if need be, but love how creative all of you are!  Thanks!</p>
+</div>
+<div class="comment-footer">
+<div class="comment-bubble qop sl-comment-bubble">
+<i class="ics-comment-outline"></i><div class="more-comment-count sl-answer-count">1</div>
+</div>
+<a data-ht-track="Questions Dropdown Open" class="answer-this sl-answer-this">Answer this</a>
+</div></span></div>
+<div class="comment reply"><ul class="comments-list replies-list"><li id="cid-6784747" class="comment-item sl-aop"><div class="comment"><span class="comment-wrapper"><div class="comment-header">
+<a class="avatar sl-avatar " href="https://www.hometalk.com/member/17731261/dawn1620414" data-ht-track="Thumbnail"><img data-src="https://cdn-fastly.hometalk.com/media/profile/2017/06/19/17731261_1.jpg?size=50x50" src="" class="" avatar="Dawn" width="43" height="43" nopin="nopin"></a><div class="comment-stats">
+<a href="https://www.hometalk.com/member/17731261/dawn1620414" class="username sl-username " data-ht-track="Member Name">Dawn</a><div class="comment-time-stamp">
+<i class="ics-clock sl-stats-time"></i>on Nov 11, 2018</div>
+</div>
+</div>
+<div class="comment-content">
+<p class="sl-comment-text"></p>
+<p>I followed this to fix small scratches</p>
+<p><a href="https://www.guyabouthome.com/repair-leather-couch-scratch-tear/" target="_blank" rel="nofollow noopener">https://www.guyabouthome.com/repair-leather-couch-scratch-tear/</a></p>
+</div>
+<div class="comment-footer">
+<a class="comment-likes " href="javascript:" data-ht-track="Like" alt="Like This"><div class="circle-icon-wrapper flex-center sl-like "><i class="ics-heart"></i></div>
+<span class="sl-like-count">2</span></a><a class="comment-reply sl-reply" data-ht-track="Reply"><div class="circle-icon-wrapper  flex-center"><i class="ics-reply sl-reply"></i></div> <span>Reply</span></a>
+</div></span></div></li></ul></div>
+</li>
+<li id="cid-7089144" class="comment-item   not-expanded  sl-qop ">
+<div class="comment"><span class="comment-wrapper"><div class="comment-header">
+<a class="avatar sl-avatar " href="https://www.hometalk.com/member/20618209/friedavagharfarshchian" data-ht-track="Thumbnail"><img data-src="https://cdn-fastly.hometalk.com/media/profile/2017/02/13/20618209_1.jpg?size=50x50" src="" class="" avatar="Frieda Vaghar Farshchian" width="43" height="43" nopin="nopin"></a><div class="comment-stats">
+<a href="https://www.hometalk.com/member/20618209/friedavagharfarshchian" class="username sl-username " data-ht-track="Member Name">Frieda Vaghar Farshchian</a><div class="comment-time-stamp">
+<i class="ics-clock sl-stats-time"></i>on Feb 4, 2019</div>
+</div>
+</div>
+<div class="comment-content">
+<p class="sl-comment-text"></p>
+<p>What would you use for leather conditioner? Thanks for the quick reply.</p>
+</div>
+<div class="comment-footer">
+<div class="comment-bubble qop sl-comment-bubble">
+<i class="ics-comment-outline"></i><div class="more-comment-count sl-answer-count">0</div>
+</div>
+<a data-ht-track="Questions Dropdown Open" class="answer-this sl-answer-this">Answer this</a>
+</div></span></div>
+<div class="comment reply"><ul class="comments-list replies-list"><li id="cid-7096550" class="comment-item sl-aop"><div class="comment owner-comment"><span class="comment-wrapper"><div class="comment-header">
+<a class="avatar sl-avatar  owner-comment" href="https://www.hometalk.com/member/299661/diyplaybook" data-ht-track="Thumbnail"><img data-src="https://cdn-fastly.hometalk.com/media/profile/2019/04/14/299661_4.jpg?size=50x50" src="" class="" avatar="The DIY Playbook" width="43" height="43" nopin="nopin"></a><div class="comment-stats">
+<a href="https://www.hometalk.com/member/299661/diyplaybook" class="username sl-username  owner-comment" data-ht-track="Member Name">The DIY Playbook</a><div class="comment-time-stamp">
+<i class="ics-clock sl-stats-time"></i>on Feb 6, 2019</div>
+</div>
+</div>
+<div class="comment-content">
+<p class="sl-comment-text"></p>
+<p>All details are in the blog post with a direct link to the product we used.</p>
+</div>
+<div class="comment-footer">
+<a class="comment-likes " href="javascript:" data-ht-track="Like" alt="Like This"><div class="circle-icon-wrapper flex-center sl-like "><i class="ics-heart"></i></div>
+<span class="sl-like-none">Like</span></a><a class="comment-reply sl-reply" data-ht-track="Reply"><div class="circle-icon-wrapper  flex-center"><i class="ics-reply sl-reply"></i></div> <span>Reply</span></a>
+</div></span></div></li></ul></div>
+</li>
+</ul>
+</div>
+<footer class="post-footer"><div class="spacer30"></div></footer><div class="ad-and-content-widget tr_zone" data-tr_zone="featured_slideshow">
+<h2>Popular Project Book</h2>
+<div class="project-two-item-grid">
+<div class="grid-item"><div class="card slideshow-unit tr_zone  sl-gallery-under-post" data-tr_zone="sidebar_featured_slideshow">
+<div class="media-wrap"><a href="https://www.hometalk.com/27744444/s-15-gorgeous-homemade-candle-ideas-you-re-going-to-want-to-try" data-ht-track="Slideshow" class="media-link"><img data-src="https://cdn-fastly.hometalk.com/media/2017/02/16/3746421/s-15-gorgeous-homemade-candle-ideas-you-re-going-to-want-to-try.jpg?size=350x220" src="" class="" alt="s 15 gorgeous homemade candle ideas you re going to want to try"></a></div>
+<div class="slideshow-details">
+<h2><a href="https://www.hometalk.com/27744444/s-15-gorgeous-homemade-candle-ideas-you-re-going-to-want-to-try" data-ht-track="Slideshow">15 Gorgeous Homemade Candle Ideas You're Going to Want to Try</a></h2>
+<div class="button-wrap"><a href="https://www.hometalk.com/27744444/s-15-gorgeous-homemade-candle-ideas-you-re-going-to-want-to-try" class="button tertiary-button sl-view-slideshow" data-ht-track="Slideshow"><i class="ics-images"></i>View Project Book</a></div>
+</div>
+</div></div>
+<div class="grid-item"><div class="feed-ad-item card"><div class="ad-item"><div></div></div></div></div>
+</div>
+</div>
+<div class="spacer30"></div>
+<div class="spacer50"></div>
+<div class="comments-section sl-comments-section tr_zone" data-tr_zone="activity_comments">
+<div class="page-header-section"><header><h2 class="title">Join the conversation</h2></header></div>
+<div class="flex">
+<div class="comments-showing">
+<span class="sl-comments-displayed sl-comment-count">2</span> comments</div>
+<div class="see-more-comments above-commentsinvisible"><a href="/39783153/how-to-care-for-leather-furniture?offset=undefined" class="see-more-text  sl-see-previous invisible">  </a></div>
+</div>
+<ul class="comments-list">
+<li id="cid-6744604" class="comment-item   sl-comment "><div class="comment sl-parent-comment"><span class="comment-wrapper"><div class="comment-header">
+<a class="avatar sl-avatar " href="https://www.hometalk.com/member/4736240/william79" data-ht-track="Thumbnail"><img data-src="https://cdn-fastly.hometalk.com/resources/imgs-responsive/avatar-letters/avatar-W-F1C40F.png?size=50x50" src="" class="" avatar="William" width="43" height="43" nopin="nopin"><i class="ics-star hometalkhelper "></i></a><div class="comment-stats">
+<a href="https://www.hometalk.com/member/4736240/william79" class="username sl-username " data-ht-track="Member Name">William</a><div class="comment-time-stamp">
+<i class="ics-clock sl-stats-time"></i>on Oct 31, 2018</div>
+</div>
+</div>
+<div class="comment-content">
+<p class="sl-comment-text"></p>
+<p>Super tips. A lot of people assume leather doesn't need any care or don't do it right and it starts to crack and peel. Great share.</p>
+</div>
+<div class="comment-footer">
+<a class="comment-likes " href="javascript:" data-ht-track="Like" alt="Like This"><div class="circle-icon-wrapper flex-center sl-like "><i class="ics-heart"></i></div>
+<span class="sl-like-count">1</span></a><a class="comment-reply sl-reply" data-ht-track="Reply"><div class="circle-icon-wrapper  flex-center"><i class="ics-reply sl-reply"></i></div> <span>Reply</span></a>
+</div></span></div></li>
+<li id="cid-6758200" class="comment-item   sl-comment "><div class="comment sl-parent-comment"><span class="comment-wrapper"><div class="comment-header">
+<a class="avatar sl-avatar " href="https://www.hometalk.com/member/33900912/katelyn1614403" data-ht-track="Thumbnail"><img data-src="https://cdn-fastly.hometalk.com/media/profile/2018/08/06/33900912_2.jpg?size=50x50" src="" class="" avatar="Katelyn" width="43" height="43" nopin="nopin"><i class="ics-star hometalkhelper "></i></a><div class="comment-stats">
+<a href="https://www.hometalk.com/member/33900912/katelyn1614403" class="username sl-username " data-ht-track="Member Name">Katelyn</a><div class="comment-time-stamp">
+<i class="ics-clock sl-stats-time"></i>on Nov 4, 2018</div>
+</div>
+</div>
+<div class="comment-content">
+<p class="sl-comment-text"></p>
+<p>Very nice! Thanks for sharing <img style=" width: 24px; margin: 1px; vertical-align: bottom;" src="https://cdn.jsdelivr.net/emojione/assets/3.1/png/32/1f44d.png" alt=" "></p>
+</div>
+<div class="comment-footer">
+<a class="comment-likes " href="javascript:" data-ht-track="Like" alt="Like This"><div class="circle-icon-wrapper flex-center sl-like "><i class="ics-heart"></i></div>
+<span class="sl-like-count">1</span></a><a class="comment-reply sl-reply" data-ht-track="Reply"><div class="circle-icon-wrapper  flex-center"><i class="ics-reply sl-reply"></i></div> <span>Reply</span></a>
+</div></span></div></li>
+</ul>
+</div>
+<div class="comment-box-component main-comment-box">
+<div class="avatar">
+<img data-src="https://cdn-fastly.hometalk.com/resources/design/profile_imgs/profile_img_new3.png?size=50x50" src="" class="" aria-label="user avatar" nopin="nopin" width="43" height="43"><span class="small-text nowrap">Your comment...</span>
+</div>
+<div class="form">
+<div class="edit-area" style=""><div class="ht-editor-container-new requiredField replyInput editableTextarea sl-comment-box" id="editorPost" data-tr_zone="quill_editor" style="padding: 0px;"><div id="content-container" class="input-field" style="border: 1px solid rgb(208, 208, 208); margin-left: auto; margin-right: auto; width: 100%; border-radius: 6px;"><div class="advanced-wrapper" id="commentEditorId" style="border: none;">
+<div class="quill "><div class="ql-container ql-snow">
+<div class="ql-editor ql-blank" data-gramm="false" contenteditable="true" data-placeholder="Inspired? Will you try this project? Let the author know!"><p><br></p></div>
+<div class="ql-clipboard" contenteditable="true" tabindex="-1"></div>
+<div class="ql-tooltip ql-hidden">
+<a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a>
+</div>
+</div></div>
+<div id="toolbar-jt416tynw-commentEditorId" class="toolbar toolbar-container ql-toolbar ios ql-snow notHidden" style="border: 0px;">
+<button class="ql-bold sl-format-bold" data-ht-track="Formatting Tools" aria-label="Add bold text" type="button"><svg viewbox="0 0 18 18"><path class="ql-stroke" d="M5,4H9.5A2.5,2.5,0,0,1,12,6.5v0A2.5,2.5,0,0,1,9.5,9H5A0,0,0,0,1,5,9V4A0,0,0,0,1,5,4Z"></path><path class="ql-stroke" d="M5,9h5.5A2.5,2.5,0,0,1,13,11.5v0A2.5,2.5,0,0,1,10.5,14H5a0,0,0,0,1,0,0V9A0,0,0,0,1,5,9Z"></path></svg></button><button class="ql-italic sl-format-italic" data-ht-track="Formatting Tools" aria-label="Add italic text" type="button"><svg viewbox="0 0 18 18"><line class="ql-stroke" x1="7" x2="13" y1="4" y2="4"></line><line class="ql-stroke" x1="5" x2="11" y1="14" y2="14"></line><line class="ql-stroke" x1="8" x2="10" y1="14" y2="4"></line></svg></button><button class="ql-underline sl-format-underline" data-ht-track="Formatting Tools" aria-label="Underline text" type="button"><svg viewbox="0 0 18 18"><path class="ql-stroke" d="M5,3V9a4.012,4.012,0,0,0,4,4H9a4.012,4.012,0,0,0,4-4V3"></path><rect class="ql-fill" height="1" rx="0.5" ry="0.5" width="12" x="3" y="15"></rect></svg></button><button class="ql-link sl-format-link" data-ht-track="Formatting Tools" aria-label="Add link" type="button"><svg viewbox="0 0 18 18"><line class="ql-stroke" x1="7" x2="11" y1="7" y2="11"></line><path class="ql-even ql-stroke" d="M8.9,4.577a3.476,3.476,0,0,1,.36,4.679A3.476,3.476,0,0,1,4.577,8.9C3.185,7.5,2.035,6.4,4.217,4.217S7.5,3.185,8.9,4.577Z"></path><path class="ql-even ql-stroke" d="M13.423,9.1a3.476,3.476,0,0,0-4.679-.36,3.476,3.476,0,0,0,.36,4.679c1.392,1.392,2.5,2.542,4.679.36S14.815,10.5,13.423,9.1Z"></path></svg></button><button class="ql-emojiInsert sl-format-emoji" data-ht-track="Formatting Tools" type="button" style="padding: 0px;"><span id="emojiClick" title="Emoji" class="ht-format-button ql-format-button" data-ht-track="Formatting Tools" aria-label="Add emoji"><img alt="smiley" src="https://cdn-fastly.hometalk.com/resources/design/emojis/smiley_redesign.svg" style="vertical-align: bottom;"></span></button>
+</div>
+</div></div></div></div>
+<div class="comment-box-footer " style="">
+<div class="upload-buttons-wrap"><a class="upload-button upload-image"><i class="ics-camera-outline"></i><span class="content-wrap" style="border-style: none;"><input type="file" data-ht-track="Upload Photos" class="fileupload sl-fileupload" multiple aria-label="Upload media"></span></a></div>
+<span class="form-buttons"><button aria-label="Comment / Reply" class="submit-button button primary-button comment-button sl-comment-btn" data-ht-track='{"action": "Submit Comment", "Object: Is Reply": false, "User: comment number" : 1}'></button></span>
+</div>
+</div>
+</div>
+</div>
+<div class="page-side-bar "><div class=" ">
+<div class="content-aside-box"><div id="adrecover1"><div></div></div></div>
+<div class="content-aside-box">
+<h2 class="sidebar-hdr">Popular Project Book</h2>
+<div class="card slideshow-unit tr_zone  " data-tr_zone="sidebar_featured_slideshow">
+<div class="media-wrap"><a href="https://www.hometalk.com/29927833/s-30-adorable-diy-ideas-for-july-4th" data-ht-track="Slideshow" class="media-link"><img data-src="https://cdn-fastly.hometalk.com/media/2018/06/11/4885649/s-30-adorable-diy-ideas-for-july-4th.jpg?size=350x220" src="" class="" alt="s 30 adorable diy ideas for july 4th"></a></div>
+<div class="slideshow-details">
+<h2><a href="https://www.hometalk.com/29927833/s-30-adorable-diy-ideas-for-july-4th" data-ht-track="Slideshow">30 Adorable DIY Ideas For July 4th</a></h2>
+<div class="button-wrap"><a href="https://www.hometalk.com/29927833/s-30-adorable-diy-ideas-for-july-4th" class="button tertiary-button sl-view-slideshow" data-ht-track="Slideshow"><i class="ics-images"></i>View Project Book</a></div>
+</div>
+</div>
+</div>
+<div class="content-aside-box"><div id="adrecover2"><div></div></div></div>
+<div class="content-aside-box tr_zone" data-tr_zone="sidebar_recent_questions">
+<h2 class="sidebar-hdr">Answer DIY Questions</h2>
+<div class="popular-questions-cards">
+<div class="popular-questions-card card" style="z-index: 100;">
+<div class="question-media"><a href="https://www.hometalk.com/43275530/q-any-ideasm-on-cart-trolly-wagon-i-found-it"><img src="https://cdn-fastly.hometalk.com/media/2019/04/18/5416240/q-any-ideasm-on-cart-trolly-wagon-i-found-it.jpg?size=60x60"></a></div>
+<div class="question-content">
+<div class="description"><a href="https://www.hometalk.com/43275530/q-any-ideasm-on-cart-trolly-wagon-i-found-it">Any ideas on cart/trolly/wagon? I found...</a></div>
+<div class="question-stats"></div>
+<a href="https://www.hometalk.com/43275530/q-any-ideasm-on-cart-trolly-wagon-i-found-it" class="button secondary-button small answer-button">Answer</a>
+</div>
+</div>
+<div class="popular-questions-card card" style="z-index: 99;">
+<div class="question-media"><a href="https://www.hometalk.com/43275526/q-how-to-clean-silicone-bake-ware"><img src="https://cdn-fastly.hometalk.com/media/2019/04/18/5416065/q-how-to-clean-silicone-bake-ware.jpg?size=60x60"></a></div>
+<div class="question-content">
+<div class="description"><a href="https://www.hometalk.com/43275526/q-how-to-clean-silicone-bake-ware">How to clean silicone bake ware?</a></div>
+<div class="question-stats"></div>
+<a href="https://www.hometalk.com/43275526/q-how-to-clean-silicone-bake-ware" class="button secondary-button small answer-button">Answer</a>
+</div>
+</div>
+<div class="popular-questions-card card" style="z-index: 98;">
+<div class="question-media"><a href="https://www.hometalk.com/43275412/q-how-do-i-restuff-the-backrest"><img src="https://cdn-fastly.hometalk.com/media/2019/04/18/5416031/q-how-do-i-restuff-the-backrest.jpg?size=60x60"></a></div>
+<div class="question-content">
+<div class="description"><a href="https://www.hometalk.com/43275412/q-how-do-i-restuff-the-backrest">How do I  restuff the backrest??</a></div>
+<div class="question-stats"></div>
+<a href="https://www.hometalk.com/43275412/q-how-do-i-restuff-the-backrest" class="button secondary-button small answer-button">Answer</a>
+</div>
+</div>
+<div class="popular-questions-card card" style="z-index: 97;">
+<div class="question-media"><a href="https://www.hometalk.com/43275355/q-to-scrape-or-power-wash-the-chips-away"><img src="https://cdn-fastly.hometalk.com/media/2019/04/18/5416000/q-to-scrape-or-power-wash-the-chips-away.jpg?size=60x60"></a></div>
+<div class="question-content">
+<div class="description"><a href="https://www.hometalk.com/43275355/q-to-scrape-or-power-wash-the-chips-away">To scrape or power wash the chips away?</a></div>
+<div class="question-stats"></div>
+<a href="https://www.hometalk.com/43275355/q-to-scrape-or-power-wash-the-chips-away" class="button secondary-button small answer-button">Answer</a>
+</div>
+</div>
+</div>
+</div>
+<div class="content-aside-box"><div id="adrecover3"><div></div></div></div>
+<div class="content-aside-box"><div id="adrecover4"><div></div></div></div>
+</div></div>
+</div>
+</div></div></div>
+<div class="arrows-wide-screen">
+<div class="project-next-arrow "><a class="button float-button linklike large flex-column" data-ht-track="Next Arrow Activity" aria-label="See next project" href="https://www.hometalk.com/42200702/diy-faux-brick-wall-in-laundry-room"><i class="ics-arrow-right sl-right-project-prev-arrow"></i><span class="btn-text fs15">Next</span></a></div>
+<div class="project-prev-arrow "><a class="button float-button linklike large flex-column" data-ht-track="Back Arrow Activity" aria-label="See previous project" href="https://www.hometalk.com/36864997/tiny-garden-solar-light"><i class="ics-arrow-left sl-left-project-prev-arrow"></i><span class="btn-text fs15">Prev</span></a></div>
+</div>
+<div class="next-arrow-small-screen "><a class="button float-button large" data-ht-track="Next Arrow Activity" aria-label="See next project" href="https://www.hometalk.com/42200702/diy-faux-brick-wall-in-laundry-room"><i class="ics-arrow-right sl-right-project-prev-arrow"></i></a></div>
+<span style="font-size: 0px;"></span><div><div class="feed-section-wrap related-content sl-related-feed ">
+<div></div>
+<div class="container-wrap tr_zone" data-tr_zone="related_posts">
+<header><h2 class="title">Related DIY Projects</h2></header><div class="spacer"></div>
+<div class="flex-grid-feed">
+<div class="flex-grid-cell"><div class="card project-card sl-post sl-feed-post tr_zone sl-project-card " data-tr_zone="related_post" sl-href="/41651975/sofa-barber-at-your-service">
+<div class="media-wrap"><a href="https://www.hometalk.com/41651975/sofa-barber-at-your-service" class="media-link" data-ht-track='{"action":"Result", "Content: Feed Position": "1"}'><picture><source media="(max-width: 480px)" srcset="https://cdn-fastly.hometalk.com/media/2019/03/06/5349833/sofa-barber-at-your-service.jpg?size=350x220"><source media="(min-width: 481px)" srcset="https://cdn-fastly.hometalk.com/media/2019/03/06/5349833/sofa-barber-at-your-service.jpg?size=350x220"><img src="https://cdn-fastly.hometalk.com/media/2019/03/06/5349833/sofa-barber-at-your-service.jpg?size=350x220" class="after-load" alt="Sofa Barber... at Your Service"></source></source></picture></a></div>
+<div class="project-body">
+<div class="block-body">
+<h2><a class="sl-project-card-title" href="https://www.hometalk.com/41651975/sofa-barber-at-your-service" data-ht-track='{"action":"Result", "Content: Feed Position": "1"}'> <b reset="true">Sofa Barber... at Your Service</b></a></h2>
+<p><b reset="true">My sofa and loveseat are the open weave type which really if you have pets  just don't do it because</b><b reset="true">...</b></p>
+</div>
+<div class="footer-wrap">
+<div class="user-footer">
+<a href="https://www.hometalk.com/member/12927502/kellyloe" class="avatar" data-ht-track='{"Element: Zone":"Related Post","action":"Thumbnail"}'><img src="https://cdn-fastly.hometalk.com/media/profile/2018/03/21/12927502_6.jpg?size=32x32" alt="Kelly-n-Tony" nopin="nopin"><i class="ics-star hometalkhelper "></i></a><a href="https://www.hometalk.com/member/12927502/kellyloe" class="username" data-ht-track='{"Element: Zone":"Related Post","action":"Member Name"}'>Kelly-n-Tony</a>
+</div>
+<div class="stats">
+<span><i class="ics-time"></i> 1h</span><span><i class="ics-difficulty"></i> Easy</span>
+</div>
+</div>
+</div>
+</div></div>
+<div class="flex-grid-cell"><div class="card project-card sl-post sl-feed-post tr_zone sl-project-card " data-tr_zone="related_post" sl-href="/28363974/spring-cleaning-a-slipcovered-ikea-sofa-try-this-at-home">
+<div class="media-wrap"><a href="https://www.hometalk.com/28363974/spring-cleaning-a-slipcovered-ikea-sofa-try-this-at-home" class="media-link" data-ht-track='{"action":"Result", "Content: Feed Position": "2"}'><picture><source media="(max-width: 480px)" srcset="https://cdn-fastly.hometalk.com/media/2017/03/27/3794523/spring-cleaning-a-slipcovered-ikea-sofa-try-this-at-home.jpg?size=350x220"><source media="(min-width: 481px)" srcset="https://cdn-fastly.hometalk.com/media/2017/03/27/3794523/spring-cleaning-a-slipcovered-ikea-sofa-try-this-at-home.jpg?size=350x220"><img src="https://cdn-fastly.hometalk.com/media/2017/03/27/3794523/spring-cleaning-a-slipcovered-ikea-sofa-try-this-at-home.jpg?size=350x220" class="after-load" alt="Spring Cleaning a Slipcovered Ikea Sofa: Try This at Home!"></source></source></picture></a></div>
+<div class="project-body">
+<div class="block-body">
+<h2><a class="sl-project-card-title" href="https://www.hometalk.com/28363974/spring-cleaning-a-slipcovered-ikea-sofa-try-this-at-home" data-ht-track='{"action":"Result", "Content: Feed Position": "2"}'> <b reset="true">Spring Cleaning a Slipcovered Ikea Sofa: Try This at Home!</b></a></h2>
+<p><b reset="true">Now that Spring has sprung, it's time for a little spring cleaning! Upholstered couches are great,</b><b reset="true">...</b></p>
+</div>
+<div class="footer-wrap">
+<div class="user-footer">
+<a href="https://www.hometalk.com/member/4900168/sara692" class="avatar" data-ht-track='{"Element: Zone":"Related Post","action":"Thumbnail"}'><img src="https://cdn-fastly.hometalk.com/media/profile/2016/03/05/4900168_1.jpg?size=32x32" alt="Birdz of a Feather" nopin="nopin"></a><a href="https://www.hometalk.com/member/4900168/sara692" class="username" data-ht-track='{"Element: Zone":"Related Post","action":"Member Name"}'>Birdz of a Feather</a>
+</div>
+<div class="stats">
+<span><i class="ics-time"></i> 20 min</span><span><i class="ics-difficulty"></i> Easy</span>
+</div>
+</div>
+</div>
+</div></div>
+<div class="flex-grid-cell">
+<div class="card project-card sl-post sl-feed-post tr_zone sl-project-card " data-tr_zone="related_post" sl-href="/1475349/how-to-make-an-old-couch-new-again-for-10">
+<div class="media-wrap"><a href="https://www.hometalk.com/1475349/how-to-make-an-old-couch-new-again-for-10" class="media-link" data-ht-track='{"action":"Result", "Content: Feed Position": "3"}'><picture><source media="(max-width: 480px)" srcset="https://cdn-fastly.hometalk.com/media/v3v6mjc8gexr67lf3ank5194e8167d31b.jpg?size=350x220"><source media="(min-width: 481px)" srcset="https://cdn-fastly.hometalk.com/media/v3v6mjc8gexr67lf3ank5194e8167d31b.jpg?size=350x220"><img src="https://cdn-fastly.hometalk.com/media/v3v6mjc8gexr67lf3ank5194e8167d31b.jpg?size=350x220" class="after-load" alt="How to Make an Old Couch New Again for $10"></source></source></picture></a></div>
+<div class="project-body">
+<div class="block-body">
+<h2><a class="sl-project-card-title" href="https://www.hometalk.com/1475349/how-to-make-an-old-couch-new-again-for-10" data-ht-track='{"action":"Result", "Content: Feed Position": "3"}'> <b reset="true">How to Make an Old Couch New Again for $10</b></a></h2>
+<p><b reset="true">I may have mentioned a few - or a million - times how much I love my living room couch. Well, after</b><b reset="true">...</b></p>
+</div>
+<div class="footer-wrap">
+<div class="user-footer">
+<a href="https://www.hometalk.com/member/134097/livingrichonless" class="avatar" data-ht-track='{"Element: Zone":"Related Post","action":"Thumbnail"}'><img src="https://cdn-fastly.hometalk.com/media/ylv2p52fac6e936865.jpg?size=32x32" alt="Living Rich on Less - Susan" nopin="nopin"></a><a href="https://www.hometalk.com/member/134097/livingrichonless" class="username" data-ht-track='{"Element: Zone":"Related Post","action":"Member Name"}'>Living Rich on Less - Susan</a>
+</div>
+<div class="stats"></div>
+</div>
+</div>
+</div>
+<span style="font-size: 0px;"></span>
+</div>
+<div class="flex-grid-cell"><div class="card project-card sl-post sl-feed-post tr_zone sl-project-card " data-tr_zone="related_post" sl-href="/42188953/how-to-diy-a-faux-concrete-finish-on-terra-cotta-pots">
+<div class="media-wrap"><a href="https://www.hometalk.com/42188953/how-to-diy-a-faux-concrete-finish-on-terra-cotta-pots" class="media-link" data-ht-track='{"action":"Result", "Content: Feed Position": "4"}'><picture><source media="(max-width: 480px)" data-srcset="https://cdn-fastly.hometalk.com/media/2019/03/27/5383756/how-to-diy-a-faux-concrete-finish-on-terra-cotta-pots.jpg?size=350x220" srcset=""><source media="(min-width: 481px)" data-srcset="https://cdn-fastly.hometalk.com/media/2019/03/27/5383756/how-to-diy-a-faux-concrete-finish-on-terra-cotta-pots.jpg?size=350x220" srcset=""><img data-src="https://cdn-fastly.hometalk.com/media/2019/03/27/5383756/how-to-diy-a-faux-concrete-finish-on-terra-cotta-pots.jpg?size=350x220" src="" class="" alt="How to DIY a Faux Concrete Finish on Terra Cotta Pots"></source></source></picture></a></div>
+<div class="project-body">
+<div class="block-body">
+<h2><a class="sl-project-card-title" href="https://www.hometalk.com/42188953/how-to-diy-a-faux-concrete-finish-on-terra-cotta-pots" data-ht-track='{"action":"Result", "Content: Feed Position": "4"}'> <b reset="true">How to DIY a Faux Concrete Finish on Terra Cotta Pots</b></a></h2>
+<p><b reset="true">Here's a Fast DIY from an episode of Workshop Wednesday. You can easily and quickly transform boring</b><b reset="true">...</b></p>
+</div>
+<div class="footer-wrap">
+<div class="user-footer">
+<a href="https://www.hometalk.com/member/2849866/motherdaughterprojects" class="avatar" data-ht-track='{"Element: Zone":"Related Post","action":"Thumbnail"}'><img src="https://cdn-fastly.hometalk.com/media/profile/2016/10/26/2849866_3.jpg?size=32x32" alt="Mother Daughter Projects" nopin="nopin"></a><a href="https://www.hometalk.com/member/2849866/motherdaughterprojects" class="username" data-ht-track='{"Element: Zone":"Related Post","action":"Member Name"}'>Mother Daughter Projects</a>
+</div>
+<div class="stats">
+<span><i class="ics-time"></i> 10 min</span><span><i class="ics-difficulty"></i> Easy</span>
+</div>
+</div>
+</div>
+</div></div>
+<div class="flex-grid-cell"><div class="card project-card sl-post sl-feed-post tr_zone sl-project-card " data-tr_zone="related_post" sl-href="/42322213/bold-boho-cactus-wall-mural">
+<div class="media-wrap"><a href="https://www.hometalk.com/42322213/bold-boho-cactus-wall-mural" class="media-link" data-ht-track='{"action":"Result", "Content: Feed Position": "5"}'><picture><source media="(max-width: 480px)" data-srcset="https://cdn-fastly.hometalk.com/media/2019/04/06/5398709/bold-boho-cactus-wall-mural.jpg?size=350x220" srcset=""><source media="(min-width: 481px)" data-srcset="https://cdn-fastly.hometalk.com/media/2019/04/06/5398709/bold-boho-cactus-wall-mural.jpg?size=350x220" srcset=""><img data-src="https://cdn-fastly.hometalk.com/media/2019/04/06/5398709/bold-boho-cactus-wall-mural.jpg?size=350x220" src="" class="" alt="Bold Boho Cactus Wall Mural"></source></source></picture></a></div>
+<div class="project-body">
+<div class="block-body">
+<h2><a class="sl-project-card-title" href="https://www.hometalk.com/42322213/bold-boho-cactus-wall-mural" data-ht-track='{"action":"Result", "Content: Feed Position": "5"}'> <b reset="true">Bold Boho Cactus Wall Mural</b></a></h2>
+<p><b reset="true">Our family is growing! We are expecting a new little granddaughter in May….and we couldn’t be more</b><b reset="true">...</b></p>
+</div>
+<div class="footer-wrap">
+<div class="user-footer">
+<a href="https://www.hometalk.com/member/730367/0155t" class="avatar" data-ht-track='{"Element: Zone":"Related Post","action":"Thumbnail"}'><img src="https://cdn-fastly.hometalk.com/media/profile/2018/07/25/730367_2.jpg?size=32x32" alt="Tracey Bellion" nopin="nopin"></a><a href="https://www.hometalk.com/member/730367/0155t" class="username" data-ht-track='{"Element: Zone":"Related Post","action":"Member Name"}'>Tracey Bellion</a>
+</div>
+<div class="stats">
+<span><i class="ics-time"></i> 4h</span><span><i class="ics-difficulty"></i> Easy</span>
+</div>
+</div>
+</div>
+</div></div>
+<div class="flex-grid-cell">
+<div class="card feed-ad-item"><div class="ad-item"><div></div></div></div>
+<span style="font-size: 0px;"></span>
+</div>
+<div class="flex-grid-cell"><div class="card project-card sl-post sl-feed-post tr_zone sl-project-card " data-tr_zone="related_post" sl-href="/42131379/s-perfect-house-plants">
+<div class="media-wrap"><a href="https://www.hometalk.com/42131379/s-perfect-house-plants" class="media-link" data-ht-track='{"action":"Result", "Content: Feed Position": "7"}'><picture><source media="(max-width: 480px)" data-srcset="https://cdn-fastly.hometalk.com/media/2019/03/24/5378350/s-perfect-house-plants.jpg?size=350x220" srcset=""><source media="(min-width: 481px)" data-srcset="https://cdn-fastly.hometalk.com/media/2019/03/24/5378350/s-perfect-house-plants.jpg?size=350x220" srcset=""><img data-src="https://cdn-fastly.hometalk.com/media/2019/03/24/5378350/s-perfect-house-plants.jpg?size=350x220" src="" class="" alt="New to Gardening? How to Choose and Care for the Perfect House Plants"></source></source></picture></a></div>
+<div class="project-body">
+<div class="block-body">
+<h2><a class="sl-project-card-title" href="https://www.hometalk.com/42131379/s-perfect-house-plants" data-ht-track='{"action":"Result", "Content: Feed Position": "7"}'> <b reset="true">New to Gardening? How to Choose and Care for the Perfect House Plants</b></a></h2>
+<p><b reset="true">Starting off with some indoor house plants is a great idea for everyone who is interested in</b><b reset="true">...</b></p>
+</div>
+<div class="footer-wrap">
+<div class="user-footer">
+<a href="https://www.hometalk.com/member/31418931/bestof" class="avatar" data-ht-track='{"Element: Zone":"Related Post","action":"Thumbnail"}'><img src="https://cdn-fastly.hometalk.com/media/profile/2017/10/22/31418931_1.jpg?size=32x32" alt="Best Of Hometalk" nopin="nopin"></a><a href="https://www.hometalk.com/member/31418931/bestof" class="username" data-ht-track='{"Element: Zone":"Related Post","action":"Member Name"}'>Best Of Hometalk</a>
+</div>
+<div class="stats"></div>
+</div>
+</div>
+</div></div>
+<div class="flex-grid-cell"><div class="card project-card sl-post sl-feed-post tr_zone sl-project-card " data-tr_zone="related_post" sl-href="/30287321/how-to-save-the-leather-top-on-a-vintage-desk">
+<div class="media-wrap"><a href="https://www.hometalk.com/30287321/how-to-save-the-leather-top-on-a-vintage-desk" class="media-link" data-ht-track='{"action":"Result", "Content: Feed Position": "8"}'><picture><source media="(max-width: 480px)" data-srcset="https://cdn-fastly.hometalk.com/media/2017/07/07/3990244/how-to-save-the-leather-top-on-a-vintage-desk.jpg?size=350x220" srcset=""><source media="(min-width: 481px)" data-srcset="https://cdn-fastly.hometalk.com/media/2017/07/07/3990244/how-to-save-the-leather-top-on-a-vintage-desk.jpg?size=350x220" srcset=""><img data-src="https://cdn-fastly.hometalk.com/media/2017/07/07/3990244/how-to-save-the-leather-top-on-a-vintage-desk.jpg?size=350x220" src="" class="" alt="How to Save the Leather Top on a Vintage Desk"></source></source></picture></a></div>
+<div class="project-body">
+<div class="block-body">
+<h2><a class="sl-project-card-title" href="https://www.hometalk.com/30287321/how-to-save-the-leather-top-on-a-vintage-desk" data-ht-track='{"action":"Result", "Content: Feed Position": "8"}'> <b reset="true">How to Save the Leather Top on a Vintage Desk</b></a></h2>
+<p><b reset="true">If you ever come across a piece of vintage furniture with leather inlay and you aren't sure what to</b><b reset="true">...</b></p>
+</div>
+<div class="footer-wrap">
+<div class="user-footer">
+<a href="https://www.hometalk.com/member/1141972/justthewoods1" class="avatar" data-ht-track='{"Element: Zone":"Related Post","action":"Thumbnail"}'><img src="https://cdn-fastly.hometalk.com/media/profile/2018/07/17/1141972_6.jpg?size=32x32" alt="Just the Woods, LLC" nopin="nopin"><i class="ics-star hometalkhelper "></i></a><a href="https://www.hometalk.com/member/1141972/justthewoods1" class="username" data-ht-track='{"Element: Zone":"Related Post","action":"Member Name"}'>Just the Woods, LLC</a>
+</div>
+<div class="stats">
+<span><i class="ics-time"></i> 5h</span><span><i class="ics-difficulty"></i> Med.</span>
+</div>
+</div>
+</div>
+</div></div>
+<div class="flex-grid-cell">
+<div class="card project-card sl-post sl-feed-post tr_zone sl-project-card " data-tr_zone="related_post" sl-href="/40435011/captains-chair-restored">
+<div class="media-wrap"><a href="https://www.hometalk.com/40435011/captains-chair-restored" class="media-link" data-ht-track='{"action":"Result", "Content: Feed Position": "9"}'><picture><source media="(max-width: 480px)" data-srcset="https://cdn-fastly.hometalk.com/media/2018/12/11/5220423/captains-chair-restored.jpg?size=350x220" srcset=""><source media="(min-width: 481px)" data-srcset="https://cdn-fastly.hometalk.com/media/2018/12/11/5220423/captains-chair-restored.jpg?size=350x220" srcset=""><img data-src="https://cdn-fastly.hometalk.com/media/2018/12/11/5220423/captains-chair-restored.jpg?size=350x220" src="" class="" alt="Captains Chair Restored"></source></source></picture></a></div>
+<div class="project-body">
+<div class="block-body">
+<h2><a class="sl-project-card-title" href="https://www.hometalk.com/40435011/captains-chair-restored" data-ht-track='{"action":"Result", "Content: Feed Position": "9"}'> <b reset="true">Captains Chair Restored</b></a></h2>
+<p><b reset="true">This captains chair would of ended up at the dump, but I spotted it first and took it home to try</b><b reset="true">...</b></p>
+</div>
+<div class="footer-wrap">
+<div class="user-footer">
+<a href="https://www.hometalk.com/member/1002225/anitamoulpiedholland" class="avatar" data-ht-track='{"Element: Zone":"Related Post","action":"Thumbnail"}'><img src="https://cdn-fastly.hometalk.com/media/profile/2014/12/27/1889949.jpg?size=32x32" alt="Unique Creations By Anita" nopin="nopin"><i class="ics-star hometalkhelper "></i></a><a href="https://www.hometalk.com/member/1002225/anitamoulpiedholland" class="username" data-ht-track='{"Element: Zone":"Related Post","action":"Member Name"}'>Unique Creations By Anita</a>
+</div>
+<div class="stats">
+<span><i class="ics-time"></i> 2d</span><span><i class="ics-difficulty"></i> Med.</span>
+</div>
+</div>
+</div>
+</div>
+<span style="font-size: 0px;"></span>
+</div>
+<div class="flex-grid-cell"><div class="card project-card sl-post sl-feed-post tr_zone sl-project-card " data-tr_zone="related_post" sl-href="/34297718/how-to-naturally-clean-slipcovers">
+<div class="media-wrap"><a href="https://www.hometalk.com/34297718/how-to-naturally-clean-slipcovers" class="media-link" data-ht-track='{"action":"Result", "Content: Feed Position": "10"}'><picture><source media="(max-width: 480px)" data-srcset="https://cdn-fastly.hometalk.com/media/2018/01/08/4581073/how-to-naturally-clean-slipcovers.jpg?size=350x220" srcset=""><source media="(min-width: 481px)" data-srcset="https://cdn-fastly.hometalk.com/media/2018/01/08/4581073/how-to-naturally-clean-slipcovers.jpg?size=350x220" srcset=""><img data-src="https://cdn-fastly.hometalk.com/media/2018/01/08/4581073/how-to-naturally-clean-slipcovers.jpg?size=350x220" src="" class="" alt="How to Naturally Clean Slipcovers"></source></source></picture></a></div>
+<div class="project-body">
+<div class="block-body">
+<h2><a class="sl-project-card-title" href="https://www.hometalk.com/34297718/how-to-naturally-clean-slipcovers" data-ht-track='{"action":"Result", "Content: Feed Position": "10"}'> <b reset="true">How to Naturally Clean Slipcovers</b></a></h2>
+<p><b reset="true">Light colored slipcovers versus stains.  No problem!  Get my tips and tricks for cleaning slipcovers</b><b reset="true">...</b></p>
+</div>
+<div class="footer-wrap">
+<div class="user-footer">
+<a href="https://www.hometalk.com/member/1313133/camigraham" class="avatar" data-ht-track='{"Element: Zone":"Related Post","action":"Thumbnail"}'><img src="https://cdn-fastly.hometalk.com/media/profile/2018/01/08/1313133_1.jpg?size=32x32" alt="Cami Graham" nopin="nopin"></a><a href="https://www.hometalk.com/member/1313133/camigraham" class="username" data-ht-track='{"Element: Zone":"Related Post","action":"Member Name"}'>Cami Graham</a>
+</div>
+<div class="stats">
+<span><i class="ics-time"></i> 2h</span><span><i class="ics-difficulty"></i> Easy</span>
+</div>
+</div>
+</div>
+</div></div>
+<div class="flex-grid-cell"><div class="card project-card sl-post sl-feed-post tr_zone sl-project-card " data-tr_zone="related_post" sl-href="/42347641/upcycled-metal-pan-into-country-kitchen-tray">
+<div class="media-wrap"><a href="https://www.hometalk.com/42347641/upcycled-metal-pan-into-country-kitchen-tray" class="media-link" data-ht-track='{"action":"Result", "Content: Feed Position": "11"}'><picture><source media="(max-width: 480px)" data-srcset="https://cdn-fastly.hometalk.com/media/2019/04/10/5403733/upcycled-metal-pan-into-country-kitchen-tray.jpg?size=350x220" srcset=""><source media="(min-width: 481px)" data-srcset="https://cdn-fastly.hometalk.com/media/2019/04/10/5403733/upcycled-metal-pan-into-country-kitchen-tray.jpg?size=350x220" srcset=""><img data-src="https://cdn-fastly.hometalk.com/media/2019/04/10/5403733/upcycled-metal-pan-into-country-kitchen-tray.jpg?size=350x220" src="" class="" alt="Upcycled Metal Pan Into Country Kitchen Tray"></source></source></picture></a></div>
+<div class="project-body">
+<div class="block-body">
+<h2><a class="sl-project-card-title" href="https://www.hometalk.com/42347641/upcycled-metal-pan-into-country-kitchen-tray" data-ht-track='{"action":"Result", "Content: Feed Position": "11"}'> <b reset="true">Upcycled Metal Pan Into Country Kitchen Tray</b></a></h2>
+<p><b reset="true">I picked this metal pan up one day while out junkin with the hubby. I believe that the pan came from</b><b reset="true">...</b></p>
+</div>
+<div class="footer-wrap">
+<div class="user-footer">
+<a href="https://www.hometalk.com/member/146457/lindamixedkreations" class="avatar" data-ht-track='{"Element: Zone":"Related Post","action":"Thumbnail"}'><img src="https://cdn-fastly.hometalk.com/media/profile/2018/03/19/146457_1.jpg?size=32x32" alt="Linda @ Mixed Kreations" nopin="nopin"></a><a href="https://www.hometalk.com/member/146457/lindamixedkreations" class="username" data-ht-track='{"Element: Zone":"Related Post","action":"Member Name"}'>Linda @ Mixed Kreations</a>
+</div>
+<div class="stats">
+<span><i class="ics-time"></i> 24h</span><span><i class="ics-difficulty"></i> Easy</span>
+</div>
+</div>
+</div>
+</div></div>
+<div class="flex-grid-cell">
+<div class="card feed-ad-item"><div class="ad-item"><div></div></div></div>
+<span style="font-size: 0px;"></span>
+</div>
+<div class="flex-grid-cell"><div class="card project-card sl-post sl-feed-post tr_zone sl-project-card " data-tr_zone="related_post" sl-href="/42286694/diy-circle-shelf-from-salvaged-wagon-wheel">
+<div class="media-wrap"><a href="https://www.hometalk.com/42286694/diy-circle-shelf-from-salvaged-wagon-wheel" class="media-link" data-ht-track='{"action":"Result", "Content: Feed Position": "13"}'><picture><source media="(max-width: 480px)" data-srcset="https://cdn-fastly.hometalk.com/media/2019/04/03/5394672/diy-circle-shelf-from-salvaged-wagon-wheel.jpg?size=350x220" srcset=""><source media="(min-width: 481px)" data-srcset="https://cdn-fastly.hometalk.com/media/2019/04/03/5394672/diy-circle-shelf-from-salvaged-wagon-wheel.jpg?size=350x220" srcset=""><img data-src="https://cdn-fastly.hometalk.com/media/2019/04/03/5394672/diy-circle-shelf-from-salvaged-wagon-wheel.jpg?size=350x220" src="" class="" alt="DIY Circle Shelf - From Salvaged Wagon Wheel"></source></source></picture></a></div>
+<div class="project-body">
+<div class="block-body">
+<h2><a class="sl-project-card-title" href="https://www.hometalk.com/42286694/diy-circle-shelf-from-salvaged-wagon-wheel" data-ht-track='{"action":"Result", "Content: Feed Position": "13"}'> <b reset="true">DIY Circle Shelf - From Salvaged Wagon Wheel</b></a></h2>
+<p><b reset="true">Making a one-of-kind circle shelf is a lot easier than you may think. I've had two old wagon wheels</b><b reset="true">...</b></p>
+</div>
+<div class="footer-wrap">
+<div class="user-footer">
+<a href="https://www.hometalk.com/member/34156389/heathercammack1137581" class="avatar" data-ht-track='{"Element: Zone":"Related Post","action":"Thumbnail"}'><img src="https://cdn-fastly.hometalk.com/media/profile/2018/09/27/34156389_1.jpg?size=32x32" alt="Heather Cammack" nopin="nopin"><i class="ics-star hometalkhelper "></i></a><a href="https://www.hometalk.com/member/34156389/heathercammack1137581" class="username" data-ht-track='{"Element: Zone":"Related Post","action":"Member Name"}'>Heather Cammack</a>
+</div>
+<div class="stats">
+<span><i class="ics-time"></i> 2h</span><span><i class="ics-difficulty"></i> Easy</span>
+</div>
+</div>
+</div>
+</div></div>
+<div class="flex-grid-cell"><div class="card project-card sl-post sl-feed-post tr_zone sl-project-card " data-tr_zone="related_post" sl-href="/42197198/s-bunk-beds">
+<div class="media-wrap"><a href="https://www.hometalk.com/42197198/s-bunk-beds" class="media-link" data-ht-track='{"action":"Result", "Content: Feed Position": "14"}'><picture><source media="(max-width: 480px)" data-srcset="https://cdn-fastly.hometalk.com/media/2019/03/28/5384649/s-bunk-beds.jpg?size=350x220" srcset=""><source media="(min-width: 481px)" data-srcset="https://cdn-fastly.hometalk.com/media/2019/03/28/5384649/s-bunk-beds.jpg?size=350x220" srcset=""><img data-src="https://cdn-fastly.hometalk.com/media/2019/03/28/5384649/s-bunk-beds.jpg?size=350x220" src="" class="" alt="16 Dreamy Projects for Bunk Beds With Style"></source></source></picture></a></div>
+<div class="project-body">
+<div class="block-body">
+<h2><a class="sl-project-card-title" href="https://www.hometalk.com/42197198/s-bunk-beds" data-ht-track='{"action":"Result", "Content: Feed Position": "14"}'> <b reset="true">16 Dreamy Projects for Bunk Beds With Style</b></a></h2>
+<p><b reset="true">Bunk beds offer a highly practical, sensible approach in homes where there are two or more children.</b><b reset="true">...</b></p>
+</div>
+<div class="footer-wrap">
+<div class="user-footer">
+<a href="https://www.hometalk.com/member/31418931/bestof" class="avatar" data-ht-track='{"Element: Zone":"Related Post","action":"Thumbnail"}'><img src="https://cdn-fastly.hometalk.com/media/profile/2017/10/22/31418931_1.jpg?size=32x32" alt="Best Of Hometalk" nopin="nopin"></a><a href="https://www.hometalk.com/member/31418931/bestof" class="username" data-ht-track='{"Element: Zone":"Related Post","action":"Member Name"}'>Best Of Hometalk</a>
+</div>
+<div class="stats"></div>
+</div>
+</div>
+</div></div>
+<div class="flex-grid-cell">
+<div class="card project-card sl-post sl-feed-post tr_zone sl-project-card " data-tr_zone="related_post" sl-href="/42331713/s-glamping-ideas">
+<div class="media-wrap"><a href="https://www.hometalk.com/42331713/s-glamping-ideas" class="media-link" data-ht-track='{"action":"Result", "Content: Feed Position": "15"}'><picture><source media="(max-width: 480px)" data-srcset="https://cdn-fastly.hometalk.com/media/2019/04/07/5399503/s-glamping-ideas.jpg?size=350x220" srcset=""><source media="(min-width: 481px)" data-srcset="https://cdn-fastly.hometalk.com/media/2019/04/07/5399503/s-glamping-ideas.jpg?size=350x220" srcset=""><img data-src="https://cdn-fastly.hometalk.com/media/2019/04/07/5399503/s-glamping-ideas.jpg?size=350x220" src="" class="" alt="12 Glorious Glamping Ideas to Help You Camp in Style"></source></source></picture></a></div>
+<div class="project-body">
+<div class="block-body">
+<h2><a class="sl-project-card-title" href="https://www.hometalk.com/42331713/s-glamping-ideas" data-ht-track='{"action":"Result", "Content: Feed Position": "15"}'> <b reset="true">12 Glorious Glamping Ideas to Help You Camp in Style</b></a></h2>
+<p><b reset="true">If you love the great outdoors but can’t do without your home comforts, you're going to love</b><b reset="true">...</b></p>
+</div>
+<div class="footer-wrap">
+<div class="user-footer">
+<a href="https://www.hometalk.com/member/31418931/bestof" class="avatar" data-ht-track='{"Element: Zone":"Related Post","action":"Thumbnail"}'><img src="https://cdn-fastly.hometalk.com/media/profile/2017/10/22/31418931_1.jpg?size=32x32" alt="Best Of Hometalk" nopin="nopin"></a><a href="https://www.hometalk.com/member/31418931/bestof" class="username" data-ht-track='{"Element: Zone":"Related Post","action":"Member Name"}'>Best Of Hometalk</a>
+</div>
+<div class="stats"></div>
+</div>
+</div>
+</div>
+<span style="font-size: 0px;"></span>
+</div>
+<div class="flex-grid-cell"><div class="card project-card sl-post sl-feed-post tr_zone sl-project-card " data-tr_zone="related_post" sl-href="/42348307/a-faux-miniature-bee-skep">
+<div class="media-wrap"><a href="https://www.hometalk.com/42348307/a-faux-miniature-bee-skep" class="media-link" data-ht-track='{"action":"Result", "Content: Feed Position": "16"}'><picture><source media="(max-width: 480px)" data-srcset="https://cdn-fastly.hometalk.com/media/2019/04/10/5403690/a-faux-miniature-bee-skep.jpg?size=350x220" srcset=""><source media="(min-width: 481px)" data-srcset="https://cdn-fastly.hometalk.com/media/2019/04/10/5403690/a-faux-miniature-bee-skep.jpg?size=350x220" srcset=""><img data-src="https://cdn-fastly.hometalk.com/media/2019/04/10/5403690/a-faux-miniature-bee-skep.jpg?size=350x220" src="" class="" alt="A Faux Miniature Bee Skep"></source></source></picture></a></div>
+<div class="project-body">
+<div class="block-body">
+<h2><a class="sl-project-card-title" href="https://www.hometalk.com/42348307/a-faux-miniature-bee-skep" data-ht-track='{"action":"Result", "Content: Feed Position": "16"}'> <b reset="true">A Faux Miniature Bee Skep</b></a></h2>
+<p><b reset="true">I've seen large authentic bee skeps in magazines for years but honestly never new what they were</b><b reset="true">...</b></p>
+</div>
+<div class="footer-wrap">
+<div class="user-footer">
+<a href="https://www.hometalk.com/member/240918/countyroad407" class="avatar" data-ht-track='{"Element: Zone":"Related Post","action":"Thumbnail"}'><img src="https://cdn-fastly.hometalk.com/media/profile/2017/04/10/240918_1.jpg?size=32x32" alt="Cindy Richter" nopin="nopin"></a><a href="https://www.hometalk.com/member/240918/countyroad407" class="username" data-ht-track='{"Element: Zone":"Related Post","action":"Member Name"}'>Cindy Richter</a>
+</div>
+<div class="stats">
+<span><i class="ics-time"></i> 10 min</span><span><i class="ics-difficulty"></i> Easy</span>
+</div>
+</div>
+</div>
+</div></div>
+<div class="flex-grid-cell"><div class="card project-card sl-post sl-feed-post tr_zone sl-project-card " data-tr_zone="related_post" sl-href="/42200464/mini-moss-ball-topiary-diy">
+<div class="media-wrap"><a href="https://www.hometalk.com/42200464/mini-moss-ball-topiary-diy" class="media-link" data-ht-track='{"action":"Result", "Content: Feed Position": "17"}'><picture><source media="(max-width: 480px)" data-srcset="https://cdn-fastly.hometalk.com/media/2019/03/28/5386671/mini-moss-ball-topiary-diy.jpg?size=350x220" srcset=""><source media="(min-width: 481px)" data-srcset="https://cdn-fastly.hometalk.com/media/2019/03/28/5386671/mini-moss-ball-topiary-diy.jpg?size=350x220" srcset=""><img data-src="https://cdn-fastly.hometalk.com/media/2019/03/28/5386671/mini-moss-ball-topiary-diy.jpg?size=350x220" src="" class="" alt="Mini Moss Ball Topiary DIY"></source></source></picture></a></div>
+<div class="project-body">
+<div class="block-body">
+<h2><a class="sl-project-card-title" href="https://www.hometalk.com/42200464/mini-moss-ball-topiary-diy" data-ht-track='{"action":"Result", "Content: Feed Position": "17"}'> <b reset="true">Mini Moss Ball Topiary DIY</b></a></h2>
+<p><b reset="true">Hi friends! Spring is officially here and I couldn’t be more excited!!! Most of you know that I love</b><b reset="true">...</b></p>
+</div>
+<div class="footer-wrap">
+<div class="user-footer">
+<a href="https://www.hometalk.com/member/32633198/beautyforashes" class="avatar" data-ht-track='{"Element: Zone":"Related Post","action":"Thumbnail"}'><img src="https://cdn-fastly.hometalk.com/media/profile/2018/02/09/32633198_1.jpg?size=32x32" alt="Heather Olinde" nopin="nopin"><i class="ics-star hometalkhelper "></i></a><a href="https://www.hometalk.com/member/32633198/beautyforashes" class="username" data-ht-track='{"Element: Zone":"Related Post","action":"Member Name"}'>Heather Olinde</a>
+</div>
+<div class="stats">
+<span><i class="ics-time"></i> 15 min</span><span><i class="ics-difficulty"></i> Easy</span>
+</div>
+</div>
+</div>
+</div></div>
+<div class="flex-grid-cell">
+<div class="card feed-ad-item"><div class="ad-item"><div></div></div></div>
+<span style="font-size: 0px;"></span>
+</div>
+<div class="flex-grid-cell"><div class="card project-card sl-post sl-feed-post tr_zone sl-project-card " data-tr_zone="related_post" sl-href="/42348640/diy-white-farmhouse-pitcher">
+<div class="media-wrap"><a href="https://www.hometalk.com/42348640/diy-white-farmhouse-pitcher" class="media-link" data-ht-track='{"action":"Result", "Content: Feed Position": "19"}'><picture><source media="(max-width: 480px)" data-srcset="https://cdn-fastly.hometalk.com/media/2019/04/10/5403775/diy-white-farmhouse-pitcher.jpg?size=350x220" srcset=""><source media="(min-width: 481px)" data-srcset="https://cdn-fastly.hometalk.com/media/2019/04/10/5403775/diy-white-farmhouse-pitcher.jpg?size=350x220" srcset=""><img data-src="https://cdn-fastly.hometalk.com/media/2019/04/10/5403775/diy-white-farmhouse-pitcher.jpg?size=350x220" src="" class="" alt="Upcycled White Pitcher"></source></source></picture></a></div>
+<div class="project-body">
+<div class="block-body">
+<h2><a class="sl-project-card-title" href="https://www.hometalk.com/42348640/diy-white-farmhouse-pitcher" data-ht-track='{"action":"Result", "Content: Feed Position": "19"}'> <b reset="true">Upcycled White Pitcher</b></a></h2>
+<p><b reset="true">If you love this project, be sure to subscribe to our blog to receive updates regularly!Learn how to</b><b reset="true">...</b></p>
+</div>
+<div class="footer-wrap">
+<div class="user-footer">
+<a href="https://www.hometalk.com/member/2019077/makingmanzanita" class="avatar" data-ht-track='{"Element: Zone":"Related Post","action":"Thumbnail"}'><img src="https://cdn-fastly.hometalk.com/media/profile/2017/04/07/2019077_2.jpg?size=32x32" alt="Chelsea @ Making Manzanita" nopin="nopin"><i class="ics-star hometalkhelper "></i></a><a href="https://www.hometalk.com/member/2019077/makingmanzanita" class="username" data-ht-track='{"Element: Zone":"Related Post","action":"Member Name"}'>Chelsea @ Making Manzanita</a>
+</div>
+<div class="stats">
+<span><i class="ics-time"></i> 30 min</span><span><i class="ics-difficulty"></i> Easy</span>
+</div>
+</div>
+</div>
+</div></div>
+<div class="flex-grid-cell"><div class="card project-card sl-post sl-feed-post tr_zone sl-project-card " data-tr_zone="related_post" sl-href="/42245753/s-use-paper-on-your-furniture-for-these-great-updates">
+<div class="media-wrap"><a href="https://www.hometalk.com/42245753/s-use-paper-on-your-furniture-for-these-great-updates" class="media-link" data-ht-track='{"action":"Result", "Content: Feed Position": "20"}'><picture><source media="(max-width: 480px)" data-srcset="https://cdn-fastly.hometalk.com/media/2019/04/01/5389651/s-use-paper-on-your-furniture-for-these-great-updates.jpg?size=350x220" srcset=""><source media="(min-width: 481px)" data-srcset="https://cdn-fastly.hometalk.com/media/2019/04/01/5389651/s-use-paper-on-your-furniture-for-these-great-updates.jpg?size=350x220" srcset=""><img data-src="https://cdn-fastly.hometalk.com/media/2019/04/01/5389651/s-use-paper-on-your-furniture-for-these-great-updates.jpg?size=350x220" src="" class="" alt="Use Paper on Your Furniture for These Great Updates!"></source></source></picture></a></div>
+<div class="project-body">
+<div class="block-body">
+<h2><a class="sl-project-card-title" href="https://www.hometalk.com/42245753/s-use-paper-on-your-furniture-for-these-great-updates" data-ht-track='{"action":"Result", "Content: Feed Position": "20"}'> <b reset="true">Use Paper on Your Furniture for These Great Updates!</b></a></h2>
+<p><b reset="true">Paper lovers will love how useful these ideas are!</b></p>
+</div>
+<div class="footer-wrap">
+<div class="user-footer">
+<a href="https://www.hometalk.com/member/24336916/wendybarrish" class="avatar" data-ht-track='{"Element: Zone":"Related Post","action":"Thumbnail"}'><img src="https://cdn-fastly.hometalk.com/media/profile/2018/02/13/24336916_3.jpg?size=32x32" alt="Wendy" nopin="nopin"><i class="ics-star hometalkhelper "></i></a><a href="https://www.hometalk.com/member/24336916/wendybarrish" class="username" data-ht-track='{"Element: Zone":"Related Post","action":"Member Name"}'>Wendy</a>
+</div>
+<div class="stats"></div>
+</div>
+</div>
+</div></div>
+<div class="flex-grid-cell">
+<div class="card project-card sl-post sl-feed-post tr_zone sl-project-card " data-tr_zone="related_post" sl-href="/42245828/s-14-incredibly-cozy-ideas-for-your-breakfast-nook">
+<div class="media-wrap"><a href="https://www.hometalk.com/42245828/s-14-incredibly-cozy-ideas-for-your-breakfast-nook" class="media-link" data-ht-track='{"action":"Result", "Content: Feed Position": "21"}'><picture><source media="(max-width: 480px)" data-srcset="https://cdn-fastly.hometalk.com/media/2019/04/01/5389916/s-14-incredibly-cozy-ideas-for-your-breakfast-nook.jpg?size=350x220" srcset=""><source media="(min-width: 481px)" data-srcset="https://cdn-fastly.hometalk.com/media/2019/04/01/5389916/s-14-incredibly-cozy-ideas-for-your-breakfast-nook.jpg?size=350x220" srcset=""><img data-src="https://cdn-fastly.hometalk.com/media/2019/04/01/5389916/s-14-incredibly-cozy-ideas-for-your-breakfast-nook.jpg?size=350x220" src="" class="" alt="14 Incredibly Cozy Ideas for Your Breakfast Nook!"></source></source></picture></a></div>
+<div class="project-body">
+<div class="block-body">
+<h2><a class="sl-project-card-title" href="https://www.hometalk.com/42245828/s-14-incredibly-cozy-ideas-for-your-breakfast-nook" data-ht-track='{"action":"Result", "Content: Feed Position": "21"}'> <b reset="true">14 Incredibly Cozy Ideas for Your Breakfast Nook!</b></a></h2>
+<p><b reset="true">You won't want to hang out in any other room!</b></p>
+</div>
+<div class="footer-wrap">
+<div class="user-footer">
+<a href="https://www.hometalk.com/member/24336916/wendybarrish" class="avatar" data-ht-track='{"Element: Zone":"Related Post","action":"Thumbnail"}'><img src="https://cdn-fastly.hometalk.com/media/profile/2018/02/13/24336916_3.jpg?size=32x32" alt="Wendy" nopin="nopin"><i class="ics-star hometalkhelper "></i></a><a href="https://www.hometalk.com/member/24336916/wendybarrish" class="username" data-ht-track='{"Element: Zone":"Related Post","action":"Member Name"}'>Wendy</a>
+</div>
+<div class="stats"></div>
+</div>
+</div>
+</div>
+<span style="font-size: 0px;"></span>
+</div>
+</div>
+</div>
+</div></div>
+<span style="font-size: 0px;"></span><div>
+<div id="DYSCR"></div>
+<div class="site-footer-wrap tr_zone" data-tr_zone="footer_bottom">
+<div class="fs16 footer-main-links">
+<span class="copyright">© 2019  Hometalk.com</span><a href="https://www.about.hometalk.com/privacy-policy" target="_blank" data-ht-track="click_privacy">Privacy</a><a href="https://www.about.hometalk.com/terms-of-use" target="_blank" data-ht-track="click_terms">Terms</a><a href="https://www.about.hometalk.com/contact-and-partnership" target="_blank" data-ht-track="click_contact">Contact</a><a href="https://www.about.hometalk.com/support" target="_blank" data-ht-track="click_support">Support</a>
+</div>
+<div class="footer-social-links">
+<a href="http://pinterest.com/hometalk/" target="_blank" class="social-button" rel="publisher" data-ht-track="click_pinterest"><i class="ics-pinterest"></i></a><a href="https://www.facebook.com/Hometalk" target="_blank" class="social-button" rel="publisher" data-ht-track="click_facebook"><i class="ics-facebook"></i></a><a href="https://twitter.com/hometalk" target="_blank" class="social-button" rel="publisher" data-ht-track="click_twitter"><i class="ics-twitter"></i></a><a href="https://www.instagram.com/hometalk/?hl=en" target="_blank" class="social-button" rel="publisher" data-ht-track="click_instagram"><i class="ics-instagram"></i></a>
+</div>
+<hr>
+<div class="fs14 footer-secondary-links">
+<a href="https://www.about.hometalk.com/" target="_blank" class="footer-bottom-links" data-ht-track="click_about">About</a><a href="https://www.about.hometalk.com/content-guidelines" target="_blank" class="footer-bottom-links" data-ht-track="click_guidelines">Guidelines</a><a href="https://www.about.hometalk.com/news" target="_blank" class="footer-bottom-links" data-ht-track="click_media_center">Media</a><a href="https://www.about.hometalk.com/contact-and-partnership" target="_blank" class="footer-bottom-links" data-ht-track="click_advertise">Advertise</a>
+</div>
+</div>
+</div>
+<div></div>
+<div></div>        <script>/*Prerender*/
+            if (location.pathname === '/' && window.HT_BOOTSTRAP.USER.id) {
+                var prerender = document.getElementById('prerender-hp');
+                (prerender) && prerender.classList.add('hidden');
+            }
+        </script>
+
+    </div>
+
+    
+<script type="text/javascript" src="//www.hometalk.com/resources/combined/js/common.468541eca239bb0cee82.bundle.9014.js"></script>
+<script type="text/javascript" src="//www.hometalk.com/resources/combined/js/app.a18069bc936ff555fd7a.9014.js"></script>
+    <script>
+        if (performance && performance.getEntriesByType) {
+            var resources = performance.getEntriesByType('resource');
+            if(resources && Array.isArray(resources)){
+                resources.map(function(resource){
+                    if(resource.name.includes('api/app/bootstrap')){
+                        var duration = null;
+                        var size = null;
+                        if("duration" in resource) {
+                            duration = parseInt(resource.duration) / 1000;
+                        } else if ("responseEnd" in resource && "startTime" in resource) {
+                            duration = parseInt(resource.responseEnd - resource.startTime) / 1000;
+                        }
+                        if("SIZE" in window.HT_BOOTSTRAP){
+                            size = window.HT_BOOTSTRAP.SIZE;
+                        }
+                        window.bootstrapLoadTime = {"duration": duration, "size" : size};
+                    }
+                });
+            }
+        }
+    </script>
+    <script>
+        var blockThroughLoad = window.HT_BOOTSTRAP && window.HT_BOOTSTRAP.USER && window.HT_BOOTSTRAP.USER.features
+            && window.HT_BOOTSTRAP.USER.features.blockThrough.enabled;
+
+        var platform = getScreenPlatform();
+        if (platform === 'Desktop' && blockThroughLoad === 'body') {
+            var scriptTag = document.createElement( 'script' ),
+                source = "https://hometalk-com.videoplayerhub.com/galleryloader.js";
+
+            scriptTag.setAttribute( 'src', source );
+            document.body.appendChild( scriptTag );
+            // document.write('<script src="https://hometalk-com.videoplayerhub.com/galleryloader.js"><\/script>');
+        }
+    </script>
+</body>
+</html>
