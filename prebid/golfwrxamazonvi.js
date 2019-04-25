@@ -128,7 +128,7 @@ var timeoutMap = {
             	 code: 'inreedvidSlot',
             	 mediaTypes: {
             		 banner: { sizes: [[728, 90], [300, 250], [250, 250], [468, 60], [320, 50]] },
-            	     video:  { context: 'outstream', playerSize: [550, 310], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', "video/webm"], playbackmethod: [2] },
+            	     video:  { context: 'outstream', playerSize: [[550, 310]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', "video/webm"], playbackmethod: [2] },
             	 },
             	bids: [
             	 { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
@@ -169,7 +169,7 @@ var timeoutMap = {
             	 code: 'inreedvid1Slot',
             	 mediaTypes: {
             		 banner: { sizes: [[728, 90], [300, 250], [250, 250], [468, 60], [320, 50]] },
-            		 video:  { context: 'outstream', playerSize: [550, 310], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', "video/webm"], playbackmethod: [2] }, 
+            		 video:  { context: 'outstream', playerSize: [[550, 310]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', "video/webm"], playbackmethod: [2] }, 
             	},
             	bids: [
             	 { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
@@ -179,7 +179,7 @@ var timeoutMap = {
             	 { bidder: 'districtmDMX',  params: { dmxid: 171413, memberid: 100041  } }, /* 300x600 - 300x250 - 160x600 */
             	 { bidder: 'aol',        params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x250 */ 
             	 // { bidder: 'brealtime',  params: { placementId: '12002335' } },  /* 300x250 */ 
-            	 // { bidder: 'conversant', params: { site_id: '118233' } },  /* 300x250 */ 
+            	 { bidder: 'conversant', params: { site_id: '118233' } },  /* 300x250 */ 
             	 { bidder: 'pulsepoint', params: { cf: '300X250', cp: '561446', ct: '602639' } }, /* 300x250 */
             	 { bidder: 'sovrn',      params: { tagid: '575683' } }, /* 300x250 */
             	 { bidder: 'somoaudience', params: { placement_hash: '1152340cac3268b0e737b49c1382cd2b' } }, /*300x250*/
@@ -193,8 +193,8 @@ var timeoutMap = {
             	 { bidder: 'undertone',  params: { publisherId: '3660' } },
             	 { bidder: 'unruly',     params: { targetingUUID: '23984444', siteId: 15145, featureOverrides: { canRunUnmissable: true } } },
             	 // { bidder: 'contentignite',      labelAny: ['desktop', 'tablet', 'phone'], params: { accountID: '168237', zoneID: '316288'} }, /*300x250*/
-            	 { bidder: 'viewdeos',      params: { supplyPartnerId: '1985', rendererUrl: 'https://s.viewdeos.io/video/latest/renderer.js' } } /* oustream  */
-            	 // { bidder: 'vi',         params: { pubId: '535034733735961', lang: 'en-US', cat: 'IAB1', bidFloor: 0.01 } }
+            	 { bidder: 'viewdeos',      params: { supplyPartnerId: '1985', rendererUrl: 'https://s.viewdeos.io/video/latest/renderer.js' } }, /* oustream  */
+            	 { bidder: 'vi',         params: { pubId: '535034733735961', lang: 'en-US', cat: 'IAB1', bidFloor: 0.01 } }
             	] //./bids
             	},
             	//new ad unit block
@@ -202,7 +202,7 @@ var timeoutMap = {
             	 code: 'inreedvid2Slot',
             	 mediaTypes: {
             	     banner: { sizes: [[728, 90], [300, 250], [250, 250], [468, 60], [320, 50]] },
-            	     video:  { context: 'outstream', playerSize: [550, 310], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', "video/webm"], playbackmethod: [2] },
+            	     video:  { context: 'outstream', playerSize: [[550, 310]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', "video/webm"], playbackmethod: [2] },
             	},
             	bids: [
             	 { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
@@ -235,7 +235,7 @@ var timeoutMap = {
             	 code: 'inreedvid3Slot',
             	 mediaTypes: {
             		 banner: { sizes: [[728, 90], [300, 250], [250, 250], [468, 60], [320, 50]] }, 
-            		 video:  { context: 'outstream', playerSize: [550, 310], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', "video/webm"], playbackmethod: [2] },
+            		 video:  { context: 'outstream', playerSize: [[550, 310]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', "video/webm"], playbackmethod: [2] },
             	},
             	bids: [
             	 { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
@@ -244,7 +244,7 @@ var timeoutMap = {
             	 { bidder: 'districtmDMX',  params: { dmxid: 171413, memberid: 100041  } }, /* 300x600 - 300x250 - 160x600 */
             	 { bidder: 'aol',        params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x250 */ 
             	 // { bidder: 'brealtime',  params: { placementId: '12002335' } },  /* 300x250 */  
-            	 // { bidder: 'conversant', params: { site_id: '118233' } },  /* 300x250 */ 
+            	 { bidder: 'conversant', params: { site_id: '118233' } },  /* 300x250 */ 
             	 { bidder: 'pulsepoint', params: { cf: '300X250', cp: '561446', ct: '602639' } }, /* 300x250 */
             	 { bidder: 'sovrn',      params: { tagid: '575683' } }, /* 300x250 */
             	 { bidder: 'somoaudience', params: { placement_hash: '1152340cac3268b0e737b49c1382cd2b' } }, /*300x250*/
@@ -256,10 +256,10 @@ var timeoutMap = {
             	 { bidder: 'atomx',        params: { id: 5136440} }, /* 300x250C */
             	 { bidder: 'gumgum',     params: { inSlot: '14600' } }, /*gumgum-300x250*/
             	 { bidder: 'undertone',  params: { publisherId: '3660' } },
-            	 { bidder: 'unruly',     params: { targetingUUID: '23984444', siteId: 15145, featureOverrides: { canRunUnmissable: true } } }
+            	 { bidder: 'unruly',     params: { targetingUUID: '23984444', siteId: 15145, featureOverrides: { canRunUnmissable: true } } },
             	 // { bidder: 'contentignite',      labelAny: ['desktop', 'tablet', 'phone'], params: { accountID: '168237', zoneID: '316288'} }, /*300x250*/
-            	 // { bidder: 'viewdeos',      params: { supplyPartnerId: '1985', rendererUrl: 'https://s.viewdeos.io/video/latest/renderer.js' } } /* oustream  */
-            	 // { bidder: 'vi',         params: { pubId: '535034733735961', lang: 'en-US', cat: 'IAB1', bidFloor: 0.01 } }
+            	 { bidder: 'viewdeos',      params: { supplyPartnerId: '1985', rendererUrl: 'https://s.viewdeos.io/video/latest/renderer.js' } }, /* oustream  */
+            	 { bidder: 'vi',         params: { pubId: '535034733735961', lang: 'en-US', cat: 'IAB1', bidFloor: 0.01 } }
             	] //./bids
             	}
            ];
