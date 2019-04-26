@@ -94,7 +94,7 @@ var timeoutMap = {
             	     video:  { context: 'outstream', playerSize: [550, 310], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', "video/webm"], playbackmethod: [2] },
             	 },
             	bids: [
-            	 // { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
+            	 { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
             	 // { bidder: 'appnexus',   params: { placementId: '11971351', allowSmallerSizes: true, usePaymentRule: true } }, /* one placementId for all sizes */
             	 // { bidder: 'appnexus',   params: { placementId: '11971351', allowSmallerSizes: true, usePaymentRule: true, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }, /* one placementId for all sizes */
             	 // { bidder: 'appnexus',   params: { placementId: '13232392', video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }, /* demo video placement, always returns a vid, only works client side, pretty sure having this on lifts Teads to bidding higher */
@@ -124,8 +124,7 @@ var timeoutMap = {
             	 // { bidder: 'vi',         params: { pubId: '535034733735961', lang: 'en-US', cat: 'IAB17', bidFloor: 0.01 } },
             	 // { bidder: 'onefiftytwomedia', params: { aid: 331133 } }
             	 // { bidder: 'ucfunnel',   params: { adid: 'ad-E2BBB7E7B69BD226F93D69A83686264' } },
-            		{ bidder: 'beachfront', params: { appId: '83d77824-262e-4d13-ae0e-56f8f54bf934', bidfloor: 1.00 } }, /* vidoutstream */
-            		{ bidder: 'beachfront', params: { appId: '46f09c62-f3f1-4ead-f957-f91964be6f02', bidfloor: 0.01 } } /* display */
+            		{ bidder: 'beachfront', params: { video: { bidfloor: 0.01, appId: '11bc5dd5-7421-4dd8-c926-40fa653bec76', mimes: [ 'video/mp4', 'application/javascript' ] }, banner: { bidfloor: 0.01, appId: '3b16770b-17af-4d22-daff-9606bdf2c9c3' } } }
             	] //./bids
             	},
             	//new ad unit block
@@ -136,7 +135,7 @@ var timeoutMap = {
             		 video:  { context: 'outstream', playerSize: [550, 310], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', "video/webm"], playbackmethod: [2] }, 
             	},
             	bids: [
-            	 // { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
+            	 { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
             	 // { bidder: 'appnexus',   params: { placementId: '11971351', allowSmallerSizes: true, usePaymentRule: true } }, /* one placementId for all sizes */
             	 // { bidder: 'appnexus',   params: { placementId: '13232392', video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }, /* demo video placement, always returns a vid, only works client side, pretty sure having this on lifts Teads to bidding higher */
             	 // { bidder: 'districtm',  params: { placementId: 11937611, allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }, /* 300x600 - 300x250 - 160x600 */ 
@@ -159,8 +158,7 @@ var timeoutMap = {
             	 // { bidder: 'contentignite',      labelAny: ['desktop', 'tablet', 'phone'], params: { accountID: '168237', zoneID: '316288'} }, /*300x250*/
             	 // { bidder: 'viewdeos',      params: { supplyPartnerId: '1985', rendererUrl: 'https://s.viewdeos.io/video/latest/renderer.js' } } /* oustream  */
             	 // { bidder: 'vi',         params: { pubId: '272766657673392', lang: 'en-US', cat: 'IAB17', bidFloor: 0.01 } },
-            		{ bidder: 'beachfront', params: { appId: '83d77824-262e-4d13-ae0e-56f8f54bf934', bidfloor: 1.00 } }, /* vidoutstream */
-            		{ bidder: 'beachfront', params: { appId: '46f09c62-f3f1-4ead-f957-f91964be6f02', bidfloor: 0.01 } } /* display */
+            		{ bidder: 'beachfront', params: { video: { bidfloor: 0.01, appId: '11bc5dd5-7421-4dd8-c926-40fa653bec76', mimes: [ 'video/mp4', 'application/javascript' ] }, banner: { bidfloor: 0.01, appId: '3b16770b-17af-4d22-daff-9606bdf2c9c3' } } }
             	] //./bids
             	},
             	//new ad unit block
@@ -171,7 +169,7 @@ var timeoutMap = {
             	     video:  { context: 'outstream', playerSize: [550, 310], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', "video/webm"], playbackmethod: [2] },
             	},
             	bids: [
-            	 // { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
+            	 { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
             	 // { bidder: 'appnexus',   params: { placementId: '11971351', allowSmallerSizes: true, usePaymentRule: true } }, /* one placementId for all sizes */
             	 // { bidder: 'districtm',  params: { placementId: 11937611, allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }, /* 300x600 - 300x250 - 160x600 */ 
             	 // { bidder: 'districtmDMX',  params: { dmxid: 171413, memberid: 100041  } }, /* 300x600 - 300x250 - 160x600 */
@@ -194,8 +192,7 @@ var timeoutMap = {
             	 // { bidder: 'viewdeos',      params: { supplyPartnerId: '1985', rendererUrl: 'https://s.viewdeos.io/video/latest/renderer.js' } } /* oustream  */
             	 // { bidder: 'sekindoUM',    labelAny: ['desktop'], params: { spaceId: '87709' } }, /* 300x250 */ 
             	 // { bidder: 'vi',         params: { pubId: '272766657673392', lang: 'en-US', cat: 'IAB17', bidFloor: 0.01 } },
-            		{ bidder: 'beachfront', params: { appId: '83d77824-262e-4d13-ae0e-56f8f54bf934', bidfloor: 1.00 } }, /* vidoutstream */
-            		{ bidder: 'beachfront', params: { appId: '46f09c62-f3f1-4ead-f957-f91964be6f02', bidfloor: 0.01 } } /* display */
+            		{ bidder: 'beachfront', params: { video: { bidfloor: 0.01, appId: '11bc5dd5-7421-4dd8-c926-40fa653bec76', mimes: [ 'video/mp4', 'application/javascript' ] }, banner: { bidfloor: 0.01, appId: '3b16770b-17af-4d22-daff-9606bdf2c9c3' } } }
             	] //./bids
             	},
             	//new ad unit block
@@ -206,7 +203,7 @@ var timeoutMap = {
             		 video:  { context: 'outstream', playerSize: [550, 310], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', "video/webm"], playbackmethod: [2] },
             	},
             	bids: [
-            	 // { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
+            	 { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
             	 // { bidder: 'appnexus',   params: { placementId: '11971351', allowSmallerSizes: true, usePaymentRule: true } }, /* one placementId for all sizes */
             	 // { bidder: 'districtm',  params: { placementId: 11937611, allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }, /* 300x600 - 300x250 - 160x600 */ 
             	 // { bidder: 'districtmDMX',  params: { dmxid: 171413, memberid: 100041  } }, /* 300x600 - 300x250 - 160x600 */
@@ -228,8 +225,7 @@ var timeoutMap = {
             	 // { bidder: 'contentignite',      labelAny: ['desktop', 'tablet', 'phone'], params: { accountID: '168237', zoneID: '316288'} }, /*300x250*/
             	 // { bidder: 'viewdeos',      params: { supplyPartnerId: '1985', rendererUrl: 'https://s.viewdeos.io/video/latest/renderer.js' } } /* oustream  */
             	 // { bidder: 'vi',         params: { pubId: '272766657673392', lang: 'en-US', cat: 'IAB17', bidFloor: 0.01 } },
-            		{ bidder: 'beachfront', params: { appId: '83d77824-262e-4d13-ae0e-56f8f54bf934', bidfloor: 1.00 } }, /* vidoutstream */
-            		{ bidder: 'beachfront', params: { appId: '46f09c62-f3f1-4ead-f957-f91964be6f02', bidfloor: 0.01 } } /* display */
+            		{ bidder: 'beachfront', params: { video: { bidfloor: 0.01, appId: '11bc5dd5-7421-4dd8-c926-40fa653bec76', mimes: [ 'video/mp4', 'application/javascript' ] }, banner: { bidfloor: 0.01, appId: '3b16770b-17af-4d22-daff-9606bdf2c9c3' } } }
             	] //./bids
             	}
            ];
