@@ -173,7 +173,7 @@ var timeoutMap = {
             	 // { bidder: 'appnexus',   params: { placementId: '11971351', allowSmallerSizes: true, usePaymentRule: true, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }, /* one placementId for all sizes */
             	 // { bidder: 'appnexus',   params: { placementId: '13232392', video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }, /* demo video placement, always returns a vid, only works client side, pretty sure having this on lifts Teads to bidding higher */
             	 // { bidder: 'districtm',  params: { placementId: 11937611, allowSmallerSizes: true } }, /* 300x600 - 300x250 - 160x600 */ 
-            	 { bidder: 'districtm',  params: { placementId: 11937611, allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } },
+            	 { bidder: 'districtm',  params: { placementId: 11937611, allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_off'], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', "video/webm"], playbackmethod: [2]  } } },
             	 // { bidder: 'districtmDMX',  params: { dmxid: 171413, memberid: 100041  } }, /* 300x600 - 300x250 - 160x600 */ 
             	 { bidder: 'districtmDMX',  params: { dmxid: 345036, memberid: 100041  } }, /* outstream */ 
             	 { bidder: 'onedisplay',        params: { placement: '4882886', network: '4436.1', server: 'adserver-eu.adtech.advertising.com' } }, /* 300x250 */ 
@@ -206,7 +206,7 @@ var timeoutMap = {
             	 code: 'inreedvid1Slot',
             	 mediaTypes: {
             		 banner: { sizes: [[728, 90], [300, 250], [250, 250], [468, 60], [320, 50]] },
-            		 video:  { context: 'outstream', playerSize: [[550, 310]] }, 
+            		 video:  { context: 'outstream', playerSize: [[550, 310]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', "video/webm"], playbackmethod: [2]  }, 
             	},
             	bids: [
             	 { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
