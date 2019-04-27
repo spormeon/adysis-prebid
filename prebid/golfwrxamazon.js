@@ -36,6 +36,7 @@ window.addEventListener("DOMContentLoaded",function(){
     var pbjsTargetEl = document.getElementsByTagName("footerbid")[0];
     pbjsTargetEl.insertBefore(pbjsEl, pbjsTargetEl.firstChild);
 })();
+
 // amazon bidder
 !function(a9,a,p,s,t,A,g){if(a[a9])return;function q(c,r){a[a9]._Q.push([c,r])}a[a9]={init:function(){q("i",arguments)},fetchBids:function(){q("f",arguments)},setDisplayBids:function(){},targetingKeys:function(){return[]},_Q:[]};A=p.createElement(s);A.async=!0;A.src=t;g=p.getElementsByTagName(s)[0];g.parentNode.insertBefore(A,g)}("apstag",window,document,"script","//c.amazon-adsystem.com/aax2/apstag.js");
 
@@ -327,28 +328,30 @@ var timeoutMap = {
 
             pbjs.que.push(function() {
                 pbjs.addAdUnits(adUnits);
+             
+                // alias for bidder	
+                pbjs.aliasBidder('appnexus','brealtime');  
+                pbjs.aliasBidder('appnexus','springserveAlias2'); 
+                pbjs.aliasBidder('appnexus','districtm'); 
+                pbjs.aliasBidder('gamoshi','viewdeos'); 
+                pbjs.aliasBidder('onedisplay','aol'); 
                 
-                pbjs.aliasBidder('appnexus','brealtime');  // alias for bidder	
-                pbjs.aliasBidder('appnexus','springserveAlias2'); // alias for bidder	
-                pbjs.aliasBidder('appnexus','districtm'); // alias for bidder
-                pbjs.aliasBidder('gamoshi','viewdeos'); // alias for bidder
-                pbjs.aliasBidder('onedisplay','aol'); // alias for bidder
-
+             // adjust the bid in real time before the auction takes place
              pbjs.bidderSettings = { 
-                	        aol:               { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.85; } }, // adjust the bid in real time before the auction takes place
-                	        onedisplay:        { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.85; } }, // adjust the bid in real time before the auction takes place
-                	        districtm:         { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.88; } }, // adjust the bid in real time before the auction takes place
-                	        districtmDMX:      { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.90; } }, // adjust the bid in real time before the auction takes place
-                	        sekindonUM:        { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.75; } }, // adjust the bid in real time before the auction takes place
-                	        // brealtime:         { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.80; } }, // adjust the bid in real time before the auction takes place
-                	        // springserveAlias2: { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.65; } }, // adjust the bid in real time before the auction takes place
-                	        teads:             { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.94; } }, // adjust the bid in real time before the auction takes place
-                	        unruly:            { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.90; } }, // adjust the bid in real time before the auction takes place
-                	        viewdeos:          { bidCpmAdjustment : function(bidCpm){ return bidCpm * 1.00; } }, // adjust the bid in real time before the auction takes place
-                	        sovrn:             { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.95; } }, // adjust the bid in real time before the auction takes place
-                	        beachfront:        { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.05; } }, // adjust the bid in real time before the auction takes place
-                	        // appnexus:       { bidCpmAdjustment : function(bidCpm){ return bidCpm * 1.00; } }, // adjust the bid in real time before the auction takes place
-                	       };	
+                	aol:               { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.85; } }, 
+                	onedisplay:        { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.85; } }, 
+                	districtm:         { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.88; } }, 
+                    districtmDMX:      { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.90; } }, 
+           	        sekindonUM:        { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.75; } }, 
+                 // brealtime:         { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.80; } }, 
+                 // springserveAlias2: { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.65; } }, 
+                	teads:             { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.94; } }, 
+                	unruly:            { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.90; } }, 
+                	viewdeos:          { bidCpmAdjustment : function(bidCpm){ return bidCpm * 1.00; } }, 
+                	sovrn:             { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.95; } }, 
+                	beachfront:        { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.75; } }, 
+                 // appnexus:       { bidCpmAdjustment : function(bidCpm){ return bidCpm * 1.00; } }, 
+                   };	
                 	
             pbjs.setConfig({
                  priceGranularity: customConfigObject,
@@ -391,17 +394,11 @@ var timeoutMap = {
                 	       'conversionRateFile': 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json',
                   },
                 
-             sizeConfig: [
+            sizeConfig: [
             	 { mediaQuery: '(min-width: 769px)', sizesSupported: [[728, 90], [550, 310], [468, 60], [320, 50], [300, 250], [250, 250], [1, 1]], labels: ['desktop'] }, 
-                {
-                mediaQuery: '(min-width: 500px) and (max-width: 768px)',
-                sizesSupported: [[728, 90], [550, 310], [468, 60], [320, 50], [300, 250], [250, 250], [1, 1]],
-                labels: ['tablet']
-                }, {
-                mediaQuery: '(min-width: 1px) and (max-width: 499px)',
-                sizesSupported: [[550, 310], [300, 250], [250, 250], [320, 50], [1, 1]],
-                labels: ['phone']
-                }]
+                 { mediaQuery: '(min-width: 500px) and (max-width: 768px)', sizesSupported: [[728, 90], [550, 310], [468, 60], [320, 50], [300, 250], [250, 250], [1, 1]], labels: ['tablet'] }, 
+                 { mediaQuery: '(min-width: 1px) and (max-width: 499px)', sizesSupported: [[550, 310], [300, 250], [250, 250], [320, 50], [1, 1]], labels: ['phone'] }
+                ]
              });
                 
            pbjs.requestBids({
