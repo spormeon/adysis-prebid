@@ -334,7 +334,7 @@ var timeoutMap = {
                 pbjs.aliasBidder('gamoshi','viewdeos'); // alias for bidder
                 pbjs.aliasBidder('onedisplay','aol'); // alias for bidder
 
-                pbjs.bidderSettings = { 
+             pbjs.bidderSettings = { 
                 	        aol:               { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.85; } }, // adjust the bid in real time before the auction takes place
                 	        onedisplay:        { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.85; } }, // adjust the bid in real time before the auction takes place
                 	        districtm:         { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.88; } }, // adjust the bid in real time before the auction takes place
@@ -350,8 +350,8 @@ var timeoutMap = {
                 	        // appnexus:       { bidCpmAdjustment : function(bidCpm){ return bidCpm * 1.00; } }, // adjust the bid in real time before the auction takes place
                 	       };	
                 	
-                pbjs.setConfig({
-                	  priceGranularity: customConfigObject,
+            pbjs.setConfig({
+                 priceGranularity: customConfigObject,
                  consentManagement: {
                     cmpApi: 'iab',
                     timeout: 5000,
@@ -373,28 +373,27 @@ var timeoutMap = {
                       iframeEnabled: true,
                       syncsPerBidder: 50, // and no more than 3 syncs at a time
                       syncDelay: 6000, // 5 seconds after the auction
-                      filterSettings: {  
+                  filterSettings: {  
                       iframe: { bidders: ['pulsepoint'], filter: 'exclude' },
                       image:  { bidders: '*', filter: 'include' } 
                       },
                   },
-                debug: true,
-                useBidCache: USERBIDCACHE,
-                enableSendAllBids: false, // Default will be `true` as of 1.0
-                bidderSequence: 'random', // Default is random
-                	  publisherDomain: 'golfwrx.com',
-                	  bidderTimeout: 3500,
-                	  pubcid: {expInterval: 525600},
-                	   currency: {
+                  debug: true,
+                  useBidCache: USERBIDCACHE,
+                  enableSendAllBids: false, // Default will be `true` as of 1.0
+                  bidderSequence: 'random', // Default is random
+                  publisherDomain: 'golfwrx.com',
+                  bidderTimeout: 3500,
+                  pubcid: {expInterval: 525600},
+                  currency: {
                 	       'adServerCurrency': "GBP",
                 	       'granularityMultiplier': 1,
                 	       'conversionRateFile': 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json',
-                	    },
-                	 sizeConfig: [{
-                mediaQuery: '(min-width: 769px)',
-                sizesSupported: [[728, 90], [550, 310], [468, 60], [320, 50], [300, 250], [250, 250], [1, 1]],
-                labels: ['desktop']
-                }, {
+                  },
+                
+             sizeConfig: [
+            	 { mediaQuery: '(min-width: 769px)', sizesSupported: [[728, 90], [550, 310], [468, 60], [320, 50], [300, 250], [250, 250], [1, 1]], labels: ['desktop'] }, 
+                {
                 mediaQuery: '(min-width: 500px) and (max-width: 768px)',
                 sizesSupported: [[728, 90], [550, 310], [468, 60], [320, 50], [300, 250], [250, 250], [1, 1]],
                 labels: ['tablet']
@@ -403,12 +402,12 @@ var timeoutMap = {
                 sizesSupported: [[550, 310], [300, 250], [250, 250], [320, 50], [1, 1]],
                 labels: ['phone']
                 }]
-                });
+             });
                 
-                pbjs.requestBids({
-                    bidsBackHandler: initAdserver,
-                    timeout: PREBID_TIMEOUT
-                });
+           pbjs.requestBids({
+                bidsBackHandler: initAdserver,
+                timeout: PREBID_TIMEOUT
+              });
             });
 
             function initAdserver() {
