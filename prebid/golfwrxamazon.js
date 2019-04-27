@@ -73,10 +73,11 @@ apstag.fetchBids({
      }],
      timeout: 2e3
  }, function(bids) {
-     // set apstag targeting on googletag, then trigger the first DFP request in googletag's disableInitialLoad integration 
+	 
+// set apstag targeting on googletag, then trigger the first DFP request in googletag's disableInitialLoad integration 
      googletag.cmd.push(function(){
          apstag.setDisplayBids();
-         //googletag.pubads().refresh();
+       //googletag.pubads().refresh();
      });
  });
 // amazon bidder end
