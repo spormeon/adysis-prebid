@@ -370,7 +370,7 @@ var timeoutMap = {
                 	unruly:            { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.90; } }, 
                 	viewdeos:          { bidCpmAdjustment : function(bidCpm){ return bidCpm * 1.00; } }, 
                 	sovrn:             { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.95; } }, 
-                	beachfront:        { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.05; } }, 
+                	beachfront:        { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.02; } }, 
                  // appnexus:       { bidCpmAdjustment : function(bidCpm){ return bidCpm * 1.00; } }, 
                    };	
                 	
