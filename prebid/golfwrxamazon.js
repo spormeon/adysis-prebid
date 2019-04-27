@@ -465,7 +465,7 @@ googletag.cmd.push(function () {
 	    	mobileScaling: 0.1  // Double the above values on mobile.
 	    });
 	    googletag.enableServices();
-	    googletag.pubads().addEventListener('SlotRenderEndedEvent', function (event) {
+	    googletag.pubads().addEventListener('slotRenderEnded', function (event) {
 	      var elementId = event.slot.getSlotElementId();
 	      var slotConfig = slots[elementId];
 	      if (slotConfig) {
