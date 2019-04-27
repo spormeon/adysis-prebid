@@ -465,7 +465,8 @@ googletag.cmd.push(function () {
 	    	mobileScaling: 0.1  // Double the above values on mobile.
 	    });
 	    googletag.enableServices();
-	    googletag.pubads().addEventListener('slotRenderEnded', function (event) {
+// not sure if impressionViewable, slotRenderEnded or slotOnload is best to use yet
+	    googletag.pubads().addEventListener('slotOnload', function (event) {
 	      var elementId = event.slot.getSlotElementId();
 	      var slotConfig = slots[elementId];
 	      if (slotConfig) {
