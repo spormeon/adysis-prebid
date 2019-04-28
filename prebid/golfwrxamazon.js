@@ -386,7 +386,7 @@ var timeoutMap = {
                  s2sConfig: {
                      accountId: 'e31f627f-53a3-4288-9979-482d3c6ffc76',
                      enabled: true,
-                     bidders: ['sovrn','somoaudience'],
+                     bidders: ['sovrn','somoaudience','districtm'],
                      timeout: 1000,
                      adapter: 'prebidServer',
                      endpoint: 'https://prebid.adnxs.com/pbs/v1/openrtb2/auction',
