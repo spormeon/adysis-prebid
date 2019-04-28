@@ -219,7 +219,7 @@ var timeoutMap = {
             	 // { bidder: 'appnexus',   params: { placementId: '13232392', video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }, /* demo video placement, always returns a vid, only works client side, pretty sure having this on lifts Teads to bidding higher */ 
             	 { bidder: 'districtm',  params: { placementId: 11937611, allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_off'], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', "video/webm"], playbackmethod: [2]  } } },
             	 { bidder: 'districtmDMX',  params: { dmxid: 171413, memberid: 100041  } }, /* outstream - display */ 
-            	 { bidder: 'aol',        params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x250 */ 
+            	 { bidder: 'onedisplay',    params: { placement: '4882886', network: '4436.1', server: 'adserver-eu.adtech.advertising.com' } }, /* 300x250 */  
             	 // { bidder: 'brealtime',  params: { placementId: '12002335' } },  /* 300x250 */ 
             	 { bidder: 'conversant', params: { site_id: '118233', mimes: [ 'video/mp4', 'application/javascript' ], maxduration: 30 } },  /* 300x250 */
             	 { bidder: 'pulsepoint', params: { cf: '300X250', cp: '561446', ct: '602639' } }, /* 300x250 */
@@ -257,7 +257,7 @@ var timeoutMap = {
             	 // { bidder: 'appnexus',   params: { placementId: '13232392', video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }, /* demo video placement, always returns a vid, only works client side */ 
             	 { bidder: 'districtm',  params: { placementId: 11937611, allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_off'], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', "video/webm"], playbackmethod: [2]  } } },
             	 { bidder: 'districtmDMX',  params: { dmxid: 171413, memberid: 100041  } }, /* outstream - display */ 
-            	 { bidder: 'aol',        params: { placement: '4882886', network: '4436.1', server: 'adserver.adtech.de' } }, /* 300x250 */
+            	 { bidder: 'onedisplay',    params: { placement: '4882886', network: '4436.1', server: 'adserver-eu.adtech.advertising.com' } }, /* 300x250 */ 
             	 // { bidder: 'brealtime',  params: { placementId: '12002335' } },  /* 300x250 */ 
             	 { bidder: 'conversant', params: { site_id: '118233', mimes: [ 'video/mp4', 'application/javascript' ], maxduration: 30 } },  /* 300x250 */ 
             	 { bidder: 'pulsepoint', params: { cf: '300X250', cp: '561446', ct: '602639' } }, /* 300x250 */
