@@ -172,7 +172,7 @@ var timeoutMap = {
             	 code: 'inreedvidSlot',
             	 mediaTypes: {
             		 
-            		 video:  { context: 'outstream', rendererUrl: 'http://cdn.adnxs.com/renderer/video/ANOutstreamVideo.js', mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'], playerSize: [[550, 310]], minduration: 1,  maxduration: 30, protocols: [2,3], w:640, h:480, protocols: [2,3], playbackmethod: [2] },  
+            		 video:  { context: 'outstream', rendererUrl: 'http://cdn.adnxs.com/renderer/video/ANOutstreamVideo.js', mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'], playerSize: [[550, 310]], minduration: 1,  maxduration: 30, protocols: [2,3], w:640, h:480, protocols: [2,3], playbackmethod: [2] } },  
             		 renderer: {
             		        url: 'http://cdn.adnxs.com/renderer/video/ANOutstreamVideo.js',
             		        render: function (bid) {
@@ -181,7 +181,8 @@ var timeoutMap = {
             		                adResponse: bid.adResponse,
             		            });
             		        }
-            		    },
+            		 
+            		   
             	 },
             	bids: [
             	 { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
