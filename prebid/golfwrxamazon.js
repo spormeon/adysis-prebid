@@ -171,7 +171,7 @@ var timeoutMap = {
             	{
             	 code: 'inreedvidSlot',
             	 mediaTypes: {
-            		 banner: { sizes: [[550, 310], [728, 90], [300, 250], [250, 250], [468, 60], [320, 50]] },
+            		 banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50]] },
             	     video:  { context: 'outstream', playerSize: [[550, 310]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', "video/webm"], playbackmethod: [2], protocols: [2,3] },
             	 },
             	bids: [
@@ -213,7 +213,7 @@ var timeoutMap = {
             	{
             	 code: 'inreedvid1Slot',
             	 mediaTypes: {
-            		 banner: { sizes: [[550, 310], [728, 90], [300, 250], [250, 250], [468, 60], [320, 50]] },
+            		 banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50]] },
             		 video:  { context: 'outstream', playerSize: [[550, 310]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', "video/webm"], playbackmethod: [2]  }, 
             	},
             	bids: [
@@ -251,7 +251,7 @@ var timeoutMap = {
             	{
             	 code: 'inreedvid2Slot',
             	 mediaTypes: {
-            	     banner: { sizes: [[550, 310], [728, 90], [300, 250], [250, 250], [468, 60], [320, 50]] },
+            	     banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50]] },
             	     video:  { context: 'outstream', playerSize: [[550, 310]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', "video/webm"], playbackmethod: [2] },
             	},
             	bids: [
@@ -288,7 +288,7 @@ var timeoutMap = {
             	{
             	 code: 'inreedvid3Slot',
             	 mediaTypes: {
-            		 banner: { sizes: [[550, 310], [728, 90], [300, 250], [250, 250], [468, 60], [320, 50]] }, 
+            		 banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50]] }, 
             		 video:  { context: 'outstream', playerSize: [[550, 310]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', "video/webm"], playbackmethod: [2] },
             	},
             	bids: [
@@ -416,8 +416,8 @@ var timeoutMap = {
                   },
                 
             sizeConfig: [
-            	 { mediaQuery: '(min-width: 769px)', sizesSupported: [[728, 90], [550, 310], [468, 60], [320, 50], [300, 250], [250, 250], [1, 1]], labels: ['desktop'] }, 
-                 { mediaQuery: '(min-width: 500px) and (max-width: 768px)', sizesSupported: [[728, 90], [550, 310], [468, 60], [320, 50], [300, 250], [250, 250], [1, 1]], labels: ['tablet'] }, 
+            	 { mediaQuery: '(min-width: 769px)', sizesSupported: [[550, 310], [728, 90], [468, 60], [320, 50], [300, 250], [250, 250], [1, 1]], labels: ['desktop'] }, 
+                 { mediaQuery: '(min-width: 500px) and (max-width: 768px)', sizesSupported: [[550, 310], [728, 90],  [468, 60], [320, 50], [300, 250], [250, 250], [1, 1]], labels: ['tablet'] }, 
                  { mediaQuery: '(min-width: 1px) and (max-width: 499px)', sizesSupported: [[550, 310], [300, 250], [250, 250], [320, 50], [1, 1]], labels: ['phone'] }
                 ]
              });
