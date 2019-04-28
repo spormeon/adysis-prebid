@@ -84,68 +84,64 @@ apstag.fetchBids({
 
 //  1000 def brings back bigger bids in Uk
 var timeoutMap = {
-		   0 : 1400,
-		   1 : 1400,
-		   2 : 1400,
-		   3 : 1400,
-		   4 : 1400,
-		   5 : 1400,
-		   6 : 1400,
-		   7 : 1400,
-		   8 : 1400,
-		   9 : 1400,
-		  10 : 1400,
-		  11 : 1400,
-		  12 : 1400,
-		  13 : 1400,
-		  14 : 1400,
-		  15 : 1400,
-		  16 : 1400,
-		  17 : 1400,
-		  18 : 1400,
-		  19 : 1400,
-		  20 : 1400,
-		  21 : 1400,
-		  22 : 1400,
-		  23 : 1400
-		};
+0 : 1400,
+1 : 1400,
+2 : 1400,
+3 : 1400,
+4 : 1400,
+5 : 1400,
+6 : 1400,
+7 : 1400,
+8 : 1400,
+9 : 1400,
+10 : 1400,
+11 : 1400,
+12 : 1400,
+13 : 1400,
+14 : 1400,
+15 : 1400,
+16 : 1400,
+17 : 1400,
+18 : 1400,
+19 : 1400,
+20 : 1400,
+21 : 1400,
+22 : 1400,
+23 : 1400
+};
+var t = new Date().getUTCHours();
+PREBID_TIMEOUT = timeoutMap[t];
 
-		var t = new Date().getUTCHours();
+var usebidcacheMap = {
+0 : true,			   
+1 : false,
+2 : true,
+3 : false,
+4 : true,
+5 : false,
+6 : true,
+7 : false,
+8 : true,
+9 : false,
+10 : true,
+11 : false,
+12 : true,
+13 : false,
+14 : true,
+15 : false,
+16 : true,
+17 : false,
+18 : true,
+19 : false,
+20 : true,
+21 : false,
+22 : true,
+23 : false
+};
+var u = new Date().getUTCHours();
 
-		PREBID_TIMEOUT = timeoutMap[t];
-		
-		
-		var usebidcacheMap = {
-				   0 : true,
-				   1 : false,
-				   2 : true,
-				   3 : false,
-				   4 : true,
-				   5 : false,
-				   6 : true,
-				   7 : false,
-				   8 : true,
-				   9 : false,
-				  10 : true,
-				  11 : false,
-				  12 : true,
-				  13 : false,
-				  14 : true,
-				  15 : false,
-				  16 : true,
-				  17 : false,
-				  18 : true,
-				  19 : false,
-				  20 : true,
-				  21 : false,
-				  22 : true,
-				  23 : false
-				};
-
-				var u = new Date().getUTCHours();
-
-				USERBIDCACHE = usebidcacheMap[u];
-				console.log('user bid cache:', USERBIDCACHE );
+USERBIDCACHE = usebidcacheMap[u];
+console.log("user bid cache:", USERBIDCACHE );
 				
           //ASSERTIVE ANALYTICS SETTINGS - Version: 1.4.0
             var assertive_entityId = 'FHkAkgiDWrXm4dZFw';
@@ -174,7 +170,6 @@ var timeoutMap = {
             		 banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50]] },
             		 video:  { context: 'outstream', mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'], playerSize: [[550, 310]], minduration: 1,  maxduration: 30, protocols: [2,3], w:640, h:480, protocols: [2,3], playbackmethod: [2] }  
             		 // renderer: { url: 'http://cdn.adnxs.com/renderer/video/ANOutstreamVideo.js', render: function (bid) { ANOutstreamVideo.renderAd({ targetId: bid.adUnitCode, adResponse: bid.adResponse, }); }
-            	   
             	 },
             	bids: [
             	 { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
@@ -205,9 +200,8 @@ var timeoutMap = {
             	 // { bidder: 'onefiftytwomedia', params: { aid: 331133 } }
             	 // { bidder: 'ucfunnel',   params: { adid: 'ad-E2BBB7E7B69BD226F93D69A83686264' } }
             	 { bidder: 'beachfront', params: { video: { bidfloor: 0.01, appId: '11bc5dd5-7421-4dd8-c926-40fa653bec76', mimes: [ 'video/mp4', 'application/javascript' ] }, banner: { bidfloor: 0.01, appId: '3b16770b-17af-4d22-daff-9606bdf2c9c3' } } }
-            	
-            	 ] //./bids
-            	},
+ ] //./bids
+ },
             	//new ad unit block
             	{
             	 code: 'inreedvid1Slot',
