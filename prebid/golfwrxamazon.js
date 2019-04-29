@@ -36,6 +36,7 @@ window.addEventListener("DOMContentLoaded",function(){
 (function() {
     var pbjsEl = document.createElement("script");
     pbjsEl.type = "text/javascript";
+    pbjsEL.rel = "preconnect";
     pbjsEl.async = true;
     pbjsEl.src = "//adops.adysis.com/prebid.js";
     var pbjsTargetEl = document.getElementsByTagName("footerbid")[0];
