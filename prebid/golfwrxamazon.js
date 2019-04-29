@@ -19,7 +19,6 @@ window.addEventListener("DOMContentLoaded",function(){
 (function () {
   var gads = document.createElement("script");
   gads.async = true;
-  gads.rel = "preload";
   gads.type = "text/javascript";
   var useSSL = "https:" == document.location.protocol;
   gads.src = (useSSL ? "https:" : "http:") +
@@ -30,7 +29,6 @@ window.addEventListener("DOMContentLoaded",function(){
 //load up prebid.js,  I think we need to load this earlier
 (function() {
     var pbjsEl = document.createElement("script");
-    pbjsEl.rel = "preload";
     pbjsEl.type = "text/javascript";
     pbjsEl.async = true;
     pbjsEl.src = "https://adops.adysis.com/prebid.js";
@@ -481,10 +479,10 @@ definitons: {
     inreedvid3Slot: { adUnitPath: "/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test3", size: "mappinginreedvidslot", sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
     },
     sizeMappings: {
-       mappinginreedvidslot: [
-       [[1024, 768],[[728,90],[300,250],[250,250],[468,60],[320,50],[1,1],[550,310]]],
-       [[768, 500],[[728,90],[300,250],[250,250],[468,60],[320,50],[1,1],[550,310]]],
-       [[1, 1],[[300,250],[250,250],[320,50],[1,1]]],
+     mappinginreedvidslot: [
+     [[1024, 768],[[728,90],[300,250],[250,250],[468,60],[320,50],[1,1],[550,310]]],
+     [[768, 500],[[728,90],[300,250],[250,250],[468,60],[320,50],[1,1],[550,310]]],
+     [[1, 1],[[300,250],[250,250],[320,50],[1,1]]],
     ]
     }
    });
