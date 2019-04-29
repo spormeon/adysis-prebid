@@ -412,29 +412,26 @@ console.log("user bid cache:", USERBIDCACHE );
                  { mediaQuery: '(min-width: 1px) and (max-width: 499px)', sizesSupported: [[550, 310], [300, 250], [250, 250], [320, 50], [1, 1]], labels: ['phone'] }
                 ]
              });
-                
-           pbjs.requestBids({
-                bidsBackHandler: initAdserver,
-                timeout: PREBID_TIMEOUT
-              });
-            });
-
-            function initAdserver() {
-                if (pbjs.initAdserverSet) return;
-                pbjs.initAdserverSet = true;
-                googletag.cmd.push(function() {
-                    pbjs.que.push(function() {
-                        pbjs.setTargetingForGPTAsync();
-                        googletag.pubads().refresh();
-                    });
-                });
-            }
+    pbjs.requestBids({
+     bidsBackHandler: initAdserver,
+     timeout: PREBID_TIMEOUT
+    });
+    });
+    function initAdserver() {
+     if (pbjs.initAdserverSet) return;
+     pbjs.initAdserverSet = true;
+     googletag.cmd.push(function() {
+     pbjs.que.push(function() {
+     pbjs.setTargetingForGPTAsync();
+     googletag.pubads().refresh();
+     });
+     });
+     }
+  // in case PBJS doesn't load
+     setTimeout(function() {
+     initAdserver();
+     }, site_config.FAILSAFE_TIMEOUT);
             
-         // in case PBJS doesn't load
-            setTimeout(function() {
-                initAdserver();
-            }, site_config.FAILSAFE_TIMEOUT);
-
 googletag.cmd.push(function () {
     (function (googletag, pbjs, config) {
      var sizeMappings = {};
