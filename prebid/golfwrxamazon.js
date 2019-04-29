@@ -24,6 +24,7 @@ window.addEventListener("DOMContentLoaded",function(){
 (function () {
   var gads = document.createElement("script");
   gads.async = true;
+  gads.rel = "preload";
   gads.type = "text/javascript";
   var useSSL = "https:" == document.location.protocol;
   gads.src = (useSSL ? "https:" : "http:") +
