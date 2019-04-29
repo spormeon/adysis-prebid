@@ -1,8 +1,7 @@
 // site config
 var site_config = {
     refresh_rate: 40000,  //denoted in milliseonds 40secs=40000...
-    FAILSAFE_TIMEOUT: 5000,   //denoted in milliseonds 5secs=5000...
-    leaderboard_sizes_mobile: [[320, 50],[234,60]]
+    FAILSAFE_TIMEOUT: 5000   //denoted in milliseonds 5secs=5000...
   }; 
 
 // site_config end
