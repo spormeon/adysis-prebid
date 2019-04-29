@@ -436,41 +436,41 @@ console.log("user bid cache:", USERBIDCACHE );
             }, site_config.FAILSAFE_TIMEOUT);
 
 googletag.cmd.push(function () {
-	  (function (googletag, pbjs, config) {
-	    var sizeMappings = {};
-	    var slots = {};
-	    function refreshSlot(slot) {
-	      pbjs.que.push(function() {
-	        pbjs.requestBids({
-	          timeout: PREBID_TIMEOUT,
-	          // useBidCache: USERBIDCACHE,
-	          adUnitCodes: [slot.getSlotElementId()],
-	          bidsBackHandler: function() {
-	            pbjs.setTargetingForGPTAsync([slot.getSlotElementId()]);
-	            googletag.pubads().refresh([slot]);
-	          }
-	        });
-	      });
-	    }
-	    Object.keys(config.sizeMappings).forEach(function (key) {
-	      var sizeMappingBuilder = googletag.sizeMapping();
-	      config.sizeMappings[key].forEach(function (mapping) {
-	        sizeMappingBuilder.addSize(mapping[0], mapping[1]);
-	      });
-	      var sizeMapping = sizeMappingBuilder.build();
-	      sizeMappings[key] = sizeMapping;
-	      console.log('created sizemapping', sizeMappings[key]);
-	    });
-	    googletag.pubads().enableSingleRequest();
-	    googletag.pubads().collapseEmptyDivs(true);
-	    googletag.pubads().setCentering(true);
-	    // googletag.pubads().disableInitialLoad();
-	    googletag.pubads().enableLazyLoad({
-	    	fetchMarginPercent: 25,  // Fetch slots within 30 viewports.
-	    	renderMarginPercent: 20,  // Render slots within 5000 viewports.
-	    	mobileScaling: 0.1  // Double the above values on mobile.
-	    });
-	    googletag.enableServices();
+    (function (googletag, pbjs, config) {
+     var sizeMappings = {};
+      var slots = {};
+       function refreshSlot(slot) {
+       pbjs.que.push(function() {
+       pbjs.requestBids({
+       timeout: PREBID_TIMEOUT,
+    // useBidCache: USERBIDCACHE,
+       adUnitCodes: [slot.getSlotElementId()],
+       bidsBackHandler: function() {
+       pbjs.setTargetingForGPTAsync([slot.getSlotElementId()]);
+       googletag.pubads().refresh([slot]);
+    }
+    });
+    });
+    }
+    Object.keys(config.sizeMappings).forEach(function (key) {
+     var sizeMappingBuilder = googletag.sizeMapping();
+      config.sizeMappings[key].forEach(function (mapping) {
+      sizeMappingBuilder.addSize(mapping[0], mapping[1]);
+    });
+     var sizeMapping = sizeMappingBuilder.build();
+      sizeMappings[key] = sizeMapping;
+      console.log("created sizemapping", sizeMappings[key]);
+    });
+    googletag.pubads().enableSingleRequest();
+    googletag.pubads().collapseEmptyDivs(true);
+    googletag.pubads().setCentering(true);
+ // googletag.pubads().disableInitialLoad();
+    googletag.pubads().enableLazyLoad({
+      fetchMarginPercent: 25,  // Fetch slots within 30 viewports.
+      renderMarginPercent: 20,  // Render slots within 5000 viewports.
+      mobileScaling: 0.1  // Double the above values on mobile.
+    });
+    googletag.enableServices();
 // not sure if impressionViewable, slotRenderEnded or slotOnload is best to use yet
     googletag.pubads().addEventListener("slotRenderEnded", function (event) {
      var elementId = event.slot.getSlotElementId();
