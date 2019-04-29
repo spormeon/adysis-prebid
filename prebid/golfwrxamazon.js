@@ -498,10 +498,10 @@ googletag.cmd.push(function () {
 
 	  })(window.googletag, window.pbjs, {
 definitons: {
-    inreedvidSlot: { adUnitPath: '/1001824/Golfwrx.com-HB/Golfwrx.com-HB-Vid-test', size: 'mappinginreedvidslot', sizeMapping: 'mappinginreedvidslot', timeout: site_config.refresh_rate, },
-    inreedvid1Slot: { adUnitPath: '/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test1', size: 'mappinginreedvidslot', sizeMapping: 'mappinginreedvidslot', timeout: site_config.refresh_rate, },
-    inreedvid2Slot: { adUnitPath: '/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test2', size: 'mappinginreedvidslot', sizeMapping: 'mappinginreedvidslot', timeout: site_config.refresh_rate, },
-    inreedvid3Slot: { adUnitPath: '/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test3', size: 'mappinginreedvidslot', sizeMapping: 'mappinginreedvidslot', timeout: site_config.refresh_rate, },
+    inreedvidSlot: { adUnitPath: "/1001824/Golfwrx.com-HB/Golfwrx.com-HB-Vid-test", size: "mappinginreedvidslot", sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
+    inreedvid1Slot: { adUnitPath: "/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test1", size: "mappinginreedvidslot", sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
+    inreedvid2Slot: { adUnitPath: "/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test2", size: "mappinginreedvidslot", sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
+    inreedvid3Slot: { adUnitPath: "/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test3", size: "mappinginreedvidslot", sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
     },
     sizeMappings: {
        mappinginreedvidslot: [
