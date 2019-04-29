@@ -35,7 +35,7 @@ window.addEventListener("DOMContentLoaded",function(){
 //load up prebid.js,  I think we need to load this earlier
 (function() {
     var pbjsEl = document.createElement("script");
-    pbjsEl.rel = "preconnect";
+    pbjsEl.rel = "preload";
     pbjsEl.type = "text/javascript";
     pbjsEl.async = true;
     pbjsEl.src = "//adops.adysis.com/prebid.js";
