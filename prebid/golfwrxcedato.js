@@ -32,7 +32,7 @@ window.addEventListener('DOMContentLoaded',function(){
     var pbjsEl = document.createElement("script");
     pbjsEl.type = "text/javascript";
     pbjsEl.async = true;
-    pbjsEl.src = "//adops.adysis.com/prebid2.12.0.cedato.js";
+    pbjsEl.src = "//adops.adysis.com/prebid2.12.0.cedatojs.js";
     var pbjsTargetEl = document.getElementsByTagName("footerbid")[0];
     pbjsTargetEl.insertBefore(pbjsEl, pbjsTargetEl.firstChild);
 })();
