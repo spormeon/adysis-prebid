@@ -2,15 +2,12 @@
 var site_config = {
     refresh_rate: 40000,  //denoted in milliseonds 40secs=40000...
     FAILSAFE_TIMEOUT: 5000   //denoted in milliseonds 5secs=5000...
-  }; 
-
+  };
 // site_config end
-
 // unruly player config //
 window.top.unruly = window.top.unruly || {}
 window.top.unruly.native = window.top.unruly.native || {}
 window.top.unruly.native.onAdLoaded = () => {window.top.unruly.native.disclosureMessage = "";}
-
 //Slots to send to page, have to add 1 on to the child (number) because the div counts as 1 in the string 
 window.addEventListener("DOMContentLoaded",function(){
     document.querySelector("#mvp-content-main p:nth-child(2)").insertAdjacentHTML('afterbegin','<br><div class="ad-reporter-ahytrfg35423"><div id="advertisement" style="border: 0pt none; margin: auto; text-align: center; color: #999; text-transform: uppercase; font-family: sans-serif; font-size: 9px; font-weight: 400; letter-spacing: .2em; line-height: 1; margin-top: 0px; position: relative; top: -4px;">Advertisement</div><div id="inreedvidSlot"></div></div><br>');
@@ -18,7 +15,6 @@ window.addEventListener("DOMContentLoaded",function(){
     document.querySelector("#mvp-content-main p:nth-child(10)").insertAdjacentHTML('afterbegin','<br><div class="ad-reporter-ahytrfg35423"><div id="advertisement" style="border: 0pt none; margin: auto; text-align: center; color: #999; text-transform: uppercase; font-family: sans-serif; font-size: 9px; font-weight: 400; letter-spacing: .2em; line-height: 1; margin-top: 0px; position: relative; top: -4px;">Advertisement</div><div id="inreedvid2Slot"></div></div><br>');
     document.querySelector("#mvp-content-main p:nth-child(14)").insertAdjacentHTML('afterbegin','<br><div class="ad-reporter-ahytrfg35423"><div id="advertisement" style="border: 0pt none; margin: auto; text-align: center; color: #999; text-transform: uppercase; font-family: sans-serif; font-size: 9px; font-weight: 400; letter-spacing: .2em; line-height: 1; margin-top: 0px; position: relative; top: -4px;">Advertisement</div><div id="inreedvid3Slot"></div></div><br>');
 });
-
 //load up google gpt.js
 (function () {
   var gads = document.createElement("script");
@@ -31,7 +27,6 @@ window.addEventListener("DOMContentLoaded",function(){
   var node = document.getElementsByTagName("footerbid")[0];
   node.parentNode.insertBefore(gads, node);
 })();
-
 //load up prebid.js,  I think we need to load this earlier
 (function() {
     var pbjsEl = document.createElement("script");
@@ -42,14 +37,12 @@ window.addEventListener("DOMContentLoaded",function(){
     var pbjsTargetEl = document.getElementsByTagName("footerbid")[0];
     pbjsTargetEl.insertBefore(pbjsEl, pbjsTargetEl.firstChild);
 })();
-
 // amazon bidder
 !function(a9,a,p,s,t,A,g){if(a[a9])return;function q(c,r){a[a9]._Q.push([c,r])}a[a9]={init:function(){q("i",arguments)},fetchBids:function(){q("f",arguments)},setDisplayBids:function(){},targetingKeys:function(){return[]},_Q:[]};A=p.createElement(s);A.async=!0;A.src=t;g=p.getElementsByTagName(s)[0];g.parentNode.insertBefore(A,g)}("apstag",window,document,"script","//c.amazon-adsystem.com/aax2/apstag.js");
 apstag.init({
    pubID: '7f2180c4-57bc-43a4-9896-ecff1a52049d',
    adServer: 'googletag'
  });
-
 apstag.fetchBids({
 slots: [{
     slotID: 'inreedvidSlot',
@@ -80,7 +73,6 @@ slots: [{
      });
  });
 // amazon bidder end
-
 //  1000 def brings back bigger bids in Uk
 var timeoutMap = {
 0 : 1400,
@@ -110,7 +102,6 @@ var timeoutMap = {
 };
 var t = new Date().getUTCHours();
 PREBID_TIMEOUT = timeoutMap[t];
-
 var usebidcacheMap = {
 0 : true,			   
 1 : false,
@@ -138,26 +129,22 @@ var usebidcacheMap = {
 23 : false
 };
 var u = new Date().getUTCHours();
-
 USERBIDCACHE = usebidcacheMap[u];
-console.log("user bid cache:", USERBIDCACHE );
-				
-          //ASSERTIVE ANALYTICS SETTINGS - Version: 1.4.0
-            var assertive_entityId = 'FHkAkgiDWrXm4dZFw';
-            var assertive_debug = 0; // append the query string 'assertiveYield=debug' or add this local storage entry 'localStorage.setItem("assertiveYield", "debug")' to enable dynamically
-            var assertive_sampleRate = 1; // 1 = 100%, 0.2 = 20%...
-
-            var assertive_timeout = null;
-            var assertive_layout = null;
-            var assertive_userState = null;
-            // var assertive_custom_1 = null;
-            var assertive_custom_2 = null;
-            var assertive_custom_3 = null;
-            var assertive_custom_4 = null;
-            var assertive_custom_5 = null;
-
-          //example of supplying a custom var from a prev. defined var
-            assertive_timeout = PREBID_TIMEOUT;
+console.log("user bid cache:", USERBIDCACHE );			
+//ASSERTIVE ANALYTICS SETTINGS - Version: 1.4.0
+    var assertive_entityId = "FHkAkgiDWrXm4dZFw";
+    var assertive_debug = 0; // append the query string 'assertiveYield=debug' or add this local storage entry 'localStorage.setItem("assertiveYield", "debug")' to enable dynamically
+    var assertive_sampleRate = 1; // 1 = 100%, 0.2 = 20%...
+    var assertive_timeout = null;
+    var assertive_layout = null;
+    var assertive_userState = null;
+ // var assertive_custom_1 = null;
+    var assertive_custom_2 = null;
+    var assertive_custom_3 = null;
+    var assertive_custom_4 = null;
+    var assertive_custom_5 = null;
+//example of supplying a custom var from a prev. defined var
+    assertive_timeout = PREBID_TIMEOUT;
 
             var adUnits = [
             	//new ad unit block
