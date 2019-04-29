@@ -472,31 +472,30 @@ googletag.cmd.push(function () {
 	    });
 	    googletag.enableServices();
 // not sure if impressionViewable, slotRenderEnded or slotOnload is best to use yet
-	    googletag.pubads().addEventListener('slotRenderEnded', function (event) {
-	      var elementId = event.slot.getSlotElementId();
-	      var slotConfig = slots[elementId];
-	      if (slotConfig) {
-	        var handle = setTimeout(function () {
-	          googletag.cmd.push(function () {
-	            refreshSlot(event.slot);
-	          });
-	        }, config.definitons[elementId].timeout);
-	        console.log('handle for time ', handle, ' elementId ', elementId, ' duration ', config.definitons[elementId].timeout);
-	      }
-	    });
-	    Object.keys(config.definitons).forEach(function (key) {
-	      var def = config.definitons[key];
-	      var slot = googletag.defineSlot(def.adUnitPath, def.size, key);
-	      slot.setTargeting('test', 'refresh');
-	      // slot.setTargeting(event.slot);
-	      slot.defineSizeMapping(sizeMappings[def.sizeMapping]);
-	      slot.addService(googletag.pubads());
-	      googletag.display(key);
-	      slots[key] = { slot: slot };
-	    });
-	     // googletag.pubads().refresh();
-
-	  })(window.googletag, window.pbjs, {
+    googletag.pubads().addEventListener("slotRenderEnded", function (event) {
+     var elementId = event.slot.getSlotElementId();
+      var slotConfig = slots[elementId];
+       if (slotConfig) {
+        var handle = setTimeout(function () {
+         googletag.cmd.push(function () {
+         refreshSlot(event.slot);
+    });
+    }, config.definitons[elementId].timeout);
+      console.log("handle for time ", handle, "elementId", elementId, "duration", config.definitons[elementId].timeout);
+    }
+    });
+    Object.keys(config.definitons).forEach(function (key) {
+     var def = config.definitons[key];
+      var slot = googletag.defineSlot(def.adUnitPath, def.size, key);
+       slot.setTargeting("test", "refresh");
+    // slot.setTargeting(event.slot);
+       slot.defineSizeMapping(sizeMappings[def.sizeMapping]);
+       slot.addService(googletag.pubads());
+        googletag.display(key);
+       slots[key] = { slot: slot };
+    });
+    // googletag.pubads().refresh();
+    })(window.googletag, window.pbjs, {
 definitons: {
     inreedvidSlot: { adUnitPath: "/1001824/Golfwrx.com-HB/Golfwrx.com-HB-Vid-test", size: "mappinginreedvidslot", sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
     inreedvid1Slot: { adUnitPath: "/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test1", size: "mappinginreedvidslot", sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
