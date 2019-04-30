@@ -47,13 +47,13 @@
                     video: {
                         playerSize: [640, 480],
                         context: 'instream',
-                        mimes: ['video/mp4'],
+                        mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'],
                         protocols: [1, 2, 3, 4, 5, 6],
                         playbackmethod: [2]
                     }
                 },
                 bids: [
-                	{ bidder: 'appnexus', params: { placementId: 13232361, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } },
+                	{ bidder: 'appnexus', params: { placementId: 11971351, video: { skippable: true } } },
                     { bidder: 'districtm', params: { placementId: 11937611, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }
                 ]
             };
