@@ -136,13 +136,7 @@
             var videoAdUnit = {
                 code: 'video1',
                 mediaTypes: {
-                    video: {
-                        playerSize: [550, 310],
-                        context: 'instream',
-                        mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'],
-                        protocols: [2, 3],
-                        playbackmethod: [2]
-                    }
+                    video: { context: 'outstream', mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'], playerSize: [[550, 310]], minduration: 10,  maxduration: 30, protocols: [2,3], w:640, h:480, playbackmethod: [2]  }
                 },
                 bids: [
                 	{ bidder: 'appnexus', params: { placementId: '11971351', video: { skippable: true, playback_method: ['auto_play_sound_off'] } } },
