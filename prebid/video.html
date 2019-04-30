@@ -52,24 +52,10 @@
                         playbackmethod: [2]
                     }
                 },
-                bids: [{
-                    bidder: 'appnexus',
-                    params: {
-                        placementId: '11971351', // Add your own placement id here.
-                        video: {
-                            skippable: true,
-                            playback_method: ['auto_play_sound_off']
-                        }
-                    },
-                    bidder: 'districtm',
-                    params: {
-                        placementId: 11937611, // Add your own placement id here.
-                        video: {
-                            skippable: true,
-                            playback_method: ['auto_play_sound_off']
-                        }
-                    }
-                }]
+                bids: [
+                	{ bidder: 'appnexus', params: { placementId: '11971351', video: { skippable: true, playback_method: ['auto_play_sound_off'] } },
+                    { bidder: 'districtm', params: { placementId: 11937611, video: { skippable: true, playback_method: ['auto_play_sound_off'] } }
+                ]
             };
 
             pbjs.que.push(function() {
