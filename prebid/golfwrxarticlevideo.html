@@ -1,7 +1,16 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-
+<!-- videojs -->
+<script async src="https://adops.adysis.com/prebid.js"></script>
+        <!-- use recent version of videojs to ensure proper functioning with the iOS devices -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/video.js/6.4.0/video-js.css">
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/video.js/6.4.0/video.js"></script>
+        <!-- videojs-vast-vpaid -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/videojs-vast-vpaid/2.0.2/videojs.vast.vpaid.min.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-vast-vpaid/2.0.2/videojs_5.vast.vpaid.min.js"></script>
+        
+        
 <!-- Quantcast Choice. Consent Manager Tag -->
 <script type="text/javascript" async=true>
     var elem = document.createElement('script');
@@ -98,14 +107,7 @@
     });
 </script>
 <!-- End Quantcast Choice. Consent Manager Tag -->
-<!-- videojs -->
-<script async src="https://adops.adysis.com/prebid.js"></script>
-        <!-- use recent version of videojs to ensure proper functioning with the iOS devices -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/video.js/6.4.0/video-js.css">
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/video.js/6.4.0/video.js"></script>
-        <!-- videojs-vast-vpaid -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/videojs-vast-vpaid/2.0.2/videojs.vast.vpaid.min.css" rel="stylesheet">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-vast-vpaid/2.0.2/videojs_5.vast.vpaid.min.js"></script>
+
 
 <script>
             var pbjs = pbjs || {};
@@ -140,7 +142,7 @@
                 },
                 bids: [
                 	{ bidder: 'appnexus', params: { placementId: 11971351, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } },
-                    { bidder: 'districtm', params: { placementId: 11937611, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }
+                    // { bidder: 'districtm', params: { placementId: 11937611, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }
                 ]
             };
 
@@ -161,7 +163,7 @@
                     s2sConfig: {
                     	accountId: 'c9d412ee-3cc6-4b66-9326-9f49d528f13e',
                         enabled: true,
-                        bidders: ['districtm','appnexus'],
+                        bidders: ['appnexus'],
                         timeout: 2000,
                         adapter: 'prebidServer',
                         endpoint: 'https://prebid.adnxs.com/pbs/v1/openrtb2/auction',
