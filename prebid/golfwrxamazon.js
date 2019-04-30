@@ -443,7 +443,7 @@ googletag.cmd.push(function () {
     googletag.pubads().enableLazyLoad({
       fetchMarginPercent: 25,  // Fetch slots within 30 viewports.
       renderMarginPercent: 20,  // Render slots within 5000 viewports.
-      mobileScaling: 0.1  // Double the above values on mobile.
+      mobileScaling: 0.0  // Double the above values on mobile.
     });
     googletag.enableServices();
 // not sure if impressionViewable, slotRenderEnded or slotOnload is best to use yet
