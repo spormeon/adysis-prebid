@@ -44,8 +44,15 @@
 
             pbjs.que.push(function() {
                 pbjs.addAdUnits(adUnits);
+                
+             // alias for bidder
+                
+               
+                pbjs.aliasBidder('appnexus','districtm');
+                
+                
                 pbjs.requestBids({
-                    timeout: 1000,
+                    timeout: 2000,
                     bidsBackHandler: function(bids) {
                         var highestCpmBids = pbjs.getHighestCpmBids('video1');
                         pbjs.renderAd(document, highestCpmBids[0].adId);
