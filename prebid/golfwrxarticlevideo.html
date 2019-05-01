@@ -142,7 +142,7 @@
                 },
                 bids: [
                 	{ bidder: 'appnexus', params: { placementId: 11971351, video: { skippable: false, playback_method: ['auto_play_sound_off'], rendererUrl: 'http://cdn.adnxs.com/renderer/video/ANOutstreamVideo.js' } } },
-                    // { bidder: 'districtm', params: { placementId: 11937611, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }
+                    { bidder: 'districtm', params: { placementId: 11937611, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }
                 ]
             };
 
@@ -163,7 +163,7 @@
                     s2sConfig: {
                     	accountId: 'c9d412ee-3cc6-4b66-9326-9f49d528f13e',
                         enabled: true,
-                        bidders: ['appnexus'],
+                        bidders: ['appnexus','districtm'],
                         timeout: 2000,
                         adapter: 'prebidServer',
                         endpoint: 'https://prebid.adnxs.com/pbs/v1/openrtb2/auction',
