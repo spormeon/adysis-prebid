@@ -1076,7 +1076,7 @@ var SafeCommentsAjax = {"ajaxurl":"http:\/\/www.golfwrx.com\/wp-admin\/admin-aja
 
                     var player = this;
                     var vastAd = player.vastClient({
-                        adTagUrl: url,
+                        adTagUrl: getAdsUrl,
                         prerollTimeout: 500,
                         playAdAlways: true,
                         verbosity: 4,
@@ -1089,6 +1089,7 @@ var SafeCommentsAjax = {"ajaxurl":"http:\/\/www.golfwrx.com\/wp-admin\/admin-aja
 
                     player.muted(true);
                     player.play();
+                    player.skin(false);
 
                     page_load_time = new Date().getTime() - performance.timing.navigationStart;
                     console.log(page_load_time + "ms -- invokeVideoPlayer complete!");
