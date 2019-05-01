@@ -4,7 +4,7 @@
     <head>
        
 <!-- videojs -->
-<script async src="https://adops.adysis.com/prebid.js"></script>
+<script async src="//acdn.adnxs.com/prebid/not-for-prod/1/prebid.js"></script>
         <meta charset="utf-8" />
         <title>Prebid Server Video -- Video.js</title>
         <!-- videojs -->
@@ -64,22 +64,9 @@
                         accountId: 'e31f627f-53a3-4288-9979-482d3c6ffc76',
                         enabled: true,
                         bidders: ['districtm','appnexus'],
-                        timeout: 1000,
                         adapter: 'prebidServer',
                         endpoint: 'https://prebid.adnxs.com/pbs/v1/openrtb2/auction',
-                        syncEndpoint: 'https://prebid.adnxs.com/pbs/v1/cookie_sync',
-                        cookieSet: true,
-                        cookiesetUrl: 'https://acdn.adnxs.com/cookieset/cs.js'
                       },
-                      userSync: {
-                          iframeEnabled: true,
-                          syncsPerBidder: 50, // and no more than 3 syncs at a time
-                          syncDelay: 6000, // 5 seconds after the auction
-                        filterSettings: {
-                           iframe: { bidders: ['pulsepoint'], filter: 'exclude' },
-                           image:  { bidders: '*', filter: 'include' }
-                           },
-                         },
                 });
 
                 pbjs.addAdUnits(videoAdUnit); // add your ad units to the bid request
