@@ -49,8 +49,9 @@
                 
                
                 pbjs.aliasBidder('appnexus','districtm');
-                
-                
+                pbjs.setConfig({
+                	debug: true,
+                });
                 pbjs.requestBids({
                     timeout: 2000,
                     bidsBackHandler: function(bids) {
