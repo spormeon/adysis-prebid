@@ -49,11 +49,10 @@
                 
                 
                 pbjs.aliasBidder('appnexus','districtm');
-                pbjs.setConfig({
-                	debug: true,
-                });
+                
                 
                 pbjs.requestBids({
+debug: true,
                     timeout: 2000,
                     bidsBackHandler: function(bids) {
                         var highestCpmBids = pbjs.getHighestCpmBids('video1');
