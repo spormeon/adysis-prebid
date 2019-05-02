@@ -3958,65 +3958,7 @@ VASTIntegrator.prototype._setupEvents = function setupEvents(adMediaFile, tracke
   }
 };
 
-VASTIntegrator.prototype._addSkipButton = function addSkipButton(source, tracker, response, callback) {
-  var skipOffsetInSec;
-  var that = this;
 
-  if (utilities.isNumber(response.skipoffset)) {
-    skipOffsetInSec = response.skipoffset / 1000;
-    addSkipButtonToPlayer(this.player, skipOffsetInSec);
-  }
-  callback(null, source, tracker, response);
-
-  /*** Local function ***/
-  function addSkipButtonToPlayer(player, skipOffset) {
-    var skipButton = createSkipButton(player);
-    var updateSkipButton = updateSkipButtonState.bind(that, skipButton, skipOffset, player);
-
-    player.el().appendChild(skipButton);
-    player.on('timeupdate', updateSkipButton);
-
-    playerUtils.once(player, ['vast.adEnd', 'vast.adsCancel'], removeSkipButton);
-
-    function removeSkipButton() {
-      player.off('timeupdate', updateSkipButton);
-      dom.remove(skipButton);
-    }
-  }
-
-  function createSkipButton(player) {
-    var skipButton = window.document.createElement("div");
-    dom.addClass(skipButton, "vast-skip-button");
-
-    skipButton.onclick = function (e) {
-      if (dom.hasClass(skipButton, 'enabled')) {
-        tracker.trackSkip();
-        player.trigger('vast.adSkip');
-      }
-
-      //We prevent event propagation to avoid problems with the clickThrough and so on
-      if (window.Event.prototype.stopPropagation !== undefined) {
-        e.stopPropagation();
-      } else {
-        return false;
-      }
-    };
-
-    return skipButton;
-  }
-
-  function updateSkipButtonState(skipButton, skipOffset, player) {
-    var timeLeft = Math.ceil(skipOffset - player.currentTime());
-    if (timeLeft > 0) {
-      skipButton.innerHTML = "Skip in " + utilities.toFixedDigits(timeLeft, 2) + "...";
-    } else {
-      if (!dom.hasClass(skipButton, 'enabled')) {
-        dom.addClass(skipButton, 'enabled');
-        skipButton.innerHTML = "Skip ad";
-      }
-    }
-  }
-};
 
 VASTIntegrator.prototype._addClickThrough = function addClickThrough(mediaFile, tracker, response, callback) {
   var player = this.player;
