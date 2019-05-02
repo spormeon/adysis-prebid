@@ -1,6 +1,5 @@
 .video-js .vjs-icon-placeholder:before, .vjs-button > .vjs-icon-placeholder:before, .video-js .vjs-modal-dialog, .vjs-modal-dialog .vjs-modal-dialog-content {
   position: absolute;
-  display: none;
   top: 0;
   left: 0;
   width: 100%;
