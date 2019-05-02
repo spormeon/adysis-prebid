@@ -1,3 +1,6 @@
+.video-js .vjs-big-play-button {
+    display: none;
+}
 .vjs-label-hidden {
   display: none! important; }
 
