@@ -64,6 +64,29 @@ div.vjs-vpaid-ad .vjs-tech {
 .vjs-ad-playing .vjs-play-progress {
   background-color: # ffe400! important; }
 
+div.vast-skip-button {
+  display: block;
+  position: absolute;
+  bottom: 20%;
+  right: 0;
+  background-color: # 000;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  width: car;
+  padding: 8px;
+  z-index: 2;
+  border: 1px solid white;
+  border-right: none; }
+
+.vast-skip-button.enabled {
+  cursor: pointer;
+  color: #fff; }
+
+.vast-skip-button.enabled: hover {
+  cursor: pointer;
+  background: # 333; }
+
 .vast-blocker {
   display: block;
   position: absolute;
@@ -75,7 +98,26 @@ div.vjs-vpaid-ad .vjs-tech {
   left: 0;
   right: 0;
   bottom: 0; }
+
+.vast-skip-button.enabled: after {
+  content: ">>";
+  position: relative;
+  top: 1px;
+  margin-left: 8px; }
+
 / * Ad loading * /
+.vjs-ad-playing.vjs-vast-ad-loading .vjs-loading-spinner {
+  display: block;
+  z-index: 10;
+  / * only animate when showing can it be processor heavy * /
+  / * animation * /
+  -webkit-animation: spin 1.5s infinite linear;
+  -moz-animation: spin 1.5s infinite linear;
+  -o-animation: spin 1.5s infinite linear;
+  animation: spin 1.5s infinite linear; }
+
+.vjs-vast-ad-loading div.vjs-big-play-button {
+  display: none! important; }
 
 .vjs-ad-playing .vjs-slider-handle: before {
   display: none; }
