@@ -94,6 +94,9 @@ video: { skippable: true, playback_method: ['auto_play_sound_off'] } } },
                         adapter: 'prebidServer',
                         timeout: 1000,
                         endpoint: 'https://prebid.adnxs.com/pbs/v1/openrtb2/auction',
+                        syncEndpoint: 'https://prebid.adnxs.com/pbs/v1/cookie_sync',
+                        cookieSet: true,
+                        cookiesetUrl: 'https://acdn.adnxs.com/cookieset/cs.js'
                       },
                       userSync: {
                           iframeEnabled: true,
