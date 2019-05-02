@@ -92,7 +92,7 @@ video: { skippable: true, playback_method: ['auto_play_sound_off'] } } },
                      // Mark the bid, used in buildVideoUrl, as used
                         pbjs.markWinningBidAsUsed({
                             adUnitCode: videoAdUnit.code // optional if you know the adId
-                            adId: bid.adId // optional
+                            // adId: bid.adId // optional
                         });
                      
                         invokeVideoPlayer(videoUrl);
