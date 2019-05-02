@@ -68,7 +68,7 @@ div.vjs-vpaid-ad .vjs-tech {
   background-color: # ffe400! important; }
 
 div.vast-skip-button {
-  display: block;
+  display: none;
   position: absolute;
   bottom: 20%;
   right: 0;
