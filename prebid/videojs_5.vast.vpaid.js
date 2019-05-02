@@ -3822,7 +3822,6 @@ VASTIntegrator.prototype.playAd = function playAd(vastResponse, callback) {
     this._selectAdSource.bind(this),
     this._createVASTTracker.bind(this),
     this._addClickThrough.bind(this),
-    this._addSkipButton.bind(this),
     this._setupEvents.bind(this),
     this._playSelectedAd.bind(this)
   ], function (error, response) {
