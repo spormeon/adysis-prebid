@@ -5673,60 +5673,7 @@ VPAIDIntegrator.prototype._setupEvents = function (adUnit, vastResponse, next) {
   }
 };
 
-VPAIDIntegrator.prototype._addSkipButton = function (adUnit, vastResponse, next) {
-  var skipButton;
-  var player = this.player;
 
-  adUnit.on('AdSkippableStateChange', updateSkipButtonState);
-
-  playerUtils.once(player, ['vast.adEnd', 'vast.adsCancel'], removeSkipButton);
-
-  next(null, adUnit, vastResponse);
-
-  /*** Local function ***/
-  function updateSkipButtonState() {
-    player.trigger('vpaid.AdSkippableStateChange');
-    adUnit.getAdSkippableState(function (error, isSkippable) {
-      if (isSkippable) {
-        if (!skipButton) {
-          addSkipButton(player);
-        }
-      } else {
-        removeSkipButton(player);
-      }
-    });
-  }
-
-  function addSkipButton(player) {
-    skipButton = createSkipButton(player);
-    player.el().appendChild(skipButton);
-  }
-
-  function removeSkipButton() {
-    dom.remove(skipButton);
-    skipButton = null;
-  }
-
-  function createSkipButton() {
-    var skipButton = window.document.createElement("div");
-    dom.addClass(skipButton, "vast-skip-button");
-    dom.addClass(skipButton, "enabled");
-    skipButton.innerHTML = "Skip ad";
-
-    skipButton.onclick = function (e) {
-      adUnit.skipAd(utilities.noop);//We skip the adUnit
-
-      //We prevent event propagation to avoid problems with the clickThrough and so on
-      if (window.Event.prototype.stopPropagation !== undefined) {
-        e.stopPropagation();
-      } else {
-        return false;
-      }
-    };
-
-    return skipButton;
-  }
-};
 
 VPAIDIntegrator.prototype._linkPlayerControls = function (adUnit, vastResponse, next) {
   var that = this;
