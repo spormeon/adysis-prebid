@@ -96,7 +96,7 @@ video: { skippable: true, playback_method: ['auto_play_sound_off'] } } },
                         enabled: true,
                         bidders: ['districtm','appnexus','beachfront','gamoshi','rhythmone','somoaudience'],
                         adapter: 'prebidServer',
-                        timeout: 1000,
+                        timeout: 800,
                         endpoint: 'https://prebid.adnxs.com/pbs/v1/openrtb2/auction',
                         syncEndpoint: 'https://prebid.adnxs.com/pbs/v1/cookie_sync',
                         cookieSet: true,
@@ -105,7 +105,7 @@ video: { skippable: true, playback_method: ['auto_play_sound_off'] } } },
                       userSync: {
                           iframeEnabled: true,
                           syncsPerBidder: 50, // and no more than 3 syncs at a time
-                          syncDelay: 6000, // 5 seconds after the auction
+                          syncDelay: 4000, // 5 seconds after the auction
                         filterSettings: {
                            iframe: { bidders: ['pulsepoint'], filter: 'exclude' },
                            image:  { bidders: '*', filter: 'include' }
@@ -116,7 +116,7 @@ video: { skippable: true, playback_method: ['auto_play_sound_off'] } } },
                          enableSendAllBids: false, // Default will be `true` as of 1.0
                          bidderSequence: 'random', // Default is random
                          publisherDomain: 'golfwrx.com',
-                         bidderTimeout: 1500,
+                         bidderTimeout: 1300,
                          pubcid: {expInterval: 525600},
                          currency: {
                            'adServerCurrency': "GBP",
