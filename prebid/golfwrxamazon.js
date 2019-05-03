@@ -423,6 +423,7 @@ googletag.cmd.push(function () {
        adUnitCodes: [slot.getSlotElementId()],
        bidsBackHandler: function() {
        pbjs.setTargetingForGPTAsync([slot.getSlotElementId()]);
+       googletag.destroySlots([slot]);
        googletag.pubads().refresh([slot]);
     }
     });
