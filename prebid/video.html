@@ -73,6 +73,15 @@ video: { skippable: true, playback_method: ['auto_play_sound_off'] } } },
             pbjs.que.push(function() {
             	// configure prebid to use prebid cache and prebid server
                 // make sure to add your own accountId to your s2sConfig object
+                pbjs.bidderSettings = { 
+      districtm:    { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.88; } },
+      districtmDMX:  { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.90; } },
+      teads:   { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.94; } },
+      unruly:  { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.90; } },
+      viewdeos:  { bidCpmAdjustment : function(bidCpm){ return bidCpm * 1.00; } },
+      beachfront:   { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.025; } }, 
+   // appnexus:   { bidCpmAdjustment : function(bidCpm){ return bidCpm * 1.00; } },
+    };
                 pbjs.setConfig({
                     cache: {
                         url: 'https://prebid.adnxs.com/pbc/v1/cache'
