@@ -24935,7 +24935,7 @@ videojs.registerPlugin = Plugin.registerPlugin;
  * @param {Plugin|Function} plugin
  *         The plugin sub-class or function
  */
-videojs.plugin = function (name$$1, plugin) {
+videojs.registerPlugin = function (name$$1, plugin) {
   log$1.warn('videojs.plugin() is deprecated; use videojs.registerPlugin() instead');
   return Plugin.registerPlugin(name$$1, plugin);
 };
