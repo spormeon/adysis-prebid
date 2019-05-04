@@ -150,12 +150,12 @@ console.log("user bid cache:", USERBIDCACHE );
       code: 'inreedvidSlot',
       mediaTypes: {
        banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50]] },
-       video:  { context: 'outstream', mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'], playerSize: [[640, 480]], minduration: 1,  maxduration: 30, protocols: [2,3], w:640, h:480, protocols: [2,3], playbackmethod: [2]  }
+       video:  { context: 'outstream', mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'], playerSize: [[640, 480]], minduration: 1,  maxduration: 45, protocols: [2,3], w:640, h:480, protocols: [2,3], playbackmethod: [2]  }
       
       },
       bids: [
       { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
-      { bidder: 'appnexus',   params: { placementId: '11962910', allowSmallerSizes: true, usePaymentRule: true, video: { skippable: true } } }, /* one placementId for all sizes */
+      { bidder: 'appnexus',   params: { placementId: '11962910', allowSmallerSizes: true, usePaymentRule: true, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }, /* one placementId for all sizes */
    // { bidder: 'appnexus',   params: { placementId: '13232392', video: { skippable: true}, renderer: { url: 'http://cdn.adnxs.com/renderer/video/ANOutstreamVideo.js' } } }, /* demo video placement, always returns a vid, only works client side */ 
       { bidder: 'districtm',  params: { placementId: 11937611, allowSmallerSizes: true, video: { skippable: true } } },
       { bidder: 'districtmDMX',  params: { dmxid: 171413, memberid: 100041  } }, /* outstream - display */ 
