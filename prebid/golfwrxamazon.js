@@ -2,7 +2,7 @@
 var site_config = {
     refresh_rate: 40000,  //denoted in milliseonds 40secs=40000...
     FAILSAFE_TIMEOUT: 5000   //denoted in milliseonds 5secs=5000...
-    floor_price: 1.00 //set a min floor price on bids to pressure higher bids
+    // floor_price: 1.00 //set a min floor price on bids to pressure higher bids
   };
 // site_config end
 // unruly player config //
