@@ -150,7 +150,7 @@ console.log("user bid cache:", USERBIDCACHE );
       code: 'inreedvidSlot',
       mediaTypes: {
        banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50]] },
-       video:  { context: 'instream', mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'], playerSize: [[640, 480]], minduration: 1,  maxduration: 30, protocols: [2,3], w:640, h:480, protocols: [2,3], playbackmethod: [2]  }
+       video:  { context: 'outstream', mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'], playerSize: [[640, 480]], minduration: 1,  maxduration: 30, protocols: [2,3], w:640, h:480, protocols: [2,3], playbackmethod: [2]  }
       
       },
       bids: [
@@ -352,7 +352,7 @@ console.log("user bid cache:", USERBIDCACHE );
       timeout: 5000,
       allowAuctionWithoutConsent: true
       },
-        // cache: {url: "//prebid.adnxs.com/pbc/v1/cache"},
+        cache: {url: "//prebid.adnxs.com/pbc/v1/cache"},
       s2sConfig: {
         accountId: 'e31f627f-53a3-4288-9979-482d3c6ffc76',
         enabled: true,
