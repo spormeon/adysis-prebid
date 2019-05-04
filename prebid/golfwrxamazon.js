@@ -449,7 +449,7 @@ googletag.cmd.push(function () {
     });
     googletag.enableServices();
 // not sure if impressionViewable, slotRenderEnded or slotOnload is best to use yet
-    googletag.pubads().addEventListener("impressionViewable", function (event) {
+    googletag.pubads().addEventListener("slotRenderEnded", function (event) {
      var elementId = event.slot.getSlotElementId();
       var slotConfig = slots[elementId];
        if (slotConfig) {
