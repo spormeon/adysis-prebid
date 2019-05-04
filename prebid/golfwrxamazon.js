@@ -2,6 +2,7 @@
 var site_config = {
     refresh_rate: 40000,  //denoted in milliseonds 40secs=40000...
     FAILSAFE_TIMEOUT: 5000   //denoted in milliseonds 5secs=5000...
+    floor_price: 1.00 //set a min floor price on bids, to pressure higher bids
   };
 // site_config end
 // unruly player config //
@@ -335,14 +336,14 @@ console.log("user bid cache:", USERBIDCACHE );
       onedisplay:   { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.85; } },
       districtm:    { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.88; } },
       districtmDMX:  { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.90; } },
-      sekindonUM:    { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.75; } },
+   // sekindonUM:    { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.75; } },
    // brealtime:   { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.80; } },
    // springserveAlias2:  { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.65; } },
       teads:   { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.94; } },
       unruly:  { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.90; } },
       viewdeos:  { bidCpmAdjustment : function(bidCpm){ return bidCpm * 1.00; } },
       sovrn:   { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.85; } },
-      beachfront:   { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.025; } }, 
+      beachfront:   { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.035; } }, 
    // appnexus:   { bidCpmAdjustment : function(bidCpm){ return bidCpm * 1.00; } },
     };               	
     pbjs.setConfig({
