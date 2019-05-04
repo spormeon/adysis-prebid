@@ -86,7 +86,7 @@ placementId: 15897864,
                 // make sure to add your own accountId to your s2sConfig object
                 pbjs.bidderSettings = { 
       districtm:    { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.88; } },
-      districtmDMX:  { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.90; } },
+      // districtmDMX:  { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.90; } }, /* they dont support video */
       teads:   { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.94; } },
       unruly:  { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.90; } },
       viewdeos:  { bidCpmAdjustment : function(bidCpm){ return bidCpm * 1.00; } },
