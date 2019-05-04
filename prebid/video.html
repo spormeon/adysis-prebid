@@ -80,6 +80,8 @@ placementId: 15897864,
             };
 
             pbjs.que.push(function() {
+            	pbjs.addAdUnits(videoAdUnit); // add your ad units to the bid request
+            	
             	// configure prebid to use prebid cache and prebid server
                 // make sure to add your own accountId to your s2sConfig object
                 pbjs.bidderSettings = { 
@@ -130,7 +132,7 @@ placementId: 15897864,
                          },   
                 });
 
-                pbjs.addAdUnits(videoAdUnit); // add your ad units to the bid request
+                
 
                 pbjs.requestBids({
                     bidsBackHandler: function(bids) {
