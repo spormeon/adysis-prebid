@@ -69,7 +69,6 @@ placementId: 15897864,
 //placementId: 13144370,
 
                     	video: { skippable: true, playback_method: ['auto_play_sound_off'] } } },
-                    // { bidder: 'districtmDMX',  params: { dmxid: 364024, memberid: 100041  } }, /* outstream - display */ 
                     { bidder: 'beachfront', params: { bidfloor: 0.01, appId: '11bc5dd5-7421-4dd8-c926-40fa653bec76' } },
                     { bidder: 'viewdeos',   params: { supplyPartnerId: '1985' } },
                     { bidder: 'rhythmone',  params: { placementId: '76184', zone: '1r', path: 'mvo' } },
@@ -86,13 +85,11 @@ placementId: 15897864,
                 // make sure to add your own accountId to your s2sConfig object
                 pbjs.bidderSettings = { 
       districtm:    { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.88; } },
-      // districtmDMX:  { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.90; } }, /* they dont support video */
       teads:   { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.94; } },
       unruly:  { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.90; } },
-      viewdeos:  { bidCpmAdjustment : function(bidCpm){ return bidCpm * 1.00; } },
-      beachfront:   { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.01; } }, 
-      viewdeos:   { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.025; } },
-   // appnexus:   { bidCpmAdjustment : function(bidCpm){ return bidCpm * 1.00; } },
+      beachfront:   { bidCpmAdjustment : function(bidCpm){ return bidCpm * 1.00; } }, 
+      viewdeos:   { bidCpmAdjustment : function(bidCpm){ return bidCpm * 1.00; } },
+      appnexus:   { bidCpmAdjustment : function(bidCpm){ return bidCpm * 1.00; } },
     };
                 pbjs.setConfig({
                     cache: { url: 'https://prebid.adnxs.com/pbc/v1/cache' },
@@ -129,9 +126,7 @@ placementId: 15897864,
                            'conversionRateFile': 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json',
                          },   
                 });
-
                 
-
                 pbjs.requestBids({
                     bidsBackHandler: function(bids) {
                         var videoUrl = pbjs.adServers.dfp.buildVideoUrl({
