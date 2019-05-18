@@ -1,7 +1,7 @@
 // site config
 var site_config = {
     refresh_rate: 35000,  //denoted in milliseonds 40secs=40000...
-    FAILSAFE_TIMEOUT: 5000   //denoted in milliseonds 5secs=5000...
+    FAILSAFE_TIMEOUT: 2000   //denoted in milliseonds 5secs=5000...
     // floor_price: 1.00 //set a min floor price on bids to pressure higher bids
   };
 // site_config end
@@ -349,7 +349,7 @@ console.log("user bid cache:", USERBIDCACHE );
      priceGranularity: customConfigObject,
      consentManagement: {
       cmpApi: 'iab',
-      timeout: 5000,
+      timeout: 3000,
       allowAuctionWithoutConsent: true
       },
         //cache: {url: "//prebid.adnxs.com/pbc/v1/cache"},
@@ -367,7 +367,7 @@ console.log("user bid cache:", USERBIDCACHE );
       userSync: {
         iframeEnabled: true,
         syncsPerBidder: 50, // and no more than 3 syncs at a time
-        syncDelay: 6000, // 5 seconds after the auction
+        syncDelay: 5000, // 5 seconds after the auction
       filterSettings: {
          iframe: { bidders: ['pulsepoint'], filter: 'exclude' },
          image:  { bidders: '*', filter: 'include' }
@@ -378,7 +378,7 @@ console.log("user bid cache:", USERBIDCACHE );
        enableSendAllBids: false, // Default will be `true` as of 1.0
        bidderSequence: 'random', // Default is random
        publisherDomain: 'golfwrx.com',
-       bidderTimeout: 3500,
+       bidderTimeout: 1500,
        pubcid: {expInterval: 525600},
        currency: {
          'adServerCurrency': "GBP",
