@@ -349,7 +349,7 @@ console.log("user bid cache:", USERBIDCACHE );
      priceGranularity: customConfigObject,
      consentManagement: {
       cmpApi: 'iab',
-      timeout: 3000,
+      timeout: PREBID_TIMEOUT*200,
       allowAuctionWithoutConsent: true
       },
         //cache: {url: "//prebid.adnxs.com/pbc/v1/cache"},
@@ -367,7 +367,7 @@ console.log("user bid cache:", USERBIDCACHE );
       userSync: {
         iframeEnabled: true,
         syncsPerBidder: 50, // and no more than 3 syncs at a time
-        syncDelay: 5000, // 5 seconds after the auction
+        syncDelay: PREBID_TIMEOUT*2.5, // 5 seconds after the auction
       filterSettings: {
          iframe: { bidders: ['pulsepoint'], filter: 'exclude' },
          image:  { bidders: '*', filter: 'include' }
@@ -378,7 +378,7 @@ console.log("user bid cache:", USERBIDCACHE );
        enableSendAllBids: false, // Default will be `true` as of 1.0
        bidderSequence: 'random', // Default is random
        publisherDomain: 'golfwrx.com',
-       bidderTimeout: 1500,
+       bidderTimeout: PREBID_TIMEOUT+300,
        pubcid: {expInterval: 525600},
        currency: {
          'adServerCurrency': "GBP",
