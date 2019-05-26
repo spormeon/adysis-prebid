@@ -365,7 +365,8 @@ console.log("user bid cache:", USERBIDCACHE );
      pbjs.aliasBidder('appnexus','springserveAlias2');
      pbjs.aliasBidder('appnexus','districtm');
      pbjs.aliasBidder('gamoshi','viewdeos');
-     pbjs.aliasBidder('onedisplay','aol'); 
+     pbjs.aliasBidder('onedisplay','aol');
+     pbjs.aliasBidder('appnexus','constantbidder');
   // adjust the bid in real time before the auction takes place
      pbjs.bidderSettings = { 
       aol:  { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 0.85; } },
