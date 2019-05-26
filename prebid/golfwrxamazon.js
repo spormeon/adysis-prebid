@@ -38,7 +38,7 @@ PREBID_TIMEOUT = timeoutMap[t];
 var site_config = {
     refresh_rate: PREBID_TIMEOUT*30,  //denoted in milliseonds 40secs=40000...
     FAILSAFE_TIMEOUT: PREBID_TIMEOUT*1.5   //denoted in milliseonds 5secs=5000...
-    // floor_price: 1.00 //set a min floor price on bids to pressure higher bids
+    floor_price: 1.00 //set a min floor price on bids to pressure higher bids
   };
 // site_config end
 // unruly player config //
@@ -349,7 +349,7 @@ console.log("user bid cache:", USERBIDCACHE );
       viewdeos:  { bidCpmAdjustment : function(bidCpm){ return bidCpm * 1.00; } },
       sovrn:   { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.85; } },
       beachfront:   { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.035; } }, 
-   // appnexus:   { bidCpmAdjustment : function(bidCpm){ return bidCpm * 1.00; } },
+      appnexus:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < floor_price){ return 0;}return bidCpm * 1.00; } },
     };               	
     pbjs.setConfig({
      priceGranularity: customConfigObject,
