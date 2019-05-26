@@ -34,11 +34,40 @@ var timeoutMap = {
 };
 var t = new Date().getUTCHours();
 PREBID_TIMEOUT = timeoutMap[t];
+//FLOOR_PRICE MAP - 1000 def brings back bigger bids in Uk
+var floorpriceMap = {
+0 : 1.00,
+1 : 1.00,
+2 : 1.00,
+3 : 1.00,
+4 : 1.00,
+5 : 1.00,
+6 : 1.00,
+7 : 1.00,
+8 : 1.00,
+9 : 1.00,
+10 : 1.00,
+11 : 1.00,
+12 : 1.00,
+13 : 1.00,
+14 : 1.00,
+15 : 1.00,
+16 : 1.00,
+17 : 1.00,
+18 : 1.00,
+19 : 1.00,
+20 : 1.00,
+21 : 1.00,
+22 : 1.00,
+23 : 1.00
+};
+var f = new Date().getUTCHours();
+FLOOR_PRICE = floorpriceMap[f];
 // site config
 var site_config = {
     refresh_rate: PREBID_TIMEOUT*30,  //denoted in milliseonds 40secs=40000...
     FAILSAFE_TIMEOUT: PREBID_TIMEOUT*1.5   //denoted in milliseonds 5secs=5000...
-    floor_price: 1.00 //set a min floor price on bids to pressure higher bids
+    // floor_price: 1.00 //set a min floor price on bids to pressure higher bids
   };
 // site_config end
 // unruly player config //
@@ -349,7 +378,7 @@ console.log("user bid cache:", USERBIDCACHE );
       viewdeos:  { bidCpmAdjustment : function(bidCpm){ return bidCpm * 1.00; } },
       sovrn:   { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.85; } },
       beachfront:   { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.035; } }, 
-      appnexus:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < floor_price){ return 0;}return bidCpm * 1.00; } },
+      appnexus:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 1.00; } },
     };               	
     pbjs.setConfig({
      priceGranularity: customConfigObject,
