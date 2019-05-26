@@ -367,18 +367,18 @@ console.log("user bid cache:", USERBIDCACHE );
      pbjs.aliasBidder('onedisplay','aol'); 
   // adjust the bid in real time before the auction takes place
      pbjs.bidderSettings = { 
-      aol:  { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.85; } },
-      onedisplay:   { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.85; } },
-      districtm:    { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.88; } },
-      districtmDMX:  { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.90; } },
-   // sekindonUM:    { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.75; } },
-   // brealtime:   { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.80; } },
-   // springserveAlias2:  { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.65; } },
-      teads:   { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.94; } },
-      unruly:  { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.90; } },
-      viewdeos:  { bidCpmAdjustment : function(bidCpm){ return bidCpm * 1.00; } },
-      sovrn:   { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.85; } },
-      beachfront:   { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.035; } }, 
+      aol:  { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 0.85; } },
+      onedisplay:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 0.85; } },
+      districtm:    { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 0.88; } },
+      districtmDMX:  { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 0.90; } },
+   // sekindonUM:    { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 0.75; } },
+   // brealtime:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 0.80; } },
+   // springserveAlias2:  { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 0.65; } },
+      teads:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 0.94; } },
+      unruly:  { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 0.90; } },
+      viewdeos:  { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 1.00; } },
+      sovrn:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 0.85; } },
+      beachfront:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 0.035; } }, 
       appnexus:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 1.00; } },
     };               	
     pbjs.setConfig({
