@@ -63,6 +63,7 @@ var floorpriceMap = {
 };
 var f = new Date().getUTCHours();
 FLOOR_PRICE = floorpriceMap[f];
+console.log("floor price:", FLOOR_PRICE );
 // site config
 var site_config = {
     refresh_rate: PREBID_TIMEOUT*30,  //denoted in milliseonds 40secs=40000...
