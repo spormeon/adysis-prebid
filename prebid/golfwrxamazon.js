@@ -397,7 +397,7 @@ console.log("user bid cache:", USERBIDCACHE );
       conversant:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 1.00; } },
       adysis: { bidCpmAdjustment : function(bidCpm){ return "+c.cpm+"*2;} },
     };
-     console.log("constant bidder:", "+c.cpm+"*2 );
+     console.log("constant bidder:", "+c.cpm+*2" );
     pbjs.setConfig({
      priceGranularity: customConfigObject,
      consentManagement: {
