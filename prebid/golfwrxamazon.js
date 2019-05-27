@@ -216,7 +216,7 @@ console.log("user bid cache:", USERBIDCACHE );
    // { bidder: 'ucfunnel',   params: { adid: 'ad-E2BBB7E7B69BD226F93D69A83686264' } }
       { bidder: 'beachfront', params: { video: { bidfloor: 0.01, appId: '11bc5dd5-7421-4dd8-c926-40fa653bec76', mimes: [ 'video/mp4', 'application/javascript' ] }, banner: { bidfloor: 0.01, appId: '3b16770b-17af-4d22-daff-9606bdf2c9c3' } } },
       { bidder: 'cedato',     params: { player_id: '1895193152' , bidfloor: 0.01 } },
-      { bidder: 'constantbidder',   params: { placementId: '11962910', allowSmallerSizes: true, usePaymentRule: true, video: { skippable: true }, renderer:{ Url: 'http://cdn.adnxs.com/renderer/video/ANOutstreamVideo.js' } } }, /* one placementId for all sizes */
+      { bidder: 'adysis',   params: { placementId: '11962910', allowSmallerSizes: true, usePaymentRule: true, video: { skippable: true }, renderer:{ Url: 'http://cdn.adnxs.com/renderer/video/ANOutstreamVideo.js' } } }, /* one placementId for all sizes */
  ] //./bids
  },
   //new ad unit block
@@ -256,7 +256,7 @@ console.log("user bid cache:", USERBIDCACHE );
    // { bidder: 'ucfunnel',   params: { adid: 'ad-E2BBB7E7B69BD226F93D69A83686264' } }
       //{ bidder: 'beachfront', params: { video: { bidfloor: 0.01, appId: '11bc5dd5-7421-4dd8-c926-40fa653bec76', mimes: [ 'video/mp4', 'application/javascript' ] }, banner: { bidfloor: 0.01, appId: '3b16770b-17af-4d22-daff-9606bdf2c9c3' } } }
       { bidder: 'cedato',     params: { player_id: '1895193152' , bidfloor: 0.01 } },
-      { bidder: 'constantbidder',   params: { placementId: '11962910', allowSmallerSizes: true, usePaymentRule: true, video: { skippable: true }, renderer:{ Url: 'http://cdn.adnxs.com/renderer/video/ANOutstreamVideo.js' } } }, /* one placementId for all sizes */
+      { bidder: 'adysis',   params: { placementId: '11962910', allowSmallerSizes: true, usePaymentRule: true, video: { skippable: true }, renderer:{ Url: 'http://cdn.adnxs.com/renderer/video/ANOutstreamVideo.js' } } }, /* one placementId for all sizes */
   ] //./bids
   },
    //new ad unit block
@@ -296,7 +296,7 @@ console.log("user bid cache:", USERBIDCACHE );
     // { bidder: 'ucfunnel',   params: { adid: 'ad-E2BBB7E7B69BD226F93D69A83686264' } }
        //{ bidder: 'beachfront', params: { video: { bidfloor: 0.01, appId: '11bc5dd5-7421-4dd8-c926-40fa653bec76', mimes: [ 'video/mp4', 'application/javascript' ] }, banner: { bidfloor: 0.01, appId: '3b16770b-17af-4d22-daff-9606bdf2c9c3' } } }
        { bidder: 'cedato',     params: { player_id: '1895193152' , bidfloor: 0.01 } },
-       { bidder: 'constantbidder',   params: { placementId: '11962910', allowSmallerSizes: true, usePaymentRule: true, video: { skippable: true }, renderer:{ Url: 'http://cdn.adnxs.com/renderer/video/ANOutstreamVideo.js' } } }, /* one placementId for all sizes */
+       { bidder: 'adysis',   params: { placementId: '11962910', allowSmallerSizes: true, usePaymentRule: true, video: { skippable: true }, renderer:{ Url: 'http://cdn.adnxs.com/renderer/video/ANOutstreamVideo.js' } } }, /* one placementId for all sizes */
    ] //./bids
    },
     //new ad unit block
@@ -336,7 +336,7 @@ console.log("user bid cache:", USERBIDCACHE );
      // { bidder: 'ucfunnel',   params: { adid: 'ad-E2BBB7E7B69BD226F93D69A83686264' } }
         //{ bidder: 'beachfront', params: { video: { bidfloor: 0.01, appId: '11bc5dd5-7421-4dd8-c926-40fa653bec76', mimes: [ 'video/mp4', 'application/javascript' ] }, banner: { bidfloor: 0.01, appId: '3b16770b-17af-4d22-daff-9606bdf2c9c3' } } }
         { bidder: 'cedato',     params: { player_id: '1895193152' , bidfloor: 0.01 } },
-        { bidder: 'constantbidder',   params: { placementId: '11962910', allowSmallerSizes: true, usePaymentRule: true, video: { skippable: true }, renderer:{ Url: 'http://cdn.adnxs.com/renderer/video/ANOutstreamVideo.js' } } }, /* one placementId for all sizes */
+        { bidder: 'adysis',   params: { placementId: '11962910', allowSmallerSizes: true, usePaymentRule: true, video: { skippable: true }, renderer:{ Url: 'http://cdn.adnxs.com/renderer/video/ANOutstreamVideo.js' } } }, /* one placementId for all sizes */
     ] //./bids
     }
     ];
@@ -370,7 +370,7 @@ console.log("user bid cache:", USERBIDCACHE );
      pbjs.aliasBidder('appnexus','districtm');
      pbjs.aliasBidder('gamoshi','viewdeos');
      pbjs.aliasBidder('onedisplay','aol');
-     pbjs.aliasBidder('appnexus','constantbidder');
+     pbjs.aliasBidder('appnexus','adysis');
   // adjust the bid in real time before the auction takes place
      pbjs.bidderSettings = { 
       aol:  { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 0.85; } },
@@ -395,7 +395,7 @@ console.log("user bid cache:", USERBIDCACHE );
       komoona:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 1.00; } },
       '33across':   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 1.00; } },
       conversant:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 1.00; } },
-      constantbidder: { bidCpmAdjustment : function(bidCpm){ return "+c.cpm+";} },
+      adysis: { bidCpmAdjustment : function(bidCpm){ return "+c.cpm+"*2;} },
     };               	
     pbjs.setConfig({
      priceGranularity: customConfigObject,
