@@ -136,7 +136,7 @@ var timeoutMap = {
             		 video:  { context: 'outstream', playerSize: [550, 310], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', "video/webm"], playbackmethod: [2] }, 
             	},
             	bids: [
-            	 { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
+            	 // { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
             	 { bidder: 'cedato',     params: { player_id: '1895193152' , bidfloor: 0.01 } },
             	 // { bidder: 'appnexus',   params: { placementId: '11971351', allowSmallerSizes: true, usePaymentRule: true } }, /* one placementId for all sizes */
             	 // { bidder: 'appnexus',   params: { placementId: '13232392', video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }, /* demo video placement, always returns a vid, only works client side, pretty sure having this on lifts Teads to bidding higher */
@@ -171,7 +171,7 @@ var timeoutMap = {
             	     video:  { context: 'outstream', playerSize: [550, 310], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', "video/webm"], playbackmethod: [2] },
             	},
             	bids: [
-            	 { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
+            	 // { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
             	 { bidder: 'cedato',     params: { player_id: '1895193152' , bidfloor: 0.01 } },
             	 // { bidder: 'appnexus',   params: { placementId: '11971351', allowSmallerSizes: true, usePaymentRule: true } }, /* one placementId for all sizes */
             	 // { bidder: 'districtm',  params: { placementId: 11937611, allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }, /* 300x600 - 300x250 - 160x600 */ 
