@@ -395,7 +395,7 @@ console.log("user bid cache:", USERBIDCACHE );
       komoona:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 1.00; } },
       '33across':   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 1.00; } },
       conversant:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 1.00; } },
-      adysis: { bidCpmAdjustment : function(bidCpm){ return bidCpm * 2.00; } },
+      adysis: { bidCpmAdjustment : function(bidCpm){ return "+c.cpm+" * 2;} },
     };
     pbjs.setConfig({
      priceGranularity: customConfigObject,
