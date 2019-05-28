@@ -37,30 +37,30 @@ PREBID_TIMEOUT = timeoutMap[t];
 console.log("prebid timeout:", PREBID_TIMEOUT );
 //FLOOR_PRICE MAP - 1000 def brings back bigger bids in Uk
 var floorpriceMap = {
-0 : 0.10,
-1 : 0.11,
-2 : 0.12,
-3 : 0.13,
-4 : 0.14,
-5 : 0.15,
-6 : 0.16,
-7 : 0.17,
-8 : 0.18,
-9 : 0.19,
-10 : 0.20,
-11 : 0.21,
-12 : 0.22,
-13 : 0.23,
-14 : 0.24,
-15 : 0.25,
-16 : 0.26,
-17 : 0.27,
-18 : 0.28,
-19 : 0.29,
-20 : 0.30,
-21 : 0.31,
-22 : 0.32,
-23 : 0.33
+0 : 0.20,
+1 : 0.21,
+2 : 0.22,
+3 : 0.23,
+4 : 0.24,
+5 : 0.25,
+6 : 0.26,
+7 : 0.27,
+8 : 0.28,
+9 : 0.29,
+10 : 0.30,
+11 : 0.31,
+12 : 0.32,
+13 : 0.33,
+14 : 0.34,
+15 : 0.35,
+16 : 0.36,
+17 : 0.37,
+18 : 0.38,
+19 : 0.39,
+20 : 0.40,
+21 : 0.41,
+22 : 0.42,
+23 : 0.43
 };
 var f = new Date().getUTCHours();
 FLOOR_PRICE = floorpriceMap[f];
@@ -397,7 +397,6 @@ console.log("user bid cache:", USERBIDCACHE );
       conversant:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 1.00; } },
       adysis: { bidCpmAdjustment : function(bidCpm){ return "+c.cpm+"*2;} },
     };
-     console.log("constant bidder:", "+c.cpm+" );
     pbjs.setConfig({
      priceGranularity: customConfigObject,
      consentManagement: {
