@@ -95,31 +95,6 @@
 		'Post Consent Page': 'http://www.golfwrx.com',
 		'Non-Consent Display Frequency': 5,
     });
-    
- // fetch google personalization consent information
-    __cmp('getGooglePersonalization', function(consent, isSuccess) {
-
-    // do we have a cookie? 
-    if(!isSuccess) 
-     return;
-
-    // check for given consent
-    if(consent.googlePersonalizationData.consentValue) {
-      //
-      // You have consent from the user: 
-      // add your code here to call google’s admanager or adsense 
-      //
-
-    } else {
-      // 
-      // No consent for personalized ads from the user:
-      // either no call to google’s admanger / adsense or
-      // call admanager and adsense using the appropriate 
-      // method to set ‘requestNonPersonalizedAds’ accordingly.
-      //
-
-    }
-    });
 </script>
 <!-- End Quantcast Choice. Consent Manager Tag -->
      <style>
