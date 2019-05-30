@@ -324,7 +324,7 @@ var timeoutMap = {
                 	    },
                 	 sizeConfig: [{
                 mediaQuery: '(min-width: 769px)',
-                sizesSupported: [[728, 90], [728, 410], [550, 310], [468, 60], [320, 50], [300, 250], [250, 250], [1, 1]],
+                sizesSupported: [[728, 90], [550, 310], [468, 60], [320, 50], [300, 250], [250, 250], [1, 1]],
                 labels: ['desktop']
                 }, {
                 mediaQuery: '(min-width: 500px) and (max-width: 768px)',
