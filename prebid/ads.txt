@@ -326,3 +326,15 @@ spotx.tv, 239904, RESELLER, 7842df1d2fe2db34
 contextweb.com, 561910, RESELLER, 89ff185a4c4e857c
 openx.com, 540226160, RESELLER, 6a698e2ec38604c6
 openx.com, 540255318, RESELLER, 6a698e2ec38604c6
+
+#152media
+appnexus.com, 3153, RESELLER, f5ab79cb980f11d1
+adtech.com, 12069, RESELLER
+connectad.io, 73, DIRECT
+districtm.io, 100750, DIRECT
+appnexus.com, 1908, RESELLER, f5ab79cb980f11d1
+google.com, pub-3960095709930134,RESELLER, f08c47fec0942fa0
+pubmatic.com, 156077, RESELLER, 5d62403b186f2ace
+openx.com, 537145117, RESELLER, a698e2ec38604c6
+adform.com, 768, RESELLER
+contextweb.com, 560489, RESELLER, 89ff185a4c4e857c
