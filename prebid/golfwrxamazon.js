@@ -99,7 +99,10 @@ window.top.unruly.native.onAdLoaded = () => {window.top.unruly.native.disclosure
 })();
 // amazon bidder
 !function(a9,a,p,s,t,A,g){if(a[a9])return;function q(c,r){a[a9]._Q.push([c,r])}a[a9]={init:function(){q("i",arguments)},fetchBids:function(){q("f",arguments)},setDisplayBids:function(){},targetingKeys:function(){return[]},_Q:[]};A=p.createElement(s);A.async=!0;A.src=t;g=p.getElementsByTagName(s)[0];g.parentNode.insertBefore(A,g)}("apstag",window,document,"script","//c.amazon-adsystem.com/aax2/apstag.js");
-
+apstag.init({
+   pubID: '7f2180c4-57bc-43a4-9896-ecff1a52049d',
+   adServer: 'googletag'
+ });
 apstag.fetchBids({
 slots: [{
     slotID: 'inreedvidSlot',
@@ -362,13 +365,6 @@ console.log("user bid cache:", USERBIDCACHE );
     });
     var pbjs = pbjs || {};
      pbjs.que = pbjs.que || [];
-     
-     apstag.init({
-    	   pubID: '7f2180c4-57bc-43a4-9896-ecff1a52049d',
-    	   adServer: 'googletag'
-    	 });
-     
-     
      pbjs.que.push(function() {
      pbjs.addAdUnits(adUnits);
   // alias for bidder
@@ -471,6 +467,7 @@ console.log("user bid cache:", USERBIDCACHE );
      }, site_config.FAILSAFE_TIMEOUT);
             
 googletag.cmd.push(function () {
+	apstag.setDisplayBids();
     (function (googletag, pbjs, config) {
      var sizeMappings = {};
       var slots = {};
