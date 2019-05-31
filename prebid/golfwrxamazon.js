@@ -83,8 +83,7 @@ window.top.unruly.native.onAdLoaded = () => {window.top.unruly.native.disclosure
   gads.async = true;
   gads.type = "text/javascript";
   var useSSL = "https:" == document.location.protocol;
-  gads.src = (useSSL ? "https:" : "http:") +
-          "//www.googletagservices.com/tag/js/gpt.js";
+  gads.src = (useSSL ? "https:" : "http:") + "//www.googletagservices.com/tag/js/gpt.js";
   var node = document.getElementsByTagName("footerbid")[0];
   node.parentNode.insertBefore(gads, node);
 })();
@@ -104,11 +103,8 @@ apstag.init({
    adServer: 'googletag'
  });
 apstag.fetchBids({
-slots: [{
-    slotID: 'inreedvidSlot',
-    slotName: '/1001824/Golfwrx.com-HB/Golfwrx.com-HB-Vid-test',
-    sizes: [[728, 90], [300, 250], [250, 250], [468, 60], [320, 50]]
-    },
+slots: [
+	{ slotID: 'inreedvidSlot', slotName: '/1001824/Golfwrx.com-HB/Golfwrx.com-HB-Vid-test', sizes: [[728, 90], [300, 250], [250, 250], [468, 60], [320, 50]] },
     {
     slotID: 'inreedvid1Slot',
     slotName: '/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test1',
@@ -467,7 +463,6 @@ console.log("user bid cache:", USERBIDCACHE );
      }, site_config.FAILSAFE_TIMEOUT);
             
 googletag.cmd.push(function () {
-	apstag.setDisplayBids();
     (function (googletag, pbjs, config) {
      var sizeMappings = {};
       var slots = {};
