@@ -105,21 +105,10 @@ apstag.init({
 apstag.fetchBids({
 slots: [
 	{ slotID: 'inreedvidSlot', slotName: '/1001824/Golfwrx.com-HB/Golfwrx.com-HB-Vid-test', sizes: [[728, 90], [300, 250], [250, 250], [468, 60], [320, 50]] },
-    {
-    slotID: 'inreedvid1Slot',
-    slotName: '/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test1',
-    sizes: [[728, 90], [300, 250], [250, 250], [468, 60], [320, 50]]
-    },
-    {
-    slotID: 'inreedvid2Slot',
-    slotName: '/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test2',
-    sizes: [[728, 90], [300, 250], [250, 250], [468, 60], [320, 50]]
-    },
-    {
-    slotID: 'inreedvid3Slot',
-    slotName: '/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test3',
-    sizes: [[728, 90], [300, 250], [250, 250], [468, 60], [320, 50]]
-    }],
+    { slotID: 'inreedvid1Slot', slotName: '/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test1', sizes: [[728, 90], [300, 250], [250, 250], [468, 60], [320, 50]] },
+    { slotID: 'inreedvid2Slot', slotName: '/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test2', sizes: [[728, 90], [300, 250], [250, 250], [468, 60], [320, 50]] },
+    { slotID: 'inreedvid3Slot', slotName: '/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test3', sizes: [[728, 90], [300, 250], [250, 250], [468, 60], [320, 50]] }
+    ],
     timeout: 2e3
  }, function(bids) {
 // set apstag targeting on googletag, then trigger the first DFP request in googletag's disableInitialLoad integration
