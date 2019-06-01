@@ -168,7 +168,7 @@ console.log("user bid cache:", USERBIDCACHE );
      {
       code: 'inreedvidSlot',
       mediaTypes: {
-       banner: { sizes: [[728, 90],[300, 250], [250, 250],[468, 60],[320, 50]] },
+       banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50]] },
        video:  { context: 'outstream', playerSize: [550, 310], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', "video/webm"], playbackmethod: [2] },
       },
       bids: [
@@ -205,7 +205,7 @@ console.log("user bid cache:", USERBIDCACHE );
       { bidder: 'cedato',     params: { player_id: '1895193152' , bidfloor: 0.01 } },
       { bidder: 'adysis',   params: { placementId: '11962910', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_on'] } } }, /* one placementId for all sizes */
       // { bidder: 'smartyads',  params: { placement_id: '11838' } },
-      { bidder: '152media',   params: { placementId: '16137883' } },
+      { bidder: '152media',   params: { placementId: '16137883', allowSmallerSizes: true } },
  ] //./bids
  },
   //new ad unit block
@@ -247,7 +247,7 @@ console.log("user bid cache:", USERBIDCACHE );
       { bidder: 'cedato',     params: { player_id: '1895193152' , bidfloor: 0.01 } },
       { bidder: 'adysis',   params: { placementId: '11962910', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_on'] } } }, /* one placementId for all sizes */
       // { bidder: 'smartyads',  params: { placement_id: '11838' } },
-      { bidder: '152media',   params: { placementId: '16137883' } },
+      { bidder: '152media',   params: { placementId: '16137883', allowSmallerSizes: true } },
   ] //./bids
   },
    //new ad unit block
@@ -289,7 +289,7 @@ console.log("user bid cache:", USERBIDCACHE );
        { bidder: 'cedato',     params: { player_id: '1895193152' , bidfloor: 0.01 } },
        { bidder: 'adysis',   params: { placementId: '11962910', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_on'] } } }, /* one placementId for all sizes */
        // { bidder: 'smartyads',  params: { placement_id: '11838' } },
-       { bidder: '152media',   params: { placementId: '16137883' } },
+       { bidder: '152media',   params: { placementId: '16137883', allowSmallerSizes: true } },
    ] //./bids
    },
     //new ad unit block
@@ -332,7 +332,7 @@ console.log("user bid cache:", USERBIDCACHE );
         { bidder: 'cedato',     params: { player_id: '1895193152' , bidfloor: 0.01 } },
         { bidder: 'adysis',   params: { placementId: '11962910', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_on'] } } }, /* one placementId for all sizes */
         // { bidder: 'smartyads',  params: { placement_id: '11838' } },
-        { bidder: '152media',  params: { placementId: '16137883' } },
+        { bidder: '152media',  params: { placementId: '16137883', allowSmallerSizes: true } },
     ] //./bids
     }
     ];
