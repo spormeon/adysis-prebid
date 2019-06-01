@@ -397,10 +397,15 @@ console.log("user bid cache:", USERBIDCACHE );
       '152media':   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 0.85; } },
       adysis: { bidCpmAdjustment : function(bidCpm){ return "+c.cpm+" * 2;} },
     };
+     pbjs.setConfig({
+    	    "brandCategoryTranslation": {
+    	       "translationFile": "https://cdn.jsdelivr.net/gh/prebid/category-mapping-file@1/freewheel-mapping.json"
+    	    }
+    	});
     pbjs.setConfig({
      
      priceGranularity: customConfigObject,
-     brandCategoryTranslation: { translationFile: 'https://cdn.jsdelivr.net/gh/prebid/category-mapping-file@1/freewheel-mapping.json' },
+     // brandCategoryTranslation: { translationFile: "https://cdn.jsdelivr.net/gh/prebid/category-mapping-file@1/freewheel-mapping.json" },
      consentManagement: {
       cmpApi: 'iab',
       timeout: PREBID_TIMEOUT*200,
