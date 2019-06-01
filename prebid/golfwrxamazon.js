@@ -398,8 +398,9 @@ console.log("user bid cache:", USERBIDCACHE );
       adysis: { bidCpmAdjustment : function(bidCpm){ return "+c.cpm+" * 2;} },
     };
     pbjs.setConfig({
-     brandCategoryTranslation: { translationFile: 'https://cdn.jsdelivr.net/gh/prebid/category-mapping-file@1/freewheel-mapping.json' }
+     
      priceGranularity: customConfigObject,
+     brandCategoryTranslation: { translationFile: 'https://cdn.jsdelivr.net/gh/prebid/category-mapping-file@1/freewheel-mapping.json' },
      consentManagement: {
       cmpApi: 'iab',
       timeout: PREBID_TIMEOUT*200,
