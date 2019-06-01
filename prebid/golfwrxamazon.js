@@ -397,20 +397,9 @@ console.log("user bid cache:", USERBIDCACHE );
       '152media':   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 0.85; } },
       adysis: { bidCpmAdjustment : function(bidCpm){ return "+c.cpm+" * 2;} },
     };
-     pbjs.setConfig({
-    	    brandCategoryTranslation: {
-    	       "translationFile": "https://cdn.jsdelivr.net/gh/prebid/category-mapping-file@1/freewheel-mapping.json"
-    	    }
-    	});
     pbjs.setConfig({
-     
      priceGranularity: customConfigObject,
-     // brandCategoryTranslation: { translationFile: "https://cdn.jsdelivr.net/gh/prebid/category-mapping-file@1/freewheel-mapping.json" },
-     consentManagement: {
-      cmpApi: 'iab',
-      timeout: PREBID_TIMEOUT*200,
-      allowAuctionWithoutConsent: true
-      },
+     consentManagement: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*200, allowAuctionWithoutConsent: true },
         //cache: {url: "//prebid.adnxs.com/pbc/v1/cache"},
       s2sConfig: {
         accountId: 'e31f627f-53a3-4288-9979-482d3c6ffc76',
@@ -427,10 +416,7 @@ console.log("user bid cache:", USERBIDCACHE );
         iframeEnabled: true,
         syncsPerBidder: 50, // and no more than 3 syncs at a time
         syncDelay: PREBID_TIMEOUT*2.5, // 5 seconds after the auction
-      filterSettings: {
-         iframe: { bidders: ['pulsepoint'], filter: 'exclude' },
-         image:  { bidders: '*', filter: 'include' }
-         },
+      filterSettings: { iframe: { bidders: ['pulsepoint'], filter: 'exclude' }, image:  { bidders: '*', filter: 'include' } },
        },
        debug: true,
        useBidCache: USERBIDCACHE,
@@ -439,11 +425,7 @@ console.log("user bid cache:", USERBIDCACHE );
        publisherDomain: 'golfwrx.com',
        bidderTimeout: PREBID_TIMEOUT+300,
        pubcid: {expInterval: 525600},
-       currency: {
-         'adServerCurrency': "GBP",
-         'granularityMultiplier': 1,
-         'conversionRateFile': 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json',
-       },
+       currency: { 'adServerCurrency': "GBP", 'granularityMultiplier': 1, 'conversionRateFile': 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json', },
        sizeConfig: [
          { mediaQuery: '(min-width: 769px)', sizesSupported: [[550, 310], [728, 90], [468, 60], [320, 50], [300, 250], [250, 250], [1, 1]], labels: ['desktop'] },
          { mediaQuery: '(min-width: 500px) and (max-width: 768px)', sizesSupported: [[550, 310], [728, 90],  [468, 60], [320, 50], [300, 250], [250, 250], [1, 1]], labels: ['tablet'] },
