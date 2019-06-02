@@ -395,7 +395,7 @@ console.log("user bid cache:", USERBIDCACHE );
       atomx:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 1.00; } },
       smartyads:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 1.00; } },
       '152media':   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 0.85; } },
-      adysis: { bidCpmAdjustment : function(bidCpm){ return "+c.cpm+" * 2;} },
+      adysis: { bidCpmAdjustment : function(bidCpm){ return preBidWon;} },
     };
     pbjs.setConfig({
      priceGranularity: customConfigObject,
