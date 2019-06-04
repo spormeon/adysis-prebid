@@ -338,3 +338,6 @@ pubmatic.com, 156077, RESELLER, 5d62403b186f2ace
 openx.com, 537145117, RESELLER, a698e2ec38604c6
 adform.com, 768, RESELLER
 contextweb.com, 560489, RESELLER, 89ff185a4c4e857c
+
+#smartyads
+ssp.smartyads.com, 4166, DIRECT
