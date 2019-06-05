@@ -1,3 +1,14 @@
+// site config
+var site_config = {
+    refresh_rate: PREBID_TIMEOUT*30,  //denoted in milliseonds 40secs=40000...
+    FAILSAFE_TIMEOUT: PREBID_TIMEOUT*1.5   //denoted in milliseonds 5secs=5000...
+    SLOT1: "/1001824/adp100001/adp100001A"
+    SLOT2: "/1001824/adp100001/adp100001B"
+    SLOT3: "/1001824/adp100001/adp100001C"
+    SLOT4: "/1001824/adp100001/adp100001D"
+    // floor_price: 1.00 //set a min floor price on bids to pressure higher bids
+  };
+// site_config end
 //Slots to send to page, have to add 1 on to the child (number) because the div counts as 1 in the string 
 window.addEventListener("DOMContentLoaded",function(){
     document.querySelector(".node-content p:nth-child(2)").insertAdjacentHTML('afterbegin','<br><div class="ad-reporter-ahytrfg35423"><div id="advertisement" style="border: 0pt none; margin: auto; text-align: center; color: #999; text-transform: uppercase; font-family: sans-serif; font-size: 9px; font-weight: 400; letter-spacing: .2em; line-height: 1; margin-top: 0px; position: relative; top: -4px;">Advertisement</div><div id="inreedvidSlot"></div></div><br>');
@@ -65,13 +76,7 @@ var floorpriceMap = {
 var f = new Date().getUTCHours();
 FLOOR_PRICE = floorpriceMap[f];
 console.log("floor price:", FLOOR_PRICE );
-// site config
-var site_config = {
-    refresh_rate: PREBID_TIMEOUT*30,  //denoted in milliseonds 40secs=40000...
-    FAILSAFE_TIMEOUT: PREBID_TIMEOUT*1.5   //denoted in milliseonds 5secs=5000...
-    // floor_price: 1.00 //set a min floor price on bids to pressure higher bids
-  };
-// site_config end
+
 // unruly player config //
 window.top.unruly = window.top.unruly || {}
 window.top.unruly.native = window.top.unruly.native || {}
@@ -104,10 +109,10 @@ apstag.init({
  });
 apstag.fetchBids({
 slots: [
-    { slotID: 'inreedvidSlot', slotName: '/1001824/Golfwrx.com-HB/Golfwrx.com-HB-Vid-test', sizes: [[728, 90], [300, 250], [250, 250], [468, 60], [320, 50]] },
-    { slotID: 'inreedvid1Slot', slotName: '/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test1', sizes: [[728, 90], [300, 250], [250, 250], [468, 60], [320, 50]] },
-    { slotID: 'inreedvid2Slot', slotName: '/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test2', sizes: [[728, 90], [300, 250], [250, 250], [468, 60], [320, 50]] },
-    { slotID: 'inreedvid3Slot', slotName: '/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test3', sizes: [[728, 90], [300, 250], [250, 250], [468, 60], [320, 50]] }
+    { slotID: 'inreedvidSlot', slotName: 'site_config.SLOT1', sizes: [[728, 90], [300, 250], [250, 250], [468, 60], [320, 50]] },
+    { slotID: 'inreedvid1Slot', slotName: 'site_config.SLOT2', sizes: [[728, 90], [300, 250], [250, 250], [468, 60], [320, 50]] },
+    { slotID: 'inreedvid2Slot', slotName: 'site_config.SLOT3', sizes: [[728, 90], [300, 250], [250, 250], [468, 60], [320, 50]] },
+    { slotID: 'inreedvid3Slot', slotName: 'site_config.SLOT4', sizes: [[728, 90], [300, 250], [250, 250], [468, 60], [320, 50]] }
     ],
     timeout: 2e3
  }, function(bids) {
@@ -515,10 +520,10 @@ googletag.cmd.push(function () {
     // googletag.pubads().refresh();
     })(window.googletag, window.pbjs, {
 definitons: {
-    inreedvidSlot: { adUnitPath: "/1001824/Golfwrx.com-HB/Golfwrx.com-HB-Vid-test", size: "mappinginreedvidslot", sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
-    inreedvid1Slot: { adUnitPath: "/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test1", size: "mappinginreedvidslot", sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
-    inreedvid2Slot: { adUnitPath: "/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test2", size: "mappinginreedvidslot", sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
-    inreedvid3Slot: { adUnitPath: "/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test3", size: "mappinginreedvidslot", sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
+    inreedvidSlot: { adUnitPath: "site_config.SLOT1", size: "mappinginreedvidslot", sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
+    inreedvid1Slot: { adUnitPath: "site_config.SLOT2", size: "mappinginreedvidslot", sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
+    inreedvid2Slot: { adUnitPath: "site_config.SLOT3", size: "mappinginreedvidslot", sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
+    inreedvid3Slot: { adUnitPath: "site_config.SLLOT4", size: "mappinginreedvidslot", sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
     },
     sizeMappings: {
      mappinginreedvidslot: [
