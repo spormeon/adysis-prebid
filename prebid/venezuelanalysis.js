@@ -112,10 +112,10 @@ apstag.init({
  });
 apstag.fetchBids({
 slots: [
-    { slotID: 'inreedvidSlot', slotName: 'site_config.SLOT1', sizes: [[728, 90], [300, 250], [250, 250], [468, 60], [320, 50]] },
-    { slotID: 'inreedvid1Slot', slotName: 'site_config.SLOT2', sizes: [[728, 90], [300, 250], [250, 250], [468, 60], [320, 50]] },
-    { slotID: 'inreedvid2Slot', slotName: 'site_config.SLOT3', sizes: [[728, 90], [300, 250], [250, 250], [468, 60], [320, 50]] },
-    { slotID: 'inreedvid3Slot', slotName: 'site_config.SLOT4', sizes: [[728, 90], [300, 250], [250, 250], [468, 60], [320, 50]] }
+    { slotID: 'inreedvidSlot', slotName: site_config.SLOT1, sizes: [[728, 90], [300, 250], [250, 250], [468, 60], [320, 50]] },
+    { slotID: 'inreedvid1Slot', slotName: site_config.SLOT2, sizes: [[728, 90], [300, 250], [250, 250], [468, 60], [320, 50]] },
+    { slotID: 'inreedvid2Slot', slotName: site_config.SLOT3, sizes: [[728, 90], [300, 250], [250, 250], [468, 60], [320, 50]] },
+    { slotID: 'inreedvid3Slot', slotName: site_config.SLOT4, sizes: [[728, 90], [300, 250], [250, 250], [468, 60], [320, 50]] }
     ],
     timeout: 2e3
  }, function(bids) {
@@ -523,10 +523,10 @@ googletag.cmd.push(function () {
     // googletag.pubads().refresh();
     })(window.googletag, window.pbjs, {
 definitons: {
-    inreedvidSlot: { adUnitPath: "site_config.SLOT1", size: "mappinginreedvidslot", sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
-    inreedvid1Slot: { adUnitPath: "site_config.SLOT2", size: "mappinginreedvidslot", sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
-    inreedvid2Slot: { adUnitPath: "site_config.SLOT3", size: "mappinginreedvidslot", sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
-    inreedvid3Slot: { adUnitPath: "site_config.SLLOT4", size: "mappinginreedvidslot", sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
+    inreedvidSlot: { adUnitPath: site_config.SLOT1, size: "mappinginreedvidslot", sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
+    inreedvid1Slot: { adUnitPath: site_config.SLOT2, size: "mappinginreedvidslot", sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
+    inreedvid2Slot: { adUnitPath: site_config.SLOT3, size: "mappinginreedvidslot", sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
+    inreedvid3Slot: { adUnitPath: site_config.SLOT4, size: "mappinginreedvidslot", sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
     },
     sizeMappings: {
      mappinginreedvidslot: [
