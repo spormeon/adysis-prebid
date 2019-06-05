@@ -1,10 +1,10 @@
 // site config
 var site_config = {
     refresh_rate: PREBID_TIMEOUT*30,  //denoted in milliseonds 40secs=40000...
-    FAILSAFE_TIMEOUT: PREBID_TIMEOUT*1.5   //denoted in milliseonds 5secs=5000...
-    SLOT1: "/1001824/adp100001/adp100001A"
-    SLOT2: "/1001824/adp100001/adp100001B"
-    SLOT3: "/1001824/adp100001/adp100001C"
+    FAILSAFE_TIMEOUT: PREBID_TIMEOUT*1.5,   //denoted in milliseonds 5secs=5000...
+    SLOT1: "/1001824/adp100001/adp100001A",
+    SLOT2: "/1001824/adp100001/adp100001B",
+    SLOT3: "/1001824/adp100001/adp100001C",
     SLOT4: "/1001824/adp100001/adp100001D"
     // floor_price: 1.00 //set a min floor price on bids to pressure higher bids
   };
