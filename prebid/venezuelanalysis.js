@@ -1,14 +1,4 @@
-// site config
-var site_config = {
-    refresh_rate: PREBID_TIMEOUT*30,  //denoted in milliseonds 40secs=40000...
-    FAILSAFE_TIMEOUT: PREBID_TIMEOUT*1.5,   //denoted in milliseonds 5secs=5000...
-    SLOT1: "/1001824/adp100001/adp100001A",
-    SLOT2: "/1001824/adp100001/adp100001B",
-    SLOT3: "/1001824/adp100001/adp100001C",
-    SLOT4: "/1001824/adp100001/adp100001D"
-    // floor_price: 1.00 //set a min floor price on bids to pressure higher bids
-  };
-// site_config end
+
 //Slots to send to page, have to add 1 on to the child (number) because the div counts as 1 in the string 
 window.addEventListener("DOMContentLoaded",function(){
     document.querySelector(".node-content p:nth-child(2)").insertAdjacentHTML('afterbegin','<br><div class="ad-reporter-ahytrfg35423"><div id="advertisement" style="border: 0pt none; margin: auto; text-align: center; color: #999; text-transform: uppercase; font-family: sans-serif; font-size: 9px; font-weight: 400; letter-spacing: .2em; line-height: 1; margin-top: 0px; position: relative; top: -4px;">Advertisement</div><div id="inreedvidSlot"></div></div><br>');
@@ -46,6 +36,19 @@ var timeoutMap = {
 var t = new Date().getUTCHours();
 PREBID_TIMEOUT = timeoutMap[t];
 console.log("prebid timeout:", PREBID_TIMEOUT );
+//site config
+var site_config = {
+    refresh_rate: PREBID_TIMEOUT*30,  //denoted in milliseonds 40secs=40000...
+    FAILSAFE_TIMEOUT: PREBID_TIMEOUT*1.5,   //denoted in milliseonds 5secs=5000...
+    SLOT1: "/1001824/adp100001/adp100001A",
+    SLOT2: "/1001824/adp100001/adp100001B",
+    SLOT3: "/1001824/adp100001/adp100001C",
+    SLOT4: "/1001824/adp100001/adp100001D"
+    // floor_price: 1.00 //set a min floor price on bids to pressure higher bids
+  };
+// site_config end
+
+
 //FLOOR_PRICE MAP - 1000 def brings back bigger bids in Uk
 var floorpriceMap = {
 0 : 0.20,
