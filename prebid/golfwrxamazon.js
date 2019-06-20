@@ -167,7 +167,7 @@ console.log("user bid cache:", USERBIDCACHE );
   //new ad unit block
      {
       code: 
-    	  'inreedvidSlot, inreedvid1Slot, inreedvid2Slot, inreedvid3Slot',
+    	  ['inreedvidSlot, inreedvid1Slot, inreedvid2Slot, inreedvid3Slot'],
     	  
       mediaTypes: {
        banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50]] },
