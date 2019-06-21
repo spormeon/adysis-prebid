@@ -1,8 +1,7 @@
 //Load common code that includes config, then load the app logic for this page.
-requirejs(['./slots'], function (slots) {
-	requirejs(['slots/slots']);
+
     requirejs(['timeout']);
-});
+
 
 //Slots to send to page, have to add 1 on to the child (number) because the div counts as 1 in the string 
 window.addEventListener("DOMContentLoaded",function(){
