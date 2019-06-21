@@ -19,7 +19,7 @@ pbjs.setConfig({
         syncDelay: PREBID_TIMEOUT*2.5, // 5 seconds after the auction
       filterSettings: { iframe: { bidders: ['pulsepoint'], filter: 'exclude' }, image:  { bidders: '*', filter: 'include' } },
        },
-       debug: true,
+       debug: false,
        useBidCache: USERBIDCACHE,
        enableSendAllBids: false, // Default will be `true` as of 1.0
        bidderSequence: 'random', // Default is random
