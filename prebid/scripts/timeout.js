@@ -159,7 +159,7 @@ console.log("user bid cache:", USERBIDCACHE );
     
     
     
-    requirejs(['timeout']);
+    requirejs(['bidders']);
     
     
     
