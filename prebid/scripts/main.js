@@ -1,10 +1,6 @@
-define(function (require) {
-    // Load any app-specific modules
-    // with a relative require call,
-    // like:
-    var messages = require('./slots');
-
-    
+//Load common code that includes config, then load the app logic for this page.
+requirejs(['./slots'], function (slots) {
+    requirejs(['.main']);
 });
 //  TIMEOUT MAP - 1000 def brings back bigger bids in Uk
 var timeoutMap = {
