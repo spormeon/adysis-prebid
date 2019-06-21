@@ -171,7 +171,14 @@ requirejs(['bidders']);
      pbjs.que = pbjs.que || [];
      pbjs.que.push(function() {
      pbjs.addAdUnits(adUnits);
-     
+  // alias for bidder
+     pbjs.aliasBidder('appnexus','brealtime'); 
+     pbjs.aliasBidder('appnexus','springserveAlias2');
+     pbjs.aliasBidder('appnexus','districtm');
+     pbjs.aliasBidder('gamoshi','viewdeos');
+     pbjs.aliasBidder('onedisplay','aol');
+     pbjs.aliasBidder('appnexus','adysis');
+     // pbjs.aliasBidder('appnexus','152media');
 requirejs(['bidder_settings']);     
 
 requirejs(['pbjs_config']);

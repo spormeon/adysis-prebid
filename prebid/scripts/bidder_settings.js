@@ -1,12 +1,4 @@
-// alias for bidder
-     pbjs.aliasBidder('appnexus','brealtime'); 
-     pbjs.aliasBidder('appnexus','springserveAlias2');
-     pbjs.aliasBidder('appnexus','districtm');
-     pbjs.aliasBidder('gamoshi','viewdeos');
-     pbjs.aliasBidder('onedisplay','aol');
-     pbjs.aliasBidder('appnexus','adysis');
-     // pbjs.aliasBidder('appnexus','152media');
-  // adjust the bid in real time before the auction takes place
+// adjust the bid in real time before the auction takes place
      pbjs.bidderSettings = { 
       aol:  { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 0.85; } },
       onedisplay:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 0.85; } },
