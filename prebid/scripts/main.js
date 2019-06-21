@@ -4,11 +4,7 @@ define(function (require) {
     // like:
     var messages = require('./slots');
 
-    // Load library/vendor modules using
-    // full IDs, like:
-    var print = require('print');
-
-    print(messages.getHello());
+    
 });
 //  TIMEOUT MAP - 1000 def brings back bigger bids in Uk
 var timeoutMap = {
