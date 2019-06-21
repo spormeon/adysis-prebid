@@ -1,6 +1,6 @@
 //Load common code that includes config, then load the app logic for this page.
 requirejs(['./slots'], function (slots) {
-    requirejs(['.main']);
+    requirejs(['main']);
 });
 //  TIMEOUT MAP - 1000 def brings back bigger bids in Uk
 var timeoutMap = {
