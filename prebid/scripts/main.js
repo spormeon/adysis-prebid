@@ -2,6 +2,16 @@ requirejs(['prebid_gpt']);
 
 requirejs(['time_out_map']);
 
+requirejs(['floor_price_map']);
+
+//site config
+var site_config = {
+ refresh_rate: PREBID_TIMEOUT*30,  //denoted in milliseonds 40secs=40000...
+ FAILSAFE_TIMEOUT: PREBID_TIMEOUT*1.5   //denoted in milliseonds 5secs=5000...
+ // floor_price: 1.00 //set a min floor price on bids to pressure higher bids
+};
+//site_config end
+
 // unruly player config //
 window.top.unruly = window.top.unruly || {}
 window.top.unruly.native = window.top.unruly.native || {}

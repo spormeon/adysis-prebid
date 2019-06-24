@@ -28,13 +28,3 @@ var timeoutMap = {
 var t = new Date().getUTCHours();
 PREBID_TIMEOUT = timeoutMap[t];
 console.log("prebid timeout:", PREBID_TIMEOUT );
-
-requirejs(['floor_price_map']);
-
-// site config
-var site_config = {
-    refresh_rate: PREBID_TIMEOUT*30,  //denoted in milliseonds 40secs=40000...
-    FAILSAFE_TIMEOUT: PREBID_TIMEOUT*1.5   //denoted in milliseonds 5secs=5000...
-    // floor_price: 1.00 //set a min floor price on bids to pressure higher bids
-  };
-// site_config end
