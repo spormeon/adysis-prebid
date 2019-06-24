@@ -24,7 +24,7 @@ var timeoutMap = {
 19 : 1400,
 20 : 1400,
 21 : 1600,
-22 : 1600,
+22 : 1800,
 23 : 1400
 };
 var t = new Date().getUTCHours();
