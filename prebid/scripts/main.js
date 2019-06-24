@@ -106,7 +106,6 @@ USERBIDCACHE = usebidcacheMap[u];
 console.log("user bid cache:", USERBIDCACHE );	
 
 requirejs(['analytics_settings']);
-
 requirejs(['bidders']);   
     
 // ======== DO NOT EDIT BELOW THIS LINE =========== //
@@ -135,7 +134,6 @@ requirejs(['bidders']);
      pbjs.addAdUnits(adUnits);
      
 requirejs(['bidder_settings']);     
-
 requirejs(['pbjs_config']);
 
     pbjs.requestBids({
@@ -235,5 +233,5 @@ definitons: {
     }
    });
 });
-
+requirejs(['analytics_custom']);
 requirejs(['analytics_client']);
