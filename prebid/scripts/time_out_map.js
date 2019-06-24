@@ -25,6 +25,3 @@ var timeoutMap = {
 22 : 1400,
 23 : 1400
 };
-var t = new Date().getUTCHours();
-PREBID_TIMEOUT = timeoutMap[t];
-console.log("prebid timeout:", PREBID_TIMEOUT );

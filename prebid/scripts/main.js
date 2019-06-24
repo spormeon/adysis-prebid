@@ -1,6 +1,8 @@
 requirejs(['prebid_gpt']);
 requirejs(['time_out_map']);
-
+var t = new Date().getUTCHours();
+PREBID_TIMEOUT = timeoutMap[t];
+console.log("prebid timeout:", PREBID_TIMEOUT );
 //FLOOR_PRICE MAP - 1000 def brings back bigger bids in Uk
 var floorpriceMap = {
 0 : 0.20,
