@@ -1,45 +1,7 @@
 requirejs(['prebid_gpt']);
+
 requirejs(['time_out_map']);
-//TIMEOUT MAP - 1000 def brings back bigger bids in Uk
-var timeoutMap = {
-0 : 1400,
-1 : 1400,
-2 : 1400,
-3 : 1400,
-4 : 1400,
-5 : 1400,
-6 : 1400,
-7 : 1400,
-8 : 1400,
-9 : 1200,
-10 : 1200,
-11 : 1400,
-12 : 1400,
-13 : 1400,
-14 : 1400,
-15 : 1000,
-16 : 1400,
-17 : 1400,
-18 : 1400,
-19 : 1400,
-20 : 1400,
-21 : 1400,
-22 : 1400,
-23 : 1400
-};
-var t = new Date().getUTCHours();
-PREBID_TIMEOUT = timeoutMap[t];
-console.log("prebid timeout:", PREBID_TIMEOUT );
 
-requirejs(['floor_price_map']);
-
-// site config
-var site_config = {
-    refresh_rate: PREBID_TIMEOUT*30,  //denoted in milliseonds 40secs=40000...
-    FAILSAFE_TIMEOUT: PREBID_TIMEOUT*1.5   //denoted in milliseonds 5secs=5000...
-    // floor_price: 1.00 //set a min floor price on bids to pressure higher bids
-  };
-// site_config end
 // unruly player config //
 window.top.unruly = window.top.unruly || {}
 window.top.unruly.native = window.top.unruly.native || {}
@@ -50,12 +12,12 @@ requirejs(['amazon_bidder']);
 requirejs(['user_bid_cache_map']);
 
 requirejs(['analytics_settings']);
+
 requirejs(['bidders']);   
     
 // ======== DO NOT EDIT BELOW THIS LINE =========== //
 
 requirejs(['price_bucket_settings']);
-
 
     var googletag = googletag || {};
      googletag.cmd = googletag.cmd || [];
@@ -67,7 +29,8 @@ requirejs(['price_bucket_settings']);
      pbjs.que.push(function() {
      pbjs.addAdUnits(adUnits);
      
-requirejs(['bidder_settings']);     
+requirejs(['bidder_settings']);
+
 requirejs(['pbjs_config']);
 
     pbjs.requestBids({
@@ -166,4 +129,5 @@ definitons: {
    });
 });
 requirejs(['analytics_custom']);
+
 requirejs(['analytics_client']);
