@@ -187,11 +187,9 @@ googletag.cmd.push(function () {
     googletag.pubads().collapseEmptyDivs(true);
     googletag.pubads().setCentering(true);
  // googletag.pubads().disableInitialLoad();
-    googletag.pubads().enableLazyLoad({
-      fetchMarginPercent: 25,  // Fetch slots within 30 viewports.
-      renderMarginPercent: 20,  // Render slots within 5000 viewports.
-      mobileScaling: 0.0  // Double the above values on mobile.
-    });
+    
+requirejs(['lazyload']);
+
     googletag.enableServices();
 // not sure if impressionViewable, slotRenderEnded or slotOnload is best to use yet
     googletag.pubads().addEventListener("impressionViewable", function (event) {
