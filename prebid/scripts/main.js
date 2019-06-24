@@ -109,9 +109,9 @@ requirejs(['analytics_settings']);
 requirejs(['bidders']);   
     
 // ======== DO NOT EDIT BELOW THIS LINE =========== //
-const customConfigObject = {
+
 requirejs(['price_bucket_settings']);
-};
+
 
     var googletag = googletag || {};
      googletag.cmd = googletag.cmd || [];
