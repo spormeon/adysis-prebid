@@ -44,6 +44,10 @@ var adUnits = [
           { bidder: 'openx',   params: { unit: '539181725', delDomain: 'freestar-d.openx.net' } },
           { bidder: 'rubicon',   params: { accountId: "16924", siteId: "151312", zoneId: "896644" } },
           { bidder: 'quantcast',   params: { publisherId: "EnBKrGZNvq"} },
+          { bidder: 'criteo',   params: { zoneId: "1079305"} },
+          { bidder: 'triplelift',   params: { inventoryCode: "freestar_desktop_RON_300x250"} },
+          { bidder: 'sharethrough',   params: { pkey: "DSthphoQqH66AkQXPDoXn74b"} },
+          { bidder: 'connectad',   params: { networkId: "10047", siteId: "1029474"} },
      ] //./bids
  },
   //new ad unit block
