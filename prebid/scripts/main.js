@@ -1,4 +1,4 @@
-requirejs(['prebid_gpt']);
+define(['prebid_gpt']);
 
 //TIMEOUT MAP - 1000 def brings back bigger bids in Uk
 var timeoutMap = {
