@@ -13,7 +13,7 @@
     var pbjsEl = document.createElement("script");
     pbjsEl.type = "text/javascript";
     pbjsEl.async = true;
-    pbjsEl.src = "https://adops.adysis.com/scripts/prebid/prebid2.20.0.js";
+    pbjsEl.src = "https://adops.adysis.com/scripts/prebid/prebid2.21.0.js";
     var pbjsTargetEl = document.getElementsByTagName("footerbid")[0];
     pbjsTargetEl.insertBefore(pbjsEl, pbjsTargetEl.firstChild);
 })();
