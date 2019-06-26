@@ -53,7 +53,7 @@ requirejs(['user_bid_cache_map']);
 requirejs(['analytics_settings']);
 requirejs(['price_bucket_settings']);
 
-requirejs(['pbjs_config']);
+
 requirejs(['bidders']);   
     
 // ======== DO NOT EDIT BELOW THIS LINE =========== //
@@ -68,6 +68,8 @@ requirejs(['bidders']);
     var pbjs = pbjs || {};
      pbjs.que = pbjs.que || [];
      pbjs.que.push(function() {
+    	 
+requirejs(['pbjs_config']);
      pbjs.addAdUnits(adUnits);
      
 requirejs(['bidder_settings']);
