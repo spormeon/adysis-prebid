@@ -51,7 +51,7 @@ requirejs(['amazon_bidder']);
 requirejs(['user_bid_cache_map']);
 
 requirejs(['analytics_settings']);
-
+requirejs(['pbjs_config']);
 requirejs(['bidders']);   
     
 // ======== DO NOT EDIT BELOW THIS LINE =========== //
@@ -70,7 +70,7 @@ requirejs(['price_bucket_settings']);
      
 requirejs(['bidder_settings']);
 
-requirejs(['pbjs_config']);
+
 
     pbjs.requestBids({
      bidsBackHandler: initAdserver,
