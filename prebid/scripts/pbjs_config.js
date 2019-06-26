@@ -5,7 +5,7 @@ pbjs.setConfig({
       s2sConfig: {
         accountId: 'e31f627f-53a3-4288-9979-482d3c6ffc76',
         enabled: true,
-        bidders: ['sovrn','somoaudience','districtm','rhythmone','pulsepoint','gamoshi'],
+        bidders: ['sovrn','somoaudience','districtm','rhythmone','pulsepoint','gamoshi','rubicon','sharethrough','unruly','openx','yieldmo'],
         timeout: PREBID_TIMEOUT/1.5,
         adapter: 'prebidServer',
         endpoint: 'https://prebid.adnxs.com/pbs/v1/openrtb2/auction',
