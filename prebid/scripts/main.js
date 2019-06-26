@@ -51,14 +51,12 @@ requirejs(['amazon_bidder']);
 requirejs(['user_bid_cache_map']);
 
 requirejs(['analytics_settings']);
-requirejs(['price_bucket_settings']);
 
+requirejs(['price_bucket_settings']);
 
 requirejs(['bidders']);   
     
 // ======== DO NOT EDIT BELOW THIS LINE =========== //
-
-
 
     var googletag = googletag || {};
      googletag.cmd = googletag.cmd || [];
@@ -70,11 +68,10 @@ requirejs(['bidders']);
      pbjs.que.push(function() {
     	 
 requirejs(['pbjs_config']);
+
      pbjs.addAdUnits(adUnits);
      
 requirejs(['bidder_settings']);
-
-
 
     pbjs.requestBids({
      bidsBackHandler: initAdserver,
