@@ -51,12 +51,14 @@ requirejs(['amazon_bidder']);
 requirejs(['user_bid_cache_map']);
 
 requirejs(['analytics_settings']);
+requirejs(['price_bucket_settings']);
+
 requirejs(['pbjs_config']);
 requirejs(['bidders']);   
     
 // ======== DO NOT EDIT BELOW THIS LINE =========== //
 
-requirejs(['price_bucket_settings']);
+
 
     var googletag = googletag || {};
      googletag.cmd = googletag.cmd || [];
