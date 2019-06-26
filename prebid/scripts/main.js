@@ -41,7 +41,10 @@ var site_config = {
 };
 //site_config end
 
-
+// unruly player config //
+window.top.unruly = window.top.unruly || {}
+window.top.unruly.native = window.top.unruly.native || {}
+window.top.unruly.native.onAdLoaded = () => {window.top.unruly.native.disclosureMessage = "";}
 
 requirejs(['amazon_bidder']);
 
