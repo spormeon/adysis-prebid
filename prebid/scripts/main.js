@@ -1,5 +1,7 @@
-define(['./prebid_gpt']);
 
+define(function(require) {
+    var mod = require("./prebid_gpt");
+});
 //TIMEOUT MAP - 1000 def brings back bigger bids in Uk
 var timeoutMap = {
 0 : 1400,
