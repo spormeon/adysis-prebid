@@ -84,7 +84,7 @@ window.top.unruly.native.onAdLoaded = () => {window.top.unruly.native.disclosure
   gads.type = "text/javascript";
   var useSSL = "https:" == document.location.protocol;
   gads.src = (useSSL ? "https:" : "http:") + "//www.googletagservices.com/tag/js/gpt.js";
-  var node = document.getElementsByTagName("footerbid")[0];
+  var node = document.getElementsByTagName("footerbid1")[0];
   node.parentNode.insertBefore(gads, node);
 })();
 //load up prebid.js,  I think we need to load this earlier
@@ -93,7 +93,7 @@ window.top.unruly.native.onAdLoaded = () => {window.top.unruly.native.disclosure
     adyjsEl.type = "text/javascript";
     adyjsEl.async = true;
     adyjsEl.src = "https://adops.adysis.com/prebid2.17.0A.js";
-    var adyjsTargetEl = document.getElementsByTagName("footerbid")[0];
+    var adyjsTargetEl = document.getElementsByTagName("footerbid1")[0];
     adyjsTargetEl.insertBefore(adyjsEl, adyjsTargetEl.firstChild);
 })();
 // amazon bidder
