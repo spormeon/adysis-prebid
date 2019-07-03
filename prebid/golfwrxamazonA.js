@@ -433,7 +433,7 @@ console.log("user bid cache:", USERBIDCACHE );
        ]
      });
     adyjs.requestBids({
-     bidsBackHandler: initAdserver11,
+     bidsBackHandler: initAdserver1,
      timeout: PREBID_TIMEOUT
     });
     });
