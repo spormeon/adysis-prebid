@@ -1,9 +1,9 @@
 //Slots to send to page, have to add 1 on to the child (number) because the div counts as 1 in the string 
 window.addEventListener("DOMContentLoaded",function(){
-    document.querySelector("#mvp-content-main p:nth-child(4)").insertAdjacentHTML('afterbegin','<br><div class="ad-reporter-ahytrfg35423"><div id="advertisement" style="border: 0pt none; margin: auto; text-align: center; color: #999; text-transform: uppercase; font-family: sans-serif; font-size: 9px; font-weight: 400; letter-spacing: .2em; line-height: 1; margin-top: 0px; position: relative; top: -4px;">Advertisement</div><div id="inreedvidSlot"></div></div><br>');
-    document.querySelector("#mvp-content-main p:nth-child(8)").insertAdjacentHTML('afterbegin','<br><div class="ad-reporter-ahytrfg35423"><div id="advertisement" style="border: 0pt none; margin: auto; text-align: center; color: #999; text-transform: uppercase; font-family: sans-serif; font-size: 9px; font-weight: 400; letter-spacing: .2em; line-height: 1; margin-top: 0px; position: relative; top: -4px;">Advertisement</div><div id="inreedvid1Slot"></div></div><br>');
-    document.querySelector("#mvp-content-main p:nth-child(12)").insertAdjacentHTML('afterbegin','<br><div class="ad-reporter-ahytrfg35423"><div id="advertisement" style="border: 0pt none; margin: auto; text-align: center; color: #999; text-transform: uppercase; font-family: sans-serif; font-size: 9px; font-weight: 400; letter-spacing: .2em; line-height: 1; margin-top: 0px; position: relative; top: -4px;">Advertisement</div><div id="inreedvid2Slot"></div></div><br>');
-    document.querySelector("#mvp-content-main p:nth-child(16)").insertAdjacentHTML('afterbegin','<br><div class="ad-reporter-ahytrfg35423"><div id="advertisement" style="border: 0pt none; margin: auto; text-align: center; color: #999; text-transform: uppercase; font-family: sans-serif; font-size: 9px; font-weight: 400; letter-spacing: .2em; line-height: 1; margin-top: 0px; position: relative; top: -4px;">Advertisement</div><div id="inreedvid3Slot"></div></div><br>');
+    document.querySelector("#mvp-content-main p:nth-child(4)").insertAdjacentHTML('afterbegin','<br><div class="ad-reporter-ahytrfg35423"><div id="advertisement" style="border: 0pt none; margin: auto; text-align: center; color: #999; text-transform: uppercase; font-family: sans-serif; font-size: 9px; font-weight: 400; letter-spacing: .2em; line-height: 1; margin-top: 0px; position: relative; top: -4px;">Advertisement</div><div id="inreedvid4Slot"></div></div><br>');
+    document.querySelector("#mvp-content-main p:nth-child(8)").insertAdjacentHTML('afterbegin','<br><div class="ad-reporter-ahytrfg35423"><div id="advertisement" style="border: 0pt none; margin: auto; text-align: center; color: #999; text-transform: uppercase; font-family: sans-serif; font-size: 9px; font-weight: 400; letter-spacing: .2em; line-height: 1; margin-top: 0px; position: relative; top: -4px;">Advertisement</div><div id="inreedvid5Slot"></div></div><br>');
+    document.querySelector("#mvp-content-main p:nth-child(12)").insertAdjacentHTML('afterbegin','<br><div class="ad-reporter-ahytrfg35423"><div id="advertisement" style="border: 0pt none; margin: auto; text-align: center; color: #999; text-transform: uppercase; font-family: sans-serif; font-size: 9px; font-weight: 400; letter-spacing: .2em; line-height: 1; margin-top: 0px; position: relative; top: -4px;">Advertisement</div><div id="inreedvid6Slot"></div></div><br>');
+    document.querySelector("#mvp-content-main p:nth-child(16)").insertAdjacentHTML('afterbegin','<br><div class="ad-reporter-ahytrfg35423"><div id="advertisement" style="border: 0pt none; margin: auto; text-align: center; color: #999; text-transform: uppercase; font-family: sans-serif; font-size: 9px; font-weight: 400; letter-spacing: .2em; line-height: 1; margin-top: 0px; position: relative; top: -4px;">Advertisement</div><div id="inreedvid7Slot"></div></div><br>');
 });
 //  TIMEOUT MAP - 1000 def brings back bigger bids in Uk
 var timeoutMap = {
@@ -104,10 +104,10 @@ apstag.init({
  });
 apstag.fetchBids({
 slots: [
-    { slotID: 'inreedvidSlot', slotName: '/1001824/Golfwrx.com-HB/Golfwrx.com-HB-Vid-test', sizes: [[728, 90], [300, 250], [250, 250], [468, 60], [320, 50]] },
-    { slotID: 'inreedvid1Slot', slotName: '/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test1', sizes: [[728, 90], [300, 250], [250, 250], [468, 60], [320, 50]] },
-    { slotID: 'inreedvid2Slot', slotName: '/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test2', sizes: [[728, 90], [300, 250], [250, 250], [468, 60], [320, 50]] },
-    { slotID: 'inreedvid3Slot', slotName: '/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test3', sizes: [[728, 90], [300, 250], [250, 250], [468, 60], [320, 50]] }
+    { slotID: 'inreedvid4Slot', slotName: '/1001824/adp100001/adp100001A', sizes: [[728, 90], [300, 250], [250, 250], [468, 60], [320, 50]] },
+    { slotID: 'inreedvid5Slot', slotName: '/1001824/adp100001/adp100001B', sizes: [[728, 90], [300, 250], [250, 250], [468, 60], [320, 50]] },
+    { slotID: 'inreedvid6Slot', slotName: '/1001824/adp100001/adp100001C', sizes: [[728, 90], [300, 250], [250, 250], [468, 60], [320, 50]] },
+    { slotID: 'inreedvid7Slot', slotName: '/1001824/adp100001/adp100001D', sizes: [[728, 90], [300, 250], [250, 250], [468, 60], [320, 50]] }
     ],
     timeout: 2e3
  }, function(bids) {
@@ -166,7 +166,7 @@ console.log("user bid cache:", USERBIDCACHE );
     var adUnits = [
   //new ad unit block
      {
-      code: 'inreedvidSlot',
+      code: 'inreedvid4Slot',
       mediaTypes: {
        banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50]] },
        video:  { context: 'outstream', playerSize: [550, 310], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', "video/webm"], playbackmethod: [2] },
@@ -210,7 +210,7 @@ console.log("user bid cache:", USERBIDCACHE );
  },
   //new ad unit block
      {
-     code: 'inreedvid1Slot',
+     code: 'inreedvid5Slot',
      mediaTypes: {
       banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50]] },
       video:  { context: 'outstream', mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'], playerSize: [[550, 310]], minduration: 10,  maxduration: 30, protocols: [2,3], w:640, h:480, playbackmethod: [2]  } 
@@ -252,7 +252,7 @@ console.log("user bid cache:", USERBIDCACHE );
   },
    //new ad unit block
       {
-      code: 'inreedvid2Slot',
+      code: 'inreedvid6Slot',
       mediaTypes: {
        banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50]] },
        video:  { context: 'outstream', playerSize: [[550, 310]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'], playbackmethod: [2] },
@@ -294,7 +294,7 @@ console.log("user bid cache:", USERBIDCACHE );
    },
     //new ad unit block
        {
-       code: 'inreedvid3Slot',
+       code: 'inreedvid7Slot',
        mediaTypes: {
         banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50]] }, 
         video:  { context: 'outstream', playerSize: [[550, 310]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'], playbackmethod: [2] },
@@ -337,7 +337,7 @@ console.log("user bid cache:", USERBIDCACHE );
     }
     ];
 // ======== DO NOT EDIT BELOW THIS LINE =========== //
-    const customConfigObject = {
+    const customConfigObjectA = {
      "buckets" : [{
       "precision": 2,  //default is 2 if omitted - means 2.1234 rounded to 2 decimal places = 2.12
       "min" : 0,
@@ -398,7 +398,7 @@ console.log("user bid cache:", USERBIDCACHE );
       adysis: { bidCpmAdjustment : function(bidCpm){ return "+c.cpm+" * 2;} },
     };
     adyjs.setConfig({
-     priceGranularity: customConfigObject,
+     priceGranularity: customConfigObjectA,
      consentManagement: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*200, allowAuctionWithoutConsent: true },
         //cache: {url: "//prebid.adnxs.com/pbc/v1/cache"},
       s2sConfig: {
@@ -515,10 +515,10 @@ googletag.cmd.push(function () {
     // googletag.pubads().refresh();
     })(window.googletag, window.adyjs, {
 definitons: {
-    inreedvidSlot: { adUnitPath: "/1001824/Golfwrx.com-HB/Golfwrx.com-HB-Vid-test", size: "mappinginreedvidslot", sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
-    inreedvid1Slot: { adUnitPath: "/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test1", size: "mappinginreedvidslot", sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
-    inreedvid2Slot: { adUnitPath: "/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test2", size: "mappinginreedvidslot", sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
-    inreedvid3Slot: { adUnitPath: "/1001824/Golfwrx.com-HB/Golfwrx.comHB-Vid-test3", size: "mappinginreedvidslot", sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
+    inreedvid4Slot: { adUnitPath: "/1001824/adp100001/adp100001A", size: "mappinginreedvidslot", sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
+    inreedvid5Slot: { adUnitPath: "/1001824/adp100001/adp100001B", size: "mappinginreedvidslot", sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
+    inreedvid6Slot: { adUnitPath: "/1001824/adp100001/adp100001C", size: "mappinginreedvidslot", sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
+    inreedvid7Slot: { adUnitPath: "/1001824/adp100001/adp100001D", size: "mappinginreedvidslot", sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
     },
     sizeMappings: {
      mappinginreedvidslot: [
