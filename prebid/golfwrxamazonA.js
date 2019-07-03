@@ -433,13 +433,13 @@ console.log("user bid cache:", USERBIDCACHE );
        ]
      });
     adyjs.requestBids({
-     bidsBackHandler: initAdserver,
+     bidsBackHandler: initAdserver11,
      timeout: PREBID_TIMEOUT
     });
     });
-    function initAdserver() {
-     if (adyjs.initAdserverSet) return;
-     adyjs.initAdserverSet = true;
+    function initAdserver1() {
+     if (adyjs.initAdserver1Set) return;
+     adyjs.initAdserver1Set = true;
      googletag.cmd.push(function() {
      adyjs.que.push(function() {
      adyjs.setTargetingForGPTAsync();
@@ -449,7 +449,7 @@ console.log("user bid cache:", USERBIDCACHE );
      }
   // in case adyjs doesn't load
      setTimeout(function() {
-     initAdserver();
+     initAdserver1();
      }, site_config.FAILSAFE_TIMEOUT);
             
 googletag.cmd.push(function () {
