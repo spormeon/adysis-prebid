@@ -354,7 +354,7 @@ console.log("user bid cache:", USERBIDCACHE );
     var googletag = googletag || {};
      googletag.cmd = googletag.cmd || [];
      googletag.cmd.push(function() {
-     googletag.pubads().disableInitialLoad();
+     //googletag.pubads().disableInitialLoad();
     });
     var pbjs = pbjs || {};
      pbjs.que = pbjs.que || [];
