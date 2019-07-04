@@ -443,7 +443,7 @@ console.log("user bid cache:", USERBIDCACHE );
      googletag.cmd.push(function() {
      adyjs.que.push(function() {
      adyjs.setTargetingForGPTAsync();
-     googletag.pubads().refresh();
+     //googletag.pubads().refresh();
      });
      });
      }
