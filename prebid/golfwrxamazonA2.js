@@ -443,7 +443,7 @@ console.log("user bid cache:", USERBIDCACHE );
      googletag.cmd.push(function() {
      adyjs.que.push(function() {
      adyjs.setTargetingForGPTAsync();
-     //googletag.pubads().refresh();
+     googletag.pubads().refresh();
      });
      });
      }
@@ -484,8 +484,8 @@ googletag.cmd.push(function () {
     googletag.pubads().setCentering(true);
  // googletag.pubads().disableInitialLoad();
     googletag.pubads().enableLazyLoad({
-      fetchMarginPercent: 25,  // Fetch slots within 30 viewports.
-      renderMarginPercent: 20,  // Render slots within 5000 viewports.
+      fetchMarginPercent: 5,  // Fetch slots within 30 viewports.
+      renderMarginPercent: 10,  // Render slots within 5000 viewports.
       mobileScaling: 0.0  // Double the above values on mobile.
     });
     googletag.enableServices();
