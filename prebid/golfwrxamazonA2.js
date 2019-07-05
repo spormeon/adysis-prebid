@@ -484,8 +484,8 @@ googletag.cmd.push(function () {
     googletag.pubads().setCentering(true);
  // googletag.pubads().disableInitialLoad();
     googletag.pubads().enableLazyLoad({
-      fetchMarginPercent: 5,  // Fetch slots within 30 viewports.
-      renderMarginPercent: 10,  // Render slots within 5000 viewports.
+      fetchMarginPercent: 10,  // Fetch slots within 30 viewports.
+      renderMarginPercent: 5,  // Render slots within 5000 viewports.
       mobileScaling: 0.0  // Double the above values on mobile.
     });
     googletag.enableServices();
