@@ -92,7 +92,7 @@ window.top.unruly.native.onAdLoaded = () => {window.top.unruly.native.disclosure
     var adyjsEl = document.createElement("script");
     adyjsEl.type = "text/javascript";
     adyjsEl.async = true;
-    adyjsEl.src = "https://adops.adysis.com/prebid2.17.0A.js";
+    adyjsEl.src = "https://adops.adysis.com/prebid2.20.0adyjs.js";
     var adyjsTargetEl = document.getElementsByTagName("footerbid1")[0];
     adyjsTargetEl.insertBefore(adyjsEl, adyjsTargetEl.firstChild);
 })();
