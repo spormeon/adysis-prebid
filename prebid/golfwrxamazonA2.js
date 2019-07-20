@@ -516,7 +516,7 @@ googletag.cmd.push(function () {
       renderMarginPercent: 10,  // Render slots within 5000 viewports.
       mobileScaling: 0.0  // Double the above values on mobile.
     });
-    googletag.setAdIframeTitle('add some title here');
+    googletag.setAdIframeTitle('Advertisement');
     googletag.enableServices();
 // not sure if impressionViewable, slotRenderEnded or slotOnload is best to use yet
     googletag.pubads().addEventListener("impressionViewable", function (event) {
