@@ -388,8 +388,8 @@ console.log("user bid cache:", USERBIDCACHE );
      adyjs.que.push(function() {
      adyjs.addAdUnits(adUnits);
   // alias for bidder
-     adyjs.aliasBidder('appnexus','brealtime'); 
-     adyjs.aliasBidder('appnexus','springserveAlias2');
+     //adyjs.aliasBidder('appnexus','brealtime'); 
+     //adyjs.aliasBidder('appnexus','springserveAlias2');
      adyjs.aliasBidder('appnexus','districtm');
      adyjs.aliasBidder('gamoshi','viewdeos');
      adyjs.aliasBidder('onedisplay','aol');
