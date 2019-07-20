@@ -362,8 +362,28 @@ console.log("user bid cache:", USERBIDCACHE );
            { bidder: 'sharethrough',   params: { pkey: "DSthphoQqH66AkQXPDoXn74b"} },
            { bidder: 'connectad',   params: { networkId: "10047", siteId: "1029474"} },
        ] //./bids
-    }
-    ];
+       renderer: {
+           url: 'http://cdn.adnxs.com/renderer/video/ANOutstreamVideo.js',
+           render: function (bid) {
+               adResponse = {
+                   ad: {
+                       video: {
+                           content: bid.vastXml,
+                           player_height: bid.playerHeight,
+                           player_width: bid.playerWidth
+                       }
+                   }
+               }
+               // push to render queue because ANOutstreamVideo may not be loaded yet.
+               bid.renderer.push(() => {
+                   ANOutstreamVideo.renderAd({
+                       targetId: bid.adUnitCode, // target div id to render video.
+                       adResponse: adResponse
+                   });
+               });
+           }
+       }
+    }];
 // ======== DO NOT EDIT BELOW THIS LINE =========== //
     const customConfigObjectA = {
      "buckets" : [{
