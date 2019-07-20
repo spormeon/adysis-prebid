@@ -168,7 +168,7 @@ console.log("user bid cache:", USERBIDCACHE );
      {
       code: 'inreedvid4Slot',
       mediaTypes: {
-       banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50]] },
+       banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50],[1,1]] },
        video:  { context: 'outstream', playerSize: [550, 310], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', "video/webm"], playbackmethod: [2] },
       },
       bids: [
@@ -431,7 +431,7 @@ console.log("user bid cache:", USERBIDCACHE );
       s2sConfig: {
         accountId: 'e31f627f-53a3-4288-9979-482d3c6ffc76',
         enabled: true,
-        bidders: ['sovrn','somoaudience','districtm','rhythmone','pulsepoint','gamoshi','rubicon','openx','unruly','33across','ix'],
+        bidders: ['sovrn','somoaudience','rhythmone','pulsepoint','gamoshi','rubicon','openx','unruly','33across','ix'],
         timeout: PREBID_TIMEOUT/2,
         adapter: 'prebidServer',
         endpoint: 'https://prebid.adnxs.com/pbs/v1/openrtb2/auction',
