@@ -92,7 +92,7 @@ window.top.unruly.native.onAdLoaded = () => {window.top.unruly.native.disclosure
     var adyjsEl = document.createElement("script");
     adyjsEl.type = "text/javascript";
     adyjsEl.async = true;
-    adyjsEl.src = "https://adops.adysis.com/prebid2.24.0adyjs.js";
+    adyjsEl.src = "https://adops.adysis.com/prebid2.23.0adyjs.js";
     var adyjsTargetEl = document.getElementsByTagName("footerbid1")[0];
     adyjsTargetEl.insertBefore(adyjsEl, adyjsTargetEl.firstChild);
 })();
@@ -170,27 +170,6 @@ console.log("user bid cache:", USERBIDCACHE );
       mediaTypes: {
        banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50]] },
        video:  { context: 'outstream', playerSize: [550, 310], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', "video/webm"], playbackmethod: [2] },
-      },
-      renderer: {
-          url: 'http://cdn.adnxs.com/renderer/video/ANOutstreamVideo.js',
-          render: function (bid) {
-              adResponse = {
-                  ad: {
-                      video: {
-                          content: bid.vastXml,
-                          player_height: bid.playerHeight,
-                          player_width: bid.playerWidth
-                      }
-                  }
-              }
-              // push to render queue because ANOutstreamVideo may not be loaded yet.
-              bid.renderer.push(() => {
-                  ANOutstreamVideo.renderAd({
-                      targetId: bid.adUnitCode, // target div id to render video.
-                      adResponse: adResponse
-                  });
-              });
-          }
       },
       bids: [
           { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
