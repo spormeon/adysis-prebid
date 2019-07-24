@@ -171,7 +171,6 @@ console.log("user bid cache:", USERBIDCACHE );
        banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50],[1,1]] },
        video:  { context: 'outstream', playerSize: [550, 310], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', "video/webm"], playbackmethod: [2] },
       },
-      renderer: { url: 'http://cdn.adnxs.com/renderer/video/ANOutstreamVideo.js' },
       bids: [
           { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
           { bidder: 'appnexus',   params: { placementId: '11962910', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_on'] } } }, /* one placementId for all sizes */
