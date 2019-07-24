@@ -432,7 +432,7 @@ console.log("user bid cache:", USERBIDCACHE );
       s2sConfig: {
         accountId: 'e31f627f-53a3-4288-9979-482d3c6ffc76',
         enabled: true,
-        bidders: ['sovrn','somoaudience','rhythmone','pulsepoint','gamoshi','rubicon','33across'],
+        bidders: ['sovrn','somoaudience','rhythmone','pulsepoint','gamoshi','rubicon','33across','ix','openx'],
         timeout: PREBID_TIMEOUT/2,
         adapter: 'prebidServer',
         endpoint: 'https://prebid.adnxs.com/pbs/v1/openrtb2/auction',
@@ -446,7 +446,7 @@ console.log("user bid cache:", USERBIDCACHE );
         syncDelay: PREBID_TIMEOUT*2.5, // 5 seconds after the auction
       filterSettings: { iframe: { bidders: ['pulsepoint'], filter: 'exclude' }, image:  { bidders: '*', filter: 'include' } },
        },
-       debug: true,
+       debug: false,
        useBidCache: USERBIDCACHE,
        enableSendAllBids: false, // Default will be `true` as of 1.0
        bidderSequence: 'random', // Default is random
