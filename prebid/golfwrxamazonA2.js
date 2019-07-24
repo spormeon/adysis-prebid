@@ -26,7 +26,7 @@ var timeoutMap = {
 16 : 2500,
 17 : 2400,
 18 : 2400,
-19 : 2000,
+19 : 3000,
 20 : 2600,
 21 : 2200,
 22 : 2200,
@@ -446,7 +446,7 @@ console.log("user bid cache:", USERBIDCACHE );
         syncDelay: PREBID_TIMEOUT*2.5, // 5 seconds after the auction
       filterSettings: { iframe: { bidders: ['pulsepoint'], filter: 'exclude' }, image:  { bidders: '*', filter: 'include' } },
        },
-       debug: false,
+       debug: true,
        useBidCache: USERBIDCACHE,
        enableSendAllBids: false, // Default will be `true` as of 1.0
        bidderSequence: 'random', // Default is random
