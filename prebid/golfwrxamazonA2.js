@@ -207,7 +207,7 @@ console.log("user bid cache:", USERBIDCACHE );
           { bidder: 'smartyads',  params: { placementId: '6368' } },
           { bidder: 'oftmedia',   params: { placementId: '16137883', allowSmallerSizes: true } },
           { bidder: 'openx',   params: { unit: '539181725', delDomain: 'freestar-d.openx.net', openrtb: { imp: [{ video: { mimes: ['video/x-ms-wmv, video/mp4'] } }] } } },
-          { bidder: 'rubicon',   params: { accountId: "16924", siteId: "151312", zoneId: "896644" } },
+          { bidder: 'rubicon',   params: { accountId: "16924", siteId: "151312", zoneId: "896644", video: { language: 'en' } } },
           { bidder: 'quantcast',   params: { publisherId: "EnBKrGZNvq"} },
           { bidder: 'criteo',   params: { zoneId: "1079305"} },
           { bidder: 'triplelift',   params: { inventoryCode: "freestar_desktop_RON_300x250"} },
@@ -431,7 +431,7 @@ console.log("user bid cache:", USERBIDCACHE );
       s2sConfig: {
         accountId: 'e31f627f-53a3-4288-9979-482d3c6ffc76',
         enabled: true,
-        bidders: ['sovrn','somoaudience','rhythmone','pulsepoint','gamoshi','rubicon','openx','unruly','33across','ix'],
+        bidders: ['sovrn','somoaudience','rhythmone','pulsepoint','gamoshi','rubicon','unruly','33across'],
         timeout: PREBID_TIMEOUT/2,
         adapter: 'prebidServer',
         endpoint: 'https://prebid.adnxs.com/pbs/v1/openrtb2/auction',
