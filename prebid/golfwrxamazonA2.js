@@ -171,6 +171,15 @@ console.log("user bid cache:", USERBIDCACHE );
        banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50],[1,1]] },
        video:  { context: 'outstream', playerSize: [550, 310], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', "video/webm"], playbackmethod: [2] },
       },
+      renderer: {
+          url: 'http://cdn.adnxs.com/renderer/video/ANOutstreamVideo.js',
+          render: function (bid) {
+              ANOutstreamVideo.renderAd({
+                  targetId: bid.adUnitCode,
+                  adResponse: bid.adResponse,
+              });
+          }
+      },
       bids: [
           { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
           { bidder: 'appnexus',   params: { placementId: '11962910', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_on'] } } }, /* one placementId for all sizes */
@@ -222,6 +231,15 @@ console.log("user bid cache:", USERBIDCACHE );
       banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50]] },
       video:  { context: 'outstream', mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'], playerSize: [[550, 310]], minduration: 10,  maxduration: 30, protocols: [2,3], w:640, h:480, playbackmethod: [2]  } 
      },
+     renderer: {
+         url: 'http://cdn.adnxs.com/renderer/video/ANOutstreamVideo.js',
+         render: function (bid) {
+             ANOutstreamVideo.renderAd({
+                 targetId: bid.adUnitCode,
+                 adResponse: bid.adResponse,
+             });
+         }
+     },
      bids: [
          { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
          { bidder: 'appnexus',   params: { placementId: '11962910', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_on'] } } }, /* one placementId for all sizes */
@@ -271,6 +289,15 @@ console.log("user bid cache:", USERBIDCACHE );
        banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50]] },
        video:  { context: 'outstream', playerSize: [[550, 310]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'], playbackmethod: [2] },
       },
+      renderer: {
+          url: 'http://cdn.adnxs.com/renderer/video/ANOutstreamVideo.js',
+          render: function (bid) {
+              ANOutstreamVideo.renderAd({
+                  targetId: bid.adUnitCode,
+                  adResponse: bid.adResponse,
+              });
+          }
+      },
       bids: [
           { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
           { bidder: 'appnexus',   params: { placementId: '11962910', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_on'] } } }, /* one placementId for all sizes */
@@ -319,6 +346,15 @@ console.log("user bid cache:", USERBIDCACHE );
        mediaTypes: {
         banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50]] }, 
         video:  { context: 'outstream', playerSize: [[550, 310]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'], playbackmethod: [2] },
+       },
+       renderer: {
+           url: 'http://cdn.adnxs.com/renderer/video/ANOutstreamVideo.js',
+           render: function (bid) {
+               ANOutstreamVideo.renderAd({
+                   targetId: bid.adUnitCode,
+                   adResponse: bid.adResponse,
+               });
+           }
        },
        bids: [
            { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
