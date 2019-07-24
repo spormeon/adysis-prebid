@@ -26,8 +26,8 @@ var timeoutMap = {
 16 : 2500,
 17 : 2400,
 18 : 2400,
-19 : 1400,
-20 : 1400,
+19 : 2000,
+20 : 2600,
 21 : 2200,
 22 : 2200,
 23 : 1400
@@ -432,7 +432,7 @@ console.log("user bid cache:", USERBIDCACHE );
       s2sConfig: {
         accountId: 'e31f627f-53a3-4288-9979-482d3c6ffc76',
         enabled: true,
-        bidders: ['sovrn','somoaudience','rhythmone','pulsepoint','gamoshi','rubicon','unruly','33across'],
+        bidders: ['sovrn','somoaudience','rhythmone','pulsepoint','gamoshi','rubicon','33across'],
         timeout: PREBID_TIMEOUT/2,
         adapter: 'prebidServer',
         endpoint: 'https://prebid.adnxs.com/pbs/v1/openrtb2/auction',
