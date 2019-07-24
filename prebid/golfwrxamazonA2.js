@@ -169,7 +169,7 @@ console.log("user bid cache:", USERBIDCACHE );
       code: 'inreedvid4Slot',
       mediaTypes: {
        banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50],[1,1]] },
-       video:  { context: 'outstream', playerSize: [550, 310], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', "video/webm"], playbackmethod: [2] },
+       video:  { context: 'outstream', playerSize: [[550, 310]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', "video/webm"], playbackmethod: [2] }
       },
       bids: [
           { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
@@ -187,7 +187,8 @@ console.log("user bid cache:", USERBIDCACHE );
           { bidder: 'rhythmone',  params: { placementId: '76184', zone: '1r', path: 'mvo' } }, /* one placementId for all sizes */
        // { bidder: 'adsparc',      labelAny: ['desktop', 'tablet', 'phone'], params: { networkId: '9969', siteId: '1019801'} }, /*one placementId for all sizes*/	
           { bidder: 'komoona',      labelAny: ['desktop', 'tablet', 'phone'], params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: '2d14facbe61621faad0c7b2aa0458cff' } },  /* Golfwrx.com _KB 300x250 */
-          { bidder: "ix",         params: { siteId: "281563", size: [300, 250] } }, /* id 261017 golfwrx id */
+          { bidder: "ix",         params: { siteId: "261017", size: [300, 250] } }, /* id 261017 golfwrx id */
+          { bidder: "ix",         params: { siteId: "261017", size: [550, 310], video: { skippable: true, mimes: [ 'video/mp4', 'video/webm' ], minduration: 0, maxduration: 30, protocols: [6] } } }, /* id 261017 golfwrx id */
           { bidder: 'atomx',      params: { id: 5136354 } }, /* does all sizes not working at moment */
           //{ bidder: "yieldmo",    params: { placementId: "1990667709809591856" } }, /* no adapter in file */
           { bidder: 'gumgum',     params: { inSlot: '14600' } }, /*gumgum-300x250*/
