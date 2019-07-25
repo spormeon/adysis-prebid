@@ -515,8 +515,8 @@ googletag.cmd.push(function () {
     googletag.pubads().setSafeFrameConfig({allowPushExpansion: true, sandbox: true});
  // googletag.pubads().disableInitialLoad();
     googletag.pubads().enableLazyLoad({
-      fetchMarginPercent: 15,  // Fetch slots within 30 viewports.
-      renderMarginPercent: 10,  // Render slots within 5000 viewports.
+      fetchMarginPercent: 12,  // Fetch slots within 30 viewports.
+      renderMarginPercent: 8,  // Render slots within 5000 viewports.
       mobileScaling: 0.0  // Double the above values on mobile.
     });
     googletag.setAdIframeTitle('Advertisement');
