@@ -233,7 +233,7 @@ console.log("user bid cache:", USERBIDCACHE );
           { bidder: 'quantcast',   params: { publisherId: "EnBKrGZNvq"} },
           { bidder: 'criteo',   params: { zoneId: "1079305"} },
           { bidder: 'triplelift',   params: { inventoryCode: "freestar_desktop_RON_300x250"} },
-          { bidder: 'sharethrough',   params: { pkey: "DSthphoQqH66AkQXPDoXn74b"} },
+          { bidder: 'sharethrough',   params: { pkey: "DSthphoQqH66AkQXPDoXn74b", iframe: true} },
           { bidder: 'connectad',   params: { networkId: "10047", siteId: "1029474"} },
      ] //./bids
  },
@@ -282,7 +282,7 @@ console.log("user bid cache:", USERBIDCACHE );
          { bidder: 'quantcast',   params: { publisherId: "EnBKrGZNvq"} },
          { bidder: 'criteo',   params: { zoneId: "1079305"} },
          { bidder: 'triplelift',   params: { inventoryCode: "freestar_desktop_RON_300x250"} },
-         { bidder: 'sharethrough',   params: { pkey: "DSthphoQqH66AkQXPDoXn74b"} },
+         { bidder: 'sharethrough',   params: { pkey: "DSthphoQqH66AkQXPDoXn74b", iframe: true} },
          { bidder: 'connectad',   params: { networkId: "10047", siteId: "1029474"} },
      ] //./bids
   },
@@ -331,7 +331,7 @@ console.log("user bid cache:", USERBIDCACHE );
           { bidder: 'quantcast',   params: { publisherId: "EnBKrGZNvq"} },
           { bidder: 'criteo',   params: { zoneId: "1079305"} },
           { bidder: 'triplelift',   params: { inventoryCode: "freestar_desktop_RON_300x250"} },
-          { bidder: 'sharethrough',   params: { pkey: "DSthphoQqH66AkQXPDoXn74b"} },
+          { bidder: 'sharethrough',   params: { pkey: "DSthphoQqH66AkQXPDoXn74b", iframe: true} },
           { bidder: 'connectad',   params: { networkId: "10047", siteId: "1029474"} },
       ] //./bids
    },
@@ -381,7 +381,7 @@ console.log("user bid cache:", USERBIDCACHE );
            { bidder: 'quantcast',   params: { publisherId: "EnBKrGZNvq"} },
            { bidder: 'criteo',   params: { zoneId: "1079305"} },
            { bidder: 'triplelift',   params: { inventoryCode: "freestar_desktop_RON_300x250"} },
-           { bidder: 'sharethrough',   params: { pkey: "DSthphoQqH66AkQXPDoXn74b"} },
+           { bidder: 'sharethrough',   params: { pkey: "DSthphoQqH66AkQXPDoXn74b", iframe: true} },
            { bidder: 'connectad',   params: { networkId: "10047", siteId: "1029474"} },
        ] //./bids
     }];
