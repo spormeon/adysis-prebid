@@ -442,7 +442,7 @@ console.log("user bid cache:", USERBIDCACHE );
       },
       userSync: {
         iframeEnabled: true,
-        syncsPerBidder: 5, // and no more than 3 syncs at a time
+        syncsPerBidder: 10, // and no more than 3 syncs at a time
         syncDelay: PREBID_TIMEOUT*2.5, // 5 seconds after the auction
       filterSettings: { iframe: { bidders: ['pulsepoint'], filter: 'exclude' }, image:  { bidders: '*', filter: 'include' } },
       enableOverride: true // publisher will call `pbjs.triggerUserSyncs()`
@@ -472,7 +472,6 @@ console.log("user bid cache:", USERBIDCACHE );
      googletag.cmd.push(function() {
      adyjs.que.push(function() {
      adyjs.setTargetingForGPTAsync();
-     adyjs.triggerUserSyncs();
      googletag.pubads().refresh();
      });
      });
@@ -495,6 +494,7 @@ googletag.cmd.push(function () {
        bidsBackHandler: function() {
        adyjs.setTargetingForGPTAsync([slot.getSlotElementId()]);
     //googletag.destroySlots([slot]);
+       adyjs.triggerUserSyncs();
        googletag.pubads().refresh([slot]);
     }
     });
