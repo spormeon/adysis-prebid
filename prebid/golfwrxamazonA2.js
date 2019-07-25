@@ -445,7 +445,7 @@ console.log("user bid cache:", USERBIDCACHE );
         syncsPerBidder: 10, // and no more than 3 syncs at a time
         syncDelay: PREBID_TIMEOUT*2.5, // 5 seconds after the auction
       filterSettings: { iframe: { bidders: ['pulsepoint'], filter: 'exclude' }, image:  { bidders: '*', filter: 'include' } },
-      enableOverride: true // publisher will call `pbjs.triggerUserSyncs()`
+      enableOverride: true // publisher will call `pbjs.triggerUserSyncs()'
        },
        debug: true,
        useBidCache: USERBIDCACHE,
