@@ -465,6 +465,7 @@ console.log("user bid cache:", USERBIDCACHE );
      bidsBackHandler: initAdserver1,
      timeout: PREBID_TIMEOUT
     });
+    adyjs.triggerUserSyncs();
     });
     function initAdserver1() {
      if (adyjs.initAdserver1Set) return;
@@ -494,7 +495,6 @@ googletag.cmd.push(function () {
        bidsBackHandler: function() {
        adyjs.setTargetingForGPTAsync([slot.getSlotElementId()]);
     //googletag.destroySlots([slot]);
-       adyjs.triggerUserSyncs();
        googletag.pubads().refresh([slot]);
     }
     });
