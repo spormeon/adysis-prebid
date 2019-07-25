@@ -214,7 +214,7 @@ console.log("user bid cache:", USERBIDCACHE );
           { bidder: 'triplelift',   params: { inventoryCode: "freestar_desktop_RON_300x250"} },
           { bidder: 'sharethrough',   params: { pkey: "DSthphoQqH66AkQXPDoXn74b"} },
           { bidder: 'connectad',   params: { networkId: "10047", siteId: "1029474"} },
-     ] //./bids
+     ], //./bids
       renderer: {
           url: 'http://cdn.adnxs.com/renderer/video/ANOutstreamVideo.js',
           render: function (bid) {
