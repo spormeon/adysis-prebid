@@ -173,16 +173,7 @@ console.log("user bid cache:", USERBIDCACHE );
       },
       renderer: {
           url: 'http://cdn.adnxs.com/renderer/video/ANOutstreamVideo.js',
-          render: function (bid) {
-              adResponse = {
-                  ad: {
-                      video: {
-                          content: bid.vastXml,
-                          player_height: bid.playerHeight,
-                          player_width: bid.playerWidth
-                      }
-                  }
-              }
+          render: function (bid) { adResponse = { ad: { video: { content: bid.vastXml, player_height: bid.playerHeight, player_width: bid.playerWidth } } }
               // push to render queue because ANOutstreamVideo may not be loaded yet.
               bid.renderer.push(() => {
                   ANOutstreamVideo.renderAd({
@@ -191,7 +182,7 @@ console.log("user bid cache:", USERBIDCACHE );
                   });
               });
           }
-      },
+      }
       bids: [
           { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
           { bidder: 'appnexus',   params: { placementId: '11962910', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_on'] } } }, /* one placementId for all sizes */
