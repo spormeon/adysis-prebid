@@ -80,7 +80,7 @@ window.top.unruly.native.onAdLoaded = () => {window.top.unruly.native.disclosure
 (function() {
     var adyjsEl = document.createElement("script");
     adyjsEl.type = "text/javascript";
-    adyjsEl.async = true;
+    adyjsEl.async = false;
     adyjsEl.src = "https://adops.adysis.com/prebid2.25.0adyjs.js";
     var adyjsTargetEl = document.getElementsByTagName("footerbid1")[0];
     adyjsTargetEl.insertBefore(adyjsEl, adyjsTargetEl.firstChild);
