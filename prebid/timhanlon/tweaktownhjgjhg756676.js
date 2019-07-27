@@ -5,6 +5,16 @@ document.querySelector("#KonaBody p:nth-child(40)").insertAdjacentHTML('afterend
 document.querySelector("#KonaBody p:nth-child(70)").insertAdjacentHTML('afterend','<br><div class="ad-reporter-ahytrfg35423"><div id="advertisement" style="border: 0pt none; margin: auto; text-align: center; color: #999; text-transform: uppercase; font-family: sans-serif; font-size: 9px; font-weight: 400; letter-spacing: .2em; line-height: 1; margin-top: 0px; position: relative; top: -4px;">Advertisement</div><div id="inreedvid6Slot"></div></div><br>');
 document.querySelector("#KonaBody p:nth-child(100)").insertAdjacentHTML('afterend','<br><div class="ad-reporter-ahytrfg35423"><div id="advertisement" style="border: 0pt none; margin: auto; text-align: center; color: #999; text-transform: uppercase; font-family: sans-serif; font-size: 9px; font-weight: 400; letter-spacing: .2em; line-height: 1; margin-top: 0px; position: relative; top: -4px;">Advertisement</div><div id="inreedvid7Slot"></div></div><br>');
 });
+//load up google gpt.js
+(function () {
+  var gads = document.createElement("script");
+  gads.async = true;
+  gads.type = "text/javascript";
+  var useSSL = "https:" == document.location.protocol;
+  gads.src = (useSSL ? "https:" : "http:") + "//www.googletagservices.com/tag/js/gpt.js";
+  var node = document.getElementsByTagName("footerbid1")[0];
+  node.parentNode.insertBefore(gads, node);
+})();
 //load up prebid.js,  I think we need to load this earlier
 (function() {
     var adyjsEl = document.createElement("script");
@@ -85,18 +95,6 @@ var site_config = {
 window.top.unruly = window.top.unruly || {}
 window.top.unruly.native = window.top.unruly.native || {}
 window.top.unruly.native.onAdLoaded = () => {window.top.unruly.native.disclosureMessage = "";}
-
-//load up google gpt.js
-(function () {
-  var gads = document.createElement("script");
-  gads.async = true;
-  gads.type = "text/javascript";
-  var useSSL = "https:" == document.location.protocol;
-  gads.src = (useSSL ? "https:" : "http:") + "//www.googletagservices.com/tag/js/gpt.js";
-  var node = document.getElementsByTagName("footerbid1")[0];
-  node.parentNode.insertBefore(gads, node);
-})();
-
 // amazon bidder
 !function(a9,a,p,s,t,A,g){if(a[a9])return;function q(c,r){a[a9]._Q.push([c,r])}a[a9]={init:function(){q("i",arguments)},fetchBids:function(){q("f",arguments)},setDisplayBids:function(){},targetingKeys:function(){return[]},_Q:[]};A=p.createElement(s);A.async=!0;A.src=t;g=p.getElementsByTagName(s)[0];g.parentNode.insertBefore(A,g)}("apstag",window,document,"script","//c.amazon-adsystem.com/aax2/apstag.js");
 apstag.init({
