@@ -76,7 +76,15 @@ var site_config = {
 window.top.unruly = window.top.unruly || {}
 window.top.unruly.native = window.top.unruly.native || {}
 window.top.unruly.native.onAdLoaded = () => {window.top.unruly.native.disclosureMessage = "";}
-
+//load up prebid.js,  I think we need to load this earlier
+(function() {
+    var adyjsEl = document.createElement("script");
+    adyjsEl.type = "text/javascript";
+    adyjsEl.async = true;
+    adyjsEl.src = "https://adops.adysis.com/prebid2.25.0adyjs.js";
+    var adyjsTargetEl = document.getElementsByTagName("footerbid1")[0];
+    adyjsTargetEl.insertBefore(adyjsEl, adyjsTargetEl.firstChild);
+})();
 //load up google gpt.js
 (function () {
   var gads = document.createElement("script");
@@ -87,15 +95,7 @@ window.top.unruly.native.onAdLoaded = () => {window.top.unruly.native.disclosure
   var node = document.getElementsByTagName("footerbid1")[0];
   node.parentNode.insertBefore(gads, node);
 })();
-//load up prebid.js,  I think we need to load this earlier
-(function() {
-    var adyjsEl = document.createElement("script");
-    adyjsEl.type = "text/javascript";
-    adyjsEl.async = true;
-    adyjsEl.src = "https://adops.adysis.com/prebid2.25.0adyjs.js";
-    var adyjsTargetEl = document.getElementsByTagName("footerbid1")[0];
-    adyjsTargetEl.insertBefore(adyjsEl, adyjsTargetEl.firstChild);
-})();
+
 // amazon bidder
 !function(a9,a,p,s,t,A,g){if(a[a9])return;function q(c,r){a[a9]._Q.push([c,r])}a[a9]={init:function(){q("i",arguments)},fetchBids:function(){q("f",arguments)},setDisplayBids:function(){},targetingKeys:function(){return[]},_Q:[]};A=p.createElement(s);A.async=!0;A.src=t;g=p.getElementsByTagName(s)[0];g.parentNode.insertBefore(A,g)}("apstag",window,document,"script","//c.amazon-adsystem.com/aax2/apstag.js");
 apstag.init({
