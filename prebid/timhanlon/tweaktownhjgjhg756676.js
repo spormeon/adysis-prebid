@@ -80,7 +80,7 @@ window.top.unruly.native.onAdLoaded = () => {window.top.unruly.native.disclosure
 (function() {
     var adyjsEl = document.createElement("script");
     adyjsEl.type = "text/javascript";
-    adyjsEl.async = true;
+    adyjsEl.async = false;
     adyjsEl.src = "https://adops.adysis.com/prebid2.25.0adyjs.js";
     var adyjsTargetEl = document.getElementsByTagName("footerbid1")[0];
     adyjsTargetEl.insertBefore(adyjsEl, adyjsTargetEl.firstChild);
@@ -186,7 +186,7 @@ console.log("user bid cache:", USERBIDCACHE );
           { bidder: '33across',   params: { siteId : 'cLN3UCBHar5OfDrkHcnlKl', productId: 'siab' } }, /*All sizes*/
           { bidder: 'rhythmone',  params: { placementId: '76184', zone: '1r', path: 'mvo' } }, /* one placementId for all sizes */
        // { bidder: 'adsparc',      labelAny: ['desktop', 'tablet', 'phone'], params: { networkId: '9969', siteId: '1019801'} }, /*one placementId for all sizes*/	
-          { bidder: 'komoona',      labelAny: ['desktop', 'tablet', 'phone'], params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: '2d14facbe61621faad0c7b2aa0458cff' } },  /* Golfwrx.com _KB 300x250 */
+          //{ bidder: 'komoona',      labelAny: ['desktop', 'tablet', 'phone'], params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: '2d14facbe61621faad0c7b2aa0458cff' } },  /* Golfwrx.com _KB 300x250 */
           { bidder: "ix",         params: { siteId: "261017", size: [300, 250] } }, /* id 261017 golfwrx id */
           { bidder: "ix",         params: { siteId: "261017", size: [550, 310], video: { skippable: true, mimes: [ 'video/mp4', 'video/webm' ], minduration: 0, maxduration: 30, protocols: [6] } } }, /* id 261017 golfwrx id */
           { bidder: 'atomx',      params: { id: 5136354 } }, /* does all sizes not working at moment */
@@ -238,7 +238,7 @@ console.log("user bid cache:", USERBIDCACHE );
          { bidder: '33across',   params: { siteId : 'cLN3UCBHar5OfDrkHcnlKl', productId: 'siab' } }, /*All sizes*/
          { bidder: 'rhythmone',  params: { placementId: '76184', zone: '1r', path: 'mvo' } }, /* one placementId for all sizes */
       // { bidder: 'adsparc',      labelAny: ['desktop', 'tablet', 'phone'], params: { networkId: '9969', siteId: '1019801'} }, /*one placementId for all sizes*/	
-         { bidder: 'komoona',      labelAny: ['desktop', 'tablet', 'phone'], params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: '2d14facbe61621faad0c7b2aa0458cff' } },  /* Golfwrx.com _KB 300x250 */
+         //{ bidder: 'komoona',      labelAny: ['desktop', 'tablet', 'phone'], params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: '2d14facbe61621faad0c7b2aa0458cff' } },  /* Golfwrx.com _KB 300x250 */
          { bidder: "ix",         params: { siteId: "281563", size: [300, 250] } },
          { bidder: 'atomx',      params: { id: 5136438} }, /* 300x250A */
          //{ bidder: "yieldmo",    params: { placementId: "1990667709809591856" } }, /* no adapter in file */
@@ -287,7 +287,7 @@ console.log("user bid cache:", USERBIDCACHE );
           { bidder: '33across',   params: { siteId : 'cLN3UCBHar5OfDrkHcnlKl', productId: 'siab' } }, /*All sizes*/
           { bidder: 'rhythmone',  params: { placementId: '76184', zone: '1r', path: 'mvo' } }, /* one placementId for all sizes */
        // { bidder: 'adsparc',      labelAny: ['desktop', 'tablet', 'phone'], params: { networkId: '9969', siteId: '1019801'} }, /*one placementId for all sizes*/	
-          { bidder: 'komoona',      labelAny: ['desktop', 'tablet', 'phone'], params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: '2d14facbe61621faad0c7b2aa0458cff' } },  /* Golfwrx.com _KB 300x250 */
+          //{ bidder: 'komoona',      labelAny: ['desktop', 'tablet', 'phone'], params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: '2d14facbe61621faad0c7b2aa0458cff' } },  /* Golfwrx.com _KB 300x250 */
           { bidder: "ix",         params: { siteId: "281563", size: [300, 250] } },
           { bidder: 'atomx',      params: { id: 5136439} }, /* 300x250B */
           //{ bidder: "yieldmo",    params: { placementId: "1990667709809591856" } }, /* no adapter in file */
@@ -336,7 +336,7 @@ console.log("user bid cache:", USERBIDCACHE );
            { bidder: '33across',   params: { siteId : 'cLN3UCBHar5OfDrkHcnlKl', productId: 'siab' } }, /*All sizes*/
            { bidder: 'rhythmone',  params: { placementId: '76184', zone: '1r', path: 'mvo' } }, /* one placementId for all sizes */
         // { bidder: 'adsparc',      labelAny: ['desktop', 'tablet', 'phone'], params: { networkId: '9969', siteId: '1019801'} }, /*one placementId for all sizes*/	
-           { bidder: 'komoona',      labelAny: ['desktop', 'tablet', 'phone'], params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: '2d14facbe61621faad0c7b2aa0458cff' } },  /* Golfwrx.com _KB 300x250 */
+           //{ bidder: 'komoona',      labelAny: ['desktop', 'tablet', 'phone'], params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: '2d14facbe61621faad0c7b2aa0458cff' } },  /* Golfwrx.com _KB 300x250 */
            { bidder: "ix",         params: { siteId: "281563", size: [300, 250] } },
            { bidder: 'atomx',      params: { id: 5136440} }, /* 300x250C */
            //{ bidder: "yieldmo",    params: { placementId: "1990667709809591856" } }, /* no adapter in file */
