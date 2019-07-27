@@ -5,6 +5,15 @@ document.querySelector("#KonaBody p:nth-child(40)").insertAdjacentHTML('afterend
 document.querySelector("#KonaBody p:nth-child(70)").insertAdjacentHTML('afterend','<br><div class="ad-reporter-ahytrfg35423"><div id="advertisement" style="border: 0pt none; margin: auto; text-align: center; color: #999; text-transform: uppercase; font-family: sans-serif; font-size: 9px; font-weight: 400; letter-spacing: .2em; line-height: 1; margin-top: 0px; position: relative; top: -4px;">Advertisement</div><div id="inreedvid6Slot"></div></div><br>');
 document.querySelector("#KonaBody p:nth-child(100)").insertAdjacentHTML('afterend','<br><div class="ad-reporter-ahytrfg35423"><div id="advertisement" style="border: 0pt none; margin: auto; text-align: center; color: #999; text-transform: uppercase; font-family: sans-serif; font-size: 9px; font-weight: 400; letter-spacing: .2em; line-height: 1; margin-top: 0px; position: relative; top: -4px;">Advertisement</div><div id="inreedvid7Slot"></div></div><br>');
 });
+//load up prebid.js,  I think we need to load this earlier
+(function() {
+    var adyjsEl = document.createElement("script");
+    adyjsEl.type = "text/javascript";
+    adyjsEl.async = true;
+    adyjsEl.src = "https://adops.adysis.com/prebid2.25.0adyjs.js";
+    var adyjsTargetEl = document.getElementsByTagName("footerbid1")[0];
+    adyjsTargetEl.insertBefore(adyjsEl, adyjsTargetEl.firstChild);
+})();
 //  TIMEOUT MAP - 1000 def brings back bigger bids in Uk
 var timeoutMap = {
 0 : 1400,
@@ -76,15 +85,7 @@ var site_config = {
 window.top.unruly = window.top.unruly || {}
 window.top.unruly.native = window.top.unruly.native || {}
 window.top.unruly.native.onAdLoaded = () => {window.top.unruly.native.disclosureMessage = "";}
-//load up prebid.js,  I think we need to load this earlier
-(function() {
-    var adyjsEl = document.createElement("script");
-    adyjsEl.type = "text/javascript";
-    adyjsEl.async = true;
-    adyjsEl.src = "https://adops.adysis.com/prebid2.25.0adyjs.js";
-    var adyjsTargetEl = document.getElementsByTagName("footerbid1")[0];
-    adyjsTargetEl.insertBefore(adyjsEl, adyjsTargetEl.firstChild);
-})();
+
 //load up google gpt.js
 (function () {
   var gads = document.createElement("script");
