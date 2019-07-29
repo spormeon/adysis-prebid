@@ -218,7 +218,7 @@ console.log("user bid cache:", USERBIDCACHE );
           { bidder: 'oftmedia',   params: { placementId: '16137883', allowSmallerSizes: true } },
           { bidder: 'openx',   params: { unit: '539181725', delDomain: 'freestar-d.openx.net', openrtb: { imp: [{ video: { mimes: ['video/x-ms-wmv, video/mp4'] } }] } } },
           { bidder: 'rubicon',   params: { accountId: "16924", siteId: "151312", zoneId: "896644", video: { language: 'en' } } },
-          //{ bidder: 'quantcast',   params: { publisherId: "EnBKrGZNvq"} },
+          { bidder: 'quantcast',   params: { publisherId: "EnBKrGZNvq"} },
           { bidder: 'criteo',   params: { zoneId: "1079305"} },
           { bidder: 'triplelift',   params: { inventoryCode: "freestar_desktop_RON_300x250"} },
           { bidder: 'sharethrough',   params: { pkey: "DSthphoQqH66AkQXPDoXn74b", iframe: true} },
@@ -267,7 +267,7 @@ console.log("user bid cache:", USERBIDCACHE );
          { bidder: 'oftmedia',   params: { placementId: '16137883', allowSmallerSizes: true } },
          { bidder: 'openx',   params: { unit: '539181725', delDomain: 'freestar-d.openx.net' } },
          { bidder: 'rubicon',   params: { accountId: "16924", siteId: "151312", zoneId: "896644" } },
-         //{ bidder: 'quantcast',   params: { publisherId: "EnBKrGZNvq"} },
+         { bidder: 'quantcast',   params: { publisherId: "EnBKrGZNvq"} },
          { bidder: 'criteo',   params: { zoneId: "1079305"} },
          { bidder: 'triplelift',   params: { inventoryCode: "freestar_desktop_RON_300x250"} },
          { bidder: 'sharethrough',   params: { pkey: "DSthphoQqH66AkQXPDoXn74b", iframe: true} },
@@ -316,7 +316,7 @@ console.log("user bid cache:", USERBIDCACHE );
           { bidder: 'oftmedia',   params: { placementId: '16137883', allowSmallerSizes: true } },
           { bidder: 'openx',   params: { unit: '539181725', delDomain: 'freestar-d.openx.net' } },
           { bidder: 'rubicon',   params: { accountId: "16924", siteId: "151312", zoneId: "896644" } },
-          //{ bidder: 'quantcast',   params: { publisherId: "EnBKrGZNvq"} },
+          { bidder: 'quantcast',   params: { publisherId: "EnBKrGZNvq"} },
           { bidder: 'criteo',   params: { zoneId: "1079305"} },
           { bidder: 'triplelift',   params: { inventoryCode: "freestar_desktop_RON_300x250"} },
           { bidder: 'sharethrough',   params: { pkey: "DSthphoQqH66AkQXPDoXn74b", iframe: true} },
@@ -366,7 +366,7 @@ console.log("user bid cache:", USERBIDCACHE );
            { bidder: 'oftmedia',  params: { placementId: '16137883', allowSmallerSizes: true } },
            { bidder: 'openx',   params: { unit: '539181725', delDomain: 'freestar-d.openx.net' } },
            { bidder: 'rubicon',   params: { accountId: "16924", siteId: "151312", zoneId: "896644" } },
-           //{ bidder: 'quantcast',   params: { publisherId: "EnBKrGZNvq"} },
+           { bidder: 'quantcast',   params: { publisherId: "EnBKrGZNvq"} },
            { bidder: 'criteo',   params: { zoneId: "1079305"} },
            { bidder: 'triplelift',   params: { inventoryCode: "freestar_desktop_RON_300x250"} },
            { bidder: 'sharethrough',   params: { pkey: "DSthphoQqH66AkQXPDoXn74b", iframe: true} },
@@ -453,8 +453,8 @@ console.log("user bid cache:", USERBIDCACHE );
         iframeEnabled: true,
         syncsPerBidder: 10, // and no more than 3 syncs at a time
         syncDelay: PREBID_TIMEOUT*2.5, // 5 seconds after the auction
-      filterSettings: { iframe: { bidders: ['pulsepoint'], filter: 'exclude' }, image:  { bidders: '*', filter: 'include' } },
-      enableOverride: true // publisher will call `pbjs.triggerUserSyncs()'
+      filterSettings: { iframe: { bidders: '*', filter: 'exclude' }, image:  { bidders: '*', filter: 'include' } },
+      // enableOverride: true // publisher will call `pbjs.triggerUserSyncs()'
        },
        debug: true,
        useBidCache: USERBIDCACHE,
