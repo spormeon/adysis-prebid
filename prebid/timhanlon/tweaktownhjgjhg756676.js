@@ -1,8 +1,14 @@
 window._BidFilter={site_id:1045,pbjsKey:'adyjs',checkAudio:true};
-const url = 'https://cdn.bidfilter.com/bidfilter.js';
-$.getScript( url, function( data ) {
- console.log(data);
-});
+(function () {
+	  var bidfiletr = document.createElement("script");
+	  bidfiletr.async = true;
+	  bidfiletr.type = "text/javascript";
+	  var useSSL = "https:" == document.location.protocol;
+	  bidfiletr.src = (useSSL ? "https:" : "http:") + "//cdn.bidfilter.com/bidfilter.js";
+	  var node = document.getElementsByTagName("footerbid1")[0];
+	  node.parentNode.insertBefore(bidfiletr, node);
+})();
+
 //Slots to send to page, have to add 1 on to the child (number) because the div counts as 1 in the string 
 window.addEventListener("DOMContentLoaded",function(){
 document.querySelector("#KonaBody p:nth-child(2)").insertAdjacentHTML('afterend','<br><div class="ad-reporter-ahytrfg35423"><div id="advertisement" style="border: 0pt none; margin: auto; text-align: center; color: #999; text-transform: uppercase; font-family: sans-serif; font-size: 9px; font-weight: 400; letter-spacing: .2em; line-height: 1; margin-top: 0px; position: relative; top: -4px;">Advertisement</div><div id="inreedvid4Slot"></div></div><br>');
