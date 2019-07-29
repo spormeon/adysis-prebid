@@ -202,7 +202,7 @@ console.log("user bid cache:", USERBIDCACHE );
           //{ bidder: "yieldmo",    params: { placementId: "1990667709809591856" } }, /* no adapter in file */
           { bidder: 'gumgum',     params: { inSlot: '14600' } }, /*gumgum-300x250*/
           { bidder: 'undertone',  params: { publisherId: '3660' } },
-          //{ bidder: 'unruly',     params: { UUID: '23984444', SiteId: 15145 } },
+          { bidder: 'unruly',     params: { UUID: '23984444', SiteId: 15145 } },
        // { bidder: 'contentignite',      labelAny: ['desktop', 'tablet', 'phone'], params: { accountID: '168237', zoneID: '316288'} }, /*300x250*/
           // { bidder: 'viewdeos',      params: { supplyPartnerId: '1985', rendererUrl: 'https://s.viewdeos.io/video/latest/renderer.js' } }, /* oustream  */
        // { bidder: 'sekindoUM',    labelAny: ['desktop'], params: { spaceId: '87709' } }, /* 300x250 */ 
@@ -253,7 +253,7 @@ console.log("user bid cache:", USERBIDCACHE );
          //{ bidder: "yieldmo",    params: { placementId: "1990667709809591856" } }, /* no adapter in file */
          { bidder: 'gumgum',     params: { inSlot: '14600' } }, /*gumgum-300x250*/
          { bidder: 'undertone',  params: { publisherId: '3660' } },
-         //{ bidder: 'unruly',     params: { UUID: '23984444', SiteId: 15145 } },
+         { bidder: 'unruly',     params: { UUID: '23984444', SiteId: 15145 } },
       // { bidder: 'contentignite',      labelAny: ['desktop', 'tablet', 'phone'], params: { accountID: '168237', zoneID: '316288'} }, /*300x250*/
          //{ bidder: 'viewdeos',   params: { supplyPartnerId: '1985', rendererUrl: 'https://s.viewdeos.io/video/latest/renderer.js' } } /* oustream  */
       // { bidder: 'sekindoUM',    labelAny: ['desktop'], params: { spaceId: '87709' } }, /* 300x250 */ 
@@ -302,7 +302,7 @@ console.log("user bid cache:", USERBIDCACHE );
           //{ bidder: "yieldmo",    params: { placementId: "1990667709809591856" } }, /* no adapter in file */
           { bidder: 'gumgum',     params: { inSlot: '14600' } }, /*gumgum-300x250*/
           { bidder: 'undertone',  params: { publisherId: '3660' } },
-          //{ bidder: 'unruly',     params: { UUID: '23984444', SiteId: 15145 } }, /* targetingUUID for client side */
+          { bidder: 'unruly',     params: { UUID: '23984444', SiteId: 15145 } }, /* targetingUUID for client side */
        // { bidder: 'contentignite',      labelAny: ['desktop', 'tablet', 'phone'], params: { accountID: '168237', zoneID: '316288'} }, /*300x250*/
           //{ bidder: 'viewdeos',   params: { supplyPartnerId: '1985', rendererUrl: 'https://s.viewdeos.io/video/latest/renderer.js' } } /* oustream  */
        // { bidder: 'sekindoUM',    labelAny: ['desktop'], params: { spaceId: '87709' } }, /* 300x250 */ 
@@ -351,7 +351,7 @@ console.log("user bid cache:", USERBIDCACHE );
            //{ bidder: "yieldmo",    params: { placementId: "1990667709809591856" } }, /* no adapter in file */
            { bidder: 'gumgum',     params: { inSlot: '14600' } }, /*gumgum-300x250*/
            { bidder: 'undertone',  params: { publisherId: '3660' } },
-           //{ bidder: 'unruly',     params: { UUID: '23984444', SiteId: 15145 } },
+           { bidder: 'unruly',     params: { UUID: '23984444', SiteId: 15145 } },
         // { bidder: 'contentignite',      labelAny: ['desktop', 'tablet', 'phone'], params: { accountID: '168237', zoneID: '316288'} }, /*300x250*/
            //{ bidder: 'viewdeos',   params: { supplyPartnerId: '1985', rendererUrl: 'https://s.viewdeos.io/video/latest/renderer.js' } } /* oustream  */
         // { bidder: 'sekindoUM',    labelAny: ['desktop'], params: { spaceId: '87709' } }, /* 300x250 */ 
@@ -441,7 +441,7 @@ console.log("user bid cache:", USERBIDCACHE );
       s2sConfig: {
         accountId: 'e31f627f-53a3-4288-9979-482d3c6ffc76',
         enabled: true,
-        bidders: ['sovrn','somoaudience','rhythmone','pulsepoint','gamoshi','rubicon','33across','ix','openx','unruly'],
+        bidders: ['sovrn'],
         timeout: PREBID_TIMEOUT/2,
         adapter: 'prebidServer',
         endpoint: 'https://prebid.adnxs.com/pbs/v1/openrtb2/auction',
