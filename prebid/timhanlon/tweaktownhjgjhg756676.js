@@ -189,7 +189,7 @@ console.log("user bid cache:", USERBIDCACHE );
               });
           }
       },
-      renderer: { options: { adText: 'Advertisement', } },
+      
       bids: [
           { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
           { bidder: 'appnexus',   params: { placementId: '11962910', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_on'] } } }, /* one placementId for all sizes */
