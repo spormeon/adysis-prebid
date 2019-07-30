@@ -50,7 +50,7 @@ var timeoutMap = {
 11 : 2400,
 12 : 1400,
 13 : 1400,
-14 : 1400,
+14 : 2400,
 15 : 1400,
 16 : 1400,
 17 : 1400,
@@ -252,7 +252,7 @@ console.log("user bid cache:", USERBIDCACHE );
              });
          }
      },
-     renderer: { options: { adText: 'Advertisement', } },
+     renderer: { options: { adText: 'Advertisement' } },
      bids: [
          { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
          { bidder: 'appnexus',   params: { placementId: '11962910', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_on'] } } }, /* one placementId for all sizes */
@@ -312,7 +312,7 @@ console.log("user bid cache:", USERBIDCACHE );
               });
           }
       },
-      renderer: { options: { adText: 'Advertisement', } },
+      renderer: { options: { adText: 'Advertisement' } },
       bids: [
           { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
           { bidder: 'appnexus',   params: { placementId: '11962910', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_on'] } } }, /* one placementId for all sizes */
@@ -372,7 +372,7 @@ console.log("user bid cache:", USERBIDCACHE );
                });
            }
        },
-       renderer: { options: { adText: 'Advertisement', } },
+       renderer: { options: { adText: 'Advertisement' } },
        bids: [
            { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
            { bidder: 'appnexus',   params: { placementId: '11962910', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_on'] } } }, /* one placementId for all sizes, outstream placement */
