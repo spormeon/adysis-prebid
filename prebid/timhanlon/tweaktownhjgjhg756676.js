@@ -227,7 +227,8 @@ console.log("user bid cache:", USERBIDCACHE );
           { bidder: 'smartyads',  params: { placementId: '6368' } },
           { bidder: 'oftmedia',   params: { placementId: '16137883', allowSmallerSizes: true } },
           { bidder: 'openx',   params: { unit: '539181725', delDomain: 'freestar-d.openx.net', openrtb: { imp: [{ video: { mimes: ['video/x-ms-wmv, video/mp4'] } }] } } },
-          { bidder: 'rubicon',   params: { accountId: "16924", siteId: "151312", zoneId: "896644", video: { language: 'en' } } },
+          { bidder: 'rubicon',   params: { accountId: "16924", siteId: "151312", zoneId: "896644", video: { language: 'en' } } }, /* video call */
+          { bidder: 'rubicon',   params: { accountId: "16924", siteId: "151312", zoneId: "896644" } }, /* display call */
           { bidder: 'quantcast',   params: { publisherId: "EnBKrGZNvq"} },
           { bidder: 'criteo',   params: { zoneId: "1079305"} },
           { bidder: 'triplelift',   params: { inventoryCode: "freestar_desktop_RON_300x250"} },
@@ -286,7 +287,8 @@ console.log("user bid cache:", USERBIDCACHE );
          { bidder: 'smartyads',  params: { placementId: '6368' } },
          { bidder: 'oftmedia',   params: { placementId: '16137883', allowSmallerSizes: true } },
          { bidder: 'openx',   params: { unit: '539181725', delDomain: 'freestar-d.openx.net' } },
-         { bidder: 'rubicon',   params: { accountId: "16924", siteId: "151312", zoneId: "896644" } },
+         { bidder: 'rubicon',   params: { accountId: "16924", siteId: "151312", zoneId: "896644", video: { language: 'en' } } }, /* video call */
+         { bidder: 'rubicon',   params: { accountId: "16924", siteId: "151312", zoneId: "896644" } }, /* display call */
          { bidder: 'quantcast',   params: { publisherId: "EnBKrGZNvq"} },
          { bidder: 'criteo',   params: { zoneId: "1079305"} },
          { bidder: 'triplelift',   params: { inventoryCode: "freestar_desktop_RON_300x250"} },
@@ -345,7 +347,8 @@ console.log("user bid cache:", USERBIDCACHE );
           { bidder: 'smartyads',  params: { placementId: '6368' } },
           { bidder: 'oftmedia',   params: { placementId: '16137883', allowSmallerSizes: true } },
           { bidder: 'openx',   params: { unit: '539181725', delDomain: 'freestar-d.openx.net' } },
-          { bidder: 'rubicon',   params: { accountId: "16924", siteId: "151312", zoneId: "896644" } },
+          { bidder: 'rubicon',   params: { accountId: "16924", siteId: "151312", zoneId: "896644", video: { language: 'en' } } }, /* video call */
+          { bidder: 'rubicon',   params: { accountId: "16924", siteId: "151312", zoneId: "896644" } }, /* display call */
           { bidder: 'quantcast',   params: { publisherId: "EnBKrGZNvq"} },
           { bidder: 'criteo',   params: { zoneId: "1079305"} },
           { bidder: 'triplelift',   params: { inventoryCode: "freestar_desktop_RON_300x250"} },
@@ -405,7 +408,8 @@ console.log("user bid cache:", USERBIDCACHE );
            { bidder: 'smartyads',  params: { placementId: '6368' } },
            { bidder: 'oftmedia',  params: { placementId: '16137883', allowSmallerSizes: true } },
            { bidder: 'openx',   params: { unit: '539181725', delDomain: 'freestar-d.openx.net' } },
-           { bidder: 'rubicon',   params: { accountId: "16924", siteId: "151312", zoneId: "896644" } },
+           { bidder: 'rubicon',   params: { accountId: "16924", siteId: "151312", zoneId: "896644", video: { language: 'en' } } }, /* video call */
+           { bidder: 'rubicon',   params: { accountId: "16924", siteId: "151312", zoneId: "896644" } }, /* display call */
            { bidder: 'quantcast',   params: { publisherId: "EnBKrGZNvq"} },
            { bidder: 'criteo',   params: { zoneId: "1079305"} },
            { bidder: 'triplelift',   params: { inventoryCode: "freestar_desktop_RON_300x250"} },
@@ -475,7 +479,8 @@ console.log("user bid cache:", USERBIDCACHE );
       adysis: { bidCpmAdjustment : function(bidCpm){ return "+c.cpm+" * 2;} },
     };
     adyjs.setConfig({
-     priceGranularity: customConfigObjectA,
+    	rubicon: {singleRequest: true},
+    	priceGranularity: customConfigObjectA,
      consentManagement: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*200, allowAuctionWithoutConsent: true },
         //cache: {url: "//prebid.adnxs.com/pbc/v1/cache"},
       s2sConfig: {
