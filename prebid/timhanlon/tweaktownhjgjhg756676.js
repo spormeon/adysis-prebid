@@ -230,7 +230,7 @@ console.log("user bid cache:", USERBIDCACHE );
      code: 'inreedvid5Slot',
      mediaTypes: {
       banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50]] },
-      video:  { context: 'outstream', mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'], playerSize: [[550, 310]], minduration: 10,  maxduration: 30, protocols: [2,3], w:640, h:480, playbackmethod: [2]  } 
+      video:  { context: 'outstream', playerSize: [[550, 310]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', "video/webm"], playbackmethod: [2], minduration: 0,  maxduration: 30, protocols: [2,3], linearity: 1, api: [2] }
      },
      bids: [
          { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
@@ -279,7 +279,7 @@ console.log("user bid cache:", USERBIDCACHE );
       code: 'inreedvid6Slot',
       mediaTypes: {
        banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50]] },
-       video:  { context: 'outstream', playerSize: [[550, 310]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'], playbackmethod: [2] },
+       video:  { context: 'outstream', playerSize: [[550, 310]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', "video/webm"], playbackmethod: [2], minduration: 0,  maxduration: 30, protocols: [2,3], linearity: 1, api: [2] }
       },
       bids: [
           { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
@@ -328,7 +328,7 @@ console.log("user bid cache:", USERBIDCACHE );
        code: 'inreedvid7Slot',
        mediaTypes: {
         banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50]] }, 
-        video:  { context: 'outstream', playerSize: [[550, 310]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'], playbackmethod: [2] },
+        video:  { context: 'outstream', playerSize: [[550, 310]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', "video/webm"], playbackmethod: [2], minduration: 0,  maxduration: 30, protocols: [2,3], linearity: 1, api: [2] }
        },
        bids: [
            { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
