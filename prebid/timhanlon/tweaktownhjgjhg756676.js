@@ -178,7 +178,7 @@ console.log("user bid cache:", USERBIDCACHE );
       code: 'inreedvid4Slot',
       mediaTypes: {
        banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50],[1,1]] },
-       video:  { context: 'outstream', playerSize: [[550, 310]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', "video/webm"], playbackmethod: [2], minduration: 0,  maxduration: 30, protocols: [2,3], linearity: 1, api: [2] }
+       video:  { context: 'outstream', playerSize: [[550, 310]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', "video/webm"], playbackmethod: [2], minduration: 0,  maxduration: 45, protocols: [1.2,3,4,5,6,7,8,9,10], linearity: 1, api: [1,2,3,4,5,6] }
       },
       renderer: {
           url: 'http://cdn.adnxs.com/renderer/video/ANOutstreamVideo.js',
@@ -227,7 +227,7 @@ console.log("user bid cache:", USERBIDCACHE );
           { bidder: 'smartyads',  params: { placementId: '6368' } },
           { bidder: 'oftmedia',   params: { placementId: '16137883', allowSmallerSizes: true } },
           { bidder: 'openx',   params: { unit: '539181725', delDomain: 'freestar-d.openx.net', openrtb: { imp: [{ video: { mimes: ['video/x-ms-wmv, video/mp4'] } }] } } },
-          { bidder: 'rubicon',   params: { accountId: "16924", siteId: "151312", zoneId: "896644", video: { language: 'en' } } }, /* video call */
+          { bidder: 'rubicon',   params: { accountId: "16924", siteId: "151312", zoneId: "896644", video: { playerWidth: '640', playerHeight: '360', language: 'en' } } }, /* video call */
           { bidder: 'rubicon',   params: { accountId: "16924", siteId: "151312", zoneId: "896644" } }, /* display call */
           { bidder: 'quantcast',   params: { publisherId: "EnBKrGZNvq"} },
           { bidder: 'criteo',   params: { zoneId: "1079305"} },
