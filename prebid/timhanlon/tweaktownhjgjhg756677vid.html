@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#">
+<head>
+
+<!-- videojs -->
+<script src="https://adops.adysis.com/prebid2.26.0.js"></script>
+<script src="//imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
+        
+<!-- videojs -->
+<!-- use recent version of videojs to ensure proper functioning with the iOS devices -->
+<link rel="stylesheet" href="https://adops.adysis.com/video-js-min.css">
+<script type="text/javascript" src="https://adops.adysis.com/video-min.js"></script>
+<!-- videojs-vast-vpaid -->
+<link href="https://adops.adysis.com/videojs.vast.vpaid-min.css" rel="stylesheet">
+<script src="https://adops.adysis.com/videojs_5.vast.vpaid-min.js"></script>
+<script>
+
+//ASSERTIVE ANALYTICS SETTINGS - Version: 1.4.0
+var assertive_entityId = "FHkAkgiDWrXm4dZFw";
+var assertive_debug = 0; // append the query string 'assertiveYield=debug' or add this local storage entry 'localStorage.setItem("assertiveYield", "debug")' to enable dynamically
+var assertive_sampleRate = 1; // 1 = 100%, 0.2 = 20%...
+var assertive_timeout = null;
+var assertive_layout = null;
+var assertive_userState = null;
+// var assertive_custom_1 = null;
+var assertive_custom_2 = null;
+var assertive_custom_3 = null;
+var assertive_custom_4 = null;
+var assertive_custom_5 = null;
+//example of supplying a custom var from a prev. defined var
+            var pbjs = pbjs || {};
+            pbjs.que = pbjs.que || [];
+
+            /* PRE-DEFINE `invokeVideoPlayer`
+            Because we have no way of knowing when all the bids will be
+            returned from Prebid we can't be sure that the browser will
+            reach the point where `invokeVideoPlayer` is defined before
+            `bidsBackHandler` fires and tries to call it.
+            To prevent an "`invokeVideoPlayer` not defined" error, we
+            pre-define it before we make the call to Prebid, and redefine
+            it later on with the code to create the player and play the
+            ad.
+            In this first version, it simply stores the winning VAST to
+            use later. */
+
+            var tempTag = false;
+            var invokeVideoPlayer = function(url) {
+                tempTag = url;
+            };
+            /* Prebid video ad unit */
+            var videoAdUnit = {
+                code: 'vid1',
+                mediaTypes: {
+                    video: { context: 'instream', playerSize: [640, 480],  mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'],  playbackmethod: [2], minduration: 0,  maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10], linearity: 1, api: [1,2,3,4,5,6]  }
+                },
+                bids: [
+                	{ bidder: 'appnexus', params: { placementId: 15915644, allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } },
+                    { bidder: 'districtm', params: { placementId: 15897864, allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } },
+                    //{ bidder: 'beachfront', params: { bidfloor: 0.01, appId: '11bc5dd5-7421-4dd8-c926-40fa653bec76' } },
+                    //{ bidder: 'viewdeos',   params: { supplyPartnerId: '1985' } },
+                    { bidder: 'rhythmone',  params: { placementId: '76184', zone: '1r', path: 'mvo' } },
+                    //{ bidder: 'somoaudience', params: { placement_hash: '1152340cac3268b0e737b49c1382cd2b' } },
+                    { bidder: 'rubicon',   params: { accountId: "16924", siteId: "151312", zoneId: "896644", video: { language: 'en' } } }, /* video call */
+                    { bidder: 'openx',   params: { unit: '539181725', delDomain: 'freestar-d.openx.net', openrtb: { imp: [{ video: { mimes: ['video/x-flv, video/mp4, application/x-shockwave-flash, application/javascript, video/webm'] } }] } } },
+                    // { bidder: 'unruly',     params: { targetingUUID: '23984444', siteId: 15145 } }
+                    // { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } }
+                    // { bidder: 'cedato',     params: { player_id: '1895193152' , bidfloor: 0.01 } }
+                ]
+            };
+
+            pbjs.que.push(function() {
+            	pbjs.addAdUnits(videoAdUnit); // add your ad units to the bid request
+            	
+            	// configure prebid to use prebid cache and prebid server
+                // make sure to add your own accountId to your s2sConfig object
+                pbjs.bidderSettings = { 
+      districtm:    { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.88; } },
+      teads:   { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.94; } },
+      unruly:  { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.90; } },
+      beachfront:   { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.05; } }, 
+      viewdeos:   { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.05; } },
+      appnexus:   { bidCpmAdjustment : function(bidCpm){ return bidCpm * 1.00; } },
+    };
+                pbjs.setConfig({
+                    cache: { url: 'https://prebid.adnxs.com/pbc/v1/cache' },
+                    s2sConfig: {
+                        accountId: 'e31f627f-53a3-4288-9979-482d3c6ffc76',
+                        enabled: true,
+                        bidders: ['beachfront','gamoshi','rhythmone','somoaudience','appnexus','rubicon','openx','districtm'],
+                        adapter: 'prebidServer',
+                        timeout: 2000,
+                        endpoint: 'https://prebid.adnxs.com/pbs/v1/openrtb2/auction',
+                        syncEndpoint: 'https://prebid.adnxs.com/pbs/v1/cookie_sync',
+                        cookieSet: true,
+                        cookiesetUrl: 'https://acdn.adnxs.com/cookieset/cs.js'
+                      },
+                      userSync: {
+                          iframeEnabled: true,
+                          syncsPerBidder: 50, // and no more than 3 syncs at a time
+                          syncDelay: 4000, // 5 seconds after the auction
+                        filterSettings: {
+                           iframe: { bidders: ['pulsepoint'], filter: 'exclude' },
+                           image:  { bidders: '*', filter: 'include' }
+                           },
+                         },
+                         debug: true,
+                         useBidCache: true,
+                         enableSendAllBids: false, // Default will be `true` as of 1.0
+                         bidderSequence: 'random', // Default is random
+                         publisherDomain: 'golfwrx.com',
+                         bidderTimeout: 1300,
+                         pubcid: {expInterval: 525600},
+                         currency: {
+                           'adServerCurrency': "GBP",
+                           'granularityMultiplier': 1,
+                           'conversionRateFile': 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json',
+                         },   
+                });
+                
+                pbjs.requestBids({
+                    bidsBackHandler: function(bids) {
+                        var videoUrl = pbjs.adServers.dfp.buildVideoUrl({
+                            adUnit: videoAdUnit,
+                            params: {
+                                // iu: '/19968336/prebid_cache_video_adunit',
+                                iu: '/1001824/Golfwrx.com-HB/vid1',
+                                description_url: 'http://golfwrx.com',
+                                output: 'vast'
+                            }
+                        }); 
+                     // Mark the bid, used in buildVideoUrl, as used
+                        pbjs.markWinningBidAsUsed({
+                            adUnitCode: videoAdUnit.code // optional if you know the adId
+                            // adId: bid.adId // optional
+                        });
+                        invokeVideoPlayer(videoUrl);
+                    }
+                });
+            });
+        </script>
+
+
+
+
+
+
+<script>
+            var page_load_time;
+
+            page_load_time = new Date().getTime() - performance.timing.navigationStart;
+            console.log(page_load_time + "ms -- Player loading!");
+
+            var vid1 = videojs('vid1');
+
+            page_load_time = new Date().getTime() - performance.timing.navigationStart;
+            console.log(page_load_time + "ms -- Player loaded!");
+
+            function invokeVideoPlayer(url) {
+
+                page_load_time = new Date().getTime() - performance.timing.navigationStart;
+                console.log(page_load_time + "ms -- Prebid VAST url = " + url);
+
+                /* Access the player instance by calling `videojs()` and passing
+                 in the player's ID. Add a `ready` listener to make sure the
+                 player is ready before interacting with it. */
+
+                videojs("vid1").ready(function() {
+
+                    page_load_time = new Date().getTime() - performance.timing.navigationStart;
+                    console.log(page_load_time + "ms -- Player is ready!");
+
+                    /* PASS SETTINGS TO VAST PLUGIN
+                    Pass in a JSON object to the player's `vastClient` (defined
+                    by the VAST/VPAID plugin we're using). The requires an
+                    `adTagUrl`, which will be the URL returned by Prebid. You
+                    can view all the options available for the `vastClient`
+                    here:
+                    https://github.com/MailOnline/videojs-vast-vpaid#options */
+
+                    var player = this;
+                    var vastAd = player.vastClient({
+                        adTagUrl: url,
+                        prerollTimeout: 1200,
+                        playAdAlways: true,
+                        verbosity: 4,
+                        vpaidFlashLoaderPath: "https://adops.adysis.com/VPAIDFlash.swf?raw=true",
+                        autoplay: true
+                    });
+
+                    page_load_time = new Date().getTime() - performance.timing.navigationStart;
+                    console.log(page_load_time + "ms -- Prebid VAST tag inserted!");
+
+                    player.muted(true);
+                    player.play();
+
+                    page_load_time = new Date().getTime() - performance.timing.navigationStart;
+                    console.log(page_load_time + "ms -- invokeVideoPlayer complete!");
+                });
+            }
+          //ASSERTIVE ANALYTICS - Version: 1.8.0
+          !function(){"use strict";var I="1.8",_="https://api.assertcom.de",e="assertive_analytics_",y=e.concat("sessionUUID"),s=e.concat("sessionStart"),a=e.concat("sessionRandom"),h=e.concat("sessionUTM"),b=e.concat("sessionReferrer"),w=E(),U=[],S=[],t=t||localStorage.getItem("assertiveYield")&&-1!==localStorage.getItem("assertiveYield").indexOf("debug")||-1!==d("assertiveYield").indexOf("debug");function E(e){return e?(e^16*Math.random()>>e/4).toString(16):([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g,E)}function d(e){return decodeURI(window.location.search.replace(new RegExp("^(?:.*[&\\?]"+escape(e).replace(/[\.\+\*]/g,"\\$&")+"(?:\\=([^&]*))?)?.*$","i"),"$1"))}function R(e){t&&console.log(e)}Array.prototype.find||Object.defineProperty(Array.prototype,"find",{value:function(e){if(null==this)throw new TypeError('"this" is null or not defined');var t=Object(this),n=t.length>>>0;if("function"!=typeof e)throw new TypeError("predicate must be a function");for(var i=arguments[1],r=0;r<n;){var o=t[r];if(e.call(i,o,r,t))return o;r++}},configurable:!0,writable:!0}),function(){if(!localStorage.getItem(s)||Date.now()>localStorage.getItem(s)){localStorage.setItem(y,E()),localStorage.setItem(a,Math.random()),document.referrer?localStorage.setItem(b,document.referrer):localStorage.removeItem(b);var e=["utm_source","utm_medium","utm_campaign","utm_term","utm_content"],t={};for(var n in e){var i=e[n],r=d(i);""!==r&&(t[i]=r)}var o=JSON.stringify(t);o!==JSON.stringify({})?localStorage.setItem(h,o):localStorage.removeItem(h)}localStorage.setItem(s,Date.now()+18e5)}(),-1!==d("assertiveYield").indexOf("check")&&alert("Assertive Yield: Check"),("undefined"==typeof assertive_sampleRate||assertive_sampleRate&&localStorage.getItem(a)<assertive_sampleRate)&&function e(){if(n)return;if("undefined"==typeof googletag||!googletag.pubadsReady)return void setTimeout(e,20);n=!0;var v=null;window.addEventListener("blur",function(){if(v){var e=new XMLHttpRequest,t=_+"?event=click&entityId="+assertive_entityId+"&impressionUUID="+U[v];e.open("GET",t,!0),e.send()}});googletag.cmd.push(function(){googletag.pubads().addEventListener("slotRenderEnded",function(e){if(!e.isEmpty)if("undefined"!=typeof assertive_entityId){var t=e.slot,n=t.getSlotElementId(),i=t.getAdUnitPath(),r=document.getElementById(n),o=null;if(r){if(pbjs.adUnits.find(function(e){return e.code===n}))o=n;else{if(!pbjs.adUnits.find(function(e){return e.code===i}))return;o=i}var s=r.getElementsByTagName("iframe")[0];s.addEventListener("mouseover",function(){v=n}),s.addEventListener("touchstart",function(){v=n}),s.addEventListener("mouseout",function(){v=null}),s.addEventListener("touchend",function(){v=null});var a=t.getHtml(),d=/pbjs\.renderAd\(document, '(.*)'\)/g.exec(a),l=d?d[1]:t.getTargeting("hb_adid")[0],u=!!d,c=pbjs.getBidResponsesForAdUnitCode(o).bids.find(function(e){return e.adId===l});U[n]=E(),R("Session UUID: "+localStorage.getItem(y)+", PageView UUID: "+w+", Impression UUID: "+U[n]),R("Slot Id: "+n+", AdUnitPath: "+i),c&&R(" - Highest PreBid "+c.cpm+" from "+c.bidderCode+" with id "+l),c||R(" - No PreBids!!!"),R(" - Winner: "+(u?"prebid":"dfp (Direct/AdX/AdSense)")+" with size "+(u?c.width:e.size[0])+"x"+(u?c.height:e.size[1])),R("---------------");var m=null,p=null;c&&(c.appnexus?m=c.appnexus.buyerMemberId?c.appnexus.buyerMemberId:null:c.rubicon&&(m=c.rubicon.networkId?c.rubicon.networkId:null,p=c.rubicon.advertiserId?c.rubicon.advertiserId:null));var g={version:I,entityId:assertive_entityId,siteUUID:"undefined"!=typeof assertive_siteUUID?assertive_siteUUID:null,sessionUUID:localStorage.getItem(y),pageViewUUID:w,impressionUUID:U[n],slotId:n,adUnitPath:i,highestPreBid:c?c.cpm:0,highestPreBid_partner:c?c.bidderCode:"",buyerId:m,brandId:p,dealId:c&&c.dealId?c.dealId:null,creativeId:c&&c.creativeId?c.creativeId:null,mediaType:c&&c.mediaType?c.mediaType:null,currency:c&&c.currency?c.currency:null,netRevenue:c&&c.netRevenue?c.netRevenue:null,creative_width:u?c.width:e.size[0],creative_height:u?c.height:e.size[1],preBidWon:u,timeToRespond:c?c.timeToRespond:null,protocol:window.location.protocol,host:window.location.host,pathname:window.location.pathname,pathname_split:window.location.pathname.split("/").filter(function(e){return e}),referrer:localStorage.getItem(b),utm:localStorage.getItem(h),prebid_timeout:assertive_timeout||null,prebid_version:pbjs.version||null,userState:"undefined"!=typeof assertive_userState?assertive_userState:null,layout:"undefined"!=typeof assertive_layout?assertive_layout:null,custom_1:"undefined"!=typeof assertive_custom_1?assertive_custom_1:null,custom_2:"undefined"!=typeof assertive_custom_2?assertive_custom_2:null,custom_3:"undefined"!=typeof assertive_custom_3?assertive_custom_3:null,custom_4:"undefined"!=typeof assertive_custom_4?assertive_custom_4:null,custom_5:"undefined"!=typeof assertive_custom_5?assertive_custom_5:null,bps_type:t.getTargeting("ay_bid")[0]||null,bps_algo:t.getTargeting("ay_algo")[0]||null};S.push(g);var f=new XMLHttpRequest;f.open("POST",_,!0),f.setRequestHeader("Content-Type","text/plain"),f.send(JSON.stringify(g)),R("SENT!!!")}}else console.error("Assertive Yield: Entity ID is mandatory and not defined, exiting...")}),googletag.pubads().addEventListener("impressionViewable",function(e){var t=e.slot.getSlotElementId(),n=new XMLHttpRequest,i=_+"?event=activeView&entityId="+assertive_entityId+"&impressionUUID="+U[t];n.open("GET",i,!0),n.send()})})}();var n=!1}();
+          // end assertive analytics
+        </script>
+        
+        
+        
+        
+        
+        
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<!--[if IE 6]><script src="https://scriptscdn.tweaktown.com/html5.js"></script><script src="https://scriptscdn.tweaktown.com/respond.js"></script><![endif]--><!--[if IE 7]><script src="https://scriptscdn.tweaktown.com/html5.js"></script><script src="https://scriptscdn.tweaktown.com/respond.js"></script><![endif]--><!--[if IE 8]><script src="https://scriptscdn.tweaktown.com/html5.js"></script><script src="https://scriptscdn.tweaktown.com/respond.js"></script><![endif]-->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="robots" content="NOODP, NOYDIR">
+<base href="https://www.tweaktown.com/">
+<link rel="alternate" href="https://www.tweaktown.com/guides/8883/convert-dvd-handbrake-winx-ripper/index.html" hreflang="en-us">
+<link rel="canonical" href="https://www.tweaktown.com/guides/8883/convert-dvd-handbrake-winx-ripper/index.html">
+<title>How to Convert DVD with Handbrake or WinX DVD Ripper</title>
+<meta name="description" content="Have some old DVDs laying around that you want to make digital for future safe keeping? Read on.">
+<meta name="keywords" content="DVD, convert, covert DVD, Handbreak, WinX DVD Ripper, ripping, ripper, DVD rip">
+<meta name="news_keywords" content="DVD, convert, covert DVD, Handbreak, WinX DVD Ripper, ripping, ripper, DVD rip">
+<link rel="amphtml" href="https://amp.tweaktown.com/?url=https://www.tweaktown.com/guides/8883/convert-dvd-handbrake-winx-ripper/index.html">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "url": "https://www.tweaktown.com/",
+  "logo": "https://imagescdn.tweaktown.com/logo-google-tt.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "TweakTown",
+  "url": "https://www.tweaktown.com/",
+  "sameAs": [
+    "https://www.facebook.com/TweakTown",
+    "https://www.instagram.com/TweakTown",
+    "https://www.youtube.com.com/TweakTown",
+    "https://www.twitter.com/TweakTown"
+     ]
+}
+</script>
+<meta property="og:locale" content="en_us">
+<meta property="og:site_name" content="TweakTown">
+<meta property="og:url" content="https://www.tweaktown.com/guides/8883/convert-dvd-handbrake-winx-ripper/index.html">
+<meta property="og:title" content="How to Convert DVD with Handbrake or WinX DVD Ripper">
+<meta property="og:description" content="Have some old DVDs laying around that you want to make digital for future safe keeping? Read on.">
+<meta property="fb:pages" content="49650744941">
+<meta property="fb:app_id" content="206853542678452">
+<meta property="fb:admins" content="722935432">
+<meta property="og:type" content="article">
+<meta property="article:publisher" content="https://www.facebook.com/TweakTown">
+<meta property="article:author" content="https://www.facebook.com/TweakTown">
+<meta property="article:published_time" content="2019-01-29T20:27:16-06:00">
+<meta property="og:image" content="https://imagescdn.tweaktown.com/content/8/8/8883_5_convert-dvd-handbrake-winx-ripper_full.png">
+<meta property="og:image:alt" content="Have some old DVDs laying around that you want to make digital for future safe keeping? Read on.">
+<link rel="me" href="https://twitter.com/TweakTown">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@TweakTown">
+<meta name="twitter:url" content="https://www.tweaktown.com/guides/8883/convert-dvd-handbrake-winx-ripper/index.html">
+<meta name="twitter:domain" content="TweakTown.com">
+<meta name="twitter:title" content="How to Convert DVD with Handbrake or WinX DVD Ripper">
+<meta name="twitter:description" content="Have some old DVDs laying around that you want to make digital for future safe keeping? Read on.">
+<meta name="twitter:image:src" content="https://imagescdn.tweaktown.com/content/8/8/8883_5_convert-dvd-handbrake-winx-ripper_full.png">
+<meta name="twitter:creator" content="TweakTown">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.tweaktown.com/guides/8883/convert-dvd-handbrake-winx-ripper/index.html"
+  },
+  "headline": "How to Convert DVD with Handbrake or WinX DVD Ripper",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://imagescdn.tweaktown.com/content/8/8/8883_5_convert-dvd-handbrake-winx-ripper_full.png"
+  },
+  "datePublished": "2019-01-29T20:27:16-06:00",
+  "author": {
+    "@type": "Person",
+    "name": "Sponsored Content"
+  },
+   "publisher": {
+    "@type": "Organization",
+    "name": "TweakTown",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://imagescdn.tweaktown.com/logo-google.png",
+      "width": 600,
+      "height": 60
+    }
+  },
+  "description": "Have some old DVDs laying around that you want to make digital for future safe keeping? Read on."
+}
+</script>
+<link rel="alternate" title="TweakTown News Feed" href="https://www.tweaktown.com/news-feed/" type="application/rss+xml">
+<link rel="alternate" title="TweakTown Content Feed" href="https://www.tweaktown.com/content-feed/" type="application/rss+xml">
+<link rel="alternate" title="TweakTown Gaming Feed" href="https://www.tweaktown.com/gaming-feed/" type="application/rss+xml">
+<link rel="alternate" title="TweakTown Deals Feed" href="https://deals.tweaktown.com/feed" type="application/rss+xml">
+<link rel="alternate" title="TweakTown Press Releases Feed" href="https://www.tweaktown.com/pr-feed/" type="application/rss+xml">
+<link rel="alternate" title="TweakTown Ask the Experts Feed" href="https://www.tweaktown.com/ATE-feed/" type="application/rss+xml">
+<link rel="alternate" title="TweakTown Tweakipedia Feed" href="https://www.tweaktown.com/tweakipedia-feed/" type="application/rss+xml">
+<link rel="alternate" title="TweakTown Forums Feed (New Threads)" href="https://www.tweaktown.com/forums-feed/" type="application/rss+xml">
+<link rel="alternate" title="TweakTown Video Feed" href="https://www.tweaktown.com/video-feed/" type="application/rss+xml">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=TT">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=TT">
+<link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png?v=TT">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=TT">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#00b0ec">
+<link rel="shortcut icon" href="/favicon.ico?v=TT">
+<meta name="apple-mobile-web-app-title" content="TweakTown">
+<meta name="application-name" content="TweakTown">
+<meta name="msapplication-TileColor" content="#00b0ec">
+<meta name="msapplication-TileImage" content="/mstile-144x144.png?v=TT">
+<meta name="theme-color" content="#00b0ec">
+<style type="text/css">@font-face{font-family:'Roboto';font-style:normal;font-weight:400;src:local('Roboto Regular'),local('Roboto-Regular'),url(https://themes.googleusercontent.com/static/fonts/roboto/v10/2UX7WLTfW3W8TclTUvlFyQ.woff) format('woff')}@font-face{font-family:'Roboto';font-style:normal;font-weight:700;src:local('Roboto Bold'),local('Roboto-Bold'),url(https://themes.googleusercontent.com/static/fonts/roboto/v10/d-6IYplOFocCacKzxwXSOD8E0i7KZn-EPnyo3HZu7kw.woff) format('woff')}*{margin:0;padding:0;font-family:"Roboto",verdana,arial;font-size:1em;color:#000}body,html{margin:0 !important;padding:0 !important}body{-webkit-text-size-adjust:100%;-moz-text-size-adjust:100%;-ms-text-size-adjust:100%;text-size-adjust:100%}canvas{-ms-touch-action:double-tap-zoom}.fb-post,.fb-post span,.fb-post span iframe{display:block !important;margin:8px auto !important}.inner_li_ul{background:none repeat scroll 0 0 #1269bc;display:none !important;position:absolute !important;text-decoration:none;height:auto !important;width:100% !important;z-index:125 !important;left:0 !important}.inner_li_ul>li{display:block !important;padding:6px;text-align:left !important;border:none !important;float:left;margin:8px 25px 0 12px}.inner_li_ul a{border-top:medium none !important;font-size:12px !important;font-weight:normal !important;padding:0 !important;color:#FFF !important}.center-tag{min-height:90px;margin:10px 0 20px 0}@media(min-width:992px) and (max-width:1099px){ #wrapper header{width:100% !important;} div#content-container{width:97%!important;}}
+#wrapper header{z-index:10;position:relative;width:1100px;margin:0 auto;background-color:#fff}.inner_li_ul{padding:5px 0 10px !important}.page_load_div{position:fixed;bottom:50%;right:4%;float:right;z-index:99;font-size:11px;text-align:center;background:rgba(255,255,255,0.6);padding-top:2px}.page_load_div #top_link,.page_load_div #bottom_link{display:inline-block;width:75px;cursor:pointer;height:40px}.page_load_div #top_link{background-position:-111px -65px}.page_load_div #bottom_link{background-position:-110px -6px}.page_load_div #top_link span,.page_load_div #bottom_link span{display:block;color:#1368bc;font-weight:bold;padding-top:40px}#loader_bg{width:100%;height:100%;position:fixed;top:0;bottom:0;left:0;right:0;z-index:1000;opacity:0.8;display:none;background-color:#000}#loader_div{display:none;z-index:10000;position:fixed;top:43%;left:46%}.sub_menu123 ul {font-weight:700 !important}.menubar45 ul li:hover>ul,.sub_menu123 ul li:hover>ul{display:block !important}.inner_li_ul li:hover{background-color:#00b0ec !important;border:medium none !important}.sub_menu123 ul li.inner_li_ul li a:hover{color:#fff !important}.page_all_content.mobile_font_size-30 ul{font-size:14px}.video-container{position:relative;padding-bottom:56.25%;padding-top:30px;height:0;overflow:hidden}.video-container iframe,.video-container object,.video-container embed{position:absolute;top:0;left:0;width:100%;height:100%}a,a strong,a:hover,a strong:hover{text-decoration:none}strong{font-weight:700}a img{border:0}div#header-container{margin:0 auto;width:93.7%;position:relative}div#header-container img{padding:10px 0;float:left}div#content-container{width:99%;margin:0 auto;padding:10px 15px 0 15px;background-color:#fff;position:relative;z-index:9}div#content-alertbar{width:100%;text-align:center;background-color:#00b0ec;padding:2.5px 0;margin-bottom:20px;text-transform:uppercase;color:#fff;font-weight:700}div#content-alertbar a{color:#fff;display:block}div#content-alertbar:hover{background-color:#1284e8}div#content-left{float:left;width:68%}article#latesttech{width:100%;padding-bottom:10px;background-color:#fff;position:relative}div#content-crumbbar{padding:0;margin-bottom:10px;position:relative}div.crumb-text div{display:inline-block;margin:0 0 0 2px;padding:0;text-indent:12px;position:relative}div.crumb-text div:before{content:" ";height:0;width:0;position:absolute;left:0;border-style:solid;border-width:15px 0 15px 15px;border-color:transparent transparent transparent #fff;z-index:0}div.crumb-text div:first-child:before{border-color:transparent;display:none}div.crumb-text div a:after{content:" ";height:0;width:0;position:absolute;right:-.9em;border-style:solid;border-width:15px 0 15px 15px;border-color:transparent transparent transparent #1269bc;z-index:10}div.crumb-text div a.first-crumb span{margin-left:-15px}div.crumb-text div a{display:block;background:#1269bc;padding:0 5px 8px 0;line-height:22px;height:22px}div.crumb-text div a span{color:#fff !important;overflow:hidden;display:inline-block;line-height:29px;margin-right:5px}div.crumb-text div a:hover{background:#00b0ec}div.crumb-text div a:hover:after{border-color:transparent transparent transparent #00b0ec}h1.darkheading{background-color:#1368bc}article#latesttech h1{color:#FFF;font-size:1.4em;padding:10px}article#latesttech h2{font-size:1.5em}h3{font-size:1.2em}div#postcom{font-weight:700;font-size:1.4em;color:#FFF;padding:10px;background-color:#1368bc;margin:30px 0;text-align:center}article#latesttech h2,article#latesttech p{padding:10px 10px 5px}.icon_article_anchor{display:inline-block;width:45%;vertical-align:middle}.article_12569{display:inline-block;width:54%;vertical-align:middle}article#latesttech img{margin:15px;width:auto;height:auto;max-width:96%}article#latesttech p{font-size:.85em}article#latesttech a:hover{color:#00b0ec}div#latestitems-buttons a{float:left;padding:5px;margin:10px 10px 0;background-color:#00b0ec;font-size:.75em;font-weight:700;color:#fff}div#latestitems-buttons a#latestitems-nextlink{float:right}div#latestitems-buttons a#latestitems-prevlink{float:left}div#latestitems-buttons a:hover{background-color:#1368bc;color:#fff}div.content-latestitem{float:left;width:47%;margin-top:10px;padding-left:2%;font-size:.8em; height: 70px; }div.content-latestitem img{float:left;margin:0 10px 0 0 !important;width:inherit !important;height:inherit !important}div.content-latestitem h3{font-weight:700; line-height: 100%; font-size: 100%;}div.content-latestitem h3 a{ font-size: 14px; line-height: normal;} span.latest-categorylink a{font-weight:700;color:#00b0ec !important}span.latest-categorylink a:hover{text-decoration:underline}span.latest-subcategorylink a{font-weight:700;color:#00b0ec !important}span.latest-subcategorylink a:hover{text-decoration:underline}section#latestposts h2{color:#FFF;width:97%;padding:10px;margin-bottom:10px;position:relative;background-color:#1368bc;font-size:1.5em}article#main-content ol,article.latestpost ol,ol.standard-square{margin-left:25px;margin-top:10px}article#main-content ul,article.latestpost ul,ul.standard-square{list-style-type:square;margin-left:25px;margin-top:10px}article#main-content ul,article.latestpost ul,ul.standard-square li{padding:5px}article#main-content ol,article.latestpost ol,ol.standard-square li{padding:5px}article.latestpost h1 a{font-weight:700;font-size:1.2em}article.latestpost h1 a:hover{color:#00b0ec}article.latestpost p{font-size:.85em !important; text-align:justify; /*padding:10px 0 !important; line-height: 24px;*/ }article.latestpost p a,article.latestpost p a strong{font-weight:700;color:#00b0ec}article.latestpost p a:hover,article.latestpost p a strong:hover{color:#000}div.content-latestpost-infobar{font-size:.75em;padding:5px 0 10px}div.content-latestpost-infobar a:hover{text-decoration:underline}article.latestpost img{display:block;margin:5px auto;max-width:98%;height:auto;width:auto}blockquote{width:90%;font-size:.9em;font-style:italic;margin:10px 0 10px 15px;padding-left:15px;border-left:3px solid #1368bc}article#main-content{width:100%}article#main-content p{font-size:14px; /*padding:7px 0*/}article#main-content h3{font-size:1.15em; /*padding:7px 0*/}article#main-content>article p{} article#main-content p a,article#main-content p a strong,article #KonaBody a{font-weight:700;color:#00b0ec}article#main-content p a:hover,article#main-content p a strong:hover,article #KonaBody a:hover{color:#000}article#main-content h1{font-size:1.8em;font-weight:700;padding:10px 0;clear:both}article#main-content h2{font-size:1.8em;font-weight:700;padding:10px 0;clear:both}article#main-content section#latestposts h2#h2_abc6_0{font-size:1.5em}article#main-content h2#gg2{font-size:1em;font-weight:400;padding:10px 0;clear:both}article#main-content h2 a:hover{text-decoration:underline}ul#content-tags{list-style-type:none !important;width:100%;margin:0 0 10px !important}a.rss{float:right;font-size:.7em;font-weight:700;color:#a8291b;margin-top:10px;height:24px;width:24px;display:block;background-position:-335px -560px}a.rss1{background-position:-334px -560px;color:#a8291b;display:block;float:left;font-size:.7em;font-weight:700;height:24px;margin-right:4px;width:24px}ul.thirdlist{width:30%;padding:10px;float:left;list-style-type:none !important;margin:0 !important}ul.thirdlist li{margin-bottom:20px;font-size:.85em}ul.standard-square li{font-size:.85em}ul.thirdlist li a,ul.standard-square li a{font-weight:700;color:#00b0ec;display:block}ul.thirdlist li a:hover,ul.standard-square li a:hover{color:#000}ul.thirdlist li span.summary{display:block;font-size:.9em}ul.thirdlist li span.time{display:block;font-size:.9em;font-style:italic}div.category-listing{width:100%;margin-top:10px}div.category-listing a.rss,div.category-listing a.viewall{float:right;margin-left:10px;margin-top:10px;font-size:.85em}div.category-listing a.viewall:hover{text-decoration:underline}div.category-listing h1{font-size:1.8em;margin-bottom:10px}div.side_detail h2 ,div.side_detail h3{font-size:20px !important;margin-bottom:3px;margin-top:0;padding:0 !important}div.category-listing h2#gg2{font-size:1em;font-weight:400;margin-bottom:30px}div.category-listing-article{padding:10px;margin-bottom:10px}div.category-listing-article img{float:left;margin:0 10px 10px 0;width:85px !important}div.category-listing-article a{font-size:14px;font-weight:700}div.category-listing-article a:hover{color:#00b0ec}div.category-listing-article p{font-size:.85em}ul#content-tags li{display:inline-block;margin:3px}ul#content-tags li a{display:block;padding:5px 8px;background-color:#1269bc;color:#fff;font-weight:700;font-size:1em}ul#content-tags li a:hover{background-color:#00b0ec}article#main-content>header{width:100%;margin-bottom:10px}article#main-content>header h1{font-size:2em;font-weight:700;padding:10px 0}article#main-content>header div#info-bar{font-size:.8em;color:#000;padding:0 0 10px}article#main-content>header div#info-bar strong,article#main-content>header div#info-bar a{color:#000}article#main-content>header div#info-bar a:hover{text-decoration:underline}article#main-content>header div#tool-bar{padding:0 0 10px}article#main-content>header div#tool-bar span#article-functions{float:left;font-size:.85em}article#main-content>header div#tool-bar span#article-functions a{font-weight:700}article#main-content>header div#tool-bar span#article-functions a:hover{text-decoration:underline}article#main-content>header div#tool-bar span#article-functions a.small{font-size:.8em;font-weight:400;padding:0 2px}article#main-content>header div#tool-bar span#article-functions a.big{font-size:.85em;font-weight:700;padding:0 2px}article#main-content>header div#rating-bar{background-color:#1368bc;padding:5px;color:#fff;font-size:.85em;margin-bottom:5px}article#main-content>header div#rating-bar a,article#main-content>header div#rating-bar strong{color:#fff}article#main-content>header div#rating-bar a:hover{text-decoration:underline}div.contact-item{width:96%;padding:5px 0;border-bottom:1px solid #000;margin-bottom:10px}div.contact-item img{float:left;padding:0 10px 10px 0}div#page-selection-area{padding:0 15px;margin-left:auto;margin-right:auto;width:100%}div#page-selection-area ul{list-style-type:none}div#page-selection-area ul li:first-child{font-weight:700;padding:10px 5px 5px;margin-right:20px}div#page-selection-area ul li{float:left;font-size:1.7em}div#page-selection-area ul li a{display:block;padding:5px;margin:5px;background-color:#00b0ec;color:#fff;font-weight:700}div#page-selection-area ul li a:hover{background-color:#1368bc;color:#fff}div#page-selection-area ul li.active{background-color:#00c000;display:block;padding:5px;color:#fff;font-weight:700;margin:5px;cursor:pointer}div#content-left form{width:100%;margin:10px 0}div#content-left form p{margin-bottom:5px}div#content-left form[name=filter] label,div#content-left form[name=filter] input,div#content-left form[name=filter] select{margin-right:10px;font-size:.85em}div#content-left form[name=filter] select{width:125px !important}p.news-prevnextbox{background-color:#fff;padding:5px !important}div#content-left form input,div#content-left form select,div#content-left form textarea{border:0 #ededed;background-color:#ededed;padding:0 15px}div#content-left form input.long{float:left;height:65px;width:75%;font-size:1.4em;background:#ededed}div#content-left form input[type=submit]{float:left;height:65px;width:20%;border:0;text-align:center;opacity:1;font-size:18px;font-weight:700;padding:5px 10px !important;color:#fff;margin-bottom:25px;background:#00b0ec;-webkit-appearance:none;appearance:none;-moz-appearance:none}.centered{margin-left:auto;margin-right:auto;text-align:center}p.centered,h3.centered{width:100%;text-align:center}.page_nav{margin:0 auto;overflow:hidden;width:34%}.floatleft{float:left;background-position:0 -343px;width:52px;height:53px;margin-right:15px}.floatleft:hover{background-position:0 -414px}.floatright:hover{background-position:-64px -414px}.floatright{float:left;background-position:-64px -343px;width:52px;height:53px}.arrow_prev{float:left;margin-left:10px;margin-top:15px}.arrow_next{float:left;margin-right:10px;margin-top:15px}.arrow_next:hover .floatleft{background-position:0 -343px}.arrow_prev:hover .floatright{background-position:-64px -343px}p.paragraph-smallspace{padding:2px 0 !important}div#content-right{float:right;width:32%}section.rightside{width:100%;margin-bottom:10px;padding-bottom:10px;background-color:#fff}section.rightside h3{font-size:1.4em;color:#FFF;padding:10px 0;background-color:#1368bc;text-align:center}section.rightside>a{margin-top:5px;float:right;padding-right:10px;font-size:.75em;font-weight:700}section.rightside>a:hover{text-decoration:underline}section.rightside ul{list-style-type:none}section.rightside ul li a{display:block;padding:5px 0 5px 10px;font-size:.8em}section.rightside ul li a:hover{background-color:#00b0ec;color:#fff}section.rightside>strong{text-align:center;padding:10px 10px 15px;display:block}.video_iframe iframe{margin:0 auto;display:block}.video_iframe a{text-align:right}.clear-block:after{content:".";display:block;height:0;clear:both;visibility:hidden}.clear-block{display:inline-block}* html .clear-block{height:1%}.clear-block{display:block}h2.p_bottom_zero{padding-bottom:0 !important}div#KonaBody>ol li,div#KonaBody>ul li{font-size:14px}div#KonaBody blockquote p{font-size:1em !important}
+
+.product_box {display: flex; flex-wrap: wrap;margin-top: 30px;box-sizing: order-box;width: 100%;background: #fff;border: 2px solid #eaeaea; }.product-box-title{ padding:  0 !important; color: #1368bc; }.product_box .right-img-box {width: 80%;background: #eaeaea;flex-grow: 1;}.product_box .right-img-box .img-content {padding: 15px;}.product_box .right-img-box .img-content .row {display: flex;flex-wrap: wrap; align-items: center; margin: 10px 0;}.product_box .right-img-box .img-content .row .col-md-4 {width: 33.333%;text-align: center;}.product_box .left-img-box .product-img img { max-width: 100% !important;margin: 0 auto;display: block;} .product_box .right-img-box .img-content .row .col-md-4 .brand-img img {width: 60px !important; margin-top: 5px;} .product_box .right-img-box .img-content .row .col-md-4 .brand-value{ font-size: 13px; } .product_box .right-img-box .img-content .row .col-md-4 .brand-value span{ color:#1368BC;font-weight: 600;} .product_box .right-img-box .view-btn a.btn { font-size: 12px; display: inline-block; width: 50%;background: #008000;padding: 5px 5px;color: #fff !important;box-sizing: border-box; font-weight: 700;}.product_box .brand-img{max-width: 100%;width: 60px;line-height: 1;} .product_box table{ max-width: 100%; width: 100%; } .product_box .view-btn a{ max-width: 100%;  width: 100% !important; } .product_box tbody td span{ color: #00b0ec; font-weight: 600; }.product_box thead th{ font-size: 14px; line-height: 22px;  padding: 0; text-align: center; vertical-align: middle; height: 20px; max-height: 100%; padding-bottom: 12px; font-weight: 400; } .product_box tbody td{font-size: 14px; line-height: 1; padding: 0; text-align: center; vertical-align: middle; height: 20px; max-height: 100%; } .product_box tbody td a{ color: #00b0ec; } 
+
+/*.product_box .left-img-box {width: 20%; flex: 0 0 20%;}
+.single-product-div .product_box .left-img-box{max-width: 10%;flex:0 0 10%;width:10%;}*/
+.product_box .left-img-box .product-img{padding:15px;text-align:center!important}.single-product-div .product_box .left-img-box{width:86px!important;height:86px;max-width:100%;max-height:20%;display:flex;justify-content:center}.single-product-div .product_box .left-img-box .product-img{display:flex;justify-content:center;align-items:center;flex-grow:1}.product_box .left-img-box{width:130px;height:130px;max-width:100%;max-height:100%;display:flex;justify-content:center}.product_box .left-img-box .product-img{display:flex;justify-content:center;align-items:center}
+
+.single-product-div .product_box{ width: 96% !important; max-width: 100% !important;margin: 15px auto 0 !important; }.single-product-div .row .left-section{ flex-grow: 1;} .single-product-div { border: 2px solid #1368bc; } .single-product-div .title { background: #1368bc; padding: 10px 10px; } .single-product-div .title h2 { padding: 0 !important; font-size: 22px !important; color: #fff !important; }.single-product-div .row { display: flex; padding: 15px 15px 0px 15px;justify-content: space-between; } .single-product-div .row .left-section { display: flex; flex-wrap: wrap;} .single-product-div .row .right-section { margin-bottom: -15px;max-width: 20%;flex: 0 0 20%;} .single-product-div .row .left-section .left-img {width: 20%; }.single-product-div .row .left-section .left-img img{width: 100%;max-height: 100%;height:115px !important; margin-top: 15px;}.single-product-div .row .left-section .img-content { flex-grow: 1; padding: 15px; box-sizing: border-box; } .single-product-div .row .left-section .img-content p { text-align: right; } .single-product-div .row .left-section .img-content p span { float: left; font-weight: 600;  } .single-product-div .product_box .img-content .row { padding: 0; margin: 0; } .single-product-div .links-div { padding: 15px; text-align: center; background: #1368bc;margin-top: 15px; } .single-product-div .links-div p{ padding: 0;} .single-product-div .links-div p + p { margin-top: 10px; }.single-product-div .links-div a { color: #fff !important; font-size: large; } .single-product-div .product_box{display: flex; flex-wrap: wrap; margin-top: 3px; box-sizing: order-box; width: 100%; align-items: center; background: #fff; border: 2px solid #eaeaea; margin: 0; padding: 0; } article#main-content>article .single-product-div .row .left-section .img-content p { padding: 0 0px 5px 0px !important; font-weight: 600; font-size: large !important; }
+.single-product-div .row .left-section .img-content p { border-bottom: 1px solid #ddd; padding: 0 0px 3px 0 !important; margin: 0 0 5px 0 !important; } .single-product-div .row .left-section  .descriptive p { border-bottom: 0; } .single-product-div .row .left-section  .descriptive h4 { margin: 0 0 5px 0;} .single-product-div .row .left-section .img-content .descriptive p { text-align: left; margin: 0; }
+.single-product-div .row .right-section img {height: 280px !important;} .single-product-inner{flex-grow: 1;}
+
+div.share_box{width:75px;height:71px;display:none !important;padding-left:9px;top:0;position:absolute;margin-left:-110px;margin-top:265px;z-index:2000}
+#share_box.fixed{display:none;position:fixed;left:auto;top:-110px}.social-bar{margin-bottom:15px}.social-bar-bottom{float:left;margin:20px 0}.share{float:left;margin:15px 0 25px 0}.share>div{float:left}.share .facebook{margin-right:20px}.share_line{padding:3px 0}.share_linefb{float:left;margin-left:0.1245em}.share_linetwitter{float:left;margin-top:15px}div.content-latestpost-socialbar{width:100%;margin:30px 0 50px 0;background-color:#fff;font-size:1em}div.content-latestpost-socialbar a{float:left;font-weight:700;font-size:110%}div.content-latestpost-socialbar a:hover{color:#00b0ec}div.content-latestpost-socialbar{float:left}div.content-latestpost-socialbar span{display:inline-block;margin:0 10px}div.content-latestpost-socialbar span:first-child{margin-top:-5px}.social-icons{float:right} section#latestposts .latestpost h2{font-size:1.7em;font-weight:700;padding:10px 0;background-color:#fff;margin-bottom:0;color:#000}.s-header-logo-tt,.s-header-logo-text{float:left;margin:10px 0;text-indent:-99999px}.s-content-icon-rss{margin:0 !important;position:absolute;right:10px;top:10px;background-position:0 -114px;width:20px;height:20px}.s-content-icon-rss,.s-content-rss,.s-header-icon-facebook,.s-header-icon-gplus,.s-header-icon-newsletter,.s-header-icon-twitter,.s-header-icon-youtube,.s-header-logo-text,.s-header-logo-tt,.s-header-textfield-bg,.s-header-textfield-bg,.floatleft,.floatright,.page_nav_left_div div,#page_nav_right_div_left,#page_nav_right_div_right,.arrow_next:hover .floatleft,.arrow_prev:hover .floatright,.rss,.rss1,.logo_text1 a,.small_img12,#bottom_link,#top_link,.icon.menu a,.icon.search a,input.search_btn,.foot_img1,.logo_t12 a{background-image:url(https://imagescdn.tweaktown.com/layout/2014/k.png);background-repeat:no-repeat}.s-header-logo-text{background-position:0 93.5%;width:340px;height:82px}.s-header-icon-facebook{background-position:0 -192px;width:34px;height:34px}.s-header-icon-gplus{background-position:0 -227px;width:32px;height:32px}.s-header-icon-newsletter{background-position:0 -260px;width:40px;height:28px}.s-header-icon-twitter{background-position:0 -289px;width:34px;height:34px}.s-header-icon-youtube{background-position:0 -324px;width:34px;height:34px}.s-header-textfield-bg{background-position:0 -551px}.alt-text{display:none}.boxcat{margin:0 10px 0 10px;vertical-align:middle;display:inline-block;padding:5px !important;font-weight:700;background-color:#1269bc;font-size:1em;color:#FFF}.news-source{width:130px;margin-right:10px;color:#000;font-weight:700;font-size:1em}.news-source-link a{font-size:1em}#container-content{width:1100px;height:350px;margin:0 auto}.img_mar{height:auto;max-width:42% !important;width:auto;margin:0 10px !important;display:inline !important}.content_67{font-size:.85em;margin:0 14px !important;padding:0 5px !important}.no_top_list{margin-top:0 !important}#container-content{width:100%;height:350px;margin:0 auto}.section.clearfix{width:4%}
+.brand-img img{
+  display: block;
+}
+#KonaBody .product-img >img{
+  height: 100% !important;
+}
+#KonaBody>div{position:relative;} .chart_div{ margin-top: 50px;} article#main-content img{height:auto;max-width:98%;width:auto}article#main-content .share_linetwitter img{height:28px;max-width:100%}article#main-content .share_linefb img{height:28px;max-width:100%}article#main-content .fb-share-button img{height:28px;max-width:100%}.inner_vibrate_table{width:100%;table-layout:fixed;margin-bottom:20px}.inner_vibrate_table td{padding:6px;text-align:left;width:50%}.inner_vibrate_table h2{text-align:left}.page_all_content{background:#dfeefb;margin-left:10px;margin-top:40px}.page_all_content ul{width:97%;margin:0 !important;overflow:hidden;padding:10px !important;list-style:none !important;clear:both}.page_all_content ul div{float:left;width:47%}.page_all_content ul div:first-child{margin-right:20px}.page_all_content ul div li a{font-size:13px}.page_all_content label{float:left;background:#1368bc;color:#fff;padding:5px 7px;text-transform:uppercase;font-weight:700}.div_page_nav_Content{clear:both;height:auto;margin:20px auto 20px;overflow:hidden;width:350px}.div_page_nav_Content_first{clear:both;height:auto;margin:20px auto 20px;overflow:hidden;width:200px}.div_page_nav_Content_last{clear:both;height:auto;margin:20px auto 20px;overflow:hidden;width:200px;}.page_all_content ul div .active a{font-weight:700}
+
+#dropdown_page_navigation{background:none repeat scroll 0 0 #dfeefb;list-style:none outside none!important;margin:25px 0 0 -4px!important;padding:0 15px!important;display:none;z-index:9;position:absolute;width:58.4%}#dropdown_page_navigation li{margin:10px 0}#dropdown_page_navigation li a{font-size:13px;width:100%;display:block}.select_page_dropdown{margin-bottom:10px}.page_nav_left_div span{float:left}.page_nav_left_div div{background-position:-217px -368px;height:23px;width:23px;float:right}.page_nav_left_div div:hover{background-position:-217px -394px}.page_nav_right_div a{float:left;width:28px;height:28px}#page_nav_right_div_left:hover{background-position:-276px -395px}#page_nav_right_div_right:hover{background-position:-307px -395px}#page_nav_right_div_left{background-position:-276px -359px}#page_nav_right_div_right{background-position:-307px -359px}.pag_nav_main_div{background:#dfeefb;overflow:hidden;padding:7px 6px 6px}.page_nav_left_div{float:left;padding:2px 5px;background:#fff;width:86%}.page_nav_right_div{float:right}#dropdown_page_navigation .active a,#dropdown_page_navigation a:hover{font-weight:700}
+
+.year_wise_news_archive{overflow:hidden;padding:10px;display:inline-block;vertical-align:top}.year_wise_news_archive span{margin:2px 10px 5px 0;font-size:15px;font-weight:700}.year_wise_news_archive ul{float:left;margin:0 0 10px 20px !important;padding:0 !important;width:74%}.year_wise_news_archive ul li a{font-weight:700;font-size:14px;color:#00b0ec}.year_wise_news_archive ul li a:hover{text-decoration:underline}.main_archive_div{border-bottom:1px solid #CCC}#sbsimg{text-align:center;overflow:hidden}.cr{clear:both;height:0}.inner_box{width:1100px;margin:0 auto}.footer_bottom .inner_box{width:100%;margin:0 auto}.flo_left{float:left}.flo_right{float:right}.logo_main{width:100%;float:left;background:#1269bc}.logo_left{float:left;margin-top:5px;position:relative}.logo_left span{left:28%;position:absolute;top:85%}.logo_t12{float:left;margin:0 6px 0 12px}.logo_t12 a{background-position:-2px -246px;display:block;height:91px;margin-top:3px;width:82px}.logo_text1{float:left}.logo_text1 a{background-position:-2px -188px;float:left;height:57px;margin-top:21px;width:370px}.logo_text1 span{color:#fff;font-size:14px;left:3%;font-weight:700;position:absolute;top:99px}.logo_left a img,.logo_t12 a img{max-width:100%}.logo_left a img{max-width:100%}.logo_right{float:right;margin-top:15px;margin-right:20px}.small_img12{float:left;margin:0 0 15px 20px}.small_img12 a{width:38px;height:38px;display:block}.message{background-position:-2px 4px;height:35px}.you_tube{background-position:-2px -32px}.facebook{background-position:-2px -70px}.twitter{background-position:-2px -110px}.google_plus{background-position:-2px -149px}.pinterest{background-position:-51px -2px}.search_left{width:195px;height:36px;float:left;background:#ededed;color:#999a9a;font-size:14px;padding:0 15px;border:0}.search_btn{width:39px;height:36px;float:left;text-align:center;background-color:#25509e;padding:17px 0;background-position:-171px -355px;display:block;border:0;text-indent:-99919}.small_text12{float:right;font-size:13px;color:#FFF;margin:10px 0 10px 0}.menu_main{width:100%;background:#00b0ec}.menubar45{position:relative}.menubar45 ul{clear:both;display:table;margin:0;padding:0;width:100%;height:35px;margin:0 auto}.menubar45 ul li{display:table-cell;list-style:none outside none;text-align:center;border-top:3px solid #00b0ec}.menubar45 ul li a{color:#FFF;font-size:16px;font-weight:bold;display:block;padding:10px 17px;text-transform:uppercase}.menubar45 ul li:hover{background:#1269bc;border-top:3px solid #FFF;text-decoration:none}.menubar45 ul li.active{background:#1269bc;border-top:3px solid #FFF}.menubar45 ul li.active:hover{background:#1269bc}.sub_menu_sec{width:100%;height:30px;float:left;background:#1269bc}.sub_menu123{position:relative}.sub_menu123 ul{margin:0;padding:0;display:table;width:100%}.sub_menu123 ul li{display:table-cell;list-style:none;text-align:center}.sub_menu123 ul li a{color:#FFF;font-size:13px;display:block;padding:6px 16px 6px 15px}.sub_menu123 ul li:hover a{color:#64e4f8;text-decoration:none}.sub_menu123 ul li:hover{background:#1269bc}.footer_main{border-top:14px solid #00b0ec;width:100%;background:#1269bc}.right_subscribe{background-color:#1269bc;float:left;width:100%;margin-bottom:20px}.sub_scrib_heading{width:100%;text-align:center;color:#FFF;font-size:1.4em;font-weight:bold;margin:7px 0}.sub_scrib_heading a{color:#FFF;font-weight:normal}.email_outer{overflow:hidden;margin:0 auto 10px 10px;width:97%;float:left}.input_09{width:60%;height:50px;float:left;border:0;background:#ededed;color:#999a9a;font-size:18px;padding:0 10px}.submit_btn{float:left;width:30%;height:50px;color:#FFF;border:0;text-align:center;cursor:pointer;background:#00b0ec;font-size:18px;font-weight:700;-webkit-appearance:none;appearance:none;-moz-appearance:none;opacity:1}.connect_12{margin:0 auto;color:#FFF;font-weight:bold;font-size:20px;text-align:center;margin-bottom:10px}.foot_img_sec{margin:0 auto;width:400px}.foot_img1{float:left;margin:0 20px 15px 20px}.foot_img1 a{width:37px;height:37px;float:left}.footer_bottom{width:100%;background:#1269bc;float:left}.foot_menu ul{margin:0;padding:0;text-align:center}.foot_menu ul li{display:inline-block;list-style:none}.foot_menu ul li a{color:#59aaeb;font-size:15px;padding:12px 12px;text-decoration:none;text-transform:uppercase;display:block}.foot_menu ul li a:hover{color:#FFF}.foot_copy{width:100%;text-align:center;padding:12px 0;color:#FFF;font-size:13px;border-top:1px solid #408ecd}#share1{display:block !important;}#cread{margin-top:20px}@media screen and (min-width:1100px){div#header-container,nav#header-mainnav ul,nav#header-subnav ul,div#content-container,div#footer{width:1100px}nav#header-mainnav ul li a{padding:8px 16px}div#content-left{width:71%}div#content-right{width:27.5%}}@media screen and (max-width:1100px) and (min-width:768px){.logo_right{margin-right:10px}.logo_left{margin-left:15px}.inner_box{width:100%}.menubar45 ul li a{padding:10px 0}.sub_menu123 ul li a{padding:8px 0;font-size:12px}div#content-left{width:68%}div#content-right{width:31%}}div.category-listing .cat_list_bottom_div span,div.category-listing .cat_list_bottom_div strong,div.category-listing .cat_list_bottom_div p{display:inline;font-size:14px !important}.cat_list_left_div > a{display:inline-block;vertical-align:top;margin-top:5px;padding-right:14px}.cat_list_left_div a img{margin:0}div.side_detail{display:inline-block;width:86%}article#main-content .side_detail .cat_list_bottom_div a{color:#000;font-size:14px !important}div.category-listing .side_detail .cat_list_bottom_div a:hover{color:#00b0ec !important}div.cat_list_bottom_div{text-align:justify}.blog_ul{font-size:0.9em;margin:15px 0 20px 0}.blog_ul > li{margin:6px 0;list-style-type:none}.article-sortDes{float:right;width:88%;font-size:1em;margin:5px 0 20px 0}.article-sortDes-img{float:left;width:12%;height:65px}.article-sortDes-noimg{float:left;width:100%;font-size:1em;margin-bottom:20px}.tweakipedia_info{font-size:.8em;color:#000;padding:0 0 10px}span.categoery_in_word{margin:0 10px}section.recommended{width:100%;margin:35px 0}section.recommended h3{font-size:1.4em !important;color:#FFF;padding:10px;background-color:#1368bc;text-align:center}div.recommend_container{margin:20px 0;text-align:center}a.recommend_link{font-size:16px;font-weight:700}.rec_div{width:23%;display:inline-block;margin-right:7px;text-align:center;vertical-align:top}</style>
+<script type="f3a39a56e4c4697c070b8ba8-text/javascript">
+var ocelot = ocelot || {}
+ocelot.readerCountryCode = 'GB';
+</script>
+<script src="https://polyfill.io/v2/polyfill.min.js?features=Array.prototype.includes,IntersectionObserver" type="f3a39a56e4c4697c070b8ba8-text/javascript"></script>
+
+<script type="f3a39a56e4c4697c070b8ba8-text/javascript">
+(function() {
+var _sp_=function(n){function t(e){if(o[e])return o[e].exports;var r=o[e]={i:e,l:!1,exports:{}};return n[e].call(r.exports,r,r.exports,t),r.l=!0,r.exports}var o={};return t.m=n,t.c=o,t.i=function(n){return n},t.d=function(n,o,e){t.o(n,o)||Object.defineProperty(n,o,{configurable:!1,enumerable:!0,get:e})},t.n=function(n){var o=n&&n.__esModule?function(){return n["default"]}:function(){return n};return t.d(o,"a",o),o},t.o=function(n,t){return Object.prototype.hasOwnProperty.call(n,t)},t.p="",t(t.s=2)}([function(n,t,o){function e(n,t){r&&console[n].apply(console,["[bootstrap]"].concat(Array.prototype.slice.call(t)))}var r=(o(0),!1);n.exports={debug:function(){e("debug",arguments)},info:function(){e("info",arguments)},time:function(){e("time",arguments)},warn:function(){e("warn",arguments)},error:function(){e("error",arguments)},useDefaults:function(){r=!0},DEBUG:1}},function(n,t,o){"use strict";function e(){D||(D=!0,z=h.config=h.config||{},s(),N=z.bootstrap&&z.bootstrap.contentControlCallback||z.content_control_callback,B=z.accountId||z.account_id||z.client_id||window.sp_cid,G=z.beacon&&z.beacon.contentControlEndpoint||z.content_control_beacon_endpoint||v.a,z.debug_level&&"OFF"!==z.debug_level.toString().toUpperCase()||z.debug&&z.debug.level&&"OFF"!==z.debug.level.toString().toUpperCase()?q=!0:window.location.search&&null!=window.location.search.match(/_sp_debug_level=(?!off|OFF)/)&&(q=!0),q&&m.useDefaults({defaultLevel:m.DEBUG}))}function r(n,t,e){function r(o,e){var r=new Image;r.src="//"+G+"/cct?v="+encodeURIComponent(v.b)+"&ct="+_+"&cid="+encodeURIComponent(B)+"&l="+encodeURIComponent(n.toString())+"&rc="+encodeURIComponent(t)+"&d0="+encodeURIComponent(i)+(o?"&d1="+encodeURIComponent(o):"")+(e?"&d2="+encodeURIComponent(e):""),g.info("sending beacon: "+r.src),a&&a()}var i=arguments.length>3&&void 0!==arguments[3]?arguments[3]:"",c=arguments[4],a=arguments[5];if(c){var u=e.lastIndexOf("."),d=e.lastIndexOf("/"),s=-1===u||d>u?e+".png":e.substring(0,u)+".png",l=new Image;l.addEventListener("load",function(){r("1",s)}),l.addEventListener("error",function(){o.i(f.a)(s,function(n,t,o){r("0",s+"::"+o)})}),l.src=s}else r()}function i(n,t,o,e){var r=arguments.length>4&&void 0!==arguments[4]?arguments[4]:{},c=arguments.length>5&&void 0!==arguments[5]&&arguments[5],a=function(){i(n,t,o,e,r,!0)};n(t,c?o:a,e,r)}function c(n,t,o,e){function r(o,r){t(o,n,r,e.enableImageLoad)}function i(t,r){o(t,n,r,e.enableImageLoad),e.onError&&e.onError(r)}var c=document.createElement("script");c.src=n,c.onload=function(){e.onLoad&&e.onLoad()},c.onerror=function(){function t(n){return o.indexOf(n)>-1}var o=(navigator.userAgent||navigator.vendor||window.opera).toLowerCase();t("mobi")||t("ipad")||t("android")||t("iphone")?i(C):t("exabot")?i(k):t("bingbot")||t("bingpreview")?i(U):t("googlebot")||t("adsbot-google")||t("mediapartners-google")?i(I):t("googleweblight")?i(O):window.location.host===w?i(E):window.location.host.indexOf(b)>-1?i(j):t("msie 10")||t("msie 9")||t("msie 8")?i(S):a(n,r,i)},document.head.appendChild(c),document.querySelector('script[src="'+n+'"]')||-1!==window.location.host.indexOf(b)||(g.info("Script not present"),r(L,n))}function a(n,t,e){o.i(f.a)(n,function(o,r,i,c){(o||r?t:e)(c,n+"::"+i)})}function u(n,t,o,e){if(F)return void d(R+"::"+n,o);r(x,n,t,o,e,function(){if(N){if(q){g.error("bootstrap locking",x,n,t,o,e);debugger}setTimeout(function(){N()},250)}})}function d(n,t,o,e){r(y,n,t,o,e)}function s(){h._networkListenerData||(h._networkListenerData=o.i(p.a)())}function l(n,t){e(),g.info("bootstrap called with",n,t),i(c,n,u,d,t)}Object.defineProperty(t,"__esModule",{value:!0});var f=o(4),p=o(5),v=o(3),g=o(0),m=void 0;m=o(0);var w=["w","e","b","c","a","c","h","e",".","g","o","o","g","l","e","u","s","e","r","c","o","n","t","e","n","t",".","c","o","m"].join(""),b=["o","p","t","i","m","i","z","e","l","y","p","r","e","v","i","e","w",".","c","o","m"].join(""),h=window._sp_||{},_=1,y=0,x=1,L="s",C="m",I="g",E="gw",O="gl",S="i",U="b",k="e",R="n",j="o",D=!1,F=!1,q=!1,z=void 0,N=void 0,B=void 0,G=void 0;window.addEventListener("beforeunload",function(){F=!0}),window._sp_=h,h.setupNetworkListeners=s,h.bootstrap=l,window.spBootstrap=l,t["default"]=h},function(n,t,o){o(0);n.exports=o(1)["default"]},function(n,t,o){"use strict";function e(n){return n.join("")}o.d(t,"b",function(){return r}),o.d(t,"a",function(){return i});var r=(o(0),"2.0.896"),i=(e(["w","w","w",".","s","u","m","m","e","r","h","a","m","s","t","e","r",".","c","o","m"]),e(["w","w","w",".","r","o","o","s","t","e","r","f","i","r","e","w","o","r","k",".","c","o","m"]));e(["/","/","f","s","m","1","0","1","9",".","g","l","o","b","a","l",".","s","s","l",".","f","a","s","t","l","y",".","n","e","t","/","f","s","m","/","d","s"]),e(["h","t","t","p","s",":","/","/","d","2","z","v","5","r","k","i","i","4","6","m","i","q",".","c","l","o","u","d","f","r","o","n","t",".","n","e","t","/","0","/","2",".","0",".","8","9","6","/","r","e","c","o","v","e","r","y","_","d","f","p","_","i","n","t","e","r","n","a","l","-","v","2",".","0",".","8","9","6",".","j","s"]),e(["h","t","t","p","s",":","/","/","d","2","z","v","5","r","k","i","i","4","6","m","i","q",".","c","l","o","u","d","f","r","o","n","t",".","n","e","t","/","0","/","2",".","0",".","8","9","6","/","r","e","c","o","v","e","r","y","_","l","i","b","_","a","p","i","_","i","f","r","a","m","e","-","v","2",".","0",".","8","9","6",".","h","t","m","l"]),e(["h","t","t","p","s",":","/","/","d","2","z","v","5","r","k","i","i","4","6","m","i","q",".","c","l","o","u","d","f","r","o","n","t",".","n","e","t","/","0","/","2",".","0",".","8","9","6","/","r","e","c","o","v","e","r","y","_","l","i","b","_","r","i","d","_","i","f","r","a","m","e","-","v","2",".","0",".","8","9","6",".","h","t","m","l"])},function(n,t,o){"use strict";function e(n,t){function o(n){try{return n&&n.timeStamp?n.timeStamp:window.performance.now()}catch(n){return Date.now()}}var e=document.createElement("a");if(e.href=n,"https:"===window.location.protocol&&e.protocol!==window.location.protocol)return void t(!1,!1,e.protocol,u);var d=new XMLHttpRequest;try{d.open("GET",n)}catch(n){return void t(!0,!1,n.toString(),c,d)}var s=void 0,l=void 0;d.onloadstart=function(n){s=o(n)},d.onreadystatechange=function(n){if(4===this.readyState){l=o(n)-s;var e=0===this.status,c="2"===this.status.toString()[0],a=c?i:r;return void t(e,c,this.status+"::"+l,a,d)}};try{d.send()}catch(n){return void t(!0,!1,n.toString(),a,d)}}t.a=e;var r=(o(0),"n"),i="nx",c="xo",a="xs",u="p"},function(n,t,o){"use strict";function e(){var n=arguments.length>0&&void 0!==arguments[0]?arguments[0]:document,t=[],o=[],e=r.bind(null,t),i=r.bind(null,o);return n.addEventListener("load",e,!0),n.addEventListener("error",i,!0),{load:{events:t,listener:e},error:{events:o,listener:i}}}function r(n,t){if(t.target){var o="string"==typeof t.target.tagName?t.target.tagName.toLowerCase():"",e=t.target.src||"";"iframe"!==o&&n.push({tagName:o,src:e})}}t.a=e;o(0)}]);
+//# sourceMappingURL=https://s3.amazonaws.com/d3jlsadfjkuern/2.0.896/Ym9vdHN0cmFwLmpz.map
+window._sp_ = window._sp_ || {};
+window._sp_.config = window._sp_.config || {};
+window._sp_.config.account_id = 188;
+// {
+window._sp_.config.content_control_callback = function() {
+console.log('CONTENT LOCK');
+window.location.href = 'https://www.tweaktown.com/sp/index.html';
+};
+window._sp_.config.vid_control_callback = function() {
+console.log('VID');
+window.location.href = 'https://www.tweaktown.com/sp/index.html';
+};
+window._sp_.config.mms_domain = 'zyx.tweaktown.com';
+window._sp_.mms = window._sp_.mms || {};
+window._sp_.mms.cmd = window._sp_.mms.cmd || [];
+window._sp_.config.mms_client_data_callback = function(o) {};
+window._sp_.mms.cmd.push(function() {
+window._sp_.mms.setTargeting("x", "y");
+});
+window._sp_.mms.cmd.push(function() {
+window._sp_.mms.startMsg();
+});
+window._sp_.config.enable_fsm_detection = true;
+window._sp_.config.enable_fsm_network_detection = true;
+window._sp_.bootstrap('https://www.tweaktown.com/scripts/messaging.js');
+window._sp_.bootstrap('https://www.tweaktown.com/scripts/mms_client.js');
+})();
+</script>
+<script type="f3a39a56e4c4697c070b8ba8-text/javascript">
+(function(d, s, host, ipid) {
+var e = d.createElement(s);
+e.type = 'application/javascript';
+e.async = !0;e.src = '//' + host + '/intellitxt/front.asp?ipid=' + ipid; d.getElementsByTagName(s)[0].parentNode.appendChild(e);
+}
+)(document, 'script', 'k.intellitxt.com',3116); </script>
+<script type="f3a39a56e4c4697c070b8ba8-text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-434524-1', 'auto');
+ga('set', 'contentGroup1', 'Guides');
+ga('set', 'contentGroup2', 'Guides');
+ga('set', 'contentGroup3', 'No-Sub-Category');
+ga('set', 'contentGroup4', 'Sponsored Content')
+ga('send', 'pageview');
+</script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js" type="f3a39a56e4c4697c070b8ba8-text/javascript"></script>
+<script src="https://scriptscdn.tweaktown.com/lazysizes418.min.js" async="" type="f3a39a56e4c4697c070b8ba8-text/javascript"></script>
+
+<!-- Quantcast Choice. Consent Manager Tag -->
+<script type="text/javascript" async=true>
+    var elem = document.createElement('script');
+    elem.src = 'https://quantcast.mgr.consensu.org/cmp.js';
+    elem.async = true;
+    elem.type = "text/javascript";
+    var scpt = document.getElementsByTagName('script')[0];
+    scpt.parentNode.insertBefore(elem, scpt);
+    (function() {
+    var gdprAppliesGlobally = true;
+    function addFrame() {
+        if (!window.frames['__cmpLocator']) {
+        if (document.body) {
+            var body = document.body,
+                iframe = document.createElement('iframe');
+            iframe.style = 'display:none';
+            iframe.name = '__cmpLocator';
+            body.appendChild(iframe);
+        } else {
+            // In the case where this stub is located in the head,
+            // this allows us to inject the iframe more quickly than
+            // relying on DOMContentLoaded or other events.
+            setTimeout(addFrame, 5);
+        }
+        }
+    }
+    addFrame();
+    function cmpMsgHandler(event) {
+        var msgIsString = typeof event.data === "string";
+        var json;
+        if(msgIsString) {
+        json = event.data.indexOf("__cmpCall") != -1 ? JSON.parse(event.data) : {};
+        } else {
+        json = event.data;
+        }
+        if (json.__cmpCall) {
+        var i = json.__cmpCall;
+        window.__cmp(i.command, i.parameter, function(retValue, success) {
+            var returnMsg = {"__cmpReturn": {
+            "returnValue": retValue,
+            "success": success,
+            "callId": i.callId
+            }};
+            event.source.postMessage(msgIsString ?
+            JSON.stringify(returnMsg) : returnMsg, '*');
+        });
+        }
+    }
+    window.__cmp = function (c) {
+        var b = arguments;
+        if (!b.length) {
+        return __cmp.a;
+        }
+        else if (b[0] === 'ping') {
+        b[2]({"gdprAppliesGlobally": gdprAppliesGlobally,
+            "cmpLoaded": false}, true);
+        } else if (c == '__cmp')
+        return false;
+        else {
+        if (typeof __cmp.a === 'undefined') {
+            __cmp.a = [];
+        }
+        __cmp.a.push([].slice.apply(b));
+        }
+    }
+    window.__cmp.gdprAppliesGlobally = gdprAppliesGlobally;
+    window.__cmp.msgHandler = cmpMsgHandler;
+    if (window.addEventListener) {
+        window.addEventListener('message', cmpMsgHandler, false);
+    }
+    else {
+        window.attachEvent('onmessage', cmpMsgHandler);
+    }
+    })();
+    window.__cmp('init', {
+    		'Language': 'en',
+		'Initial Screen Reject Button Text': 'I do not accept',
+		'Initial Screen Accept Button Text': 'I accept',
+		'Purpose Screen Header Title Text': 'Privacy settings',
+		'Purpose Screen Body Text': 'You can set your consent preferences and determine how you want your data to be used based on the purposes below. You may set your preferences for us independently from those of third-party partners. Each purpose has a description so that you know how we and partners use your data.',
+		'Vendor Screen Body Text': 'You can set consent preferences for each individual third-party company below. Expand each company list item to see what purposes they use data for to help make your choices. In some cases, companies may disclose that they use your data without asking for your consent, based on their legitimate interests. You can click on their privacy policies for more information and to opt out.',
+		'Vendor Screen Accept All Button Text': 'Accept all',
+		'Vendor Screen Reject All Button Text': 'Reject all',
+		'Initial Screen Body Text': 'We and our partners use technology such as cookies on our site to personalise content and ads, provide social media features, and analyse our traffic. Click below to consent to the use of this technology across the web. You can change your mind and change your consent choices at anytime by returning to this site.',
+		'Initial Screen Body Text Option': 1,
+		'Publisher Name': 'Golfwrx',
+		'Publisher Purpose IDs': [1,2,3,4,5],
+		'UI Layout': 'banner',
+		'Display UI': 'inEU',
+		'Publisher Logo': 'http://www.golfwrx.com/wp-content/uploads/2017/11/flat_logo_168_r90.png',
+		'Consent Scope': 'service',
+		'Post Consent Page': 'http://www.golfwrx.com',
+		'Non-Consent Display Frequency': 5,
+    });
+</script>
+<!-- End Quantcast Choice. Consent Manager Tag -->
+     <style>
+        .qc-cmp-ui,
+        .qc-cmp-ui .qc-cmp-main-messaging,
+        .qc-cmp-ui .qc-cmp-messaging,
+        .qc-cmp-ui .qc-cmp-beta-messaging,
+        .qc-cmp-ui .qc-cmp-title,
+        .qc-cmp-ui .qc-cmp-sub-title,
+        .qc-cmp-ui .qc-cmp-purpose-info,
+        .qc-cmp-ui .qc-cmp-table,
+        .qc-cmp-ui .qc-cmp-table-header,
+        .qc-cmp-ui .qc-cmp-vendor-list,
+        .qc-cmp-ui .qc-cmp-vendor-list-title {
+            color: #a4adb4 !important;
+        }
+        .qc-cmp-ui a,
+        .qc-cmp-ui .qc-cmp-alt-action {
+          color: #a4adb4 !important;
+        }
+        .qc-cmp-small-toggle.qc-cmp-toggle-on,
+        .qc-cmp-toggle.qc-cmp-toggle-on {
+            background-color: #000000 !important;
+            border-color: #000000 !important;
+        }
+    </style>
+</head>
+
+<body><div id="wrapper"><header><div class="logo_main"><div class="inner_box"><div class="logo_left"><div class="logo_t12"><a href="https://www.tweaktown.com/"></a></div><div class="logo_text1"><a href="https://www.tweaktown.com/"></a><span>Technology content trusted in North America and globally since 1999</span></div></div><div class="logo_right"><div class="flo_left"><div class="small_img12 message"><a href="newsletter/index.html"></a></div><div class="small_img12 you_tube"><a href="https://www.youtube.com/user/tweaktown?sub_confirmation=1" target="_blank"></a></div><div class="small_img12 facebook"><a href="https://www.facebook.com/TweakTown" target="_blank"></a></div><div class="small_img12 twitter"><a href="https://twitter.com/TweakTown" target="_blank"></a></div><div class="small_img12 pinterest"><a href="https://www.pinterest.com/tweaktown/" target="_blank"></a></div></div><div class="cr"></div><div class="flo_right"><form action="/cse/" method="get"><input type="hidden" name="cx" value="partner-pub-5691419200769206:2xa55r-1tae"><input type="hidden" name="cof" value="FORID:0"><input type="hidden" name="ie" value="ISO-8859-1"><input class="search_left" type="text" name="q" placeholder="Search TweakTown" id="search_left_q" type="text" autocomplete="off"><input class="search_btn" id="serach_btn_q" type="submit" name="sa" value="" disabled></form></div><div class="cr"></div><div class="small_text12">8,351 Reviews & Articles | 63,668 News Posts</div><div class="cr"></div></div></div></div><div class="cr"></div>
+<span class="stickymenu" style="width:inherit;display:block;"><div class="menu_main"><div class="inner_box"><nav class="menubar45">
+<ul><li><a href="news/index.html">News</a><ul class="inner_li_ul" style="display:none"><li><a href="https://www.tweaktown.com/">Technology</a></li><li><a href="/news/gaming/index.html">Gaming</a></li><li><a href="/business-politics-and-money/index.html">Business, Politics &amp; Money</a></li><li><a href="/celebrities-and-entertainment/index.html">Celebrities &amp; Entertainment</a></li><li><a href="/health-lifestyle-and-travel/index.html">Health, Lifestyle &amp; Travel</a></li><li><a href="/humor-and-wtf/index.html">Humor</a></li><li><a href="/sport/index.html">Sport</a></li></ul></li><li><a href="reviews/index.html">Reviews</a><ul class="inner_li_ul" style="display:none"><li><a href="/cat/audio_sound_and_speakers/index.html">Audio, Sound & Speakers</a></li><li><a href="/cat/cameras/index.html">Cameras</a></li><li><a href="/cat/cases_cooling_and_power_supplies/index.html">Cases, Cooling & PSU</a></li><li><a href="/cat/systems/index.html">Computer Systems</a></li><li><a href="/cat/cpu_apu_and_chipsets/index.html">CPUs, Chipsets & SoCs</a></li><li><a href="/cat/displays_projectors/index.html">Displays & Projectors</a></li><li><a href="/cat/gaming/index.html">Gaming</a></li><li><a href="/cat/guides/index.html">Guides</a></li><li><a href="/cat/digital_lounge/index.html">HT & Movies</a></li><li><a href="/cat/it_datacenter_enterprise/index.html">IT/Datacenter</a></li><li><a href="/cat/laptops/index.html">Laptops</a></li><li><a href="/cat/maker_and_diy/index.html">Maker & DIY</a></li><li><a href="/cat/mobile_devices_tablets_and_phones/index.html">Mobile Devices</a></li><li><a href="/cat/motherboards/index.html">Motherboards</a></li><li><a href="/cat/networking/index.html">Networking</a></li><li><a href="/cat/input_peripherals/index.html">Peripherals</a></li><li><a href="/cat/printers_and_scanners/index.html">Printers & Scanners</a></li><li><a href="/cat/memory/index.html">RAM</a></li><li><a href="/cat/software/index.html">Software</a></li><li><a href="/cat/storage/index.html">Storage</a></li><li><a href="/cat/trade_shows/index.html">Trade Shows</a></li><li><a href="/cat/vehicles/index.html">Vehicles</a></li><li><a href="/cat/video_cards/index.html">Video Cards</a></li></ul></li><li><a href="articles/index.html">Articles</a><ul class="inner_li_ul" style="display:none"><li><a href="/cat/audio_sound_and_speakers/index.html">Audio, Sound & Speakers</a></li><li><a href="/cat/cameras/index.html">Cameras</a></li><li><a href="/cat/cases_cooling_and_power_supplies/index.html">Cases, Cooling & PSU</a></li><li><a href="/cat/systems/index.html">Computer Systems</a></li><li><a href="/cat/cpu_apu_and_chipsets/index.html">CPUs, Chipsets & SoCs</a></li><li><a href="/cat/displays_projectors/index.html">Displays & Projectors</a></li><li><a href="/cat/gaming/index.html">Gaming</a></li><li><a href="/cat/guides/index.html">Guides</a></li><li><a href="/cat/digital_lounge/index.html">HT & Movies</a></li><li><a href="/cat/it_datacenter_enterprise/index.html">IT/Datacenter</a></li><li><a href="/cat/laptops/index.html">Laptops</a></li><li><a href="/cat/maker_and_diy/index.html">Maker & DIY</a></li><li><a href="/cat/mobile_devices_tablets_and_phones/index.html">Mobile Devices</a></li><li><a href="/cat/motherboards/index.html">Motherboards</a></li><li><a href="/cat/networking/index.html">Networking</a></li><li><a href="/cat/input_peripherals/index.html">Peripherals</a></li><li><a href="/cat/printers_and_scanners/index.html">Printers & Scanners</a></li><li><a href="/cat/memory/index.html">RAM</a></li><li><a href="/cat/software/index.html">Software</a></li><li><a href="/cat/storage/index.html">Storage</a></li><li><a href="/cat/trade_shows/index.html">Trade Shows</a></li><li><a href="/cat/vehicles/index.html">Vehicles</a></li><li><a href="/cat/video_cards/index.html">Video Cards</a></li></ul></li><li class="active"><a href="cat/guides/index.html">Guides</a></li><li><a href="cat/gaming/index.html">Gaming</a><ul class="inner_li_ul" style="display:none"><li><a href="/news/gaming/index.html">News</a></li><li><a href="/cat/gaming/action/index.html">Action</a></li><li><a href="/cat/gaming/adventure/index.html">Adventure</a></li><li><a href="/cat/gaming/editorials/index.html">Editorials</a></li><li><a href="/cat/gaming/fps/index.html">FPS</a></li><li><a href="/cat/gaming/game-performance/index.html">Game Performance Articles</a></li><li><a href="/cat/gaming/puzzle/index.html">Puzzle</a></li><li><a href="/cat/gaming/racing/index.html">Racing</a></li><li><a href="/cat/gaming/rpg/index.html">RPG</a></li><li><a href="/cat/gaming/simulation/index.html">Simulation</a></li><li><a href="/cat/gaming/sports/index.html">Sports</a></li><li><a href="/cat/gaming/strategy/index.html">Strategy</a></li></ul></li><li><a href="https://deals.tweaktown.com/">Deals</a></li><li><a href="asktheexperts/index.html">Ask The Experts</a></li><li><a href="tweakipedia/index.html">Tweakipedia</a></li><li><a href="https://forums.tweaktown.com/" target="_blank">Forums</a></li></ul></nav></div></div><div class="cr"></div><div class="sub_menu_sec"><div class="inner_box"><nav class="sub_menu123"><ul><li><a href="cat/cases_cooling_and_power_supplies/index.html">Cases, Cooling &amp; PSU</a><ul class="inner_li_ul" style="display:none"><li><a href="/cat/cases_cooling_and_power_supplies/80-plus-bronze-psus/index.html">80 PLUS Bronze PSUs</a></li><li><a href="/cat/cases_cooling_and_power_supplies/80-plus-gold-psus/index.html">80 PLUS Gold PSUs</a></li><li><a href="/cat/cases_cooling_and_power_supplies/80-plus-platinum-psus/index.html">80 PLUS Platinum PSUs</a></li><li><a href="/cat/cases_cooling_and_power_supplies/80-plus-silver-psus/index.html">80 PLUS Silver PSUs</a></li><li><a href="/cat/cases_cooling_and_power_supplies/80-plus-titanium-psus/index.html">80 PLUS Titanium PSUs</a></li><li><a href="/cat/cases_cooling_and_power_supplies/cables-accessories/index.html">Cables & Accessories</a></li><li><a href="/cat/cases_cooling_and_power_supplies/cooling-fans/index.html">Cooling Fans</a></li><li><a href="/cat/cases_cooling_and_power_supplies/cpu-air-coolers/index.html">CPU Air Coolers</a></li><li><a href="/cat/cases_cooling_and_power_supplies/cpu-liquid-coolers/index.html">CPU Liquid Coolers</a></li><li><a href="/cat/cases_cooling_and_power_supplies/editorials/index.html">Editorials</a></li><li><a href="/cat/cases_cooling_and_power_supplies/fan-controllers/index.html">Fan Controllers</a></li><li><a href="/cat/cases_cooling_and_power_supplies/full-tower-cases/index.html">Full-Tower Cases</a></li><li><a href="/cat/cases_cooling_and_power_supplies/htpc-cases/index.html">HTPC Cases</a></li><li><a href="/cat/cases_cooling_and_power_supplies/mid-tower-cases/index.html">Mid-Tower Cases</a></li><li><a href="/cat/cases_cooling_and_power_supplies/notebook-coolers/index.html">Notebook Coolers</a></li><li><a href="/cat/cases_cooling_and_power_supplies/open-air-cases/index.html">Open Air Cases</a></li><li><a href="/cat/cases_cooling_and_power_supplies/other-cases/index.html">Other Cases</a></li><li><a href="/cat/cases_cooling_and_power_supplies/other-psus/index.html">Other PSUs</a></li><li><a href="/cat/cases_cooling_and_power_supplies/sff-cases/index.html">Small Form Factor Cases</a></li><li><a href="/cat/cases_cooling_and_power_supplies/super-tower-cases/index.html">Super-Tower Cases</a></li><li><a href="/cat/cases_cooling_and_power_supplies/vga-coolers/index.html">Video Card Coolers</a></li></ul></li><li><a href="cat/cpu_apu_and_chipsets/index.html">CPUs, Chipsets &amp; SoCs</a><ul class="inner_li_ul" style="display:none"><li><a href="/cat/cpu_apu_and_chipsets/amd-chipsets/index.html">AMD Chipsets</a></li><li><a href="/cat/cpu_apu_and_chipsets/amd-cpus-apus/index.html">AMD CPUs</a></li><li><a href="/cat/cpu_apu_and_chipsets/editorials/index.html">Editorials</a></li><li><a href="/cat/cpu_apu_and_chipsets/intel-chipsets/index.html">Intel Chipsets</a></li><li><a href="/cat/cpu_apu_and_chipsets/intel-cpus/index.html">Intel CPUs</a></li><li><a href="/cat/cpu_apu_and_chipsets/nvidia-chipsets/index.html">NVIDIA Chipsets</a></li><li><a href="/cat/cpu_apu_and_chipsets/overclocking/index.html">Overclocking</a></li><li><a href="/cat/cpu_apu_and_chipsets/via-chipsets/index.html">VIA Chipsets</a></li><li><a href="/cat/cpu_apu_and_chipsets/via-cpus/index.html">VIA CPUs</a></li></ul></li><li><a href="cat/it_datacenter_enterprise/index.html">IT/Datacenter</a><ul class="inner_li_ul" style="display:none"><li><a href="/cat/it_datacenter_enterprise/accessories/index.html">Accessories</a></li><li><a href="/cat/it_datacenter_enterprise/editorials/index.html">Editorials</a></li><li><a href="/cat/it_datacenter_enterprise/hdds/index.html">HDDs</a></li><li><a href="/cat/it_datacenter_enterprise/motherboards/index.html">Motherboards</a></li><li><a href="/cat/it_datacenter_enterprise/network-adapters/index.html">Network Adapters</a></li><li><a href="/cat/it_datacenter_enterprise/network-storage/index.html">Network Storage</a></li><li><a href="/cat/it_datacenter_enterprise/network-switches/index.html">Network Switches</a></li><li><a href="/cat/it_datacenter_enterprise/pcie-ssds/index.html">PCIe SSDs</a></li><li><a href="/cat/it_datacenter_enterprise/racks-cases/index.html">Racks & Cases</a></li><li><a href="/cat/it_datacenter_enterprise/raid-hba/index.html">RAID/HBA</a></li><li><a href="/cat/it_datacenter_enterprise/server-memory/index.html">Server RAM</a></li><li><a href="/cat/it_datacenter_enterprise/server/index.html">Servers</a></li><li><a href="/cat/it_datacenter_enterprise/software/index.html">Software</a></li><li><a href="/cat/it_datacenter_enterprise/ssds/index.html">SSDs</a></li><li><a href="/cat/it_datacenter_enterprise/sshds/index.html">SSHDs</a></li></ul></li><li><a href="cat/laptops/index.html">Laptops</a><ul class="inner_li_ul" style="display:none"><li><a href="/cat/laptops/editorials/index.html">Editorials</a></li><li><a href="/cat/laptops/gaming-laptops/index.html">Gaming Laptops</a></li><li><a href="/cat/laptops/netbooks/index.html">Netbooks (EOL)</a></li><li><a href="/cat/laptops/standard-laptops/index.html">Standard Laptops</a></li><li><a href="/cat/laptops/touchscreen-laptops/index.html">Touchscreen Laptops</a></li></ul></li><li><a href="cat/mobile_devices_tablets_and_phones/index.html">Mobile Devices</a><ul class="inner_li_ul" style="display:none"><li><a href="/cat/mobile_devices_tablets_and_phones/cables-accessories/index.html">Cables & Accessories</a></li><li><a href="/cat/mobile_devices_tablets_and_phones/cases-covers/index.html">Cases & Covers</a></li><li><a href="/cat/mobile_devices_tablets_and_phones/editorials/index.html">Editorials</a></li><li><a href="/cat/mobile_devices_tablets_and_phones/gps/index.html">GPS</a></li><li><a href="/cat/mobile_devices_tablets_and_phones/phones/index.html">Phones</a></li><li><a href="/cat/mobile_devices_tablets_and_phones/portable-chargers/index.html">Portable Chargers</a></li><li><a href="/cat/mobile_devices_tablets_and_phones/smart-cameras/index.html">Smart Cameras</a></li><li><a href="/cat/mobile_devices_tablets_and_phones/software-os/index.html">Software & OS</a></li><li><a href="/cat/mobile_devices_tablets_and_phones/tablets/index.html">Tablets</a></li><li><a href="/cat/mobile_devices_tablets_and_phones/wearable_computing/index.html">Wearable Computing</a></li></ul></li><li><a href="cat/motherboards/index.html">Motherboards</a><ul class="inner_li_ul" style="display:none"><li><a href="/cat/motherboards/editorials/index.html">Editorials</a></li><li><a href="/cat/motherboards/nv-mobo/index.html">NVIDIA Chipset</a></li><li><a href="/cat/motherboards/socket-939/index.html">Socket 939</a></li><li><a href="/cat/motherboards/socket-am2/index.html">Socket AM2/AM2+</a></li><li><a href="/cat/motherboards/socket-am3plus/index.html">Socket AM3/AM3+</a></li><li><a href="/cat/motherboards/socket-am4/index.html">Socket AM4</a></li><li><a href="/cat/motherboards/socket-fm1/index.html">Socket FM1</a></li><li><a href="/cat/motherboards/socket-fm2/index.html">Socket FM2</a></li><li><a href="/cat/motherboards/socket-lga-1150/index.html">Socket LGA 1150/1151</a></li><li><a href="/cat/motherboards/socket-lga-1155/index.html">Socket LGA 1155</a></li><li><a href="/cat/motherboards/socket-lga-1156/index.html">Socket LGA 1156</a></li><li><a href="/cat/motherboards/socket-lga-1366/index.html">Socket LGA 1366</a></li><li><a href="/cat/motherboards/socket-lga-2011/index.html">Socket LGA 2011</a></li><li><a href="/cat/motherboards/socket-lga-2066/index.html">Socket LGA 2066</a></li><li><a href="/cat/motherboards/socket-lga-775/index.html">Socket LGA 775</a></li><li><a href="/cat/motherboards/socket-tr4-threadripper/index.html">Socket TR4 Threadripper</a></li></ul></li><li><a href="cat/input_peripherals/index.html">Peripherals</a><ul class="inner_li_ul" style="display:none"><li><a href="/cat/input_peripherals/accessories/index.html">Accessories</a></li><li><a href="/cat/input_peripherals/editorials/index.html">Editorials</a></li><li><a href="/cat/input_peripherals/game-controllers/index.html">Game Controllers</a></li><li><a href="/cat/input_peripherals/keyboards/index.html">Keyboards</a></li><li><a href="/cat/input_peripherals/mice/index.html">Mice</a></li><li><a href="/cat/input_peripherals/mouse-pads/index.html">Mouse Pads</a></li><li><a href="/cat/input_peripherals/office-gaming-chairs/index.html">Office & Gaming Chairs</a></li><li><a href="/cat/input_peripherals/software/index.html">Software</a></li><li><a href="/cat/input_peripherals/steering-wheels/index.html">Steering Wheels</a></li></ul></li><li><a href="cat/memory/index.html">RAM</a><ul class="inner_li_ul" style="display:none"><li><a href="/cat/memory/ddr/index.html">DDR Memory</a></li><li><a href="/cat/memory/ddr2/index.html">DDR-2 Memory</a></li><li><a href="/cat/memory/ddr3/index.html">DDR-3 Memory</a></li><li><a href="/cat/memory/ddr4/index.html">DDR-4 Memory</a></li><li><a href="/cat/memory/editorials/index.html">Editorials</a></li><li><a href="/cat/memory/sodimm-laptop/index.html">SO-DIMM Laptop Memory</a></li></ul></li><li><a href="cat/storage/index.html">Storage</a><ul class="inner_li_ul" style="display:none"><li><a href="/cat/storage/accessories/index.html">Accessories</a></li><li><a href="/cat/storage/drive-docking-stations/index.html">Drive Docking Stations</a></li><li><a href="/cat/storage/editorials/index.html">Editorials</a></li><li><a href="/cat/storage/enclosures-externals/index.html">Enclosures/Externals</a></li><li><a href="/cat/storage/hdds/index.html">HDDs</a></li><li><a href="/cat/storage/m2-ssds/index.html">m.2 SSDs</a></li><li><a href="/cat/storage/memory-cards/index.html">Memory Cards</a></li><li><a href="/cat/storage/msata/index.html">mSATA</a></li><li><a href="/cat/storage/optical-drives-media/index.html">Optical Drives & Media</a></li><li><a href="/cat/storage/pcie/index.html">PCIe</a></li><li><a href="/cat/storage/raid/index.html">RAID</a></li><li><a href="/cat/storage/raid-hba/index.html">RAID/HBA</a></li><li><a href="/cat/storage/software/index.html">Software</a></li><li><a href="/cat/storage/soho-nas-das/index.html">SOHO NAS/DAS</a></li><li><a href="/cat/storage/ssds/index.html">SSDs</a></li><li><a href="/cat/storage/sshds/index.html">SSHDs</a></li><li><a href="/cat/storage/thunderbolt/index.html">Thunderbolt</a></li><li><a href="/cat/storage/usb-drives/index.html">USB Drives</a></li></ul></li><li><a href="cat/video_cards/index.html">Video Cards</a><ul class="inner_li_ul" style="display:none"><li><a href="/cat/video_cards/amd-crossfire/index.html">AMD CrossFire Articles</a></li><li><a href="/cat/video_cards/amd-radeon-gpu/index.html">AMD Radeon GPU</a></li><li><a href="/cat/video_cards/editorials/index.html">Editorials</a></li><li><a href="/cat/video_cards/nvidia-geforce-gpu/index.html">NVIDIA GeForce GPU</a></li><li><a href="/cat/video_cards/nvidia-sli/index.html">NVIDIA SLI Articles</a></li><li><a href="/cat/video_cards/other-gpu/index.html">Other GPU</a></li></ul></li></ul></nav></div></div></span><div class="cr"></div></header><div id="content-container" class="clear-block"><center class="center-tag"><div id="div-gpt-ad-1378071706813-0" class="lazyload lazypreload" data-ad-slot="slot1" data-no-refresh="true"></div></center><div id="content-left"><div id="content-crumbbar" class="clear-block"><div class="crumb-text"><div itemscope itemtype="https://data-vocabulary.org/Breadcrumb"><a href="https://www.tweaktown.com/" itemprop="url" class="first-crumb"><span itemprop="title">Home</span></a></div><div itemscope itemtype='http://data-vocabulary.org/Breadcrumb'><a href="cat/guides/index.html" itemprop='url'><span itemprop='title'>Guides</span></a></div></div></div><div data-ns="native"></div><article id="main-content"><header><h1>How to Convert DVD with Handbrake or WinX DVD Ripper</h1><div class="article-sortDes-img"><img src="https://imagescdn.tweaktown.com/content/icons/8/8/8883.jpg" width="84" height="52" alt="How to Convert DVD with Handbrake or WinX DVD Ripper" title="How to Convert DVD with Handbrake or WinX DVD Ripper"></div><div class="article-sortDes">Have some old DVDs laying around that you want to make digital for future safe keeping? Read on.</div><div id="info-bar" style="clear:both">Sponsored Content | <strong>
+<a href="https://www.tweaktown.com/cat/guides/index.html">Guides</a></strong> | <strong>Posted:</strong> Jan 30, 2019 <span class='tim'>2:27 am</spa
+></div><div id="tool-bar" class="clear-block"><span id="article-functions"><a href="/guides/8883/convert-dvd-handbrake-winx-ripper/index.html#comment">Comment</a> | <a href="javascript:email(8883, 'guides');">Email to a Friend</a> | <strong>Font Size:</strong> <a href="javascript:void(0);" class="small">A</a><a href="javascript:void(0);" class="big">A</a></span></div><div class="social-bar"><div class="share share_set_marg" id="share1"><div class="fb-share-button facebook zoomed" data-href="https://www.tweaktown.com/guides/8883/convert-dvd-handbrake-winx-ripper/index.html" data-layout="button" data-size="large" data-mobile-iframe="false"></div><div class="twitter zoomed"><a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=How+to+Convert+DVD+with+Handbrake+or+WinX+DVD+Ripper" data-size="large" data-url="https://www.tweaktown.com/guides/8883/convert-dvd-handbrake-winx-ripper/index.html"></a></div><div class="twitter" style="margin-left:20px"><a href="http://www.reddit.com/submit?url=https://www.tweaktown.com/guides/8883/convert-dvd-handbrake-winx-ripper/index.html" target="_blank"><img src="https://imagescdn.tweaktown.com/reddit2.png" width="30px" height="30px"></a></div></div></div><div style="clear:both"></div></header><article><center style="clear:both;margin:30px 0 20px 0"><section id='div-gpt-ad-1378071706813-10' class="lazyload lazypreload" data-no-refresh="true" data-ad-slot="slot7" style="min-height:90px"></section></center><div itemprop="articleBody" id="KonaBody"><p>Who is still buying DVDs? Surely collectors are. A hard copy is always tempting for collectors. Also, old-fashioned DVD serves you well when movies are hard to find or even not available online on Netflix. Just remember to do a backup of your new disc once you get it. </p><p class="paragraph-smallspace"> </p><p>Copy the video from DVD and get it to USB or streaming to your servers like Plex, NAS, etc. Then you will be able to play the videos on laptop, Android/iPhone tablet or HDTV without carrying around a DVD player. For those who don't buy DVD any more but still have some old ones, digitizing DVD is also a nice try. </p><p class="paragraph-smallspace"> </p><p>But what file format do most devices accept for best video and audio? As of now, converting <a href="https://www.winxdvd.com/resource/dvd-to-mp4.htm" target="_blank"><strong>DVD to MP4</strong></a> remains the most preferred option. What software should be used? You have two possible answers, depending on what kind of source DVD you have: HandBrake and WinX DVD Ripper. </p><p class="paragraph-smallspace"> </p><p><strong>Use HandBrake for Homemade DVDs and WinX DVD Ripper for Protected Ones</strong> </p><p class="paragraph-smallspace"> </p><p>Both HandBrake and WinX DVD Ripper are good DVD ripping software, constantly updated and hardware accelerated. The difference lies in the input source. HandBrake is an expert mainly for ripping homemade ones and transcoding digital videos for free. But it is a little tricky to deal with commercial DVDs. </p><p class="paragraph-smallspace"> </p><p>WinX DVD Ripper accepts various types of DVDs, be them non-commercial, region-coded, 99-title, etc. The well-rounded features in DVD decrypting, editing and re-encoding are what sets WinX DVD Ripper apart. And it is now a <a href="https://www.winxdvd.com/dvd-ripper/" target="_blank"><strong>free DVD ripper</strong></a> thanks to the on-going Giveaway. A full-featured WinX DVD Ripper is offered for free with license. </p><p class="paragraph-smallspace"> </p><p class="paragraph-smallspace"> </p><p>Get a licensed copy of WinX DVD Ripper for free at: <a href="https://www.winxdvd.com/event/dvd-ripper.htm" target="_blank" rel="nofollow">https://www.winxdvd.com/event/dvd-ripper.htm</a> </p><p class="paragraph-smallspace"> </p><p><strong>How to Convert a General DVD with HandBrake</strong> </p><p class="paragraph-smallspace"> </p><p>Step 1. Download and install HandBrake 1.2.0 from its official website. Windows 7 or later (macOS 10.10 Yosemite and later) is required. FYI, AMD VCE and NVIDIA NVENC GPU accelerated video encoding now is possible with the latest version HandBrake. 1.2.0.
+</p><p class="paragraph-smallspace"> </p><p><div align="center"><a href="https://www.tweaktown.com/image.php?image=imagescdn.tweaktown.com/content/8/8/8883_1_convert-dvd-handbrake-winx-ripper_full.jpg" target="_blank"><img class="lazyload" data-src="https://imagescdn.tweaktown.com/content/8/8/8883_1_convert-dvd-handbrake-winx-ripper.jpg" alt="convert-dvd-handbrake-winx-ripper_1" title="How to Convert DVD with Handbrake or WinX DVD Ripper 1 | TweakTown.com"></a></div> </p><p class="paragraph-smallspace"> </p><p>Step 2. Insert your DVD disc into the drive. Open HandBrake, click "Open Source" and then select DVD to load the content. </p><p class="paragraph-smallspace"> </p><p>A general DVD will be read instantly, but an alert box with "HandBrake does not support the removal of copy-protection from DVD discs" will show up if it is a commercial DVD. <a href="https://www.winxdvd.com/resource/install-handbrake-libdvdcss-to-rip-dvd.htm" target="_blank"><strong>Installing libdvdcss</strong></a> can solve part of the problems, but you may have to resort to WinX DVD Ripper when dealing with strictly encrypted ones.
+</p><p class="paragraph-smallspace"> </p><p><div align="center"><img class="lazyload" data-src="https://imagescdn.tweaktown.com/content/8/8/8883_2_convert-dvd-handbrake-winx-ripper.png" alt="convert-dvd-handbrake-winx-ripper_2" title="How to Convert DVD with Handbrake or WinX DVD Ripper 2 | TweakTown.com"></div> </p><p class="paragraph-smallspace"> </p><p>Step 3. Set video parameters. </p><p>Video codec: H.264 (x264), H.264 (Intel QSV), H.264 (NVIDIA NVEnc), H.265 (Intel QSV), h.265 (NVIDIA NVEnc)
+</p><p class="paragraph-smallspace"> </p><p>Framerate: Same as source
+</p><p class="paragraph-smallspace"> </p><p>Quality: CQ is recommended rather than ABR. RF value for ripping a DVD is between 19 and 21. Don't go above an RF of 19. It only leads to huge file size without better quality. For your information, Apple TV 2 presets (RF 20, Encoder Profile High, Encoder Level 3.1, Video Codec H.264) will output video in 925MB per hour.
+</p><p class="paragraph-smallspace"> </p><p><div align="center"><a href="https://www.tweaktown.com/image.php?image=imagescdn.tweaktown.com/content/8/8/8883_3_convert-dvd-handbrake-winx-ripper_full.jpg" target="_blank"><img class="lazyload" data-src="https://imagescdn.tweaktown.com/content/8/8/8883_3_convert-dvd-handbrake-winx-ripper.jpg" alt="convert-dvd-handbrake-winx-ripper_3" title="How to Convert DVD with Handbrake or WinX DVD Ripper 3 | TweakTown.com"></a></div> </p><p class="paragraph-smallspace"> </p><p>Step 4. Set the output file name and folder, and then click "Start Encode".
+</p><p class="paragraph-smallspace"> </p><p><strong>HandBrake Test Results on Windows 10 </strong> </p><p class="paragraph-smallspace"> </p><p>The test is running on a PC with Intel i7-8700K CPU and NVIDIA GeForce GTX 1080 GPU. Source DVD is 2h 12 min and the output preset is MP4 (Fast 1080p). Different presets take different time range to finish the DVD ripping, and file size varies. Normally, GPU acceleration helps rip fast but x264 and x265 output file in better quality and smaller size. Please choose based on your need.
+</p><p class="paragraph-smallspace"> </p><p>Time to rip DVD to MP4 using x264: 19min 22s
+</p><p>File size: 849 MB
+
+<div class="ad-reporter-ahytrfg35423">
+<div id="advertisement" style="border: 0pt none; margin: auto; text-align: center; color: #999; text-transform: uppercase; font-family: sans-serif; font-size: 9px; font-weight: 400; letter-spacing: .2em; line-height: 1; margin-top: 0px; position: relative; top: -4px;">Advertisement</div>
+            <video id="vid1" class="video-js vjs-default-skin vjs-big-play-centered" controls data-setup='{"preload": "auto", "loop": true}' width='550' height='310' style="display:block; margin: 0 auto;">
+                <source src="//vjs.zencdn.net/v/oceans.mp4" type='video/mp4'/>
+                <source src="//vjs.zencdn.net/v/oceans.webm" type='video/webm'/>
+                <source src="//vjs.zencdn.net/v/oceans.ogv" type='video/ogg'/>
+            </video>
+        </div>
+
+</p><p class="paragraph-smallspace"> </p><p>Time to rip DVD to MP4 using H.264 (NVEnc): 17min 54s
+</p><p>File size: 849 MB
+</p><p class="paragraph-smallspace"> </p><p><strong>How to Rip Homemade or Protected DVD with WinX DVD Ripper</strong> </p><p class="paragraph-smallspace"> </p><p>Step 1. Download and install WinX DVD Ripper </p><p>- To download a licensed copy of WinX DVD Ripper, go to the <a href="https://www.winxdvd.com/event/dvd-ripper.htm#tobuy" target="_blank"><strong>Giveaway Page</strong></a> and click "Get Free" button. </p><p>- Unzip the file after download and double click the .exe file in the folder to get it installed. - Find the giveaway license in the "read me - license key.txt" file, open the software, click "Register", input your email to activate the license. </p><p class="paragraph-smallspace"> </p><p><div align="center"><a href="https://www.tweaktown.com/image.php?image=imagescdn.tweaktown.com/content/8/8/8883_4_convert-dvd-handbrake-winx-ripper_full.png" target="_blank"><img class="lazyload" data-src="https://imagescdn.tweaktown.com/content/8/8/8883_4_convert-dvd-handbrake-winx-ripper.png" alt="convert-dvd-handbrake-winx-ripper_4" title="How to Convert DVD with Handbrake or WinX DVD Ripper 4 | TweakTown.com"></a></div> </p><p class="paragraph-smallspace"> </p><p>Step 2. Load source DVD </p><p>Put your DVD disc into the drive and click "Disc" in WinX DVD Ripper to get it loaded. Before you know it, the whole process of copy protection removal is done, including title scanning, analysis, decrypting and right title selecting.
+</p><p class="paragraph-smallspace"> </p><p><div align="center"><a href="https://www.tweaktown.com/image.php?image=imagescdn.tweaktown.com/content/8/8/8883_5_convert-dvd-handbrake-winx-ripper_full.png" target="_blank"><img class="lazyload" data-src="https://imagescdn.tweaktown.com/content/8/8/8883_5_convert-dvd-handbrake-winx-ripper.png" alt="convert-dvd-handbrake-winx-ripper_5" title="How to Convert DVD with Handbrake or WinX DVD Ripper 5 | TweakTown.com"></a></div> </p><p class="paragraph-smallspace"> </p><p>Step 3. Choose an output profile
+</p><p>There is a long list of output presets. Entry-level users better choose according to the final device you put it on, from general platforms like Apple, Android, Microsoft, Sony, Web to detailed gadgets like iPhone, iPad, iPod, Apple TV, iTunes, iDVD, iMovie, Final Cut Pro, etc. The professionals can set desired video codec, bit rate, frame rate and more. </p><p class="paragraph-smallspace"> </p><p>Step 4. RUN the DVD conversion
+</p><p>Specify the destination folder, check the "Hardware Accelerator" and click button RUN to start the encoding. </p><p class="paragraph-smallspace"> </p><p><div class="video-container"><iframe class="lazyload" data-src="https://www.youtube.com/embed/ONWtjNI39A4?rel=0&wmode=opaque" frameborder="0" width="625" height="348"></iframe></div> </p><p class="paragraph-smallspace"> </p><p><strong>WinX DVD Ripper Test Results on Windows 10 </strong> </p><p class="paragraph-smallspace"> </p><p>Same testing environment as HandBrake
+</p><p class="paragraph-smallspace"> </p><p>Time to rip DVD to MP4 using QSV: 9min 16s
+</p><p>File size: 1.22 GB
+</p><p class="paragraph-smallspace"> </p><p>Time to rip DVD to MP4 using NVEnc: 8min 45s
+</p><p>File size: 1.24 GB
+</p><p class="paragraph-smallspace"> </p><p><strong>Overview: HandBrake vs. WinX DVD Ripper</strong> </p><p class="paragraph-smallspace"> </p><p><div align="center"><a href="https://www.tweaktown.com/image.php?image=imagescdn.tweaktown.com/content/8/8/8883_6_convert-dvd-handbrake-winx-ripper_full.jpg" target="_blank"><img class="lazyload" data-src="https://imagescdn.tweaktown.com/content/8/8/8883_6_convert-dvd-handbrake-winx-ripper.jpg" alt="convert-dvd-handbrake-winx-ripper_6" title="How to Convert DVD with Handbrake or WinX DVD Ripper 6 | TweakTown.com"></a></div></p><div class="chart_div"></div><div style="margin:30px 0"><em><strong>Please Note:</strong> This is a sponsored article and its contents may or may not represent the thoughts or opinions of TweakTown or its editors.</em></div>
+
+
+
+
+<div class="page_all_content"><label>Shopping Information</label><ul><p><strong>PRICING:</strong> You can find the product discussed for sale below. The prices listed are valid at the time of writing, but can change at any time. Click the link below to see real-time pricing for the best deal:
+</p><p class="paragraph-smallspace"> </p><p><strong>United States:</strong> Find other tech and computer products like this over at <a href="http://www.amazon.com/b/ref=as_li_qf_br_sr_il_tl?_encoding=UTF8&camp=1789&creative=9325&linkCode=as2&node=13900871&tag=twea-20&linkId=QZ6EKJS2KDHP5HND" target="_blank" rel="nofollow"><strong>Amazon`s website</strong></a>.
+</p><p><strong>United Kingdom:</strong> Find other tech and computer products like this over at <a href="http://www.amazon.co.uk/computers-accessories/b/ref=topnav_storetab_computers?ie=UTF8&node=340831031&tag=twea03-21" target="_blank" rel="nofollow"><strong>Amazon UK`s website</strong></a>.
+</p><p><strong>Canada:</strong> Find other tech and computer products like this over at <a href="http://www.amazon.ca/b/ref=as_li_qf_br_sr_il_tl?_encoding=UTF8&camp=15121&creative=330641&linkCode=as2&node=2404990011&tag=twea03-20" target="_blank" rel="nofollow"><strong>Amazon Canada`s website</strong></a>.</p></ul></div></article>
+
+<div class="social-bar-bottom"><div class="share share_set_marg"><div class="fb-share-button facebook zoomed" data-href="https://www.tweaktown.com/guides/8883/convert-dvd-handbrake-winx-ripper/index.html" data-layout="button" data-size="large" data-mobile-iframe="false"></div><div class="twitter zoomed"><a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=How+to+Convert+DVD+with+Handbrake+or+WinX+DVD+Ripper" data-size="large" data-url="https://www.tweaktown.com/guides/8883/convert-dvd-handbrake-winx-ripper/index.html"></a></div><div class="twitter" style="margin-left:20px"><a href="http://www.reddit.com/submit?url=https://www.tweaktown.com/guides/8883/convert-dvd-handbrake-winx-ripper/index.html" target="_blank"><img src="https://imagescdn.tweaktown.com/reddit2.png" width="30px" height="30px"></a></div></div></div><div class="clear"></div><h1></h1><center style="margin:40px 0 20px 0;clear:both"><section id='div-gpt-ad-1378071706813-11' class="lazyload lazypreload" data-no-refresh="true" data-ad-slot="slot8" style="min-height:90px"></section></center><a name="comment"></a><br><div class="fb-comments" data-href="https://www.tweaktown.com/guides/8883/convert-dvd-handbrake-winx-ripper/index.html" data-width="100%"></div><center style="margin:40px 0 10px 0"><section id='div-gpt-ad-1378071706813-9' class="lazyload lazypreload" data-refresh-always="true" data-ad-slot="slot9" style="min-height:90px"></section></center><div class="page_all_content mobile_font_size-30"><div style="clear:both"></div><label>Right of Reply</label><ul>We at TweakTown openly invite the companies who provide us with review samples / who are mentioned or discussed to express their opinion of our content. If any company representative wishes to respond, we will publish the response here.</ul></div><br><br><p><h3>Related Tags</h3><ul id="content-tags" class="clear-block"><li><a href="tags/DVD/index.html">DVD</a></li><li><a href="tags/convert/index.html">convert</a></li><li><a href="tags/covert_DVD/index.html">covert DVD</a></li><li><a href="tags/Handbreak/index.html">Handbreak</a></li><li><a href="tags/WinX_DVD_Ripper/index.html">WinX DVD Ripper</a></li><li><a href="tags/ripping/index.html">ripping</a></li><li><a href="tags/ripper/index.html">ripper</a></li><li><a href="tags/DVD_rip/index.html">DVD rip</a></li></ul></p><div class="share_box" id="share_box"><div class="fb-share-button share_linefb" data-href="https://www.tweaktown.com/guides/8883/convert-dvd-handbrake-winx-ripper/index.html" data-layout="button" data-size="large" data-mobile-iframe="false"></div><div class="share_linetwitter"><a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=How+to+Convert+DVD+with+Handbrake+or+WinX+DVD+Ripper" data-size="large" data-url="https://www.tweaktown.com/guides/8883/convert-dvd-handbrake-winx-ripper/index.html"></a></div></div></article><center style="margin:40px 0"><div id='div-gpt-ad-1378071706813-7' class="lazyload lazypreload" data-no-refresh="true" data-ad-slot="slot6"></div></center><center><form action="/cse/" method="get"><input type="hidden" name="cx" value="partner-pub-5691419200769206:2xa55r-1tae"><input type="hidden" name="cof" value="FORID:0"><input type="hidden" name="ie" value="ISO-8859-1"><input type="text" name="q" id="q" placeholder="Cannot find something?" maxlength="1024" class="long" autocomplete="off"><input type="submit" name="sa" id="bottom_search" value="SEARCH" disabled></form></center></div><div id="content-right"><div class=""><div class="right_subscribe"><div class="sub_scrib_heading">Subscribe to our Newsletter</div><div class="email_outer"><form action="https://www.tweaktown.com/cgi-bin/dada/mail.cgi" method="get"><input type="hidden" name="list" value="ttn2"><input type="hidden" name="flavor" value="subscribe"><input type="text" class="input_09" name="email" placeholder="Enter your email" onFocus="if (!window.__cfRLUnblockHandlers) return false; this.value='';" maxlength="1024" id="subscribe_email" autocomplete="off" data-cf-modified-f3a39a56e4c4697c070b8ba8-=""><input type="submit" class="submit_btn" value="SUBMIT" id="subscribe_email_btn" disabled></form></div></div><center style="min-height:250px;padding-bottom:20px;clear:both"><div id='div-gpt-ad-1378071706813-1' class="lazyload lazypreload" data-ad-slot="slot2" data-no-refresh="true"></div></center><section class="rightside clear-block"><h3>Latest News Posts</h3><ul><li><a href="news/66739/cyberpunk-2077-playable-gamescom-2019/index.html">Cyberpunk 2077 won't be playable at Gamescom 2019</a></li><li><a href="news/66740/fsp-announces-new-durable-hydro-pro-850w-1000w-psus/index.html">FSP announces new durable Hydro G Pro 850W, 1000W PSUs</a></li><li><a href="news/66736/microsoft-redesigns-xbox-one-dashboard-10-000th-time/index.html">Microsoft redesigns Xbox One dashboard for the 10,000th time</a></li><li><a href="news/66734/ghost-recon-breakpoint-pc-technical-test-kicks-july-26/index.html">Ghost Recon Breakpoint PC technical test kicks off July 26</a></li><li><a href="news/66733/thq-nordic-reveal-special-new-title-gamescom-2019/index.html">THQ Nordic to reveal special new title at Gamescom 2019</a></li></ul><a href="news/index.html">View More News Posts</a></section><center style="min-height:250px;padding-bottom:20px"><div id='div-gpt-ad-1378071706813-5' class="lazyload lazypreload" data-refresh-always="true" data-ad-slot="slot4"></div></center><section class="rightside clear-block"><h3>Forum Activity</h3><ul><li><a href="https://forums.tweaktown.com/showthread.php?t=66916" target="_blank">Enermax Equilence Mid-Tower Chassis Review</a></li><li><a href="https://forums.tweaktown.com/showthread.php?t=66915" target="_blank">Enermax Equilence Mid-Tower Chassis Review</a></li><li><a href="https://forums.tweaktown.com/showthread.php?t=66914" target="_blank">Asus gryphon z87 red light blink</a></li><li><a href="https://forums.tweaktown.com/showthread.php?t=66913" target="_blank">ID-Cooling ZOOMFLOW 240 CPU Cooler Review</a></li><li><a href="https://forums.tweaktown.com/showthread.php?t=66912" target="_blank">ID-Cooling ZOOMFLOW 240 CPU Cooler Review</a></li></ul><a href="https://forums.tweaktown.com/" target="_blank">View More Forum Posts</a></section><center style="min-height:250px;padding-bottom:20px"><div id='div-gpt-ad-1378071706813-6' class="lazyload lazypreload" data-refresh-always="true" data-ad-slot="slot5"></div></center><section class="rightside clear-block"><h3>Press Releases</h3><ul><li><a href="pressrelease/14143/fsps-hydro-pro-series-power-supplies-upgraded-safety-efficiency-performance/index.html">FSP's Hydro G Pro Series Power Supplies with Upgraded Safety, Efficiency and Performance</a></li><li><a href="pressrelease/14142/12-year-classic-perfect-world-revived-mobile/index.html">12-Year Classic Perfect World Revived For Mobile</a></li><li><a href="pressrelease/14141/better-btrfs-speeds-kernel-updates-mean-adm-here/index.html">Better Btrfs Speeds, Kernel Updates Mean ADM 3.4 is Here!</a></li><li><a href="pressrelease/14140/ek-fc-gv100-pro-water-block-professionals/index.html">EK-FC GV100 Pro, a Water Block for Professionals</a></li><li><a href="pressrelease/14139/gameforge-launches-aion-europe-featuring-brand-new-region-class-specialization/index.html">Gameforge Launches AION 7.0 in Europe - Featuring a Brand New Region and Class Specialization</a></li></ul><a href="pressrelease/index.html">View More Press Releases</a></section><div class="footer_bottom"><div class="inner_box"><div class="foot_menu"><ul><li><a href="https://www.tweaktown.com/">Home</a></li><li><a href="sitemaps/index.html">Sitemap</a></li><li><a href="advertising/index.html">Advertising</a></li><li><a href="awards/index.html">Awards</a></li><li><a href="about/index.html">About</a></li><li><a href="contact/index.html">Contact</a></li><li><a href="shopping/index.html">Price Search</a></li><li><a href="feeds/index.html">RSS FEEDS</a></li><li><a href="legal/index.html">PRIVACY POLICY</a></li></ul></div></div><div class="cr"></div><div class="foot_copy">&copy; 1999-2019 Tweak Town Pty Ltd. All Rights Reserved.</div></div><div class="cr"></div><center id="r4gutter" style="min-height:250px;margin-top:20px"><div id='div-gpt-ad-1378071706813-8' class="lazyload lazypreload" data-refresh-always="true" data-ad-slot="slot10"></div></center></div></div></div><div class="cr" style="height:100px"></div></div><div id="fb-root"></div><script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&autoLogAppEvents=1&version=v3.3&appId=206853542678452" type="f3a39a56e4c4697c070b8ba8-text/javascript"></script><div class="fb-quote"></div><input type="hidden" id="is_mobile" value="no"><input type="hidden" id="prev_href" value=""><input type="hidden" id="next_href" value=""><div class="page_load_div" style="display:none"></div><div id="loader_bg"></div><div id="loader_div"><img src="https://imagescdn.tweaktown.com/big_loader.gif" alt="loading"></div><script type="f3a39a56e4c4697c070b8ba8-text/javascript">window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f)};return t}(document,"script","twitter-wjs"))</script><script type="f3a39a56e4c4697c070b8ba8-text/javascript">var fixmeTop1=$('.stickymenu').offset().top;$(window).scroll(function(){var currentScroll=$(window).scrollTop();if(currentScroll>=fixmeTop1){$('.stickymenu').css({position:'fixed',top:'0'})}else{$('.stickymenu').css({position:'static'})}})</script><script async defer src="https://scriptscdn.tweaktown.com/combined1.min.js" type="f3a39a56e4c4697c070b8ba8-text/javascript"></script><script type="f3a39a56e4c4697c070b8ba8-text/javascript">$(window).bind('resize',function(){var sw=screen.width;var ww=window.innerWidth;if(sw>=1600&&ww>=1600){$(".page_load_div").show()}else{$(".page_load_div").hide()}});$(document).ready(function(){var sw=screen.width;var ww=window.innerWidth;if(sw>=1600&&ww>=1600){$(".page_load_div").show()}var site_url= "https://www.tweaktown.com/"; $('#top_link').click(function(){var new_page=$("#prev_href").val();if(new_page!=""){$("#loader_bg").show();$("#loader_div").show();window.location.href=site_url+new_page}});$('#bottom_link').click(function(){var new_page=$("#next_href").val();if(new_page!=""){$("#loader_bg").show();$("#loader_div").show();window.location.href=site_url+new_page;}}); /*setTimeout(function(){ $('#share1').show(); }, 2000);$('#KonaBody p').each(function(){ var $this = $(this);if($this.html().replace(/\s|&nbsp;/g, '').length == 0) $this.remove(); });*/ }); </script><script src="https://ajax.cloudflare.com/cdn-cgi/scripts/95c75768/cloudflare-static/rocket-loader.min.js" data-cf-settings="f3a39a56e4c4697c070b8ba8-|49" defer=""></script>
+
+<script>window._BidFilter={site_id:1045,pbjsKey:'adyjs',checkAudio:true};</script>
+<script src="https://cdn.bidfilter.com/bidfilter.js" async></script>
+
+<footerbid1>
+<script rel="preconnect" type="text/javascript" src="//adops.adysis.com/timhanlon/tweaktownhjgjhg756676.js"></script>
+</footerbid1>
+<link rel="preconnect" href="https://www.googletagservices.com/" crossorigin>
+<link rel="preconnect" href="//c.amazon-adsystem.com" crossorigin>
+<link rel="preconnect" href="//aax.amazon-adsystem.com" crossorigin>
+<link rel="preconnect" href="//fastlane.rubiconproject.com" crossorigin>
+<link rel="preconnect" href="//ib.adnxs.com" crossorigin>
+<link rel="preconnect" href="https://as-sec.casalemedia.com" crossorigin>
+<link rel="preconnect" href="https://as.casalemedia.com" crossorigin>
+<link rel="preconnect" href="https://hbopenbid.pubmatic.com" crossorigin>
+<link rel="preconnect" href="https://securepubads.g.doubleclick.net" crossorigin>
+<link rel="preconnect" href="https://adservice.google.com" crossorigin>
+<link rel="preconnect" href="//tpc.googlesyndication.com" crossorigin>
+<link rel="preconnect" href="//pagead2.googlesyndication.com" crossorigin>
+<link rel="preconnect" href="//adops.adysis.com" crossorigin>
+<link rel="preconnect" href="//a.teads.tv" crossorigin>
+<link rel="preconnect" href="//h.cedatoplayer.com" crossorigin>
+<link rel="preconnect" href="//g2.gumgum.com" crossorigin>
+<link rel="preconnect" href="//player-cdn.beachfrontmedia.com" crossorigin>
+<link rel="preconnect" href="//adserver-eu.adtech.advertising.com" crossorigin>
+<link rel="preconnect" href="//prebid.adnxs.com" crossorigin>
+<link rel="preconnect" href="//api.assertcom.de" crossorigin>
+<link rel="preconnect" href="//dmx.districtm.io" crossorigin>
+<link rel="preconnect" href="//cdn.districtm.io" crossorigin>
+<link rel="preconnect" href="//cdn.jsdelivr.net" crossorigin>
+<link rel="preconnect" href="//reachms.bfmio.com" crossorigin>
+<link rel="preconnect" href="//useast.bfmio.com" crossorigin>
+<link rel="preconnect" href="//ssc.33across.com" crossorigin>
+<link rel="preconnect" href="//hb.undertone.com" crossorigin>
+<link rel="preconnect" href="//bidder.komoona.com" crossorigin>
+<link rel="preconnect" href="//p.ato.mx" crossorigin>
+<link rel="preconnect" href="//s0.2mdn.net" crossorigin>
+<link rel="preconnect" href="//quantcast.mgr.consensu.org" crossorigin>
+<link rel="preconnect" href="//ic.tynt.com" crossorigin>
+<link rel="preconnect" href="//track-east.mobileadtrading.com" crossorigin>
+<link rel="preconnect" href="//s.komoona.com" crossorigin>
+<link rel="preconnect" href="//cms.quantserve.com" crossorigin>
+<link rel="preconnect" href="//rtb.viewdeos.com" crossorigin>
+<link rel="preconnect" href="//ad.crwdcntrl.net" crossorigin>
+<link rel="preconnect" href="//adops.adysis.com" crossorigin>
+<link rel="preconnect" href="//ssp-nj.webtradehub.com" crossorigin>
+<link rel="preconnect" href="//cdn.bidfilter.com" crossorigin>
+
+</body></html>
