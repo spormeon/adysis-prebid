@@ -178,7 +178,7 @@ console.log("user bid cache:", USERBIDCACHE );
       code: 'inreedvid4Slot',
       mediaTypes: {
        banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50],[1,1]] },
-       native: { image: { required: true, sizes: [150, 50] }, title: { required: true, len: 80 }, sponsoredBy: { required: true }, clickUrl: { required: true }, body: { required: true } },
+       native: { image: { required: true, sizes: [150, 50], sendId: true }, title: { required: true, len: 80 }, sponsoredBy: { required: true }, clickUrl: { required: true, sendId: true }, body: { required: true, sendId: true } },
        video:  { context: 'outstream', playerSize: [[550, 310]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'], playbackmethod: [2], minduration: 0,  maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10], linearity: 1, api: [1,2,3,4,5,6] }
       },
       renderer: {
