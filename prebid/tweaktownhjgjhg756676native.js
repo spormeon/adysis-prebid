@@ -178,30 +178,32 @@ console.log("user bid cache:", USERBIDCACHE );
       code: 'inreedvid4Slot',
       mediaTypes: {
        
-       native: {
-           image: {
-				required: true,
-				sendId: true
-			},
-			icon: {
-				required: true,
-				sizes: [30, 30]
-			},
-			cta: {
-               required: true
-           },
-			title: {
-               required: true,
-               len: 20
-           },
-			clickUrl: {
-               required: true,
-				sendId: true
-           },
-			sponsoredBy: {
-               required: true
-           }
-		},
+    	  native: {
+              image: {
+                  required: true,
+                  sizes: [150, 50]
+              },
+              title: {
+                  required: true,
+                  len: 80
+              },
+              sponsoredBy: {
+                  required: true
+              },
+              clickUrl: {
+                  required: true
+              },
+              privacyLink: {
+                  required: false
+              },
+              body: {
+                  required: true
+              },
+              icon: {
+                  required: true,
+                  sizes: [50, 50]
+              }
+          }
       },
       bids: [
           { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
@@ -256,7 +258,32 @@ console.log("user bid cache:", USERBIDCACHE );
      code: 'inreedvid5Slot',
      mediaTypes: {
       
-      native: { type: 'image' },
+    	 native: {
+             image: {
+                 required: true,
+                 sizes: [150, 50]
+             },
+             title: {
+                 required: true,
+                 len: 80
+             },
+             sponsoredBy: {
+                 required: true
+             },
+             clickUrl: {
+                 required: true
+             },
+             privacyLink: {
+                 required: false
+             },
+             body: {
+                 required: true
+             },
+             icon: {
+                 required: true,
+                 sizes: [50, 50]
+             }
+         }
      },
      bids: [
          { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
@@ -308,7 +335,32 @@ console.log("user bid cache:", USERBIDCACHE );
       code: 'inreedvid6Slot',
       mediaTypes: {
        banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50]] },
-       native: { type: 'image' },
+       native: {
+           image: {
+               required: true,
+               sizes: [150, 50]
+           },
+           title: {
+               required: true,
+               len: 80
+           },
+           sponsoredBy: {
+               required: true
+           },
+           clickUrl: {
+               required: true
+           },
+           privacyLink: {
+               required: false
+           },
+           body: {
+               required: true
+           },
+           icon: {
+               required: true,
+               sizes: [50, 50]
+           }
+       }
       },
       bids: [
           { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
