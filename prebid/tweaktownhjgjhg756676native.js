@@ -149,7 +149,7 @@ var usebidcacheMap = {
 17 : false,
 18 : true,
 19 : false,
-20 : false,
+20 : true,
 21 : false,
 22 : true,
 23 : false
@@ -182,7 +182,7 @@ console.log("user bid cache:", USERBIDCACHE );
               min_width: 300,        /* Optional */
               ratio_width: 2,        /* Required */
               ratio_height: 1,       /* Required */
-       }] }, title: { required: true, len: 80 }, sponsoredBy: { required: true }, clickUrl: { required: true, sendId: true } },
+       }] , sendId: true}, title: { required: true, len: 75 }, sponsoredBy: { required: true }, clickUrl: { required: true, sendId: true } },
       },
       bids: [
           { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
