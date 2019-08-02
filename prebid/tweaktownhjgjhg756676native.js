@@ -182,7 +182,7 @@ console.log("user bid cache:", USERBIDCACHE );
               min_width: 350,        /* Optional */
               ratio_width: 2,        /* Required */
               ratio_height: 3,       /* Required */
-       }], sendId: true }, title: { required: true, len: 80 }, sponsoredBy: { required: true }, clickUrl: { required: true }, body: { required: true, len: 150 } },
+       }] }, title: { required: true, len: 80 }, sponsoredBy: { required: true }, clickUrl: { required: true }, body: { required: true, len: 150 } },
       },
       bids: [
           { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
