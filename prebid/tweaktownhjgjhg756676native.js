@@ -149,7 +149,7 @@ var usebidcacheMap = {
 17 : false,
 18 : true,
 19 : false,
-20 : true,
+20 : false,
 21 : false,
 22 : true,
 23 : false
