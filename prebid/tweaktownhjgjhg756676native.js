@@ -179,7 +179,7 @@ console.log("user bid cache:", USERBIDCACHE );
       mediaTypes: {
        
     	  native: { image: { required: true, aspect_ratios: [{
-              min_width: 500,        /* Optional */
+              min_width: 300,        /* Optional */
               ratio_width: 2,        /* Required */
               ratio_height: 1,       /* Required */
        }] }, title: { required: true, len: 80 }, sponsoredBy: { required: true }, clickUrl: { required: true } },
