@@ -288,33 +288,8 @@ console.log("user bid cache:", USERBIDCACHE );
       {
       code: 'inreedvid6Slot',
       mediaTypes: {
-       banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50]] },
-       native: {
-           image: {
-               required: true,
-               sizes: [150, 50]
-           },
-           title: {
-               required: true,
-               len: 80
-           },
-           sponsoredBy: {
-               required: true
-           },
-           clickUrl: {
-               required: true
-           },
-           privacyLink: {
-               required: false
-           },
-           body: {
-               required: true
-           },
-           icon: {
-               required: true,
-               sizes: [50, 50]
-           }
-       }
+    	  native: { type: 'image' },
+    	  banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50]] }
       },
       bids: [
           { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
