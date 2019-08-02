@@ -180,9 +180,10 @@ console.log("user bid cache:", USERBIDCACHE );
        
     	  native: { image: { required: true, sendId: true, aspect_ratios: [{
               min_width: 300,        /* Optional */
+              min_heigh: 300,        /* Optional */
               ratio_width: 2,        /* Required */
               ratio_height: 1,       /* Required */
-       }] }, title: { required: true, len: 75 }, sponsoredBy: { required: true }, clickUrl: { required: true, sendId: true } },
+       }] }, title: { required: true, len: 75 }, sponsoredBy: { required: true }, clickUrl: { required: true, sendId: true } }
       },
       bids: [
           { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
@@ -241,7 +242,7 @@ console.log("user bid cache:", USERBIDCACHE );
              min_width: 300,        /* Optional */
              ratio_width: 2,        /* Required */
              ratio_height: 1,       /* Required */
-      }] }, title: { required: true, len: 80 }, sponsoredBy: { required: true }, clickUrl: { required: true, sendId: true } },
+      }] }, title: { required: true, len: 80 }, sponsoredBy: { required: true }, clickUrl: { required: true, sendId: true } }
      },
      bids: [
          { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
@@ -486,7 +487,7 @@ console.log("user bid cache:", USERBIDCACHE );
       s2sConfig: {
         accountId: 'e31f627f-53a3-4288-9979-482d3c6ffc76',
         enabled: true,
-        bidders: ['sovrn','somoaudience','rhythmone','pulsepoint','gamoshi','unruly'],
+        bidders: ['sovrn','somoaudience','rhythmone','pulsepoint','unruly'],
         timeout: PREBID_TIMEOUT/2,
         adapter: 'prebidServer',
         endpoint: 'https://prebid.adnxs.com/pbs/v1/openrtb2/auction',
