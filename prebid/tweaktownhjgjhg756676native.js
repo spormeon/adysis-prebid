@@ -178,11 +178,11 @@ console.log("user bid cache:", USERBIDCACHE );
       code: 'inreedvid4Slot',
       mediaTypes: {
        
-    	  native: { image: { required: true, aspect_ratios: [{
+    	  native: { image: { required: true, sendId: true, aspect_ratios: [{
               min_width: 300,        /* Optional */
               ratio_width: 2,        /* Required */
               ratio_height: 1,       /* Required */
-       }] , sendId: true}, title: { required: true, len: 75 }, sponsoredBy: { required: true }, clickUrl: { required: true, sendId: true } },
+       }] }, title: { required: true, len: 75 }, sponsoredBy: { required: true }, clickUrl: { required: true, sendId: true } },
       },
       bids: [
           { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
