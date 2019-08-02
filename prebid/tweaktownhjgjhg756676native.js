@@ -566,7 +566,7 @@ googletag.cmd.push(function () {
     googletag.pubads().enableSingleRequest();
     googletag.pubads().collapseEmptyDivs(true);
     googletag.pubads().setCentering(true);
-    googletag.pubads().setSafeFrameConfig({allowPushExpansion: true, sandbox: true});
+    //googletag.pubads().setSafeFrameConfig({allowPushExpansion: true, sandbox: true});
  // googletag.pubads().disableInitialLoad();
     googletag.pubads().enableLazyLoad({
       fetchMarginPercent: 12,  // Fetch slots within 30 viewports.
