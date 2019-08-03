@@ -179,7 +179,7 @@ console.log("user bid cache:", USERBIDCACHE );
       mediaTypes: {   
     	  native: {
               type: 'image'
-          }
+          },
         },
       bids: [
           { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
@@ -233,7 +233,7 @@ console.log("user bid cache:", USERBIDCACHE );
      {
      code: 'inreedvid5Slot',
      mediaTypes: {   
-      	  native: { image: { required: true, sendId: true, sizes: [300, 50] }, title: { required: true, len: 55 }, sponsoredBy: { required: true }, clickUrl: { required: true, sendId: true } }
+      	  native: { image: { required: true, sendId: true, sizes: [300, 50] }, title: { required: true, len: 55 }, sponsoredBy: { required: true }, clickUrl: { required: true, sendId: true } },
         },
      bids: [
          { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
@@ -284,7 +284,7 @@ console.log("user bid cache:", USERBIDCACHE );
       {
       code: 'inreedvid6Slot',
       mediaTypes: {   
-      	  native: { image: { required: true, sendId: true, sizes: [300, 50] }, title: { required: true, len: 55 }, sponsoredBy: { required: true }, clickUrl: { required: true, sendId: true } }
+      	  native: { image: { required: true, sendId: true, sizes: [300, 50] }, title: { required: true, len: 55 }, sponsoredBy: { required: true }, clickUrl: { required: true, sendId: true } },
         },
       bids: [
           { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
@@ -335,7 +335,7 @@ console.log("user bid cache:", USERBIDCACHE );
        {
        code: 'inreedvid7Slot',
        mediaTypes: {
-        banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50]] } 
+        banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50]] }, 
        },
        bids: [
            { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
