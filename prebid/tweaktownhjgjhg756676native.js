@@ -446,7 +446,7 @@ console.log("user bid cache:", USERBIDCACHE );
       atomx:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 1.00; } },
       smartyads:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 1.00; } },
       oftmedia:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 0.85; } },
-      adysis: { bidCpmAdjustment : function(bidCpm){ return "+c.cpm+" * 2000;} },
+      adysis: { bidCpmAdjustment : function(bidCpm){ return "+c.cpm+" * 2;} },
     };
     adyjs.setConfig({
     	rubicon: {singleRequest: true},
