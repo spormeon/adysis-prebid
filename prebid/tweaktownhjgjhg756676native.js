@@ -177,7 +177,7 @@ console.log("user bid cache:", USERBIDCACHE );
      {
       code: 'inreedvid4Slot',
       mediaTypes: {   
-       	  native: { image: { required: true, sendId: true, aspect_ratios: [{ min_width: 300, min_height: 200, ratio_width: 3, ratio_height: 2, }] }, title: { required: true, len: 55 }, sponsoredBy: { required: true }, clickUrl: { required: true, sendId: true } }
+       	  native: { image: { required: true, sendId: true, sizes: [[150, 50], [300, 250], [300, 50], [360, 360]] }, title: { required: true, len: 55 }, sponsoredBy: { required: true }, clickUrl: { required: true, sendId: true } }
          },
       bids: [
           { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
@@ -231,7 +231,7 @@ console.log("user bid cache:", USERBIDCACHE );
      {
      code: 'inreedvid5Slot',
      mediaTypes: {   
-      	  native: { image: { required: true, sendId: true, aspect_ratios: [{ min_width: 300, min_height: 200, ratio_width: 3, ratio_height: 2, }] }, title: { required: true, len: 55 }, sponsoredBy: { required: true }, clickUrl: { required: true, sendId: true } }
+      	  native: { image: { required: true, sendId: true, sizes: [[150, 50], [300, 250], [300, 50], [360, 360]] }, title: { required: true, len: 55 }, sponsoredBy: { required: true }, clickUrl: { required: true, sendId: true } }
         },
      bids: [
          { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
@@ -282,7 +282,7 @@ console.log("user bid cache:", USERBIDCACHE );
       {
       code: 'inreedvid6Slot',
       mediaTypes: {   
-       	  native: { image: { required: true, sendId: true, aspect_ratios: [{ min_width: 300, min_height: 200, ratio_width: 3, ratio_height: 2, }] }, title: { required: true, len: 55 }, sponsoredBy: { required: true }, clickUrl: { required: true, sendId: true } }
+       	  native: { image: { required: true, sendId: true, sizes: [[150, 50], [300, 250], [300, 50], [360, 360]] }, title: { required: true, len: 55 }, sponsoredBy: { required: true }, clickUrl: { required: true, sendId: true } }
          },
       bids: [
           { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
