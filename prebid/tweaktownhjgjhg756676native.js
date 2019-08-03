@@ -281,9 +281,9 @@ console.log("user bid cache:", USERBIDCACHE );
    //new ad unit block
       {
       code: 'inreedvid6Slot',
-      mediaTypes: {
-    	  native: { type: 'image' }
-      },
+      mediaTypes: {   
+       	  native: { image: { required: true, sendId: true, aspect_ratios: [{ min_width: 300, ratio_width: 3, ratio_height: 2, }] }, title: { required: true, len: 55 }, sponsoredBy: { required: true }, clickUrl: { required: true, sendId: true } }
+         },
       bids: [
           { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
           { bidder: 'appnexus',   params: { placementId: '11962910', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_on'] } } }, /* one placementId for all sizes */
