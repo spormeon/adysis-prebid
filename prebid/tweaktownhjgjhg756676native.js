@@ -177,9 +177,7 @@ console.log("user bid cache:", USERBIDCACHE );
      {
       code: 'inreedvid4Slot',
       mediaTypes: {   
-    	  native: {
-              type: 'image'
-          },
+    	  native: { image: { required: true, sendId: true, sizes: [300, 50] }, title: { required: true, len: 55 }, sponsoredBy: { required: true }, clickUrl: { required: true, sendId: true } },
         },
       bids: [
           { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
