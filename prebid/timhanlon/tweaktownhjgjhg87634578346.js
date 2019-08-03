@@ -178,7 +178,7 @@ console.log("user bid cache:", USERBIDCACHE );
       code: 'inreedvid4Slot',
       mediaTypes: {
        banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50],[1,1]] },
-       native: { image: { required: true, sizes: [150, 50], sendId: true }, title: { required: true, len: 80 }, sponsoredBy: { required: true }, clickUrl: { required: true, sendId: true }, body: { required: true, sendId: true } },
+       native: { image: { required: true, sendId: true, sizes: [300, 50] }, title: { required: true, len: 55 }, sponsoredBy: { required: true }, clickUrl: { required: true, sendId: true } },
        video:  { context: 'outstream', playerSize: [[550, 310]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'], playbackmethod: [2], minduration: 0,  maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10], linearity: 1, api: [1,2,3,4,5,6] }
       },
       renderer: {
@@ -241,7 +241,7 @@ console.log("user bid cache:", USERBIDCACHE );
      code: 'inreedvid5Slot',
      mediaTypes: {
       banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50]] },
-      native: { image: { required: true, sizes: [150, 50] }, title: { required: true, len: 80 }, sponsoredBy: { required: true }, clickUrl: { required: true }, privacyLink: { required: false }, body: { required: true }, icon: { required: true, sizes: [50, 50] } },
+      native: { image: { required: true, sendId: true, sizes: [300, 50] }, title: { required: true, len: 55 }, sponsoredBy: { required: true }, clickUrl: { required: true, sendId: true } },
       video:  { context: 'outstream', playerSize: [[550, 310]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', "video/webm"], playbackmethod: [2], minduration: 0,  maxduration: 30, protocols: [2,3], linearity: 1, api: [2] }
      },
      renderer: {
@@ -302,7 +302,7 @@ console.log("user bid cache:", USERBIDCACHE );
       code: 'inreedvid6Slot',
       mediaTypes: {
        banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50]] },
-       native: { image: { required: true, sizes: [150, 50] }, title: { required: true, len: 80 }, sponsoredBy: { required: true }, clickUrl: { required: true }, privacyLink: { required: false }, body: { required: true }, icon: { required: true, sizes: [50, 50] } },
+       native: { image: { required: true, sendId: true, sizes: [300, 50] }, title: { required: true, len: 55 }, sponsoredBy: { required: true }, clickUrl: { required: true, sendId: true } },
        video:  { context: 'outstream', playerSize: [[550, 310]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', "video/webm"], playbackmethod: [2], minduration: 0,  maxduration: 30, protocols: [2,3], linearity: 1, api: [2] }
       },
       renderer: {
@@ -363,7 +363,7 @@ console.log("user bid cache:", USERBIDCACHE );
        code: 'inreedvid7Slot',
        mediaTypes: {
         banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50]] },
-        native: { image: { required: true, sizes: [150, 50] }, title: { required: true, len: 80 }, sponsoredBy: { required: true }, clickUrl: { required: true }, privacyLink: { required: false }, body: { required: true }, icon: { required: true, sizes: [50, 50] } },
+        native: { image: { required: true, sendId: true, sizes: [300, 50] }, title: { required: true, len: 55 }, sponsoredBy: { required: true }, clickUrl: { required: true, sendId: true } },
         video:  { context: 'outstream', playerSize: [[550, 310]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', "video/webm"], playbackmethod: [2], minduration: 0,  maxduration: 30, protocols: [2,3], linearity: 1, api: [2] }
        },
        renderer: {
