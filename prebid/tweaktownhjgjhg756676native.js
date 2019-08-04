@@ -230,8 +230,8 @@ console.log("user bid cache:", USERBIDCACHE );
   //new ad unit block
      {
      code: 'inreedvid5Slot',
-     mediaTypes: {   
-      	  native: { image: { required: true, sendId: true, sizes: [500, 200] }, title: { required: true, len: 50 }, sponsoredBy: { required: true }, clickUrl: { required: true, sendId: true } },
+     mediaTypes: {
+         banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50]] }, 
         },
      bids: [
          { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
@@ -281,9 +281,9 @@ console.log("user bid cache:", USERBIDCACHE );
    //new ad unit block
       {
       code: 'inreedvid6Slot',
-      mediaTypes: {   
-      	  native: { image: { required: true, sendId: true, sizes: [500, 200] }, title: { required: true, len: 50 }, sponsoredBy: { required: true }, clickUrl: { required: true, sendId: true } },
-        },
+      mediaTypes: {
+          banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50]] }, 
+         },
       bids: [
           { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
           { bidder: 'appnexus',   params: { placementId: '11962910', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_on'] } } }, /* one placementId for all sizes */
