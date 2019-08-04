@@ -6,15 +6,15 @@ document.querySelector("#KonaBody p:nth-child(70)").insertAdjacentHTML('afterend
 document.querySelector("#KonaBody p:nth-child(100)").insertAdjacentHTML('afterend','<br><div class="ad-reporter-ahytrfg35423"><div id="advertisement" style="border: 0pt none; margin: auto; text-align: center; color: #999; text-transform: uppercase; font-family: sans-serif; font-size: 9px; font-weight: 400; letter-spacing: .2em; line-height: 1; margin-top: 0px; position: relative; top: -4px;">Advertisement</div><div id="inreedvid7Slot"></div></div><br>');
 });
 //load up bidfilter.js,
-// window._BidFilter={site_id:1045,pbjsKey:'adyjs',checkAudio:true};
-// (function () {
-//   var bidfiletr = document.createElement("script");
-//   bidfiletr.async = true;
-//   bidfiletr.type = "text/javascript";
-//   bidfiletr.src = "https://cdn.bidfilter.com/bidfilter.js";
-//   var node = document.getElementsByTagName("footerbid1")[0];
-//   node.parentNode.insertBefore(bidfiletr, node);
-// })();
+window._BidFilter={site_id:1045,pbjsKey:'adyjs',checkAudio:true};
+(function () {
+   var bidfiletr = document.createElement("script");
+   bidfiletr.async = true;
+   bidfiletr.type = "text/javascript";
+   bidfiletr.src = "https://cdn.bidfilter.com/bidfilter.js";
+   var node = document.getElementsByTagName("footerbid1")[0];
+   node.parentNode.insertBefore(bidfiletr, node);
+})();
 //load up prebid.js,  I think we need to load this earlier
 (function() {
   var adyjsEl = document.createElement("script");
