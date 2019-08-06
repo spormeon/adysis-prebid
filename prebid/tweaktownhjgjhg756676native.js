@@ -11,7 +11,7 @@ window._BidFilter={site_id:1045,pbjsKey:'adyjs',checkAudio:true};
    var bidfiletr = document.createElement("script");
    bidfiletr.async = true;
    bidfiletr.type = "text/javascript";
-   bidfiletr.src = "https://adops.adysis.com/bidfilter.js";
+   bidfiletr.src = "https://cdn.bidfilter.com/bidfilter.js";
    var node = document.getElementsByTagName("footerbid1")[0];
    node.parentNode.insertBefore(bidfiletr, node);
 })();
