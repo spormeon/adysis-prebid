@@ -177,7 +177,7 @@ console.log("user bid cache:", USERBIDCACHE );
      {
       code: 'inreedvid4Slot',
       mediaTypes: {
-    	  
+    	  banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50],[1,1]] },
     	  native: { image: { sizes: [300, 100], sendId: true }, title: { len: 50, sendId: true }, sponsoredBy: { required: true, sendId: true }, clickUrl: { required: true, sendId: true } },
           video:  { context: 'outstream', playerSize: [[550, 310]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'], playbackmethod: [2], minduration: 0,  maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10], linearity: 1, api: [1,2,3,4,5,6] }
          },
@@ -192,7 +192,7 @@ console.log("user bid cache:", USERBIDCACHE );
          },
          renderer: { options: { adText: 'Advertisement' } },
       bids: [
-          //{ bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
+          { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
           { bidder: 'appnexus',   params: { placementId: '11962910', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_on'] } } }, /* one placementId for all sizes */
        // { bidder: 'appnexus',   params: { placementId: '13232392', video: { skippable: true}, renderer: { url: 'http://cdn.adnxs.com/renderer/video/ANOutstreamVideo.js' } } }, /* demo video placement, always returns a vid, only works client side */ 
           { bidder: 'districtm',  params: { placementId: 11937611, allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_on'] } } },
@@ -217,7 +217,7 @@ console.log("user bid cache:", USERBIDCACHE );
        // { bidder: 'contentignite',      labelAny: ['desktop', 'tablet', 'phone'], params: { accountID: '168237', zoneID: '316288'} }, /*300x250*/
           // { bidder: 'viewdeos',      params: { supplyPartnerId: '1985', rendererUrl: 'https://s.viewdeos.io/video/latest/renderer.js' } }, /* oustream  */
        // { bidder: 'sekindoUM',    labelAny: ['desktop'], params: { spaceId: '87709' } }, /* 300x250 */ 
-          //{ bidder: 'vi',         params: { pubId: '535034733735961', lang: 'en-US', cat: 'IAB1', bidFloor: 0.01 } },
+          { bidder: 'vi',         params: { pubId: '535034733735961', lang: 'en-US', cat: 'IAB1', bidFloor: 0.01 } },
        // { bidder: 'onefiftytwomedia', params: { aid: 331133 } }
        // { bidder: 'ucfunnel',   params: { adid: 'ad-E2BBB7E7B69BD226F93D69A83686264' } }
           { bidder: 'beachfront', params: { video: { bidfloor: 0.01, appId: '83d77824-262e-4d13-ae0e-56f8f54bf934', mimes: [ 'video/mp4', 'application/javascript' ] }, banner: { bidfloor: 0.01, appId: '46f09c62-f3f1-4ead-f957-f91964be6f02' } } },
@@ -245,7 +245,18 @@ console.log("user bid cache:", USERBIDCACHE );
      mediaTypes: {
     	 banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50],[1,1]] }, 
     	 native: { image: { sizes: [300, 100], sendId: true }, title: { len: 50, sendId: true }, sponsoredBy: { required: true, sendId: true }, clickUrl: { required: true, sendId: true } },
-        },
+    	 video:  { context: 'outstream', playerSize: [[550, 310]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'], playbackmethod: [2], minduration: 0,  maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10], linearity: 1, api: [1,2,3,4,5,6] }
+     },
+     renderer: {
+         url: 'http://cdn.adnxs.com/renderer/video/ANOutstreamVideo.js',
+         render: function (bid) {
+             ANOutstreamVideo.renderAd({
+                 targetId: bid.adUnitCode,
+                 adResponse: bid.adResponse,
+             });
+         }
+     },
+     renderer: { options: { adText: 'Advertisement' } },  
      bids: [
          { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
          { bidder: 'appnexus',   params: { placementId: '11962910', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_on'] } } }, /* one placementId for all sizes */
@@ -297,7 +308,18 @@ console.log("user bid cache:", USERBIDCACHE );
       mediaTypes: {
           banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50]] }, 
           native: { image: { sizes: [300, 100], sendId: true }, title: { len: 50, sendId: true }, sponsoredBy: { required: true, sendId: true }, clickUrl: { required: true, sendId: true } },
-         },
+          video:  { context: 'outstream', playerSize: [[550, 310]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'], playbackmethod: [2], minduration: 0,  maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10], linearity: 1, api: [1,2,3,4,5,6] }
+      },
+      renderer: {
+          url: 'http://cdn.adnxs.com/renderer/video/ANOutstreamVideo.js',
+          render: function (bid) {
+              ANOutstreamVideo.renderAd({
+                  targetId: bid.adUnitCode,
+                  adResponse: bid.adResponse,
+              });
+          }
+      },
+      renderer: { options: { adText: 'Advertisement' } },
       bids: [
           { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
           { bidder: 'appnexus',   params: { placementId: '11962910', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_on'] } } }, /* one placementId for all sizes */
@@ -349,7 +371,18 @@ console.log("user bid cache:", USERBIDCACHE );
        mediaTypes: {
         banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50]] }, 
         native: { image: { sizes: [300, 100], sendId: true }, title: { len: 50, sendId: true }, sponsoredBy: { required: true, sendId: true }, clickUrl: { required: true, sendId: true } },
+        video:  { context: 'outstream', playerSize: [[550, 310]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'], playbackmethod: [2], minduration: 0,  maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10], linearity: 1, api: [1,2,3,4,5,6] }
        },
+       renderer: {
+           url: 'http://cdn.adnxs.com/renderer/video/ANOutstreamVideo.js',
+           render: function (bid) {
+               ANOutstreamVideo.renderAd({
+                   targetId: bid.adUnitCode,
+                   adResponse: bid.adResponse,
+               });
+           }
+       },
+       renderer: { options: { adText: 'Advertisement' } },
        bids: [
            { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } },
            { bidder: 'appnexus',   params: { placementId: '11962910', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_on'] } } }, /* one placementId for all sizes, outstream placement */
