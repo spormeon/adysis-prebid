@@ -426,10 +426,10 @@ console.log("user bid cache:", USERBIDCACHE );
            { bidder: 'criteo',   params: { zoneId: "1079305"} },
            { bidder: 'triplelift',   params: { inventoryCode: "freestar_desktop_RON_300x250"} },
            { bidder: 'sharethrough',   params: { pkey: "DSthphoQqH66AkQXPDoXn74b", iframe: true} },
-           { bidder: 'connectad',   params: { networkId: "10047", siteId: "1029474"} },
-           { bidder: 'colossusssp',  params: { placementId: '35324' } }, /* native */
-           { bidder: 'colossusssp',  params: { placementId: '35323' } }, /* outstream */
-           { bidder: 'colossusssp',  params: { placementId: '6544' } } /* 300x250 */
+           { bidder: 'connectad',   params: { networkId: "10047", siteId: "1029474"} }
+           //{ bidder: 'colossusssp',  params: { placementId: '35324' } }, /* native */
+           //{ bidder: 'colossusssp',  params: { placementId: '35323' } }, /* outstream */
+           //{ bidder: 'colossusssp',  params: { placementId: '6544' } } /* 300x250 */
        ] //./bids
     }];
 // ======== DO NOT EDIT BELOW THIS LINE =========== //
