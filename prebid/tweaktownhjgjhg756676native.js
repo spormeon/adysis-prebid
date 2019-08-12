@@ -137,7 +137,7 @@ var usebidcacheMap = {
 5 : false,
 6 : true,
 7 : false,
-8 : false,
+8 : true,
 9 : false,
 10 : true,
 11 : false,
@@ -530,7 +530,7 @@ adserverTargeting: [
       // enableOverride: true // publisher will call `pbjs.triggerUserSyncs()'
        },
        debug: true,
-       useBidCache: false,
+       useBidCache: USERBIDCACHE,
        enableSendAllBids: false, // Default will be `true` as of 1.0
        bidderSequence: 'random', // Default is random
        publisherDomain: 'golfwrx.com',
@@ -637,7 +637,7 @@ definitons: {
     },
     sizeMappings: {
      mappinginreedvidslot: [
-     [[1024, 768],[[1, 1],[550, 310],[728,90],[300,250],[250,250],[468,60],[320,50], 'fluid']],
+     [[1024, 768],[[1, 1],[550, 310],[728,90],[300,250],[250,250],[468,60],[320,50],'fluid']],
      [[768, 500],[[728,90],[300,250],[250,250],[468,60],[320,50],[1,1],[550,310]]],
      [[1, 1],[[300,250],[250,250],[320,50],[1,1]]],
     ]
