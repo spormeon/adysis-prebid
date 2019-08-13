@@ -250,7 +250,7 @@ console.log("user bid cache:", USERBIDCACHE );
   mediaTypes: {
 	  
 	  native: { image: { sizes: [300, 100], sendId: true }, title: { len: 50, sendId: true }, sponsoredBy: { required: true, sendId: true }, clickUrl: { required: true, sendId: true } }
-  }
+  },
       
   bids: [
       //{ bidder: 'teads',      labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '75853', pageId: '87372' } },
