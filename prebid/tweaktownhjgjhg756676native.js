@@ -56,7 +56,7 @@ var timeoutMap = {
 17 : 2000,
 18 : 2400,
 19 : 3000,
-20 : 4400,
+20 : 3400,
 21 : 4400,
 22 : 1400,
 23 : 1400
@@ -573,7 +573,7 @@ conversant:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ r
 atomx:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 1.00; } },
 smartyads:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 1.00; } },
 oftmedia:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 0.85; } },
-adysis: { bidCpmAdjustment : function(bidCpm){ return "+c.cpm+" * 2000;} },
+adysis: { bidCpmAdjustment : function(bidCpm){ return "+c.cpm+" * 2;} },
 };
     adyjs.setConfig({
     	rubicon: {singleRequest: true},
