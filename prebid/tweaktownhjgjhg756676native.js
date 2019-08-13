@@ -6,7 +6,7 @@ document.querySelector("#mvp-author-box-text p:nth-child(1)").insertAdjacentHTML
 document.querySelector("#mvp-related-posts").insertAdjacentHTML('afterend','<br><br><div class="ad-reporter-ahytrfg35423"><div id="advertisement" style="border: 0pt none; margin: auto; text-align: center; color: #999; text-transform: uppercase; font-family: sans-serif; font-size: 9px; font-weight: 400; letter-spacing: .2em; line-height: 1; margin-top: 0px; position: relative; top: -4px;">Advertisement</div><div id="inreedvid7Slot"></div></div><br>');
 });
 //load up bidfilter.js,
-window._BidFilter={site_id:1045,pbjsKey:'adyjs',checkAudio:true};
+window._BidFilter={site_id:1045,pbjsKey:'adyjs',checkAudio:false};
 (function () {
    var bidfiletr = document.createElement("script");
    bidfiletr.async = true;
