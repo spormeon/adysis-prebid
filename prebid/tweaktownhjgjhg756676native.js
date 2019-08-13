@@ -235,10 +235,10 @@ console.log("user bid cache:", USERBIDCACHE );
           { bidder: 'criteo',   labelAny: ['desktop', 'tablet', 'phone'], params: { zoneId: "1079305"} },
           { bidder: 'triplelift',   labelAny: ['desktop', 'tablet', 'phone'], params: { inventoryCode: "freestar_desktop_RON_300x250"} },
           { bidder: 'sharethrough',   labelAny: ['desktop', 'tablet', 'phone'], params: { pkey: "DSthphoQqH66AkQXPDoXn74b", iframe: true} },
-          { bidder: 'connectad',   labelAny: ['desktop', 'tablet', 'phone'], params: { networkId: "10047", siteId: "1029474"} }
-        //{ bidder: 'colossusssp',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '35324' } }, /* native */
-          //{ bidder: 'colossusssp',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '35323' } }, /* outstream */
-          //{ bidder: 'colossusssp',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '6544' } } /* 300x250 */
+          { bidder: 'connectad',   labelAny: ['desktop', 'tablet', 'phone'], params: { networkId: "10047", siteId: "1029474"} },
+          { bidder: 'colossusssp',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '35324' } }, /* native */
+          { bidder: 'colossusssp',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '35323' } }, /* outstream */
+          { bidder: 'colossusssp',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '6544' } } /* 300x250 */
      ] //./bids
  },
   //new ad unit block
