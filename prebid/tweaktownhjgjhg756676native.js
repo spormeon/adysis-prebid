@@ -250,10 +250,10 @@ console.log("user bid cache:", USERBIDCACHE );
   mediaTypes: {
 	  
 	  native: { image: { sizes: [300, 100], sendId: true }, title: { len: 50, sendId: true }, sponsoredBy: { required: true, sendId: true }, clickUrl: { required: true, sendId: true } }
-  },
+  }
       
   bids: [
-      { bidder: 'teads',      labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '75853', pageId: '87372' } },
+      //{ bidder: 'teads',      labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '75853', pageId: '87372' } },
       { bidder: 'appnexus',   labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '11962910', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_on'] } } }, /* one placementId for all sizes */
    // { bidder: 'appnexus',   labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '13232392', video: { skippable: true}, renderer: { url: 'http://cdn.adnxs.com/renderer/video/ANOutstreamVideo.js' } } }, /* demo video placement, always returns a vid, only works client side */ 
       { bidder: 'districtm',   labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: 11937611, allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_on'] } } },
@@ -278,7 +278,7 @@ console.log("user bid cache:", USERBIDCACHE );
    // { bidder: 'contentignite',      labelAny: ['desktop', 'tablet', 'phone'], params: { accountID: '168237', zoneID: '316288'} }, /*300x250*/
       // { bidder: 'viewdeos',       labelAny: ['desktop', 'tablet', 'phone'], params: { supplyPartnerId: '1985', rendererUrl: 'https://s.viewdeos.io/video/latest/renderer.js' } }, /* oustream  */
    // { bidder: 'sekindoUM',    labelAny: ['desktop'], params: { spaceId: '87709' } }, /* 300x250 */ 
-      { bidder: 'vi',         labelAny: ['desktop', 'tablet', 'phone'], params: { pubId: '535034733735961', lang: 'en-US', cat: 'IAB1', bidFloor: 0.01 } },
+      //{ bidder: 'vi',         labelAny: ['desktop', 'tablet', 'phone'], params: { pubId: '535034733735961', lang: 'en-US', cat: 'IAB1', bidFloor: 0.01 } },
    // { bidder: 'ucfunnel',   params: { adid: 'ad-E2BBB7E7B69BD226F93D69A83686264' } }
       { bidder: 'beachfront', labelAny: ['desktop', 'tablet', 'phone'], params: { video: { bidfloor: 0.01, appId: '83d77824-262e-4d13-ae0e-56f8f54bf934', mimes: [ 'video/mp4', 'application/javascript' ] }, banner: { bidfloor: 0.01, appId: '46f09c62-f3f1-4ead-f957-f91964be6f02' } } },
       // { bidder: 'beachfront',  labelAny: ['desktop', 'tablet', 'phone'],params: { bidfloor: 0.01, appId: '11bc5dd5-7421-4dd8-c926-40fa653bec76' } }, /* video for s2s bidding */
