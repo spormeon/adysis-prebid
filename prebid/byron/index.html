@@ -16,3 +16,5 @@ so in effect, im trying to combine all this lot into one script file, so as to g
 one other thing i'm looking to do is instead of having 4 blocks of bidders in the script, i'm looking to have 1 block of bidders and make them bid on the 4 slots, just so i have to anly maintain 1 block of bidders 9easier to make chnages, add bidders etc), not sure if this can be done/ how to do it.
 <br><br>
 also generally speed up and tidy up the script.  i'd also like to split the script out, so as its easier to chnage certain parts from some config files,  i've started to look at https://requirejs.org/ , so as to make it into modules ( bidders, bidder setting, timeouts, floor prices, stats collect, bidfilter script etc)
+<br><br>
+One quirk which I have done is change the global from pbjs to adyjs,  this apparently stops conflicts if you have 2 prebids on the same page, it seems to work, as i've tested it with "another prebid warapper" on another test page
