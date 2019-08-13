@@ -97,7 +97,7 @@ console.log("floor price:", FLOOR_PRICE );
 // site config
 var site_config = {
     refresh_rate: PREBID_TIMEOUT*30,  //denoted in milliseonds 40secs=40000...
-    FAILSAFE_TIMEOUT: PREBID_TIMEOUT*1.5   //denoted in milliseonds 5secs=5000...
+    FAILSAFE_TIMEOUT: PREBID_TIMEOUT*2   //denoted in milliseonds 5secs=5000...
     // floor_price: 1.00 //set a min floor price on bids to pressure higher bids
   };
 // site_config end
@@ -526,7 +526,7 @@ adserverTargeting: [
       userSync: {
         iframeEnabled: true,
         syncsPerBidder: 10, // and no more than 3 syncs at a time
-        syncDelay: PREBID_TIMEOUT*2.5, // 5 seconds after the auction
+        syncDelay: PREBID_TIMEOUT*3, // 5 seconds after the auction
       filterSettings: { iframe: { bidders: ['pulsepoint'], filter: 'exclude' }, image:  { bidders: '*', filter: 'include' } },
       // enableOverride: true // publisher will call `pbjs.triggerUserSyncs()'
        },
@@ -535,11 +535,11 @@ adserverTargeting: [
        enableSendAllBids: false, // Default will be `true` as of 1.0
        bidderSequence: 'random', // Default is random
        publisherDomain: 'golfwrx.com',
-       bidderTimeout: PREBID_TIMEOUT+300,
+       bidderTimeout: PREBID_TIMEOUT+500,
        pubcid: {expInterval: 525600},
        currency: { 'adServerCurrency': "GBP", 'granularityMultiplier': 1, 'conversionRateFile': 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json', },
        sizeConfig: [
-         { mediaQuery: '(min-width: 769px)', 'sizesSupported': [[550, 310], [728, 90], [468, 60], [320, 50], [300, 250], [250, 250], [1, 1]], 'labels': ['desktop'] },
+         { mediaQuery: '(min-width: 769px)', 'sizesSupported': [[580, 400],[550, 310], [728, 90], [468, 60], [336, 280], [320, 100], [320, 50], [300, 250], [250, 250], [1, 1]], 'labels': ['desktop'] },
          { mediaQuery: '(min-width: 500px) and (max-width: 768px)', sizesSupported: [[550, 310], [728, 90],  [468, 60], [320, 50], [300, 250], [250, 250], [1, 1]], labels: ['tablet'] },
          { mediaQuery: '(min-width: 1px) and (max-width: 499px)', sizesSupported: [[550, 310], [300, 250], [250, 250], [320, 50], [1, 1]], labels: ['phone'] }
        ]
