@@ -20,7 +20,7 @@ window._BidFilter={site_id:1045,pbjsKey:'adyjs',checkAudio:true};
   var adyjsEl = document.createElement("script");
   adyjsEl.type = "text/javascript";
   adyjsEl.async = true;
-  adyjsEl.src = "https://adops.adysis.com/prebid2.26.0adyjs.js";
+  adyjsEl.src = "https://adops.adysis.com/prebid2.27.0adyjs.js";
   var adyjsTargetEl = document.getElementsByTagName("footerbid1")[0];
   adyjsTargetEl.insertBefore(adyjsEl, adyjsTargetEl.firstChild);
 })();
