@@ -217,7 +217,7 @@ console.log("user bid cache:", USERBIDCACHE );
              { bidder: 'rhythmone',   labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '76184', zone: '1r', path: 'mvo' } }, /* one placementId for all sizes */
           // { bidder: 'adsparc',      labelAny: ['desktop', 'tablet', 'phone'], params: { networkId: '9969', siteId: '1019801'} }, /*one placementId for all sizes*/	
              //{ bidder: 'komoona',      labelAny: ['desktop', 'tablet', 'phone'], params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: '2d14facbe61621faad0c7b2aa0458cff' } },  /* Golfwrx.com _KB 300x250 */
-             { bidder: "ix",          labelAny: ['desktop', 'tablet', 'phone'], params: { siteId: "261017", size: [300, 250], video: { skippable: true, mimes: [ 'video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm' ], minduration: 0, maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10] } } }, /* id 261017 golfwrx id */
+             { bidder: "ix",          labelAny: ['desktop', 'tablet', 'phone'], params: { siteId: "261017", size: [550, 310], video: { skippable: true, mimes: [ 'video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm' ], minduration: 0, maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10] } } }, /* id 261017 golfwrx id */
              //{ bidder: "yieldmo",     labelAny: ['desktop', 'tablet', 'phone'],params: { placementId: "1990667709809591856" } }, /* no adapter in file */
              { bidder: 'unruly',     labelAny: ['desktop', 'tablet', 'phone'], params: { UUID: '23984444', SiteId: 15145 } },
           // { bidder: 'contentignite',      labelAny: ['desktop', 'tablet', 'phone'], params: { accountID: '168237', zoneID: '316288'} }, /*300x250*/
@@ -339,7 +339,7 @@ console.log("user bid cache:", USERBIDCACHE );
      { bidder: 'rhythmone',   labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '76184', zone: '1r', path: 'mvo' } }, /* one placementId for all sizes */
   // { bidder: 'adsparc',      labelAny: ['desktop', 'tablet', 'phone'], params: { networkId: '9969', siteId: '1019801'} }, /*one placementId for all sizes*/	
      //{ bidder: 'komoona',      labelAny: ['desktop', 'tablet', 'phone'], params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: '2d14facbe61621faad0c7b2aa0458cff' } },  /* Golfwrx.com _KB 300x250 */
-     { bidder: "ix",          labelAny: ['desktop', 'tablet', 'phone'], params: { siteId: "261017", size: [300, 250], video: { skippable: true, mimes: [ 'video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm' ], minduration: 0, maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10] } } }, /* id 261017 golfwrx id */
+     { bidder: "ix",          labelAny: ['desktop', 'tablet', 'phone'], params: { siteId: "261017", size: [550, 310], video: { skippable: true, mimes: [ 'video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm' ], minduration: 0, maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10] } } }, /* id 261017 golfwrx id */
      //{ bidder: "yieldmo",     labelAny: ['desktop', 'tablet', 'phone'],params: { placementId: "1990667709809591856" } }, /* no adapter in file */
      { bidder: 'unruly',     labelAny: ['desktop', 'tablet', 'phone'], params: { UUID: '23984444', SiteId: 15145 } },
   // { bidder: 'contentignite',      labelAny: ['desktop', 'tablet', 'phone'], params: { accountID: '168237', zoneID: '316288'} }, /*300x250*/
@@ -460,7 +460,7 @@ bids: [
     { bidder: 'rhythmone',   labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '76184', zone: '1r', path: 'mvo' } }, /* one placementId for all sizes */
  // { bidder: 'adsparc',      labelAny: ['desktop', 'tablet', 'phone'], params: { networkId: '9969', siteId: '1019801'} }, /*one placementId for all sizes*/	
     //{ bidder: 'komoona',      labelAny: ['desktop', 'tablet', 'phone'], params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: '2d14facbe61621faad0c7b2aa0458cff' } },  /* Golfwrx.com _KB 300x250 */
-    { bidder: "ix",          labelAny: ['desktop', 'tablet', 'phone'], params: { siteId: "261017", size: [300, 250], video: { skippable: true, mimes: [ 'video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm' ], minduration: 0, maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10] } } }, /* id 261017 golfwrx id */
+    { bidder: "ix",          labelAny: ['desktop', 'tablet', 'phone'], params: { siteId: "261017", size: [550, 310], video: { skippable: true, mimes: [ 'video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm' ], minduration: 0, maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10] } } }, /* id 261017 golfwrx id */
     //{ bidder: "yieldmo",     labelAny: ['desktop', 'tablet', 'phone'],params: { placementId: "1990667709809591856" } }, /* no adapter in file */
     { bidder: 'unruly',     labelAny: ['desktop', 'tablet', 'phone'], params: { UUID: '23984444', SiteId: 15145 } },
  // { bidder: 'contentignite',      labelAny: ['desktop', 'tablet', 'phone'], params: { accountID: '168237', zoneID: '316288'} }, /*300x250*/
@@ -581,7 +581,7 @@ bids: [
     { bidder: 'rhythmone',   labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '76184', zone: '1r', path: 'mvo' } }, /* one placementId for all sizes */
  // { bidder: 'adsparc',      labelAny: ['desktop', 'tablet', 'phone'], params: { networkId: '9969', siteId: '1019801'} }, /*one placementId for all sizes*/	
     //{ bidder: 'komoona',      labelAny: ['desktop', 'tablet', 'phone'], params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: '2d14facbe61621faad0c7b2aa0458cff' } },  /* Golfwrx.com _KB 300x250 */
-    { bidder: "ix",          labelAny: ['desktop', 'tablet', 'phone'], params: { siteId: "261017", size: [300, 250], video: { skippable: true, mimes: [ 'video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm' ], minduration: 0, maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10] } } }, /* id 261017 golfwrx id */
+    { bidder: "ix",          labelAny: ['desktop', 'tablet', 'phone'], params: { siteId: "261017", size: [550, 310], video: { skippable: true, mimes: [ 'video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm' ], minduration: 0, maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10] } } }, /* id 261017 golfwrx id */
     //{ bidder: "yieldmo",     labelAny: ['desktop', 'tablet', 'phone'],params: { placementId: "1990667709809591856" } }, /* no adapter in file */
     { bidder: 'unruly',     labelAny: ['desktop', 'tablet', 'phone'], params: { UUID: '23984444', SiteId: 15145 } },
  // { bidder: 'contentignite',      labelAny: ['desktop', 'tablet', 'phone'], params: { accountID: '168237', zoneID: '316288'} }, /*300x250*/
