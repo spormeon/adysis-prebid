@@ -279,8 +279,6 @@ console.log("user bid cache:", USERBIDCACHE );
           //{ bidder: 'cedato',     labelAny: ['desktop', 'tablet', 'phone'], params: { player_id: '1895193152' , bidfloor: 0.01 } },
           { bidder: 'adysis',   labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '11962910', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_on'] } } }, /* one placementId for all sizes */
           { bidder: 'smartyads',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '6368' } }, /* 300x250 */
-          { bidder: 'smartyads',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '12335' } }, /* native */
-          { bidder: 'smartyads',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '11833' } }, /* outstream */
           { bidder: 'oftmedia',   labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '16137883', allowSmallerSizes: true } },
           { bidder: 'openx',   labelAny: ['desktop', 'tablet', 'phone'], params: { unit: '539181725', delDomain: 'freestar-d.openx.net', openrtb: { imp: [{ video: { mimes: ['video/x-flv, video/mp4, application/x-shockwave-flash, application/javascript, video/webm'] } }] } } },
           { bidder: 'rubicon',   labelAny: ['desktop', 'tablet', 'phone'], params: { accountId: "16924", siteId: "151312", zoneId: "896644" } }, /* display call */
