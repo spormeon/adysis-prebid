@@ -537,7 +537,7 @@ standard: {
 adserverTargeting: [
 { key: "hb_bidder", val: function(bidResponse) { return bidResponse.bidderCode; } },
 { key: "hb_adid", val: function(bidResponse) { return bidResponse.adId; } },
-{ key: "hb_pb", val: function(bidResponse) { return bidResponse.pbMg; } },
+{ key: "hb_pb", val: function(bidResponse) { return bidResponse.bidCpm; } },
 { key: 'hb_size', val: function (bidResponse) { return bidResponse.size; } },
 { key: 'hb_source', val: function (bidResponse) { return bidResponse.source; } },
 { key: 'hb_deal', val: function (bidResponse) { return bidResponse.deal; } },
