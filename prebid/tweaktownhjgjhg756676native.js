@@ -58,8 +58,8 @@ var timeoutMap = {
 19 : 3000,
 20 : 3400,
 21 : 4400,
-22 : 1400,
-23 : 1400
+22 : 2400,
+23 : 2400
 };
 var t = new Date().getUTCHours();
 PREBID_TIMEOUT = timeoutMap[t];
