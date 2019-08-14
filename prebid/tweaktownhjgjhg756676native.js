@@ -537,7 +537,7 @@ standard: {
 adserverTargeting: [
 { key: "hb_bidder", val: function(bidResponse) { return bidResponse.bidderCode; } },
 { key: "hb_adid", val: function(bidResponse) { return bidResponse.adId; } },
-{ key: "hb_pb", val: function(bidResponse) { return bidResponse.cpm; } },
+{ key: "hb_pb",     val: function(bidResponse) { var cpm = (bidResponse.cpm ); if (cpm <20) { return (Math.floor(cpm * 10) / 10).toFixed(2);} else { return '20.00'; } } },
 { key: 'hb_size', val: function (bidResponse) { return bidResponse.size; } },
 { key: 'hb_source', val: function (bidResponse) { return bidResponse.source; } },
 { key: 'hb_deal', val: function (bidResponse) { return bidResponse.deal; } },
