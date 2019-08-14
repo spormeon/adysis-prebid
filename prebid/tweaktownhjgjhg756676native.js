@@ -232,7 +232,7 @@ console.log("user bid cache:", USERBIDCACHE );
              { bidder: 'oftmedia',   labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '16137883', allowSmallerSizes: true } },
              { bidder: 'openx',   labelAny: ['desktop', 'tablet', 'phone'], params: { unit: '539181725', delDomain: 'freestar-d.openx.net', openrtb: { imp: [{ video: { mimes: ['video/x-flv, video/mp4, application/x-shockwave-flash, application/javascript, video/webm'] } }] } } },
              { bidder: 'rubicon',   labelAny: ['desktop', 'tablet', 'phone'], params: { accountId: "16924", siteId: "151312", zoneId: "896644", video: { language: 'en' } } }, /* video call */
-             { bidder: 'criteo',   labelAny: ['desktop', 'tablet', 'phone'], params: { zoneId: "1079305", video: { skip: 1,playbackmethod: 2 } } },
+             { bidder: 'criteo',   labelAny: ['desktop', 'tablet', 'phone'], params: { zoneId: "1079305", video: { skip: 1, playbackmethod: 2, placement: 1 } } },
              { bidder: 'colossusssp',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '35323' } } /* outstream */
              
         ] //./bids
@@ -348,7 +348,7 @@ console.log("user bid cache:", USERBIDCACHE );
      { bidder: 'oftmedia',   labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '16137883', allowSmallerSizes: true } },
      { bidder: 'openx',   labelAny: ['desktop', 'tablet', 'phone'], params: { unit: '539181725', delDomain: 'freestar-d.openx.net', openrtb: { imp: [{ video: { mimes: ['video/x-flv, video/mp4, application/x-shockwave-flash, application/javascript, video/webm'] } }] } } },
      { bidder: 'rubicon',   labelAny: ['desktop', 'tablet', 'phone'], params: { accountId: "16924", siteId: "151312", zoneId: "896644", video: { language: 'en' } } }, /* video call */
-     { bidder: 'criteo',   labelAny: ['desktop', 'tablet', 'phone'], params: { zoneId: "1079305", video: { skip: 1,playbackmethod: 2 } } },
+     { bidder: 'criteo',   labelAny: ['desktop', 'tablet', 'phone'], params: { zoneId: "1079305", video: { skip: 1, playbackmethod: 2, placement: 1 } } },
      { bidder: 'colossusssp',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '35323' } } /* outstream */
      
 ] //./bids
@@ -462,7 +462,7 @@ bids: [
     { bidder: 'oftmedia',   labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '16137883', allowSmallerSizes: true } },
     { bidder: 'openx',   labelAny: ['desktop', 'tablet', 'phone'], params: { unit: '539181725', delDomain: 'freestar-d.openx.net', openrtb: { imp: [{ video: { mimes: ['video/x-flv, video/mp4, application/x-shockwave-flash, application/javascript, video/webm'] } }] } } },
     { bidder: 'rubicon',   labelAny: ['desktop', 'tablet', 'phone'], params: { accountId: "16924", siteId: "151312", zoneId: "896644", video: { language: 'en' } } }, /* video call */
-    { bidder: 'criteo',   labelAny: ['desktop', 'tablet', 'phone'], params: { zoneId: "1079305", video: { skip: 1,playbackmethod: 2 } } },
+    { bidder: 'criteo',   labelAny: ['desktop', 'tablet', 'phone'], params: { zoneId: "1079305", video: { skip: 1, playbackmethod: 2, placement: 1 } } },
     { bidder: 'colossusssp',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '35323' } } /* outstream */
     
 ] //./bids
@@ -576,7 +576,7 @@ bids: [
     { bidder: 'oftmedia',   labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '16137883', allowSmallerSizes: true } },
     { bidder: 'openx',   labelAny: ['desktop', 'tablet', 'phone'], params: { unit: '539181725', delDomain: 'freestar-d.openx.net', openrtb: { imp: [{ video: { mimes: ['video/x-flv, video/mp4, application/x-shockwave-flash, application/javascript, video/webm'] } }] } } },
     { bidder: 'rubicon',   labelAny: ['desktop', 'tablet', 'phone'], params: { accountId: "16924", siteId: "151312", zoneId: "896644", video: { language: 'en' } } }, /* video call */
-    { bidder: 'criteo',   labelAny: ['desktop', 'tablet', 'phone'], params: { zoneId: "1079305", video: { skip: 1,playbackmethod: 2 } } },
+    { bidder: 'criteo',   labelAny: ['desktop', 'tablet', 'phone'], params: { zoneId: "1079305", video: { skip: 1, playbackmethod: 2, placement: 1 } } },
     { bidder: 'colossusssp',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '35323' } } /* outstream */
     
 ] //./bids
