@@ -252,6 +252,7 @@ console.log("user bid cache:", USERBIDCACHE );
           { bidder: 'onedisplay',    labelAny: ['desktop', 'tablet', 'phone'], params: { placement: '4882886', network: '4436.1', server: 'adserver-eu.adtech.advertising.com' } }, /* 300x250 */ 
        // { bidder: 'brealtime',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '12002335' } },  /* 300x250 */   
           { bidder: 'conversant',  labelAny: ['desktop', 'tablet', 'phone'], params: { site_id: '118233', mimes: [ 'video/mp4', 'application/javascript' ], maxduration: 30 } },  /* 300x250 */ 
+          { bidder: 'pulsepoint',  labelAny: ['desktop', 'tablet', 'phone'], params: { cf: '1X1', cp: '561446', ct: '702261', cw: 550, ch: 310 } }, /* outstream */
           { bidder: 'pulsepoint',  labelAny: ['desktop', 'tablet', 'phone'], params: { cf: '300X250', cp: '561446', ct: '602639', video: { w: 550, h: 310 } } }, /* 300x250 */
           { bidder: 'sovrn',       labelAny: ['desktop', 'tablet', 'phone'], params: { tagid: '575683' } }, /* 300x250 */
           //{ bidder: 'somoaudience',  labelAny: ['desktop', 'tablet', 'phone'], params: { placement_hash: '1152340cac3268b0e737b49c1382cd2b' } }, /*300x250*/
@@ -368,6 +369,7 @@ bids: [
 // { bidder: 'brealtime',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '12002335' } },  /* 300x250 */   
   { bidder: 'conversant',  labelAny: ['desktop', 'tablet', 'phone'], params: { site_id: '118233', mimes: [ 'video/mp4', 'application/javascript' ], maxduration: 30 } },  /* 300x250 */ 
   { bidder: 'pulsepoint',  labelAny: ['desktop', 'tablet', 'phone'], params: { cf: '300X250', cp: '561446', ct: '602639', video: { w: 550, h: 310 } } }, /* 300x250 */
+  { bidder: 'pulsepoint',  labelAny: ['desktop', 'tablet', 'phone'], params: { cf: '1X1', cp: '561446', ct: '702261', cw: 550, ch: 310 } }, /* outstream */
   { bidder: 'sovrn',       labelAny: ['desktop', 'tablet', 'phone'], params: { tagid: '575683' } }, /* 300x250 */
   //{ bidder: 'somoaudience',  labelAny: ['desktop', 'tablet', 'phone'], params: { placement_hash: '1152340cac3268b0e737b49c1382cd2b' } }, /*300x250*/
   { bidder: '33across',    labelAny: ['desktop', 'tablet', 'phone'], params: { siteId : 'cLN3UCBHar5OfDrkHcnlKl', productId: 'siab' } }, /*All sizes*/
@@ -481,6 +483,7 @@ bids: [
 // { bidder: 'brealtime',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '12002335' } },  /* 300x250 */   
  { bidder: 'conversant',  labelAny: ['desktop', 'tablet', 'phone'], params: { site_id: '118233', mimes: [ 'video/mp4', 'application/javascript' ], maxduration: 30 } },  /* 300x250 */ 
  { bidder: 'pulsepoint',  labelAny: ['desktop', 'tablet', 'phone'], params: { cf: '300X250', cp: '561446', ct: '602639', video: { w: 550, h: 310 } } }, /* 300x250 */
+ { bidder: 'pulsepoint',  labelAny: ['desktop', 'tablet', 'phone'], params: { cf: '1X1', cp: '561446', ct: '702261', cw: 550, ch: 310 } }, /* outstream */
  { bidder: 'sovrn',       labelAny: ['desktop', 'tablet', 'phone'], params: { tagid: '575683' } }, /* 300x250 */
  //{ bidder: 'somoaudience',  labelAny: ['desktop', 'tablet', 'phone'], params: { placement_hash: '1152340cac3268b0e737b49c1382cd2b' } }, /*300x250*/
  { bidder: '33across',    labelAny: ['desktop', 'tablet', 'phone'], params: { siteId : 'cLN3UCBHar5OfDrkHcnlKl', productId: 'siab' } }, /*All sizes*/
@@ -594,6 +597,7 @@ bids: [
 // { bidder: 'brealtime',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '12002335' } },  /* 300x250 */   
  { bidder: 'conversant',  labelAny: ['desktop', 'tablet', 'phone'], params: { site_id: '118233', mimes: [ 'video/mp4', 'application/javascript' ], maxduration: 30 } },  /* 300x250 */ 
  { bidder: 'pulsepoint',  labelAny: ['desktop', 'tablet', 'phone'], params: { cf: '300X250', cp: '561446', ct: '602639', video: { w: 550, h: 310 } } }, /* 300x250 */
+ { bidder: 'pulsepoint',  labelAny: ['desktop', 'tablet', 'phone'], params: { cf: '1X1', cp: '561446', ct: '702261', cw: 550, ch: 310 } }, /* outstream */
  { bidder: 'sovrn',       labelAny: ['desktop', 'tablet', 'phone'], params: { tagid: '575683' } }, /* 300x250 */
  //{ bidder: 'somoaudience',  labelAny: ['desktop', 'tablet', 'phone'], params: { placement_hash: '1152340cac3268b0e737b49c1382cd2b' } }, /*300x250*/
  { bidder: '33across',    labelAny: ['desktop', 'tablet', 'phone'], params: { siteId : 'cLN3UCBHar5OfDrkHcnlKl', productId: 'siab' } }, /*All sizes*/
