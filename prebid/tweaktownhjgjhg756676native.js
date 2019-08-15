@@ -118,7 +118,7 @@ slots: [
     { slotID: 'inreedvid6Slot', slotName: '/1001824/adp100001/adp100001C', sizes: [[728, 90], [300, 250], [250, 250], [468, 60], [320, 50]] },
     { slotID: 'inreedvid7Slot', slotName: '/1001824/adp100001/adp100001D', sizes: [[728, 90], [300, 250], [250, 250], [468, 60], [320, 50]] }
     ],
-    timeout: 1.5e3
+    timeout: 1e3
  }, function(bids) {
 // set apstag targeting on googletag, then trigger the first DFP request in googletag's disableInitialLoad integration
      googletag.cmd.push(function(){
