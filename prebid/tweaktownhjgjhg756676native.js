@@ -285,7 +285,8 @@ console.log("user bid cache:", USERBIDCACHE );
           { bidder: 'sharethrough',   labelAny: ['desktop', 'tablet', 'phone'], params: { pkey: "DSthphoQqH66AkQXPDoXn74b", iframe: true} },
           { bidder: 'connectad',   labelAny: ['desktop', 'tablet', 'phone'], params: { networkId: "10047", siteId: "1029474"} },
           //{ bidder: 'colossusssp',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '6544' } } /* 300x250 */
-          { bidder: 'emx_digital',  labelAny: ['desktop', 'tablet', 'phone'], params: { tagid: '77461' } } /* sizeless */
+          { bidder: 'emx_digital',  labelAny: ['desktop', 'tablet', 'phone'], params: { tagid: '77461' } }, /* sizeless */
+          { bidder: 'decenterads',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '10383' } } /* 300x250 */
      ] //./bids
  },
  
@@ -401,7 +402,8 @@ bids: [
   { bidder: 'sharethrough',   labelAny: ['desktop', 'tablet', 'phone'], params: { pkey: "DSthphoQqH66AkQXPDoXn74b", iframe: true} },
   { bidder: 'connectad',   labelAny: ['desktop', 'tablet', 'phone'], params: { networkId: "10047", siteId: "1029474"} },
   //{ bidder: 'colossusssp',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '6544' } } /* 300x250 */
-  { bidder: 'emx_digital',  labelAny: ['desktop', 'tablet', 'phone'], params: { tagid: '77461' } } /* sizeless */
+  { bidder: 'emx_digital',  labelAny: ['desktop', 'tablet', 'phone'], params: { tagid: '77461' } }, /* sizeless */
+  { bidder: 'decenterads',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '10383' } } /* 300x250 */
 ] //./bids
 },
 //new ad unit block
@@ -516,7 +518,8 @@ bids: [
  { bidder: 'sharethrough',   labelAny: ['desktop', 'tablet', 'phone'], params: { pkey: "DSthphoQqH66AkQXPDoXn74b", iframe: true} },
  { bidder: 'connectad',   labelAny: ['desktop', 'tablet', 'phone'], params: { networkId: "10047", siteId: "1029474"} },
  //{ bidder: 'colossusssp',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '6544' } } /* 300x250 */
- { bidder: 'emx_digital',  labelAny: ['desktop', 'tablet', 'phone'], params: { tagid: '77461' } } /* sizeless */
+ { bidder: 'emx_digital',  labelAny: ['desktop', 'tablet', 'phone'], params: { tagid: '77461' } }, /* sizeless */
+ { bidder: 'decenterads',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '10383' } } /* 300x250 */
 ] //./bids
 },
 //new ad unit block
@@ -631,7 +634,8 @@ bids: [
  { bidder: 'sharethrough',   labelAny: ['desktop', 'tablet', 'phone'], params: { pkey: "DSthphoQqH66AkQXPDoXn74b", iframe: true} },
  { bidder: 'connectad',   labelAny: ['desktop', 'tablet', 'phone'], params: { networkId: "10047", siteId: "1029474"} },
  //{ bidder: 'colossusssp',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '6544' } } /* 300x250 */
- { bidder: 'emx_digital',  labelAny: ['desktop', 'tablet', 'phone'], params: { tagid: '77461' } } /* sizeless */
+ { bidder: 'emx_digital',  labelAny: ['desktop', 'tablet', 'phone'], params: { tagid: '77461' } }, /* sizeless */
+ { bidder: 'decenterads',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '10383' } } /* 300x250 */
 ] //./bids
     }];
 // ======== DO NOT EDIT BELOW THIS LINE =========== //
