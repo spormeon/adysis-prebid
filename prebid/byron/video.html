@@ -106,7 +106,7 @@ var assertive_custom_5 = null;
       appnexus:   { bidCpmAdjustment : function(bidCpm){ return bidCpm * 1.00; } },
     };
                 adyjs.setConfig({
-                	consentManagement: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400, allowAuctionWithoutConsent: true },
+                	consentManagement: { cmpApi: 'iab', timeout: 4000, allowAuctionWithoutConsent: true },
                     cache: { url: 'https://prebid.adnxs.com/pbc/v1/cache' },
                     s2sConfig: {
                         accountId: 'e31f627f-53a3-4288-9979-482d3c6ffc76',
