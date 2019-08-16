@@ -231,9 +231,9 @@ console.log("user bid cache:", USERBIDCACHE );
              { bidder: 'oftmedia',   labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '16137883', allowSmallerSizes: true } },
              { bidder: 'openx',   labelAny: ['desktop', 'tablet', 'phone'], params: { unit: '539181725', delDomain: 'freestar-d.openx.net', openrtb: { imp: [{ video: { mimes: ['video/x-flv, video/mp4, application/x-shockwave-flash, application/javascript, video/webm'] } }] } } },
              { bidder: 'rubicon',   labelAny: ['desktop', 'tablet', 'phone'], params: { accountId: "16924", siteId: "151312", zoneId: "896644", video: { language: 'en' } } }, /* video call */
-             { bidder: 'criteo',   labelAny: ['desktop', 'tablet', 'phone'], params: { zoneId: "1079305", video: { skip: 1, playbackmethod: 2, placement: 1 } } },
+             //{ bidder: 'criteo',   labelAny: ['desktop', 'tablet', 'phone'], params: { zoneId: "1079305", video: { skip: 1, playbackmethod: 2, placement: 1 } } },
              //{ bidder: 'colossusssp',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '35323' } }, /* outstream */
-             { bidder: "ix",          labelAny: ['desktop', 'tablet', 'phone'], params: { siteId: "261017", size: [300, 250], video: { skippable: true, mimes: [ 'video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm' ], minduration: 0, maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10] } } }, /* id 261017 golfwrx id */
+             //{ bidder: "ix",          labelAny: ['desktop', 'tablet', 'phone'], params: { siteId: "261017", size: [300, 250], video: { skippable: true, mimes: [ 'video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm' ], minduration: 0, maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10] } } }, /* id 261017 golfwrx id */
              { bidder: 'emx_digital',  labelAny: ['desktop', 'tablet', 'phone'], params: { tagid: '77460', video: { language: 'en' } } } /* outstream */
         ] //./bids
     },   	
@@ -346,10 +346,10 @@ console.log("user bid cache:", USERBIDCACHE );
      { bidder: 'oftmedia',   labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '16137883', allowSmallerSizes: true } },
      { bidder: 'openx',   labelAny: ['desktop', 'tablet', 'phone'], params: { unit: '539181725', delDomain: 'freestar-d.openx.net', openrtb: { imp: [{ video: { mimes: ['video/x-flv, video/mp4, application/x-shockwave-flash, application/javascript, video/webm'] } }] } } },
      { bidder: 'rubicon',   labelAny: ['desktop', 'tablet', 'phone'], params: { accountId: "16924", siteId: "151312", zoneId: "896644", video: { language: 'en' } } }, /* video call */
-     { bidder: 'criteo',   labelAny: ['desktop', 'tablet', 'phone'], params: { zoneId: "1079305", video: { skip: 1, playbackmethod: 2, placement: 1 } } },
+     //{ bidder: 'criteo',   labelAny: ['desktop', 'tablet', 'phone'], params: { zoneId: "1079305", video: { skip: 1, playbackmethod: 2, placement: 1 } } }
      //{ bidder: 'colossusssp',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '35323' } }, /* outstream */
-     { bidder: "ix",          labelAny: ['desktop', 'tablet', 'phone'], params: { siteId: "261017", size: [300, 250], video: { skippable: true, mimes: [ 'video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm' ], minduration: 0, maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10] } } } /* id 261017 golfwrx id */
-     
+     //{ bidder: "ix",          labelAny: ['desktop', 'tablet', 'phone'], params: { siteId: "261017", size: [300, 250], video: { skippable: true, mimes: [ 'video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm' ], minduration: 0, maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10] } } } /* id 261017 golfwrx id */
+     { bidder: 'emx_digital',  labelAny: ['desktop', 'tablet', 'phone'], params: { tagid: '77460', video: { language: 'en' } } } /* outstream */
 ] //./bids
 },   	
 //new ad unit block
@@ -460,10 +460,10 @@ bids: [
     { bidder: 'oftmedia',   labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '16137883', allowSmallerSizes: true } },
     { bidder: 'openx',   labelAny: ['desktop', 'tablet', 'phone'], params: { unit: '539181725', delDomain: 'freestar-d.openx.net', openrtb: { imp: [{ video: { mimes: ['video/x-flv, video/mp4, application/x-shockwave-flash, application/javascript, video/webm'] } }] } } },
     { bidder: 'rubicon',   labelAny: ['desktop', 'tablet', 'phone'], params: { accountId: "16924", siteId: "151312", zoneId: "896644", video: { language: 'en' } } }, /* video call */
-    { bidder: 'criteo',   labelAny: ['desktop', 'tablet', 'phone'], params: { zoneId: "1079305", video: { skip: 1, playbackmethod: 2, placement: 1 } } },
+    //{ bidder: 'criteo',   labelAny: ['desktop', 'tablet', 'phone'], params: { zoneId: "1079305", video: { skip: 1, playbackmethod: 2, placement: 1 } } }
     //{ bidder: 'colossusssp',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '35323' } }, /* outstream */
-    { bidder: "ix",          labelAny: ['desktop', 'tablet', 'phone'], params: { siteId: "261017", size: [300, 250], video: { skippable: true, mimes: [ 'video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm' ], minduration: 0, maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10] } } } /* id 261017 golfwrx id */
-    
+    //{ bidder: "ix",          labelAny: ['desktop', 'tablet', 'phone'], params: { siteId: "261017", size: [300, 250], video: { skippable: true, mimes: [ 'video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm' ], minduration: 0, maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10] } } } /* id 261017 golfwrx id */
+    { bidder: 'emx_digital',  labelAny: ['desktop', 'tablet', 'phone'], params: { tagid: '77460', video: { language: 'en' } } } /* outstream */
 ] //./bids
 },   	
 //new ad unit block
@@ -574,10 +574,10 @@ bids: [
     { bidder: 'oftmedia',   labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '16137883', allowSmallerSizes: true } },
     { bidder: 'openx',   labelAny: ['desktop', 'tablet', 'phone'], params: { unit: '539181725', delDomain: 'freestar-d.openx.net', openrtb: { imp: [{ video: { mimes: ['video/x-flv, video/mp4, application/x-shockwave-flash, application/javascript, video/webm'] } }] } } },
     { bidder: 'rubicon',   labelAny: ['desktop', 'tablet', 'phone'], params: { accountId: "16924", siteId: "151312", zoneId: "896644", video: { language: 'en' } } }, /* video call */
-    { bidder: 'criteo',   labelAny: ['desktop', 'tablet', 'phone'], params: { zoneId: "1079305", video: { skip: 1, playbackmethod: 2, placement: 1 } } },
+    //{ bidder: 'criteo',   labelAny: ['desktop', 'tablet', 'phone'], params: { zoneId: "1079305", video: { skip: 1, playbackmethod: 2, placement: 1 } } }
     //{ bidder: 'colossusssp',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '35323' } }, /* outstream */
-    { bidder: "ix",          labelAny: ['desktop', 'tablet', 'phone'], params: { siteId: "261017", size: [300, 250], video: { skippable: true, mimes: [ 'video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm' ], minduration: 0, maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10] } } } /* id 261017 golfwrx id */
-    
+    //{ bidder: "ix",          labelAny: ['desktop', 'tablet', 'phone'], params: { siteId: "261017", size: [300, 250], video: { skippable: true, mimes: [ 'video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm' ], minduration: 0, maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10] } } } /* id 261017 golfwrx id */
+    { bidder: 'emx_digital',  labelAny: ['desktop', 'tablet', 'phone'], params: { tagid: '77460', video: { language: 'en' } } } /* outstream */
 ] //./bids
 },   	
 //new ad unit block
