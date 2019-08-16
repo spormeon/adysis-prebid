@@ -1,8 +1,28 @@
 <!DOCTYPE html>
 <html>
-<head>  
+<head>
 <meta charset="utf-8" />
-<title>Prebid Server Video -- Video.js</title>     
+<title>Prebid Server Video -- Video.js</title>
+
+<script type = "text/javascript">
+  window._sp_ = window._sp_ || {};
+  window._sp_.config = window._sp_.config || {};
+  window._sp_.config.account_id = 959;
+  window._sp_.config.mms_domain = 'messaging.sourcepoint.com';
+  window._sp_.mms = window._sp_.mms || {};
+  window._sp_.mms.cmd = window._sp_.mms.cmd || [];
+  window._sp_.config.cmp = _sp_.config.cmp || {};
+  window._sp_.config.cmp.enabled = true;
+  window._sp_.config.detection = window._sp_.config.detection || {};
+  window._sp_.config.detection.timeout = 1;
+  window._sp_.config.writeFirstPartyCookies = true;
+  window._sp_.mms.cmd.push( function () {
+    window._sp_.mms.startMsg();
+  });
+</script>
+<script type="text/javascript" src="https://d2zv5rkii46miq.cloudfront.net/0/latest/messaging_without_detection.js"></script>
+
+     
 <!-- videojs -->
 <script src="https://adops.adysis.com/byron/prebid2.27.0adyjs.js"></script>
 <script src="//imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
@@ -58,15 +78,17 @@ var assertive_custom_5 = null;
                 	{ bidder: 'appnexus', params: { placementId: 15915644, allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } },
                     { bidder: 'districtm', params: { placementId: 15897864, allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } },
                     { bidder: 'beachfront', params: { bidfloor: 0.01, appId: '11bc5dd5-7421-4dd8-c926-40fa653bec76' } },
-                    //{ bidder: 'viewdeos',   params: { supplyPartnerId: '1985' } },
+                    //{ bidder: 'viewdeos', params: { supplyPartnerId: '1985' } },
                     { bidder: 'rhythmone',  params: { placementId: '76184', zone: '1r', path: 'mvo' } },
                     //{ bidder: 'somoaudience', params: { placement_hash: '1152340cac3268b0e737b49c1382cd2b' } },
-                    { bidder: 'rubicon',   params: { accountId: "16924", siteId: "151312", zoneId: "896644", video: { playerWidth: '640', playerHeight: '360', language: 'en' } } }, /* video call */
-                    { bidder: 'openx',   params: { unit: '539181725', delDomain: 'freestar-d.openx.net', openrtb: { imp: [{ video: { mimes: ['video/x-flv, video/mp4, application/x-shockwave-flash, application/javascript, video/webm'] } }] } } },
-                    // { bidder: 'unruly',     params: { targetingUUID: '23984444', siteId: 15145 } }
-                    // { bidder: 'teads',      params: { placementId: '75853', pageId: '87372' } }
-                    // { bidder: 'cedato',     params: { player_id: '1895193152' , bidfloor: 0.01 } }
-                    { bidder: 'ucfunnel', params: { adid: 'test-ad-D778B679776BD6BFB8A6A83A3BAEAA' } }
+                    { bidder: 'rubicon', params: { accountId: "16924", siteId: "151312", zoneId: "896644", video: { playerWidth: '640', playerHeight: '360', language: 'en' } } }, /* video call */
+                    { bidder: 'openx', params: { unit: '539181725', delDomain: 'freestar-d.openx.net', openrtb: { imp: [{ video: { mimes: ['video/x-flv, video/mp4, application/x-shockwave-flash, application/javascript, video/webm'] } }] } } },
+                    // { bidder: 'unruly', params: { targetingUUID: '23984444', siteId: 15145 } }
+                    // { bidder: 'teads',  params: { placementId: '75853', pageId: '87372' } }
+                    // { bidder: 'cedato', params: { player_id: '1895193152' , bidfloor: 0.01 } }
+                    { bidder: 'ucfunnel', params: { adid: 'test-ad-D778B679776BD6BFB8A6A83A3BAEAA' } },
+                    { bidder: 'emx_digital', params: { tagid: '77460', video: { language: 'en' } } }, /* video tag */
+                    { bidder: 'criteo', params: { zoneId: "1079305", video: { skip: 1, playbackmethod: 2, placement: 1 } } },
                 ]
             };
 
@@ -84,6 +106,7 @@ var assertive_custom_5 = null;
       appnexus:   { bidCpmAdjustment : function(bidCpm){ return bidCpm * 1.00; } },
     };
                 adyjs.setConfig({
+                	consentManagement: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400, allowAuctionWithoutConsent: true },
                     cache: { url: 'https://prebid.adnxs.com/pbc/v1/cache' },
                     s2sConfig: {
                         accountId: 'e31f627f-53a3-4288-9979-482d3c6ffc76',
@@ -99,7 +122,7 @@ var assertive_custom_5 = null;
                       userSync: {
                           iframeEnabled: true,
                           syncsPerBidder: 50, // and no more than 3 syncs at a time
-                          syncDelay: 4000, // 5 seconds after the auction
+                          syncDelay: 5000, // 5 seconds after the auction
                         filterSettings: {
                            iframe: { bidders: ['pulsepoint'], filter: 'exclude' },
                            image:  { bidders: '*', filter: 'include' }

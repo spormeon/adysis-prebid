@@ -351,3 +351,8 @@ advertising.com, 25034, RESELLER
 sonobi.com, 783272317b, RESELLER, d1a215d9eb5aee9e
 spotxchange.com, 85519, RESELLER
 indexexchange.com, 186684, RESELLER
+
+#EMX Digital
+EMXDGT.com, 1265, DIRECT, 1e1d41537f7cad7f
+Appnexus.com, 1356, RESELLER, f5ab79cb980f11d1
+Google.com, pub-5995202563537249, RESELLER, f08c47fec0942fa0
