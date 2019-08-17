@@ -96,7 +96,20 @@ var assertive_custom_5 = null;
                     { bidder: 'smartyads', params: { placementId: '11836' } }, /* instream */
                     { bidder: 'brealtime', params: { placementId: '16714331', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }, /* one placementId for all sizes */
                     { bidder: 'conversant', params: { site_id: '117979', mimes: [ 'video/mp4', 'application/javascript' ], maxduration: 45 } },  /* golfwrx site id */ 
-                    { bidder: 'quantcast',  params: { publisherId: "EnBKrGZNvq", video: { mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'] } } }
+                    { bidder: 'quantcast',  params: { publisherId: 'EnBKrGZNvq', video: {
+                        mimes: ['video/mp4'], // required
+                        minduration: 3,       // optional
+                        maxduration: 5,       // optional
+                        protocols: [3],       // optional
+                        startdelay: 1,        // optional
+                        linearity: 1,         // optinal
+                        battr: [1, 2],        // optional
+                        maxbitrate: 10,       // optional
+                        playbackmethod: [1],  // optional
+                        delivery: [1],        // optional
+                        placement: 1,         // optional
+                        api: [2, 3]           // optional
+                      } } }
                 ]
             };
 
