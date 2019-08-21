@@ -356,3 +356,6 @@ indexexchange.com, 186684, RESELLER
 EMXDGT.com, 1265, DIRECT, 1e1d41537f7cad7f
 Appnexus.com, 1356, RESELLER, f5ab79cb980f11d1
 Google.com, pub-5995202563537249, RESELLER, f08c47fec0942fa0
+
+#DeCenter Ads
+ssp.decenterads.com, 50, DIRECT
