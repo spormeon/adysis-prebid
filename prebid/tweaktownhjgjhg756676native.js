@@ -1047,21 +1047,21 @@ bids: [
      // adyjs.aliasBidder('appnexus','152media');
   // adjust the bid in real time before the auction takes place
      adyjs.bidderSettings = {
-standard: {
-adserverTargeting: [
-{ key: "hb_bidder", val: function(bidResponse) { return bidResponse.bidderCode; } },
-{ key: "hb_adid", val: function(bidResponse) { return bidResponse.adId; } },
-{ key: "hb_pb",     val: function(bidResponse) { return bidResponse.pbCg; } },
-{ key: 'hb_size', val: function (bidResponse) { return bidResponse.size; } },
-{ key: 'hb_source', val: function (bidResponse) { return bidResponse.source; } },
-{ key: 'hb_deal', val: function (bidResponse) { return bidResponse.deal; } },
-{ key: 'hb_format', val: function (bidResponse) { return bidResponse.mediaType; } },
-{ key: 'hb_native_linkurl', val: function (bidResponse) { return bidResponse.native.clickUrl; } },
-{ key: 'hb_native_image', val: function (bidResponse) { return bidResponse.native.image; } },
-{ key: 'hb_native_brand', val: function (bidResponse) { return bidResponse.native.brand; } },
-{ key: 'hb_native_title', val: function (bidResponse) { return bidResponse.native.title; } }
-]
-},
+//standard: {
+//adserverTargeting: [
+//{ key: "hb_bidder", val: function(bidResponse) { return bidResponse.bidderCode; } },
+//{ key: "hb_adid", val: function(bidResponse) { return bidResponse.adId; } },
+//{ key: "hb_pb",     val: function(bidResponse) { return bidResponse.pbCg; } },
+//{ key: 'hb_size', val: function (bidResponse) { return bidResponse.size; } },
+//{ key: 'hb_source', val: function (bidResponse) { return bidResponse.source; } },
+//{ key: 'hb_deal', val: function (bidResponse) { return bidResponse.deal; } },
+//{ key: 'hb_format', val: function (bidResponse) { return bidResponse.mediaType; } },
+//{ key: 'hb_native_linkurl', val: function (bidResponse) { return bidResponse.native.clickUrl; } },
+//{ key: 'hb_native_image', val: function (bidResponse) { return bidResponse.native.image; } },
+//{ key: 'hb_native_brand', val: function (bidResponse) { return bidResponse.native.brand; } },
+//{ key: 'hb_native_title', val: function (bidResponse) { return bidResponse.native.title; } }
+//]
+//},
 aol:  { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 0.85; } },
 onedisplay:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 0.85; } },
 districtm:    { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 0.88; } },
