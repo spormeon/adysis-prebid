@@ -1044,7 +1044,7 @@ bids: [
      adyjs.aliasBidder('onedisplay','aol');
      adyjs.aliasBidder('appnexus','adysis');
      //adyjs.aliasBidder('serverbid','adsparc');
-     adyjs.aliasBidder('aardvark','adsparc');
+     //adyjs.aliasBidder('aardvark','adsparc');
      // adyjs.aliasBidder('appnexus','152media');
   // adjust the bid in real time before the auction takes place
      adyjs.bidderSettings = {
