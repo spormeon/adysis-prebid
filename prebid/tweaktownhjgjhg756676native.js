@@ -240,7 +240,7 @@ console.log("user bid cache:", USERBIDCACHE );
 {
  code: 'inreedvid4Slot',
  mediaTypes: {
-      banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50],[320, 100],[336, 280],[580, 400],[550, 310],[1, 1]] },  
+      banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50],[320, 100],[336, 280],[580, 400],[550, 310],[1, 1]] }  
 },
  bids: [
       { bidder: 'teads',      labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '75853', pageId: '87372' } },
@@ -354,7 +354,7 @@ console.log("user bid cache:", USERBIDCACHE );
 {
 code: 'inreedvid5Slot',
 mediaTypes: {
-  banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50],[320, 100],[336, 280],[580, 400],[550, 310],[1, 1]] },  
+  banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50],[320, 100],[336, 280],[580, 400],[550, 310],[1, 1]] }  
 },
 bids: [
   { bidder: 'teads',      labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '75853', pageId: '87372' } },
@@ -463,7 +463,7 @@ bids: [
 {
 code: 'inreedvid6Slot',
 mediaTypes: {
- banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50],[320, 100],[336, 280],[580, 400],[550, 310],[1, 1]] },  
+ banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50],[320, 100],[336, 280],[580, 400],[550, 310],[1, 1]] } 
 },
 bids: [
  { bidder: 'teads',      labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '75853', pageId: '87372' } },
@@ -572,7 +572,7 @@ bids: [
 {
 code: 'inreedvid7Slot',
 mediaTypes: {
- banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50],[320, 100],[336, 280],[580, 400],[550, 310],[1, 1]] },  
+ banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50],[320, 100],[336, 280],[580, 400],[550, 310],[1, 1]] }  
 },
 bids: [
  { bidder: 'teads',      labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '75853', pageId: '87372' } },
@@ -681,7 +681,7 @@ bids: [
 {
 code: 'inreedvid8Slot',
 mediaTypes: {
- banner: { sizes: [[300, 250],[250, 250],[1, 1]] },  
+ banner: { sizes: [[300, 250],[250, 250],[1, 1]] }  
 },
 bids: [
  { bidder: 'teads',      labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: '75853', pageId: '87372' } },
@@ -790,7 +790,7 @@ bids: [
 {
 code: 'inreedvid9Slot',
 mediaTypes: {
-banner: { sizes: [[300, 600],[300, 250],[250, 250],[1, 1]] },
+banner: { sizes: [[300, 600],[300, 250],[250, 250],[1, 1]] }
 },
 bids: [
 { bidder: 'teads',      labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: '75853', pageId: '87372' } },
@@ -899,7 +899,7 @@ bids: [
 {
 code: 'inreedvid10Slot',
 mediaTypes: {
-banner: { sizes: [[300, 600],[300, 250],[250, 250],[1, 1]] },
+banner: { sizes: [[300, 600],[300, 250],[250, 250],[1, 1]] }
 },
 bids: [
 { bidder: 'teads',      labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: '75853', pageId: '87372' } },
