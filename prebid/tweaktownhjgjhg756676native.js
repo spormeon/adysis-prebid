@@ -2,7 +2,7 @@
 //load up ima3.js
 (function () {
   var ima = document.createElement("script");
-  ima.async = true;
+  ima.async = false;
   ima.type = "text/javascript";
   ima.src = "https://imasdk.googleapis.com/js/sdkloader/ima3.js";
   var node = document.getElementsByTagName("footerbid1")[0];
@@ -11,7 +11,7 @@
 //load up video-min.js
 (function () {
   var vidmin = document.createElement("script");
-  vidmin.async = true;
+  vidmin.async = false;
   vidmin.type = "text/javascript";
   vidmin.src = "https://adops.adysis.com/video-min.js";
   var node = document.getElementsByTagName("footerbid1")[0];
@@ -20,7 +20,7 @@
 //load up vpaid.js
 (function () {
   var vpaid = document.createElement("script");
-  vpaid.async = true;
+  vpaid.async = false;
   vpaid.type = "text/javascript";
   vpaid.src = "https://adops.adysis.com/videojs_5.vast.vpaid-min.js";
   var node = document.getElementsByTagName("footerbid1")[0];
@@ -29,7 +29,7 @@
 //load up videojs-min.css
 (function () {
   var vidcss = document.createElement("script");
-  vidcss.async = true;
+  vidcss.async = false;
   vidcss.rel = "stylesheet";
   vidcss.src = "https://adops.adysis.com/video-js-min.css";
   var node = document.getElementsByTagName("footerbid1")[0];
@@ -38,7 +38,7 @@
 //load up videojs-min.css
 (function () {
   var vpaidcss = document.createElement("script");
-  vpaidcss.async = true;
+  vpaidcss.async = false;
   vpaidcss.rel = "stylesheet";
   vpaidcss.src = "https://adops.adysis.com/videojs.vast.vpaid-min.css";
   var node = document.getElementsByTagName("footerbid1")[0];
