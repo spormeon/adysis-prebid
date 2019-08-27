@@ -1375,7 +1375,7 @@ var page_load_time;
 page_load_time = new Date().getTime() - performance.timing.navigationStart;
 console.log(page_load_time + "ms -- Player loading!");
 
-var vid1 = videojs('inreedvid4Slot');
+var vid1 = videojs('vid1');
 
 page_load_time = new Date().getTime() - performance.timing.navigationStart;
 console.log(page_load_time + "ms -- Player loaded!");
@@ -1389,7 +1389,7 @@ function invokeVideoPlayer(url) {
      in the player's ID. Add a `ready` listener to make sure the
      player is ready before interacting with it. */
 
-    videojs("inreedvid4Slot").ready(function() {
+    videojs("vid1").ready(function() {
 
         page_load_time = new Date().getTime() - performance.timing.navigationStart;
         console.log(page_load_time + "ms -- Player is ready!");
