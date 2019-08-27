@@ -1369,6 +1369,62 @@ mappingmenuslot: [
    });
 });
 
+
+var page_load_time;
+
+page_load_time = new Date().getTime() - performance.timing.navigationStart;
+console.log(page_load_time + "ms -- Player loading!");
+
+var inreedvid4Slot = videojs('inreedvid4Slot');
+
+page_load_time = new Date().getTime() - performance.timing.navigationStart;
+console.log(page_load_time + "ms -- Player loaded!");
+
+function invokeVideoPlayer(url) {
+
+    page_load_time = new Date().getTime() - performance.timing.navigationStart;
+    console.log(page_load_time + "ms -- Prebid VAST url = " + url);
+
+    /* Access the player instance by calling `videojs()` and passing
+     in the player's ID. Add a `ready` listener to make sure the
+     player is ready before interacting with it. */
+
+    videojs("inreedvid4Slot").ready(function() {
+
+        page_load_time = new Date().getTime() - performance.timing.navigationStart;
+        console.log(page_load_time + "ms -- Player is ready!");
+
+        /* PASS SETTINGS TO VAST PLUGIN
+        Pass in a JSON object to the player's `vastClient` (defined
+        by the VAST/VPAID plugin we're using). The requires an
+        `adTagUrl`, which will be the URL returned by Prebid. You
+        can view all the options available for the `vastClient`
+        here:
+        https://github.com/MailOnline/videojs-vast-vpaid#options */
+
+        var player = this;
+        var vastAd = player.vastClient({
+            adTagUrl: url,
+            prerollTimeout: PREBID_TIMEOUT,
+            playAdAlways: true,
+            verbosity: 4,
+            vpaidFlashLoaderPath: "https://adops.adysis.com/VPAIDFlash.swf?raw=true",
+            autoplay: true
+        });
+
+        page_load_time = new Date().getTime() - performance.timing.navigationStart;
+        console.log(page_load_time + "ms -- Prebid VAST tag inserted!");
+
+        player.muted(true);
+        player.play();
+
+        page_load_time = new Date().getTime() - performance.timing.navigationStart;
+        console.log(page_load_time + "ms -- invokeVideoPlayer complete!");
+    });
+}
+
+
+
 assertive_custom_1 = USERBIDCACHE ? 'prebid_cache_enabled' : 'prebid_cache_disabled';
 assertive_custom_2 = FLOOR_PRICE;
 
