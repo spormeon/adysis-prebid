@@ -1375,7 +1375,7 @@ var page_load_time;
 page_load_time = new Date().getTime() - performance.timing.navigationStart;
 console.log(page_load_time + "ms -- Player loading!");
 
-var inreedvid4Slot = videojs('inreedvid4Slot');
+var vid1 = videojs('inreedvid4Slot');
 
 page_load_time = new Date().getTime() - performance.timing.navigationStart;
 console.log(page_load_time + "ms -- Player loaded!");
