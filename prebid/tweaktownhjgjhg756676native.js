@@ -49,7 +49,7 @@
 //Slots to send to page, have to add 1 on to the child (number) because the div counts as 1 in the string 
 window.addEventListener("DOMContentLoaded",function(){
 document.querySelector("#dfp-ad-zone-300-5").insertAdjacentHTML('afterbegin','<div class="ad-reporter-ahytrfg35423"><div id="advertisement" style="border: 0pt none; margin: auto; text-align: center; color: #999; text-transform: uppercase; font-family: sans-serif; font-size: 9px; font-weight: 400; letter-spacing: .2em; line-height: 1; margin-top: 0px; position: relative; top: -4px;">Advertisement</div><div id="inreedvid8Slot"></div></div><br>');
-document.querySelector("#mvp-content-main p:nth-child(2)").insertAdjacentHTML('afterbegin','<br><div class="ad-reporter-ahytrfg35423"><div id="advertisement" style="border: 0pt none; margin: auto; text-align: center; color: #999; text-transform: uppercase; font-family: sans-serif; font-size: 9px; font-weight: 400; letter-spacing: .2em; line-height: 1; margin-top: 0px; position: relative; top: -4px;">Advertisement</div><div id="inreedvid4Slot"></div><video id="inreedvid4Slot" class="video-js vjs-default-skin vjs-big-play-centered" controls data-setup="{"preload": "auto"}" width="550" height="310" style="display:block; margin: 0 auto;"><source src="//vjs.zencdn.net/v/oceans.mp4" type="video/mp4"/><source src="//vjs.zencdn.net/v/oceans.webm" type="video/webm"/><source src="//vjs.zencdn.net/v/oceans.ogv" type="video/ogg"/></video></div><br>');
+document.querySelector("#mvp-content-main p:nth-child(2)").insertAdjacentHTML('afterbegin','<br><div class="ad-reporter-ahytrfg35423"><div id="advertisement" style="border: 0pt none; margin: auto; text-align: center; color: #999; text-transform: uppercase; font-family: sans-serif; font-size: 9px; font-weight: 400; letter-spacing: .2em; line-height: 1; margin-top: 0px; position: relative; top: -4px;">Advertisement</div><div id="inreedvid4Slot"></div><video id="vid1" class="video-js vjs-default-skin vjs-big-play-centered" controls data-setup="{"preload": "auto"}" width="550" height="310" style="display:block; margin: 0 auto;"><source src="//vjs.zencdn.net/v/oceans.mp4" type="video/mp4"/><source src="//vjs.zencdn.net/v/oceans.webm" type="video/webm"/><source src="//vjs.zencdn.net/v/oceans.ogv" type="video/ogg"/></video></div><br>');
 document.querySelector("#mvp-content-main p:nth-child(8)").insertAdjacentHTML('afterbegin','<br><div class="ad-reporter-ahytrfg35423"><div id="advertisement" style="border: 0pt none; margin: auto; text-align: center; color: #999; text-transform: uppercase; font-family: sans-serif; font-size: 9px; font-weight: 400; letter-spacing: .2em; line-height: 1; margin-top: 0px; position: relative; top: -4px;">Advertisement</div><div id="inreedvid5Slot"></div></div><br>');
 document.querySelector("#dfp-ad-zone-300-6").insertAdjacentHTML('afterbegin','<br><div class="ad-reporter-ahytrfg35423"><div id="advertisement" style="border: 0pt none; margin: auto; text-align: center; color: #999; text-transform: uppercase; font-family: sans-serif; font-size: 9px; font-weight: 400; letter-spacing: .2em; line-height: 1; margin-top: 0px; position: relative; top: -4px;">Advertisement</div><div id="inreedvid9Slot"></div></div><br>');
 document.querySelector("#mvp-author-box-text p:nth-child(1)").insertAdjacentHTML('beforeend','<br><br><div class="ad-reporter-ahytrfg35423"><div id="advertisement" style="border: 0pt none; margin: auto; text-align: center; color: #999; text-transform: uppercase; font-family: sans-serif; font-size: 9px; font-weight: 400; letter-spacing: .2em; line-height: 1; margin-top: 0px; position: relative; top: -4px;">Advertisement</div><div id="inreedvid6Slot"></div></div><br>');
@@ -248,7 +248,7 @@ console.log("user bid cache:", USERBIDCACHE );
     	},
     	//new ad unit block
         {
-          code: 'inreedvid4Slot',
+          code: 'vid1',
           mediaTypes: {
                 video: { context: 'instream', playerSize: [[640, 480]],  mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'],  playbackmethod: [2], minduration: 0,  maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10], linearity: 1, api: [1,2,3,4,5,6]  }
         },
@@ -1372,7 +1372,7 @@ var page_load_time;
 page_load_time = new Date().getTime() - performance.timing.navigationStart;
 console.log(page_load_time + "ms -- Player loading!");
 
-var vid1 = videojs('inreedvid4Slot');
+var vid1 = videojs('vid1');
 
 page_load_time = new Date().getTime() - performance.timing.navigationStart;
 console.log(page_load_time + "ms -- Player loaded!");
@@ -1386,7 +1386,7 @@ function invokeVideoPlayer(url) {
      in the player's ID. Add a `ready` listener to make sure the
      player is ready before interacting with it. */
 
-    videojs("inreedvid4Slot").ready(function() {
+    videojs("vid1").ready(function() {
 
         page_load_time = new Date().getTime() - performance.timing.navigationStart;
         console.log(page_load_time + "ms -- Player is ready!");
