@@ -31,7 +31,7 @@
   var vidcss = document.createElement("link");
   vidcss.async = false;
   vidcss.rel = "stylesheet";
-  vidcss.src = "https://adops.adysis.com/video-js-min.css";
+  vidcss.href = "https://adops.adysis.com/video-js-min.css";
   var node = document.getElementsByTagName("head")[0];
   node.parentNode.insertBefore(vidcss, node);
 })();
@@ -40,7 +40,7 @@
   var vpaidcss = document.createElement("link");
   vpaidcss.async = false;
   vpaidcss.rel = "stylesheet";
-  vpaidcss.src = "https://adops.adysis.com/videojs.vast.vpaid-min.css";
+  vpaidcss.href = "https://adops.adysis.com/videojs.vast.vpaid-min.css";
   var node = document.getElementsByTagName("head")[0];
   node.parentNode.insertBefore(vpaidcss, node);
 })();
