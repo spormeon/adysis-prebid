@@ -1407,7 +1407,7 @@ function invokeVideoPlayer(url) {
         var player = this;
         var vastAd = player.vastClient({
             adTagUrl: url,
-            prerollTimeout: PREBID_TIMEOUT,
+            prerollTimeout: 2000,
             playAdAlways: true,
             verbosity: 4,
             vpaidFlashLoaderPath: "https://adops.adysis.com/VPAIDFlash.swf?raw=true",
