@@ -28,7 +28,7 @@
 })();
 //load up videojs-min.css
 (function () {
-  var vidcss = document.createElement("script");
+  var vidcss = document.createElement("link");
   vidcss.async = false;
   vidcss.rel = "stylesheet";
   vidcss.src = "https://adops.adysis.com/video-js-min.css";
@@ -37,7 +37,7 @@
 })();
 //load up videojs-min.css
 (function () {
-  var vpaidcss = document.createElement("script");
+  var vpaidcss = document.createElement("link");
   vpaidcss.async = false;
   vpaidcss.rel = "stylesheet";
   vpaidcss.src = "https://adops.adysis.com/videojs.vast.vpaid-min.css";
