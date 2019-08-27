@@ -70,7 +70,7 @@ var assertive_custom_5 = null;
             };
             /* Prebid video ad unit */
             var videoAdUnit = {
-                code: 'vid1',
+                code: 'vid2',
                 mediaTypes: {
                     video: { context: 'instream', playerSize: [[640, 480]],  mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'],  playbackmethod: [2], minduration: 0,  maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10], linearity: 1, api: [1,2,3,4,5,6]  }
                 },
@@ -196,7 +196,7 @@ var assertive_custom_5 = null;
             </p>
             <div class="ad-reporter-ahytrfg35423">
 <div id="advertisement" style="border: 0pt none; margin: auto; text-align: center; color: #999; text-transform: uppercase; font-family: sans-serif; font-size: 9px; font-weight: 400; letter-spacing: .2em; line-height: 1; margin-top: 0px; position: relative; top: -4px;">Advertisement</div>
-            <video id="vid1" class="video-js vjs-default-skin vjs-big-play-centered" controls data-setup='{"preload": "auto", "loop": true}' width='550' height='310' style="display:block; margin: 0 auto;">
+            <video id="vid2" class="video-js vjs-default-skin vjs-big-play-centered" controls data-setup='{"preload": "auto", "loop": true}' width='550' height='310' style="display:block; margin: 0 auto;">
                 <source src="//vjs.zencdn.net/v/oceans.mp4" type='video/mp4'/>
                 <source src="//vjs.zencdn.net/v/oceans.webm" type='video/webm'/>
                 <source src="//vjs.zencdn.net/v/oceans.ogv" type='video/ogg'/>
@@ -254,7 +254,7 @@ var assertive_custom_5 = null;
             page_load_time = new Date().getTime() - performance.timing.navigationStart;
             console.log(page_load_time + "ms -- Player loading!");
 
-            var vid1 = videojs('vid1');
+            var vid1 = videojs('vid2');
 
             page_load_time = new Date().getTime() - performance.timing.navigationStart;
             console.log(page_load_time + "ms -- Player loaded!");
@@ -268,7 +268,7 @@ var assertive_custom_5 = null;
                  in the player's ID. Add a `ready` listener to make sure the
                  player is ready before interacting with it. */
 
-                videojs("vid1").ready(function() {
+                videojs("vid2").ready(function() {
 
                     page_load_time = new Date().getTime() - performance.timing.navigationStart;
                     console.log(page_load_time + "ms -- Player is ready!");
