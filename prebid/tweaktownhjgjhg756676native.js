@@ -225,7 +225,30 @@ console.log("user bid cache:", USERBIDCACHE );
     var assertive_custom_5 = null;
 //example of supplying a custom var from a prev. defined var
     assertive_timeout = PREBID_TIMEOUT;
+    
+    
+    var adyjs = adyjs || {};
+    adyjs.que = adyjs.que || [];
+    
+    /* PRE-DEFINE `invokeVideoPlayer`
+    Because we have no way of knowing when all the bids will be
+    returned from Prebid we can't be sure that the browser will
+    reach the point where `invokeVideoPlayer` is defined before
+    `bidsBackHandler` fires and tries to call it.
+    To prevent an "`invokeVideoPlayer` not defined" error, we
+    pre-define it before we make the call to Prebid, and redefine
+    it later on with the code to create the player and play the
+    ad.
+    In this first version, it simply stores the winning VAST to
+    use later. */
 
+    var tempTag = false;
+    var invokeVideoPlayer = function(url) {
+        tempTag = url;
+    };
+    
+    
+    
     var adUnits = [
     	//new ad unit block
     	 {
@@ -1109,25 +1132,7 @@ bids: [
      googletag.cmd.push(function() {
      googletag.pubads().disableInitialLoad();
     });
-    var adyjs = adyjs || {};
-     adyjs.que = adyjs.que || [];
-     
-     /* PRE-DEFINE `invokeVideoPlayer`
-     Because we have no way of knowing when all the bids will be
-     returned from Prebid we can't be sure that the browser will
-     reach the point where `invokeVideoPlayer` is defined before
-     `bidsBackHandler` fires and tries to call it.
-     To prevent an "`invokeVideoPlayer` not defined" error, we
-     pre-define it before we make the call to Prebid, and redefine
-     it later on with the code to create the player and play the
-     ad.
-     In this first version, it simply stores the winning VAST to
-     use later. */
-
-     var tempTag = false;
-     var invokeVideoPlayer = function(url) {
-         tempTag = url;
-     };
+    
      
      
      adyjs.que.push(function() {
