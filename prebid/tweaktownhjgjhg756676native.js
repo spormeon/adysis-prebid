@@ -1,44 +1,3 @@
-//Slots to send to page, have to add 1 on to the child (number) because the div counts as 1 in the string 
-window.addEventListener("DOMContentLoaded",function(){
-document.querySelector("#dfp-ad-zone-300-5").insertAdjacentHTML('afterbegin','<div class="ad-reporter-ahytrfg35423"><div id="advertisement" style="border: 0pt none; margin: auto; text-align: center; color: #999; text-transform: uppercase; font-family: sans-serif; font-size: 9px; font-weight: 400; letter-spacing: .2em; line-height: 1; margin-top: 0px; position: relative; top: -4px;">Advertisement</div><div id="inreedvid8Slot"></div></div><br>');
-document.querySelector("#mvp-content-main p:nth-child(2)").insertAdjacentHTML('afterbegin','<br><div class="ad-reporter-ahytrfg35423"><div id="advertisement" style="border: 0pt none; margin: auto; text-align: center; color: #999; text-transform: uppercase; font-family: sans-serif; font-size: 9px; font-weight: 400; letter-spacing: .2em; line-height: 1; margin-top: 0px; position: relative; top: -4px;">Advertisement</div><div id="inreedvid4Slot"></div><video id="inreedvid4Slot" class="video-js vjs-default-skin vjs-big-play-centered" controls data-setup="{"preload": "auto"}" width="550" height="310" style="display:block; margin: 0 auto;"><source src="//vjs.zencdn.net/v/oceans.mp4" type="video/mp4"/><source src="//vjs.zencdn.net/v/oceans.webm" type="video/webm"/><source src="//vjs.zencdn.net/v/oceans.ogv" type="video/ogg"/></video></div><br>');
-document.querySelector("#mvp-content-main p:nth-child(8)").insertAdjacentHTML('afterbegin','<br><div class="ad-reporter-ahytrfg35423"><div id="advertisement" style="border: 0pt none; margin: auto; text-align: center; color: #999; text-transform: uppercase; font-family: sans-serif; font-size: 9px; font-weight: 400; letter-spacing: .2em; line-height: 1; margin-top: 0px; position: relative; top: -4px;">Advertisement</div><div id="inreedvid5Slot"></div></div><br>');
-document.querySelector("#dfp-ad-zone-300-6").insertAdjacentHTML('afterbegin','<br><div class="ad-reporter-ahytrfg35423"><div id="advertisement" style="border: 0pt none; margin: auto; text-align: center; color: #999; text-transform: uppercase; font-family: sans-serif; font-size: 9px; font-weight: 400; letter-spacing: .2em; line-height: 1; margin-top: 0px; position: relative; top: -4px;">Advertisement</div><div id="inreedvid9Slot"></div></div><br>');
-document.querySelector("#mvp-author-box-text p:nth-child(1)").insertAdjacentHTML('beforeend','<br><br><div class="ad-reporter-ahytrfg35423"><div id="advertisement" style="border: 0pt none; margin: auto; text-align: center; color: #999; text-transform: uppercase; font-family: sans-serif; font-size: 9px; font-weight: 400; letter-spacing: .2em; line-height: 1; margin-top: 0px; position: relative; top: -4px;">Advertisement</div><div id="inreedvid6Slot"></div></div><br>');
-document.querySelector("#dfp-ad-zone-300-9").insertAdjacentHTML('afterbegin','<br><div class="ad-reporter-ahytrfg35423"><div id="advertisement" style="border: 0pt none; margin: auto; text-align: center; color: #999; text-transform: uppercase; font-family: sans-serif; font-size: 9px; font-weight: 400; letter-spacing: .2em; line-height: 1; margin-top: 0px; position: relative; top: -4px;">Advertisement</div><div id="inreedvid10Slot"></div></div><br>');
-document.querySelector("#mvp-post-add-wrap").insertAdjacentHTML('afterbegin','<br><br><div class="ad-reporter-ahytrfg35423"><div id="advertisement" style="border: 0pt none; margin: auto; text-align: center; color: #999; text-transform: uppercase; font-family: sans-serif; font-size: 9px; font-weight: 400; letter-spacing: .2em; line-height: 1; margin-top: 0px; position: relative; top: -4px;">Advertisement</div><div id="inreedvid7Slot"></div></div><br>');
-
-});
-//load up bidfilter.js,
-window._BidFilter={site_id:1045,pbjsKey:'adyjs',checkAudio:false};
-(function () {
-   var bidfiletr = document.createElement("script");
-   bidfiletr.async = true;
-   bidfiletr.type = "text/javascript";
-   bidfiletr.src = "https://cdn.bidfilter.com/bidfilter.js";
-   var node = document.getElementsByTagName("footerbid1")[0];
-   node.parentNode.insertBefore(bidfiletr, node);
-})();
-//load up prebid.js,  I think we need to load this earlier
-(function() {
-  var adyjsEl = document.createElement("script");
-  adyjsEl.type = "text/javascript";
-  adyjsEl.async = true;
-  adyjsEl.src = "https://adops.adysis.com/prebid2.29.0adyjs.js";
-  var adyjsTargetEl = document.getElementsByTagName("footerbid1")[0];
-  adyjsTargetEl.insertBefore(adyjsEl, adyjsTargetEl.firstChild);
-})();
-//load up google gpt.js
-(function () {
-  var gads = document.createElement("script");
-  gads.async = true;
-  gads.type = "text/javascript";
-  gads.src = "https://securepubads.g.doubleclick.net/tag/js/gpt.js";
-  var node = document.getElementsByTagName("footerbid1")[0];
-  node.parentNode.insertBefore(gads, node);
-})();
-
-
 //  scripts and stylesheets to get video instream working - START
 //load up ima3.js
 (function () {
@@ -87,7 +46,45 @@ window._BidFilter={site_id:1045,pbjsKey:'adyjs',checkAudio:false};
 })();
 //scripts and stylesheets to get video instream working - END
 
+//Slots to send to page, have to add 1 on to the child (number) because the div counts as 1 in the string 
+window.addEventListener("DOMContentLoaded",function(){
+document.querySelector("#dfp-ad-zone-300-5").insertAdjacentHTML('afterbegin','<div class="ad-reporter-ahytrfg35423"><div id="advertisement" style="border: 0pt none; margin: auto; text-align: center; color: #999; text-transform: uppercase; font-family: sans-serif; font-size: 9px; font-weight: 400; letter-spacing: .2em; line-height: 1; margin-top: 0px; position: relative; top: -4px;">Advertisement</div><div id="inreedvid8Slot"></div></div><br>');
+document.querySelector("#mvp-content-main p:nth-child(2)").insertAdjacentHTML('afterbegin','<br><div class="ad-reporter-ahytrfg35423"><div id="advertisement" style="border: 0pt none; margin: auto; text-align: center; color: #999; text-transform: uppercase; font-family: sans-serif; font-size: 9px; font-weight: 400; letter-spacing: .2em; line-height: 1; margin-top: 0px; position: relative; top: -4px;">Advertisement</div><div id="inreedvid4Slot"></div><video id="inreedvid4Slot" class="video-js vjs-default-skin vjs-big-play-centered" controls data-setup="{"preload": "auto"}" width="550" height="310" style="display:block; margin: 0 auto;"><source src="//vjs.zencdn.net/v/oceans.mp4" type="video/mp4"/><source src="//vjs.zencdn.net/v/oceans.webm" type="video/webm"/><source src="//vjs.zencdn.net/v/oceans.ogv" type="video/ogg"/></video></div><br>');
+document.querySelector("#mvp-content-main p:nth-child(8)").insertAdjacentHTML('afterbegin','<br><div class="ad-reporter-ahytrfg35423"><div id="advertisement" style="border: 0pt none; margin: auto; text-align: center; color: #999; text-transform: uppercase; font-family: sans-serif; font-size: 9px; font-weight: 400; letter-spacing: .2em; line-height: 1; margin-top: 0px; position: relative; top: -4px;">Advertisement</div><div id="inreedvid5Slot"></div></div><br>');
+document.querySelector("#dfp-ad-zone-300-6").insertAdjacentHTML('afterbegin','<br><div class="ad-reporter-ahytrfg35423"><div id="advertisement" style="border: 0pt none; margin: auto; text-align: center; color: #999; text-transform: uppercase; font-family: sans-serif; font-size: 9px; font-weight: 400; letter-spacing: .2em; line-height: 1; margin-top: 0px; position: relative; top: -4px;">Advertisement</div><div id="inreedvid9Slot"></div></div><br>');
+document.querySelector("#mvp-author-box-text p:nth-child(1)").insertAdjacentHTML('beforeend','<br><br><div class="ad-reporter-ahytrfg35423"><div id="advertisement" style="border: 0pt none; margin: auto; text-align: center; color: #999; text-transform: uppercase; font-family: sans-serif; font-size: 9px; font-weight: 400; letter-spacing: .2em; line-height: 1; margin-top: 0px; position: relative; top: -4px;">Advertisement</div><div id="inreedvid6Slot"></div></div><br>');
+document.querySelector("#dfp-ad-zone-300-9").insertAdjacentHTML('afterbegin','<br><div class="ad-reporter-ahytrfg35423"><div id="advertisement" style="border: 0pt none; margin: auto; text-align: center; color: #999; text-transform: uppercase; font-family: sans-serif; font-size: 9px; font-weight: 400; letter-spacing: .2em; line-height: 1; margin-top: 0px; position: relative; top: -4px;">Advertisement</div><div id="inreedvid10Slot"></div></div><br>');
+document.querySelector("#mvp-post-add-wrap").insertAdjacentHTML('afterbegin','<br><br><div class="ad-reporter-ahytrfg35423"><div id="advertisement" style="border: 0pt none; margin: auto; text-align: center; color: #999; text-transform: uppercase; font-family: sans-serif; font-size: 9px; font-weight: 400; letter-spacing: .2em; line-height: 1; margin-top: 0px; position: relative; top: -4px;">Advertisement</div><div id="inreedvid7Slot"></div></div><br>');
 
+});
+//load up bidfilter.js,
+window._BidFilter={site_id:1045,pbjsKey:'adyjs',checkAudio:false};
+(function () {
+   var bidfiletr = document.createElement("script");
+   bidfiletr.async = true;
+   bidfiletr.type = "text/javascript";
+   bidfiletr.src = "https://cdn.bidfilter.com/bidfilter.js";
+   var node = document.getElementsByTagName("footerbid1")[0];
+   node.parentNode.insertBefore(bidfiletr, node);
+})();
+//load up prebid.js,  I think we need to load this earlier
+(function() {
+  var adyjsEl = document.createElement("script");
+  adyjsEl.type = "text/javascript";
+  adyjsEl.async = true;
+  adyjsEl.src = "https://adops.adysis.com/prebid2.29.0adyjs.js";
+  var adyjsTargetEl = document.getElementsByTagName("footerbid1")[0];
+  adyjsTargetEl.insertBefore(adyjsEl, adyjsTargetEl.firstChild);
+})();
+//load up google gpt.js
+(function () {
+  var gads = document.createElement("script");
+  gads.async = true;
+  gads.type = "text/javascript";
+  gads.src = "https://securepubads.g.doubleclick.net/tag/js/gpt.js";
+  var node = document.getElementsByTagName("footerbid1")[0];
+  node.parentNode.insertBefore(gads, node);
+})();
 //  TIMEOUT MAP - 1000 def brings back bigger bids in Uk
 var timeoutMap = {
 0 : 1400,
