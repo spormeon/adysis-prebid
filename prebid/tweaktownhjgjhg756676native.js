@@ -37,6 +37,57 @@ window._BidFilter={site_id:1045,pbjsKey:'adyjs',checkAudio:false};
   var node = document.getElementsByTagName("footerbid1")[0];
   node.parentNode.insertBefore(gads, node);
 })();
+
+
+//  scripts and stylesheets to get video instream working - START
+//load up ima3.js
+(function () {
+  var ima = document.createElement("script");
+  ima.async = true;
+  ima.type = "text/javascript";
+  ima.src = "https://imasdk.googleapis.com/js/sdkloader/ima3.js";
+  var node = document.getElementsByTagName("footerbid1")[0];
+  node.parentNode.insertBefore(ima, node);
+})();
+//load up video-min.js
+(function () {
+  var vidmin = document.createElement("script");
+  vidmin.async = true;
+  vidmin.type = "text/javascript";
+  vidmin.src = "https://adops.adysis.com/video-min.js";
+  var node = document.getElementsByTagName("footerbid1")[0];
+  node.parentNode.insertBefore(vidmin, node);
+})();
+//load up vpaid.js
+(function () {
+  var vpaid = document.createElement("script");
+  vpaid.async = true;
+  vpaid.type = "text/javascript";
+  vpaid.src = "https://adops.adysis.com/videojs_5.vast.vpaid-min.js";
+  var node = document.getElementsByTagName("footerbid1")[0];
+  node.parentNode.insertBefore(vpaid, node);
+})();
+//load up videojs-min.css
+(function () {
+  var vidcss = document.createElement("script");
+  vidcss.async = true;
+  vidcss.rel = "stylesheet";
+  vidcss.src = "https://adops.adysis.com/video-js-min.css";
+  var node = document.getElementsByTagName("footerbid1")[0];
+  node.parentNode.insertBefore(vidcss, node);
+})();
+//load up videojs-min.css
+(function () {
+  var vpaidcss = document.createElement("script");
+  vpaidcss.async = true;
+  vpaidcss.rel = "stylesheet";
+  vpaidcss.src = "https://adops.adysis.com/videojs.vast.vpaid-min.css";
+  var node = document.getElementsByTagName("footerbid1")[0];
+  node.parentNode.insertBefore(vpaidcss, node);
+})();
+//scripts and stylesheets to get video instream working - END
+
+
 //  TIMEOUT MAP - 1000 def brings back bigger bids in Uk
 var timeoutMap = {
 0 : 1400,
@@ -1191,7 +1242,7 @@ adysis: { bidCpmAdjustment : function(bidCpm){ return "+c.cpm+" * 2;} },
     	
     	bidsBackHandler: function(bids) {
             var videoUrl = adyjs.adServers.dfp.buildVideoUrl({
-                adUnit: videoAdUnit,
+                adUnit: adUnits,
                 params: {
                     // iu: '/19968336/prebid_cache_video_adunit',
                     iu: '/1001824/Golfwrx.com-HB/vid1',
@@ -1201,7 +1252,7 @@ adysis: { bidCpmAdjustment : function(bidCpm){ return "+c.cpm+" * 2;} },
             }); 
          // Mark the bid, used in buildVideoUrl, as used
             adyjs.markWinningBidAsUsed({
-                adUnitCode: videoAdUnit.code // optional if you know the adId
+                adUnitCode: adUnits.code // optional if you know the adId
                 // adId: bid.adId // optional
             });
             invokeVideoPlayer(videoUrl);
