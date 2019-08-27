@@ -1063,6 +1063,25 @@ bids: [
     });
     var adyjs = adyjs || {};
      adyjs.que = adyjs.que || [];
+     
+     /* PRE-DEFINE `invokeVideoPlayer`
+     Because we have no way of knowing when all the bids will be
+     returned from Prebid we can't be sure that the browser will
+     reach the point where `invokeVideoPlayer` is defined before
+     `bidsBackHandler` fires and tries to call it.
+     To prevent an "`invokeVideoPlayer` not defined" error, we
+     pre-define it before we make the call to Prebid, and redefine
+     it later on with the code to create the player and play the
+     ad.
+     In this first version, it simply stores the winning VAST to
+     use later. */
+
+     var tempTag = false;
+     var invokeVideoPlayer = function(url) {
+         tempTag = url;
+     };
+     
+     
      adyjs.que.push(function() {
      adyjs.addAdUnits(adUnits);
   // alias for bidder
@@ -1131,7 +1150,7 @@ adysis: { bidCpmAdjustment : function(bidCpm){ return "+c.cpm+" * 2;} },
     	rubicon: {singleRequest: true},
     	priceGranularity: customConfigObjectA,
      consentManagement: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400, allowAuctionWithoutConsent: true },
-        //cache: {url: "//prebid.adnxs.com/pbc/v1/cache"},
+      cache: {url: "https://prebid.adnxs.com/pbc/v1/cache"},
       s2sConfig: {
         accountId: 'e31f627f-53a3-4288-9979-482d3c6ffc76',
         enabled: false,
@@ -1168,6 +1187,28 @@ adysis: { bidCpmAdjustment : function(bidCpm){ return "+c.cpm+" * 2;} },
        ]
      });
     adyjs.requestBids({
+    	
+    	
+    	bidsBackHandler: function(bids) {
+            var videoUrl = adyjs.adServers.dfp.buildVideoUrl({
+                adUnit: videoAdUnit,
+                params: {
+                    // iu: '/19968336/prebid_cache_video_adunit',
+                    iu: '/1001824/Golfwrx.com-HB/vid1',
+                    description_url: 'http://golfwrx.com',
+                    output: 'vast'
+                }
+            }); 
+         // Mark the bid, used in buildVideoUrl, as used
+            adyjs.markWinningBidAsUsed({
+                adUnitCode: videoAdUnit.code // optional if you know the adId
+                // adId: bid.adId // optional
+            });
+            invokeVideoPlayer(videoUrl);
+        },
+   
+    	
+    	
      bidsBackHandler: initAdserver1,
      timeout: PREBID_TIMEOUT
     });
