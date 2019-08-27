@@ -5,7 +5,7 @@
   ima.async = false;
   ima.type = "text/javascript";
   ima.src = "https://imasdk.googleapis.com/js/sdkloader/ima3.js";
-  var node = document.getElementsByTagName("footerbid1")[0];
+  var node = document.getElementsByTagName("header")[0];
   node.parentNode.insertBefore(ima, node);
 })();
 //load up video-min.js
@@ -14,7 +14,7 @@
   vidmin.async = false;
   vidmin.type = "text/javascript";
   vidmin.src = "https://adops.adysis.com/video-min.js";
-  var node = document.getElementsByTagName("footerbid1")[0];
+  var node = document.getElementsByTagName("header")[0];
   node.parentNode.insertBefore(vidmin, node);
 })();
 //load up vpaid.js
@@ -23,7 +23,7 @@
   vpaid.async = false;
   vpaid.type = "text/javascript";
   vpaid.src = "https://adops.adysis.com/videojs_5.vast.vpaid-min.js";
-  var node = document.getElementsByTagName("footerbid1")[0];
+  var node = document.getElementsByTagName("header")[0];
   node.parentNode.insertBefore(vpaid, node);
 })();
 //load up videojs-min.css
@@ -32,7 +32,7 @@
   vidcss.async = false;
   vidcss.rel = "stylesheet";
   vidcss.src = "https://adops.adysis.com/video-js-min.css";
-  var node = document.getElementsByTagName("footerbid1")[0];
+  var node = document.getElementsByTagName("header")[0];
   node.parentNode.insertBefore(vidcss, node);
 })();
 //load up videojs-min.css
@@ -41,7 +41,7 @@
   vpaidcss.async = false;
   vpaidcss.rel = "stylesheet";
   vpaidcss.src = "https://adops.adysis.com/videojs.vast.vpaid-min.css";
-  var node = document.getElementsByTagName("footerbid1")[0];
+  var node = document.getElementsByTagName("header")[0];
   node.parentNode.insertBefore(vpaidcss, node);
 })();
 //scripts and stylesheets to get video instream working - END
