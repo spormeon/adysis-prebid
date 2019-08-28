@@ -1258,8 +1258,7 @@ adysis: { bidCpmAdjustment : function(bidCpm){ return "+c.cpm+" * 2;} },
                 // adId: bid.adId // optional
             });
             invokeVideoPlayer(videoUrl);
-        },
-   
+        }
     	
     	
      bidsBackHandler: initAdserver1,
