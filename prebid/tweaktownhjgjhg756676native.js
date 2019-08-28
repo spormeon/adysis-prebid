@@ -21,7 +21,15 @@ adyjsEl.async = true;
 adyjsEl.type = "text/javascript";
 adyjsEl.src = "https://adops.adysis.com/prebid2.29.0adyjs.js";
 var adyjsTargetEl = document.getElementsByTagName("footerbid1")[0];
-adyjsTargetEl.insertBefore(adyjsEl, adyjsTargetEl.secondChild);
+adyjsTargetEl.insertBefore(adyjsEl, adyjsTargetEl.firstChild);
+})();
+(function() {
+var preconnect = document.createElement("script");
+preconnect.async = true;
+preconnect.type = "text/javascript";
+preconnect.src = "https://adops.adysis.com/preconnect.js";
+var nodepreconnect = document.getElementsByTagName("footerbid1")[0];
+nodepreconnect.insertBefore(preconnect, nodepreconnect.secondChild);
 })();
 //load up google gpt.js
 (function () {
