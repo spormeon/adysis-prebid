@@ -1137,6 +1137,7 @@ bids: [
      
      adyjs.que.push(function() {
      adyjs.addAdUnits(adUnits);
+     adyjs.addAdUnits(videoAdUnit); // add your ad units to the bid request
   // alias for bidder
      //adyjs.aliasBidder('appnexus','brealtime'); 
      //adyjs.aliasBidder('appnexus','springserveAlias2');
