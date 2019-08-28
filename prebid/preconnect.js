@@ -343,3 +343,27 @@ nodepclink1.insertBefore(pclink1, nodepclink1.firstChild);
 	var nodepclink1 = document.getElementsByTagName("footerbid1")[0];
 	nodepclink1.insertBefore(pclink1, nodepclink1.firstChild);
 	})();
+(function () {
+	var pclink1 = document.createElement("link");
+	pclink1.rel = "preconnect";
+	pclink1.href = "//btlr.sharethrough.com";
+	pclink1.crossorigin;
+	var nodepclink1 = document.getElementsByTagName("footerbid1")[0];
+	nodepclink1.insertBefore(pclink1, nodepclink1.firstChild);
+	})();
+(function () {
+	var pclink1 = document.createElement("link");
+	pclink1.rel = "preconnect";
+	pclink1.href = "//supply.decenterads.com";
+	pclink1.crossorigin;
+	var nodepclink1 = document.getElementsByTagName("footerbid1")[0];
+	nodepclink1.insertBefore(pclink1, nodepclink1.firstChild);
+	})();
+(function () {
+	var pclink1 = document.createElement("link");
+	pclink1.rel = "preconnect";
+	pclink1.href = "//x.bidfilter.com";
+	pclink1.crossorigin;
+	var nodepclink1 = document.getElementsByTagName("footerbid1")[0];
+	nodepclink1.insertBefore(pclink1, nodepclink1.firstChild);
+	})();
