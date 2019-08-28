@@ -26,7 +26,7 @@ adyjsTargetEl.insertBefore(adyjsEl, adyjsTargetEl.firstChild);
 //load up preconnect.js,  I think we need to load this earlier
 (function() {
 var preconnect = document.createElement("script");
-preconnect.async = true;
+preconnect.rel = "preload";
 preconnect.type = "text/javascript";
 preconnect.src = "https://adops.adysis.com/preconnect.js";
 var nodepreconnect = document.getElementsByTagName("footerbid1")[0];
