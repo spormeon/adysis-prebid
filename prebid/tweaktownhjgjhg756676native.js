@@ -1255,7 +1255,7 @@ adysis: { bidCpmAdjustment : function(bidCpm){ return "+c.cpm+" * 2;} },
             }); 
          // Mark the bid, used in buildVideoUrl, as used
             adyjs.markWinningBidAsUsed({
-                adUnitCode: adUnits.code // optional if you know the adId
+                adUnitCode: videoAdUnit.code // optional if you know the adId
                 // adId: bid.adId // optional
             });
             invokeVideoPlayer(videoUrl);
