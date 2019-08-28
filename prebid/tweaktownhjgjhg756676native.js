@@ -8,24 +8,6 @@
   var node = document.getElementsByTagName("head")[0];
   node.parentNode.insertBefore(ima, node);
 })();
-//load up video-min.js
-(function () {
-  var vidmin = document.createElement("script");
-  vidmin.async = false;
-  vidmin.type = "text/javascript";
-  vidmin.src = "https://adops.adysis.com/video-min.js";
-  var node = document.getElementsByTagName("head")[0];
-  node.parentNode.insertBefore(vidmin, node);
-})();
-//load up vpaid.js
-(function () {
-  var vpaid = document.createElement("script");
-  vpaid.async = false;
-  vpaid.type = "text/javascript";
-  vpaid.src = "https://adops.adysis.com/videojs_5.vast.vpaid-min.js";
-  var node = document.getElementsByTagName("head")[0];
-  node.parentNode.insertBefore(vpaid, node);
-})();
 //load up videojs-min.css
 (function () {
   var vidcss = document.createElement("link");
@@ -34,6 +16,15 @@
   vidcss.href = "https://adops.adysis.com/video-js-min.css";
   var node = document.getElementsByTagName("head")[0];
   node.parentNode.insertBefore(vidcss, node);
+})();
+//load up video-min.js
+(function () {
+  var vidmin = document.createElement("script");
+  vidmin.async = false;
+  vidmin.type = "text/javascript";
+  vidmin.src = "https://adops.adysis.com/video-min.js";
+  var node = document.getElementsByTagName("head")[0];
+  node.parentNode.insertBefore(vidmin, node);
 })();
 //load up videojs-min.css
 (function () {
@@ -44,6 +35,16 @@
   var node = document.getElementsByTagName("head")[0];
   node.parentNode.insertBefore(vpaidcss, node);
 })();
+//load up vpaid.js
+(function () {
+  var vpaid = document.createElement("script");
+  vpaid.async = false;
+  vpaid.type = "text/javascript";
+  vpaid.src = "https://adops.adysis.com/videojs_5.vast.vpaid-min.js";
+  var node = document.getElementsByTagName("head")[0];
+  node.parentNode.insertBefore(vpaid, node);
+})();
+
 //scripts and stylesheets to get video instream working - END
 
 //Slots to send to page, have to add 1 on to the child (number) because the div counts as 1 in the string 
