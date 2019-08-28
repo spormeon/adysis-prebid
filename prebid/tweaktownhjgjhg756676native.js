@@ -256,10 +256,10 @@ console.log("user bid cache:", USERBIDCACHE );
         },
         bids: [
         	//{ bidder: 'appnexus', params: { placementId: '15915644', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }, /* instream placementid */
-        	{ bidder: 'appnexus', params: { placementId: '11962910', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }, /* one placementId for all sizes */
-        	//{ bidder: 'appnexus', params: { placementId: '13232361', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }, /* appnexus test placementid */
+        	//{ bidder: 'appnexus', params: { placementId: '11962910', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }, /* one placementId for all sizes */
+        	{ bidder: 'appnexus', params: { placementId: '13232361', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }, /* appnexus test placementid */
             { bidder: 'districtm', params: { placementId: '11937611', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } },
-            { bidder: 'beachfront', params: { bidfloor: 0.01, appId: '11bc5dd5-7421-4dd8-c926-40fa653bec76' } },
+            //{ bidder: 'beachfront', params: { bidfloor: 0.01, appId: '11bc5dd5-7421-4dd8-c926-40fa653bec76' } },
             //{ bidder: 'viewdeos', params: { supplyPartnerId: '1985' } },
             { bidder: 'rhythmone',  params: { placementId: '76184', zone: '1r', path: 'mvo' } },
             //{ bidder: 'somoaudience', params: { placement_hash: '1152340cac3268b0e737b49c1382cd2b' } },
