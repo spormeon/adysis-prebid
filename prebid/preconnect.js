@@ -375,3 +375,35 @@ nodepclink1.insertBefore(pclink1, nodepclink1.firstChild);
 	var nodepclink1 = document.getElementsByTagName("footerbid1")[0];
 	nodepclink1.insertBefore(pclink1, nodepclink1.firstChild);
 	})();
+(function () {
+	var pclink1 = document.createElement("link");
+	pclink1.rel = "preconnect";
+	pclink1.href = "//lockerdome.com";
+	pclink1.crossorigin;
+	var nodepclink1 = document.getElementsByTagName("footerbid1")[0];
+	nodepclink1.insertBefore(pclink1, nodepclink1.firstChild);
+	})();
+(function () {
+	var pclink1 = document.createElement("link");
+	pclink1.rel = "preconnect";
+	pclink1.href = "//sync.bfmio.com";
+	pclink1.crossorigin;
+	var nodepclink1 = document.getElementsByTagName("footerbid1")[0];
+	nodepclink1.insertBefore(pclink1, nodepclink1.firstChild);
+	})();
+(function () {
+	var pclink1 = document.createElement("link");
+	pclink1.rel = "preconnect";
+	pclink1.href = "//www.golfwrx.com";
+	pclink1.crossorigin;
+	var nodepclink1 = document.getElementsByTagName("footerbid1")[0];
+	nodepclink1.insertBefore(pclink1, nodepclink1.firstChild);
+	})();
+(function () {
+	var pclink1 = document.createElement("link");
+	pclink1.rel = "preconnect";
+	pclink1.href = "//sourcepoint.mgr.consensu.org";
+	pclink1.crossorigin;
+	var nodepclink1 = document.getElementsByTagName("footerbid1")[0];
+	nodepclink1.insertBefore(pclink1, nodepclink1.firstChild);
+	})();
