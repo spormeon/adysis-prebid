@@ -250,7 +250,7 @@ console.log("user bid cache:", USERBIDCACHE );
     
     /* Prebid video ad unit */
     var videoAdUnit = {
-        code: 'vid1',
+        code: 'vid2',
         mediaTypes: {
             video: { context: 'instream', playerSize: [[640, 480]],  mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'],  playbackmethod: [2], minduration: 0,  maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10], linearity: 1, api: [1,2,3,4,5,6]  }
         },
