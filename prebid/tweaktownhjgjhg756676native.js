@@ -1258,10 +1258,11 @@ adysis: { bidCpmAdjustment : function(bidCpm){ return "+c.cpm+" * 2;} },
                 // adId: bid.adId // optional
             });
             invokeVideoPlayer(videoUrl);
+            bidsBackHandler: initAdserver1
     	}
     	
     	
-     bidsBackHandler: initAdserver1,
+     
      timeout: PREBID_TIMEOUT
     });
     });
