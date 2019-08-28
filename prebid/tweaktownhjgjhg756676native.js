@@ -1252,7 +1252,6 @@ adysis: { bidCpmAdjustment : function(bidCpm){ return "+c.cpm+" * 2;} },
     function initAdserver1() {
      if (adyjs.initAdserver1Set) return;
      adyjs.initAdserver1Set = true;
-     
      var videoUrl = adyjs.adServers.dfp.buildVideoUrl({
          adUnit: adUnits,
          params: {
@@ -1268,6 +1267,7 @@ adysis: { bidCpmAdjustment : function(bidCpm){ return "+c.cpm+" * 2;} },
          // adId: bid.adId // optional
      });
      invokeVideoPlayer(videoUrl);
+     
      
      googletag.cmd.push(function() {
      adyjs.que.push(function() {
