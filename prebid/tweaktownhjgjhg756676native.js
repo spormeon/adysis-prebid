@@ -18,7 +18,7 @@ document.querySelector("#mvp-post-add-wrap").insertAdjacentHTML('afterbegin','<b
 (function() {
 var adyjsEl = document.createElement("script");
 adyjsEl.async = true;
-adyjsEl.rel = "prefetch";
+adyjsEl.rel = "preload";
 adyjsEl.type = "text/javascript";
 adyjsEl.src = "https://adops.adysis.com/prebid2.29.0adyjs.js";
 var adyjsTargetEl = document.getElementsByTagName("footerbid1")[0];
