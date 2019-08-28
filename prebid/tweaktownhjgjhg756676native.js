@@ -1,49 +1,4 @@
-//  scripts and stylesheets to get video instream working - START
-//load up ima3.js
-(function () {
-  var ima = document.createElement("script");
-  ima.async = false;
-  ima.type = "text/javascript";
-  ima.src = "https://imasdk.googleapis.com/js/sdkloader/ima3.js";
-  var node = document.getElementsByTagName("head")[0];
-  node.parentNode.insertBefore(ima, node);
-})();
-//load up videojs-min.css
-(function () {
-  var vidcss = document.createElement("link");
-  vidcss.async = false;
-  vidcss.rel = "stylesheet";
-  vidcss.href = "https://adops.adysis.com/video-js-min.css";
-  var node = document.getElementsByTagName("head")[0];
-  node.parentNode.insertBefore(vidcss, node);
-})();
-//load up video-min.js
-(function () {
-  var vidmin = document.createElement("script");
-  vidmin.async = false;
-  vidmin.type = "text/javascript";
-  vidmin.src = "https://adops.adysis.com/video-min.js";
-  var node = document.getElementsByTagName("head")[0];
-  node.parentNode.insertBefore(vidmin, node);
-})();
-//load up videojs-min.css
-(function () {
-  var vpaidcss = document.createElement("link");
-  vpaidcss.async = false;
-  vpaidcss.rel = "stylesheet";
-  vpaidcss.href = "https://adops.adysis.com/videojs.vast.vpaid-min.css";
-  var node = document.getElementsByTagName("head")[0];
-  node.parentNode.insertBefore(vpaidcss, node);
-})();
-//load up vpaid.js
-(function () {
-  var vpaid = document.createElement("script");
-  vpaid.async = false;
-  vpaid.type = "text/javascript";
-  vpaid.src = "https://adops.adysis.com/videojs_5.vast.vpaid-min.js";
-  var node = document.getElementsByTagName("head")[0];
-  node.parentNode.insertBefore(vpaid, node);
-})();
+
 
 //scripts and stylesheets to get video instream working - END
 
@@ -61,32 +16,79 @@ document.querySelector("#mvp-post-add-wrap").insertAdjacentHTML('afterbegin','<b
 
 //load up prebid.js,  I think we need to load this earlier
 (function() {
-  var adyjsEl = document.createElement("script");
-  adyjsEl.type = "text/javascript";
-  adyjsEl.async = true;
-  adyjsEl.src = "https://adops.adysis.com/prebid2.29.0adyjs.js";
-  var adyjsTargetEl = document.getElementsByTagName("footerbid1")[0];
-  adyjsTargetEl.insertBefore(adyjsEl, adyjsTargetEl.secondChild);
+var adyjsEl = document.createElement("script");
+adyjsEl.async = true;
+adyjsEl.type = "text/javascript";
+adyjsEl.src = "https://adops.adysis.com/prebid2.29.0adyjs.js";
+var adyjsTargetEl = document.getElementsByTagName("footerbid1")[0];
+adyjsTargetEl.insertBefore(adyjsEl, adyjsTargetEl.secondChild);
 })();
 //load up google gpt.js
 (function () {
-  var gads = document.createElement("script");
-  gads.async = true;
-  gads.type = "text/javascript";
-  gads.src = "https://securepubads.g.doubleclick.net/tag/js/gpt.js";
-  var nodegads = document.getElementsByTagName("footerbid1")[0];
-  nodegads.insertBefore(gads, nodegads.thirdChild);
+var gads = document.createElement("script");
+gads.async = true;
+gads.type = "text/javascript";
+gads.src = "https://securepubads.g.doubleclick.net/tag/js/gpt.js";
+var nodegads = document.getElementsByTagName("footerbid1")[0];
+nodegads.insertBefore(gads, nodegads.thirdChild);
 })();
 //load up bidfilter.js,
 window._BidFilter={site_id:1045,pbjsKey:'adyjs',checkAudio:false};
 (function () {
-   var bidfilter = document.createElement("script");
-   bidfilter.async = true;
-   bidfilter.type = "text/javascript";
-   bidfilter.src = "https://cdn.bidfilter.com/bidfilter.js";
-   var nodebidfilter = document.getElementsByTagName("footerbid1")[0];
-   nodebidfilter.insertBefore(bidfilter, nodebidfilter.fourthChild);
+var bidfilter = document.createElement("script");
+bidfilter.async = true;
+bidfilter.type = "text/javascript";
+bidfilter.src = "https://cdn.bidfilter.com/bidfilter.js";
+var nodebidfilter = document.getElementsByTagName("footerbid1")[0];
+nodebidfilter.insertBefore(bidfilter, nodebidfilter.fourthChild);
 })();
+//scripts and stylesheets to get video instream working - START
+//load up ima3.js
+(function () {
+var ima = document.createElement("script");
+ima.async = true;
+ima.type = "text/javascript";
+ima.src = "https://imasdk.googleapis.com/js/sdkloader/ima3.js";
+var nodeima = document.getElementsByTagName("footerbid1")[0];
+nodeima.insertBefore(ima, nodeima.fifthChild);
+})();
+//load up videojs-min.css
+(function () {
+var vidcss = document.createElement("link");
+vidcss.async = true;
+vidcss.rel = "stylesheet";
+vidcss.href = "https://adops.adysis.com/video-js-min.css";
+var nodevidcss = document.getElementsByTagName("footerbid1")[0];
+nodevidcss.insertBefore(vidcss, nodevidcss.sixthChild);
+})();
+//load up video-min.js
+(function () {
+var vidmin = document.createElement("script");
+vidmin.async = true;
+vidmin.type = "text/javascript";
+vidmin.src = "https://adops.adysis.com/video-min.js";
+var nodevidmin = document.getElementsByTagName("footerbid1")[0];
+nodevidmin.insertBefore(vidmin, nodevidmin.seventhChild);
+})();
+//load up videojs-min.css
+(function () {
+var vpaidcss = document.createElement("link");
+vpaidcss.async = true;
+vpaidcss.rel = "stylesheet";
+vpaidcss.href = "https://adops.adysis.com/videojs.vast.vpaid-min.css";
+var nodevpaidcss = document.getElementsByTagName("footerbid1")[0];
+nodevpaidcss.insertBefore(vpaidcss, nodevpaidcss.eigthChild);
+})();
+//load up vpaid.js
+(function () {
+var vpaid = document.createElement("script");
+vpaid.async = true;
+vpaid.type = "text/javascript";
+vpaid.src = "https://adops.adysis.com/videojs_5.vast.vpaid-min.js";
+var nodevpaid = document.getElementsByTagName("footerbid1")[0];
+nodevpaid.insertBefore(vpaid, nodevpaid.ninthChild);
+})();
+
 //  TIMEOUT MAP - 1000 def brings back bigger bids in Uk
 var timeoutMap = {
 0 : 1400,
