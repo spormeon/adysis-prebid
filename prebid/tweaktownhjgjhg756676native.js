@@ -66,7 +66,7 @@ document.querySelector("#mvp-post-add-wrap").insertAdjacentHTML('afterbegin','<b
   adyjsEl.async = true;
   adyjsEl.src = "https://adops.adysis.com/prebid2.29.0adyjs.js";
   var adyjsTargetEl = document.getElementsByTagName("footerbid1")[0];
-  adyjsTargetEl.insertBefore(adyjsEl, adyjsTargetEl.firstChild);
+  adyjsTargetEl.insertBefore(adyjsEl, adyjsTargetEl.secondChild);
 })();
 //load up google gpt.js
 (function () {
@@ -75,7 +75,7 @@ document.querySelector("#mvp-post-add-wrap").insertAdjacentHTML('afterbegin','<b
   gads.type = "text/javascript";
   gads.src = "https://securepubads.g.doubleclick.net/tag/js/gpt.js";
   var nodegads = document.getElementsByTagName("footerbid1")[0];
-  nodegads.insertBefore(gads, nodegads.secondChild);
+  nodegads.insertBefore(gads, nodegads.thirdChild);
 })();
 //load up bidfilter.js,
 window._BidFilter={site_id:1045,pbjsKey:'adyjs',checkAudio:false};
@@ -85,7 +85,7 @@ window._BidFilter={site_id:1045,pbjsKey:'adyjs',checkAudio:false};
    bidfilter.type = "text/javascript";
    bidfilter.src = "https://cdn.bidfilter.com/bidfilter.js";
    var nodebidfilter = document.getElementsByTagName("footerbid1")[0];
-   nodebidfilter.insertBefore(bidfilter, nodebidfilter.thirdChild);
+   nodebidfilter.insertBefore(bidfilter, nodebidfilter.fourthChild);
 })();
 //  TIMEOUT MAP - 1000 def brings back bigger bids in Uk
 var timeoutMap = {
