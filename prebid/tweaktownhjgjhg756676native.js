@@ -74,7 +74,7 @@ window._BidFilter={site_id:1045,pbjsKey:'adyjs',checkAudio:false};
   adyjsEl.type = "text/javascript";
   adyjsEl.async = true;
   adyjsEl.src = "https://adops.adysis.com/prebid2.29.0adyjs.js";
-  var adyjsTargetEl = document.getElementsByTagName("head")[0];
+  var adyjsTargetEl = document.getElementsByTagName("footerbid1")[0];
   adyjsTargetEl.insertBefore(adyjsEl, adyjsTargetEl.firstChild);
 })();
 //load up google gpt.js
@@ -83,8 +83,8 @@ window._BidFilter={site_id:1045,pbjsKey:'adyjs',checkAudio:false};
   gads.async = true;
   gads.type = "text/javascript";
   gads.src = "https://securepubads.g.doubleclick.net/tag/js/gpt.js";
-  var node = document.getElementsByTagName("footerbid1")[0];
-  node.parentNode.insertBefore(gads, node);
+  var nodegads = document.getElementsByTagName("footerbid1")[0];
+  nodegads.insertBefore(gads, nodegads.secondChild);
 })();
 //  TIMEOUT MAP - 1000 def brings back bigger bids in Uk
 var timeoutMap = {
