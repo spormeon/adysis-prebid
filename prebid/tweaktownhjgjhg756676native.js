@@ -1242,23 +1242,7 @@ adysis: { bidCpmAdjustment : function(bidCpm){ return "+c.cpm+" * 2;} },
     adyjs.requestBids({
     	
     	
-    	bidsBackHandler: function(bids) {
-            var videoUrl = adyjs.adServers.dfp.buildVideoUrl({
-                adUnit: adUnits,
-                params: {
-                    // iu: '/19968336/prebid_cache_video_adunit',
-                    iu: '/1001824/Golfwrx.com-HB/vid1',
-                    description_url: 'http://golfwrx.com',
-                    output: 'vast'
-                }
-            }); 
-         // Mark the bid, used in buildVideoUrl, as used
-            adyjs.markWinningBidAsUsed({
-                adUnitCode: adUnits.code // optional if you know the adId
-                // adId: bid.adId // optional
-            });
-            invokeVideoPlayer(videoUrl);
-        }
+    	
     	
     	
      bidsBackHandler: initAdserver1,
@@ -1268,6 +1252,23 @@ adysis: { bidCpmAdjustment : function(bidCpm){ return "+c.cpm+" * 2;} },
     function initAdserver1() {
      if (adyjs.initAdserver1Set) return;
      adyjs.initAdserver1Set = true;
+     
+     var videoUrl = adyjs.adServers.dfp.buildVideoUrl({
+         adUnit: adUnits,
+         params: {
+             // iu: '/19968336/prebid_cache_video_adunit',
+             iu: '/1001824/Golfwrx.com-HB/vid1',
+             description_url: 'http://golfwrx.com',
+             output: 'vast'
+         }
+     }); 
+  // Mark the bid, used in buildVideoUrl, as used
+     adyjs.markWinningBidAsUsed({
+         adUnitCode: adUnits.code // optional if you know the adId
+         // adId: bid.adId // optional
+     });
+     invokeVideoPlayer(videoUrl);
+     
      googletag.cmd.push(function() {
      adyjs.que.push(function() {
      adyjs.setTargetingForGPTAsync();
