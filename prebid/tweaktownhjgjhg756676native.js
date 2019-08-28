@@ -248,7 +248,37 @@ console.log("user bid cache:", USERBIDCACHE );
         tempTag = url;
     };
     
-    
+    /* Prebid video ad unit */
+    var videoAdUnit = {
+        code: 'vid1',
+        mediaTypes: {
+            video: { context: 'instream', playerSize: [[640, 480]],  mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'],  playbackmethod: [2], minduration: 0,  maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10], linearity: 1, api: [1,2,3,4,5,6]  }
+        },
+        bids: [
+        	//{ bidder: 'appnexus', params: { placementId: '15915644', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }, /* instream placementid */
+        	{ bidder: 'appnexus', params: { placementId: '11962910', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }, /* one placementId for all sizes */
+        	//{ bidder: 'appnexus', params: { placementId: '13232361', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }, /* appnexus test placementid */
+            { bidder: 'districtm', params: { placementId: '11937611', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } },
+            { bidder: 'beachfront', params: { bidfloor: 0.01, appId: '11bc5dd5-7421-4dd8-c926-40fa653bec76' } },
+            //{ bidder: 'viewdeos', params: { supplyPartnerId: '1985' } },
+            { bidder: 'rhythmone',  params: { placementId: '76184', zone: '1r', path: 'mvo' } },
+            //{ bidder: 'somoaudience', params: { placement_hash: '1152340cac3268b0e737b49c1382cd2b' } },
+            { bidder: 'rubicon', params: { accountId: "16924", siteId: "151312", zoneId: "896644", video: { playerWidth: '640', playerHeight: '480', language: 'en' } } }, /* video call */
+            { bidder: 'openx', params: { unit: '539181725', delDomain: 'freestar-d.openx.net', openrtb: { imp: [{ video: { mimes: ['video/x-flv, video/mp4, application/x-shockwave-flash, application/javascript, video/webm'] } }] } } },
+            // { bidder: 'unruly', params: { targetingUUID: '23984444', siteId: 15145 } }
+            // { bidder: 'teads',  params: { placementId: '75853', pageId: '87372' } }
+            // { bidder: 'cedato', params: { player_id: '1895193152' , bidfloor: 0.01 } }
+            //{ bidder: 'ucfunnel', params: { adid: 'test-ad-D778B679776BD6BFB8A6A83A3BAEAA', video: { playerWidth: '640', playerHeight: '480' } } },
+            { bidder: 'emx_digital', params: { tagid: '77460', video: { language: 'en' } } }, /* video tag */
+            //{ bidder: 'criteo', params: { zoneId: "1079305", video: { skip: 1, playbackmethod: 2, placement: 1 } } },
+            { bidder: "ix", params: { siteId: "261017", size: [640, 480] } }, /* id 261017 golfwrx id */
+            { bidder: 'oftmedia', params: { placementId: '16137883', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } },
+            { bidder: 'smartyads', params: { placementId: '11836' } }, /* instream */
+            { bidder: 'brealtime', params: { placementId: '16714331', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }, /* one placementId for all sizes */
+            { bidder: 'conversant', params: { site_id: '117979', mimes: [ 'video/mp4', 'application/javascript' ], maxduration: 45 } }  /* golfwrx site id */ 
+            //{ bidder: 'quantcast',  params: { publisherId: 'EnBKrGZNvq', video: { mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'] } } }
+        ]
+    };
     
     var adUnits = [
     	//new ad unit block
@@ -270,37 +300,6 @@ console.log("user bid cache:", USERBIDCACHE );
     	      { bidder: 'brealtime', params: { placementId: '16717366', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } } /* one placementId for all sizes */    
     	 ] //./bids
     	},
-    	//new ad unit block
-        {
-          code: 'vid1',
-          mediaTypes: {
-                video: { context: 'instream', playerSize: [[550, 310]],  mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'],  playbackmethod: [2], minduration: 0,  maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10], linearity: 1, api: [1,2,3,4,5,6]  }
-        },
-        bids: [
-            //{ bidder: 'appnexus', params: { placementId: '15915644', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }, /* instream placementid */
-            { bidder: 'appnexus', params: { placementId: '11962910', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }, /* one placementId for all sizes */
-             //{ bidder: 'appnexus', params: { placementId: '13232361', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }, /* appnexus test placementid */
-            { bidder: 'districtm', params: { placementId: '11937611', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } },
-            { bidder: 'beachfront', params: { bidfloor: 0.01, appId: '11bc5dd5-7421-4dd8-c926-40fa653bec76' } },
-            //{ bidder: 'viewdeos', params: { supplyPartnerId: '1985' } },
-            { bidder: 'rhythmone',  params: { placementId: '76184', zone: '1r', path: 'mvo' } },
-            //{ bidder: 'somoaudience', params: { placement_hash: '1152340cac3268b0e737b49c1382cd2b' } },
-            { bidder: 'rubicon', params: { accountId: "16924", siteId: "151312", zoneId: "896644", video: { playerWidth: '640', playerHeight: '480', language: 'en' } } }, /* video call */
-            { bidder: 'openx', params: { unit: '539181725', delDomain: 'freestar-d.openx.net', openrtb: { imp: [{ video: { mimes: ['video/x-flv, video/mp4, application/x-shockwave-flash, application/javascript, video/webm'] } }] } } },
-            // { bidder: 'unruly', params: { targetingUUID: '23984444', siteId: 15145 } }
-            // { bidder: 'teads',  params: { placementId: '75853', pageId: '87372' } }
-            // { bidder: 'cedato', params: { player_id: '1895193152' , bidfloor: 0.01 } }
-            //{ bidder: 'ucfunnel', params: { adid: 'test-ad-D778B679776BD6BFB8A6A83A3BAEAA', video: { playerWidth: '640', playerHeight: '480' } } },
-            { bidder: 'emx_digital', params: { tagid: '77460', video: { language: 'en' } } }, /* video tag */
-            //{ bidder: 'criteo', params: { zoneId: "1079305", video: { skip: 1, playbackmethod: 2, placement: 1 } } },
-            //{ bidder: "ix", params: { siteId: "261017", size: [640, 480] } }, /* id 261017 golfwrx id */
-            { bidder: 'oftmedia', params: { placementId: '16137883', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } },
-            { bidder: 'smartyads', params: { placementId: '11836' } }, /* instream */
-            { bidder: 'brealtime', params: { placementId: '16714331', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }, /* one placementId for all sizes */
-            { bidder: 'conversant', params: { site_id: '117979', mimes: [ 'video/mp4', 'application/javascript' ], maxduration: 45 } }  /* golfwrx site id */ 
-            //{ bidder: 'quantcast',  params: { publisherId: 'EnBKrGZNvq', video: { mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'] } } }
-         ] //./bids
-   	    },
     	//new ad unit block
         {
          code: 'inreedvid4Slot',
@@ -1245,7 +1244,7 @@ adysis: { bidCpmAdjustment : function(bidCpm){ return "+c.cpm+" * 2;} },
     	
     	bidsBackHandler: function(bids) {
             var videoUrl = adyjs.adServers.dfp.buildVideoUrl({
-                adUnit: adUnits,
+                adUnit: videoAdUnit,
                 params: {
                     // iu: '/19968336/prebid_cache_video_adunit',
                     iu: '/1001824/Golfwrx.com-HB/vid1',
