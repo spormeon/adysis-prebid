@@ -85,7 +85,7 @@ window._BidFilter={site_id:1045,pbjsKey:'adyjs',checkAudio:false};
    bidfilter.type = "text/javascript";
    bidfilter.src = "https://cdn.bidfilter.com/bidfilter.js";
    var nodebidfilter = document.getElementsByTagName("footerbid1")[0];
-   nodebidfilter.insertBefore(bidfiletr, nodebidfilter.thirdChild);
+   nodebidfilter.insertBefore(bidfilter, nodebidfilter.thirdChild);
 })();
 //  TIMEOUT MAP - 1000 def brings back bigger bids in Uk
 var timeoutMap = {
