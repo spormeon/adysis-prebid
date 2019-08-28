@@ -238,11 +238,6 @@ console.log("user bid cache:", USERBIDCACHE );
 //example of supplying a custom var from a prev. defined var
     assertive_timeout = PREBID_TIMEOUT;
     
-    
-    
-    
-    
-    
     var adUnits = [
     	//new ad unit block
     	 {
