@@ -58,16 +58,7 @@ document.querySelector("#dfp-ad-zone-300-9").insertAdjacentHTML('afterbegin','<b
 document.querySelector("#mvp-post-add-wrap").insertAdjacentHTML('afterbegin','<br><br><div class="ad-reporter-ahytrfg35423"><div id="advertisement" style="border: 0pt none; margin: auto; text-align: center; color: #999; text-transform: uppercase; font-family: sans-serif; font-size: 9px; font-weight: 400; letter-spacing: .2em; line-height: 1; margin-top: 0px; position: relative; top: -4px;">Advertisement</div><div id="inreedvid7Slot"></div></div><br>');
 
 });
-//load up bidfilter.js,
-window._BidFilter={site_id:1045,pbjsKey:'adyjs',checkAudio:false};
-(function () {
-   var bidfiletr = document.createElement("script");
-   bidfiletr.async = true;
-   bidfiletr.type = "text/javascript";
-   bidfiletr.src = "https://cdn.bidfilter.com/bidfilter.js";
-   var node = document.getElementsByTagName("footerbid1")[0];
-   node.parentNode.insertBefore(bidfiletr, node);
-})();
+
 //load up prebid.js,  I think we need to load this earlier
 (function() {
   var adyjsEl = document.createElement("script");
@@ -85,6 +76,16 @@ window._BidFilter={site_id:1045,pbjsKey:'adyjs',checkAudio:false};
   gads.src = "https://securepubads.g.doubleclick.net/tag/js/gpt.js";
   var nodegads = document.getElementsByTagName("footerbid1")[0];
   nodegads.insertBefore(gads, nodegads.secondChild);
+})();
+//load up bidfilter.js,
+window._BidFilter={site_id:1045,pbjsKey:'adyjs',checkAudio:false};
+(function () {
+   var bidfilter = document.createElement("script");
+   bidfilter.async = true;
+   bidfilter.type = "text/javascript";
+   bidfilter.src = "https://cdn.bidfilter.com/bidfilter.js";
+   var nodebidfilter = document.getElementsByTagName("footerbid1")[0];
+   nodebidfilter.insertBefore(bidfiletr, nodebidfilter.thirdChild);
 })();
 //  TIMEOUT MAP - 1000 def brings back bigger bids in Uk
 var timeoutMap = {
