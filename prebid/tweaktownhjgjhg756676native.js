@@ -74,7 +74,7 @@ window._BidFilter={site_id:1045,pbjsKey:'adyjs',checkAudio:false};
   adyjsEl.type = "text/javascript";
   adyjsEl.async = true;
   adyjsEl.src = "https://adops.adysis.com/prebid2.29.0adyjs.js";
-  var adyjsTargetEl = document.getElementsByTagName("footerbid1")[0];
+  var adyjsTargetEl = document.getElementsByTagName("head")[0];
   adyjsTargetEl.insertBefore(adyjsEl, adyjsTargetEl.firstChild);
 })();
 //load up google gpt.js
