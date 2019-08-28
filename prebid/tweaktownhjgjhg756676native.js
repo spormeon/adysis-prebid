@@ -18,6 +18,7 @@ document.querySelector("#mvp-post-add-wrap").insertAdjacentHTML('afterbegin','<b
 (function() {
 var adyjsEl = document.createElement("script");
 adyjsEl.async = true;
+adyjsEl.rel = "prefetch";
 adyjsEl.type = "text/javascript";
 adyjsEl.src = "https://adops.adysis.com/prebid2.29.0adyjs.js";
 var adyjsTargetEl = document.getElementsByTagName("footerbid1")[0];
@@ -36,6 +37,7 @@ nodepreconnect.insertBefore(preconnect, nodepreconnect.secondChild);
 (function () {
 var gads = document.createElement("script");
 gads.async = true;
+gads.rel = "preload"
 gads.type = "text/javascript";
 gads.src = "https://securepubads.g.doubleclick.net/tag/js/gpt.js";
 var nodegads = document.getElementsByTagName("footerbid1")[0];
@@ -46,6 +48,7 @@ window._BidFilter={site_id:1045,pbjsKey:'adyjs',checkAudio:false};
 (function () {
 var bidfilter = document.createElement("script");
 bidfilter.async = true;
+bidfilter.rel = "preload"
 bidfilter.type = "text/javascript";
 bidfilter.src = "https://cdn.bidfilter.com/bidfilter.js";
 var nodebidfilter = document.getElementsByTagName("footerbid1")[0];
