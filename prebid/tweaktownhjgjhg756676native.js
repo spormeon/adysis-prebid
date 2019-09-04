@@ -1,5 +1,3 @@
-
-
 //scripts and stylesheets to get video instream working - END
 
 //Slots to send to page, have to add 1 on to the child (number) because the div counts as 1 in the string 
@@ -11,7 +9,6 @@ document.querySelector("#dfp-ad-zone-300-6").insertAdjacentHTML('afterbegin','<b
 document.querySelector("#mvp-author-box-text p:nth-child(1)").insertAdjacentHTML('beforeend','<br><br><div class="ad-reporter-ahytrfg35423"><div id="advertisement" style="border: 0pt none; margin: auto; text-align: center; color: #999; text-transform: uppercase; font-family: sans-serif; font-size: 9px; font-weight: 400; letter-spacing: .2em; line-height: 1; margin-top: 0px; position: relative; top: -4px;">Advertisement</div><div id="inreedvid6Slot"></div></div><br>');
 document.querySelector("#dfp-ad-zone-300-9").insertAdjacentHTML('afterbegin','<br><div class="ad-reporter-ahytrfg35423"><div id="advertisement" style="border: 0pt none; margin: auto; text-align: center; color: #999; text-transform: uppercase; font-family: sans-serif; font-size: 9px; font-weight: 400; letter-spacing: .2em; line-height: 1; margin-top: 0px; position: relative; top: -4px;">Advertisement</div><div id="inreedvid10Slot"></div></div><br>');
 document.querySelector("#mvp-post-add-wrap").insertAdjacentHTML('afterbegin','<br><br><div class="ad-reporter-ahytrfg35423"><div id="advertisement" style="border: 0pt none; margin: auto; text-align: center; color: #999; text-transform: uppercase; font-family: sans-serif; font-size: 9px; font-weight: 400; letter-spacing: .2em; line-height: 1; margin-top: 0px; position: relative; top: -4px;">Advertisement</div><div id="inreedvid7Slot"></div></div><br>');
-
 });
 
 //load up prebid.js,  I think we need to load this earlier
@@ -54,7 +51,6 @@ bidfilter.src = "https://cdn.bidfilter.com/bidfilter.js";
 var nodebidfilter = document.getElementsByTagName("footerbid1")[0];
 nodebidfilter.insertBefore(bidfilter, nodebidfilter.fourthChild);
 })();
-
 
 //  TIMEOUT MAP - 1000 def brings back bigger bids in Uk
 var timeoutMap = {
@@ -883,7 +879,8 @@ bids: [
 //{ bidder: 'adsparc',      labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { networkId: '9969', siteId: '1019801' } }, /*one placementId for all sizes*/	
 //{ bidder: 'komoona',      labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: '2d14facbe61621faad0c7b2aa0458cff' } },  /* Golfwrx.com _KB 300x250 */
 { bidder: "ix",          labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { siteId: "261017", size: [300, 250] } }, /* id 261017 golfwrx id */
-{ bidder: 'atomx',       labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { id: 5136354 } }, /* does all sizes not working at moment */
+{ bidder: 'atomx',       labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { id: 5136354 } }, /* 300x250 */
+{ bidder: 'atomx',       labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { id: 3808201 } }, /* 300x600 */
 //{ bidder: "yieldmo",     labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'],params: { placementId: "1990667709809591856" } }, /* no adapter in file */
 { bidder: 'gumgum',      labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { inSlot: '14600' } }, /*gumgum-300x250*/
 { bidder: 'undertone',  labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { publisherId: '3660' } },
@@ -1001,7 +998,8 @@ bids: [
 //{ bidder: 'adsparc',      labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { networkId: '9969', siteId: '1019801' } }, /*one placementId for all sizes*/	
 //{ bidder: 'komoona',      labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: '2d14facbe61621faad0c7b2aa0458cff' } },  /* Golfwrx.com _KB 300x250 */
 { bidder: "ix",          labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { siteId: "261017", size: [300, 250] } }, /* id 261017 golfwrx id */
-{ bidder: 'atomx',       labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { id: 5136354 } }, /* does all sizes not working at moment */
+{ bidder: 'atomx',       labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { id: 5136354 } }, /* 300x250 */
+{ bidder: 'atomx',       labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { id: 3808201 } }, /* 300x600 */
 //{ bidder: "yieldmo",     labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'],params: { placementId: "1990667709809591856" } }, /* no adapter in file */
 { bidder: 'gumgum',      labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { inSlot: '14600' } }, /*gumgum-300x250*/
 { bidder: 'undertone',  labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { publisherId: '3660' } },
