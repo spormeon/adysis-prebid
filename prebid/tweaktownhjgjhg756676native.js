@@ -283,7 +283,7 @@ console.log("user bid cache:", USERBIDCACHE );
           //{ bidder: 'adsparc',      labelAny: ['desktop', 'tablet', 'phone'], params: { networkId: '9969', siteId: '1019801' } }, /*one placementId for all sizes*/	
           //{ bidder: 'komoona',      labelAny: ['desktop', 'tablet', 'phone'], params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: '2d14facbe61621faad0c7b2aa0458cff' } },  /* Golfwrx.com _KB 300x250 */
           { bidder: "ix",          labelAny: ['desktop', 'tablet', 'phone'], params: { siteId: "261017", size: [300, 250] } }, /* id 261017 golfwrx id */
-          { bidder: 'atomx',       labelAny: ['desktop', 'tablet', 'phone'], params: { id: 5136354 } }, /* does all sizes not working at moment */
+          //{ bidder: 'atomx',       labelAny: ['desktop', 'tablet', 'phone'], params: { id: 5136354 } }, /* does all sizes not working at moment */
           //{ bidder: "yieldmo",     labelAny: ['desktop', 'tablet', 'phone'],params: { placementId: "1990667709809591856" } }, /* no adapter in file */
           { bidder: 'gumgum',      labelAny: ['desktop', 'tablet', 'phone'], params: { inSlot: '14600' } }, /*gumgum-300x250*/
           { bidder: 'undertone',  labelAny: ['desktop', 'tablet', 'phone'], params: { publisherId: '3660' } },
@@ -407,7 +407,7 @@ bids: [
   //{ bidder: 'adsparc',      labelAny: ['desktop', 'tablet', 'phone'], params: { networkId: '9969', siteId: '1019801' } }, /*one placementId for all sizes*/	
   //{ bidder: 'komoona',      labelAny: ['desktop', 'tablet', 'phone'], params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: '2d14facbe61621faad0c7b2aa0458cff' } },  /* Golfwrx.com _KB 300x250 */
   { bidder: "ix",          labelAny: ['desktop', 'tablet', 'phone'], params: { siteId: "261017", size: [300, 250] } }, /* id 261017 golfwrx id */
-  { bidder: 'atomx',       labelAny: ['desktop', 'tablet', 'phone'], params: { id: 5136354 } }, /* does all sizes not working at moment */
+  //{ bidder: 'atomx',       labelAny: ['desktop', 'tablet', 'phone'], params: { id: 5136354 } }, /* does all sizes not working at moment */
   //{ bidder: "yieldmo",     labelAny: ['desktop', 'tablet', 'phone'],params: { placementId: "1990667709809591856" } }, /* no adapter in file */
   { bidder: 'gumgum',      labelAny: ['desktop', 'tablet', 'phone'], params: { inSlot: '14600' } }, /*gumgum-300x250*/
   { bidder: 'undertone',  labelAny: ['desktop', 'tablet', 'phone'], params: { publisherId: '3660' } },
@@ -525,7 +525,7 @@ bids: [
  //{ bidder: 'adsparc',      labelAny: ['desktop', 'tablet', 'phone'], params: { networkId: '9969', siteId: '1019801' } }, /*one placementId for all sizes*/	
  //{ bidder: 'komoona',      labelAny: ['desktop', 'tablet', 'phone'], params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: '2d14facbe61621faad0c7b2aa0458cff' } },  /* Golfwrx.com _KB 300x250 */
  { bidder: "ix",          labelAny: ['desktop', 'tablet', 'phone'], params: { siteId: "261017", size: [300, 250] } }, /* id 261017 golfwrx id */
- { bidder: 'atomx',       labelAny: ['desktop', 'tablet', 'phone'], params: { id: 5136354 } }, /* does all sizes not working at moment */
+ //{ bidder: 'atomx',       labelAny: ['desktop', 'tablet', 'phone'], params: { id: 5136354 } }, /* does all sizes not working at moment */
  //{ bidder: "yieldmo",     labelAny: ['desktop', 'tablet', 'phone'],params: { placementId: "1990667709809591856" } }, /* no adapter in file */
  { bidder: 'gumgum',      labelAny: ['desktop', 'tablet', 'phone'], params: { inSlot: '14600' } }, /*gumgum-300x250*/
  { bidder: 'undertone',  labelAny: ['desktop', 'tablet', 'phone'], params: { publisherId: '3660' } },
@@ -643,7 +643,7 @@ bids: [
  //{ bidder: 'adsparc',      labelAny: ['desktop', 'tablet', 'phone'], params: { networkId: '9969', siteId: '1019801' } }, /*one placementId for all sizes*/	
  //{ bidder: 'komoona',      labelAny: ['desktop', 'tablet', 'phone'], params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: '2d14facbe61621faad0c7b2aa0458cff' } },  /* Golfwrx.com _KB 300x250 */
  { bidder: "ix",          labelAny: ['desktop', 'tablet', 'phone'], params: { siteId: "261017", size: [300, 250] } }, /* id 261017 golfwrx id */
- { bidder: 'atomx',       labelAny: ['desktop', 'tablet', 'phone'], params: { id: 5136354 } }, /* does all sizes not working at moment */
+ //{ bidder: 'atomx',       labelAny: ['desktop', 'tablet', 'phone'], params: { id: 5136354 } }, /* does all sizes not working at moment */
  //{ bidder: "yieldmo",     labelAny: ['desktop', 'tablet', 'phone'],params: { placementId: "1990667709809591856" } }, /* no adapter in file */
  { bidder: 'gumgum',      labelAny: ['desktop', 'tablet', 'phone'], params: { inSlot: '14600' } }, /*gumgum-300x250*/
  { bidder: 'undertone',  labelAny: ['desktop', 'tablet', 'phone'], params: { publisherId: '3660' } },
@@ -761,7 +761,7 @@ bids: [
  //{ bidder: 'adsparc',      labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { networkId: '9969', siteId: '1019801' } }, /*one placementId for all sizes*/	
  //{ bidder: 'komoona',      labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: '2d14facbe61621faad0c7b2aa0458cff' } },  /* Golfwrx.com _KB 300x250 */
  { bidder: "ix",          labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { siteId: "261017", size: [300, 250] } }, /* id 261017 golfwrx id */
- { bidder: 'atomx',       labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { id: 5136354 } }, /* does all sizes not working at moment */
+ //{ bidder: 'atomx',       labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { id: 5136354 } }, /* does all sizes not working at moment */
  //{ bidder: "yieldmo",     labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'],params: { placementId: "1990667709809591856" } }, /* no adapter in file */
  { bidder: 'gumgum',      labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { inSlot: '14600' } }, /*gumgum-300x250*/
  { bidder: 'undertone',  labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { publisherId: '3660' } },
@@ -879,8 +879,8 @@ bids: [
 //{ bidder: 'adsparc',      labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { networkId: '9969', siteId: '1019801' } }, /*one placementId for all sizes*/	
 //{ bidder: 'komoona',      labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: '2d14facbe61621faad0c7b2aa0458cff' } },  /* Golfwrx.com _KB 300x250 */
 { bidder: "ix",          labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { siteId: "261017", size: [300, 250] } }, /* id 261017 golfwrx id */
-{ bidder: 'atomx',       labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { id: 5136354 } }, /* 300x250 */
-{ bidder: 'atomx',       labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { id: 3808201 } }, /* 300x600 */
+//{ bidder: 'atomx',       labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { id: 5136354 } }, /* 300x250 */
+//{ bidder: 'atomx',       labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { id: 3808201 } }, /* 300x600 */
 //{ bidder: "yieldmo",     labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'],params: { placementId: "1990667709809591856" } }, /* no adapter in file */
 { bidder: 'gumgum',      labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { inSlot: '14600' } }, /*gumgum-300x250*/
 { bidder: 'undertone',  labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { publisherId: '3660' } },
@@ -998,8 +998,8 @@ bids: [
 //{ bidder: 'adsparc',      labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { networkId: '9969', siteId: '1019801' } }, /*one placementId for all sizes*/	
 //{ bidder: 'komoona',      labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: '2d14facbe61621faad0c7b2aa0458cff' } },  /* Golfwrx.com _KB 300x250 */
 { bidder: "ix",          labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { siteId: "261017", size: [300, 250] } }, /* id 261017 golfwrx id */
-{ bidder: 'atomx',       labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { id: 5136354 } }, /* 300x250 */
-{ bidder: 'atomx',       labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { id: 3808201 } }, /* 300x600 */
+//{ bidder: 'atomx',       labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { id: 5136354 } }, /* 300x250 */
+//{ bidder: 'atomx',       labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { id: 3808201 } }, /* 300x600 */
 //{ bidder: "yieldmo",     labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'],params: { placementId: "1990667709809591856" } }, /* no adapter in file */
 { bidder: 'gumgum',      labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { inSlot: '14600' } }, /*gumgum-300x250*/
 { bidder: 'undertone',  labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { publisherId: '3660' } },
