@@ -310,7 +310,7 @@ console.log("user bid cache:", USERBIDCACHE );
           { bidder: 'connectad',   labelAny: ['desktop', 'tablet', 'phone'], params: { networkId: "10047", siteId: "1029474"} },
           //{ bidder: 'colossusssp',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '6544' } } /* 300x250 */
           { bidder: 'emx_digital',  labelAny: ['desktop', 'tablet', 'phone'], params: { tagid: '77461' } }, /* sizeless */
-          { bidder: 'decenterads',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '10384' } }, /* 300x250 */
+          //{ bidder: 'decenterads',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '10384' } }, /* 300x250 */
           { bidder: 'lockerdome',  labelAny: ['desktop', 'tablet', 'phone'], params: { adUnitId: 'LD12197908548395622' } }, /* 300x250 */
           { bidder: 'lockerdome',  labelAny: ['desktop', 'tablet', 'phone'], params: { adUnitId: 'LD12197907843752550' } }, /* 300x100 */
           { bidder: 'lockerdome',  labelAny: ['desktop', 'tablet', 'phone'], params: { adUnitId: 'LD12197911702512230' } } /* 728x90 */
@@ -431,8 +431,8 @@ bids: [
   { bidder: 'sharethrough',   labelAny: ['desktop', 'tablet', 'phone'], params: { pkey: "DSthphoQqH66AkQXPDoXn74b", iframe: true} },
   { bidder: 'connectad',   labelAny: ['desktop', 'tablet', 'phone'], params: { networkId: "10047", siteId: "1029474"} },
   //{ bidder: 'colossusssp',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '6544' } } /* 300x250 */
-  { bidder: 'emx_digital',  labelAny: ['desktop', 'tablet', 'phone'], params: { tagid: '77461' } }, /* sizeless */
-  { bidder: 'decenterads',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '10384' } } /* 300x250 */
+  { bidder: 'emx_digital',  labelAny: ['desktop', 'tablet', 'phone'], params: { tagid: '77461' } } /* sizeless */
+  //{ bidder: 'decenterads',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '10384' } } /* 300x250 */
 ] //./bids
 },
 //new ad unit block
@@ -549,8 +549,8 @@ bids: [
  { bidder: 'sharethrough',   labelAny: ['desktop', 'tablet', 'phone'], params: { pkey: "DSthphoQqH66AkQXPDoXn74b", iframe: true} },
  { bidder: 'connectad',   labelAny: ['desktop', 'tablet', 'phone'], params: { networkId: "10047", siteId: "1029474"} },
  //{ bidder: 'colossusssp',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '6544' } } /* 300x250 */
- { bidder: 'emx_digital',  labelAny: ['desktop', 'tablet', 'phone'], params: { tagid: '77461' } }, /* sizeless */
- { bidder: 'decenterads',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '10384' } } /* 300x250 */
+ { bidder: 'emx_digital',  labelAny: ['desktop', 'tablet', 'phone'], params: { tagid: '77461' } } /* sizeless */
+ //{ bidder: 'decenterads',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '10384' } } /* 300x250 */
 ] //./bids
 },
 //new ad unit block
@@ -667,8 +667,8 @@ bids: [
  { bidder: 'sharethrough',   labelAny: ['desktop', 'tablet', 'phone'], params: { pkey: "DSthphoQqH66AkQXPDoXn74b", iframe: true} },
  { bidder: 'connectad',   labelAny: ['desktop', 'tablet', 'phone'], params: { networkId: "10047", siteId: "1029474"} },
  //{ bidder: 'colossusssp',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '6544' } } /* 300x250 */
- { bidder: 'emx_digital',  labelAny: ['desktop', 'tablet', 'phone'], params: { tagid: '77461' } }, /* sizeless */
- { bidder: 'decenterads',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '10384' } } /* 300x250 */
+ { bidder: 'emx_digital',  labelAny: ['desktop', 'tablet', 'phone'], params: { tagid: '77461' } } /* sizeless */
+ //{ bidder: 'decenterads',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '10384' } } /* 300x250 */
 ] //./bids
 },
 //new ad unit block
@@ -785,8 +785,8 @@ bids: [
  { bidder: 'sharethrough',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { pkey: "DSthphoQqH66AkQXPDoXn74b", iframe: true} },
  { bidder: 'connectad',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { networkId: "10047", siteId: "1029474"} },
  //{ bidder: 'colossusssp',  labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: '6544' } } /* 300x250 */
- { bidder: 'emx_digital',  labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { tagid: '77461' } }, /* sizeless */
- { bidder: 'decenterads',  labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: '10384' } } /* 300x250 */
+ { bidder: 'emx_digital',  labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { tagid: '77461' } } /* sizeless */
+ //{ bidder: 'decenterads',  labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: '10384' } } /* 300x250 */
 ] //./bids
 },
 //new ad unit block
@@ -904,8 +904,8 @@ bids: [
 { bidder: 'sharethrough',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { pkey: "DSthphoQqH66AkQXPDoXn74b", iframe: true} },
 { bidder: 'connectad',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { networkId: "10047", siteId: "1029474"} },
 //{ bidder: 'colossusssp',  labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: '6544' } } /* 300x250 */
-{ bidder: 'emx_digital',  labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { tagid: '77461' } }, /* sizeless */
-{ bidder: 'decenterads',  labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: '10384' } } /* 300x250 */
+{ bidder: 'emx_digital',  labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { tagid: '77461' } } /* sizeless */
+//{ bidder: 'decenterads',  labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: '10384' } } /* 300x250 */
 ] //./bids
 },
 //new ad unit block
@@ -1023,8 +1023,8 @@ bids: [
 { bidder: 'sharethrough',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { pkey: "DSthphoQqH66AkQXPDoXn74b", iframe: true} },
 { bidder: 'connectad',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { networkId: "10047", siteId: "1029474"} },
 //{ bidder: 'colossusssp',  labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: '6544' } } /* 300x250 */
-{ bidder: 'emx_digital',  labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { tagid: '77461' } }, /* sizeless */
-{ bidder: 'decenterads',  labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: '10384' } } /* 300x250 */
+{ bidder: 'emx_digital',  labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { tagid: '77461' } } /* sizeless */
+//{ bidder: 'decenterads',  labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: '10384' } } /* 300x250 */
 ] //./bids
     }];
 // ======== DO NOT EDIT BELOW THIS LINE =========== //
