@@ -741,7 +741,7 @@ bids: [
 {
 code: 'inreedvid8Slot',
 mediaTypes: {
- banner: { sizes: [[300, 250],[250, 250],[1, 1]] }  
+ banner: { sizes: [[970, 90],[728, 90],[468, 60],[320, 50],[1, 1]] }
 },
 bids: [
  { bidder: 'teads',      labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: '75853', pageId: '87372' } },
@@ -978,7 +978,7 @@ bids: [
 {
 code: 'inreedvid10Slot',
 mediaTypes: {
-banner: { sizes: [[970, 90],[728, 90],[468, 60],[320, 50],[1, 1]] }
+banner: { sizes: [[300, 250],[250, 250],[1, 1]] }
 },
 bids: [
 { bidder: 'teads',      labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: '75853', pageId: '87372' } },
