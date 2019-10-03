@@ -394,7 +394,7 @@ console.log("user bid cache:", USERBIDCACHE );
 {
 code: 'inreedvid5Slot',
 mediaTypes: {
-  banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50],[320, 100],[336, 280],[580, 400],[550, 310],[1, 1]] } 
+  banner: { sizes: [[300, 250],[250, 250],[1, 1]] } 
 },
 bids: [
   { bidder: 'teads',      labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '75853', pageId: '87372' } },
@@ -866,7 +866,7 @@ bids: [
 {
 code: 'inreedvid9Slot',
 mediaTypes: {
-banner: { sizes: [[300, 600],[300, 250],[250, 250],[1, 1]] }
+banner: { sizes: [[160, 600],[120, 600],[300, 250],[250, 250],[1, 1]] }
 },
 bids: [
 { bidder: 'teads',      labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: '75853', pageId: '87372' } },
@@ -1411,8 +1411,8 @@ definitons: {
 inreedvid8Slot: { adUnitPath: "/1001824/adp100001/adp100001E", size: "mappingleaderslot", sizeMapping: "mappingleaderslot", timeout: site_config.refresh_rate, },
 inreedvid4Slot: { adUnitPath: "/1001824/adp100001/adp100001A", size: "mappingleaderslot", sizeMapping: "mappingleaderslot", timeout: site_config.refresh_rate, },
 inreedvid9Slot: { adUnitPath: "/1001824/adp100001/adp100001F", size: "mappingmenuslot", sizeMapping: "mappingmenuslot", timeout: site_config.refresh_rate, },
-inreedvid5Slot: { adUnitPath: "/1001824/adp100001/adp100001B", size: "mappinginreedvidslot", sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
-inreedvid10Slot: { adUnitPath: "/1001824/adp100001/adp100001G", size: "mappingmenuslot", sizeMapping: "mappingmenuslot", timeout: site_config.refresh_rate, },
+inreedvid5Slot: { adUnitPath: "/1001824/adp100001/adp100001B", size: "mappingmenu1slot", sizeMapping: "mappingmenu1slot", timeout: site_config.refresh_rate, },
+inreedvid10Slot: { adUnitPath: "/1001824/adp100001/adp100001G", size: "mappinginreedvidslot", sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
 inreedvid6Slot: { adUnitPath: "/1001824/adp100001/adp100001C", size: "mappinginreedvidslot", sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
 inreedvid7Slot: { adUnitPath: "/1001824/adp100001/adp100001D", size: "mappinginreedvidslot", sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
 inreedvid11Slot: { adUnitPath: "/1001824/adp100001/adp100001H", size: "mappinginreedvidslot", sizeMapping: "mappingstickyslot", timeout: site_config.refresh_rate, },
@@ -1426,9 +1426,14 @@ inreedvid13Slot: { adUnitPath: "/1001824/adp100001/adp100001J", size: "mappingin
      [[1, 1],[[300,250],[250,250],[320,50],[320, 100],[336, 280],[468, 90],[1,1]]],
     ],
 mappingmenuslot: [
-    [[1024, 768],[[970,90],[728,90],[468,60],[320,50],[300,250],[300, 600],[250,250],[1,1]]],
+    [[1024, 768],[[160, 600],[120,600],[1,1]]],
     [[768, 500],[[300,250],[250,250],[1,1]]],
     [[1, 1],[[300,250],[250,250],[1,1]]],
+   ],
+mappingmenu1slot: [
+	[[1024, 768],[[300,250],[250,250],[1,1]]],
+	[[768, 500],[[300,250],[250,250],[1,1]]],
+	[[1, 1],[[300,250],[250,250],[1,1]]],
    ],
 mappingstickyslot: [
     [[1024, 768],[[300, 600],[160,600],[120, 600],[1,1]]],
