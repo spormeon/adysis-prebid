@@ -1242,7 +1242,7 @@ googletag.cmd.push(function () {
     // googletag.pubads().refresh();
     })(window.googletag, window.adyjs, {
 definitons: {
-inreedvid8Slot: { adUnitPath: "/1001824/adp100001/adp100001E", size: "mappingmenuslot", sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
+inreedvid8Slot: { adUnitPath: "/1001824/adp100001/adp100001E", size: "mappingmenuslot", sizeMapping: "mappingmenuslot", timeout: site_config.refresh_rate, },
 inreedvid4Slot: { adUnitPath: "/1001824/adp100001/adp100001A", size: "mappinginreedvidslot", sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
 inreedvid9Slot: { adUnitPath: "/1001824/adp100001/adp100001F", size: "mappingmenuslot", sizeMapping: "mappingmenuslot", timeout: site_config.refresh_rate, },
 inreedvid5Slot: { adUnitPath: "/1001824/adp100001/adp100001B", size: "mappinginreedvidslot", sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
@@ -1257,7 +1257,7 @@ inreedvid7Slot: { adUnitPath: "/1001824/adp100001/adp100001D", size: "mappinginr
      [[1, 1],[[300,250],[250,250],[320,50],[320, 100],[336, 280],[468, 90],[1,1]]],
     ],
 mappingmenuslot: [
-    [[1024, 768],[[300,250],[300, 600],[250,250],[1,1]]],
+    [[1024, 768],[[970,90],[728,90],[468,60],[320,50],[300,250],[300, 600],[250,250],[1,1]]],
     [[768, 500],[[300,250],[250,250],[1,1]]],
     [[1, 1],[[300,250],[250,250],[1,1]]],
    ]
