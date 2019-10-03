@@ -5,6 +5,8 @@ window.addEventListener("DOMContentLoaded",function(){
 document.querySelector("#custom_html-4").insertAdjacentHTML('afterbegin','<div class="ad-reporter-ahytrfg35423"><div id="advertisement" style="border: 0pt none; margin: auto; text-align: center; color: #999; text-transform: uppercase; font-family: sans-serif; font-size: 9px; font-weight: 400; letter-spacing: .2em; line-height: 1; margin-top: 0px; position: relative; top: -4px;">Advertisement</div><div id="inreedvid8Slot"></div></div><br>');
 document.querySelector("#custom_html-2").insertAdjacentHTML('afterbegin','<div class="ad-reporter-ahytrfg35423"><div id="advertisement" style="border: 0pt none; margin: auto; text-align: center; color: #999; text-transform: uppercase; font-family: sans-serif; font-size: 9px; font-weight: 400; letter-spacing: .2em; line-height: 1; margin-top: 0px; position: relative; top: -4px;">Advertisement</div><div id="inreedvid11Slot"></div></div><br>');
 document.querySelector("#custom_html-3").insertAdjacentHTML('afterbegin','<div class="ad-reporter-ahytrfg35423"><div id="advertisement" style="border: 0pt none; margin: auto; text-align: center; color: #999; text-transform: uppercase; font-family: sans-serif; font-size: 9px; font-weight: 400; letter-spacing: .2em; line-height: 1; margin-top: 0px; position: relative; top: -4px;">Advertisement</div><div id="inreedvid12Slot"></div></div><br>');
+document.querySelector("#anchor_ad").insertAdjacentHTML('afterbegin','<div class="ad-reporter-ahytrfg35423"><div id="advertisement" style="border: 0pt none; margin: auto; text-align: center; color: #999; text-transform: uppercase; font-family: sans-serif; font-size: 9px; font-weight: 400; letter-spacing: .2em; line-height: 1; margin-top: 0px; position: relative; top: -4px;">Advertisement</div><div id="inreedvid13Slot"></div></div><br>');
+
 document.querySelector("#custom_html-5").insertAdjacentHTML('afterbegin','<br><div class="ad-reporter-ahytrfg35423"><div id="advertisement" style="border: 0pt none; margin: auto; text-align: center; color: #999; text-transform: uppercase; font-family: sans-serif; font-size: 9px; font-weight: 400; letter-spacing: .2em; line-height: 1; margin-top: 0px; position: relative; top: -4px;">Advertisement</div><div id="inreedvid4Slot"></div></div><br>');
 document.querySelector("#custom_html-7").insertAdjacentHTML('afterbegin','<br><div class="ad-reporter-ahytrfg35423"><div id="advertisement" style="border: 0pt none; margin: auto; text-align: center; color: #999; text-transform: uppercase; font-family: sans-serif; font-size: 9px; font-weight: 400; letter-spacing: .2em; line-height: 1; margin-top: 0px; position: relative; top: -4px;">Advertisement</div><div id="inreedvid9Slot"></div></div><br>');
 document.querySelector("#custom_html-19").insertAdjacentHTML('afterbegin','<br><div class="ad-reporter-ahytrfg35423"><div id="advertisement" style="border: 0pt none; margin: auto; text-align: center; color: #999; text-transform: uppercase; font-family: sans-serif; font-size: 9px; font-weight: 400; letter-spacing: .2em; line-height: 1; margin-top: 0px; position: relative; top: -4px;">Advertisement</div><div id="inreedvid5Slot"></div></div><br>');
@@ -141,7 +143,8 @@ slots: [
     { slotID: 'inreedvid9Slot', slotName: '/1001824/adp100001/adp100001F', sizes: [[300, 600], [300, 250], [250, 250]] },
     { slotID: 'inreedvid10Slot', slotName: '/1001824/adp100001/adp100001G', sizes: [[300, 600], [300, 250], [250, 250]] },
     { slotID: 'inreedvid11Slot', slotName: '/1001824/adp100001/adp100001H', sizes: [[300, 600], [160, 600], [120, 600]] },
-    { slotID: 'inreedvid12Slot', slotName: '/1001824/adp100001/adp100001H', sizes: [[300, 600], [160, 600], [120, 600]] }
+    { slotID: 'inreedvid12Slot', slotName: '/1001824/adp100001/adp100001I', sizes: [[300, 600], [160, 600], [120, 600]] },
+    { slotID: 'inreedvid13Slot', slotName: '/1001824/adp100001/adp100001J', sizes: [[970, 90], [728, 90], [468, 60],[320, 50]] }
     ],
     timeout: 1e3
  }, function(bids) {
@@ -1361,6 +1364,7 @@ inreedvid6Slot: { adUnitPath: "/1001824/adp100001/adp100001C", size: "mappinginr
 inreedvid7Slot: { adUnitPath: "/1001824/adp100001/adp100001D", size: "mappinginreedvidslot", sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
 inreedvid11Slot: { adUnitPath: "/1001824/adp100001/adp100001H", size: "mappinginreedvidslot", sizeMapping: "mappingstickyslot", timeout: site_config.refresh_rate, },
 inreedvid12Slot: { adUnitPath: "/1001824/adp100001/adp100001I", size: "mappinginreedvidslot", sizeMapping: "mappingstickyslot", timeout: site_config.refresh_rate, },
+inreedvid13Slot: { adUnitPath: "/1001824/adp100001/adp100001J", size: "mappinginreedvidslot", sizeMapping: "mappingfooterslot", timeout: site_config.refresh_rate, },
 },
     sizeMappings: {
      mappinginreedvidslot: [
@@ -1377,7 +1381,12 @@ mappingstickyslot: [
     [[1024, 768],[[300, 600],[160,600],[120, 600],[1,1]]],
     [[768, 500],[[300, 600],[160,600],[120, 600],[1,1]]],
     [[1, 1],[[300, 600],[160,600],[120, 600],[1,1]]],
-   ]
+   ],
+mappingstickyslot: [
+	[[1024, 768],[[970, 90],[728,90],[468, 60],[320, 50],[1,1]]],
+	[[768, 500],[[300, 600],[160,600],[120, 600],[1,1]]],
+	[[1, 1],[[300, 600],[160,600],[120, 600],[1,1]]],
+   ]   
     }
    });
 });
