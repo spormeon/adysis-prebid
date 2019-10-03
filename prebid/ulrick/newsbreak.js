@@ -1242,7 +1242,7 @@ googletag.cmd.push(function () {
     // googletag.pubads().refresh();
     })(window.googletag, window.adyjs, {
 definitons: {
-inreedvid8Slot: { adUnitPath: "/1001824/adp100001/adp100001E", size: "mappingmenuslot", sizeMapping: "mappingmenuslot", timeout: site_config.refresh_rate, },
+inreedvid8Slot: { adUnitPath: "/1001824/adp100001/adp100001E", size: "mappingmenuslot", sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
 inreedvid4Slot: { adUnitPath: "/1001824/adp100001/adp100001A", size: "mappinginreedvidslot", sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
 inreedvid9Slot: { adUnitPath: "/1001824/adp100001/adp100001F", size: "mappingmenuslot", sizeMapping: "mappingmenuslot", timeout: site_config.refresh_rate, },
 inreedvid5Slot: { adUnitPath: "/1001824/adp100001/adp100001B", size: "mappinginreedvidslot", sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
