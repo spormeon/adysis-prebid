@@ -77,9 +77,9 @@ var timeoutMap = {
 16 : 2200,
 17 : 2200,
 18 : 2200,
-19 : 1400,
-20 : 1800,
-21 : 1800,
+19 : 2200,
+20 : 2200,
+21 : 2200,
 22 : 1800,
 23 : 1800
 };
@@ -270,7 +270,7 @@ console.log("user bid cache:", USERBIDCACHE );
      {
       code: 'inreedvid4Slot',
       mediaTypes: {
-    	  banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50],[320, 100],[336, 280],[580, 400],[550, 310],[1, 1]] }  
+    	  banner: { sizes: [[970, 90],[728, 90],[300, 250],[250, 250],[468, 60],[320, 50],[320, 100],[336, 280],[580, 400],[550, 310],[1, 1]] }  
       },
       bids: [
           { bidder: 'teads',      labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '75853', pageId: '87372' } },
@@ -702,7 +702,7 @@ bids: [
 {
 code: 'inreedvid8Slot',
 mediaTypes: {
-    video:  { context: 'outstream', playerSize: [[300, 250]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'], playbackmethod: [2], minduration: 0,  maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10], linearity: 1, api: [1,2,3,4,5,6] }
+    video:  { context: 'outstream', playerSize: [[550, 310]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'], playbackmethod: [2], minduration: 0,  maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10], linearity: 1, api: [1,2,3,4,5,6] }
    },
    renderer: {
        url: 'http://cdn.adnxs.com/renderer/video/ANOutstreamVideo.js',
@@ -751,7 +751,7 @@ mediaTypes: {
  banner: { sizes: [[970, 90],[728, 90],[468, 60],[320, 50],[1, 1]] }
 },
 bids: [
- { bidder: 'teads',      labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: '75853', pageId: '87372' } },
+ //{ bidder: 'teads',      labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: '75853', pageId: '87372' } },
  { bidder: 'appnexus',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: '11962910', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_on'] } } }, /* one placementId for all sizes */
 // { bidder: 'appnexus',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: '13232392', video: { skippable: true}, renderer: { url: 'http://cdn.adnxs.com/renderer/video/ANOutstreamVideo.js' } } }, /* demo video placement, always returns a vid, only works client side */ 
  { bidder: 'districtm',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: 11937611, allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_on'] } } },
