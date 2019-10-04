@@ -1,0 +1,281 @@
+/***************************** Header classes start  ******************************/
+
+.header .logo {
+	display: block;
+	margin: 7px 3px 0px 7px;
+	background: #278015;
+	height: 70px;
+	line-height: 75px;
+	color: white;
+	font-size: 2.8em;
+	letter-spacing: 0.1em;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.header .menu {
+	margin: 7px 7px 0px 4px;
+	background: black;
+}
+
+.header .top-site-menu form {
+	margin: 0;
+	padding: 0;
+}
+
+.header .top-site-menu form .form-control {
+	border-radius: 0px;
+	width: 200px;
+	background: #ffffff;
+	height: 25px;
+	margin: 0;
+	padding: 0px 10px 0px 10px;
+	border: none;
+}
+
+.header .top-site-menu {
+	margin: 0px 5px 0px 5px;
+	background: none;
+	height: 35px;
+	line-height: 35px;
+	color: white;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+.header .top-site-menu .tip {
+	float: left;
+	color: #f8db00;
+	font-weight: bold;
+}
+
+.header .navbar-collapse {
+	padding: 0;
+}
+
+.header .navbar-default {
+	border-radius: 0;
+	margin: 0px;
+	background: none;
+	border: none;
+}
+
+.header .navbar-default ul {
+	width: 1005;
+	padding: 0;
+	margin: 0;
+	background: none;
+	line-height: 35px;
+	color: white;
+	text-transform: uppercase;
+	font-size: 16px;
+	font-weight: 400;
+}
+
+
+.header .navbar-default li {
+}
+
+.header .navbar-default li a {
+	display: block;
+	line-height: 35px;
+	margin: 0px 3px 0px 3px;
+	padding: 0px 5px 0px 5px;
+	color: white;
+	list-style: none;
+}
+
+.header .navbar-default li a:first-child {
+	margin-left: 4px;
+}
+
+.header .navbar-default li a:hover {
+	color: #d1d1d1;
+	cursor: pointer;
+}
+
+@media (max-width: 991px) {
+	.header .logo {
+		margin: 7px 7px 0px 7px;
+		font-size: 2.4em;
+		letter-spacing: 0.1em;
+	}
+
+	.header .navbar-default {
+		margin: 0px 7px 0px 7px;
+		border: none;
+		height: auto;
+	}
+
+	.header .menu {
+		margin: 7px 7px 0px 7px;
+		background: black;
+	}
+
+}
+
+#at-share-dock{
+    display:none !important;
+}
+
+/***************************** Header classes end  ******************************/
+
+
+/*********************************  banners  ************************************/
+
+.rectangle1_article_dt,
+.rectangle2_article_dt,
+.rectangle3_article_dt{
+    overflow:hidden;
+}
+    
+/*.anchor_article{
+    width:100%;
+    height:90px;
+    
+}*/
+
+.widget-text-center{
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.rectangle2_article_dt,
+.rectangle3_article_dt{
+    float:left;
+    margin-top:15px;
+    margin-bottom:15px;
+}
+.rectangle3_article_dt{
+    margin-left:15px;
+}
+
+.ad-unit-center .widget_custom_html .custom-html-widget{
+    margin:0 auto;
+}
+/*********************************  banners  ************************************/
+
+
+/***************************  devices over 767px  ******************************/
+@media(min-width:767px){
+    
+    /****************************  banners  ****************************/
+    .billboard_article_dt,
+    .leaderboard_article_dt{
+        height:330px;
+        width:930px;
+    }
+    
+    .rectangle1_article_dt{
+        height:250px;
+        width:300px;
+    }
+    
+    .rectangle1_article_dt
+    .rectangle2_article_dt,
+    .rectangle3_article_dt{
+        overflow:hidden;
+    }
+    
+    .rectangle2_article_dt,
+    .rectangle3_article_dt{
+        float:left;
+    }
+    
+    .rectangle3_article_dt{
+        margin-left:15px;
+    }
+    /****************************  banners  ****************************/
+    
+}
+/***************************  devices under 767px  ******************************/
+
+
+/***************************  devices under 767px  ******************************/
+@media(max-width:767px){
+    
+    /****************************  article  **********************************/
+    .article-content p{
+        font-size: 30px;
+    }
+    
+    .article-content h1 {
+        font-size: 50px;
+        margin: 10px 0px 10px 0px;
+        padding-bottom: 10px;
+        border-bottom: none !important;
+    }
+        
+    .article-content .date,
+    .article-content .author{
+        font-size:25px;
+    }
+
+    .article-content h2{
+        font-size:40px;
+    }
+
+    .article-content h3, h4, h5, h6{
+        font-size:35px;
+    }
+
+    .article-content .article-image{
+        font-size:25px;
+    }
+
+    .article-content .article-share {
+            margin-bottom: 7px;
+            width: 100%;
+            display: inline-block;
+            float: none;
+    }
+
+    .fact_title{
+        font-size:35px !important;
+    }
+
+    .factbox p{
+        font-size:28px !important;
+    }
+
+    .insert_element.read_more{
+        margin: 20px 0 !important;
+    }
+
+    .insert_element.read_more .text {
+        font-size: 28px !important;
+    }
+    /****************************  article  **********************************/
+    
+    
+    /****************************  banners  **********************************/
+    .ad-unit-mobile{
+        background-color:#d6d6d6;
+        text-align:center !important;
+        margin:15px auto;
+        overflow:hidden;
+    }
+    
+    .mobile_1_article{
+        padding-top:10px;
+        padding-bottom:10px;
+        width:100%;
+    }
+    .mobile_2_article{
+        padding-top:10px;
+        padding-bottom:10px;
+        width:100%;
+    }
+    
+    .dynamic_mobile_ad,
+    mobile_3_article{
+        padding-top:10px;
+        padding-bottom:10px;
+        width:100%;
+    }
+
+    /****************************  banners  **********************************/
+
+}
+/*************************  devices under 767px end  ****************************/

@@ -751,7 +751,7 @@ mediaTypes: {
  banner: { sizes: [[970, 90],[728, 90],[468, 60],[320, 50],[1, 1]] }
 },
 bids: [
- //{ bidder: 'teads',      labelAny: ['desktopleader', 'tabletmenu', 'phonemenu'], params: { placementId: '75853', pageId: '87372' } },
+ { bidder: 'teads',      labelAny: ['desktopleader', 'tabletmenu', 'phonemenu'], params: { placementId: '75853', pageId: '87372' } },
  { bidder: 'appnexus',   labelAny: ['desktopleader', 'tabletmenu', 'phonemenu'], params: { placementId: '11962910', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_on'] } } }, /* one placementId for all sizes */
 // { bidder: 'appnexus',   labelAny: ['desktopleader', 'tabletmenu', 'phonemenu'], params: { placementId: '13232392', video: { skippable: true}, renderer: { url: 'http://cdn.adnxs.com/renderer/video/ANOutstreamVideo.js' } } }, /* demo video placement, always returns a vid, only works client side */ 
  { bidder: 'districtm',   labelAny: ['desktopleader', 'tabletmenu', 'phonemenu'], params: { placementId: 11937611, allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_on'] } } },
@@ -1420,11 +1420,9 @@ inreedvid9Slot: { adUnitPath: "/1001824/adp100001/adp100001F", size: "mappingmen
 inreedvid6Slot: { adUnitPath: "/1001824/adp100001/adp100001C", size: "mappinginreedvidslot", sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
 inreedvid10Slot: { adUnitPath: "/1001824/adp100001/adp100001G", size: "mappinginreedvidslot", sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
 inreedvid7Slot: { adUnitPath: "/1001824/adp100001/adp100001D", size: "mappinginreedvidslot", sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
-
-
 },
-    sizeMappings: {
-     mappinginreedvidslot: [
+sizeMappings: {
+mappinginreedvidslot: [
      [[1024, 768],[[1,1],[550,310],[728,90],[300,250],[250,250],[468,60],[320,50],[336,280],[580,400],[320,100]]],
      [[768, 500],[[728,90],[300,250],[250,250],[468,60],[320,50],[1,1],[550,310],[336,280],[580,400],[320,100]]],
      [[1, 1],[[300,250],[250,250],[320,50],[320, 100],[336, 280],[468, 90],[1,1]]],
