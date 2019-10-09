@@ -24,15 +24,6 @@ adyjsEl.src = "https://adops.adysis.com/prebid2.34.0adyjs.js";
 var adyjsTargetEl = document.getElementsByTagName("footerbid1")[0];
 adyjsTargetEl.insertBefore(adyjsEl, adyjsTargetEl.firstChild);
 })();
-//load up preconnect.js,  I think we need to load this earlier
-(function() {
-var preconnect = document.createElement("script");
-preconnect.rel = "preload";
-preconnect.type = "text/javascript";
-preconnect.src = "https://adops.adysis.com/preconnect.js";
-var nodepreconnect = document.getElementsByTagName("footerbid1")[0];
-nodepreconnect.insertBefore(preconnect, nodepreconnect.secondChild);
-})();
 //load up google gpt.js
 (function () {
 var gads = document.createElement("script");
@@ -42,6 +33,15 @@ gads.type = "text/javascript";
 gads.src = "https://securepubads.g.doubleclick.net/tag/js/gpt.js";
 var nodegads = document.getElementsByTagName("footerbid1")[0];
 nodegads.insertBefore(gads, nodegads.thirdChild);
+})();
+//load up preconnect.js,  I think we need to load this earlier
+(function() {
+var preconnect = document.createElement("script");
+preconnect.rel = "preload";
+preconnect.type = "text/javascript";
+preconnect.src = "https://adops.adysis.com/preconnect.js";
+var nodepreconnect = document.getElementsByTagName("footerbid1")[0];
+nodepreconnect.insertBefore(preconnect, nodepreconnect.secondChild);
 })();
 //load up bidfilter.js,
 window._BidFilter={site_id:1045,pbjsKey:'adyjs',checkAudio:false};
