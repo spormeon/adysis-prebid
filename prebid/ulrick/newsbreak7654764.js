@@ -273,15 +273,15 @@ console.log("user bid cache:", USERBIDCACHE );
       },
       bids: [
           { bidder: 'teads',      labelAny: ['desktopleader', 'tablet', 'phone'], params: { placementId: '75853', pageId: '87372' } },
-          { bidder: 'appnexus',   labelAny: ['desktopleader', 'tablet', 'phone'], params: { placementId: '11962910', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }, /* one placementId for all sizes */
-       // { bidder: 'appnexus',   labelAny: ['desktopleader', 'tablet', 'phone'], params: { placementId: '13232392', video: { skippable: true}, renderer: { url: 'http://cdn.adnxs.com/renderer/video/ANOutstreamVideo.js' } } }, /* demo video placement, always returns a vid, only works client side */ 
-          { bidder: 'districtm',   labelAny: ['desktopleader', 'tablet', 'phone'], params: { placementId: 11937611, allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } },
+          { bidder: 'appnexus',   labelAny: ['desktopleader', 'tablet', 'phone'], params: { placementId: '11962910', allowSmallerSizes: true } }, /* one placementId for all sizes */
+       // { bidder: 'appnexus',   labelAny: ['desktopleader', 'tablet', 'phone'], params: { placementId: '13232392' } }, /* demo video placement, always returns a vid, only works client side */ 
+          { bidder: 'districtm',   labelAny: ['desktopleader', 'tablet', 'phone'], params: { placementId: 11937611, allowSmallerSizes: true } },
           { bidder: 'districtmDMX',  labelAny: ['desktopleader', 'tablet', 'phone'], params: { dmxid: 171413, memberid: 100041  } }, /* outstream - display */ 
           { bidder: 'onedisplay',    labelAny: ['desktopleader', 'tablet', 'phone'], params: { placement: '4882886', network: '4436.1', server: 'adserver-eu.adtech.advertising.com' } }, /* 300x250 */ 
           { bidder: 'brealtime',  labelAny: ['desktopleader', 'tablet', 'phone'], params: { placementId: '16717366' } },  /* sizeless placement */   
-          { bidder: 'conversant',  labelAny: ['desktopleader', 'tablet', 'phone'], params: { site_id: '118233', mimes: [ 'video/mp4', 'application/javascript' ], maxduration: 30 } },  /* 300x250 */ 
-          { bidder: 'pulsepoint',  labelAny: ['desktopleader', 'tablet', 'phone'], params: { cf: '1X1', cp: '561446', ct: '702261', cw: 550, ch: 310 } }, /* outstream */
-          { bidder: 'pulsepoint',  labelAny: ['desktopleader', 'tablet', 'phone'], params: { cf: '300X250', cp: '561446', ct: '602639', video: { w: 550, h: 310 } } }, /* 300x250 */
+          { bidder: 'conversant',  labelAny: ['desktopleader', 'tablet', 'phone'], params: { site_id: '118233' } },  /* 300x250 */ 
+          //{ bidder: 'pulsepoint',  labelAny: ['desktopleader', 'tablet', 'phone'], params: { cf: '1X1', cp: '561446', ct: '702261', cw: 550, ch: 310 } }, /* outstream */
+          { bidder: 'pulsepoint',  labelAny: ['desktopleader', 'tablet', 'phone'], params: { cf: '300X250', cp: '561446', ct: '602639' } }, /* 300x250 */
           { bidder: 'sovrn',       labelAny: ['desktopleader', 'tablet', 'phone'], params: { tagid: '575683' } }, /* 300x250 */
           //{ bidder: 'somoaudience',  labelAny: ['desktopleader', 'tablet', 'phone'], params: { placement_hash: '1152340cac3268b0e737b49c1382cd2b' } }, /*300x250*/
           { bidder: '33across',    labelAny: ['desktopleader', 'tablet', 'phone'], params: { siteId : 'cLN3UCBHar5OfDrkHcnlKl', productId: 'siab' } }, /*All sizes*/
@@ -302,7 +302,7 @@ console.log("user bid cache:", USERBIDCACHE );
           // { bidder: 'beachfront',  labelAny: ['desktopleader', 'tablet', 'phone'],params: { bidfloor: 0.01, appId: '11bc5dd5-7421-4dd8-c926-40fa653bec76' } }, /* video for s2s bidding */
           // { bidder: 'beachfront',  labelAny: ['desktopleader', 'tablet', 'phone'],params: { bidfloor: 0.01, appId: '3b16770b-17af-4d22-daff-9606bdf2c9c3' } }, /* banners for s2s bidding */
           //{ bidder: 'cedato',     labelAny: ['desktopleader', 'tablet', 'phone'], params: { player_id: '1895193152' , bidfloor: 0.01 } },
-          { bidder: 'adysis',   labelAny: ['desktopleader', 'tablet', 'phone'], params: { placementId: '11962910', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }, /* one placementId for all sizes */
+          { bidder: 'adysis',   labelAny: ['desktopleader', 'tablet', 'phone'], params: { placementId: '11962910', allowSmallerSizes: true } }, /* one placementId for all sizes */
           //{ bidder: 'smartyads',  labelAny: ['desktopleader', 'tablet', 'phone'], params: { placementId: '6368' } }, /* 300x250 */
           { bidder: 'oftmedia',   labelAny: ['desktopleader', 'tablet', 'phone'], params: { placementId: '16137883', allowSmallerSizes: true } },
           { bidder: 'openx',   labelAny: ['desktopleader', 'tablet', 'phone'], params: { unit: '539181725', delDomain: 'freestar-d.openx.net', openrtb: { imp: [{ video: { mimes: ['video/x-flv, video/mp4, application/x-shockwave-flash, application/javascript, video/webm'] } }] } } },
@@ -395,15 +395,15 @@ mediaTypes: {
 },
 bids: [
   { bidder: 'teads',      labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '75853', pageId: '87372' } },
-  { bidder: 'appnexus',   labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '11962910', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_on'] } } }, /* one placementId for all sizes */
-// { bidder: 'appnexus',   labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '13232392', video: { skippable: true}, renderer: { url: 'http://cdn.adnxs.com/renderer/video/ANOutstreamVideo.js' } } }, /* demo video placement, always returns a vid, only works client side */ 
-  { bidder: 'districtm',   labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: 11937611, allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_on'] } } },
+  { bidder: 'appnexus',   labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '11962910', allowSmallerSizes: true } }, /* one placementId for all sizes */
+// { bidder: 'appnexus',   labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '13232392' } }, /* demo video placement, always returns a vid, only works client side */ 
+  { bidder: 'districtm',   labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: 11937611, allowSmallerSizes: true } },
   { bidder: 'districtmDMX',  labelAny: ['desktop', 'tablet', 'phone'], params: { dmxid: 171413, memberid: 100041  } }, /* outstream - display */ 
   { bidder: 'onedisplay',    labelAny: ['desktop', 'tablet', 'phone'], params: { placement: '4882886', network: '4436.1', server: 'adserver-eu.adtech.advertising.com' } }, /* 300x250 */ 
   { bidder: 'brealtime',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '16717366' } },  /* sizeless placement */   
-  { bidder: 'conversant',  labelAny: ['desktop', 'tablet', 'phone'], params: { site_id: '118233', mimes: [ 'video/mp4', 'application/javascript' ], maxduration: 30 } },  /* 300x250 */ 
+  { bidder: 'conversant',  labelAny: ['desktop', 'tablet', 'phone'], params: { site_id: '118233' } },  /* 300x250 */ 
   { bidder: 'pulsepoint',  labelAny: ['desktop', 'tablet', 'phone'], params: { cf: '300X250', cp: '561446', ct: '602639', video: { w: 550, h: 310 } } }, /* 300x250 */
-  { bidder: 'pulsepoint',  labelAny: ['desktop', 'tablet', 'phone'], params: { cf: '1X1', cp: '561446', ct: '702261', cw: 550, ch: 310 } }, /* outstream */
+  //{ bidder: 'pulsepoint',  labelAny: ['desktop', 'tablet', 'phone'], params: { cf: '1X1', cp: '561446', ct: '702261', cw: 550, ch: 310 } }, /* outstream */
   { bidder: 'sovrn',       labelAny: ['desktop', 'tablet', 'phone'], params: { tagid: '575683' } }, /* 300x250 */
   //{ bidder: 'somoaudience',  labelAny: ['desktop', 'tablet', 'phone'], params: { placement_hash: '1152340cac3268b0e737b49c1382cd2b' } }, /*300x250*/
   { bidder: '33across',    labelAny: ['desktop', 'tablet', 'phone'], params: { siteId : 'cLN3UCBHar5OfDrkHcnlKl', productId: 'siab' } }, /*All sizes*/
@@ -424,13 +424,13 @@ bids: [
   // { bidder: 'beachfront',  labelAny: ['desktop', 'tablet', 'phone'],params: { bidfloor: 0.01, appId: '11bc5dd5-7421-4dd8-c926-40fa653bec76' } }, /* video for s2s bidding */
   // { bidder: 'beachfront',  labelAny: ['desktop', 'tablet', 'phone'],params: { bidfloor: 0.01, appId: '3b16770b-17af-4d22-daff-9606bdf2c9c3' } }, /* banners for s2s bidding */
   //{ bidder: 'cedato',     labelAny: ['desktop', 'tablet', 'phone'], params: { player_id: '1895193152' , bidfloor: 0.01 } },
-  { bidder: 'adysis',   labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '11962910', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_on'] } } }, /* one placementId for all sizes */
+  { bidder: 'adysis',   labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '11962910', allowSmallerSizes: true } }, /* one placementId for all sizes */
   //{ bidder: 'smartyads',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '6368' } }, /* 300x250 */
   { bidder: 'oftmedia',   labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '16137883', allowSmallerSizes: true } },
   { bidder: 'openx',   labelAny: ['desktop', 'tablet', 'phone'], params: { unit: '539181725', delDomain: 'freestar-d.openx.net', openrtb: { imp: [{ video: { mimes: ['video/x-flv, video/mp4, application/x-shockwave-flash, application/javascript, video/webm'] } }] } } },
   { bidder: 'rubicon',   labelAny: ['desktop', 'tablet', 'phone'], params: { accountId: "16924", siteId: "151312", zoneId: "896644" } }, /* display call */
   { bidder: 'quantcast',   labelAny: ['desktop', 'tablet', 'phone'], params: { publisherId: "EnBKrGZNvq"} },
-  { bidder: 'criteo',   labelAny: ['desktop', 'tablet', 'phone'], params: { zoneId: "1079305", video: { skip: 1, minduration: 5, playbackmethod: 1, placement: 2 } } },
+  { bidder: 'criteo',   labelAny: ['desktop', 'tablet', 'phone'], params: { zoneId: "1079305" } },
   { bidder: 'triplelift',   labelAny: ['desktop', 'tablet', 'phone'], params: { inventoryCode: "freestar_desktop_RON_300x250"} },
   { bidder: 'sharethrough',   labelAny: ['desktop', 'tablet', 'phone'], params: { pkey: "DSthphoQqH66AkQXPDoXn74b", iframe: true} },
   { bidder: 'connectad',   labelAny: ['desktop', 'tablet', 'phone'], params: { networkId: "10047", siteId: "1029474"} },
@@ -512,15 +512,15 @@ mediaTypes: {
 },
 bids: [
  { bidder: 'teads',      labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '75853', pageId: '87372' } },
- { bidder: 'appnexus',   labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '11962910', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_on'] } } }, /* one placementId for all sizes */
-// { bidder: 'appnexus',   labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '13232392', video: { skippable: true}, renderer: { url: 'http://cdn.adnxs.com/renderer/video/ANOutstreamVideo.js' } } }, /* demo video placement, always returns a vid, only works client side */ 
- { bidder: 'districtm',   labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: 11937611, allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_on'] } } },
+ { bidder: 'appnexus',   labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '11962910', allowSmallerSizes: true } }, /* one placementId for all sizes */
+// { bidder: 'appnexus',   labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '13232392' } }, /* demo video placement, always returns a vid, only works client side */ 
+ { bidder: 'districtm',   labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: 11937611, allowSmallerSizes: true } },
  { bidder: 'districtmDMX',  labelAny: ['desktop', 'tablet', 'phone'], params: { dmxid: 171413, memberid: 100041  } }, /* outstream - display */ 
  { bidder: 'onedisplay',    labelAny: ['desktop', 'tablet', 'phone'], params: { placement: '4882886', network: '4436.1', server: 'adserver-eu.adtech.advertising.com' } }, /* 300x250 */ 
  { bidder: 'brealtime',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '16717366' } },  /* sizeless placement */   
- { bidder: 'conversant',  labelAny: ['desktop', 'tablet', 'phone'], params: { site_id: '118233', mimes: [ 'video/mp4', 'application/javascript' ], maxduration: 30 } },  /* 300x250 */ 
+ { bidder: 'conversant',  labelAny: ['desktop', 'tablet', 'phone'], params: { site_id: '118233' } },  /* 300x250 */ 
  { bidder: 'pulsepoint',  labelAny: ['desktop', 'tablet', 'phone'], params: { cf: '300X250', cp: '561446', ct: '602639', video: { w: 550, h: 310 } } }, /* 300x250 */
- { bidder: 'pulsepoint',  labelAny: ['desktop', 'tablet', 'phone'], params: { cf: '1X1', cp: '561446', ct: '702261', cw: 550, ch: 310 } }, /* outstream */
+ //{ bidder: 'pulsepoint',  labelAny: ['desktop', 'tablet', 'phone'], params: { cf: '1X1', cp: '561446', ct: '702261', cw: 550, ch: 310 } }, /* outstream */
  { bidder: 'sovrn',       labelAny: ['desktop', 'tablet', 'phone'], params: { tagid: '575683' } }, /* 300x250 */
  //{ bidder: 'somoaudience',  labelAny: ['desktop', 'tablet', 'phone'], params: { placement_hash: '1152340cac3268b0e737b49c1382cd2b' } }, /*300x250*/
  { bidder: '33across',    labelAny: ['desktop', 'tablet', 'phone'], params: { siteId : 'cLN3UCBHar5OfDrkHcnlKl', productId: 'siab' } }, /*All sizes*/
@@ -541,13 +541,13 @@ bids: [
  // { bidder: 'beachfront',  labelAny: ['desktop', 'tablet', 'phone'],params: { bidfloor: 0.01, appId: '11bc5dd5-7421-4dd8-c926-40fa653bec76' } }, /* video for s2s bidding */
  // { bidder: 'beachfront',  labelAny: ['desktop', 'tablet', 'phone'],params: { bidfloor: 0.01, appId: '3b16770b-17af-4d22-daff-9606bdf2c9c3' } }, /* banners for s2s bidding */
  //{ bidder: 'cedato',     labelAny: ['desktop', 'tablet', 'phone'], params: { player_id: '1895193152' , bidfloor: 0.01 } },
- { bidder: 'adysis',   labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '11962910', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_on'] } } }, /* one placementId for all sizes */
+ { bidder: 'adysis',   labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '11962910', allowSmallerSizes: true } }, /* one placementId for all sizes */
  //{ bidder: 'smartyads',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '6368' } }, /* 300x250 */
  { bidder: 'oftmedia',   labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '16137883', allowSmallerSizes: true } },
  { bidder: 'openx',   labelAny: ['desktop', 'tablet', 'phone'], params: { unit: '539181725', delDomain: 'freestar-d.openx.net', openrtb: { imp: [{ video: { mimes: ['video/x-flv, video/mp4, application/x-shockwave-flash, application/javascript, video/webm'] } }] } } },
  { bidder: 'rubicon',   labelAny: ['desktop', 'tablet', 'phone'], params: { accountId: "16924", siteId: "151312", zoneId: "896644" } }, /* display call */
  { bidder: 'quantcast',   labelAny: ['desktop', 'tablet', 'phone'], params: { publisherId: "EnBKrGZNvq"} },
- { bidder: 'criteo',   labelAny: ['desktop', 'tablet', 'phone'], params: { zoneId: "1079305", video: { skip: 1, minduration: 5, playbackmethod: 1, placement: 2 } } },
+ { bidder: 'criteo',   labelAny: ['desktop', 'tablet', 'phone'], params: { zoneId: "1079305" } },
  { bidder: 'triplelift',   labelAny: ['desktop', 'tablet', 'phone'], params: { inventoryCode: "freestar_desktop_RON_300x250"} },
  { bidder: 'sharethrough',   labelAny: ['desktop', 'tablet', 'phone'], params: { pkey: "DSthphoQqH66AkQXPDoXn74b", iframe: true} },
  { bidder: 'connectad',   labelAny: ['desktop', 'tablet', 'phone'], params: { networkId: "10047", siteId: "1029474"} },
@@ -630,15 +630,15 @@ mediaTypes: {
 },
 bids: [
  { bidder: 'teads',      labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '75853', pageId: '87372' } },
- { bidder: 'appnexus',   labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '11962910', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_on'] } } }, /* one placementId for all sizes */
-// { bidder: 'appnexus',   labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '13232392', video: { skippable: true}, renderer: { url: 'http://cdn.adnxs.com/renderer/video/ANOutstreamVideo.js' } } }, /* demo video placement, always returns a vid, only works client side */ 
- { bidder: 'districtm',   labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: 11937611, allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_on'] } } },
+ { bidder: 'appnexus',   labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '11962910', allowSmallerSizes: true } }, /* one placementId for all sizes */
+// { bidder: 'appnexus',   labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '13232392' } }, /* demo video placement, always returns a vid, only works client side */ 
+ { bidder: 'districtm',   labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: 11937611, allowSmallerSizes: true } },
  { bidder: 'districtmDMX',  labelAny: ['desktop', 'tablet', 'phone'], params: { dmxid: 171413, memberid: 100041  } }, /* outstream - display */ 
  { bidder: 'onedisplay',    labelAny: ['desktop', 'tablet', 'phone'], params: { placement: '4882886', network: '4436.1', server: 'adserver-eu.adtech.advertising.com' } }, /* 300x250 */ 
  { bidder: 'brealtime',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '16717366' } },  /* sizeless placement */   
- { bidder: 'conversant',  labelAny: ['desktop', 'tablet', 'phone'], params: { site_id: '118233', mimes: [ 'video/mp4', 'application/javascript' ], maxduration: 30 } },  /* 300x250 */ 
+ { bidder: 'conversant',  labelAny: ['desktop', 'tablet', 'phone'], params: { site_id: '118233' } },  /* 300x250 */ 
  { bidder: 'pulsepoint',  labelAny: ['desktop', 'tablet', 'phone'], params: { cf: '300X250', cp: '561446', ct: '602639', video: { w: 550, h: 310 } } }, /* 300x250 */
- { bidder: 'pulsepoint',  labelAny: ['desktop', 'tablet', 'phone'], params: { cf: '1X1', cp: '561446', ct: '702261', cw: 550, ch: 310 } }, /* outstream */
+ //{ bidder: 'pulsepoint',  labelAny: ['desktop', 'tablet', 'phone'], params: { cf: '1X1', cp: '561446', ct: '702261', cw: 550, ch: 310 } }, /* outstream */
  { bidder: 'sovrn',       labelAny: ['desktop', 'tablet', 'phone'], params: { tagid: '575683' } }, /* 300x250 */
  //{ bidder: 'somoaudience',  labelAny: ['desktop', 'tablet', 'phone'], params: { placement_hash: '1152340cac3268b0e737b49c1382cd2b' } }, /*300x250*/
  { bidder: '33across',    labelAny: ['desktop', 'tablet', 'phone'], params: { siteId : 'cLN3UCBHar5OfDrkHcnlKl', productId: 'siab' } }, /*All sizes*/
@@ -659,13 +659,13 @@ bids: [
  // { bidder: 'beachfront',  labelAny: ['desktop', 'tablet', 'phone'],params: { bidfloor: 0.01, appId: '11bc5dd5-7421-4dd8-c926-40fa653bec76' } }, /* video for s2s bidding */
  // { bidder: 'beachfront',  labelAny: ['desktop', 'tablet', 'phone'],params: { bidfloor: 0.01, appId: '3b16770b-17af-4d22-daff-9606bdf2c9c3' } }, /* banners for s2s bidding */
  //{ bidder: 'cedato',     labelAny: ['desktop', 'tablet', 'phone'], params: { player_id: '1895193152' , bidfloor: 0.01 } },
- { bidder: 'adysis',   labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '11962910', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_on'] } } }, /* one placementId for all sizes */
+ { bidder: 'adysis',   labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '11962910', allowSmallerSizes: true } }, /* one placementId for all sizes */
  //{ bidder: 'smartyads',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '6368' } }, /* 300x250 */
  { bidder: 'oftmedia',   labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '16137883', allowSmallerSizes: true } },
  { bidder: 'openx',   labelAny: ['desktop', 'tablet', 'phone'], params: { unit: '539181725', delDomain: 'freestar-d.openx.net', openrtb: { imp: [{ video: { mimes: ['video/x-flv, video/mp4, application/x-shockwave-flash, application/javascript, video/webm'] } }] } } },
  { bidder: 'rubicon',   labelAny: ['desktop', 'tablet', 'phone'], params: { accountId: "16924", siteId: "151312", zoneId: "896644" } }, /* display call */
  { bidder: 'quantcast',   labelAny: ['desktop', 'tablet', 'phone'], params: { publisherId: "EnBKrGZNvq"} },
- { bidder: 'criteo',   labelAny: ['desktop', 'tablet', 'phone'], params: { zoneId: "1079305", video: { skip: 1, minduration: 5, playbackmethod: 1, placement: 2 } } },
+ { bidder: 'criteo',   labelAny: ['desktop', 'tablet', 'phone'], params: { zoneId: "1079305" } },
  { bidder: 'triplelift',   labelAny: ['desktop', 'tablet', 'phone'], params: { inventoryCode: "freestar_desktop_RON_300x250"} },
  { bidder: 'sharethrough',   labelAny: ['desktop', 'tablet', 'phone'], params: { pkey: "DSthphoQqH66AkQXPDoXn74b", iframe: true} },
  { bidder: 'connectad',   labelAny: ['desktop', 'tablet', 'phone'], params: { networkId: "10047", siteId: "1029474"} },
@@ -748,15 +748,15 @@ mediaTypes: {
 },
 bids: [
  { bidder: 'teads',      labelAny: ['desktopleader', 'tabletmenu', 'phonemenu'], params: { placementId: '75853', pageId: '87372' } },
- { bidder: 'appnexus',   labelAny: ['desktopleader', 'tabletmenu', 'phonemenu'], params: { placementId: '11962910', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_on'] } } }, /* one placementId for all sizes */
-// { bidder: 'appnexus',   labelAny: ['desktopleader', 'tabletmenu', 'phonemenu'], params: { placementId: '13232392', video: { skippable: true}, renderer: { url: 'http://cdn.adnxs.com/renderer/video/ANOutstreamVideo.js' } } }, /* demo video placement, always returns a vid, only works client side */ 
- { bidder: 'districtm',   labelAny: ['desktopleader', 'tabletmenu', 'phonemenu'], params: { placementId: 11937611, allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_on'] } } },
+ { bidder: 'appnexus',   labelAny: ['desktopleader', 'tabletmenu', 'phonemenu'], params: { placementId: '11962910', allowSmallerSizes: true } }, /* one placementId for all sizes */
+// { bidder: 'appnexus',   labelAny: ['desktopleader', 'tabletmenu', 'phonemenu'], params: { placementId: '13232392' } }, /* demo video placement, always returns a vid, only works client side */ 
+ { bidder: 'districtm',   labelAny: ['desktopleader', 'tabletmenu', 'phonemenu'], params: { placementId: 11937611, allowSmallerSizes: true } },
  { bidder: 'districtmDMX',  labelAny: ['desktopleader', 'tabletmenu', 'phonemenu'], params: { dmxid: 171413, memberid: 100041  } }, /* outstream - display */ 
  { bidder: 'onedisplay',    labelAny: ['desktopleader', 'tabletmenu', 'phonemenu'], params: { placement: '4882886', network: '4436.1', server: 'adserver-eu.adtech.advertising.com' } }, /* 300x250 */ 
  { bidder: 'brealtime',  labelAny: ['desktopleader', 'tabletmenu', 'phonemenu'], params: { placementId: '16717366' } },  /* sizeless placement */   
- { bidder: 'conversant',  labelAny: ['desktopleader', 'tabletmenu', 'phonemenu'], params: { site_id: '118233', mimes: [ 'video/mp4', 'application/javascript' ], maxduration: 30 } },  /* 300x250 */ 
+ { bidder: 'conversant',  labelAny: ['desktopleader', 'tabletmenu', 'phonemenu'], params: { site_id: '118233' } },  /* 300x250 */ 
  { bidder: 'pulsepoint',  labelAny: ['desktopleader', 'tabletmenu', 'phonemenu'], params: { cf: '300X250', cp: '561446', ct: '602639', video: { w: 550, h: 310 } } }, /* 300x250 */
- { bidder: 'pulsepoint',  labelAny: ['desktopleader', 'tabletmenu', 'phonemenu'], params: { cf: '1X1', cp: '561446', ct: '702261', cw: 550, ch: 310 } }, /* outstream */
+ //{ bidder: 'pulsepoint',  labelAny: ['desktopleader', 'tabletmenu', 'phonemenu'], params: { cf: '1X1', cp: '561446', ct: '702261', cw: 550, ch: 310 } }, /* outstream */
  { bidder: 'sovrn',       labelAny: ['desktopleader', 'tabletmenu', 'phonemenu'], params: { tagid: '575683' } }, /* 300x250 */
  //{ bidder: 'somoaudience',  labelAny: ['desktopleader', 'tabletmenu', 'phonemenu'], params: { placement_hash: '1152340cac3268b0e737b49c1382cd2b' } }, /*300x250*/
  { bidder: '33across',    labelAny: ['desktopleader', 'tabletmenu', 'phonemenu'], params: { siteId : 'cLN3UCBHar5OfDrkHcnlKl', productId: 'siab' } }, /*All sizes*/
@@ -777,13 +777,13 @@ bids: [
  // { bidder: 'beachfront',  labelAny: ['desktopleader', 'tabletmenu', 'phonemenu'],params: { bidfloor: 0.01, appId: '11bc5dd5-7421-4dd8-c926-40fa653bec76' } }, /* video for s2s bidding */
  // { bidder: 'beachfront',  labelAny: ['desktopleader', 'tabletmenu', 'phonemenu'],params: { bidfloor: 0.01, appId: '3b16770b-17af-4d22-daff-9606bdf2c9c3' } }, /* banners for s2s bidding */
  //{ bidder: 'cedato',     labelAny: ['desktopleader', 'tabletmenu', 'phonemenu'], params: { player_id: '1895193152' , bidfloor: 0.01 } },
- { bidder: 'adysis',   labelAny: ['desktopleader', 'tabletmenu', 'phonemenu'], params: { placementId: '11962910', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_on'] } } }, /* one placementId for all sizes */
+ { bidder: 'adysis',   labelAny: ['desktopleader', 'tabletmenu', 'phonemenu'], params: { placementId: '11962910', allowSmallerSizes: true } }, /* one placementId for all sizes */
  //{ bidder: 'smartyads',  labelAny: ['desktopleader', 'tabletmenu', 'phonemenu'], params: { placementId: '6368' } }, /* 300x250 */
  { bidder: 'oftmedia',   labelAny: ['desktopleader', 'tabletmenu', 'phonemenu'], params: { placementId: '16137883', allowSmallerSizes: true } },
  { bidder: 'openx',   labelAny: ['desktopleader', 'tabletmenu', 'phonemenu'], params: { unit: '539181725', delDomain: 'freestar-d.openx.net', openrtb: { imp: [{ video: { mimes: ['video/x-flv, video/mp4, application/x-shockwave-flash, application/javascript, video/webm'] } }] } } },
  { bidder: 'rubicon',   labelAny: ['desktopleader', 'tabletmenu', 'phonemenu'], params: { accountId: "16924", siteId: "151312", zoneId: "896644" } }, /* display call */
  { bidder: 'quantcast',   labelAny: ['desktopleader', 'tabletmenu', 'phonemenu'], params: { publisherId: "EnBKrGZNvq"} },
- { bidder: 'criteo',   labelAny: ['desktopleader', 'tabletmenu', 'phonemenu'], params: { zoneId: "1079305", video: { skip: 1, minduration: 5, playbackmethod: 1, placement: 2 } } },
+ { bidder: 'criteo',   labelAny: ['desktopleader', 'tabletmenu', 'phonemenu'], params: { zoneId: "1079305" } },
  { bidder: 'triplelift',   labelAny: ['desktopleader', 'tabletmenu', 'phonemenu'], params: { inventoryCode: "freestar_desktopleader_RON_300x250"} },
  { bidder: 'sharethrough',   labelAny: ['desktopleader', 'tabletmenu', 'phonemenu'], params: { pkey: "DSthphoQqH66AkQXPDoXn74b", iframe: true} },
  { bidder: 'connectad',   labelAny: ['desktopleader', 'tabletmenu', 'phonemenu'], params: { networkId: "10047", siteId: "1029474"} },
@@ -866,15 +866,15 @@ banner: { sizes: [[300, 600],[160, 600],[120, 600],[300, 250],[250, 250],[1, 1]]
 },
 bids: [
 { bidder: 'teads',      labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: '75853', pageId: '87372' } },
-{ bidder: 'appnexus',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: '11962910', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_on'] } } }, /* one placementId for all sizes */
-//{ bidder: 'appnexus',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: '13232392', video: { skippable: true}, renderer: { url: 'http://cdn.adnxs.com/renderer/video/ANOutstreamVideo.js' } } }, /* demo video placement, always returns a vid, only works client side */ 
-{ bidder: 'districtm',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: 11937611, allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_on'] } } },
+{ bidder: 'appnexus',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: '11962910', allowSmallerSizes: true } }, /* one placementId for all sizes */
+//{ bidder: 'appnexus',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: '13232392' } }, /* demo video placement, always returns a vid, only works client side */ 
+{ bidder: 'districtm',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: 11937611, allowSmallerSizes: true } },
 { bidder: 'districtmDMX',  labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { dmxid: 171413, memberid: 100041  } }, /* outstream - display */ 
 { bidder: 'onedisplay',    labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placement: '4882886', network: '4436.1', server: 'adserver-eu.adtech.advertising.com' } }, /* 300x250 */ 
 { bidder: 'brealtime',  labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: '16717366' } },  /* sizeless placement */   
-{ bidder: 'conversant',  labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { site_id: '118233', mimes: [ 'video/mp4', 'application/javascript' ], maxduration: 30 } },  /* 300x250 */ 
+{ bidder: 'conversant',  labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { site_id: '118233' } },  /* 300x250 */ 
 { bidder: 'pulsepoint',  labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { cf: '300X250', cp: '561446', ct: '602639', video: { w: 550, h: 310 } } }, /* 300x250 */
-{ bidder: 'pulsepoint',  labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { cf: '1X1', cp: '561446', ct: '702261', cw: 550, ch: 310 } }, /* outstream */
+//{ bidder: 'pulsepoint',  labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { cf: '1X1', cp: '561446', ct: '702261', cw: 550, ch: 310 } }, /* outstream */
 { bidder: 'sovrn',       labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { tagid: '575683' } }, /* 300x250 */
 //{ bidder: 'somoaudience',  labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placement_hash: '1152340cac3268b0e737b49c1382cd2b' } }, /*300x250*/
 { bidder: '33across',    labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { siteId : 'cLN3UCBHar5OfDrkHcnlKl', productId: 'siab' } }, /*All sizes*/
@@ -896,13 +896,13 @@ bids: [
 // { bidder: 'beachfront',  labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'],params: { bidfloor: 0.01, appId: '11bc5dd5-7421-4dd8-c926-40fa653bec76' } }, /* video for s2s bidding */
 // { bidder: 'beachfront',  labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'],params: { bidfloor: 0.01, appId: '3b16770b-17af-4d22-daff-9606bdf2c9c3' } }, /* banners for s2s bidding */
 //{ bidder: 'cedato',     labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { player_id: '1895193152' , bidfloor: 0.01 } },
-{ bidder: 'adysis',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: '11962910', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_on'] } } }, /* one placementId for all sizes */
+{ bidder: 'adysis',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: '11962910', allowSmallerSizes: true } }, /* one placementId for all sizes */
 //{ bidder: 'smartyads',  labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: '6368' } }, /* 300x250 */
 { bidder: 'oftmedia',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: '16137883', allowSmallerSizes: true } },
 { bidder: 'openx',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { unit: '539181725', delDomain: 'freestar-d.openx.net', openrtb: { imp: [{ video: { mimes: ['video/x-flv, video/mp4, application/x-shockwave-flash, application/javascript, video/webm'] } }] } } },
 { bidder: 'rubicon',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { accountId: "16924", siteId: "151312", zoneId: "896644" } }, /* display call */
 { bidder: 'quantcast',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { publisherId: "EnBKrGZNvq"} },
-{ bidder: 'criteo',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { zoneId: "1079305", video: { skip: 1, minduration: 5, playbackmethod: 1, placement: 2 } } },
+{ bidder: 'criteo',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { zoneId: "1079305" } },
 { bidder: 'triplelift',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { inventoryCode: "freestar_desktopmenu_RON_300x250"} },
 { bidder: 'sharethrough',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { pkey: "DSthphoQqH66AkQXPDoXn74b", iframe: true} },
 { bidder: 'connectad',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { networkId: "10047", siteId: "1029474"} },
@@ -984,15 +984,15 @@ banner: { sizes: [[300, 250],[250, 250],[1, 1]] }
 },
 bids: [
 { bidder: 'teads',      labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: '75853', pageId: '87372' } },
-{ bidder: 'appnexus',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: '11962910', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_on'] } } }, /* one placementId for all sizes */
-//{ bidder: 'appnexus',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: '13232392', video: { skippable: true}, renderer: { url: 'http://cdn.adnxs.com/renderer/video/ANOutstreamVideo.js' } } }, /* demo video placement, always returns a vid, only works client side */ 
-{ bidder: 'districtm',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: 11937611, allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_on'] } } },
+{ bidder: 'appnexus',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: '11962910', allowSmallerSizes: true } }, /* one placementId for all sizes */
+//{ bidder: 'appnexus',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: '13232392' } }, /* demo video placement, always returns a vid, only works client side */ 
+{ bidder: 'districtm',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: 11937611, allowSmallerSizes: true } },
 { bidder: 'districtmDMX',  labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { dmxid: 171413, memberid: 100041  } }, /* outstream - display */ 
 { bidder: 'onedisplay',    labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placement: '4882886', network: '4436.1', server: 'adserver-eu.adtech.advertising.com' } }, /* 300x250 */ 
 { bidder: 'brealtime',  labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: '16717366' } },  /* sizeless placement */   
-{ bidder: 'conversant',  labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { site_id: '118233', mimes: [ 'video/mp4', 'application/javascript' ], maxduration: 30 } },  /* 300x250 */ 
+{ bidder: 'conversant',  labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { site_id: '118233' } },  /* 300x250 */ 
 { bidder: 'pulsepoint',  labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { cf: '300X250', cp: '561446', ct: '602639', video: { w: 550, h: 310 } } }, /* 300x250 */
-{ bidder: 'pulsepoint',  labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { cf: '1X1', cp: '561446', ct: '702261', cw: 550, ch: 310 } }, /* outstream */
+//{ bidder: 'pulsepoint',  labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { cf: '1X1', cp: '561446', ct: '702261', cw: 550, ch: 310 } }, /* outstream */
 { bidder: 'sovrn',       labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { tagid: '575683' } }, /* 300x250 */
 //{ bidder: 'somoaudience',  labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placement_hash: '1152340cac3268b0e737b49c1382cd2b' } }, /*300x250*/
 { bidder: '33across',    labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { siteId : 'cLN3UCBHar5OfDrkHcnlKl', productId: 'siab' } }, /*All sizes*/
@@ -1014,13 +1014,13 @@ bids: [
 //{ bidder: 'beachfront',  labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'],params: { bidfloor: 0.01, appId: '11bc5dd5-7421-4dd8-c926-40fa653bec76' } }, /* video for s2s bidding */
 //{ bidder: 'beachfront',  labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'],params: { bidfloor: 0.01, appId: '3b16770b-17af-4d22-daff-9606bdf2c9c3' } }, /* banners for s2s bidding */
 //{ bidder: 'cedato',     labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { player_id: '1895193152' , bidfloor: 0.01 } },
-{ bidder: 'adysis',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: '11962910', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_on'] } } }, /* one placementId for all sizes */
+{ bidder: 'adysis',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: '11962910', allowSmallerSizes: true } }, /* one placementId for all sizes */
 //{ bidder: 'smartyads',  labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: '6368' } }, /* 300x250 */
 { bidder: 'oftmedia',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: '16137883', allowSmallerSizes: true } },
 { bidder: 'openx',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { unit: '539181725', delDomain: 'freestar-d.openx.net', openrtb: { imp: [{ video: { mimes: ['video/x-flv, video/mp4, application/x-shockwave-flash, application/javascript, video/webm'] } }] } } },
 { bidder: 'rubicon',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { accountId: "16924", siteId: "151312", zoneId: "896644" } }, /* display call */
 { bidder: 'quantcast',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { publisherId: "EnBKrGZNvq"} },
-{ bidder: 'criteo',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { zoneId: "1079305", video: { skip: 1, minduration: 5, playbackmethod: 1, placement: 2 } } },
+{ bidder: 'criteo',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { zoneId: "1079305" } },
 { bidder: 'triplelift',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { inventoryCode: "freestar_desktopmenu_RON_300x250"} },
 { bidder: 'sharethrough',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { pkey: "DSthphoQqH66AkQXPDoXn74b", iframe: true} },
 { bidder: 'connectad',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { networkId: "10047", siteId: "1029474"} },
@@ -1037,15 +1037,15 @@ banner: { sizes: [[300, 600],[300, 250],[160, 600],[120, 600],[1, 1]] }
 },
 bids: [
 { bidder: 'teads',      labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: '75853', pageId: '87372' } },
-{ bidder: 'appnexus',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: '11962910', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_on'] } } }, /* one placementId for all sizes */
-//{ bidder: 'appnexus',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: '13232392', video: { skippable: true}, renderer: { url: 'http://cdn.adnxs.com/renderer/video/ANOutstreamVideo.js' } } }, /* demo video placement, always returns a vid, only works client side */ 
-{ bidder: 'districtm',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: 11937611, allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_on'] } } },
+{ bidder: 'appnexus',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: '11962910', allowSmallerSizes: true } }, /* one placementId for all sizes */
+//{ bidder: 'appnexus',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: '13232392' } }, /* demo video placement, always returns a vid, only works client side */ 
+{ bidder: 'districtm',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: 11937611, allowSmallerSizes: true } },
 { bidder: 'districtmDMX',  labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { dmxid: 171413, memberid: 100041  } }, /* outstream - display */ 
 { bidder: 'onedisplay',    labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placement: '4882886', network: '4436.1', server: 'adserver-eu.adtech.advertising.com' } }, /* 300x250 */ 
 { bidder: 'brealtime',  labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: '16717366' } },  /* sizeless placement */   
-{ bidder: 'conversant',  labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { site_id: '118233', mimes: [ 'video/mp4', 'application/javascript' ], maxduration: 30 } },  /* 300x250 */ 
+{ bidder: 'conversant',  labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { site_id: '118233' } },  /* 300x250 */ 
 { bidder: 'pulsepoint',  labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { cf: '300X250', cp: '561446', ct: '602639', video: { w: 550, h: 310 } } }, /* 300x250 */
-{ bidder: 'pulsepoint',  labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { cf: '1X1', cp: '561446', ct: '702261', cw: 550, ch: 310 } }, /* outstream */
+//{ bidder: 'pulsepoint',  labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { cf: '1X1', cp: '561446', ct: '702261', cw: 550, ch: 310 } }, /* outstream */
 { bidder: 'sovrn',       labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { tagid: '575683' } }, /* 300x250 */
 //{ bidder: 'somoaudience',  labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placement_hash: '1152340cac3268b0e737b49c1382cd2b' } }, /*300x250*/
 { bidder: '33across',    labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { siteId : 'cLN3UCBHar5OfDrkHcnlKl', productId: 'siab' } }, /*All sizes*/
@@ -1067,13 +1067,13 @@ bids: [
 //{ bidder: 'beachfront',  labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'],params: { bidfloor: 0.01, appId: '11bc5dd5-7421-4dd8-c926-40fa653bec76' } }, /* video for s2s bidding */
 //{ bidder: 'beachfront',  labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'],params: { bidfloor: 0.01, appId: '3b16770b-17af-4d22-daff-9606bdf2c9c3' } }, /* banners for s2s bidding */
 //{ bidder: 'cedato',     labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { player_id: '1895193152' , bidfloor: 0.01 } },
-{ bidder: 'adysis',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: '11962910', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_on'] } } }, /* one placementId for all sizes */
+{ bidder: 'adysis',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: '11962910', allowSmallerSizes: true } }, /* one placementId for all sizes */
 //{ bidder: 'smartyads',  labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: '6368' } }, /* 300x250 */
 { bidder: 'oftmedia',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: '16137883', allowSmallerSizes: true } },
 { bidder: 'openx',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { unit: '539181725', delDomain: 'freestar-d.openx.net', openrtb: { imp: [{ video: { mimes: ['video/x-flv, video/mp4, application/x-shockwave-flash, application/javascript, video/webm'] } }] } } },
 { bidder: 'rubicon',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { accountId: "16924", siteId: "151312", zoneId: "896644" } }, /* display call */
 { bidder: 'quantcast',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { publisherId: "EnBKrGZNvq"} },
-{ bidder: 'criteo',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { zoneId: "1079305", video: { skip: 1, minduration: 5, playbackmethod: 1, placement: 2 } } },
+{ bidder: 'criteo',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { zoneId: "1079305" } },
 { bidder: 'triplelift',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { inventoryCode: "freestar_desktopmenu_RON_300x250"} },
 { bidder: 'sharethrough',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { pkey: "DSthphoQqH66AkQXPDoXn74b", iframe: true} },
 { bidder: 'connectad',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { networkId: "10047", siteId: "1029474"} },
@@ -1090,15 +1090,15 @@ banner: { sizes: [[300, 600],[300, 250],[160, 600],[120, 600],[1, 1]] }
 },
 bids: [
 { bidder: 'teads',      labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: '75853', pageId: '87372' } },
-{ bidder: 'appnexus',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: '11962910', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_on'] } } }, /* one placementId for all sizes */
-//{ bidder: 'appnexus',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: '13232392', video: { skippable: true}, renderer: { url: 'http://cdn.adnxs.com/renderer/video/ANOutstreamVideo.js' } } }, /* demo video placement, always returns a vid, only works client side */ 
-{ bidder: 'districtm',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: 11937611, allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_on'] } } },
+{ bidder: 'appnexus',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: '11962910', allowSmallerSizes: true } }, /* one placementId for all sizes */
+//{ bidder: 'appnexus',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: '13232392' } }, /* demo video placement, always returns a vid, only works client side */ 
+{ bidder: 'districtm',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: 11937611, allowSmallerSizes: true } },
 { bidder: 'districtmDMX',  labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { dmxid: 171413, memberid: 100041  } }, /* outstream - display */ 
 { bidder: 'onedisplay',    labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placement: '4882886', network: '4436.1', server: 'adserver-eu.adtech.advertising.com' } }, /* 300x250 */ 
 { bidder: 'brealtime',  labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: '16717366' } },  /* sizeless placement */   
-{ bidder: 'conversant',  labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { site_id: '118233', mimes: [ 'video/mp4', 'application/javascript' ], maxduration: 30 } },  /* 300x250 */ 
+{ bidder: 'conversant',  labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { site_id: '118233' } },  /* 300x250 */ 
 { bidder: 'pulsepoint',  labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { cf: '300X250', cp: '561446', ct: '602639', video: { w: 550, h: 310 } } }, /* 300x250 */
-{ bidder: 'pulsepoint',  labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { cf: '1X1', cp: '561446', ct: '702261', cw: 550, ch: 310 } }, /* outstream */
+//{ bidder: 'pulsepoint',  labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { cf: '1X1', cp: '561446', ct: '702261', cw: 550, ch: 310 } }, /* outstream */
 { bidder: 'sovrn',       labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { tagid: '575683' } }, /* 300x250 */
 //{ bidder: 'somoaudience',  labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placement_hash: '1152340cac3268b0e737b49c1382cd2b' } }, /*300x250*/
 { bidder: '33across',    labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { siteId : 'cLN3UCBHar5OfDrkHcnlKl', productId: 'siab' } }, /*All sizes*/
@@ -1120,13 +1120,13 @@ bids: [
 //{ bidder: 'beachfront',  labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'],params: { bidfloor: 0.01, appId: '11bc5dd5-7421-4dd8-c926-40fa653bec76' } }, /* video for s2s bidding */
 //{ bidder: 'beachfront',  labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'],params: { bidfloor: 0.01, appId: '3b16770b-17af-4d22-daff-9606bdf2c9c3' } }, /* banners for s2s bidding */
 //{ bidder: 'cedato',     labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { player_id: '1895193152' , bidfloor: 0.01 } },
-{ bidder: 'adysis',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: '11962910', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_on'] } } }, /* one placementId for all sizes */
+{ bidder: 'adysis',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: '11962910', allowSmallerSizes: true } }, /* one placementId for all sizes */
 //{ bidder: 'smartyads',  labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: '6368' } }, /* 300x250 */
 { bidder: 'oftmedia',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: '16137883', allowSmallerSizes: true } },
 { bidder: 'openx',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { unit: '539181725', delDomain: 'freestar-d.openx.net', openrtb: { imp: [{ video: { mimes: ['video/x-flv, video/mp4, application/x-shockwave-flash, application/javascript, video/webm'] } }] } } },
 { bidder: 'rubicon',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { accountId: "16924", siteId: "151312", zoneId: "896644" } }, /* display call */
 { bidder: 'quantcast',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { publisherId: "EnBKrGZNvq"} },
-{ bidder: 'criteo',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { zoneId: "1079305", video: { skip: 1, minduration: 5, playbackmethod: 1, placement: 2 } } },
+{ bidder: 'criteo',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { zoneId: "1079305" } },
 { bidder: 'triplelift',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { inventoryCode: "freestar_desktopmenu_RON_300x250"} },
 { bidder: 'sharethrough',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { pkey: "DSthphoQqH66AkQXPDoXn74b", iframe: true} },
 { bidder: 'connectad',   labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { networkId: "10047", siteId: "1029474"} },
