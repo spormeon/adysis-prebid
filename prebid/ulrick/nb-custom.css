@@ -163,7 +163,7 @@
     /****************************  banners  ****************************/
     .billboard_article_dt,
     .leaderboard_article_dt{
-        height:330px;
+        height:100%;
         width:930px;
     }
     
