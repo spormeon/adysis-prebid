@@ -1031,7 +1031,7 @@ bids: [
 {
 code: 'inreedvid11Slot',
 mediaTypes: {
-banner: { sizes: [[300, 600],[300, 250],[160, 600],[120, 600]] }
+banner: { sizes: [[300, 600],[300, 250],[160, 600],[120, 600],[1, 1]] }
 },
 bids: [
 { bidder: 'teads',      labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: '75853', pageId: '87372' } },
@@ -1084,7 +1084,7 @@ bids: [
 {
 code: 'inreedvid12Slot',
 mediaTypes: {
-banner: { sizes: [[300, 600],[300, 250],[160, 600],[120, 600]] }
+banner: { sizes: [[300, 600],[300, 250],[160, 600],[120, 600],[1, 1]] }
 },
 bids: [
 { bidder: 'teads',      labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: '75853', pageId: '87372' } },
@@ -1137,7 +1137,7 @@ bids: [
 {
 code: 'inreedvid13Slot',
 mediaTypes: {
-banner: { sizes: [[970, 90],[728, 90],[468, 60],[320, 50]] }
+banner: { sizes: [[970, 90],[728, 90],[468, 60],[320, 50],[1, 1]] }
 },
 bids: [
 { bidder: 'teads',      labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'], params: { placementId: '75853', pageId: '87372' } },
@@ -1432,12 +1432,12 @@ mappingmenu1slot: [
 	[[1, 1],[[300,250],[250,250],[1,1]]],
    ],
 mappingstickyslot: [
-    [[1024, 768],[[300, 600],[160,600],[120, 600],[1,1]]],
+    [[1024, 768],[[300, 600],[160,600],[120, 600]]],
     [[768, 500],[[160,600],[120, 600],[1,1]]],
     [[1, 1],[[120, 600],[1,1]]],
    ],
 mappingfooterslot: [
-	[[1024, 768],[[970, 90],[728,90],[468, 60],[320, 50],[1,1]]],
+	[[1024, 768],[[970, 90],[728,90],[468, 60],[320, 50]]],
 	[[768, 500],[[728,90],[468, 60],[320, 50],[1,1]]],
 	[[1, 1],[[468, 60],[320, 50],[1,1]]],
    ],
