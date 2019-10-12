@@ -1301,7 +1301,7 @@ adysis: { bidCpmAdjustment : function(bidCpm){ return "+c.cpm+" * 2;} },
       // enableOverride: true // publisher will call `pbjs.triggerUserSyncs()'
        },
        debug: true,
-       useBidCache: false,
+       useBidCache: true,
        enableSendAllBids: false, // Default will be `true` as of 1.0
        bidderSequence: 'random', // Default is random
        publisherDomain: 'golfwrx.com',
