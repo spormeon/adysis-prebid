@@ -270,7 +270,7 @@ bids: [
       code: 'inreedvid4Slot',
       mediaTypes: {
     	  banner: { sizes: [[970, 90],[970, 250],[728, 90],[300, 250],[250, 250],[468, 60],[320, 50],[320, 100],[336, 280],[580, 400],[550, 310],[1, 1]] }  
-      }
+      },
 bids: [
 { bidder: 'teads',      labelAny: ['desktopleader', 'tablet', 'phone'], params: { placementId: '75853', pageId: '87372' } },
 { bidder: 'appnexus',   labelAny: ['desktopleader', 'tablet', 'phone'], params: { placementId: '11962910', allowSmallerSizes: true } }, /* one placementId for all sizes */
