@@ -177,14 +177,14 @@ body {
     top: 50%;
     margin-top: -300px;
     right: 50%;
-    margin-right: 500px;
+    margin-right: 475px;
 }
 .sticky-tall-right{
     position: fixed;
     top: 50%;
     margin-top: -300px;
     left: 50%;
-    margin-left: 500px;
+    margin-left: 535px;
 }
 
 /* Adzones end*/
