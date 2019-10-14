@@ -366,7 +366,7 @@ body {
 
 .article-content .adblock .ad {
 	width: 300px;
-	height: 250px;
+	height: 100%;
 	overflow: hidden;
 }
 
