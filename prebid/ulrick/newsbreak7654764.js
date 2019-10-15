@@ -464,16 +464,7 @@ code: 'inreedvid6Slot',
 mediaTypes: {
     video:  { context: 'outstream', playerSize: [[550, 310]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'], playbackmethod: [2], minduration: 0,  maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10], linearity: 1, api: [1,2,3,4,5,6] }
    },
-   renderer: {
-       url: 'http://cdn.adnxs.com/renderer/video/ANOutstreamVideo.js',
-       render: function (bid) {
-           ANOutstreamVideo.renderAd({
-               targetId: bid.adUnitCode,
-               adResponse: bid.adResponse,
-           });
-       }
-   },
-   renderer: { options: { adText: 'Advertisement' } },
+   
 bids: [
 { bidder: 'appnexus',   labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '11962910', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }, /* one placementId for all sizes */
 // { bidder: 'appnexus',   labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '13232392', video: { skippable: true}, renderer: { url: 'http://cdn.adnxs.com/renderer/video/ANOutstreamVideo.js' } } }, /* demo video placement, always returns a vid, only works client side */ 
