@@ -199,13 +199,13 @@ console.log("user bid cache:", USERBIDCACHE );
 //example of supplying a custom var from a prev. defined var
     assertive_timeout = PREBID_TIMEOUT;
     
-    var adUnits = [
-    	//new ad unit block
-    	 {
-    	  code: 'inreedvid4Slot',
-    	  mediaTypes: {
-    		  native: { image: { sizes: [300, 100], sendId: true }, title: { len: 50, sendId: true }, sponsoredBy: { required: true, sendId: true }, clickUrl: { required: true, sendId: true } }
-    	  },    
+var adUnits = [
+//new ad unit block
+{
+  code: 'inreedvid4Slot',
+  mediaTypes: {
+  native: { image: { sizes: [300, 100], sendId: true }, title: { len: 50, sendId: true }, sponsoredBy: { required: true, sendId: true }, clickUrl: { required: true, sendId: true } }
+},    
 bids: [
 { bidder: 'appnexus',   labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '11962910', allowSmallerSizes: true } }, /* one placementId for all sizes */
 { bidder: 'districtm',   labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: 11937611, allowSmallerSizes: true } },
@@ -219,22 +219,22 @@ bids: [
 { bidder: 'brealtime', params: { placementId: '16717366', allowSmallerSizes: true } } /* one placementId for all sizes */    
      ] //./bids
 },
-    	//new ad unit block
-        {
-         code: 'inreedvid4Slot',
-         mediaTypes: {
-             video:  { context: 'outstream', playerSize: [[550, 310]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'], playbackmethod: 2, minduration: 0,  maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10], linearity: 1, api: [1,2,3,4,5,6] }
-            },
-            renderer: {
-                url: 'http://cdn.adnxs.com/renderer/video/ANOutstreamVideo.js',
-                render: function (bid) {
-                    ANOutstreamVideo.renderAd({
-                        targetId: bid.adUnitCode,
-                        adResponse: bid.adResponse,
-                    });
-                }
-            },
-            renderer: { options: { adText: 'Advertisement' } },
+//new ad unit block
+{
+ code: 'inreedvid4Slot',
+ mediaTypes: {
+     video:  { context: 'outstream', playerSize: [[550, 310]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'], playbackmethod: 2, minduration: 0,  maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10], linearity: 1, api: [1,2,3,4,5,6] }
+ },
+ renderer: {
+    url: 'https://adops.adysis.com/ANOutstreamVideo.js',
+    render: function (bid) {
+        ANOutstreamVideo.renderAd({
+              targetId: bid.adUnitCode,
+              adResponse: bid.adResponse,
+            });
+          }
+        },
+      renderer: { options: { adText: 'Advertisement' } },
 bids: [
 { bidder: 'appnexus',   labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '11962910', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }, /* one placementId for all sizes */
 //{ bidder: 'appnexus',   labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '13232392', video: { skippable: true}, renderer: { url: 'http://cdn.adnxs.com/renderer/video/ANOutstreamVideo.js' } } }, /* demo video placement, always returns a vid, only works client side */ 
@@ -265,12 +265,12 @@ bids: [
 { bidder: 'brealtime',  labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '16714331', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }  /* video placement */   
     ] //./bids
 },   	
-  //new ad unit block
-     {
-      code: 'inreedvid4Slot',
-      mediaTypes: {
-    	  banner: { sizes: [[970, 90],[970, 250],[728, 90],[300, 250],[250, 250],[468, 60],[320, 50],[320, 100],[336, 280],[580, 400],[550, 310]] }  
-      },
+//new ad unit block
+{
+ code: 'inreedvid4Slot',
+ mediaTypes: {
+   banner: { sizes: [[970, 90],[970, 250],[728, 90],[300, 250],[250, 250],[468, 60],[320, 50],[320, 100],[336, 280],[580, 400],[550, 310]] }  
+},
 bids: [
 { bidder: 'teads',      labelAny: ['desktopleader', 'tablet', 'phone'], params: { placementId: '75853', pageId: '87372' } },
 { bidder: 'appnexus',   labelAny: ['desktopleader', 'tablet', 'phone'], params: { placementId: '11962910', allowSmallerSizes: true } }, /* one placementId for all sizes */
@@ -348,7 +348,7 @@ bids: [
      video:  { context: 'outstream', playerSize: [[550, 310]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'], playbackmethod: [2], minduration: 0,  maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10], linearity: 1, api: [1,2,3,4,5,6] }
     },
     renderer: {
-        url: 'http://cdn.adnxs.com/renderer/video/ANOutstreamVideo.js',
+        url: 'https://adops.adysis.com/ANOutstreamVideo.js',
         render: function (bid) {
             ANOutstreamVideo.renderAd({
                 targetId: bid.adUnitCode,
@@ -464,7 +464,16 @@ code: 'inreedvid6Slot',
 mediaTypes: {
     video:  { context: 'outstream', playerSize: [[550, 310]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'], playbackmethod: [2], minduration: 0,  maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10], linearity: 1, api: [1,2,3,4,5,6] }
    },
-   
+   renderer: {
+       url: 'https://adops.adysis.com/ANOutstreamVideo.js',
+       render: function (bid) {
+           ANOutstreamVideo.renderAd({
+               targetId: bid.adUnitCode,
+               adResponse: bid.adResponse,
+           });
+       }
+   },
+   renderer: { options: { adText: 'Advertisement' } },
 bids: [
 { bidder: 'appnexus',   labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '11962910', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }, /* one placementId for all sizes */
 // { bidder: 'appnexus',   labelAny: ['desktop', 'tablet', 'phone'], params: { placementId: '13232392', video: { skippable: true}, renderer: { url: 'http://cdn.adnxs.com/renderer/video/ANOutstreamVideo.js' } } }, /* demo video placement, always returns a vid, only works client side */ 
@@ -573,7 +582,7 @@ mediaTypes: {
     video:  { context: 'outstream', playerSize: [[550, 310]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'], playbackmethod: [2], minduration: 0,  maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10], linearity: 1, api: [1,2,3,4,5,6] }
    },
    renderer: {
-       url: 'http://cdn.adnxs.com/renderer/video/ANOutstreamVideo.js',
+       url: 'https://adops.adysis.com/ANOutstreamVideo.js',
        render: function (bid) {
            ANOutstreamVideo.renderAd({
                targetId: bid.adUnitCode,
