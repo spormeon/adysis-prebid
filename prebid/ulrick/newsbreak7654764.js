@@ -228,7 +228,7 @@ var adUnits = [
   native: { image: { sizes: [300, 100], sendId: true }, title: { len: 50, sendId: true }, sponsoredBy: { required: true, sendId: true }, clickUrl: { required: true, sendId: true } }
 },    
 
-native_bidders    
+bids: native_bidders.bids    
      
 },
 //new ad unit block
