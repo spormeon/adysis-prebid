@@ -120,16 +120,6 @@ var site_config = {
     refresh_rate: PREBID_TIMEOUT*30,  //denoted in milliseonds 40secs=40000...
     FAILSAFE_TIMEOUT: PREBID_TIMEOUT*2   //denoted in milliseonds 5secs=5000...
 };
-var SLOT1 = { adp100001E };
-var SLOT2 = { adp100001A };
-var SLOT3 = { adp100001B };
-var SLOT4 = { adp100001F };
-var SLOT5 = { adp100001C };
-var SLOT6 = { adp100001G };
-var SLOT7 = { adp100001D };
-var SLOT8 = { adp100001H };
-var SLOT9 = { adp100001I };
-var SLOT10 = { adp100001J };
   
 var native_bidders = {
 bids: [	
@@ -244,16 +234,16 @@ apstag.init({
  });
 apstag.fetchBids({
 slots: [
-	{ slotID: 'site_config.SLOT1', slotName: '/1001824/adp100001/adp100001E', sizes: [[970, 250], [970, 90], [728, 90], [468, 60], [300, 250], [250, 250], [320, 50]] },
-    { slotID: 'site_config.SLOT2', slotName: '/1001824/adp100001/adp100001A', sizes: [[970, 250], [970, 90], [728, 90], [468, 60], [300, 250], [250, 250], [320, 50]] },
-    { slotID: 'site_config.SLOT3', slotName: '/1001824/adp100001/adp100001B', sizes: [[728, 90], [300, 250], [250, 250], [468, 60], [320, 50]] },
-    { slotID: 'site_config.SLOT4', slotName: '/1001824/adp100001/adp100001F', sizes: [[300, 600], [300, 250], [250, 250]] },
-    { slotID: 'site_config.SLOT5', slotName: '/1001824/adp100001/adp100001C', sizes: [[728, 90], [300, 250], [250, 250], [468, 60], [320, 50]] },
-    { slotID: 'site_config.SLOT6', slotName: '/1001824/adp100001/adp100001G', sizes: [[300, 600], [300, 250], [250, 250]] },
-    { slotID: 'site_config.SLOT7', slotName: '/1001824/adp100001/adp100001D', sizes: [[728, 90], [300, 250], [250, 250], [468, 60], [320, 50]] },
-    { slotID: 'site_config.SLOT8', slotName: '/1001824/adp100001/adp100001H', sizes: [[300, 600], [160, 600], [120, 600]] },
-    { slotID: 'site_config.SLOT9', slotName: '/1001824/adp100001/adp100001I', sizes: [[300, 600], [160, 600], [120, 600]] },
-    { slotID: 'site_config.SLOT10', slotName: '/1001824/adp100001/adp100001J', sizes: [[970, 250], [970, 90], [728, 90], [468, 60], [300, 250], [250, 250], [320, 50]] }
+	{ slotID: 'adp100001E', slotName: '/1001824/adp100001/adp100001E', sizes: [[970, 250], [970, 90], [728, 90], [468, 60], [300, 250], [250, 250], [320, 50]] },
+    { slotID: 'adp100001A', slotName: '/1001824/adp100001/adp100001A', sizes: [[970, 250], [970, 90], [728, 90], [468, 60], [300, 250], [250, 250], [320, 50]] },
+    { slotID: 'adp100001B', slotName: '/1001824/adp100001/adp100001B', sizes: [[728, 90], [300, 250], [250, 250], [468, 60], [320, 50]] },
+    { slotID: 'adp100001F', slotName: '/1001824/adp100001/adp100001F', sizes: [[300, 600], [300, 250], [250, 250]] },
+    { slotID: 'adp100001C', slotName: '/1001824/adp100001/adp100001C', sizes: [[728, 90], [300, 250], [250, 250], [468, 60], [320, 50]] },
+    { slotID: 'adp100001G', slotName: '/1001824/adp100001/adp100001G', sizes: [[300, 600], [300, 250], [250, 250]] },
+    { slotID: 'adp100001D', slotName: '/1001824/adp100001/adp100001D', sizes: [[728, 90], [300, 250], [250, 250], [468, 60], [320, 50]] },
+    { slotID: 'adp100001H', slotName: '/1001824/adp100001/adp100001H', sizes: [[300, 600], [160, 600], [120, 600]] },
+    { slotID: 'adp100001I', slotName: '/1001824/adp100001/adp100001I', sizes: [[300, 600], [160, 600], [120, 600]] },
+    { slotID: 'adp100001J', slotName: '/1001824/adp100001/adp100001J', sizes: [[970, 250], [970, 90], [728, 90], [468, 60], [300, 250], [250, 250], [320, 50]] }
     ],
     timeout: 1e3
  }, function(bids) {
@@ -1429,16 +1419,16 @@ googletag.cmd.push(function () {
 // the order below determines the order on the page //
     })(window.googletag, window.adyjs, {
 definitons: {
-SLOT1: { adUnitPath: "/1001824/adp100001/adp100001E", size: "mappingleaderslot", sizeMapping: "mappingleaderslot", timeout: site_config.refresh_rate, },
-SLOT2: { adUnitPath: "/1001824/adp100001/adp100001A", size: "mappingleaderslot", sizeMapping: "mappingleaderslot", timeout: site_config.refresh_rate, },
-SLOT3: { adUnitPath: "/1001824/adp100001/adp100001B", size: "mappingmenu1slot", sizeMapping: "mappingmenu1slot", timeout: site_config.refresh_rate, },
-SLOT4: { adUnitPath: "/1001824/adp100001/adp100001F", size: "mappingmenuslot", sizeMapping: "mappingmenuslot", timeout: site_config.refresh_rate, },
-SLOT5: { adUnitPath: "/1001824/adp100001/adp100001C", size: "mappinginreedvidslot", sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
-SLOT6: { adUnitPath: "/1001824/adp100001/adp100001G", size: "mappinginreedvidslot", sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
-SLOT7: { adUnitPath: "/1001824/adp100001/adp100001D", size: "mappinginreedvidslot", sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
-SLOT8: { adUnitPath: "/1001824/adp100001/adp100001H", size: "mappinginreedvidslot", sizeMapping: "mappingstickyslot", timeout: site_config.refresh_rate, },
-SLOT9: { adUnitPath: "/1001824/adp100001/adp100001I", size: "mappinginreedvidslot", sizeMapping: "mappingstickyslot", timeout: site_config.refresh_rate, },
-SLOT10: { adUnitPath: "/1001824/adp100001/adp100001J", size: "mappinginreedvidslot", sizeMapping: "mappingfooterslot", timeout: site_config.refresh_rate, },
+adp100001E: { adUnitPath: "/1001824/adp100001/adp100001E", size: "mappingleaderslot", sizeMapping: "mappingleaderslot", timeout: site_config.refresh_rate, },
+adp100001A: { adUnitPath: "/1001824/adp100001/adp100001A", size: "mappingleaderslot", sizeMapping: "mappingleaderslot", timeout: site_config.refresh_rate, },
+adp100001B: { adUnitPath: "/1001824/adp100001/adp100001B", size: "mappingmenu1slot", sizeMapping: "mappingmenu1slot", timeout: site_config.refresh_rate, },
+adp100001F: { adUnitPath: "/1001824/adp100001/adp100001F", size: "mappingmenuslot", sizeMapping: "mappingmenuslot", timeout: site_config.refresh_rate, },
+adp100001C: { adUnitPath: "/1001824/adp100001/adp100001C", size: "mappinginreedvidslot", sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
+adp100001G: { adUnitPath: "/1001824/adp100001/adp100001G", size: "mappinginreedvidslot", sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
+adp100001D: { adUnitPath: "/1001824/adp100001/adp100001D", size: "mappinginreedvidslot", sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
+adp100001H: { adUnitPath: "/1001824/adp100001/adp100001H", size: "mappinginreedvidslot", sizeMapping: "mappingstickyslot", timeout: site_config.refresh_rate, },
+adp100001I: { adUnitPath: "/1001824/adp100001/adp100001I", size: "mappinginreedvidslot", sizeMapping: "mappingstickyslot", timeout: site_config.refresh_rate, },
+adp100001J: { adUnitPath: "/1001824/adp100001/adp100001J", size: "mappinginreedvidslot", sizeMapping: "mappingfooterslot", timeout: site_config.refresh_rate, },
 },
 sizeMappings: {
 mappinginreedvidslot: [
