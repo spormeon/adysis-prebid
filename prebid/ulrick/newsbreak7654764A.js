@@ -302,7 +302,7 @@ console.log("user bid cache:", USERBIDCACHE );
 var adUnits = [
 //new ad unit block
 {
-  code: 'inreedvid4Slot',
+  code: 'adp100001A',
   mediaTypes: {
   native: { image: { sizes: [300, 100], sendId: true }, title: { len: 50, sendId: true }, sponsoredBy: { required: true, sendId: true }, clickUrl: { required: true, sendId: true } }
 },
@@ -311,7 +311,7 @@ bids: native_bidders.bids
 },
 //new ad unit block
 {
- code: 'inreedvid4Slot',
+ code: 'adp100001A',
  mediaTypes: {
      video:  { context: 'outstream', playerSize: [[550, 310]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'], playbackmethod: 2, minduration: 0,  maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10], linearity: 1, api: [1,2,3,4,5,6] }
  },
@@ -330,7 +330,7 @@ bids: outstream_bidders.bids
 },   	
 //new ad unit block
 {
- code: 'inreedvid4Slot',
+ code: 'adp100001A',
  mediaTypes: {
    banner: { sizes: [[970, 90],[970, 250],[728, 90],[300, 250],[250, 250],[468, 60],[320, 50],[320, 100],[336, 280],[580, 400],[550, 310]] }  
 },
@@ -339,7 +339,7 @@ bids: banner_bidders.bids
 },
 //new ad unit block
  {
-  code: 'inreedvid5Slot',
+  code: 'adp100001B',
   mediaTypes: {
 	  native: { image: { sizes: [300, 100], sendId: true }, title: { len: 50, sendId: true }, sponsoredBy: { required: true, sendId: true }, clickUrl: { required: true, sendId: true } }
   },    
@@ -358,7 +358,7 @@ bids: [
 },
 //new ad unit block
 {
- code: 'inreedvid5Slot',
+ code: 'adp100001B',
  mediaTypes: {
      video:  { context: 'outstream', playerSize: [[300, 250]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'], playbackmethod: [2], minduration: 0,  maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10], linearity: 1, api: [1,2,3,4,5,6] }
     },
@@ -404,7 +404,7 @@ bids: [
 },   	
 //new ad unit block
 {
-code: 'inreedvid5Slot',
+code: 'adp100001B',
 mediaTypes: {
   banner: { sizes: [[300, 250],[250, 250]] } 
 },
@@ -456,7 +456,7 @@ bids: [
 },
 //new ad unit block
 {
- code: 'inreedvid6Slot',
+ code: 'adp100001C',
  mediaTypes: {
 	  native: { image: { sizes: [300, 100], sendId: true }, title: { len: 50, sendId: true }, sponsoredBy: { required: true, sendId: true }, clickUrl: { required: true, sendId: true } }
  },    
@@ -475,7 +475,7 @@ bids: [
 },
 //new ad unit block
 {
-code: 'inreedvid6Slot',
+code: 'adp100001C',
 mediaTypes: {
     video:  { context: 'outstream', playerSize: [[550, 310]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'], playbackmethod: [2], minduration: 0,  maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10], linearity: 1, api: [1,2,3,4,5,6] }
    },
@@ -521,7 +521,7 @@ bids: [
 },   	
 //new ad unit block
 {
-code: 'inreedvid6Slot',
+code: 'adp100001C',
 mediaTypes: {
  banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50],[320, 100],[336, 280],[580, 400],[550, 310]] }  
 },
@@ -573,7 +573,7 @@ bids: [
 },
 //new ad unit block
 {
- code: 'inreedvid7Slot',
+ code: 'adp100001D',
  mediaTypes: {
 	  native: { image: { sizes: [300, 100], sendId: true }, title: { len: 50, sendId: true }, sponsoredBy: { required: true, sendId: true }, clickUrl: { required: true, sendId: true } }
  },    
@@ -592,7 +592,7 @@ bids: [
 },
 //new ad unit block
 {
-code: 'inreedvid7Slot',
+code: 'adp100001D',
 mediaTypes: {
     video:  { context: 'outstream', playerSize: [[550, 310]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'], playbackmethod: [2], minduration: 0,  maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10], linearity: 1, api: [1,2,3,4,5,6] }
    },
@@ -638,7 +638,7 @@ bids: [
 },   	
 //new ad unit block
 {
-code: 'inreedvid7Slot',
+code: 'adp100001D',
 mediaTypes: {
  banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50],[320, 100],[336, 280],[580, 400],[550, 310]] }  
 },
@@ -690,7 +690,7 @@ bids: [
 },
 //new ad unit block
 {
- code: 'inreedvid8Slot',
+ code: 'adp100001E',
  mediaTypes: {
 	  native: { image: { sizes: [300, 100], sendId: true }, title: { len: 50, sendId: true }, sponsoredBy: { required: true, sendId: true }, clickUrl: { required: true, sendId: true } }
 },    
@@ -710,7 +710,7 @@ bids: [
 
 //new ad unit block
 {
-code: 'inreedvid8Slot',
+code: 'adp100001E',
 mediaTypes: {
     video:  { context: 'outstream', playerSize: [[550, 310]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'], playbackmethod: [2], minduration: 0,  maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10], linearity: 1, api: [1,2,3,4,5,6] }
    },
@@ -756,7 +756,7 @@ bids: [
 },   	
 //new ad unit block
 {
-code: 'inreedvid8Slot',
+code: 'adp100001E',
 mediaTypes: {
  banner: { sizes: [[970, 90],[970, 250],[728, 90],[468, 60],[320, 50],[300, 250],[728, 90],[250, 250],[468, 60],[320, 100],[336, 280],[580, 400],[550, 310]] }
 },
@@ -808,7 +808,7 @@ bids: [
 },
 //new ad unit block
 {
-code: 'inreedvid9Slot',
+code: 'adp100001F',
 mediaTypes: {
 	  native: { image: { sizes: [300, 100], sendId: true }, title: { len: 50, sendId: true }, sponsoredBy: { required: true, sendId: true }, clickUrl: { required: true, sendId: true } }
 },    
@@ -827,7 +827,7 @@ bids: [
 },
 //new ad unit block
 {
-code: 'inreedvid9Slot',
+code: 'adp100001F',
 mediaTypes: {
   video:  { context: 'outstream', playerSize: [[300, 250]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'], playbackmethod: [2], minduration: 0,  maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10], linearity: 1, api: [1,2,3,4,5,6] }
  },
@@ -873,7 +873,7 @@ bids: [
 },   	
 //new ad unit block
 {
-code: 'inreedvid9Slot',
+code: 'adp100001F',
 mediaTypes: {
 banner: { sizes: [[300, 600],[160, 600],[120, 600],[300, 250],[250, 250]] }
 },
@@ -926,7 +926,7 @@ bids: [
 },
 //new ad unit block
 {
-code: 'inreedvid10Slot',
+code: 'adp100001G',
 mediaTypes: {
 	  native: { image: { sizes: [300, 100], sendId: true }, title: { len: 50, sendId: true }, sponsoredBy: { required: true, sendId: true }, clickUrl: { required: true, sendId: true } }
 },    
@@ -945,7 +945,7 @@ bids: [
 },
 //new ad unit block
 {
-code: 'inreedvid10Slot',
+code: 'adp100001G',
 mediaTypes: {
 video:  { context: 'outstream', playerSize: [[550, 310]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'], playbackmethod: [2], minduration: 0,  maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10], linearity: 1, api: [1,2,3,4,5,6] }
 },
@@ -991,7 +991,7 @@ bids: [
 },   	
 //new ad unit block
 {
-code: 'inreedvid10Slot',
+code: 'adp100001G',
 mediaTypes: {
 banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50],[320, 100],[336, 280],[580, 400],[550, 310]] }
 },
@@ -1044,7 +1044,7 @@ bids: [
 },   	
 //new ad unit block
 {
-code: 'inreedvid11Slot',
+code: 'adp100001H',
 mediaTypes: {
 banner: { sizes: [[300, 600],[300, 250],[160, 600],[120, 600]] }
 },
@@ -1097,7 +1097,7 @@ bids: [
 },   	
 //new ad unit block
 {
-code: 'inreedvid12Slot',
+code: 'adp100001I',
 mediaTypes: {
 banner: { sizes: [[300, 600],[300, 250],[160, 600],[120, 600]] }
 },
@@ -1150,7 +1150,7 @@ bids: [
 },   	
 //new ad unit block
 {
-code: 'inreedvid13Slot',
+code: 'adp100001J',
 mediaTypes: {
 banner: { sizes: [[970, 90],[728, 90],[468, 60],[320, 50]] }
 },
