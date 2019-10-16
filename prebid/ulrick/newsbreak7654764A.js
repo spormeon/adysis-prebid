@@ -120,16 +120,16 @@ var site_config = {
     refresh_rate: PREBID_TIMEOUT*30,  //denoted in milliseonds 40secs=40000...
     FAILSAFE_TIMEOUT: PREBID_TIMEOUT*2   //denoted in milliseonds 5secs=5000...
 };
-var SLOT1 = adp100001E;
-var SLOT2 = adp100001A;
-var SLOT3 = adp100001B;
-var SLOT4 = adp100001F;
-var SLOT5 = adp100001C;
-var SLOT6 = adp100001G;
-var SLOT7 = adp100001D;
-var SLOT8 = adp100001H;
-var SLOT9 = adp100001I;
-var SLOT10 = adp100001J;
+var SLOT1 = { adp100001E };
+var SLOT2 = { adp100001A };
+var SLOT3 = { adp100001B };
+var SLOT4 = { adp100001F };
+var SLOT5 = { adp100001C };
+var SLOT6 = { adp100001G };
+var SLOT7 = { adp100001D };
+var SLOT8 = { adp100001H };
+var SLOT9 = { adp100001I };
+var SLOT10 = { adp100001J };
   
 var native_bidders = {
 bids: [	
