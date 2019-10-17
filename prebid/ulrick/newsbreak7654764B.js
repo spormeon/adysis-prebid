@@ -679,7 +679,7 @@ adysis: { bidCpmAdjustment : function(bidCpm){ return "+c.cpm+" * 2;} },
       userSync: {
         iframeEnabled: true,
         syncsPerBidder: 10, // and no more than 3 syncs at a time
-        syncDelay: PREBID_TIMEOUT*3, // 5 seconds after the auction
+        syncDelay: PREBID_TIMEOUT*4, // 5 seconds after the auction
       filterSettings: { iframe: { bidders: [''], filter: 'exclude' }, image:  { bidders: '*', filter: 'include' } },
       // enableOverride: true // publisher will call `pbjs.triggerUserSyncs()'
        },
