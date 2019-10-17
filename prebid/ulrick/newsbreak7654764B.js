@@ -96,7 +96,7 @@ var floorpriceMap = {
 6 : 0.06,
 7 : 0.07,
 8 : 0.08,
-9 : 0.09,
+9 : 0.06,
 10 : 0.01,
 11 : 0.01,
 12 : 0.02,
@@ -119,10 +119,7 @@ console.log("floor price:", FLOOR_PRICE );
 var site_config = {
     refresh_rate: PREBID_TIMEOUT*30,  //denoted in milliseonds 40secs=40000...
     FAILSAFE_TIMEOUT: PREBID_TIMEOUT*2   //denoted in milliseonds 5secs=5000...
-    // floor_price: 1.00 //set a min floor price on bids to pressure higher bids
   };
-
-
 // site_config end
 // unruly player config //
 window.top.unruly = window.top.unruly || {}
@@ -370,7 +367,7 @@ mediaTypes: {
 banner: { sizes: [[300, 250],[250, 250]] } 
 },
 labelAny: ['desktop', 'tablet', 'phone'],
-bids: native_bidders.bids
+bids: banner_bidders.bids
 },
 //new ad unit block
 {
@@ -405,7 +402,7 @@ mediaTypes: {
 banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50],[320, 100],[336, 280],[580, 400],[550, 310]] }  
 },
 labelAny: ['desktop', 'tablet', 'phone'],
-bids: native_bidders.bids
+bids: banner_bidders.bids
 },
 //new ad unit block
 {
@@ -440,7 +437,7 @@ mediaTypes: {
 banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50],[320, 100],[336, 280],[580, 400],[550, 310]] }  
 },
 labelAny: ['desktop', 'tablet', 'phone'],
-bids: native_bidders.bids
+bids: banner_bidders.bids
 },
 //new ad unit block
 {
@@ -475,7 +472,7 @@ mediaTypes: {
 banner: { sizes: [[970, 90],[970, 250],[728, 90],[468, 60],[320, 50],[300, 250],[728, 90],[250, 250],[468, 60],[320, 100],[336, 280],[580, 400],[550, 310]] }
 },
 labelAny: ['desktopleader', 'tabletmenu', 'phonemenu'],
-bids: native_bidders.bids
+bids: banner_bidders.bids
 },
 //new ad unit block
 {
@@ -510,7 +507,7 @@ mediaTypes: {
 banner: { sizes: [[300, 600],[160, 600],[120, 600],[300, 250],[250, 250]] }
 },
 labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'],
-bids: native_bidders.bids
+bids: banner_bidders.bids
 },
 //new ad unit block
 {
@@ -545,7 +542,7 @@ mediaTypes: {
 banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50],[320, 100],[336, 280],[580, 400],[550, 310]] }
 },
 labelAny: ['desktop', 'tabletmenu', 'phonemenu'],
-bids: native_bidders.bids
+bids: banner_bidders.bids
 },   	
 //new ad unit block
 {
@@ -554,7 +551,7 @@ mediaTypes: {
 banner: { sizes: [[300, 600],[300, 250],[160, 600],[120, 600]] }
 },
 labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'],
-bids: native_bidders.bids
+bids: banner_bidders.bids
 },   	
 //new ad unit block
 {
@@ -563,7 +560,7 @@ mediaTypes: {
 banner: { sizes: [[300, 600],[300, 250],[160, 600],[120, 600]] }
 },
 labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'],
-bids: native_bidders.bids
+bids: banner_bidders.bids
 },   	
 //new ad unit block
 {
@@ -572,7 +569,7 @@ mediaTypes: {
 banner: { sizes: [[970, 90],[728, 90],[468, 60],[320, 50]] }
 },
 labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'],
-bids: native_bidders.bids
+bids: banner_bidders.bids
 }
 ];
 // ======== DO NOT EDIT BELOW THIS LINE =========== //
