@@ -122,7 +122,7 @@ var site_config = {
     // floor_price: 1.00 //set a min floor price on bids to pressure higher bids
   };
 
-
+//  NATIVE BIDDER LIST
 var native_bidders = {
 bids: [	
 { bidder: 'appnexus', params: { placementId: '11962910', allowSmallerSizes: true } }, /* one placementId for all sizes */
@@ -137,7 +137,7 @@ bids: [
 { bidder: 'brealtime', params: { placementId: '16717366', allowSmallerSizes: true } } /* one placementId for all sizes */
 ] //./bids
 };
-
+// OUTSTREAM BIDDER LIST
 var outstream_bidders = {
 bids: [
 { bidder: 'appnexus', params: { placementId: '11962910', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }, /* one placementId for all sizes */
@@ -165,11 +165,11 @@ bids: [
 //{ bidder: 'criteo', params: { zoneId: "1079305", video: { skip: 1, playbackmethod: 2, placement: 1 } } },
 //{ bidder: 'colossusssp', params: { placementId: '35323' } }, /* outstream */
 //{ bidder: "ix", params: { siteId: "261017", size: [300, 250], video: { skippable: true, mimes: [ 'video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm' ], minduration: 0, maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10] } } }, /* id 261017 golfwrx id */
-{ bidder: 'emx_digital', params: { tagid: '77460', video: { language: 'en' } } }, /* outstream */
+{ bidder: 'emx_digital', params: { tagid: '77460', video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }, /* outstream */
 { bidder: 'brealtime', params: { placementId: '16714331', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }  /* video placement */   
 ] //./bids
 };
-
+// BANNER BIDDER LIST
 var banner_bidders = {
 bids: [
 { bidder: 'teads', params: { placementId: '75853', pageId: '87372' } },
