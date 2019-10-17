@@ -566,7 +566,7 @@ bids: banner_bidders.bids
 {
 code: 'inreedvid13Slot',
 mediaTypes: {
-banner: { sizes: [[970, 90],[728, 90],[468, 60],[320, 50]] }
+banner: { sizes: [[970, 90],[728, 90],[300, 250],[468, 60],[320, 50]] }
 },
 labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'],
 bids: banner_bidders.bids
