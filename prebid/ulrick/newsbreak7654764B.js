@@ -330,7 +330,7 @@ code: 'inreedvid5Slot',
 mediaTypes: {
 native: { image: { sizes: [300, 100], sendId: true }, title: { len: 50, sendId: true }, sponsoredBy: { required: true, sendId: true }, clickUrl: { required: true, sendId: true } }
 }, 
-labelAny: ['desktop', 'tablet', 'phone'],
+labelAny: ['desktopmenu1', 'tablet', 'phone'],
 bids: native_bidders.bids
 },
 {
@@ -348,7 +348,7 @@ video:  { context: 'outstream', playerSize: [[300, 250]], mimes: ['video/x-flv',
         }
     },
     renderer: { options: { adText: 'Advertisement' } },
-labelAny: ['desktop', 'tablet', 'phone'],
+labelAny: ['desktopmenu1', 'tablet', 'phone'],
 bids: outstream_bidders.bids
 },
 {
@@ -356,7 +356,7 @@ code: 'inreedvid5Slot',
 mediaTypes: {
 banner: { sizes: [[300, 250],[250, 250]] } 
 },
-labelAny: ['desktop', 'tablet', 'phone'],
+labelAny: ['desktopmenu1', 'tablet', 'phone'],
 bids: banner_bidders.bids
 },
 //new ad unit block
@@ -684,6 +684,7 @@ adysis: { bidCpmAdjustment : function(bidCpm){ return "+c.cpm+" * 2;} },
        sizeConfig: [
          { mediaQuery: '(min-width: 769px)', 'sizesSupported': [[580, 400],[550, 310], [970, 90], [728, 90], [468, 60], [336, 280], [320, 100], [320, 50], [300, 250], [250, 250], [300, 600]], 'labels': ['desktop'] },
          { mediaQuery: '(min-width: 769px)', 'sizesSupported': [[300, 600],[300, 250],[250, 250],[160, 600], [120, 600]], 'labels': ['desktopmenu'] },
+         { mediaQuery: '(min-width: 769px)', 'sizesSupported': [[300, 250],[250, 250]], 'labels': ['desktopmenu1'] },
          { mediaQuery: '(min-width: 769px)', 'sizesSupported': [[970, 90],[970, 250],[728, 90],[468, 60],[320, 50],[300, 250],[728, 90],[250, 250],[468, 60],[320, 100],[336, 280],[580, 400],[550, 310]], 'labels': ['desktopleader'] },
          { mediaQuery: '(min-width: 500px) and (max-width: 768px)', sizesSupported: [[550, 310], [580, 400], [728, 90],  [468, 60], [320, 50], [320, 100], [336, 280], [300, 250], [300, 600], [250, 250]], labels: ['tablet'] },
          { mediaQuery: '(min-width: 500px) and (max-width: 768px)', sizesSupported: [[300, 250], [300, 600], [250, 250]], labels: ['tabletmenu'] },
@@ -797,7 +798,7 @@ mappinginreedvidslot: [
      [[1, 1],[[300,250],[250,250],[320,50],[320, 100],[336, 280],[468, 90]]],
     ],
 mappingmenuslot: [
-    [[1024, 768],[[300, 600],[300, 250],[160, 600],[120,600]]],
+    [[1024, 768],[[300, 600],[300, 250],[250, 250],[160, 600],[120,600]]],
     [[768, 500],[[300,250],[250,250]]],
     [[1, 1],[[300,250],[250,250]]],
    ],
