@@ -292,11 +292,12 @@ console.log("user bid cache:", USERBIDCACHE );
     //{ bidder: 'sharethrough', params: { pkey: "GrVComq83JzCSLK1pi9waoyR", iframe: true, iframeSize: [728, 90] } }, /* 728x90 */
     { bidder: 'connectad', params: { networkId: "10047", siteId: "1029474"} },
     //{ bidder: 'colossusssp', params: { placementId: '6544' } } /* 300x250 */
-    { bidder: 'emx_digital', params: { tagid: '77461' } } /* sizeless */
+    { bidder: 'emx_digital', params: { tagid: '77461' } }, /* sizeless */
     //{ bidder: 'decenterads', params: { placementId: '10384' } }, /* 300x250 */
     //{ bidder: 'lockerdome', params: { adUnitId: 'LD12197908548395622' } }, /* 300x250 */
     //{ bidder: 'lockerdome', params: { adUnitId: 'LD12197907843752550' } }, /* 300x100 */
     //{ bidder: 'lockerdome', params: { adUnitId: 'LD12197911702512230' } } /* 728x90 */
+    { bidder: 'smartrtb', params: { zoneId: "I0Mnk7dqNXKrCdjpgzp5", forceBid: true } }
     ] //./bids
     };
 var adUnits = [
