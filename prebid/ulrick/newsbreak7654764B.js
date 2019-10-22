@@ -449,6 +449,20 @@ bids: banner_bidders.bids
 //new ad unit block
 {
 code: 'inreedvid11Slot',
+mediaTypes: { native: { image: { sizes: [300, 100], sendId: true }, title: { len: 50, sendId: true }, sponsoredBy: { required: true, sendId: true }, clickUrl: { required: true, sendId: true } } }, 
+labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'],
+bids: native_bidders.bids
+},
+{
+code: 'inreedvid11Slot',
+mediaTypes: { video:  { context: 'outstream', playerSize: [[300, 250]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'], playbackmethod: [2], minduration: 0,  maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10], linearity: 1, api: [1,2,3,4,5,6] } },
+renderer: { url: 'https://adops.adysis.com/ANOutstreamVideo.js', render: function (bid) { ANOutstreamVideo.renderAd({ targetId: bid.adUnitCode, adResponse: bid.adResponse, }); } },
+renderer: { options: { adText: 'Advertisement' } },
+labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'],
+bids: outstream_bidders.bids
+},
+{
+code: 'inreedvid11Slot',
 mediaTypes: { banner: { sizes: [[300, 600],[300, 250],[160, 600],[120, 600]] } },
 labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'],
 bids: banner_bidders.bids
