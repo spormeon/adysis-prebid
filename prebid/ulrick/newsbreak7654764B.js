@@ -297,7 +297,7 @@ console.log("user bid cache:", USERBIDCACHE );
     //{ bidder: 'lockerdome', params: { adUnitId: 'LD12197908548395622' } }, /* 300x250 */
     //{ bidder: 'lockerdome', params: { adUnitId: 'LD12197907843752550' } }, /* 300x100 */
     //{ bidder: 'lockerdome', params: { adUnitId: 'LD12197911702512230' } } /* 728x90 */
-    { bidder: 'smartrtb', params: { zoneId: "I0Mnk7dqNXKrCdjpgzp5", forceBid: true } }
+    { bidder: 'smartrtb', params: { zoneId: "I0Mnk7dqNXKrCdjpgzp5"} }
     ] //./bids
     };
 var adUnits = [
