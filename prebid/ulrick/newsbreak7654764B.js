@@ -206,7 +206,7 @@ console.log("user bid cache:", USERBIDCACHE );
     { bidder: 'pulsepoint', params: { cf: '300X250', cp: '561446', ct: '602639' } }, /* 300x250 */
     { bidder: 'rhythmone', params: { placementId: '76184', zone: '1r', path: 'mvo' } }, /* one placementId for all sizes */
     { bidder: 'adysis', params: { placementId: '11962910', allowSmallerSizes: true } }, /* one placementId for all sizes */
-    { bidder: 'smartyads', params: { placementId: '12335' } }, /* native */
+    //{ bidder: 'smartyads', params: { placementId: '12335' } }, /* native */
     { bidder: 'oftmedia', params: { placementId: '16137883', allowSmallerSizes: true } },
     { bidder: 'openx', params: { unit: '539181725', delDomain: 'freestar-d.openx.net', openrtb: { imp: [{ video: { mimes: ['video/x-flv, video/mp4, application/x-shockwave-flash, application/javascript, video/webm'] } }] } } },
     //{ bidder: 'colossusssp', params: { placementId: '35324' } } /* native */
@@ -234,7 +234,7 @@ console.log("user bid cache:", USERBIDCACHE );
     //{ bidder: 'beachfront', params: { bidfloor: 0.01, appId: '3b16770b-17af-4d22-daff-9606bdf2c9c3' } }, /* banners for s2s bidding TEST*/
     //{ bidder: 'cedato', params: { player_id: '1895193152' , bidfloor: 0.01 } },
     { bidder: 'adysis', params: { placementId: '11962910', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }, /* one placementId for all sizes */
-    { bidder: 'smartyads', params: { placementId: '11833' } }, /* outstream */
+    //{ bidder: 'smartyads', params: { placementId: '11833' } }, /* outstream */
     { bidder: 'oftmedia', params: { placementId: '16137883', allowSmallerSizes: true, allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } },
     { bidder: 'openx', params: { unit: '539181725', delDomain: 'freestar-d.openx.net', openrtb: { imp: [{ video: { mimes: ['video/x-flv, video/mp4, application/x-shockwave-flash, application/javascript, video/webm'] } }] } } },
     { bidder: 'rubicon', params: { accountId: "16924", siteId: "151312", zoneId: "896644", video: { language: 'en' } } }, /* video call */
@@ -280,7 +280,7 @@ console.log("user bid cache:", USERBIDCACHE );
     // { bidder: 'beachfront', params: { bidfloor: 0.01, appId: '3b16770b-17af-4d22-daff-9606bdf2c9c3' } }, /* banners for s2s bidding TEST*/
     //{ bidder: 'cedato', params: { player_id: '1895193152' , bidfloor: 0.01 } },
     { bidder: 'adysis', params: { placementId: '11962910', allowSmallerSizes: true } }, /* one placementId for all sizes */
-    //{ bidder: 'smartyads', params: { placementId: '6368' } }, /* 300x250 */
+    { bidder: 'smartyads', params: { placementId: '6368' } }, /* 300x250 */
     { bidder: 'oftmedia', params: { placementId: '16137883', allowSmallerSizes: true } },
     { bidder: 'openx', params: { unit: '539181725', delDomain: 'freestar-d.openx.net', openrtb: { imp: [{ video: { mimes: ['video/x-flv, video/mp4, application/x-shockwave-flash, application/javascript, video/webm'] } }] } } },
     { bidder: 'rubicon', params: { accountId: "16924", siteId: "151312", zoneId: "896644" } }, /* display call */
@@ -294,9 +294,9 @@ console.log("user bid cache:", USERBIDCACHE );
     //{ bidder: 'colossusssp', params: { placementId: '6544' } } /* 300x250 */
     { bidder: 'emx_digital', params: { tagid: '77461' } }, /* sizeless */
     //{ bidder: 'decenterads', params: { placementId: '10384' } }, /* 300x250 */
-    //{ bidder: 'lockerdome', params: { adUnitId: 'LD12197908548395622' } }, /* 300x250 */
-    //{ bidder: 'lockerdome', params: { adUnitId: 'LD12197907843752550' } }, /* 300x100 */
-    //{ bidder: 'lockerdome', params: { adUnitId: 'LD12197911702512230' } } /* 728x90 */
+    { bidder: 'lockerdome', params: { adUnitId: 'LD12197908548395622' } }, /* 300x250 */
+    { bidder: 'lockerdome', params: { adUnitId: 'LD12197907843752550' } }, /* 300x100 */
+    { bidder: 'lockerdome', params: { adUnitId: 'LD12197911702512230' } }, /* 728x90 */
     { bidder: 'smartrtb', params: { zoneId: "I0Mnk7dqNXKrCdjpgzp5"} }
     ] //./bids
     };
