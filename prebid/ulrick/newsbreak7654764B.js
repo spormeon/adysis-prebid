@@ -242,8 +242,8 @@ console.log("user bid cache:", USERBIDCACHE );
     //{ bidder: 'colossusssp', params: { placementId: '35323' } }, /* outstream */
     //{ bidder: "ix", params: { siteId: "261017", size: [300, 250], video: { skippable: true, mimes: [ 'video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm' ], minduration: 0, maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10] } } }, /* id 261017 golfwrx id */
     { bidder: 'emx_digital', params: { tagid: '77460', video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }, /* outstream */
-    { bidder: 'brealtime', params: { placementId: '16714331', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } },  /* video placement */
-    { bidder: 'smartrtb', params: { zoneId: "I0Mnk7dqNXKrCdjpgzp5" } }
+    { bidder: 'brealtime', params: { placementId: '16714331', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }  /* video placement */
+    //{ bidder: 'smartrtb', params: { zoneId: "I0Mnk7dqNXKrCdjpgzp5" } }
     ] //./bids
     };
     // BANNER BIDDER LIST
