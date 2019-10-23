@@ -618,7 +618,7 @@ adysis: { bidCpmAdjustment : function(bidCpm){ return "+c.cpm+" * 2;} },
        pubcid: {expInterval: 525600},
        currency: { 'adServerCurrency': "GBP", 'granularityMultiplier': 1, 'conversionRateFile': 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json', },
        sizeConfig: [
-         { mediaQuery: '(min-width: 769px)', sizesSupported: [[580, 400],[550, 310], [970, 90], [728, 90], [468, 60], [336, 280], [320, 100], [320, 50], [300, 250], [250, 250], [300, 600]], labels: [ 'desktop'] },
+         { mediaQuery: '(min-width: 769px)', sizesSupported: [[580, 400],[550, 310], [970, 90], [728, 90], [468, 60], [336, 280], [320, 100], [320, 50], [300, 250], [250, 250], [300, 600],[1, 1]], labels: [ 'desktop'] },
          { mediaQuery: '(min-width: 769px)', sizesSupported: [[550, 310],[300, 600],[300, 250],[250, 250],[160, 600], [120, 600]], labels: [ 'desktopmenu'] },
          { mediaQuery: '(min-width: 769px)', sizesSupported: [[300, 250],[250, 250]], labels: [ 'desktopmenu1'] },
          { mediaQuery: '(min-width: 769px)', sizesSupported: [[970, 90],[970, 250],[728, 90],[468, 60],[320, 50],[300, 250],[728, 90],[250, 250],[468, 60],[320, 100],[336, 280],[580, 400],[550, 310]], labels: [ 'desktopleader'] },
