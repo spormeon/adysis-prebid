@@ -372,3 +372,31 @@ pubmatic.com, 137711, RESELLER, 5d62403b186f2ace
 pubmatic.com, 156212, RESELLER, 5d62403b186f2ace
 pubmatic.com, 156700, RESELLER, 5d62403b186f2ace
 rubiconproject.com, 17960, RESELLER, 0bfd66d529a55807
+
+#SmartRTB
+smrtb.com, ede3Xpghw4aIUm7dEdKs, DIRECT
+contextweb.com, 561320, RESELLER, 89ff185a4c4e857c
+advangelists.com, fbd7939d674997cdb4692d34de8633c4, RESELLER, 60d26397ec060f98
+rubiconproject.com,20848, RESELLER, 0bfd66d529a55807
+rubiconproject.com, 16676, RESELLER, 0bfd66d529a55807
+pubmatic.com, 156372, RESELLER, 5d62403b186f2ace
+openx.com, 540311484, RESELLER, 6a698e2ec38604c6
+appnexus.com, 3153, RESELLER, f5ab79cb980f11d1
+advertising.com, 11602, RESELLER
+vertamedia.com, 287605, RESELLER, 7de89dc7742b5b11
+adtech.com, 11095, RESELLER
+coxmt.com, 2000067907202, RESELLER
+openx.com, 537143344, RESELLER 
+indexexchange.com, 175407, RESELLER
+engagebdr.com, 10151, RESELLER #banner #video
+engagebdr.com, 7, RESELLER #banner #video
+engagebdr.com, 16, RESELLER #banner #video
+engagebdr.com, 84, RESELLER #banner #video
+yieldnexus.com, 100538, RESELLER
+audience.media, 100538, RESELLER
+appnexus.com, 10617, RESELLER
+appnexus.com, 9393, RESELLER
+advertising.com, 25034, RESELLER
+sonobi.com, 783272317b, RESELLER, d1a215d9eb5aee9e
+spotxchange.com, 85519, RESELLER
+indexexchange.com, 186684, RESELLER
