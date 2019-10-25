@@ -465,7 +465,7 @@ bids: outstream_bidders.bids
 },
 {
 code: 'inreedvid11Slot',
-mediaTypes: { banner: { sizes: [[300, 600],[300, 250],[160, 600],[120, 600]] } },
+mediaTypes: { banner: { sizes: [[300, 600],[300, 250],[250, 250],[160, 600],[120, 600]] } },
 labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'],
 bids: banner_bidders.bids
 },   	
@@ -486,14 +486,14 @@ bids: outstream_bidders.bids
 },
 {
 code: 'inreedvid12Slot',
-mediaTypes: { banner: { sizes: [[300, 600],[300, 250],[160, 600],[120, 600]] } },
+mediaTypes: { banner: { sizes: [[300, 600],[300, 250],[250, 250],[160, 600],[120, 600]] } },
 labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'],
 bids: banner_bidders.bids
 },   	
 //new ad unit block
 {
 code: 'inreedvid13Slot',
-mediaTypes: { banner: { sizes: [[970, 90],[728, 90],[300, 250],[468, 60],[320, 50]] } },
+mediaTypes: { banner: { sizes: [[970, 90],[728, 90],[300, 250],[250, 250],[468, 60],[320, 50]] } },
 labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'],
 bids: banner_bidders.bids
 }
