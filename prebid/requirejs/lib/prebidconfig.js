@@ -119,3 +119,131 @@ adysis: { bidCpmAdjustment : function(bidCpm){ return "+c.cpm+" * 2;} },
      timeout: PREBID_TIMEOUT
     });
     });
+    function initAdserver1() {
+     if (adyjs.initAdserver1Set) return;
+     adyjs.initAdserver1Set = true;
+     googletag.cmd.push(function() {
+     adyjs.que.push(function() {
+     adyjs.setTargetingForGPTAsync();
+     adyjs.triggerUserSyncs();
+     googletag.pubads().refresh();
+     });
+     });
+     }
+  // in case adyjs doesn't load
+     setTimeout(function() {
+     initAdserver1();
+     }, site_config.FAILSAFE_TIMEOUT);
+     
+googletag.cmd.push(function () {
+    (function (googletag, adyjs, config) {
+     var sizeMappings = {};
+      var slots = {};
+       function refreshSlot(slot) {
+       adyjs.que.push(function() {
+       adyjs.requestBids({
+       timeout: PREBID_TIMEOUT,
+    // useBidCache: USERBIDCACHE,
+       adUnitCodes: [slot.getSlotElementId()],
+       bidsBackHandler: function() {
+       adyjs.setTargetingForGPTAsync([slot.getSlotElementId()]);
+    //googletag.destroySlots([slot]);
+       googletag.pubads().refresh([slot]);
+    }
+    });
+    });
+    }
+    Object.keys(config.sizeMappings).forEach(function (key) {
+     var sizeMappingBuilder = googletag.sizeMapping();
+      config.sizeMappings[key].forEach(function (mapping) {
+      sizeMappingBuilder.addSize(mapping[0], mapping[1]);
+    });
+     var sizeMapping = sizeMappingBuilder.build();
+      sizeMappings[key] = sizeMapping;
+      console.log("created sizemapping", sizeMappings[key]);
+    });
+    googletag.pubads().enableSingleRequest();
+    googletag.pubads().collapseEmptyDivs(true);
+    googletag.pubads().setCentering(true);
+    //googletag.pubads().setSafeFrameConfig({allowPushExpansion: true, sandbox: true});
+    //googletag.setAdIframeTitle('Advertisement');
+ // googletag.pubads().disableInitialLoad();
+    googletag.pubads().enableLazyLoad({
+      fetchMarginPercent: 12,  // Fetch slots within 30 viewports.
+      renderMarginPercent: 8,  // Render slots within 5000 viewports.
+      mobileScaling: 0.0  // Double the above values on mobile.
+    });
+    
+    googletag.enableServices();
+// not sure if impressionViewable, slotRenderEnded or slotOnload is best to use yet
+    googletag.pubads().addEventListener("impressionViewable", function (event) {
+     var elementId = event.slot.getSlotElementId();
+      var slotConfig = slots[elementId];
+       if (slotConfig) {
+        var handle = setTimeout(function () {
+         googletag.cmd.push(function () {
+         refreshSlot(event.slot);
+    });
+    }, config.definitons[elementId].timeout);
+      console.log("handle for time ", handle, "elementId", elementId, "duration", config.definitons[elementId].timeout);
+    }
+    });
+    Object.keys(config.definitons).forEach(function (key) {
+     var def = config.definitons[key];
+      var slot = googletag.defineSlot(def.adUnitPath, def.size, key);
+       slot.setTargeting("test", "refresh");
+    // slot.setTargeting(event.slot);
+       slot.defineSizeMapping(sizeMappings[def.sizeMapping]);
+       slot.addService(googletag.pubads());
+        googletag.display(key);
+       slots[key] = { slot: slot };
+    });
+    // googletag.pubads().refresh();
+// the order below determines the order on the page //
+    })(window.googletag, window.adyjs, {
+definitons: {
+inreedvid11Slot: { adUnitPath: "/1001824/adp100001/adp100001H", size: "mappinginreedvidslot", sizeMapping: "mappingstickyslot", timeout: site_config.refresh_rate, },
+inreedvid12Slot: { adUnitPath: "/1001824/adp100001/adp100001I", size: "mappinginreedvidslot", sizeMapping: "mappingstickyslot", timeout: site_config.refresh_rate, },
+inreedvid13Slot: { adUnitPath: "/1001824/adp100001/adp100001J", size: "mappinginreedvidslot", sizeMapping: "mappingfooterslot", timeout: site_config.refresh_rate, },
+inreedvid8Slot: { adUnitPath: "/1001824/adp100001/adp100001E", size: "mappingleaderslot", sizeMapping: "mappingleaderslot", timeout: site_config.refresh_rate, },
+inreedvid4Slot: { adUnitPath: "/1001824/adp100001/adp100001A", size: "mappingleaderslot", sizeMapping: "mappingleaderslot", timeout: site_config.refresh_rate, },
+inreedvid5Slot: { adUnitPath: "/1001824/adp100001/adp100001B", size: "mappingmenu1slot", sizeMapping: "mappingmenu1slot", timeout: site_config.refresh_rate, },
+inreedvid9Slot: { adUnitPath: "/1001824/adp100001/adp100001F", size: "mappingmenuslot", sizeMapping: "mappingmenuslot", timeout: site_config.refresh_rate, },
+inreedvid6Slot: { adUnitPath: "/1001824/adp100001/adp100001C", size: "mappinginreedvidslot", sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
+inreedvid10Slot: { adUnitPath: "/1001824/adp100001/adp100001G", size: "mappinginreedvidslot", sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
+inreedvid7Slot: { adUnitPath: "/1001824/adp100001/adp100001D", size: "mappinginreedvidslot", sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
+},
+sizeMappings: {
+mappinginreedvidslot: [
+[[1024, 768],[[550,310],[728,90],[300,250],[250,250],[468,60],[320,50],[336,280],[580,400],[320,100]]],
+[[768, 500],[[728,90],[300,250],[250,250],[468,60],[320,50],[550,310],[336,280],[580,400],[320,100]]],
+[[1, 1],[[300,250],[250,250],[320,50],[320, 100],[336, 280],[468, 90]]],
+],
+mappingmenuslot: [
+[[1024, 768],[[300, 600],[300, 250],[250, 250],[160, 600],[120,600]]],
+[[768, 500],[[300,250],[250,250]]],
+[[1, 1],[[300,250],[250,250]]],
+],
+mappingmenu1slot: [
+[[1024, 768],[[300,250],[250,250]]],
+[[768, 500],[[300,250],[250,250]]],
+[[1, 1],[[300,250],[250,250]]],
+],
+mappingstickyslot: [
+[[1024, 768],[[300, 600],[300, 250],[250, 250],[160,600],[120, 600]]],
+[[768, 500],[[160,600],[120, 600]]],
+[[1, 1],[[120, 600]]],
+],
+mappingfooterslot: [
+[[1024, 768],[[970, 90],[728,90],[468, 60],[320, 50]]],
+[[768, 500],[[728,90],[468, 60],[320, 50]]],
+[[1, 1],[[468, 60],[320, 50]]],
+],
+mappingleaderslot: [
+[[1024, 768],[[970, 90],[970, 250],[728, 90],[468, 60],[320, 50],[300, 250],[728, 90],[250, 250],[468, 60],[320, 100],[336, 280],[580, 400],[550, 310]]],
+[[768, 500],[[728,90],[468, 60],[320, 50]]],
+[[1, 1],[[468, 60],[320, 50]]],
+] 
+}
+});
+});
