@@ -2,8 +2,8 @@ define(function (require) {
     // Load any app-specific modules
     // with a relative require call,
     // like:
-    var messages = require('./messages');
-    var slotsonpage = require('./slotsonpage');
+    
+    require('./slotsonpage');
     var prebid = require('prebid');
     var gpt = require('gpt');
     var preconnect = require('preconnect');
@@ -33,7 +33,7 @@ define(function (require) {
     
     // Load library/vendor modules using
     // full IDs, like:
-    var print = require('print');
+    
     
     var assertive = require('assertive');
 
