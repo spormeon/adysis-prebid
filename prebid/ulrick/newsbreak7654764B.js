@@ -523,7 +523,6 @@ bids: banner_bidders.bids
      adyjs.que = adyjs.que || [];
      adyjs.que.push(function() {
      adyjs.addAdUnits(adUnits);
-     });
      //adyjs.addAdUnits(videoAdUnit); // add your ad units to the bid request
   // alias for bidder
      //adyjs.aliasBidder('appnexus','brealtime'); 
@@ -634,7 +633,7 @@ adysis: { bidCpmAdjustment : function(bidCpm){ return "+c.cpm+" * 2;} },
      bidsBackHandler: initAdserver1,
      timeout: PREBID_TIMEOUT
     });
-    
+    });
     function initAdserver1() {
      if (adyjs.initAdserver1Set) return;
      adyjs.initAdserver1Set = true;
