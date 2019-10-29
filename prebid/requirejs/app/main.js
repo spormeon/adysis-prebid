@@ -12,7 +12,7 @@ define(function (require) {
     var outstreambidders = require('./outstream-bidders');
     var bannerbidders = require('./banner-bidders');
     var adunitsconfig = require('./adunits-config');
-    var custombuckets = require('./customebuckets');
+    var custombuckets = require('./custombuckets');
     var biddersalias = require('./bidders-alias');
     var bidderssettings = require('./bidders-settings');
     var prebidconfig = require('./prebid-config');
