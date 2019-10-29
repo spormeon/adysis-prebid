@@ -4,6 +4,10 @@ define(function (require) {
     // like:
     var messages = require('./messages');
     var slotsonpage = require('./slotsonpage');
+    var prebid = require('prebid');
+    var gpt = require('gpt');
+    var preconnect = require('preconnect');
+    var bidfilter = require('bidfilter');
     var timeoutmap = require('./timeoutmap');
     var floorpricemap = require('./floorpricemap');
     var bidcachemap = require('./bidcachemap');
@@ -25,10 +29,7 @@ define(function (require) {
     // Load library/vendor modules using
     // full IDs, like:
     var print = require('print');
-    var prebid = require('prebid');
-    var gpt = require('gpt');
-    var preconnect = require('preconnect');
-    var bidfilter = require('bidfilter');
+    
     var assertive = require('assertive');
 
     print(messages.getHello());
