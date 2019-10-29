@@ -10,6 +10,9 @@ define(function (require) {
     var bidfilter = require('bidfilter');
     var timeoutmap = require('./timeoutmap');
     var floorpricemap = require('./floorpricemap');
+    var siteconfig = require('./site-config');
+    var unrulyconfig = require('./unruly-config');
+    var amazonbidder = require('./amazon-bidder');
     var bidcachemap = require('./bidcachemap');
     var assertiveconfig = require('./assertiveconfig');
     var nativebidders = require('./native-bidders');
@@ -17,9 +20,11 @@ define(function (require) {
     var bannerbidders = require('./banner-bidders');
     var adunitsconfig = require('./adunits-config');
     var custombuckets = require('./custombuckets');
+    var startbids = require('./startbids');
     var biddersalias = require('./bidders-alias');
     var bidderssettings = require('./bidders-settings');
     var prebidconfig = require('./prebid-config');
+    var requestbids = require('./requestbids');
     var GPTadunitconfig = require('./GPTadunit-config');
     var GPTsizemapping = require('./GPTsize-mapping');
     var assertivecustom = require('./assertive-custom');
