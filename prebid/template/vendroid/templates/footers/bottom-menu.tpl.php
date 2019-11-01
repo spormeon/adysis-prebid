@@ -1,0 +1,1 @@
+<a href="pages-faq.php"> FAQ </a> <a href="pages-sitemap.php"> Sitemap </a> <a href="contact.php"> Contact </a>

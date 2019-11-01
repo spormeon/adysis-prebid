@@ -1,0 +1,1706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Vendroid Documentation">
+<meta name="author" content="Venmond, Inc.">
+<link rel="shortcut icon" href="favicon.ico">
+<title>Vendroid Documentation</title>
+
+<!-- Bootstrap core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Custom styles for this template -->
+<link type="text/css" rel="stylesheet" href="plugins/prettyPhoto-plugin/css/prettyPhoto.css">
+<link type="text/css" rel="stylesheet" href="plugins/google-code-prettify/prettify.css">
+<link href="css/docs.css" rel="stylesheet">
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<div class="container-fluid">
+  <div class="row">
+  
+  
+  
+    <div class="col-xs-12 col-sm-3 col-md-2 sidebar">
+    
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".menu"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+          <div class="navbar-brand" href="#">
+            <div class="logo">VENDROID DOCS</div>
+            <div class="sub-title hidden-xs">Super Flexible Admin Template Documentation</div>
+            <div class="demo-link hidden-xs" >Demo: <a href="http://vendroid.venmond.com"><i class="fa fa-map"></i>Live Preview</a></div>
+          </div>
+          <div class="clearfix"></div>
+          <nav class="menu">
+            <ul class="nav nav-sidebar">
+              <li class="active"><a data-waypoint="section-overview" href="#section-overview">Overview</a></li>
+              <li><a data-waypoint="section-setup" href="#section-setup">Setup</a></li>
+              <li><a data-waypoint="section-structure" href="#section-structure">Files Structure</a></li>
+              <li><a data-waypoint="section-setting" href="#section-setting">Theme Setting</a></li>
+              <li><a data-waypoint="section-contentlist" href="#section-contentlist">Content List Class</a></li>
+              <li><a data-waypoint="section-contentgrid" href="#section-contentgrid">Content Grid Class</a></li>                            
+              <li><a data-waypoint="section-megamenu" href="#section-megamenu">Mega Menu</a></li>
+              <li><a data-waypoint="section-class" href="#section-class">General Helper Class</a></li>
+              <li><a data-waypoint="section-contact" href="#section-contact">Contact Setting</a></li>              
+              <li><a data-waypoint="section-plugins" href="#section-plugins">Plugins List</a></li>
+              <li><a data-waypoint="section-changelog" href="#section-changelog">Change Log</a></li>
+              <li><a data-waypoint="section-thankyou" href="#section-thankyou">Thank You</a></li>
+            </ul>
+          </nav>
+ 
+    </div>
+    
+    
+    
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    
+    
+<!--################################## SECTION ##################################-->
+
+      <section id="documenter_cover" class="slide-waypoint" data-waypoint="section-overview">
+        <h1 class="h2">Vendroid 1.1.4</h1>
+        <h2 class="h4">Super Flexible Admin HTML Templates</h2>
+        <br/>
+        <div id="documenter_buttons"> <a class="btn btn-primary btn-large" href="http://vendroid.venmond.com">Online Demo</a> <a class="btn btn-large" href="http://themeforest.net/user/Venmond#">Our Profile</a> <a class="btn btn-large" href="mailto:info@venmond.com">Email Us</a> </div>
+        <hr>
+        <ul>
+          <li>created: 21 May 2013</li>
+          <li>latest update: 08 August 2014</li>
+          <li>by: Venmond, Inc.</li>
+          <li>email: <a href="mailto:info@venmond.com">info@venmond.com</a></li>
+        </ul>
+        <br/>
+        <p>Thank you for purchasing our theme. If you have any question beyond the scope of this documentation help, don't hestitate to contact us via <a href="http://www.venmond.com">our forum</a> or <a href="http://themeforest.net/user/Venmond">theme forest profile</a> </p>
+      </section>
+      
+      
+
+
+
+
+
+<!--################################## SECTION ##################################-->
+      
+      <section id="documenter_setup" class="slide-waypoint" data-waypoint="section-setup">
+        <h2 class="section-title"><i class="section-icon glyphicon glyphicon-off"></i> Setup</h2>
+        <p>Vendroid comes with two versions:</p>
+        <ol>
+        <li>PHP with configurable files</li>
+        <li>HTML files</li>
+        </ol>
+        <p>Even HTML files, some files need ajax. So for the best use, please try the files on your local server.
+        <br/><br/>To try locally / offline, you need to install program such as:        
+        </p>
+        <ul>
+        <li> <a href="http://www.wampserver.com/en/">WAMP</a> (recommended), or</li>
+        <li> <a href="https://www.apachefriends.org/index.html">XAMPP</a></li>
+
+        </ul>
+        <p>Download and install the application, if you need more installation server guide please go to each site and see more detail instruction.</p>        
+        <p>Start the WAMP server. In WAMP for windows, copy folder Vendroid to C:\wamp\www folder (your drive of installation) Go to your browser, and type http://localhost/vendoid</p>
+        <p>For php version, open <strong>templates/headers/opening.tpl.php</strong>. If you put your site inside a folder, edit the <strong>$subfolder="/vendroid";</strong> into your subfolder name, example:<strong> http://localhost/vendroid/</strong>.<br/><br/> If you put on your main template on root/public_html, just fill with blank: <strong>$subfolder="";</strong></p>
+        
+        
+    
+      </section>      
+
+
+
+      
+<!--################################## SECTION ##################################-->
+      
+      <section id="documenter_files_structure" class="slide-waypoint" data-waypoint="section-structure">
+        <h2 class="section-title"><i class="section-icon glyphicon glyphicon-folder-open"></i> Files Structure</h2>
+        <p>Vendroid Files Structure:</p>
+        <a href="img/templates-foler.jpg" data-rel="prettyPhoto"><img alt="template-folder" src="img/templates-foler.jpg"></a>
+        <br/><br/>
+        <p>Vendroid CSS files explanation: 	
+        </p>
+        <ul>
+        <li><strong>css/theme.min.css</strong> : compressed css files (used in the demo)</li>
+        <li><strong>css/theme.css</strong> : uncompressed files with explanation and tables of content (not used in the demo)</li>
+        <li><strong>css/theme-responsive.min.css</strong> : compressed css files for responsive features (used in the demo)</li>
+        <li><strong>css/theme-responsive.css</strong> : uncompressed files with explanation and tables of content (not used in the demo)</li>
+        
+        
+        </ul>
+        <br/>
+        <p>Vendroid Less files explanation: 	
+        <ul>
+        <li>.Less files located at <strong>/less</strong> folder </li>
+        <li>You must use compiler such as <a href="http://crunchapp.net/">crunch app</a> or any other .less compiler</li>
+        <li>Only use <strong>theme.min.less</strong> for uncompressed version, or <strong>theme.less</strong> for compressed version to compile it to <strong>theme.min.css</strong> or <strong>theme.css</strong></li>
+        <li>For responsive css file, only use <strong>theme-responsive.min.less</strong> for uncompressed version, or <strong>theme-responsive.less</strong> for compressed version to compile it to <strong>theme-responsive.min.css</strong> or <strong>theme-responsive.css</strong></li>        
+        </ul>       
+        
+        </p>        
+      </section>
+
+
+
+
+
+<!--################################## SECTION ##################################-->
+      
+      <section id="documenter_setting" class="slide-waypoint" data-waypoint="section-setting">
+        <h2 class="section-title"><i class="section-icon glyphicon glyphicon-cog"></i> Theme Setting</h2>
+        <p>Open your <strong>templates/config.php</strong> files.</p>
+        <div class="panel">
+        <div class="panel-body">
+<div class="table-responsive">
+                    <table class="table table-hover">
+                      <thead>
+                        <tr>
+                          <th style="width:200px">Variable</th>
+                          <th>Description</th>
+                          <th style="width:350px">HTML Version</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td colspan="3"><h3 style="margin-top: 60px;">GENERAL SETTING</h3></td>
+                        </tr>                      
+                        <tr>
+                          <td><code>$author</code></td>
+                          <td>Author meta data</td>
+                          <td>&lt;meta name="author" content="$author; "&gt;</td>
+                        </tr>
+                        <tr>
+                          <td><code>$website_name</code></td>
+                          <td>Closing title every page</td>
+                          <td>&lt;title&gt;$title;  | $website_name; &lt;/title&gt; </td>
+                        </tr>                        
+                        <tr>
+                          <td><code>$footer_message</code></td>
+                          <td>Usually for copyright, can input any HTML</td>
+                          <td>at &lt;footer&gt; section: &lt;div class="copyright"&gt;$footer_message &lt;/div&gt; </td>
+                        </tr>
+                        <tr>
+                          <td><code>$logo_path</code></td>
+                          <td>Path for your logo, Value: 'img/logo.png'</td>
+                          <td>None</td>
+                        </tr> 
+                        <tr>
+                          <td><code>$background</code></td>
+                          <td>Value: '' = none, or <strong>'background-login'</strong>, <strong>'vd_bg-black'</strong>, <strong>'vd_bg-yellow'</strong>, <strong>'vd_bg-grey'</strong> or create your own background css</td>
+                          <td>&lt;body class=&quot;$background&quot;&gt;</td>
+                        </tr>   
+                        
+                        
+                        <tr>
+                          <td colspan="3"><h3 style="margin-top: 60px;">LAYOUT SETTING</h3></td>
+                        </tr>                                                                      
+                        <tr>
+                          <td><code>$responsive</code></td>
+                          <td>Value: <strong>1</strong> = Responsive, <strong>0</strong> = Non Responsive </td>
+                          <td><strong>Responsive:</strong>&lt;body class="responsive"&gt; and load <strong>css/theme-responsive.css</strong><br/> <br/><strong>No Responsive:</strong>&lt;body class="no-responsive"&gt; and load <strong>css/non-responsive.css</strong></td>
+                        </tr> 
+                        <tr>
+                          <td><code>$width_non_responsive</code></td>
+                          <td>Width for middle or boxed layout with non responsive ( if $responsive set to 0)</td>
+                          <td>inside &lt;head&gt;, add at the bottom:<br/>         &lt;style&gt;<br>
+.middle-layout .container, .boxed-layout .container{<br>
+width: 1000px !important;<br>
+max-width: 1000px !important; <br>
+} <br>
+&lt;/style&gt; </td>
+                        </tr> 
+                        <tr>
+                          <td><code>$layout</code></td>
+                          <td>Value: <strong>'full-layout'</strong>, <strong>'middle-layout'</strong>, or <strong>'boxed-layout'</strong></td>
+                          <td>&lt;body class=&quot;$layout&quot;&gt; </td>
+                        </tr> 
+                        
+                        <tr>
+                          <td><code>$navbar_top_fixed</code></td>
+                          <td>Value: <strong>1</strong> = Top Navigation bar follow when scroll down, <strong>0</strong> = normal</td>
+                          <td>Fixed value: &lt;body class=&quot;nav-top-fixed&quot;&gt; </td>
+                        </tr>
+                        
+                        
+                        <tr>
+                          <td colspan="3"><h3 style="margin-top: 60px;">HEADER AND FOOTER SETTING</h3></td>
+                        </tr>                          
+                        <tr>
+                          <td><code>$header</code></td>
+                          <td>Value: <strong>'header-1'</strong> or <strong>'header-2'</strong> or <strong>'header-3'</strong> or other <strong>'header-*'</strong> located at templates/headers/$header.tpl.php	</td>
+                          <td>None</td>
+                        </tr> 
+                        <tr>
+                          <td><code>$footer</code></td>
+                          <td>Value: 'footer-1' or 'footer-2' or 'footer-3' or other 'footer-*' located at templates/footers/$footer.tpl.php</td>
+                          <td>&lt;body class=&quot;$background&quot;&gt;</td>
+                        </tr>  
+
+
+                        <tr>
+                          <td colspan="3"><h3 style="margin-top: 60px;">HEAD SECTION PANEL MENU SETTING</h3></td>
+                        </tr>                          
+                        <tr>
+                          <td><code>$remove_navbar</code></td>
+                          <td>Remove Navbar Toggle Button, 1 = show, 0 = hide	</td>
+                          <td>None</td>
+                        </tr> 
+                        <tr>
+                          <td><code>$remove_header</code></td>
+                          <td>Remove Header Toggle Button, 1 = show, 0 = hide</td>
+                          <td>None</td>
+                        </tr> 
+                          <td><code>$fullscreen</code></td>
+                          <td>Full Screen Toggle Button, 1 = show, 0 = hide	</td>
+                          <td>None</td>
+                        </tr> 
+                        <tr>
+                          <td><code>$boxedtofull</code></td>
+                          <td>Boxed to Full Layout Toggle Button, 1 = show, 0 = hide</td>
+                          <td>None</td>
+                        </tr>                         
+                        
+
+
+                        <tr>
+                          <td colspan="3"><h3 style="margin-top: 60px;">LEFT SIDEBAR NAVIGATION SETTING</h3></td>
+                        </tr>                                                                     
+                        <tr>
+                          <td><code>$navbar_left_config</code></td>
+                          <td>Value: <strong>2</strong> = Available but Start Invisible, <strong>1</strong> = Available Start Visible, <strong>0</strong> = Not available</td>
+                          <td>Value: <strong>0</strong> = &lt;body class=&quot;no-nav-left&quot;&gt;<br/>                           
+                          Value: <strong>2</strong> = &lt;body class=&quot;nav-left-hide nav-left-start-hide&quot;&gt;</td>
+                        </tr>
+                        <tr>
+                          <td><code>$navbar_left</code></td>
+                          <td>Change the sidebar navigation view, Value: <strong>'navbar-tabs-menu'</strong> or <strong>'navbar-tabs-profile'</strong> or <strong>'navbar-tabs-tab'</strong> or <strong>'navbar-email'</strong> or <strong>'navbar-chat'</strong> or <strong>'navbar-no-tab'</strong>. Files to edit in <strong>templates/navbars/</strong></td>
+                          <td>See the Nav Variations Example</td>
+                        </tr>                        
+                        <tr>
+                          <td><code>$navbar_left_start_width</code></td>
+                          <td>Change the sidebar navigation width, Value: '' = default width, <strong>'nav-left-medium'</strong> = medium width, <strong>'nav-left-small'</strong> = small width.</td>
+                          <td>&lt;body class=&quot;$navbar_left_start_width&quot;&gt;</td>
+                        </tr>
+                        <tr>
+                          <td><code>$navbar_left_fixed</code></td>
+                          <td>Value: <strong>1</strong> = fixed position , <strong>0</strong> = normal, fixed position compatible with no footer layout</td>
+                          <td>Value: <strong>1</strong> =&lt;body class=&quot;nav-left-fixed&quot;&gt;</td>
+                        </tr>  
+                        <tr>
+                          <td><code>$navbar_left_menu</code></td>
+                          <td>Value: located at templates/navbars/menu- $navbar_left_menu .tpl.php	</td>
+                          <td>None</td>
+                        </tr>                        
+                        <tr>                                              
+                        <tr>
+                          <td><code>$navbar_left_extra_class</code></td>
+                          <td>Put any class for left sidebar navigation, ex: vd_bg-blue vd_bg-black-80</td>
+                          <td>Put inside &lt;div class=&quot;vd_navbar $navbar_left_extra_class&quot;&gt;</td>
+                        </tr>  
+
+
+                        
+                        <tr>
+                          <td colspan="3"><h3 style="margin-top: 60px;">RIGHT SIDEBAR NAVIGATION SETTING</h3></td>
+                        </tr>                                              
+                        <tr>
+                          <td><code>$navbar_right_config</code></td>
+                          <td>Value: <strong>2</strong> = Available but Start Invisible, <strong>1</strong> = Available Start Visible, <strong>0</strong> = Not available</td>
+                          <td>Value: <strong>0</strong> = &lt;body class=&quot;no-nav-right&quot;&gt;<br/>                           
+                          Value: <strong>2</strong> = &lt;body class=&quot;nav-right-hide nav-right-start-hide&quot;&gt;</td>
+                        </tr>
+                        <tr>
+                          <td><code>$navbar_right</code></td>
+                          <td>Change the sidebar navigation view, Value: <strong>'navbar-tabs-menu'</strong> or <strong>'navbar-tabs-profile'</strong> or <strong>'navbar-tabs-tab'</strong> or <strong>'navbar-email'</strong> or <strong>'navbar-chat'</strong> or <strong>'navbar-no-tab'</strong>. Files to edit in <strong>templates/navbars/</strong></td>
+                          <td>See the Nav Variations Example</td>
+                        </tr>                        
+                        <tr>
+                          <td><code>$navbar_right_start_width</code></td>
+                          <td>Change the sidebar navigation width, Value: '' = default width, <strong>'nav-right-medium'</strong> = medium width, <strong>'nav-right-small'</strong> = small width.</td>
+                          <td>&lt;body class=&quot;$navbar_right_start_width&quot;&gt;</td>
+                        </tr>
+                        <tr>
+                          <td><code>$navbar_right_fixed</code></td>
+                          <td>Value: <strong>1</strong> = fixed position , <strong>0</strong> = normal, fixed position compatible with no footer layout</td>
+                          <td>Value: <strong>1</strong> =&lt;body class=&quot;nav-right-fixed&quot;&gt;</td>
+                        </tr> 
+                        <tr>
+                          <td><code>$navbar_right_menu</code></td>
+                          <td>Value: located at templates/navbars/menu- $navbar_right_menu .tpl.php	</td>
+                          <td>None</td>
+                        </tr>                                               
+                        <tr>
+                          <td><code>$navbar_right_extra_class</code></td>
+                          <td>Put any class for right sidebar navigation, ex: vd_bg-blue, vd_bg-black-80</td>
+                          <td>Put inside &lt;div class=&quot;vd_navbar $navbar_right_extra_class&quot;&gt;</td>
+                        </tr> 
+                        
+                        
+                        <tr>
+                          <td colspan="3"><h3 style="margin-top: 60px;">SIDEBAR MENU TOGGLE BUTTON SETTING</h3></td>
+                        </tr>                        
+                        <tr>
+                          <td><code>$medium_nav_toggle</code></td>
+                          <td>Visibility of change sidebar menu width from large to medium button. Value: <strong>1</strong>= visible, <strong>0</strong> = none</td>
+                          <td>None</td>
+                        </tr>
+                        <tr>
+                          <td><code>$small_nav_toggle</code></td>
+                          <td>Visibility of change sidebar menu width from large to small or medium to small button. Value: <strong>1</strong>= visible, <strong>0</strong> = none</td>
+                          <td>None</td>
+                        </tr>
+                        <tr>
+                          <td><code>$enlarge_left_to_medium</code></td>
+                          <td>If small_nav_toggle clicked, enlarge left sidebar menu to: <strong>1</strong> = medium, <strong>0</strong> = default/large</td>
+                          <td>Value: <strong>1</strong> =&lt;body class=&quot;enlarge-left-to-medium&quot;&gt;</td>
+                        </tr>
+                        <tr>
+                          <td><code>$enlarge_right_to_medium</code></td>
+                          <td>If small_nav_toggle clicked, enlarge right sidebar menu to <strong>1</strong> = medium, <strong>0</strong> = default/large</td>
+                          <td>Value: <strong>1</strong> =&lt;body class=&quot;enlarge-right-to-medium&quot;&gt;</td>
+                        </tr>
+
+
+
+                        <tr>
+                          <td colspan="3"><h3 style="margin-top: 60px;">EXTRA CLASS SETTING </h3></td>
+                        </tr> 
+                        <tr>
+                          <td><code>$top_menu_extra_class</code></td>
+                          <td>Value: background class such as 'vd_bg-white', also 'light-top-menu', 'menu-search-style-2'</td>
+                          <td>&lt;div class=&quot;vd_top-menu-wrapper $top_menu_extra_class&quot; &gt;</td>
+                        </tr>
+                        <tr>
+                          <td><code>$logo_container_extra_class</code></td>
+                          <td>Value: background class such as 'vd_bg-white', also 'panel-menu-style-2'</td>
+                          <td>&lt;div class=&quot;vd_top-nav vd_nav-width $logo_container_extra_class&quot;&gt;</td>
+                        </tr>
+                                                                       
+
+                        <tr>
+                          <td><code>$bottom_extra_class</code></td>
+                          <td>Located inside footer <div class="vd_bottom $bottom_extra_class"> value: background class such as 'vd_bg-white' padding or any other class	</td>
+                          <td>&lt;div class=&quot;vd_bottom $bottom_extra_class&quot;&gt;</td>
+                        </tr>
+                        <tr>
+                          <td><code>$body_extra_class</code></td>
+                          <td>Value: 'content-style-2', 'login-layout', 'front-layout', 'remove-navbar',  or Other Extra Body Class for your own modification</td>
+                          <td>&lt;body class=&quot;$extra_class&quot;&gt;</td>                        
+                        </tr>                                                
+                       
+
+                        <tr>
+                          <td colspan="3"><h3 style="margin-top: 60px;">SPECIFIC PAGE CSS SETTING </h3></td>
+                          
+                        <tr>
+                          <td><code>$specific_css (array)</code></td>
+                          <td>Add multiple external CSS via array, Example:<br/> 
+                              <code>$specific_css[0] = 'plugins/dataTables/css/jquery.dataTables.min.css'; </code><br/>
+                              <code>$specific_css[1] = 'plugins/dataTables/css/dataTables.bootstrap.css';</code>  </td>
+                          <td>import css inside <code>&lt;head&gt;</code> tag</td>                        
+                        </tr> 
+                        <tr>
+                          <td><code>$page_css</code></td>
+                          <td>Add CSS in a page inside <code>&lt;head&gt;</code>, Example:<br/> 
+                              <code>$page_css = '.tab-right{margin-left:-30px; .tab-left{margin-left:-30px;}' </code></td>
+                          <td>Add styling css inside <code>&lt;head&gt;</code> tag</td>                        
+                        </tr>    
+                        <tr>
+                          <td><code>$page_responsive_css</code></td>
+                          <td>Add CSS in a page inside <code>&lt;head&gt;</code> for responsive css code, Example:<br/> 
+                              <code>$page_css = '@media (max-width: 767px) { .tab-right{margin-left:0; margin-top:0;}} </code></td>
+                          <td>Add styling css inside <code>&lt;head&gt;</code> tag for responsive css code</td>                        
+                        </tr>                                             
+                                                  
+                        </tr> 
+                         
+                      </tbody>
+                    </table>
+                  </div>
+                  </div>
+                  </div>
+      </section>
+      
+
+
+<!--################################## SECTION ##################################-->
+      
+      <section id="documenter_content_list" class="slide-waypoint" data-waypoint="section-contentlist">
+        <h2 class="section-title"><i class="section-icon glyphicon glyphicon-th-list"></i> Content List Class</h2>
+        <p>Content List class used to create a list. Can be a list of menu, list of tasks, list of blog, or even content grid. Content list fit perfectly combined with mega menu. Example: listtables-small-list.php, listtables-medium-list.php, listtables-blog-small-list.php, listtables-blog-large-list.php. </p><br/> <br/>
+        <p>Basic structure:</p>
+        <div class="panel">
+        	<div class="panel-body">
+        		<pre class="prettyprint docs-pre">&lt;div class=&quot;content-list&quot;&gt;<br>	&lt;ul  class=&quot;list-wrapper&quot;&gt;<br>		&lt;li&gt;<br>			&lt;div class=&quot;menu-icon vd_yellow&quot;&gt;
+				&lt;i class=&quot;fa fa-suitcase&quot;&gt;&lt;/i&gt;
+			&lt;/div&gt;<br>			&lt;div class=&quot;menu-text&quot;&gt; Someone has give you a surprise<br>				&lt;div class=&quot;menu-info&quot;&gt;
+					&lt;span class=&quot;menu-date&quot;&gt;12 Minutes Ago&lt;/span&gt; 
+					&lt;span class=&quot;menu-action&quot;&gt;
+						&lt;span class=&quot;menu-action-icon&quot;&gt; &lt;i class=&quot;fa fa-eye&quot;&gt;&lt;/i&gt; &lt;/span&gt;
+					&lt;/span&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;<br>		&lt;/li&gt;<br>	&lt;/ul&gt;<br>&lt;/div&gt;</pre>
+        	</div>
+        </div>
+        
+		<br/><br/>
+        <p>Wrap in &lt;a&gt; tag:</p>
+        <div class="panel">
+        	<div class="panel-body">
+        		<pre class="prettyprint docs-pre">&lt;div class=&quot;content-list&quot;&gt;<br>	&lt;ul  class=&quot;list-wrapper&quot;&gt;<br>		&lt;li&gt;
+			&lt;a href=&quot;#&quot;&gt;<br>				&lt;div class=&quot;menu-icon vd_yellow&quot;&gt;
+					&lt;i class=&quot;fa fa-suitcase&quot;&gt;&lt;/i&gt;
+				&lt;/div&gt;<br>				&lt;div class=&quot;menu-text&quot;&gt; Someone has give you a surprise<br>					&lt;div class=&quot;menu-info&quot;&gt;
+						&lt;span class=&quot;menu-date&quot;&gt;12 Minutes Ago&lt;/span&gt; 
+						&lt;span class=&quot;menu-action&quot;&gt;
+							&lt;span class=&quot;menu-action-icon&quot;&gt; &lt;i class=&quot;fa fa-eye&quot;&gt;&lt;/i&gt; &lt;/span&gt;
+						&lt;/span&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/a&gt;<br>		&lt;/li&gt;<br>	&lt;/ul&gt;<br>&lt;/div&gt;</pre>
+        	</div>
+        </div>  
+        
+        
+        <br/><br/>
+        <h3>Content Menu </h3>
+        <p>Used for menu. Add <strong>&quot;content-menu&quot;</strong> class beside content-list:</p>
+        <div class="panel">
+        	<div class="panel-body">
+        		<pre class="prettyprint docs-pre">&lt;div class=&quot;content-list content-menu&quot;&gt;<br>	&lt;ul class=&quot;list-wrapper&quot;&gt;<br>		&lt;li&gt; 
+			&lt;a href=&quot;#&quot;&gt; 
+				&lt;div class=&quot;menu-icon vd_grey&quot;&gt;&lt;i class=&quot; fa fa-envelope&quot;&gt;&lt;/i&gt;&lt;/div&gt; 
+				&lt;div class=&quot;menu-text&quot;&gt;Messages&lt;/div&gt;
+				&lt;div class=&quot;menu-badge&quot;&gt;&lt;div class=&quot;badge vd_bg-red&quot;&gt;10&lt;/div&gt;&lt;/div&gt; 
+			&lt;/a&gt; 
+		&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;                </pre>
+        	</div>
+        </div>   
+        
+        
+        <br/><br/>
+        <h3>Content Image </h3>
+        <p>Used for medium size image. Add <strong>&quot;content-image&quot;</strong> class beside content-list:</p>
+        <div class="panel">
+        	<div class="panel-body">
+        		<pre class="prettyprint docs-pre">&lt;div class=&quot;content-list content-image&quot;&gt;<br>	&lt;ul class=&quot;list-wrapper&quot;&gt;<br>		&lt;li&gt;<br>			&lt;div class=&quot;menu-icon vd_yellow&quot;&gt;&lt;i class=&quot;fa fa-code&quot;&gt;&lt;/i&gt;&lt;/div&gt;<br>			&lt;div class=&quot;menu-text&quot;&gt; Finish coding jquery plugin<br>				&lt;div class=&quot;menu-info&quot;&gt;<br>					&lt;div class=&quot;progress progress-sm&quot;&gt;&lt;div class=&quot;progress-bar progress-bar-danger&quot; style=&quot;width:20%&quot;&gt; 20% &lt;/div&gt;&lt;/div&gt;<br>				&lt;/div&gt;<br>			&lt;/div&gt;<br>		&lt;/li&gt;<br>		&lt;li&gt;<br>			&lt;div class=&quot;menu-icon&quot;&gt;&lt;img src=&quot;img/avatar/avatar-3.jpg&quot; alt=&quot;example image&quot;&gt;&lt;/div&gt;<br>			&lt;div class=&quot;menu-text&quot;&gt; Client: Zoe Project<br>				&lt;div class=&quot;menu-info&quot;&gt; 
+					&lt;span class=&quot;menu-date&quot;&gt;Make a call&lt;/span&gt; 
+					&lt;span class=&quot;menu-action&quot;&gt; &lt;span class=&quot;menu-action-icon&quot;&gt; &lt;i class=&quot;fa fa-phone&quot;&gt;&lt;/i&gt; &lt;/span&gt; &lt;/span&gt; 
+				&lt;/div&gt;
+			&lt;/div&gt;<br>		&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;</pre>
+        	</div>
+        </div>
+        
+         
+
+        <br/><br/>
+        <h3>Content Blog Small </h3>
+        <p>Used for blog with small image preview. Add <strong>&quot;content-blog-small&quot;</strong> class beside content-list:</p>
+        <div class="panel">
+        	<div class="panel-body">
+        		<pre class="prettyprint docs-pre">&lt;div class=&quot;content-list content-blog-small&quot;&gt;<br>	&lt;ul class=&quot;list-wrapper&quot;&gt;<br>		&lt;li&gt;<br>			&lt;div class=&quot;menu-icon&quot;&gt; &lt;img src=&quot;img/blog/01-square-200.jpg&quot; alt=&quot;example image&quot;&gt; &lt;/div&gt;<br>			&lt;div class=&quot;menu-text&quot;&gt;<br>				&lt;h2 class=&quot;blog-title font-bold letter-xs&quot;&gt;&lt;a href=&quot;#&quot;&gt; Some Significant Blog Title &lt;/a&gt;&lt;/h2&gt;<br>				&lt;div class=&quot;menu-info&quot;&gt;<br>					&lt;div class=&quot;menu-date font-xs&quot;&gt;January 10th, 1987 &lt;/div&gt;<br>				&lt;/div&gt;<br>				&lt;div class=&quot;menu-tags  mgbt-xs-15&quot;&gt; 
+					Tags: &lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;label vd_bg-yellow&quot;&gt;Sports&lt;/span&gt;&lt;/a&gt; &lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;label vd_bg-yellow&quot;&gt;Hobby&lt;/span&gt;&lt;/a&gt;
+				&lt;/div&gt;<br>				&lt;p&gt;Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore...&lt;/p&gt;<br>				&lt;a href=&quot;#&quot; class=&quot;btn vd_btn vd_bg-green btn-sm&quot;&gt;Read More&lt;/a&gt; 
+			&lt;/div&gt;<br> 		&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;</pre>
+        	</div>
+        </div>
+        
+        <br/><br/>
+        <h3>Content Blog Large </h3>
+        <p>Used for blog with large image preview. Add <strong>&quot;content-blog-large&quot;</strong> class beside content-list:</p>
+        <div class="panel">
+        	<div class="panel-body">
+        		<pre class="prettyprint docs-pre">&lt;div class=&quot;content-list content-blog-large&quot;&gt;<br>	&lt;ul class=&quot;list-wrapper&quot;&gt;<br>		&lt;li&gt;<br>			&lt;div class=&quot;menu-icon&quot;&gt; &lt;img src=&quot;img/blog/01-square-200.jpg&quot; alt=&quot;example image&quot;&gt; &lt;/div&gt;<br>			&lt;div class=&quot;menu-text&quot;&gt;<br>				&lt;h2 class=&quot;blog-title font-bold letter-xs&quot;&gt;&lt;a href=&quot;#&quot;&gt; Some Significant Blog Title &lt;/a&gt;&lt;/h2&gt;<br>				&lt;div class=&quot;menu-info&quot;&gt;<br>					&lt;div class=&quot;menu-date font-xs&quot;&gt;January 10th, 1987 &lt;/div&gt;<br>				&lt;/div&gt;<br>				&lt;div class=&quot;menu-tags  mgbt-xs-15&quot;&gt; 
+					Tags: &lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;label vd_bg-yellow&quot;&gt;Sports&lt;/span&gt;&lt;/a&gt; &lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;label vd_bg-yellow&quot;&gt;Hobby&lt;/span&gt;&lt;/a&gt;
+				&lt;/div&gt;<br>				&lt;p&gt;Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore...&lt;/p&gt;<br>				&lt;a href=&quot;#&quot; class=&quot;btn vd_btn vd_bg-green btn-sm&quot;&gt;Read More&lt;/a&gt; 
+			&lt;/div&gt;<br> 		&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;</pre>
+        	</div>
+        </div>
+        
+        <br/><br/>
+        <h3>List Class Helper </h3>
+        <p>Class to help style the list:</p> 
+        <div class="table-responsive">
+                      <table class="table table-bordered table-striped">
+                        <thead>
+                          <tr>
+                            <th>Class</th>
+                            <th>Function</th>
+                            <th>Placement</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th><code>align-right</code></th>
+                            <td>Set Aligned Right List</td>
+                            <td>&lt;li class=&quot;align-right&quot;&gt;&lt;!--content --&gt;&lt;/li&gt;</td>
+                          </tr>
+                          <tr>
+                            <th><code>warning</code></th>
+                            <td>Set warning background on li</td>
+                            <td>&lt;li class=&quot;warning&quot;&gt;&lt;!--content --&gt;&lt;/li&gt;</td>
+                          </tr>                          
+                          <tr>
+                            <th><code>menu-action-right</code></th>
+                            <td>Menu Action Position Absolute on the Right Top</td>
+                            <td>&lt;ul class=&quot;list-wrapper menu-action-right&quot;&gt;</td>
+                          </tr>   
+                          <tr>
+                            <th><code>no-bd-btm</code></th>
+                            <td>Remove border bottom separator on li</td>
+                            <td>&lt;ul class=&quot;list-wrapper no-bd-btm&quot;&gt;</td>
+                          </tr>                            
+                          <tr>
+                            <th><code>pd-lr-10</code></th>
+                            <td>Add padding left and right 10px on li</td>
+                            <td>&lt;ul class=&quot;list-wrapper pd-lr-10&quot;&gt;</td>
+                          </tr>
+                          <tr>
+                            <th><code>pd-lr-15</code></th>
+                            <td>Add padding left and right 15px on li</td>
+                            <td>&lt;ul class=&quot;list-wrapper pd-lr-15&quot;&gt;</td>
+                          </tr>
+                          <tr>
+                            <th><code>pd-lr-20</code></th>
+                            <td>Add padding left and right 20px on li</td>
+                            <td>&lt;ul class=&quot;list-wrapper pd-lr-20&quot;&gt;</td>
+                          </tr>
+                          <tr>
+                            <th><code>pd-lr-25</code></th>
+                            <td>Add padding left and right 25px on li</td>
+                            <td>&lt;ul class=&quot;list-wrapper pd-lr-25&quot;&gt;</td>
+                          </tr> 
+                          <tr>
+                            <th><code>wrap-10</code></th>
+                            <td>Add padding left and right: 10px and margin left and right: -10px on li</td>
+                            <td>&lt;ul class=&quot;list-wrapper wrap-10&quot;&gt;</td>
+                          </tr>
+                          <tr>
+                            <th><code>wrap-15</code></th>
+                            <td>Add padding left and right: 15px and margin left and right: -15px on li</td>
+                            <td>&lt;ul class=&quot;list-wrapper wrap-15&quot;&gt;</td>
+                          </tr>
+                          <tr>
+                            <th><code>wrap-20</code></th>
+                            <td>Add padding left and right: 20px and margin left and right: -20px on li</td>
+                            <td>&lt;ul class=&quot;list-wrapper wrap-20&quot;&gt;</td>
+                          </tr>
+                          <tr>
+                            <th><code>wrap-25</code></th>
+                            <td>Add padding left and right: 25px and margin left and right: -25px  on li</td>
+                            <td>&lt;ul class=&quot;list-wrapper wrap-25&quot;&gt;</td>
+                          </tr>                                                                                                                                                          
+                        </tbody>
+                     </table>  
+        </div>       
+                     
+                        
+      </section>      
+
+
+
+
+<!--################################## SECTION ##################################-->
+      
+      <section id="documenter_content_grid" class="slide-waypoint" data-waypoint="section-contentgrid">
+        <h2 class="section-title"><i class="section-icon glyphicon glyphicon-th"></i> Content Grid Class</h2>
+        <p>Content Grid class used to create a  grid type list. Content grid fit perfectly combined with mega menu. Example: listtables-grid-list.php</p><br/><br/>
+        <p>Basic structure:</p>
+        <div class="panel">
+            <div class="panel-body">
+              <pre class="prettyprint docs-pre">&lt;div class=&quot;content-grid column-xs-3 column-sm-4 column-md-5 column-lg-6 height-xs-4&quot;&gt;<br>	&lt;ul class=&quot;list-wrapper&quot;&gt;<br>		&lt;li&gt; 
+                    &lt;a href=&quot;#&quot;&gt; &lt;div class=&quot;menu-icon&quot;&gt;&lt;img src=&quot;img/avatar/avatar.jpg&quot; alt=&quot;example image&quot;&gt;&lt;/div&gt; &lt;/a&gt;<br>			&lt;div class=&quot;menu-text&quot;&gt; Gabriella Montagna<br>				&lt;div class=&quot;menu-info&quot;&gt;<br>					&lt;div class=&quot;menu-date&quot;&gt;San Diego&lt;/div&gt;                                                                         <br>					&lt;div class=&quot;menu-action&quot;&gt;<br>						&lt;span class=&quot;menu-action-icon vd_green vd_bd-green&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;/span&gt; <br>						&lt;span class=&quot;menu-action-icon vd_red vd_bd-red&quot;&gt;&lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;&lt;/span&gt;<br>					&lt;/div&gt;                                <br>				&lt;/div&gt;<br>			&lt;/div&gt; <br>		&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+                </pre>
+            </div>
+        </div>
+        <br/>
+                    <h4>Content Grid Class Option</h4>
+                    <p>This class can also be used as parent of <code>&quot;content-grid&quot;</code> class</p>
+                    <div class="table-responsive">
+                      <table class="table table-bordered table-striped">
+                        <thead>
+                          <tr>
+                            <th>Column qty</th>
+                            <th> Extra small devices <small>Phones (&lt;768px)</small> </th>
+                            <th> Small devices <small>Tablets (≥768px)</small> </th>
+                            <th> Medium devices <small>Desktops (≥992px)</small> </th>
+                            <th> Large devices <small>Desktops (≥1200px)</small> </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th>1 Column</th>
+                            <td><code>column-xs-1</code></td>
+                            <td><code>column-sm-1</code></td>
+                            <td><code>column-md-1</code></td>
+                            <td><code>column-lg-1</code></td>
+
+                          </tr>
+                          <tr>
+                            <th>2 Columns</th>
+                            <td><code>column-xs-2</code></td>
+                            <td><code>column-sm-2</code></td>
+                            <td><code>column-md-2</code></td>
+                            <td><code>column-lg-2</code></td>
+                          </tr>
+                          <tr>
+                            <th>3 Columns</th>
+                            <td><code>column-xs-3</code></td>
+                            <td><code>column-sm-3</code></td>
+                            <td><code>column-md-3</code></td>
+                            <td><code>column-lg-3</code></td>
+                          </tr>
+                          <tr>
+                            <th>4 Columns</th>
+                            <td><code>column-xs-4</code></td>
+                            <td><code>column-sm-4</code></td>
+                            <td><code>column-md-4</code></td>
+                            <td><code>column-lg-4</code></td>
+                          </tr>
+                          <tr>
+                            <th>5 Columns</th>
+                            <td><code>column-xs-5</code></td>
+                            <td><code>column-sm-5</code></td>
+                            <td><code>column-md-5</code></td>
+                            <td><code>column-lg-5</code></td>
+                          </tr>
+                          <tr>
+                            <th>6 Columns</th>
+                            <td><code>column-xs-6</code></td>
+                            <td><code>column-sm-6</code></td>
+                            <td><code>column-md-6</code></td>
+                            <td><code>column-lg-6</code></td>
+                          </tr>
+
+                                                                                                      
+                        </tbody>
+                      </table>
+                    </div>   
+                    <br/>
+                    <div class="table-responsive">
+                    <div class="table-responsive">
+                      <table class="table table-bordered table-striped">
+                        <thead>
+                          <tr>
+                            <th>Column height</th>
+                            <th> Extra small devices <small>Phones (&lt;768px)</small> </th>
+                            <th> Small devices <small>Tablets (≥768px)</small> </th>
+                            <th> Medium devices <small>Desktops (≥992px)</small> </th>
+                            <th> Large devices <small>Desktops (≥1200px)</small> </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th>60px</th>
+                            <td><code>height-xs-1</code></td>
+                            <td><code>height-sm-1</code></td>
+                            <td><code>height-md-1</code></td>
+                            <td><code>height-lg-1</code></td>
+                          </tr>
+                          <tr>
+                            <th>180px</th>
+                            <td><code>height-xs-2</code></td>
+                            <td><code>height-sm-2</code></td>
+                            <td><code>height-md-2</code></td>
+                            <td><code>height-lg-2</code></td>
+                          </tr>
+                          <tr>
+                            <th>240px</th>
+                            <td><code>height-xs-3</code></td>
+                            <td><code>height-sm-3</code></td>
+                            <td><code>height-md-3</code></td>
+                            <td><code>height-lg-3</code></td>
+                          </tr>
+                          <tr>
+                            <th>320px</th>
+                            <td><code>height-xs-4</code></td>
+                            <td><code>height-sm-4</code></td>
+                            <td><code>height-md-4</code></td>
+                            <td><code>height-lg-4</code></td>
+                          </tr>
+                          <tr>
+                            <th>480px</th>
+                            <td><code>height-xs-5</code></td>
+                            <td><code>height-sm-5</code></td>
+                            <td><code>height-md-5</code></td>
+                            <td><code>height-lg-5</code></td>
+                          </tr>
+                          <tr>
+                            <th>720px</th>
+                            <td><code>height-xs-6</code></td>
+                            <td><code>height-sm-6</code></td>
+                            <td><code>height-md-6</code></td>
+                            <td><code>height-lg-6</code></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>          
+        
+        
+	  </section>
+
+
+
+
+<!--################################## SECTION ##################################-->
+      
+      <section id="documenter_megamenu" class="slide-waypoint" data-waypoint="section-megamenu">
+        <h2 class="section-title"><i class="section-icon glyphicon glyphicon-list-alt"></i> Mega Menu</h2>
+        <p>Basic Mega Menu Structure:</p>
+        <div class="panel">
+        	<div class="panel-body">
+        		<pre class="prettyprint docs-pre">
+&lt;div class=&quot;vd_mega-menu-wrapper&quot;&gt;<br>	&lt;div class=&quot;vd_mega-menu&quot;&gt;
+		&lt;ul class=&quot;mega-ul&quot;&gt;   <br>			&lt;li class=&quot;mega-li&quot;&gt; <br>				&lt;a href=&quot;#&quot;&gt; <br>					&lt;span class=&quot;mega-text&quot;&gt;Home&lt;/span&gt;<br>				&lt;/a&gt; <br>			&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/div&gt;<br>&lt;/div&gt;
+				</pre>
+        	</div>
+        </div>
+        
+        
+        <br/><br/>
+        <p>List for one circle icon with badge:</p>
+        <div class="panel">
+        	<div class="panel-body">
+        		<pre class="prettyprint docs-pre">&lt;li class=&quot;one-icon mega-li&quot;&gt; <br>	&lt;a href=&quot;#&quot; class=&quot;mega-link&quot;&gt;<br>		&lt;span class=&quot;mega-icon&quot;&gt;&lt;i class=&quot;fa fa-users&quot;&gt;&lt;/i&gt;&lt;/span&gt; <br>		&lt;span class=&quot;badge vd_bg-red&quot;&gt;1&lt;/span&gt;        <br>	&lt;/a&gt;
+&lt;/li&gt;</pre>
+        	</div>
+        </div>        
+        
+        
+        <br/><br/>
+        <p>List for one big icon with badge:</p>
+        <div class="panel">
+        	<div class="panel-body">
+        		<pre class="prettyprint docs-pre">&lt;li class=&quot;one-big-icon mega-li&quot;&gt; <br>	&lt;a href=&quot;#&quot; class=&quot;mega-link&quot;&gt;<br>		&lt;span class=&quot;mega-icon&quot;&gt;&lt;i class=&quot;fa fa-users&quot;&gt;&lt;/i&gt;&lt;/span&gt; <br>		&lt;span class=&quot;badge vd_bg-red&quot;&gt;1&lt;/span&gt;        <br>	&lt;/a&gt;
+&lt;/li&gt;</pre>
+        	</div>
+        </div>
+        
+        
+        <br/><br/>
+        <p>List for profile:</p>
+        <div class="panel">
+        	<div class="panel-body">
+        		<pre class="prettyprint docs-pre">&lt;li class=&quot;profile mega-li&quot;&gt; <br>	&lt;a href=&quot;#&quot; class=&quot;mega-link&quot;&gt;<br>            &lt;span  class=&quot;mega-image&quot;&gt;<br>                &lt;img src=&quot;img/avatar/avatar.jpg&quot; alt=&quot;example image&quot; /&gt;               <br>            &lt;/span&gt;<br>            &lt;span class=&quot;mega-name&quot;&gt;<br>                Caroline &lt;i class=&quot;fa fa-caret-down fa-fw&quot;&gt;&lt;/i&gt; <br>            &lt;/span&gt;<br>	&lt;/a&gt;
+&lt;/li&gt;</pre>
+        	</div>
+        </div> 
+        
+        <br/><br/>
+        <h3>2nd  Level Menu</h3>
+        <p><strong>Open by Mouse Click</strong></p>
+        <p>add ( data-action=&quot;click-trigger&quot; on &quot;mega-link&quot; &lt;a&gt; tag ) and ( data-action=&quot;click-target&quot; on &quot;vd_mega-menu-content&quot; &lt;div&gt; tag ):</p>
+        <div class="panel">
+        	<div class="panel-body">
+        		<pre class="prettyprint docs-pre">&lt;li class=&quot;profile mega-li&quot;&gt; <br>	&lt;a href=&quot;#&quot; class=&quot;mega-link&quot;&gt;<br>            &lt;span  class=&quot;mega-image&quot;&gt;<br>                &lt;img src=&quot;img/avatar/avatar.jpg&quot; alt=&quot;example image&quot; /&gt;               <br>            &lt;/span&gt;<br>            &lt;span class=&quot;mega-name&quot;&gt;<br>                Caroline &lt;i class=&quot;fa fa-caret-down fa-fw&quot;&gt;&lt;/i&gt; <br>            &lt;/span&gt;<br>	&lt;/a&gt;
+	&lt;div class=&quot;vd_mega-menu-content  width-xs-2  left-xs left-sm&quot; data-action=&quot;click-target&quot;&gt;<br>		&lt;div class=&quot;child-menu&quot;&gt; 
+			&lt;!-- Content (Explained in Content List Class Section) --&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/li&gt;</pre>
+        	</div>
+        </div>     
+        <br/>
+        <p><strong>Open by Mouse Hover</strong></p>   
+        <p>add ( &quot;hover-trigger&quot; class on &quot;mega-li&quot; &lt;li&gt; tag ) and ( &quot;hover-target&quot; on &quot;vd_mega-menu-content&quot; class &lt;div&gt; tag ):</p>   
+        <div class="panel">
+        	<div class="panel-body">
+        		<pre class="prettyprint docs-pre">&lt;li class=&quot;profile mega-li hover-trigger&quot;&gt; <br>	&lt;a href=&quot;#&quot; class=&quot;mega-link&quot;&gt;<br>            &lt;span  class=&quot;mega-image&quot;&gt;<br>                &lt;img src=&quot;img/avatar/avatar.jpg&quot; alt=&quot;example image&quot; /&gt;               <br>            &lt;/span&gt;<br>            &lt;span class=&quot;mega-name&quot;&gt;<br>                Caroline &lt;i class=&quot;fa fa-caret-down fa-fw&quot;&gt;&lt;/i&gt; <br>            &lt;/span&gt;<br>	&lt;/a&gt;
+	&lt;div class=&quot;vd_mega-menu-content  width-xs-2  left-xs left-sm hover-target&quot; data-action=&quot;click-target&quot;&gt;<br>		&lt;div class=&quot;child-menu&quot;&gt; 
+			&lt;!-- Content (Explained in Content List Class Section) --&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/li&gt;</pre>
+        	</div>
+        </div>                       
+
+
+        <br/><br/>
+        <p>Above code is still non responsive, usually used for status, task management, grid, or chat drop down. To use it as menu, the menu need to be responsive, below are how to use it.</p>
+        <br/><br/>
+        
+        <h3>Responsive Horizontal Menu</h3>
+		<p>Add (&quot;horizontal-menu&quot; class on &quot;vd_mega-menu&quot; &lt;div&gt; tag). On windows width &lt;768px Menu will change to vertical</p>
+        <div class="panel">
+        	<div class="panel-body">
+        		<pre class="prettyprint docs-pre">&lt;div class=&quot;vd_mega-menu-wrapper horizontal-menu&quot;&gt;<br>	&lt;div class=&quot;vd_mega-menu&quot;&gt;
+		&lt;!-- &lt;ul&gt; --&gt;<br>	&lt;/div&gt;
+&lt;/div&gt;</pre>
+        	</div>
+        </div> 
+        
+        <br/><br/>
+        
+        <h3>2nd and 3rd Level Horizontal Menu Example</h3>
+        <p>Below are example on how 2nd and 3rd level horizontal menu by hover trigger strutured :</p>
+        <div class="panel">
+        	<div class="panel-body">
+        		<pre class="prettyprint docs-pre">
+&lt;ul class=&quot;mega-ul&quot;&gt;
+	&lt;li class=&quot;hover-trigger mega-li&quot;&gt; 
+		&lt;a href=&quot;#&quot; class=&quot;mega-link&quot;  data-action=&quot;click-trigger&quot;&gt; 
+			&lt;span class=&quot;mega-text&quot;&gt;Open on Hover &lt;i class=&quot;fa fa-caret-down fa-fw&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+		&lt;/a&gt; 
+		&lt;div class=&quot;vd_mega-menu-content  width-xs-2  right-xs hover-target&quot; data-action=&quot;click-target&quot;&gt;
+			&lt;div class=&quot;child-menu&quot;&gt; 
+				&lt;div class=&quot;content-list content-menu&quot;&gt;
+					&lt;ul class=&quot;list-wrapper pd-lr-10&quot;&gt;
+						&lt;li  class=&quot;hover-trigger&quot;&gt; 
+							&lt;a href=&quot;#&quot; data-action=&quot;click-trigger&quot;&gt; Open Right 
+								&lt;span class=&quot;menu-badge&quot;&gt;&lt;span class=&quot;badge no-bg vd_grey&quot;&gt;&lt;i class=&quot;icon-uniE6D8&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/span&gt;
+							&lt;/a&gt; 
+							&lt;div class=&quot;vd_mega-menu-content  width-xs-2  open-right hover-target&quot; data-action=&quot;click-target&quot;&gt;
+								&lt;div class=&quot;child-menu&quot;&gt; 
+									&lt;div class=&quot;content-list content-menu&quot;&gt;
+										&lt;ul class=&quot;list-wrapper pd-lr-10&quot;&gt;
+											&lt;li&gt; &lt;a href=&quot;#&quot;&gt; Submenu Level&lt;/a&gt; &lt;/li&gt;  
+											&lt;li&gt; &lt;a href=&quot;#&quot;&gt; Submenu&lt;/a&gt; &lt;/li&gt;
+											&lt;li&gt; &lt;a href=&quot;#&quot;&gt; Submenu&lt;/a&gt; &lt;/li&gt;                                   
+										&lt;/ul&gt;
+									&lt;/div&gt; 
+								&lt;/div&gt; 
+							&lt;/div&gt;                         
+						&lt;/li&gt;
+						&lt;li&gt; &lt;a href=&quot;#&quot;&gt; Submenu&lt;/a&gt; &lt;/li&gt;  
+						&lt;li  class=&quot;hover-trigger&quot;&gt;
+							&lt;a href=&quot;#&quot; data-action=&quot;click-trigger&quot;&gt; Open Left 
+								&lt;span class=&quot;menu-badge&quot;&gt;&lt;span class=&quot;badge no-bg vd_grey&quot;&gt;&lt;i class=&quot;icon-uniE6D8&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/span&gt;
+							&lt;/a&gt; 
+							&lt;div class=&quot;vd_mega-menu-content  width-xs-2  open-left hover-target&quot; data-action=&quot;click-target&quot;&gt;
+								&lt;div class=&quot;child-menu&quot;&gt; 
+									&lt;div class=&quot;content-list content-menu&quot;&gt;
+										&lt;ul class=&quot;list-wrapper pd-lr-10&quot;&gt;
+											&lt;li&gt; &lt;a href=&quot;#&quot;&gt; Submenu Level&lt;/a&gt; &lt;/li&gt;  
+											&lt;li&gt; &lt;a href=&quot;#&quot;&gt; Submenu&lt;/a&gt; &lt;/li&gt;
+											&lt;li&gt; &lt;a href=&quot;#&quot;&gt; Submenu&lt;/a&gt; &lt;/li&gt;                                   
+										&lt;/ul&gt;
+									&lt;/div&gt; 
+								&lt;/div&gt; <br>							&lt;/div&gt;                           
+						&lt;/li&gt;
+						&lt;li&gt; &lt;a href=&quot;#&quot;&gt; Submenu&lt;/a&gt; &lt;/li&gt;                                   
+					&lt;/ul&gt;
+				&lt;/div&gt; 
+			&lt;/div&gt; 
+		&lt;/div&gt;        
+	&lt;/li&gt;   
+&lt;/ul&gt;</pre>
+        	</div>
+        </div>   
+    
+
+        <br/><br/>
+        
+        <h3>Mega Menu Content Class Options</h3>
+        <p>Beside "vd_mega-menu-content" add class:</p>
+        <br/>
+                    <h4>Mega Menu Content Width</h4>
+                    
+                    <div class="table-responsive">
+                      <table class="table table-bordered table-striped">
+                        <thead>
+                          <tr>
+                            <th>Column Width</th>
+                            <th> Extra small devices <small>Phones (&lt;768px)</small> </th>
+                            <th> Small devices <small>Tablets (≥768px)</small> </th>
+                            <th> Medium devices <small>Desktops (≥992px)</small> </th>
+                            <th> Large devices <small>Desktops (≥1200px)</small> </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th>60px</th>
+                            <td><code>width-xs-1</code></td>
+                            <td><code>width-sm-1</code></td>
+                            <td><code>width-md-1</code></td>
+                            <td><code>width-lg-1</code></td>
+                          </tr>
+                          <tr>
+                            <th>180px</th>
+                            <td><code>width-xs-2</code></td>
+                            <td><code>width-sm-2</code></td>
+                            <td><code>width-md-2</code></td>
+                            <td><code>width-lg-2</code></td>
+                          </tr>
+                          <tr>
+                            <th>240px</th>
+                            <td><code>width-xs-3</code></td>
+                            <td><code>width-sm-3</code></td>
+                            <td><code>width-md-3</code></td>
+                            <td><code>width-lg-3</code></td>
+                          </tr>
+                          <tr>
+                            <th>320px</th>
+                            <td><code>width-xs-4</code></td>
+                            <td><code>width-sm-4</code></td>
+                            <td><code>width-md-4</code></td>
+                            <td><code>width-lg-4</code></td>
+                          </tr>
+                          <tr>
+                            <th>480px</th>
+                            <td><code>width-xs-5</code></td>
+                            <td><code>width-sm-5</code></td>
+                            <td><code>width-md-5</code></td>
+                            <td><code>width-lg-5</code></td>
+                          </tr>
+                          <tr>
+                            <th>720px</th>
+                            <td><code>width-xs-6</code></td>
+                            <td><code>width-sm-6</code></td>
+                            <td><code>width-md-6</code></td>
+                            <td><code>width-lg-6</code></td>
+                          </tr>
+                          <tr>
+                            <th>1130px / full-width</th>
+                            <td><code>width-xs-full</code></td>
+                            <td><code>width-sm-full</code></td>
+                            <td><code>width-md-full</code></td>
+                            <td><code>width-lg-full</code></td>
+                          </tr>
+                          <tr>
+                            <th>Parent of full-width class</th>
+                            <td colspan="4">When using full-width class, add class <code>".parent-width-full"</code> on the parent class</td>
+                          </tr>                          
+                        </tbody>
+                      </table>
+                    </div>        
+        <br/>
+                    <h4>Mega Menu Content Position</h4>
+                    
+                    <div class="table-responsive">
+                      <table class="table table-bordered table-striped">
+                        <thead>
+                          <tr>
+                            <th>Position</th>
+                            <th> Extra small devices <small>Phones (&lt;768px)</small> </th>
+                            <th> Small devices <small>Tablets (≥768px)</small> </th>
+                            <th> Medium devices <small>Desktops (≥992px)</small> </th>
+                            <th> Large devices <small>Desktops (≥1200px)</small> </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th>Left Bottom</th>
+                            <td><code>left-xs</code></td>
+                            <td><code>left-sm</code></td>
+                            <td><code>left-md</code></td>
+                            <td><code>left-lg</code></td>
+
+                          </tr>
+                          <tr>
+                            <th>Right Bottom</th>
+                            <td><code>right-xs</code></td>
+                            <td><code>right-sm</code></td>
+                            <td><code>right-md</code></td>
+                            <td><code>right-lg</code></td>
+                          </tr>
+                          <tr>
+                            <th>Center for Width: 60px</th>
+                            <td><code>center-xs-1</code></td>
+                            <td><code>center-sm-1</code></td>
+                            <td><code>center-md-1</code></td>
+                            <td><code>center-lg-1</code></td>
+                          </tr>
+                          <tr>
+                            <th>Center for Width: 180px</th>
+                            <td><code>center-xs-2</code></td>
+                            <td><code>center-sm-2</code></td>
+                            <td><code>center-md-2</code></td>
+                            <td><code>center-lg-2</code></td>
+                          </tr>
+                          <tr>
+                            <th>Center for Width: 240px</th>
+                            <td><code>center-xs-3</code></td>
+                            <td><code>center-sm-3</code></td>
+                            <td><code>center-md-3</code></td>
+                            <td><code>center-lg-3</code></td>
+                          </tr>
+                          <tr>
+                            <th>Center for Width: 320px</th>
+                            <td><code>center-xs-4</code></td>
+                            <td><code>center-sm-4</code></td>
+                            <td><code>center-md-4</code></td>
+                            <td><code>center-lg-4</code></td>
+                          </tr>
+                          <tr>
+                            <th>Center for Width: 480px</th>
+                            <td><code>center-xs-5</code></td>
+                            <td><code>center-sm-5</code></td>
+                            <td><code>center-md-5</code></td>
+                            <td><code>center-lg-5</code></td>
+                          </tr>
+                          <tr>
+                            <th>Center for Width: 720px</th>
+                            <td><code>center-xs-6</code></td>
+                            <td><code>center-sm-6</code></td>
+                            <td><code>center-md-6</code></td>
+                            <td><code>center-lg-6</code></td>
+                          </tr> 
+                          <tr>
+                            <th>Center for Width: 1130px</th>
+                            <td><code>center-xs-full</code></td>
+                            <td><code>center-sm-full</code></td>
+                            <td><code>center-md-full</code></td>
+                            <td><code>center-lg-full</code></td>
+                          </tr> 
+                          <tr>
+                            <th>Open on Top</th>
+                            <td colspan="4"><code>open-top</code></td>
+                          </tr>                           
+                          <tr>
+                            <th>Open on Left (for horizontal menu )</th>
+                            <td colspan="4"><code>open-left</code></td>
+                          </tr>
+                          <tr>
+                            <th>Open on Right (for horizontal menu )</th>
+                            <td colspan="4"><code>open-right</code></td>
+                          </tr>                                                                                                       
+                        </tbody>
+                      </table>
+                    </div>         
+      
+      </section>
+
+
+
+<!--################################## SECTION ##################################-->
+      
+      <section id="documenter_class" class="slide-waypoint" data-waypoint="section-class">
+        <h2 class="section-title"><i class="section-icon glyphicon glyphicon-book"></i> General Class Helper</h2>
+        <p>Generally used class:</p>
+
+
+        <div class="table-responsive">
+                      <table class="table table-bordered table-striped">
+                        <thead>
+                          <tr>
+                            <th style="width:300px;">Class</th>
+                            <th>Function</th>
+                            <th>Placement</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th><code>font-light</code></th>
+                            <td>Font Weight: 300</td>
+                            <td>Any tags</td>
+                          </tr>
+                          <tr>
+                            <th><code>font-normal</code></th>
+                            <td>Font Weight: 400</td>
+                            <td>Any tags</td>
+                          </tr>
+                          <tr>
+                            <th><code>font-semibold</code></th>
+                            <td>Font Weight: 500</td>
+                            <td>Any tags</td>
+                          </tr>
+                          <tr>
+                            <th><code>font-bold</code></th>
+                            <td>Font Weight: 700</td>
+                            <td>Any tags</td>
+                          </tr>
+                          <tr>
+                            <th><code>font-extrabold</code></th>
+                            <td>Font Weight: 900</td>
+                            <td>Any tags</td>
+                          </tr>
+                          <tr>
+                            <th><code>font-xs</code></th>
+                            <td>Font Size: 12px</td>
+                            <td>Any tags</td>
+                          </tr>
+                          <tr>
+                            <th><code>font-sm</code></th>
+                            <td>Font Size: 18px</td>
+                            <td>Any tags</td>
+                          </tr>
+                          <tr>
+                            <th><code>font-md</code></th>
+                            <td>Font Size: 26px</td>
+                            <td>Any tags</td>
+                          </tr>
+                          <tr>
+                            <th><code>font-lg</code></th>
+                            <td>Font Size: 52px</td>
+                            <td>Any tags</td>
+                          </tr>
+                          <tr>
+                            <th><code>profile-icon</code></th>
+                            <td>Font Size: 32px</td>
+                            <td>Any tags</td>
+                          </tr>
+                          <tr>
+                            <th><code>space-xs</code></th>
+                            <td>letter-spacing: -0.5px</td>
+                            <td>Any tags</td>
+                          </tr>
+                          <tr>
+                            <th><code>space-sm</code></th>
+                            <td>letter-spacing: 0.1px</td>
+                            <td>Any tags</td>
+                          </tr>
+                          <tr>
+                            <th><code>space-md</code></th>
+                            <td>letter-spacing: 0.5px</td>
+                            <td>Any tags</td>
+                          </tr>
+                          <tr>
+                            <th><code>space-lg</code></th>
+                            <td>letter-spacing: 1px</td>
+                            <td>Any tags</td>
+                          </tr>
+                          <tr>
+                            <th><code>lh-sm</code></th>
+                            <td>line-height: 16px</td>
+                            <td>Any tags</td>
+                          </tr>  
+                          <tr>
+                            <th><code>append-icon</code></th>
+                            <td>line-height: 16px</td>
+                            <td>Any tags</td>
+                          </tr> 
+                          <tr>
+                            <th><code>rotate-min180</code></th>
+                            <td>rotate 180 degree</td>
+                            <td>Any tags</td>
+                          </tr> 
+                          <tr>
+                            <th><code>rotate-0</code></th>
+                            <td>rotate 0 degree</td>
+                            <td>Any tags</td>
+                          </tr> 
+                          <tr>
+                            <th><code>input-border</code></th>
+                            <td>Give border to input</td>
+                            <td>&lt;input&gt; tags</td>
+                          </tr>
+                          <tr>
+                            <th><code>input-border-btm</code></th>
+                            <td>Give border bottom only to input</td>
+                            <td>&lt;input&gt; tags</td>
+                          </tr>   
+                          <tr>
+                            <th><code>vd_li</code></th>
+                            <td>Remove list style li</td>
+                            <td>&lt;ul&gt; tags</td>
+                          </tr>   
+                          <tr>
+                            <th><code>radius-10</code></th>
+                            <td>Border radius 10px</td>
+                            <td>Any tags</td>
+                          </tr>    
+                          <tr>
+                            <th><code>no-bd</code></th>
+                            <td>Border: none</td>
+                            <td>Any tags</td>
+                          </tr>                                                                        
+                          <tr>
+                            <th><code>no-bg</code></th>
+                            <td>Background: none</td>
+                            <td>Any tags</td>
+                          </tr> 
+                          <tr>
+                            <th><code>no-br</code></th>
+                            <td>Border Radius: none</td>
+                            <td>Any tags</td>
+                          </tr>                           
+                          <tr>
+                            <th><code>pd-0</code>, <code>pd-5</code>, <code>pd-10</code>, <code>pd-15</code>, <code>pd-20</code>, <code>pd-25</code></th>
+                            <td>Padding: 0, until padding 25px</td>
+                            <td>Any tags</td>
+                          </tr> 
+                          <tr>
+                            <th><code>pdlr-10</code></th>
+                            <td>Padding-left 10px, padding right: 10px</td>
+                            <td>Any tags</td>
+                          </tr> 
+                          <tr>
+                            <th><code>pdlr-15</code></th>
+                            <td>Padding-left 15px, padding right: 15px</td>
+                            <td>Any tags</td>
+                          </tr>                           
+                          <tr>
+                            <th><code>mgr-10</code>, <code>mgr-15</code>, <code>mgr-20</code></th>
+                            <td>Margin Right: 10px, Margin Right: 15px, Margin Right: 20px</td>
+                            <td>Any tags</td>
+                          </tr> 
+                          <tr>
+                            <th><code>mgl-10</code>, <code>mgl-15</code>, <code>mgl-20</code></th>
+                            <td>Margin Left: 10px, Margin Left: 15px, Margin Left: 20px</td>
+                            <td>Any tags</td>
+                          </tr>  
+                          <tr>
+                            <th><code>mgtp--10</code>, <code>mgtp--5</code>, <code>mgtp-0</code>, <code>mgtp-5</code>, <code>mgtp-10</code>, <code>mgtp-15</code>, <code>mgtp-20</code></th>
+                            <td>Margin Top: -10px, Margin Top: -5px, Margin Top: 0px, Margin Top: 5px, Margin Top: 10px, Margin Top: 15px, Margin Top: 20px</td>
+                            <td>Any tags</td>
+                          </tr> 
+                          <tr>
+                            <th><code>mgbt-xs-0</code>, <code>mgbt-xs-5</code>, <code>mgbt-xs-10</code>, <code>mgbt-xs-15</code>, <code>mgbt-xs-20</code></th>
+                            <td>Extra Small Screen Device (&lt;768px): Margin-bottom:0px, 5px, 10px, 15px, 20px</td>
+                            <td>Any tags</td>
+                          </tr> 
+                          <tr>
+                            <th><code>mgbt-sm-0</code>, <code>mgbt-sm-5</code>, <code>mgbt-sm-10</code>, <code>mgbt-sm-15</code>, <code>mgbt-sm-20</code></th>
+                            <td>Small Screen Device (&ge;768px): Margin-bottom:0px, 5px, 10px, 15px, 20px</td>
+                            <td>Any tags</td>
+                          </tr> 
+                          <tr>
+                            <th><code>mgbt-md-0</code>, <code>mgbt-md-5</code>, <code>mgbt-sm-15</code>, <code>mgbt-md-15</code>, <code>mgbt-md-20</code></th>
+                            <td>Medium Screen Device (&ge;992px): Margin-bottom:0px, 5px, 10px, 15px, 20px</td>
+                            <td>Any tags</td>
+                          </tr>
+                          <tr>
+                            <th><code>mgbt-lg-0</code>, <code>mgbt-lg-5</code>, <code>mgbt-sm-20</code>, <code>mgbt-lg-15</code>, <code>mgbt-lg-20</code></th>
+                            <td>Large Screen Device (&ge;1200px): Margin-bottom:0px, 5px, 10px, 15px, 20px</td>
+                            <td>Any tags</td>
+                          </tr>                                                    
+                          <tr>
+                            <th><code>vd_hover</code></th>
+                            <td>Cursor Pointer on hover</td>
+                            <td>Any tags</td>
+                          </tr>
+                          <tr>
+                            <th><code>vd_info-parent</code></th>
+                            <td>Position: relative</td>
+                            <td>Any tags</td>
+                          </tr>
+                          <tr>
+                            <th><code>vd_info</code>, <code>vd_info-menu</code></th>
+                            <td>Position: absolute</td>
+                            <td>Child of <code>vd_info-parent</code></td>
+                          </tr>                          
+                          <tr>
+                            <th><code>tl</code></th>
+                            <td>Put position of vd_menu or vd_info-menu on top left </td>
+                            <td>Beside <code>vd_info</code> or <code>vd_info-menu</code></td>
+                          </tr>                           
+                          <tr>
+                            <th><code>tr</code></th>
+                            <td>Put position of vd_menu or vd_info-menu on top right </td>
+                            <td>Beside <code>vd_info</code> or <code>vd_info-menu</code></td>
+                          </tr> 
+                          <tr>
+                            <th><code>bl</code></th>
+                            <td>Put position of vd_menu or vd_info-menu on bottom left </td>
+                            <td>Beside <code>vd_info</code> or <code>vd_info-menu</code></td>
+                          </tr> 
+                          <tr>
+                            <th><code>br</code></th>
+                            <td>Put position of vd_menu or vd_info-menu on bottom left </td>
+                            <td>Beside <code>vd_info</code> or <code>vd_info-menu</code></td>
+                          </tr>    
+                          <tr>
+                            <th><code>vd_red</code>, <code>vd_blue</code>, <code>vd_yellow</code>, <code>vd_green</code>, <code>vd_black</code>, <code>vd_grey</code>, <code>vd_soft-grey</code>, <code>vd_white</code>, <code>vd_facebook</code>, <code>vd_twitter</code>, <code>vd_googleplus</code>, <code>vd_linkedin</code></th>
+                            <td>Change text color </td>
+                            <td>Any Tags</td>
+                          </tr> 
+                          <tr>
+                            <th><code>vd_bg-red</code>, <code>vd_bg-blue</code>, <code>vd_bg-yellow</code>, <code>vd_bg-green</code>, <code>vd_bg-black</code>, <code>vd_bg-grey</code>, <code>vd_bg-soft-grey</code>, <code>vd_bg-facebook</code>, <code>vd_bg-twitter</code>, <code>vd_bg-googleplus</code>, <code>vd_bg-linkedin</code>,<code>vd_bg-dark-red</code>, <code>vd_bg-dark-blue</code>, <code>vd_bg-dark-yellow</code>, <code>vd_bg-dark-green</code>, <code>vd_bg-soft-red</code>, <code>vd_bg-soft-blue</code>, <code>vd_bg-soft-yellow</code>, <code>vd_bg-soft-green</code></th>
+                            <td>Change background color </td>
+                            <td>Any Tags</td>
+                          </tr> 
+                          <tr>
+                            <th><code>vd_bg-black-10</code>, <code>vd_bg-black-20</code>, <code>vd_bg-black-30</code>, <code>vd_bg-black-40</code>, <code>vd_bg-black-50</code>, <code>vd_bg-black-60</code>, <code>vd_bg-black-70</code>, <code>vd_bg-black-80</code>, <code>vd_bg-black-90</code></th>
+                            <td>Change black background color with opacity </td>
+                            <td>Any Tags</td>
+                          </tr> 
+                          <tr>
+                            <th><code>vd_bg-white-10</code>, <code>vd_bg-white-20</code>, <code>vd_bg-white-30</code>, <code>vd_bg-white-40</code>, <code>vd_bg-white-50</code>, <code>vd_bg-white-60</code>, <code>vd_bg-white-70</code>, <code>vd_bg-white-80</code>, <code>vd_bg-white-90</code></th>
+                            <td>Change white background color with opacity </td>
+                            <td>Any Tags</td>
+                          </tr>                                                     
+                          <tr>
+                            <th><code>vd_bdt-red</code>, <code>vd_bdt-blue</code>, <code>vd_bdt-yellow</code>, <code>vd_bdt-green</code>, <code>vd_bdt-black</code>, <code>vd_bdt-grey</code>, <code>vd_bdt-white</code></th>
+                            <td>Change border top color </td>
+                            <td>Any Tags</td>
+                          </tr>
+
+                          <tr>
+                            <th><code>vd_bdl-red</code>, <code>vd_bdl-blue</code>, <code>vd_bdl-yellow</code>, <code>vd_bdl-green</code>, <code>vd_bdl-black</code>, <code>vd_bdl-grey</code>, <code>vd_bdl-white</code></th>
+                            <td>Change border left color </td>
+                            <td>Any Tags</td>
+                          </tr>                                                                                                                                                                   
+                          <tr>
+                            <th><code>left-pos</code></th>
+                            <td>Put to the left position</td>
+                            <td>Any Tags with position absolute style</td>
+                          </tr>                          
+                          <tr>
+                            <th><code>right-pos</code></th>
+                            <td>Put to the left position</td>
+                            <td>Any Tags with position absolute style</td>
+                          </tr>                          
+                          <tr>
+                            <th><code>width-10</code>, <code>width-20</code>, <code>width-30</code>, <code>width-40</code>, <code>width-50</code>, <code>width-60</code>, <code>width-70</code>, <code>width-80</code>, <code>width-90</code>, <code>width-100</code></th>
+                            <td>Set width to 0% until 100%</td>
+                            <td>Any Tags, usually used for input</td>
+                          </tr>                          
+                          
+                        </tbody>
+                      </table>
+        </div>
+
+
+
+
+<!--################################## SECTION ##################################-->
+      
+      <section id="documenter_class" class="slide-waypoint" data-waypoint="section-contact">
+        <h2 class="section-title"><i class="section-icon glyphicon glyphicon-envelope"></i> Contact Setting</h2>
+        <p>Contact page located at <strong>front-1.php</strong> or <strong>front-2.php</strong>. Used to contact the company for more detail informations. To use it just simply find below code or search using keyword "admin-email" :</p>
+        <div class="panel">
+            <div class="panel-body">
+                <pre class="prettyprint docs-pre">&lt;input type=&quot;hidden&quot; id=&quot;admin-email&quot; name=&quot;admin-email&quot; value=&quot;info@venmond.com&quot;&gt;<br>&lt;input type=&quot;hidden&quot; id=&quot;admin-name&quot; name=&quot;admin-name&quot; value=&quot;Venmond, Inc.&quot;&gt;</pre>
+            </div>
+        </div>
+        <p>Just replace the value <strong>info@venmond.com</strong> with your email, and <strong>Venmond, Inc.</strong> with your company name.
+        <p>and then you are set to go !</p>      
+        
+        
+        
+        
+      </section>  
+
+
+
+
+<!--################################## SECTION ##################################-->
+      
+      <section id="documenter_plugins" class="slide-waypoint" data-waypoint="section-plugins">
+        <h2 class="section-title"><i class="section-icon glyphicon glyphicon-paperclip"></i> Plugins List</h2>
+        <p>3rd Party Plugins List to power up this template:</p>
+        <div class="table-responsive">
+                      <table class="table table-bordered table-striped">
+                        <thead>
+                          <tr>
+                            <th style="width:200px;">Name</th>
+                            <th>Description</th>
+                            <th>URL</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><strong>Bootstrap</strong></td>
+                            <td>The most popular front-end framework for developing responsive, mobile first projects on the web.</td>
+                            <td><a href="http://getbootstrap.com/">http://getbootstrap.com/</a></td>
+                          </tr>
+                          <tr>
+                            <td><strong>JQuery</strong></td>
+                            <td>jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers.</td>
+                            <td><a href="http://jquery.com/">http://jquery.com/</a></td>
+                          </tr>
+                          <tr>
+                            <td><strong>JQuery UI</strong></td>
+                            <td>jQuery UI is a curated set of user interface interactions, effects, widgets, and themes built on top of the jQuery JavaScript Library.</td>
+                            <td><a href="http://jqueryui.com/">http://jqueryui.com/</a></td>
+                          </tr>
+                          <tr>
+                            <td><strong>Modernizr</strong></td>
+                            <td>Modernizr is a JavaScript library that detects HTML5 and CSS3 features in the user’s browser.</td>
+                            <td><a href="http://modernizr.com/">http://modernizr.com/</a></td>
+                          </tr>
+                          <tr>
+                            <td><strong>HTML5 Shiv</strong></td>
+                            <td>The HTML5 Shiv enables use of HTML5 sectioning elements in legacy Internet Explorer and provides basic HTML5 styling for Internet Explorer 6-9, Safari 4.x (and iPhone 3.x), and Firefox 3.x.</td>
+                            <td><a href="https://code.google.com/p/html5shiv/">https://code.google.com/p/html5shiv/</a></td>
+                          </tr>
+                          <tr>
+                            <td><strong>Respond.js</strong></td>
+                            <td>A fast & lightweight polyfill for min/max-width CSS3 Media Queries (for IE 6-8, and more)</td>
+                            <td><a href="http://responsejs.com/">http://responsejs.com/</a></td>
+                          </tr>
+                          <tr>
+                            <td><strong>Open Sans Font</strong></td>
+                            <td>Open Sans web font from google fonts: http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700</td>
+                            <td><a href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700">http://fonts.googleapis.com/css?family=Open+Sans</a></td>
+                          </tr>                          
+                          <tr>
+                            <td><strong>Font Awesome</strong></td>
+                            <td>Font Awesome gives you scalable vector icons that can instantly be customized — size, color, drop shadow, and anything that can be done with the power of CSS</td>
+                            <td><a href="http://fortawesome.github.io/Font-Awesome/">http://fortawesome.github.io/Font-Awesome/</a></td>
+                          </tr>
+                          <tr>
+                            <td><strong>Entypo Font</strong></td>
+                            <td>Entypo is a set of 250+ carefully crafted pictograms.</td>
+                            <td><a href="http://www.entypo.com/">http://www.entypo.com/</a></td>
+                          </tr>
+                          <tr>
+                          	<td><strong>ExCanvas</strong></td>
+                            <td>Modern browsers like Firefox, Safari, Chrome and Opera support the HTML5 canvas tag to allow 2D command-based drawing. ExplorerCanvas brings the same functionality to Internet Explorer. To use, web developers only need to include a single script tag in their existing web pages</td>
+                            <td><a href="http://excanvas.sourceforge.net/">http://excanvas.sourceforge.net/</a></td>
+                          </tr>
+                          <tr>
+                            <td><strong>jQuery UI Touch Punch</strong></td>
+                            <td>A small hack that enables the use of touch events on sites using the jQuery UI user interface library</td>
+                            <td><a href="http://touchpunch.furf.com/">http://touchpunch.furf.com/</a></td>
+                          </tr>
+                          <tr>
+                            <td><strong>Pretty Photo</strong></td>
+                            <td>A jQuery lightbox clone. Not only does it support images, it also support for videos, flash, YouTube, iframes and ajax. It’s a full blown media lightbox.</td>
+                            <td><a href="http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/">http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/</a></td>
+                          </tr>                                                                                                        
+                          <tr>
+                            <td><strong>breakpoints.js</strong></td>
+                            <td>Define breakpoints for your responsive design, and Breakpoints.js will fire custom events when the browser enters and/or exits that breakpoint </td>
+                            <td><a href="http://xoxco.com/projects/code/breakpoints/">http://xoxco.com/projects/code/breakpoints/</a></td>
+                          </tr>                          
+                          <tr>
+                            <td><strong>CarouFredSel</strong></td>
+                            <td>CarouFredSel is quite simply the most powerful and flexible way to add carousels to your website</td>
+                            <td><a href="http://dev7studios.com/plugins/caroufredsel/">http://dev7studios.com/plugins/caroufredsel/</a></td>
+                          </tr>                          
+                          <tr>
+                            <td><strong>jQuery Validation Plugin</strong></td>
+                            <td>The jQuery Validation Plugin provides drop-in validation for your existing forms, while making all kinds of customizations to fit your application really easy</td>
+                            <td><a href="http://bassistance.de/jquery-plugins/jquery-plugin-validation/">http://bassistance.de/jquery-plugins/jquery-plugin-validation/</a></td>
+                          </tr>                          
+                          <tr>
+                            <td><strong>DataTables</strong></td>
+                            <td>A plug-in for the jQuery Javascript library. It is a highly flexible tool, based upon the foundations of progressive enhancement, which will add advanced interaction controls to any HTML table</td>
+                            <td><a href="http://datatables.net/">http://datatables.net/</a></td>
+                          </tr>                          
+                          <tr>
+                            <td><strong>Jquery Custom Content Scrollbar</strong></td>
+                            <td>Custom scrollbar plugin that’s fully customizable with CSS.</td>
+                            <td><a href="http://manos.malihu.gr/jquery-custom-content-scroller/">http://manos.malihu.gr/jquery-custom-content-scroller/</a></td>
+                          </tr>  
+                          <tr>
+                            <td><strong>jQuery BlockUI</strong></td>
+                            <td>The jQuery BlockUI Plugin lets you simulate synchronous behavior when using AJAX, without locking the browser</td>
+                            <td><a href="http://jquery.malsup.com/block/"> 	http://jquery.malsup.com/block/</a></td>
+                          </tr> 
+                          <tr>
+                            <td><strong>jQuery TagsInput</strong></td>
+                            <td>This plugin will turn your boring tag list into a magical input that turns each tag into a style-able object with its own delete link.</td>
+                            <td><a href="http://xoxco.com/projects/code/tagsinput/"> http://xoxco.com/projects/code/tagsinput/</a></td>
+                          </tr>
+                          <tr>
+                            <td><strong>Bootstrap Switch</strong></td>
+                            <td>Turn checkboxes and radio buttons in toggle switches</td>
+                            <td><a href="http://www.bootstrap-switch.org/"> 	http://www.bootstrap-switch.org/</a></td>
+                          </tr>
+                          <tr>
+                            <td><strong>pNotify</strong></td>
+                            <td>PNotify is a JavaScript notification plugin</td>
+                            <td><a href="http://sciactive.com/pnotify/"> 	http://sciactive.com/pnotify/</a></td>
+                          </tr>
+                          <tr>
+                            <td><strong>Bootstrap Timepicker</strong></td>
+                            <td>Easily select a time for a text input using your mouse or keyboards arrow keys.</td>
+                            <td><a href="http://jdewit.github.com/bootstrap-timepicker/"> 	http://jdewit.github.com/bootstrap-timepicker/</a></td>
+                          </tr>
+                          <tr>
+                            <td><strong>Bootstrap Wizard</strong></td>
+                            <td>builds a wizard using a formatted tabbable structure. It allows to build a wizard functionality using buttons to go through the different wizard steps and using events allows to hook into each step individually.</td>
+                            <td><a href="http://vadimg.com/twitter-bootstrap-wizard-example/"> 	http://vadimg.com/twitter-bootstrap-wizard-example/</a></td>
+                          </tr>
+                          <tr>
+                            <td><strong>CKeditor</strong></td>
+                            <td>CKEditor is a ready-for-use HTML text editor designed to simplify web content creation</td>
+                            <td><a href="http://ckeditor.com/"> 	http://ckeditor.com/</a></td>
+                          </tr>                          <tr>
+                            <td><strong>Colorpicker JS</strong></td>
+                            <td>A simple component to select color in the same way you select color in Adobe Photoshop</td>
+                            <td><a href="http://www.eyecon.ro/colorpicker/"> 	http://www.eyecon.ro/colorpicker/</a></td>
+                          </tr>
+                          <tr>
+                            <td><strong>Date Range Picker for Bootstrap</strong></td>
+                            <td>Creates a dropdown menu from which a user can select a range of dates </td>
+                            <td><a href="https://github.com/dangrossman/bootstrap-daterangepicker"> 	https://github.com/dangrossman/bootstrap-daterangepicker</a></td>
+                          </tr>
+                          <tr>
+                            <td><strong>Flot</strong></td>
+                            <td>Flot is a pure JavaScript plotting library for jQuery, with a focus on simple usage, attractive looks and interactive features.</td>
+                            <td><a href="http://www.flotcharts.org/"> 	http://www.flotcharts.org/</a></td>
+                          </tr>
+                          <tr>
+                            <td><strong>Fullcalendar</strong></td>
+                            <td>FullCalendar is a jQuery plugin that provides a full-sized, drag & drop calendar</td>
+                            <td><a href="http://arshaw.com/fullcalendar/"> 	http://arshaw.com/fullcalendar/</a></td>
+                          </tr>
+                          <tr>
+                            <td><strong>Google Code Prettify</strong></td>
+                            <td>A Javascript module and CSS file that allows syntax highlighting of source code snippets in an html page.</td>
+                            <td><a href="http://code.google.com/p/google-code-prettify/"> 	http://code.google.com/p/google-code-prettify/</a></td>
+                          </tr>
+                          <tr>
+                            <td><strong>IntroJS</strong></td>
+                            <td>Better introductions for websites and features with a step-by-step guide for your projects.</td>
+                            <td><a href="http://usablica.github.io/intro.js/"> 	http://usablica.github.io/intro.js/</a></td>
+                          </tr>
+                          <tr>
+                            <td><strong>Isotope</strong></td>
+                            <td>Filter & sort magical layouts</td>
+                            <td><a href="http://isotope.metafizzy.co/"> 	http://isotope.metafizzy.co/</a></td>
+                          </tr>
+                          <tr>
+                            <td><strong>Jquery Easing</strong></td>
+                            <td>A jQuery plugin from GSGD to give advanced easing options</td>
+                            <td><a href="http://gsgd.co.uk/sandbox/jquery/easing/"> 	http://gsgd.co.uk/sandbox/jquery/easing/</a></td>
+                          </tr>
+                          <tr>
+                            <td><strong>Jquery File Upload</strong></td>
+                            <td>File Upload widget with multiple file selection, drag&drop support, progress bars, validation and preview images, audio and video for jQuery.</td>
+                            <td><a href="http://blueimp.github.io/jQuery-File-Upload/"> 	http://blueimp.github.io/jQuery-File-Upload/</a></td>
+                          </tr>    
+                          <tr>
+                            <td><strong>JVector Map</strong></td>
+                            <td>JQuery plugin that renders Vector Maps. It uses only native browser technologies like JavaScript, CSS, HTML, SVG or VML. No Flash or any other proprietary browser plug-in is required. This allows jVectorMap to work in all modern mobile browsers.</td>
+                            <td><a href="http://jvectormap.com/"> 	http://jvectormap.com/</a></td>
+                          </tr>    
+                          <tr>
+                            <td><strong>Layer Slider</strong></td>
+                            <td>LayerSlider is a premium multi-purpose slider for creating image galleries, content sliders, and mind-blowing slideshows with must-see effects. It uses cutting edge technologies to provide the smoothest experience that’s possible, and it comes with more than 200 preset 2D and 3D slide transitions.</td>
+                            <td><a href="http://jvectormap.com/"> 	http://codecanyon.net/item/layerslider-responsive-jquery-slider-plugin/922100</a></td>
+                          </tr> 
+                          <tr>
+                            <td><strong>Morris Chart</strong></td>
+                            <td>Good-looking charts shouldn't be difficult </td>
+                            <td><a href="http://www.oesmith.co.uk/morris.js/"> 	http://www.oesmith.co.uk/morris.js/</a></td>
+                          </tr> 
+                          <tr>
+                            <td><strong>Raphael</strong></td>
+                            <td>Raphaël is a small JavaScript library that should simplify your work with vector graphics on the web.</td>
+                            <td><a href="http://raphaeljs.com/"> 	http://raphaeljs.com/</a></td>
+                          </tr>
+                          
+                          <tr>
+                            <td><strong>Skycons</strong></td>
+                            <td>Skycons is a set of ten animated weather glyphs, procedurally generated by JavaScript using the HTML5 canvas tag.</td>
+                            <td><a href="http://darkskyapp.github.io/skycons/"> 	http://darkskyapp.github.io/skycons/</a></td>
+                          </tr>
+                          <tr>
+                            <td><strong>Sparkline Chart</strong></td>
+                            <td>This jQuery plugin generates sparklines (small inline charts) directly in the browser using data supplied either inline in the HTML, or via javascript. </td>
+                            <td><a href="http://omnipotent.net/jquery.sparkline/#s-about"> 	http://omnipotent.net/jquery.sparkline/#s-about</a></td>
+                          </tr>
+                          <tr>
+                            <td><strong>Jquery Stellar</strong></td>
+                            <td>Parallax has never been easier</td>
+                            <td><a href="http://markdalgleish.com/projects/stellar.js/"> 	http://markdalgleish.com/projects/stellar.js/</a></td>
+                          </tr>
+                          <tr>
+                            <td><strong>JQuery Waypoint</strong></td>
+                            <td>Waypoints is a jQuery plugin that makes it easy to execute a function whenever you scroll to an element.</td>
+                            <td><a href="http://imakewebthings.com/jquery-waypoints/"> 	http://imakewebthings.com/jquery-waypoints/</a></td>
+                          </tr>
+                          <tr>
+                            <td><strong>JQuery Tabdrop</strong></td>
+                            <td>Very usefull script when your tabs do not fit in a single row. This script takes the not fitting tabs and makes a new dropdown tab. In the dropdown there are all the tabs that do not fit.</td>
+                            <td><a href="http://www.eyecon.ro/bootstrap-tabdrop/"> 	http://www.eyecon.ro/bootstrap-tabdrop/</a></td>
+                          </tr>                                                                                                                                 
+                                                                                                                                                                                                                                                                                             
+                        </tbody>
+                      </table>
+        </div>
+	</section>
+
+
+
+<!--################################## SECTION ##################################-->
+      
+      <section id="documenter_changelog" class="slide-waypoint" data-waypoint="section-changelog">
+        <h2 class="section-title"><i class="section-icon glyphicon glyphicon-bullhorn"></i> Changelog</h2>
+          <h4>Version 1.1.4</h4>
+          <ul>
+          <li>Update Layer Slider 5.4.0</li>         
+          <li>Update PrettyPhoto 3.1.6</li>                                        
+          </ul>        
+          <h4>Version 1.1.3</h4>
+          <ul>
+          <li>Added <a href="http://vendroid.venmond.com/index-event-management.php">Event Management Dashboard</a></li>          
+          <li>Added <a href="http://vendroid.venmond.com/forms-inline-editing.php">Forms Inline Editing</a></li>
+          <li>Update to Bootstrap 3.2.0</li>
+          <li>Update to Full Calendar 2.0.3</li>
+          <li>Update Layer Slider 5.2.0</li>         
+          <li>Minor bug fixes</li>                                        
+          </ul>         
+          <br/>        
+          <h4>Version 1.1.2</h4>
+          <ul>
+          <li>Added <a href="http://vendroid.venmond.com/pages-ecommerce-products.php">Ecommerce Products List</a></li>          
+          <li>Added <a href="http://vendroid.venmond.com/pages-ecommerce-product-add.php">Ecommerce Product Add</a></li>
+          <li>Add Tabdrop Plugin, see demo in: <a href="http://vendroid.venmond.com/ui-tabs-accordion.php">UI Tabs and Accordion Page</a></li>
+          <li>Add <code>$page_css</code> and <code>$page_responsive_css</code> variables, to write css directly in a page, inside <code>&lt;head&gt;</code> tag</li>
+          <li>Update to dataTable 1.10</li>         
+          <li>Minor bug fixes</li>                                        
+          </ul>         
+          <br/>        
+          <h4>Version 1.1</h4>
+          <ul>
+          <li>Added <a href="http://vendroid.venmond.com/pages-lockscreen.php">Lockscreen Page</a></li>          
+          <li>Added <a href="http://vendroid.venmond.com/pages-timeline.php">Timeline Page</a></li>
+          <li>Added <a href="http://vendroid.venmond.com/email-compose.php">Compose Email Page</a></li>
+          <li>Added <a href="http://vendroid.venmond.com/pages-calendar.php">Calendar Page</a></li>
+          <li>Smoother Dropdown Menu</li>
+          <li>Added .no-menu class to vd_title-section</li>
+          <li>Using Scroll down on Go To Menu on <a href="http://vendroid.venmond.com/forms-elements.php">Form Elements Page</a></li>
+          <li>Added Bootstrap Wysiwyg HTML 5 on  <a href="http://vendroid.venmond.com/forms-elements.php">Form Elements Page</a></li>          
+          <li>Update to Font Awesome 4.1.0</li> 
+          <li>Update to Full Calendar 2.0</li>           
+          <li>Minor bug fixes</li>                                        
+          </ul>         
+          <br/>
+          <h4>Version 1</h4>
+          <p>Initial Release</p>        
+      </section>
+
+      
+      
+      
+      
+<!--################################## SECTION ##################################-->      
+      
+      <section id="documenter_thankyou" class="slide-waypoint" data-waypoint="section-thankyou">
+        <h2 class="section-title"><i class="section-icon glyphicon glyphicon-heart"></i> Thank You</h2>
+<ul>
+	<li>
+		<strong>How can i do this, how can i do that?</strong><br>
+		Go to our forum <a href="http://www.venmond.com">http://www.venmond.com </a> We will be gladly to help you as best as we can. Just keep following us to get the latest news on:</li>
+	<li>
+		<a href="http://twitter.com/venmond">twitter</a></li>
+	<li>
+		<a href="http://facebook.com/venmondthemes">facebook</a></li>
+	<li>
+		<a href="http://themeforest.net/user/Venmond">themeforest</a></li>
+</ul>        
+      <p>Once again, thank you so much for purchasing this theme. We would be glad to help you if you have any questions relating to this theme. No guarantees, but We'll do our best to assist. If you have a more general question relating to the themes on ThemeForest, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p>         
+      </section>      
+     
+            
+      
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap core JavaScript
+    ================================================== --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+<script src="js/jquery.min.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/docs.min.js"></script> 
+<script src="plugins/prettyPhoto-plugin/js/jquery.prettyPhoto.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/waypoints.min.js"></script> 
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script> 
+<script src="plugins/google-code-prettify/prettify.js" type="text/javascript" ></script>
+<script src="js/theme.js"></script>
+
+
+</body>
+</html>

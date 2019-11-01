@@ -1,0 +1,159 @@
+/*
+ * Base structure
+ */
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+	padding-top: 70px;
+}
+.main {
+	background: #F5F5F5;
+    padding: 40px 20px 600px;	
+}
+
+img {
+	max-width: 100%;
+}
+a:focus {
+	outline: none;
+}
+.pd-20{
+	padding:20px !important;
+}
+pre.docs-pre{
+	padding:20px;
+	background:none;
+	border:none;
+}
+.sub-header {
+	padding-bottom: 10px;
+	border-bottom: 1px solid #eee;
+}
+.navbar-brand {
+	display: block;
+	float: none;
+	height: auto;
+}
+.navbar-brand .logo {
+	font-size: 24px;
+	font-weight: bold;
+}
+.navbar-brand .sub-title {
+	font-size: 12px;
+	color: #999999;
+}
+.navbar-brand .demo-link {
+	font-size: 12px;
+}
+section {
+	padding-top: 40px;
+	padding-bottom:40px;
+}
+.section-title {
+	margin-bottom: 40px;
+}
+.section-title .section-icon {
+    background: none repeat scroll 0 0 #428BCA;
+    border-radius: 50px;
+    color: #FFFFFF;
+    font-size: 24px;
+    margin-right: 10px;
+    padding: 20px;
+}
+/** Sidebar **/
+
+/* Hide for mobile, show later */
+.sidebar {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #333333;
+	position: fixed;
+	z-index: 10;
+	top: 0;
+	color: #F5F5F5;
+}
+.navbar-toggle {
+	background: #333;
+}
+.navbar-toggle .icon-bar {
+	background : #FFF;
+}
+.menu {
+	margin-top: 20px;
+}
+#documenter_cover {
+	height: 800px;
+	padding-top: 110px !important;
+	position: relative;
+}
+#documenter_cover li {
+	list-style: none outside none !important;
+	margin-left: 0 !important;
+}
+
+ @media (min-width: 768px) {
+body {
+	padding-top: 0;
+}
+.navbar-brand {
+	margin-bottom: 40px;
+	margin-top: 20px;
+}
+.navbar-brand .logo {
+	margin-bottom: 10px;
+}
+.menu {
+	margin-top: 0;
+	display: block;
+	height: auto;
+}
+.sidebar {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1000;
+	height: auto;
+	display: block;
+	overflow-x: hidden;
+	overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+}
+}
+/* Sidebar navigation */
+.nav-sidebar {
+	margin-bottom: 20px;
+}
+.nav-sidebar > li {
+}
+.nav-sidebar > li > a {
+	border-radius: 20px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+.nav-sidebar > .active > a {
+	color: #fff;
+	background-color: #428bca;
+}
+.nav-sidebar > .active > a:hover {
+	color: #FFF;
+	background-color: #428bca;
+}
+.nav-sidebar > li > a:hover, .nav-sidebar > li > a:focus {
+	background: none;
+	color: #FFF;
+}
+@media (min-width: 768px) {
+.main {
+	padding-right: 40px;
+	padding-left: 40px;
+}
+}
+
+/*
+ @media (max-width: 767px) {
+	 .menu{
+		 height: 320px;
+		 overflow-x:auto;
+		 overflow-y:scroll;
+	 }
+ }*/
