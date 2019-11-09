@@ -309,8 +309,6 @@ banner: { sizes: [[970, 90],[970, 250],[728, 90],[300, 250],[250, 250],[468, 60]
 video:  { context: 'outstream', playerSize: [[550, 310]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'], playbackmethod: 2, minduration: 0,  maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10], linearity: 1, api: [1,2,3,4,5,6] },
 native: { image: { sizes: [300, 100], sendId: true }, title: { len: 50, sendId: true }, sponsoredBy: { required: true, sendId: true }, clickUrl: { required: true, sendId: true } },
 },
-renderer: { url: 'https://adops.adysis.com/ANOutstreamVideo.js', render: function (bid) { ANOutstreamVideo.renderAd({ targetId: bid.adUnitCode, adResponse: bid.adResponse, }); } },
-renderer: { options: { adText: 'Advertisement' } },
 labelAny: ['desktop', 'tablet', 'phone'],
 bids: banner_bidders.bids   
 },
