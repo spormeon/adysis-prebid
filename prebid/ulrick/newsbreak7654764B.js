@@ -256,7 +256,7 @@ console.log("user bid cache:", USERBIDCACHE );
     { bidder: 'districtmDMX', params: { dmxid: 171413, memberid: 100041  } }, /* outstream - display */ 
     { bidder: 'onedisplay', params: { placement: '4882886', network: '4436.1', server: 'adserver-eu.adtech.advertising.com' } }, /* 300x250 */ 
     { bidder: 'brealtime', params: { placementId: '16717366' } },  /* sizeless placement */   
-    { bidder: 'conversant', params: { site_id: '118233' } },  /* 300x250 */ 
+    { bidder: 'conversant', params: { site_id: '118233', mimes: [ 'video/mp4', 'application/javascript' ], maxduration: 30 } },  /* 300x250 */ 
     //{ bidder: 'pulsepoint', params: { cf: '1X1', cp: '561446', ct: '702261', cw: 550, ch: 310 } }, /* outstream */
     { bidder: 'pulsepoint', params: { cf: '300X250', cp: '561446', ct: '602639' } }, /* 300x250 */
     { bidder: 'sovrn', params: { tagid: '575683' } }, /* 300x250 */
