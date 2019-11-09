@@ -546,7 +546,7 @@ bids: banner_bidders.bids
 //},
 aol:  { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 0.85; } },
 onedisplay:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 0.85; } },
-districtm:    { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 0.88; } },
+districtm:    { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 0.90; } },
 districtmDMX:  { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 0.90; } },
 // sekindonUM:    { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 0.75; } },
 // brealtime:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 0.80; } },
@@ -606,10 +606,10 @@ adysis: { bidCpmAdjustment : function(bidCpm){ return "+c.cpm+" * 2;} },
        debug: true,
        useBidCache: true,
        enableSendAllBids: false, // Default will be `true` as of 1.0
-       bidderSequence: "fixed", // Default is random
+       bidderSequence: "random", // Default is random
        publisherDomain: 'golfwrx.com',
        bidderTimeout: PREBID_TIMEOUT+500,
-       timeoutBuffer: 500,
+       //timeoutBuffer: 500,
        disableAjaxTimeout: true,
        pubcid: {expInterval: 525600},
        currency: { 'adServerCurrency': "GBP", 'granularityMultiplier': 1, 'conversionRateFile': 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json', },
