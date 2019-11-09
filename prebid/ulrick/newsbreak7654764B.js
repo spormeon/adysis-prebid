@@ -203,12 +203,12 @@ console.log("user bid cache:", USERBIDCACHE );
     bids: [	
     { bidder: 'appnexus', params: { placementId: '11962910', allowSmallerSizes: true } }, /* one placementId for all sizes */
     { bidder: 'districtm', params: { placementId: 11937611, allowSmallerSizes: true } },
-    { bidder: 'pulsepoint', params: { cf: '300X250', cp: '561446', ct: '602639' } }, /* 300x250 */
-    { bidder: 'rhythmone', params: { placementId: '76184', zone: '1r', path: 'mvo' } }, /* one placementId for all sizes */
+    //{ bidder: 'pulsepoint', params: { cf: '300X250', cp: '561446', ct: '602639' } }, /* 300x250 */
+    //{ bidder: 'rhythmone', params: { placementId: '76184', zone: '1r', path: 'mvo' } }, /* one placementId for all sizes */
     { bidder: 'adysis', params: { placementId: '11962910', allowSmallerSizes: true } }, /* one placementId for all sizes */
     //{ bidder: 'smartyads', params: { placementId: '12335' } }, /* native */
     { bidder: 'oftmedia', params: { placementId: '16137883', allowSmallerSizes: true } },
-    { bidder: 'openx', params: { unit: '539181725', delDomain: 'freestar-d.openx.net', openrtb: { imp: [{ video: { mimes: ['video/x-flv, video/mp4, application/x-shockwave-flash, application/javascript, video/webm'] } }] } } },
+    //{ bidder: 'openx', params: { unit: '539181725', delDomain: 'freestar-d.openx.net', openrtb: { imp: [{ video: { mimes: ['video/x-flv, video/mp4, application/x-shockwave-flash, application/javascript, video/webm'] } }] } } },
     //{ bidder: 'colossusssp', params: { placementId: '35324' } } /* native */
     { bidder: 'brealtime', params: { placementId: '16717366', allowSmallerSizes: true } } /* one placementId for all sizes */
     ] //./bids
@@ -219,9 +219,9 @@ console.log("user bid cache:", USERBIDCACHE );
     { bidder: 'appnexus', params: { placementId: '11962910', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }, /* one placementId for all sizes */
     //{ bidder: 'appnexus', params: { placementId: '13232392', video: { skippable: true}, renderer: { url: 'http://cdn.adnxs.com/renderer/video/ANOutstreamVideo.js' } } }, /* demo video placement, always returns a vid, only works client side */ 
     { bidder: 'districtm', params: { placementId: 11937611, allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }, 
-    { bidder: 'conversant', params: { site_id: '118233', mimes: [ 'video/mp4', 'application/javascript' ], maxduration: 30 } },  /* 300x250 */ 
-    { bidder: 'pulsepoint', params: { cf: '1X1', cp: '561446', ct: '702261', cw: 550, ch: 310 } }, /* outstream */
-    { bidder: 'rhythmone', params: { placementId: '76184', zone: '1r', path: 'mvo' } }, /* one placementId for all sizes */	
+    //{ bidder: 'conversant', params: { site_id: '118233', mimes: [ 'video/mp4', 'application/javascript' ], maxduration: 30 } },  /* 300x250 */ 
+    //{ bidder: 'pulsepoint', params: { cf: '1X1', cp: '561446', ct: '702261', cw: 550, ch: 310 } }, /* outstream */
+    //{ bidder: 'rhythmone', params: { placementId: '76184', zone: '1r', path: 'mvo' } }, /* one placementId for all sizes */	
     //{ bidder: 'komoona', params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: '2d14facbe61621faad0c7b2aa0458cff' } },  /* Golfwrx.com _KB 300x250 */
     //{ bidder: "yieldmo", params: { placementId: "1990667709809591856" } }, /* no adapter in file */
     //{ bidder: 'unruly', params: { UUID: '23984444', SiteId: 15145 } },
@@ -613,9 +613,11 @@ adysis: { bidCpmAdjustment : function(bidCpm){ return "+c.cpm+" * 2;} },
        debug: true,
        useBidCache: true,
        enableSendAllBids: false, // Default will be `true` as of 1.0
-       bidderSequence: 'random', // Default is random
+       bidderSequence: "fixed", // Default is random
        publisherDomain: 'golfwrx.com',
        bidderTimeout: PREBID_TIMEOUT+500,
+       timeoutBuffer: 500,
+       disableAjaxTimeout: true,
        pubcid: {expInterval: 525600},
        currency: { 'adServerCurrency': "GBP", 'granularityMultiplier': 1, 'conversionRateFile': 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json', },
        sizeConfig: [
