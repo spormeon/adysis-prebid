@@ -253,10 +253,10 @@ console.log("user bid cache:", USERBIDCACHE );
     { bidder: 'appnexus', params: { placementId: '11962910', allowSmallerSizes: true } }, /* one placementId for all sizes */
     //{ bidder: 'appnexus', params: { placementId: '13232392' } }, /* demo video placement, always returns a vid, only works client side */ 
     { bidder: 'districtm', params: { placementId: 11937611, allowSmallerSizes: true } },
-    { bidder: 'districtmDMX', params: { dmxid: 171413, memberid: 100041  } }, /* outstream - display */ 
+    { bidder: 'districtmDMX', params: { dmxid: 171413, memberid: 100041  } }, /*  display */ 
     { bidder: 'onedisplay', params: { placement: '4882886', network: '4436.1', server: 'adserver-eu.adtech.advertising.com' } }, /* 300x250 */ 
     { bidder: 'brealtime', params: { placementId: '16717366' } },  /* sizeless placement */   
-    { bidder: 'conversant', params: { site_id: '118233', mimes: [ 'video/mp4', 'application/javascript' ], maxduration: 30 } },  /* 300x250 */ 
+    { bidder: 'conversant', params: { site_id: '118233' } },  /* 300x250 */ 
     //{ bidder: 'pulsepoint', params: { cf: '1X1', cp: '561446', ct: '702261', cw: 550, ch: 310 } }, /* outstream */
     { bidder: 'pulsepoint', params: { cf: '300X250', cp: '561446', ct: '602639' } }, /* 300x250 */
     { bidder: 'sovrn', params: { tagid: '575683' } }, /* 300x250 */
@@ -283,7 +283,7 @@ console.log("user bid cache:", USERBIDCACHE );
     //{ bidder: 'smartyads', params: { placementId: '6368' } }, /* 300x250 */
     { bidder: 'oftmedia', params: { placementId: '16137883', allowSmallerSizes: true } },
     { bidder: 'openx', params: { unit: '539181725', delDomain: 'freestar-d.openx.net', openrtb: { imp: [{ video: { mimes: ['video/x-flv, video/mp4, application/x-shockwave-flash, application/javascript, video/webm'] } }] } } },
-    { bidder: 'rubicon', params: { accountId: "16924", siteId: "151312", zoneId: "896644", video: { language: 'en' } } }, /* display call */
+    { bidder: 'rubicon', params: { accountId: "16924", siteId: "151312", zoneId: "896644" } }, /* display call */
     //{ bidder: 'quantcast', params: { publisherId: "EnBKrGZNvq"} },
     { bidder: 'criteo', params: { zoneId: "1079305", video: { skip: 1, minduration: 5, playbackmethod: 1, placement: 2 } } },
     { bidder: 'triplelift', params: { inventoryCode: "freestar_desktopleader_RON_300x250"} },
@@ -304,15 +304,24 @@ var adUnits = [
 //new ad unit block
 {
 code: 'inreedvid4Slot',
-mediaTypes: {
-banner: { sizes: [[970, 90],[970, 250],[728, 90],[300, 250],[250, 250],[468, 60],[320, 50],[320, 100],[336, 280],[580, 400],[550, 310]]  },
-video:  { context: 'outstream', playerSize: [[550, 310]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'], playbackmethod: 2, minduration: 0,  maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10], linearity: 1, api: [1,2,3,4,5,6] },
-native: { image: { sizes: [300, 100], sendId: true }, title: { len: 50, sendId: true }, sponsoredBy: { required: true, sendId: true }, clickUrl: { required: true, sendId: true } },
+mediaTypes: { video:  { context: 'outstream', playerSize: [[550, 310]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'], playbackmethod: 2, minduration: 0,  maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10], linearity: 1, api: [1,2,3,4,5,6] } },
+renderer: { url: 'https://adops.adysis.com/ANOutstreamVideo.js', render: function (bid) { ANOutstreamVideo.renderAd({ targetId: bid.adUnitCode, adResponse: bid.adResponse, }); } },
+renderer: { options: { adText: 'Advertisement' } },
+labelAny: ['desktopmenu1', 'tablet', 'phone'],
+bids: outstream_bidders.bids
 },
+{
+code: 'inreedvid4Slot',
+mediaTypes: { banner: { sizes: [[970, 90],[970, 250],[728, 90],[300, 250],[250, 250],[468, 60],[320, 50],[320, 100],[336, 280],[580, 400],[550, 310]]  } },
 labelAny: ['desktop', 'tablet', 'phone'],
-bids: banner_bidders.bids   
+bids: banner_bidders.bids
 },
-
+{
+code: 'inreedvid4Slot',
+mediaTypes: { native: { image: { sizes: [300, 100], sendId: true }, title: { len: 50, sendId: true }, sponsoredBy: { required: true, sendId: true }, clickUrl: { required: true, sendId: true } } },
+labelAny: ['desktop', 'tablet', 'phone'],
+bids: native_bidders.bids   
+},
 //new ad unit block
 {
 code: 'inreedvid5Slot',
