@@ -769,7 +769,7 @@ assertive_custom_2 = FLOOR_PRICE;
 assertive_custom_3 = site_config.refresh_rate;
 assertive_custom_4 = "+o.creativeId+";
 console.log("CreativeID:", "+o.creativeId+" );
-
+console.log("CPM:", "+o.cpm+" );
 /*  ####################################
  *  #    ASSERTIVE ANALYTICS CLIENT    #
  *  #        Version: 1.9.1            #
