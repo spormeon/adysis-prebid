@@ -585,7 +585,7 @@ rubicon:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ retu
 emx_digital:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 1.00; } },
 decenterads:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 1.00; } },
 smartrtb:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 1.00; } },
-adysis: { bidCpmAdjustment : function(bidCpm){ return "+c.cpm+" * 2;} },
+adysis: { bidCpmAdjustment : function(bidCpm){ return "+o.cpm+" * 2;} },
 };
     adyjs.setConfig({
     	rubicon: {singleRequest: true},
@@ -767,8 +767,8 @@ mappingleaderslot: [
 assertive_custom_1 = USERBIDCACHE ? 'prebid_cache_enabled' : 'prebid_cache_disabled';
 assertive_custom_2 = FLOOR_PRICE;
 assertive_custom_3 = site_config.refresh_rate;
-assertive_custom_4 = "+c.creativeId+";
-console.log("CreativeID:", "+c.creativeId+" );
+assertive_custom_4 = "+o.creativeid+";
+console.log("CreativeID:", "+o.creativeid+" );
 
 /*  ####################################
  *  #    ASSERTIVE ANALYTICS CLIENT    #
