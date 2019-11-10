@@ -193,7 +193,7 @@ console.log("user bid cache:", USERBIDCACHE );
  // var assertive_custom_1 = null;
     var assertive_custom_2 = null;
     var assertive_custom_3 = null;
-    var assertive_custom_4 = null;
+    var assertive_custom_4 = "creativeId";
     var assertive_custom_5 = null;
 //example of supplying a custom var from a prev. defined var
     assertive_timeout = PREBID_TIMEOUT;  
@@ -767,8 +767,8 @@ mappingleaderslot: [
 assertive_custom_1 = USERBIDCACHE ? 'prebid_cache_enabled' : 'prebid_cache_disabled';
 assertive_custom_2 = FLOOR_PRICE;
 assertive_custom_3 = site_config.refresh_rate;
-assertive_custom_4 = "c+creativeId"
-console.log("CreativeID:", "creativeId" );
+assertive_custom_4 = ("creativeId")
+console.log("CreativeID:", ("creativeId") );
 
 /*  ####################################
  *  #    ASSERTIVE ANALYTICS CLIENT    #
