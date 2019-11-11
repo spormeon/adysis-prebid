@@ -630,13 +630,6 @@ adysis: { bidCpmAdjustment : function(bidCpm){ return "+o.cpm+" * 2;} },
          { mediaQuery: '(min-width: 1px) and (max-width: 499px)', sizesSupported: [[550,310],[300,250],[250,250],[320,50],[320,100],[336,280],[1,1]], labels: [ 'phone'] },
          { mediaQuery: '(min-width: 1px) and (max-width: 499px)', sizesSupported: [[300,250],[250,250],[1,1]], labels: [ 'phonemenu'] }
        ]
-       debugging: {
-    	    enabled: true,
-    	    bids: [{
-    	      bidder: 'adysis',
-    	      cpm: 1.5
-    	    }]
-    	  }
      });
     adyjs.requestBids({
      bidsBackHandler: initAdserver1,
