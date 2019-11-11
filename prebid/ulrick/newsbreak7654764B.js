@@ -528,7 +528,7 @@ bids: banner_bidders.bids
      //adyjs.aliasBidder('appnexus','brealtime'); 
      //adyjs.aliasBidder('appnexus','springserveAlias2');
      adyjs.aliasBidder('appnexus','districtm');
-     adyjs.aliasBidder('gamoshi','viewdeos');
+     //adyjs.aliasBidder('gamoshi','viewdeos');
      adyjs.aliasBidder('onedisplay','aol');
      adyjs.aliasBidder('appnexus','adysis');
      //adyjs.aliasBidder('serverbid','adsparc');
