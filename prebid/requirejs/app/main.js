@@ -1,6 +1,6 @@
-// require(["./slotsonpage"], function (slotsonpage) {
+// require(["app/slotsonpage"], function (slotsonpage) {
 
-require(["./timeoutmap"], function (timeoutmap) {
+require(["app/timeoutmap"], function (timeoutmap) {
 require(["./floorpricemap"], function (floorpricemap) {
 require(["./siteconfig"], function (siteconfig) {
 //require(["./unrulyconfig"], function (unrulyconfig) {
