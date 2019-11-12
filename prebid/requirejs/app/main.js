@@ -1,20 +1,20 @@
 // require(["app/slotsonpage"], function (slotsonpage) {
 
 require(["app/timeoutmap"], function (timeoutmap) {
-require(["./floorpricemap"], function (floorpricemap) {
-require(["./siteconfig"], function (siteconfig) {
-//require(["./unrulyconfig"], function (unrulyconfig) {
-// require(["./amazonbidder"], function (amazonbidder) {
-require(["./bidcachemap"], function (bidcachemap) {
-require(["./assertiveconfig"], function (assertiveconfig) {
+require(["app/floorpricemap"], function (floorpricemap) {
+require(["app/siteconfig"], function (siteconfig) {
+//require(["app/unrulyconfig"], function (unrulyconfig) {
+// require(["app/amazonbidder"], function (amazonbidder) {
+require(["app/bidcachemap"], function (bidcachemap) {
+require(["app/assertiveconfig"], function (assertiveconfig) {
 	
-require(["./nativebidders"], function (nativebidders) {
-require(["./outstreambidders"], function (outstreambidders) {
-require(["./bannerbidders"], function (bannerbidders) {
-	require(["./adunitsconfig"], function (adunitsconfig) {
-require(["./custombuckets"], function (custombuckets) {
-require(["./prebidconfig"], function (prebidconfig) {
-require(["./assertivecustom"], function (assertivecustom) {
+require(["app/nativebidders"], function (nativebidders) {
+require(["app/outstreambidders"], function (outstreambidders) {
+require(["app/bannerbidders"], function (bannerbidders) {
+	require(["app/adunitsconfig"], function (adunitsconfig) {
+require(["app/custombuckets"], function (custombuckets) {
+require(["app/prebidconfig"], function (prebidconfig) {
+require(["app/assertivecustom"], function (assertivecustom) {
 require(["prebid"], function (prebid) {
 	require(["gpt"], function (gpt) {
 require(["assertive"], function (assertive) {
