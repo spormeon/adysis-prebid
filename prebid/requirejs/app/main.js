@@ -1,6 +1,5 @@
 require(["prebid"], function (prebid) {
-require(["preconnect"], function (preconnect) {
-require(["bidfilter"], function (bidfilter) {
+require(["gpt"], function (gpt) {
 require(["timeoutmap"], function (timeoutmap) {
 require(["floorpricemap"], function (floorpricemap) {
 require(["siteconfig"], function (siteconfig) {
@@ -16,7 +15,8 @@ require(["custombuckets"], function (custombuckets) {
 require(["prebidconfig"], function (prebidconfig) {
 require(["assertivecustom"], function (assertivecustom) {
 require(["assertive"], function (assertive) {
-require(["gpt"], function (gpt) {
+require(["bidfilter"], function (bidfilter) {
+require(["preconnect"], function (preconnect) {
 console.log('all deps loaded in order');
 });
 });
