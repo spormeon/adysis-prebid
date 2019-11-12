@@ -17,7 +17,7 @@ require(["prebid"], function (prebid) {
 require(["gpt"], function (gpt) {
 require(["assertive"], function (assertive) {
 require(["bidfilter"], function (bidfilter) {
-require(["preconnect"], function (preconnect) {
+// require(["preconnect"], function (preconnect) {
 console.log('all deps loaded in order');
 });
 });
@@ -35,7 +35,7 @@ console.log('all deps loaded in order');
 });
 });
 });
-});
-//});
+// });
+// });
 // });
 // });
