@@ -1,3 +1,4 @@
+require(["slotsonpage"], function (slotsonpage) {
 require(["prebid"], function (prebid) {
 require(["gpt"], function (gpt) {
 require(["timeoutmap"], function (timeoutmap) {
@@ -18,6 +19,7 @@ require(["assertive"], function (assertive) {
 require(["bidfilter"], function (bidfilter) {
 require(["preconnect"], function (preconnect) {
 console.log('all deps loaded in order');
+});
 });
 });
 });
