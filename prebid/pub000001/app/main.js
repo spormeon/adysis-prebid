@@ -13,7 +13,7 @@ require(["app/adunitsconfig"], function (adunitsconfig) {
 require(["app/custombuckets"], function (custombuckets) {
 require(["app/prebidconfig"], function (prebidconfig) {
 require(["app/assertivecustom"], function (assertivecustom) {
-require(["prebid"], function (prebid) {
+require(["prebid2.39.0adyjs"], function (prebid) {
 require(["gpt"], function (gpt) {
 require(["assertive"], function (assertive) {
 require(["bidfilter"], function (bidfilter) {
