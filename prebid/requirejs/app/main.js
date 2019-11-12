@@ -1,10 +1,10 @@
-require(["slotsonpage"], function (slotsonpage) {
+// require(["slotsonpage"], function (slotsonpage) {
 require(["gpt"], function (gpt) {
 require(["timeoutmap"], function (timeoutmap) {
 require(["floorpricemap"], function (floorpricemap) {
 require(["siteconfig"], function (siteconfig) {
 require(["unrulyconfig"], function (unrulyconfig) {
-require(["amazonbidder"], function (amazonbidder) {
+// require(["amazonbidder"], function (amazonbidder) {
 require(["bidcachemap"], function (bidcachemap) {
 require(["assertiveconfig"], function (assertiveconfig) {
 require(["nativebidders"], function (nativebidders) {
@@ -37,5 +37,5 @@ console.log('all deps loaded in order');
 });
 });
 });
-});
-});
+// });
+// });
