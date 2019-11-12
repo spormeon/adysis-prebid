@@ -1,5 +1,4 @@
 require(["prebid"], function (prebid) {
-require(["gpt"], function (gpt) {
 require(["preconnect"], function (preconnect) {
 require(["bidfilter"], function (bidfilter) {
 require(["timeoutmap"], function (timeoutmap) {
@@ -17,6 +16,7 @@ require(["custombuckets"], function (custombuckets) {
 require(["prebidconfig"], function (prebidconfig) {
 require(["assertivecustom"], function (assertivecustom) {
 require(["assertive"], function (assertive) {
+require(["gpt"], function (gpt) {
 console.log('all deps loaded in order');
 });
 });
