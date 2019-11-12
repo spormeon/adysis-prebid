@@ -3,7 +3,7 @@
 // except for 'app' ones, which are in a sibling
 // directory.
 requirejs.config({
-    baseUrl: '../lib',
+    baseUrl: 'pub100000/lib',
     paths: {
         app: '../app'
     }
