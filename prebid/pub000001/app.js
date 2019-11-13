@@ -6,7 +6,6 @@ paths: { app: '../app' }
 //require(["app/slotsonpage"], function (slotsonpage) {
 require(["prebid"], function (prebid) {
 require(["gpt"], function (gpt) {
-require(["preconnect"], function (preconnect) {
 require(["bidfilter"], function (bidfilter) {
 require(["app/timeoutmap"], function (timeoutmap) {
 require(["app/floorpricemap"], function (floorpricemap) {
@@ -23,6 +22,7 @@ require(["app/custombuckets"], function (custombuckets) {
 require(["app/prebidconfig"], function (prebidconfig) {
 require(["app/assertivecustom"], function (assertivecustom) {
 require(["assertive"], function (assertive) {
+require(["preconnect"], function (preconnect) {	
 });
 });
 });
