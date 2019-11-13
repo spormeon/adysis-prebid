@@ -1,11 +1,13 @@
 requirejs.config({
 baseUrl: 'pub000001/lib',
-paths: {
-app: '../app'
-}
+paths: { app: '../app' }
 });
 // your application logic in there.
 //require(["app/slotsonpage"], function (slotsonpage) {
+require(["prebid"], function (prebid) {
+require(["gpt"], function (gpt) {
+require(["preconnect"], function (preconnect) {
+require(["bidfilter"], function (bidfilter) {
 require(["app/timeoutmap"], function (timeoutmap) {
 require(["app/floorpricemap"], function (floorpricemap) {
 require(["app/siteconfig"], function (siteconfig) {
@@ -20,12 +22,7 @@ require(["app/adunitsconfig"], function (adunitsconfig) {
 require(["app/custombuckets"], function (custombuckets) {
 require(["app/prebidconfig"], function (prebidconfig) {
 require(["app/assertivecustom"], function (assertivecustom) {
-require(["prebid"], function (prebid) {
 require(["assertive"], function (assertive) {
-require(["bidfilter"], function (bidfilter) {
-require(["gpt"], function (gpt) {
-// require(["preconnect"], function (preconnect) {
-console.log('all deps loaded in order');
 });
 });
 });
@@ -42,7 +39,7 @@ console.log('all deps loaded in order');
 });
 });
 });
-// });
+});
 // });
 // });
 // });
