@@ -80,7 +80,7 @@ adysis: { bidCpmAdjustment : function(bidCpm){ return "+c.cpm+" * 2;} },
       s2sConfig: {
         accountId: 'e31f627f-53a3-4288-9979-482d3c6ffc76',
         enabled: true,
-        bidders: ['sovrn','rhythmone','pulsepoint','rubicon','ix','openx','33across', 'beachfront'],
+        bidders: ['sovrn','rhythmone','pulsepoint','rubicon','ix','openx','33across','lockerdome'],
         timeout: PREBID_TIMEOUT-300,
         adapter: 'prebidServer',
         endpoint: 'https://prebid.adnxs.com/pbs/v1/openrtb2/auction',
