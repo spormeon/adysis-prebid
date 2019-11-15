@@ -34,7 +34,7 @@ bids: [
 { bidder: 'adysis', params: { placementId: '11962910', allowSmallerSizes: true } }, /* one placementId for all sizes */
 //{ bidder: 'smartyads', params: { placementId: '6368' } }, /* 300x250 */
 { bidder: 'oftmedia', params: { placementId: '16137883', allowSmallerSizes: true } },
-{ bidder: 'openx', params: { unit: '539181725', delDomain: 'freestar-d.openx.net', openrtb: { imp: [{ video: { mimes: ['video/x-flv, video/mp4, application/x-shockwave-flash, application/javascript, video/webm'] } }] } } },
+{ bidder: 'openx', params: { unit: '539181725', delDomain: 'freestar-d.openx.net' } },
 { bidder: 'rubicon', params: { accountId: "16924", siteId: "151312", zoneId: "896644" } }, /* display call */
 //{ bidder: 'quantcast', params: { publisherId: "EnBKrGZNvq"} },
 { bidder: 'criteo', params: { zoneId: "1079305", video: { skip: 1, minduration: 5, playbackmethod: 1, placement: 2 } } },
