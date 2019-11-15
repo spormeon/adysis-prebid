@@ -8,7 +8,7 @@ bids: [
 { bidder: 'adysis', params: { placementId: '11962910', allowSmallerSizes: true } }, /* one placementId for all sizes */
 //{ bidder: 'smartyads', params: { placementId: '12335' } }, /* native */
 { bidder: 'oftmedia', params: { placementId: '16137883', allowSmallerSizes: true } },
-{ bidder: 'openx', params: { unit: '539181725', delDomain: 'freestar-d.openx.net', openrtb: { imp: [{ video: { mimes: ['video/x-flv, video/mp4, application/x-shockwave-flash, application/javascript, video/webm'] } }] } } },
+//{ bidder: 'openx', params: { unit: '539181725', delDomain: 'freestar-d.openx.net', openrtb: { imp: [{ video: { mimes: ['video/x-flv, video/mp4, application/x-shockwave-flash, application/javascript, video/webm'] } }] } } },
 //{ bidder: 'colossusssp', params: { placementId: '35324' } } /* native */
 { bidder: 'brealtime', params: { placementId: '16717366', allowSmallerSizes: true } } /* one placementId for all sizes */
 ] //./bids

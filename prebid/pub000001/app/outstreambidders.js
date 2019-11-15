@@ -21,7 +21,7 @@ bids: [
 { bidder: 'adysis', params: { placementId: '11962910', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }, /* one placementId for all sizes */
 //{ bidder: 'smartyads', params: { placementId: '11833' } }, /* outstream */
 { bidder: 'oftmedia', params: { placementId: '16137883', allowSmallerSizes: true, allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } },
-{ bidder: 'openx', params: { unit: '539181725', delDomain: 'freestar-d.openx.net', openrtb: { imp: [{ video: { mimes: ['video/x-flv, video/mp4, application/x-shockwave-flash, application/javascript, video/webm'] } }] } } },
+//{ bidder: 'openx', params: { unit: '539181725', delDomain: 'freestar-d.openx.net', openrtb: { imp: [{ video: { mimes: ['video/x-flv, video/mp4, application/x-shockwave-flash, application/javascript, video/webm'] } }] } } },
 { bidder: 'rubicon', params: { accountId: "16924", siteId: "151312", zoneId: "896644", video: { language: 'en' } } }, /* video call */
 //{ bidder: 'criteo', params: { zoneId: "1079305", video: { skip: 1, playbackmethod: 2, placement: 1 } } },
 //{ bidder: 'colossusssp', params: { placementId: '35323' } }, /* outstream */
