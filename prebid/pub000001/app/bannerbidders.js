@@ -37,7 +37,7 @@ bids: [
 { bidder: 'openx', params: { unit: '539181725', delDomain: 'freestar-d.openx.net' } },
 { bidder: 'rubicon', params: { accountId: "16924", siteId: "151312", zoneId: "896644" } }, /* display call */
 //{ bidder: 'quantcast', params: { publisherId: "EnBKrGZNvq"} },
-{ bidder: 'criteo', params: { zoneId: "1079305", video: { skip: 1, minduration: 5, playbackmethod: 1, placement: 2 } } },
+{ bidder: 'criteo', params: { zoneId: "1079305" } },
 { bidder: 'triplelift', params: { inventoryCode: "freestar_desktopleader_RON_300x250"} },
 { bidder: 'triplelift', params: { inventoryCode: "freestar_desktopleader_RON_300x250_NATIVE"} },
 { bidder: 'sharethrough', params: { pkey: "DSthphoQqH66AkQXPDoXn74b", iframe: true, iframeSize: [300, 250] } }, /* 300x250 */
