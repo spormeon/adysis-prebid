@@ -79,8 +79,8 @@ adysis: { bidCpmAdjustment : function(bidCpm){ return "+c.cpm+" * 2;} },
       cache: {url: "https://prebid.adnxs.com/pbc/v1/cache"},
       s2sConfig: {
         accountId: 'e31f627f-53a3-4288-9979-482d3c6ffc76',
-        enabled: false,
-        bidders: ['sovrn','somoaudience','rhythmone','pulsepoint','rubicon','ix','openx','33across','unruly'],
+        enabled: true,
+        bidders: ['sovrn','rhythmone','pulsepoint','rubicon','ix','openx','33across'],
         timeout: PREBID_TIMEOUT/2,
         adapter: 'prebidServer',
         endpoint: 'https://prebid.adnxs.com/pbs/v1/openrtb2/auction',
@@ -96,7 +96,7 @@ adysis: { bidCpmAdjustment : function(bidCpm){ return "+c.cpm+" * 2;} },
       // enableOverride: true // publisher will call `pbjs.triggerUserSyncs()'
        },
        debug: true,
-       useBidCache: true,
+       useBidCache: USERBIDCACHE,
        enableSendAllBids: false, // Default will be `true` as of 1.0
        bidderSequence: 'random', // Default is random
        publisherDomain: 'golfwrx.com',
