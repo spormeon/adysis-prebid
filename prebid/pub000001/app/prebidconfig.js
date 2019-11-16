@@ -71,6 +71,7 @@ emx_digital:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ 
 //decenterads:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 1.00; } },
 smartrtb:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 1.00; } },
 adysis: { bidCpmAdjustment : function(bidCpm){ return "+c.cpm+" * 2;} },
+adysis: { bidCpmAdjustment : function(bidCpm){ return 1.39;} }
 };
     adyjs.setConfig({
     	rubicon: {singleRequest: true},
