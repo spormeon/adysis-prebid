@@ -7,7 +7,7 @@ bids: [
 { bidder: 'districtm', params: { placementId: 11937611, allowSmallerSizes: true } },
 { bidder: 'districtmDMX', params: { dmxid: 171413, memberid: 100041  } }, /* outstream - display */ 
 { bidder: 'onedisplay', params: { placement: '4882886', network: '4436.1', server: 'adserver-eu.adtech.advertising.com' } }, /* 300x250 */ 
-{ bidder: 'brealtime', params: { placementId: '16717366' } },  /* sizeless placement */   
+{ bidder: 'brealtime', params: { placementId: '16717366', allowSmallerSizes: true } },  /* sizeless placement */   
 { bidder: 'conversant', params: { site_id: '118233' } },  /* 300x250 */ 
 //{ bidder: 'pulsepoint', params: { cf: '1X1', cp: '561446', ct: '702261', cw: 550, ch: 310 } }, /* outstream */
 { bidder: 'pulsepoint', params: { cf: '300X250', cp: '561446', ct: '602639' } }, /* 300x250 */

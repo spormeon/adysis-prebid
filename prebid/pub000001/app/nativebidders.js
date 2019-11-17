@@ -2,7 +2,7 @@
 var native_bidders = {
 bids: [	
 { bidder: 'appnexus', params: { placementId: '11962910', allowSmallerSizes: true } }, /* one placementId for all sizes */
-{ bidder: 'districtm', params: { placementId: 11937611, allowSmallerSizes: true } },
+{ bidder: 'districtm', params: { placementId: '11937611', allowSmallerSizes: true } },
 //{ bidder: 'pulsepoint', params: { cf: '300X250', cp: '561446', ct: '602639' } }, /* 300x250 */
 //{ bidder: 'rhythmone', params: { placementId: '76184', zone: '1r', path: 'mvo' } }, /* one placementId for all sizes */
 { bidder: 'adysis', params: { placementId: '11962910', allowSmallerSizes: true } }, /* one placementId for all sizes */
