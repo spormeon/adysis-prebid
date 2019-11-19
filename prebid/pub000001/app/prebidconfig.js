@@ -10,7 +10,7 @@ var googletag = googletag || {};
      adyjs.addAdUnits(adUnits);
      //adyjs.addAdUnits(videoAdUnit); // add your ad units to the bid request
   // alias for bidder
-     //adyjs.aliasBidder('appnexus','brealtime'); 
+     adyjs.aliasBidder('appnexus','brealtime'); 
      //adyjs.aliasBidder('appnexus','springserveAlias2');
      adyjs.aliasBidder('appnexus','districtm');
      //adyjs.aliasBidder('gamoshi','viewdeos');
