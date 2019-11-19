@@ -10,9 +10,9 @@ var googletag = googletag || {};
      adyjs.addAdUnits(adUnits);
      //adyjs.addAdUnits(videoAdUnit); // add your ad units to the bid request
   // alias for bidder
-     adyjs.aliasBidder('appnexus','brealtime'); 
+     //adyjs.aliasBidder('appnexus','brealtime'); 
      //adyjs.aliasBidder('appnexus','springserveAlias2');
-     adyjs.aliasBidder('appnexus','districtm');
+     //adyjs.aliasBidder('appnexus','districtm');
      //adyjs.aliasBidder('gamoshi','viewdeos');
      adyjs.aliasBidder('onedisplay','aol');
      adyjs.aliasBidder('appnexus','adysis');
@@ -41,7 +41,7 @@ onedisplay:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ r
 districtm:    { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 0.88; } },
 districtmDMX:  { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 0.90; } },
 // sekindonUM:    { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 0.75; } },
-brealtime:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 1.00; } },
+//brealtime:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 1.00; } },
 // springserveAlias2:  { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 0.65; } },
 teads:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 0.94; } },
 //unruly:  { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 0.90; } },
