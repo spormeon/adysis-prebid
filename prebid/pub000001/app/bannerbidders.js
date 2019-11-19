@@ -46,9 +46,10 @@ bids: [
 //{ bidder: 'colossusssp', params: { placementId: '6544' } } /* 300x250 */
 { bidder: 'emx_digital', params: { tagid: '77461' } }, /* sizeless */
 //{ bidder: 'decenterads', params: { placementId: '10384' } }, /* 300x250 */
-{ bidder: 'lockerdome', params: { adUnitId: 'LD12197908548395622' } }, /* 300x250 */
-{ bidder: 'lockerdome', params: { adUnitId: 'LD12197907843752550' } }, /* 300x100 */
-{ bidder: 'lockerdome', params: { adUnitId: 'LD12197911702512230' } }, /* 728x90 */
+{ bidder: 'lockerdome', params: { adUnitId: '12197908548395622' } }, /* 300x250 */
+//{ bidder: 'lockerdome', params: { adUnitId: '12197907843752550' } }, /* 300x100 */
+{ bidder: 'lockerdome', params: { adUnitId: '12197911702512230' } }, /* 728x90 */
+{ bidder: 'lockerdome', params: { adUnitId: '12197911031423590' } }, /* 300x600 */
 { bidder: 'smartrtb', params: { zoneId: "I0Mnk7dqNXKrCdjpgzp5" } }
 ] //./bids
 };
