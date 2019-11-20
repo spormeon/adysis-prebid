@@ -23,7 +23,7 @@ require(["app/prebidconfig"], function (prebidconfig) {
 require(["app/assertivecustom"], function (assertivecustom) {
 require(["assertive"], function (assertive) {
 require(["preconnect"], function (preconnect) {	
-require(["app/addate"], function (preconnect) {	
+require(["app/addata"], function (preconnect) {	
 });
 });
 });
