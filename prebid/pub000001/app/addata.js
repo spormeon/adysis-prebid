@@ -81,6 +81,6 @@ function getAdsData() {
     getAdsData();;
   }
   else{
-    setTimeout(waitForGPT, 250);
+    setTimeout(waitForGPT, 1250);
   }
 }());
