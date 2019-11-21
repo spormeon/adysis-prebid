@@ -15,7 +15,7 @@ require(["app/siteconfig"], function (siteconfig) {
 require(["app/bidcachemap"], function (bidcachemap) {
 require(["app/assertiveconfig"], function (assertiveconfig) {
 require(["app/nativebidders"], function (nativebidders) {
-//require(["app/outstreambidders"], function (outstreambidders) {
+require(["app/outstreambidders"], function (outstreambidders) {
 //require(["app/bannerbidders"], function (bannerbidders) {
 require(["app/adunitsconfig"], function (adunitsconfig) {
 require(["app/custombuckets"], function (custombuckets) {
@@ -39,7 +39,7 @@ require(["preconnect"], function (preconnect) {
 });
 });
 });
-//});
+});
 //});
 //});
 // });
