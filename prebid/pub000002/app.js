@@ -1,5 +1,5 @@
 requirejs.config({
-baseUrl: 'pub000001/lib',
+baseUrl: 'pub000002/lib',
 paths: { app: '../app' }
 });
 // your application logic in there.
