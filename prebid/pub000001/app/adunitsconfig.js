@@ -100,7 +100,7 @@ bids: outstream_bidders.bids
 },
 {
 code: 'inreedvid8Slot',
-mediaTypes: { banner: { sizes: [[970, 90],[970, 250],[728, 90],[468, 60],[320, 50],[300, 250],[728, 90],[250, 250],[468, 60],[320, 100],[336, 280],[580, 400],[550, 310]] } },
+mediaTypes: { banner: { sizes: [[970, 90],[970, 250],[728, 90],[468, 60],[320, 50],[300, 250],[250, 250],[320, 100],[336, 280],[580, 400],[550, 310]] } },
 labelAny: ['desktopleader', 'tabletmenu', 'phonemenu'],
 bids: banner_bidders.bids
 },
