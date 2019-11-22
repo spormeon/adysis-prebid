@@ -206,7 +206,7 @@ definitons: {
 //inreedvid11Slot: { adUnitPath: "/1001824/adp100001/adp100001H", size: "mappinginreedvidslot", sizeMapping: "mappingstickyslot", timeout: site_config.refresh_rate, },
 //inreedvid12Slot: { adUnitPath: "/1001824/adp100001/adp100001I", size: "mappinginreedvidslot", sizeMapping: "mappingstickyslot", timeout: site_config.refresh_rate, },
 inreedvid13Slot: { adUnitPath: "/1001824/adp100001/adp100001J", size: "mappingleaderslot", sizeMapping: "mappingleaderslot", timeout: site_config.refresh_rate, },
-inreedvid5Slot: { adUnitPath: "/1001824/adp100001/adp100001B", size: "mappingmenu1slot", sizeMapping: "mappingmenu1slot", timeout: site_config.refresh_rate, },
+inreedvid5Slot: { adUnitPath: "/1001824/adp100001/adp100001B", size: "mappingmenuslot", sizeMapping: "mappingmenuslot", timeout: site_config.refresh_rate, },
 inreedvid9Slot: { adUnitPath: "/1001824/adp100001/adp100001F", size: "mappingmenuslot", sizeMapping: "mappingmenuslot", timeout: site_config.refresh_rate, },
 inreedvid8Slot: { adUnitPath: "/1001824/adp100001/adp100001E", size: "mappinginreedvidslot", sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
 inreedvid4Slot: { adUnitPath: "/1001824/adp100001/adp100001A", size: "mappinginreedvidslot", sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
@@ -241,7 +241,7 @@ mappingfooterslot: [
 [[1, 1],[[468, 60],[320, 50]]],
 ],
 mappingleaderslot: [
-[[1024, 768],[[970, 90],[970, 250],[728, 90],[468, 60],[320, 50],[300, 250],[728, 90],[250, 250],[468, 60],[320, 100],[336, 280],[580, 400],[550, 310]]],
+[[1024, 768],[[970, 90],[970, 250],[728, 90],[468, 60],[320, 50],[300, 250],[250, 250],[320, 100],[336, 280],[580, 400],[550, 310]]],
 [[768, 500],[[728,90],[468, 60],[320, 50]]],
 [[1, 1],[[468, 60],[320, 50]]],
 ] 
