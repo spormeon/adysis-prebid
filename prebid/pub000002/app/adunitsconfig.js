@@ -86,7 +86,7 @@ bids: banner_bidders.bids
 //new ad unit block
 {
 code: 'inreedvid8Slot',
-mediaTypes: { native: { image: { sizes: [300, 100], sendId: true }, title: { len: 50, sendId: true }, sponsoredBy: { required: true, sendId: true }, clickUrl: { required: true, sendId: true } } },
+mediaTypes: { native: { image: { sizes: [550, 310], sendId: true }, title: { len: 50, sendId: true }, sponsoredBy: { required: true, sendId: true }, clickUrl: { required: true, sendId: true } } },
 labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'],
 bids: native_bidders.bids
 },
@@ -100,7 +100,7 @@ bids: outstream_bidders.bids
 },
 {
 code: 'inreedvid8Slot',
-mediaTypes: { banner: { sizes: [[970, 90],[970, 250],[728, 90],[468, 60],[320, 50],[300, 250],[728, 90],[250, 250],[468, 60],[320, 100],[336, 280],[580, 400],[550, 310]] } },
+mediaTypes: { banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50],[320, 100],[336, 280],[580, 400],[550, 310]] } },
 labelAny: ['desktopleader', 'tabletmenu', 'phonemenu'],
 bids: banner_bidders.bids
 },
@@ -191,7 +191,7 @@ bids: banner_bidders.bids
 //new ad unit block
 {
 code: 'inreedvid13Slot',
-mediaTypes: { banner: { sizes: [[970, 90],[728, 90],[300, 250],[250, 250],[468, 60],[320, 50]] } },
+mediaTypes: { banner: { sizes: [[970, 90],[728, 90],[468, 60],[320, 50]] } },
 labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'],
 bids: banner_bidders.bids
 }
