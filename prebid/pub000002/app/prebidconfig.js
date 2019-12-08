@@ -116,11 +116,7 @@ adysis: { bidCpmAdjustment : function(bidCpm){ return 0.28;} }
      bidsBackHandler: initAdserver1,
      timeout: PREBID_TIMEOUT
     });
-    var googletag = googletag || {};
-    googletag.cmd = googletag.cmd || [];
-    googletag.cmd.push(function() {
-    googletag.pubads().disableInitialLoad();
-   });
+    
     });
     function initAdserver1() {
      if (adyjs.initAdserver1Set) return;
@@ -137,6 +133,12 @@ adysis: { bidCpmAdjustment : function(bidCpm){ return 0.28;} }
      setTimeout(function() {
      initAdserver1();
      }, site_config.FAILSAFE_TIMEOUT);
+     
+     var googletag = googletag || {};
+     googletag.cmd = googletag.cmd || [];
+     googletag.cmd.push(function() {
+     googletag.pubads().disableInitialLoad();
+    });
      
 googletag.cmd.push(function () {
     (function (googletag, adyjs, config) {
