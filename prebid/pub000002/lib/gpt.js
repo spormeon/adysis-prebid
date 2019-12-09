@@ -5,6 +5,6 @@ gads.async = true;
 gads.rel = "preload"
 gads.type = "text/javascript";
 gads.src = "https://securepubads.g.doubleclick.net/tag/js/gpt.js";
-var nodegads = document.getElementsByTagName("footerbid1")[0];
+var nodegads = document.getElementsByTagName("head")[0];
 nodegads.insertBefore(gads, nodegads.thirdChild);
 })();
