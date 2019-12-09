@@ -20,7 +20,7 @@ require(["app/bannerbidders"], function (bannerbidders) {
 require(["app/adunitsconfig"], function (adunitsconfig) {
 require(["app/custombuckets"], function (custombuckets) {
 require(["app/prebidconfig_min"], function (prebidconfig) {
-require(["app/assertivecustom"], function (assertivecustom) {
+require(["app/assertivecustom_min"], function (assertivecustom) {
 require(["assertive"], function (assertive) {
 require(["preconnect_min"], function (preconnect) {	
 //require(["app/addata"], function (preconnect) {	
