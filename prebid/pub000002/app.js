@@ -17,7 +17,7 @@ require(["app/assertiveconfig"], function (assertiveconfig) {
 require(["app/nativebidders"], function (nativebidders) {
 require(["app/outstreambidders"], function (outstreambidders) {
 require(["app/bannerbidders"], function (bannerbidders) {
-require(["app/adunitsconfig"], function (adunitsconfig) {
+require(["app/adunitsconfig_min"], function (adunitsconfig) {
 require(["app/custombuckets"], function (custombuckets) {
 require(["app/prebidconfig"], function (prebidconfig) {
 require(["app/assertivecustom"], function (assertivecustom) {
