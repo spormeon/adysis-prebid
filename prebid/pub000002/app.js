@@ -13,7 +13,7 @@ require(["app/siteconfig_min"], function (siteconfig) {
 // require(["app/unrulyconfig"], function (unrulyconfig) {
 //require(["app/amazonbidder"], function (amazonbidder) {
 require(["app/bidcachemap_min"], function (bidcachemap) {
-require(["app/assertiveconfig"], function (assertiveconfig) {
+require(["app/assertiveconfig_min"], function (assertiveconfig) {
 require(["app/nativebidders"], function (nativebidders) {
 require(["app/outstreambidders"], function (outstreambidders) {
 require(["app/bannerbidders"], function (bannerbidders) {
