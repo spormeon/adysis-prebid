@@ -130,11 +130,7 @@ adysis: { bidCpmAdjustment : function(bidCpm){ return 0.28;} }
      setTimeout(function() {
      initAdserver1();
      }, site_config.FAILSAFE_TIMEOUT);
-     var googletag = googletag || {};
-     googletag.cmd = googletag.cmd || [];
-     googletag.cmd.push(function() {
-     googletag.pubads().disableInitialLoad();
-    }); 
+      
 googletag.cmd.push(function () {
     (function (googletag, adyjs, config) {
      var sizeMappings = {};
