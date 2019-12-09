@@ -7,7 +7,7 @@ paths: { app: '../app' }
 require(["prebid2.40.0adyjs"], function (prebid) {
 require(["gpt"], function (gpt) {
 require(["bidfilter"], function (bidfilter) {
-require(["app/timeoutmap"], function (timeoutmap) {
+require(["app/timeoutmap_min"], function (timeoutmap) {
 require(["app/floorpricemap"], function (floorpricemap) {
 require(["app/siteconfig"], function (siteconfig) {
 // require(["app/unrulyconfig"], function (unrulyconfig) {
