@@ -5,7 +5,7 @@ paths: { app: '../app' }
 // your application logic in there.
 //require(["app/slotsonpage"], function (slotsonpage) {
 require(["prebid2.40.0adyjs"], function (prebid) {
-require(["gpt"], function (gpt) {
+require(["gpt_min"], function (gpt) {
 require(["bidfilter_min"], function (bidfilter) {
 require(["app/timeoutmap_min"], function (timeoutmap) {
 require(["app/floorpricemap_min"], function (floorpricemap) {
