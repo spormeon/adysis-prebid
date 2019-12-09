@@ -9,7 +9,7 @@ require(["gpt"], function (gpt) {
 require(["bidfilter"], function (bidfilter) {
 require(["app/timeoutmap_min"], function (timeoutmap) {
 require(["app/floorpricemap_min"], function (floorpricemap) {
-require(["app/siteconfig"], function (siteconfig) {
+require(["app/siteconfig_min"], function (siteconfig) {
 // require(["app/unrulyconfig"], function (unrulyconfig) {
 //require(["app/amazonbidder"], function (amazonbidder) {
 require(["app/bidcachemap"], function (bidcachemap) {
