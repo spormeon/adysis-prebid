@@ -11,7 +11,7 @@ require(["app/timeoutmap"], function (timeoutmap) {
 require(["app/floorpricemap"], function (floorpricemap) {
 require(["app/siteconfig"], function (siteconfig) {
 // require(["app/unrulyconfig"], function (unrulyconfig) {
-require(["app/amazonbidder"], function (amazonbidder) {
+//require(["app/amazonbidder"], function (amazonbidder) {
 require(["app/bidcachemap"], function (bidcachemap) {
 require(["app/assertiveconfig"], function (assertiveconfig) {
 require(["app/nativebidders"], function (nativebidders) {
@@ -41,7 +41,7 @@ require(["preconnect"], function (preconnect) {
 });
 });
 });
-});
+//});
 // });
 // });
 // });
