@@ -13,7 +13,7 @@ bids: [
 { bidder: 'bidder10', params: { cf: '300X250', cp: '561446', ct: '602639' } }, /* 300x250 */
 { bidder: 'bidder5', params: { tagid: '575683' } }, /* 300x250 */
 //{ bidder: 'somoaudience', params: { placement_hash: '1152340cac3268b0e737b49c1382cd2b' } }, /*300x250*/
-{ bidder: 'bidder12', params: { siteId : 'cLN3UCBHar5OfDrkHcnlKl', productId: 'siab' } }, /*All sizes*/
+//{ bidder: 'bidder12', params: { siteId : 'cLN3UCBHar5OfDrkHcnlKl', productId: 'siab' } }, /*All sizes*/
 { bidder: 'bidder9', params: { placementId: '76184', zone: '1r', path: 'mvo' } }, /* one placementId for all sizes */
 //{ bidder: 'adsparc', params: { networkId: '9969', siteId: '1019801' } }, /*one placementId for all sizes*/	
 //{ bidder: 'komoona', params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: '2d14facbe61621faad0c7b2aa0458cff' } },  /* Golfwrx.com _KB 300x250 */

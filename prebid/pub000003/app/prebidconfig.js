@@ -15,7 +15,7 @@
      adyjs.aliasBidder('rhythmone','bidder9');
      adyjs.aliasBidder('pulsepoint','bidder10'); 
      adyjs.aliasBidder('vi','bidder11');
-     adyjs.aliasBidder('33across','bidder12');
+     //adyjs.aliasBidder('33across','bidder12');
      adyjs.aliasBidder('conversant','bidder13');
      adyjs.aliasBidder('smartyads','bidder14');
      adyjs.aliasBidder('oftmedia','bidder15');
@@ -70,7 +70,7 @@ bidder10:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ ret
 bidder11:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 1.00; } },
 //cedato:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 1.00; } },
 //komoona:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 1.00; } },
-bidder12:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 1.00; } },
+//bidder12:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 1.00; } },
 bidder13:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 1.00; } },
 //atomx:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 1.00; } },
 bidder14:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 1.00; } },
