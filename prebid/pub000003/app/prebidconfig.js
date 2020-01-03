@@ -6,7 +6,7 @@
   // alias for bidder
      adyjs.aliasBidder('aol','bidder1'); 
      adyjs.aliasBidder('districtm','bidder2');
-     adyjs.aliasBidder('districtDMX','bidder3');
+     adyjs.aliasBidder('districtmDMX','bidder3');
      adyjs.aliasBidder('teads','bidder4');
      adyjs.aliasBidder('sovrn','bidder5');
      adyjs.aliasBidder('beachfront','bidder6');
