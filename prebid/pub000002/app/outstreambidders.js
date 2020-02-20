@@ -29,6 +29,6 @@ bids: [
 { bidder: 'emx_digital', params: { tagid: '77460', video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }, /* outstream */
 { bidder: 'brealtime', params: { placementId: '16714331', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } },  /* video placement */
 { bidder: 'smartrtb', params: { zoneId: "oER0LEUveIUa2IMZI3uR" } },
-{ bidder: 'viewdeosDX', params: { aid: 305784, outstream: { type: "inread", audio_setting: "muted", video_controls: "hover" } } }
+{ bidder: 'viewdeosDX', params: { aid: 505205, outstream: { type: "inread", audio_setting: "muted", video_controls: "hover" } } }
 ] //./bids
 };
