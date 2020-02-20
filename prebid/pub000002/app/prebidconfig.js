@@ -71,7 +71,7 @@ adysis: { bidCpmAdjustment : function(bidCpm){ return 0.28;} }
     adyjs.setConfig({
     	rubicon: {singleRequest: true},
     	priceGranularity: customConfigObjectA,
-     consentManagement: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400, allowAuctionWithoutConsent: true },
+     consentManagement: { gdpr: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400, allowAuctionWithoutConsent: true }, usp: { timeout: PREBID_TIMEOUT*400 } },
       cache: {url: "https://prebid.adnxs.com/pbc/v1/cache"},
       s2sConfig: {
         accountId: 'e31f627f-53a3-4288-9979-482d3c6ffc76',
