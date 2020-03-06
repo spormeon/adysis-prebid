@@ -1,13 +1,13 @@
 var adUnits = [
 //new ad unit block
 {
-code: 'div-gpt-ad-1512718908700-5',
+code: 'inreedvid4Slot',
 labelAny: ['desktop', 'tablet', 'phone'],
 mediaTypes: { native: { image: { sizes: [300, 100], sendId: true }, title: { len: 50, sendId: true }, sponsoredBy: { required: true, sendId: true }, clickUrl: { required: true, sendId: true } } },
 bids: native_bidders.bids   
 },
 {
-code: 'div-gpt-ad-1512718908700-5',
+code: 'inreedvid4Slot',
 labelAny: ['desktop', 'tablet', 'phone'],
 mediaTypes: { video:  { context: 'outstream', playerSize: [[550, 310]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'], playbackmethod: [2], minduration: 0,  maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10], linearity: 1, api: [1,2,3,4,5,6] } },
 renderer: { url: 'https://adtag.adysis.com/ANOutstreamVideo.js', render: function (bid) { ANOutstreamVideo.renderAd({ targetId: bid.adUnitCode, adResponse: bid.adResponse, }); } },
@@ -15,7 +15,7 @@ renderer: { options: { adText: 'Advertisement' } },
 bids: outstream_bidders.bids
 },
 {
-code: 'div-gpt-ad-1512718908700-5',
+code: 'inreedvid4Slot',
 labelAny: ['desktop', 'tablet', 'phone'],
 mediaTypes: { banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50],[320, 100],[336, 280],[580, 400],[550, 310]] } },
 bids: banner_bidders.bids
