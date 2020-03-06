@@ -400,3 +400,16 @@ advertising.com, 25034, RESELLER
 sonobi.com, 783272317b, RESELLER, d1a215d9eb5aee9e
 spotxchange.com, 85519, RESELLER
 indexexchange.com, 186684, RESELLER
+
+#viewdeosDX
+viewdeos.com, 305784, DIRECT
+advertising.com, 12287, DIRECT
+appnexus.com, 7847, DIRECT, f5ab79cb980f11d1
+aralego.com, par-D2337B42BA884D77CD786A7E26AB9683, DIRECT
+beachfront.com, 4174, RESELLER, e2541279e8e2ca4d
+districtm.io, 101099, DIRECT, 3fd707be9c4527c3
+openx.com, 537144083 , RESELLER, 6a698e2ec38604c6
+openx.com, 540251318, RESELLER, 6a698e2ec38604c6
+pubmatic.com, 156377, RESELLER, 5d62403b186f2ace
+rhythmone.com, 144927031, RESELLER, a670c89d4a324e47
+ucfunnel.com, par-D2337B42BA884D77CD786A7E26AB9683, DIRECT
