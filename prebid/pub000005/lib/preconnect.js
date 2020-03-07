@@ -2,6 +2,14 @@
 (function () {
 var pclink1 = document.createElement("link");
 pclink1.rel = "preconnect";
+pclink1.href = "//ads.vsvl.co.uk/";
+pclink1.crossorigin;
+var nodepclink1 = document.getElementsByTagName("footerbid1")[0];
+nodepclink1.insertBefore(pclink1, nodepclink1.firstChild);
+})();
+(function () {
+var pclink1 = document.createElement("link");
+pclink1.rel = "preconnect";
 pclink1.href = "//www.googletagservices.com/";
 pclink1.crossorigin;
 var nodepclink1 = document.getElementsByTagName("footerbid1")[0];
@@ -226,14 +234,6 @@ nodepclink1.insertBefore(pclink1, nodepclink1.firstChild);
 (function () {
 	var pclink1 = document.createElement("link");
 	pclink1.rel = "preconnect";
-	pclink1.href = "//p.ato.mx";
-	pclink1.crossorigin;
-	var nodepclink1 = document.getElementsByTagName("footerbid1")[0];
-	nodepclink1.insertBefore(pclink1, nodepclink1.firstChild);
-	})();
-(function () {
-	var pclink1 = document.createElement("link");
-	pclink1.rel = "preconnect";
 	pclink1.href = "//s0.2mdn.net";
 	pclink1.crossorigin;
 	var nodepclink1 = document.getElementsByTagName("footerbid1")[0];
@@ -387,14 +387,6 @@ nodepclink1.insertBefore(pclink1, nodepclink1.firstChild);
 	var pclink1 = document.createElement("link");
 	pclink1.rel = "preconnect";
 	pclink1.href = "//sync.bfmio.com";
-	pclink1.crossorigin;
-	var nodepclink1 = document.getElementsByTagName("footerbid1")[0];
-	nodepclink1.insertBefore(pclink1, nodepclink1.firstChild);
-	})();
-(function () {
-	var pclink1 = document.createElement("link");
-	pclink1.rel = "preconnect";
-	pclink1.href = "//www.golfwrx.com";
 	pclink1.crossorigin;
 	var nodepclink1 = document.getElementsByTagName("footerbid1")[0];
 	nodepclink1.insertBefore(pclink1, nodepclink1.firstChild);
