@@ -204,7 +204,7 @@ googletag.cmd.push(function () {
 // the order below determines the order on the page //
     })(window.googletag, window.adyjs, {
 definitons: {
-inreedvid13Slot: { adUnitPath: "/1001824/adp100001/adp100001J", size: "mappingleaderslot", sizeMapping: "mappingleaderslot", timeout: site_config.refresh_rate, },
+inreedvid13Slot: { adUnitPath: "/1001824/adp100001/adp100001J", size: [[970, 90],[970, 250],[728, 90],[468, 60],[320, 50],[320, 100]], sizeMapping: "mappingleaderslot", timeout: site_config.refresh_rate, },
 inreedvid9Slot: { adUnitPath: "/1001824/adp100001/adp100001F", size: "mappingmenuslot", sizeMapping: "mappingmenuslot", timeout: site_config.refresh_rate, },
 inreedvid4Slot: { adUnitPath: "/1001824/adp100001/adp100001A", size: "mappinginreedvidslot", sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
 inreedvid5Slot: { adUnitPath: "/1001824/adp100001/adp100001B", size: "mappingmenuslot", sizeMapping: "mappingmenuslot", timeout: site_config.refresh_rate, },
