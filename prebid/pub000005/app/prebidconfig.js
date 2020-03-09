@@ -205,11 +205,11 @@ googletag.cmd.push(function () {
     })(window.googletag, window.adyjs, {
 definitons: {
 inreedvid13Slot: { adUnitPath: "/1001824/adp100001/adp100001J", size: [[970, 90],[970, 250],[728, 90],[468, 60],[320, 50],[320, 100]], sizeMapping: "mappingleaderslot", timeout: site_config.refresh_rate, },
-inreedvid9Slot: { adUnitPath: "/1001824/adp100001/adp100001F", size: "mappingmenuslot", sizeMapping: "mappingmenuslot", timeout: site_config.refresh_rate, },
-inreedvid4Slot: { adUnitPath: "/1001824/adp100001/adp100001A", size: "mappinginreedvidslot", sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
-inreedvid5Slot: { adUnitPath: "/1001824/adp100001/adp100001B", size: "mappingmenuslot", sizeMapping: "mappingmenuslot", timeout: site_config.refresh_rate, },
-inreedvid8Slot: { adUnitPath: "/1001824/adp100001/adp100001E", size: "mappinginreedvidslot", sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
-inreedvid6Slot: { adUnitPath: "/1001824/adp100001/adp100001C", size: "mappinginreedvidslot", sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
+inreedvid9Slot: { adUnitPath: "/1001824/adp100001/adp100001F", size: [[300, 600],[300, 250],[250, 250],[160, 600],[120, 600]], sizeMapping: "mappingmenuslot", timeout: site_config.refresh_rate, },
+inreedvid4Slot: { adUnitPath: "/1001824/adp100001/adp100001A", size: [[550, 310],[728, 90],[300, 250],[250, 250],[468, 60],[320, 50],[336, 280],[580, 400],[320, 100],[1, 1]], sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
+inreedvid5Slot: { adUnitPath: "/1001824/adp100001/adp100001B", size: [[300, 600],[300, 250],[250, 250],[160, 600],[120, 600]], sizeMapping: "mappingmenuslot", timeout: site_config.refresh_rate, },
+inreedvid8Slot: { adUnitPath: "/1001824/adp100001/adp100001E", size: [[550, 310],[728, 90],[300, 250],[250, 250],[468, 60],[320, 50],[336, 280],[580, 400],[320, 100],[1, 1]], sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
+inreedvid6Slot: { adUnitPath: "/1001824/adp100001/adp100001C", size: [[550, 310],[728, 90],[300, 250],[250, 250],[468, 60],[320, 50],[336, 280],[580, 400],[320, 100],[1, 1]], sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
 //inreedvid10Slot: { adUnitPath: "/1001824/adp100001/adp100001G", size: "mappinginreedvidslot", sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
 //inreedvid7Slot: { adUnitPath: "/1001824/adp100001/adp100001D", size: "mappinginreedvidslot", sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
 },
