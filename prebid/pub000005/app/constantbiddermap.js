@@ -40,8 +40,8 @@ var constantbidderstatusMap = {
 6 : 0.06,
 7 : 0.07,
 8 : 0.08,
-9 : OFF,
-10 : OFF,
+9 : false,
+10 : false,
 11 : 0.01,
 12 : 0.02,
 13 : 0.03,
@@ -58,7 +58,7 @@ var constantbidderstatusMap = {
 };
 var cbs = new Date().getUTCHours();
 CONSTANT_BIDDER_STATUS = constantbidderstatusMap[cbs];
-console.log("Constant Bidder Status:", CONSTANT_BIDDER_STATUS );
+console.log("Constant Bidder Enabled:", CONSTANT_BIDDER_STATUS );
 
 
 CONSTANT_BIDDER_STATUS
