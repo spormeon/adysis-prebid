@@ -26,5 +26,5 @@ var constantbidderpriceMap = {
 23 : 0.03
 };
 var cbp = new Date().getUTCHours();
-CONSTANT_BIDDER_PRICE = constantbidderpriceeMap[cbp];
+CONSTANT_BIDDER_PRICE = constantbidderpriceMap[cbp];
 console.log("Constant Bidder price:", CONSTANT_BIDDER_PRICE );
