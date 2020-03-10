@@ -59,3 +59,6 @@ var constantbidderstatusMap = {
 var cbs = new Date().getUTCHours();
 CONSTANT_BIDDER_STATUS = constantbidderstatusMap[cbs];
 console.log("Constant Bidder Status:", CONSTANT_BIDDER_STATUS );
+
+
+CONSTANT_BIDDER_STATUS
