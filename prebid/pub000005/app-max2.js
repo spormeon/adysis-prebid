@@ -1,4 +1,4 @@
-importScripts('lib/prebid3.10.0adyjs.js');
+importScripts('https://ads.vsvl.co.uk/lib/prebid3.10.0adyjs.js');
 // your application logic in there.
 //require(["app/slotsonpage"], function (slotsonpage) {
 //require(["lib/prebid2.40.0adyjs"], function (prebid) {
