@@ -212,6 +212,7 @@ inreedvid8Slot: { adUnitPath: "/21665095471/specktra_footer_1", size: [[550, 310
 inreedvid6Slot: { adUnitPath: "/21665095471/specktra_footer_2", size: [[550, 310],[728, 90],[300, 250],[250, 250],[468, 60],[320, 50],[336, 280],[580, 400],[320, 100],[1, 1]], sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
 //inreedvid10Slot: { adUnitPath: "/1001824/adp100001/adp100001G", size: "mappinginreedvidslot", sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
 //inreedvid7Slot: { adUnitPath: "/1001824/adp100001/adp100001D", size: "mappinginreedvidslot", sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
+
 },
 sizeMappings: {
 mappinginreedvidslot: [
