@@ -1,20 +1,20 @@
-     var adyjs = adyjs || {};
-     adyjs.que = adyjs.que || [];
-     adyjs.que.push(function() {
-     adyjs.addAdUnits(adUnits);
-     //adyjs.addAdUnits(videoAdUnit); // add your ad units to the bid request
+     var pbjs = pbjs || {};
+     pbjs.que = pbjs.que || [];
+     pbjs.que.push(function() {
+     pbjs.addAdUnits(adUnits);
+     //pbjs.addAdUnits(videoAdUnit); // add your ad units to the bid request
   // alias for bidder
-     //adyjs.aliasBidder('appnexus','brealtime'); 
-     //adyjs.aliasBidder('appnexus','springserveAlias2');
-     //adyjs.aliasBidder('appnexus','districtm');
-     //adyjs.aliasBidder('gamoshi','viewdeos');
-     adyjs.aliasBidder('onedisplay','aol');
-     adyjs.aliasBidder('appnexus','adysis');
-     //adyjs.aliasBidder('serverbid','adsparc');
-     //adyjs.aliasBidder('aardvark','adsparc');
-     // adyjs.aliasBidder('appnexus','152media');
+     //pbjs.aliasBidder('appnexus','brealtime'); 
+     //pbjs.aliasBidder('appnexus','springserveAlias2');
+     //pbjs.aliasBidder('appnexus','districtm');
+     //pbjs.aliasBidder('gamoshi','viewdeos');
+     pbjs.aliasBidder('onedisplay','aol');
+     pbjs.aliasBidder('appnexus','adysis');
+     //pbjs.aliasBidder('serverbid','adsparc');
+     //pbjs.aliasBidder('aardvark','adsparc');
+     // pbjs.aliasBidder('appnexus','152media');
   // adjust the bid in real time before the auction takes place
-     adyjs.bidderSettings = {
+     pbjs.bidderSettings = {
 //standard: {
 //adserverTargeting: [
 //{ key: "hb_bidder", val: function(bidResponse) { return bidResponse.bidderCode; } },
@@ -69,7 +69,7 @@ viewdeosDX:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ r
 adysis: { bidCpmAdjustment : function(bidCpm){ return CONSTANT_BIDDER_PRICE;} }
 //adysis: { bidCpmAdjustment : function(bidCpm){ if(bidCpm < 300 ){ return 0.68; } },
 };
-    adyjs.setConfig({
+    pbjs.setConfig({
     	rubicon: {singleRequest: true},
     	priceGranularity: customConfigObjectA,
      consentManagement: { gdpr: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400, allowAuctionWithoutConsent: true }, usp: { timeout: PREBID_TIMEOUT*400 } },
@@ -111,23 +111,23 @@ adysis: { bidCpmAdjustment : function(bidCpm){ return CONSTANT_BIDDER_PRICE;} }
          { mediaQuery: '(min-width: 1px) and (max-width: 499px)', sizesSupported: [[300,250],[250,250],[1,1]], labels: [ 'phonemenu'] }
        ]
      });
-    adyjs.requestBids({
+    pbjs.requestBids({
      bidsBackHandler: initAdserver1,
      timeout: PREBID_TIMEOUT
     });
     });
     function initAdserver1() {
-     if (adyjs.initAdserver1Set) return;
-     adyjs.initAdserver1Set = true;
+     if (pbjs.initAdserver1Set) return;
+     pbjs.initAdserver1Set = true;
      googletag.cmd.push(function() {
-     adyjs.que.push(function() {
-     adyjs.setTargetingForGPTAsync();
-     adyjs.triggerUserSyncs();
+     pbjs.que.push(function() {
+     pbjs.setTargetingForGPTAsync();
+     pbjs.triggerUserSyncs();
      googletag.pubads().refresh();
      });
      });
      }
-  // in case adyjs doesn't load
+  // in case pbjs doesn't load
      setTimeout(function() {
      initAdserver1();
      }, site_config.FAILSAFE_TIMEOUT);
@@ -139,17 +139,17 @@ adysis: { bidCpmAdjustment : function(bidCpm){ return CONSTANT_BIDDER_PRICE;} }
     });
      
 googletag.cmd.push(function () {
-    (function (googletag, adyjs, config) {
+    (function (googletag, pbjs, config) {
      var sizeMappings = {};
       var slots = {};
        function refreshSlot(slot) {
-       adyjs.que.push(function() {
-       adyjs.requestBids({
+       pbjs.que.push(function() {
+       pbjs.requestBids({
        timeout: PREBID_TIMEOUT,
     // useBidCache: USERBIDCACHE,
        adUnitCodes: [slot.getSlotElementId()],
        bidsBackHandler: function() {
-       adyjs.setTargetingForGPTAsync([slot.getSlotElementId()]);
+       pbjs.setTargetingForGPTAsync([slot.getSlotElementId()]);
     //googletag.destroySlots([slot]);
        googletag.pubads().refresh([slot]);
     }
@@ -202,7 +202,7 @@ googletag.cmd.push(function () {
     });
     // googletag.pubads().refresh();
 // the order below determines the order on the page //
-    })(window.googletag, window.adyjs, {
+    })(window.googletag, window.pbjs, {
 definitons: {
 inreedvid13Slot: { adUnitPath: "/21665095471/specktra_top_1", size: [[970, 90],[970, 250],[728, 90],[468, 60],[320, 50],[320, 100]], sizeMapping: "mappingleaderslot", timeout: site_config.refresh_rate, },
 inreedvid9Slot: { adUnitPath: "/21665095471/specktra_mrec_1", size: [[300, 600],[300, 250],[250, 250],[160, 600],[120, 600]], sizeMapping: "mappingmenuslot", timeout: site_config.refresh_rate, },
