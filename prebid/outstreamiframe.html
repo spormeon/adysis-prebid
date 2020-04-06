@@ -4,69 +4,55 @@
 	<script async src="//www.googletagservices.com/tag/js/gpt.js"></script>
         <script async src="//acdn.adnxs.com/prebid/not-for-prod/prebid.js"></script>
 	
-<script async src="https://cdn.adnxs.com/renderer/video/ANOutstreamVideo.js"></script>
+<script>
+		
+    var pbjs = pbjs || {};
+    pbjs.que = pbjs.que || [];
+
+    var adUnits = [{
+        code: 'video1',
+        mediaTypes: {
+            video: {
+                playerSize: [640, 480],
+                context: 'outstream'
+            }
+        },
+        bids: [{
+            bidder: 'appnexus',
+            params: {
+                placementId: 13232385,
+                video: {
+                    skippable: true,
+                    playback_method: ['auto_play_sound_off']
+                }
+            }
+        }]
+    }];
+
+    pbjs.que.push(function() {
+        pbjs.addAdUnits(adUnits);
+        pbjs.requestBids({
+            timeout: 1000,
+            bidsBackHandler: function(bids) {
+                var highestCpmBids = pbjs.getHighestCpmBids('video1');
+                pbjs.renderAd(document, highestCpmBids[0].adId);
+            }
+        });
+    });
+
+</script>
 	
 
 </head>
 
 <body>
 
-	<script>
-		
-var iframe = document.createElement('iframe');
-		var html = "<div id='video1'> <p>Prebid Outstream Video Ad</p> </div>";
-		iframe.setAttribute('id','myFrame');
-    iframe.sandbox = 'allow-scripts allow-modal allow-same-origin allow-forms allow-top-navigation allow-top-navigation-by-user-activation allow-popups';
-		iframe.width = '500';
-    iframe.height = '500';
-		document.body.appendChild(iframe);
-		   var doc = document.getElementById('myFrame').contentWindow.document;
-   doc.open();
-   doc.write('<html><head><title></title></head><body>'+html+'</body></html>');
-   doc.close();
-
-   var contentDoc = document.getElementById('myFrame').contentDocument;
-   console.log(contentDoc)
-	    var pbjs = pbjs || {};
-	    pbjs.que = pbjs.que || [];
 	
-	    var adUnits = [{
-	        code: 'video1',
-	        mediaTypes: {
-	            video: {
-	                playerSize: [640, 480],
-	                context: 'outstream'
-	            }
-	        },
-			
-				
-	        bids: [{
-	            bidder: 'appnexus',
-	            params: {
-	                placementId: 13232385,
-	                video: {
-	                    skippable: true,
-	                    playback_method: ['auto_play_sound_off']
-	                }
-	            }
-	        }]
-        }];
 
-        pbjs.que.push(function() {
-        pbjs.setConfig({ debug: true });
-
-            pbjs.addAdUnits(adUnits);
-            pbjs.requestBids({
-                timeout: 1000,
-                bidsBackHandler: function(bids) {
-                    var highestCpmBids = pbjs.getHighestCpmBids('video1');
-                    pbjs.renderAd(contentDoc, highestCpmBids[0].adId);
-                }
-            });
-        });
-
-    </script>
     
+  <div id='video1'>
+	<p>Prebid Outstream Video Ad</p>
+</div>  
 	
 </body>
 
