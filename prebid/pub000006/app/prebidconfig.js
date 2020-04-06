@@ -76,7 +76,7 @@ adysis: { bidCpmAdjustment : function(bidCpm){ return CONSTANT_BIDDER_PRICE;} }
       cache: {url: "https://prebid.adnxs.com/pbc/v1/cache"},
       s2sConfig: {
         accountId: 'e31f627f-53a3-4288-9979-482d3c6ffc76',
-        enabled: true,
+        enabled: false,
         bidders: ['sovrn','rhythmone','pulsepoint','rubicon','ix','openx','lockerdome'],
         timeout: PREBID_TIMEOUT-300,
         adapter: 'prebidServer',
