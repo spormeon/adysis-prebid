@@ -14,7 +14,20 @@ pipelines:
           deployment: ads_vsvl_co_uk adysis backup
           # trigger: manual  # Uncomment to make this a manual deployment.
           script:
-            - aws s3 --region "us-east-1" sync prebid/ s3://adysis-ad-reporter --cache-control "public, max-age=31536000" --delete
+            - pipe: atlassian/aws-s3-deploy:0.4.1
+              variables:
+                  AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+                  AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+                  AWS_DEFAULT_REGION: 'us-east-1'
+                  S3_BUCKET: 'adysis-ad-reporter'
+                  LOCAL_PATH: 'prebid/'
+
+            - pipe: atlassian/aws-cloudfront-invalidate:0.1.1
+              variables:
+                  AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+                  AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+                  AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION
+                  DISTRIBUTION_ID: 'E33HVAM2MUB5X3'
       - step:
          name: Deploy to Adysis Prebid Google Bucket
          deployment: Adysis Prebid Google Bucket
