@@ -10,6 +10,12 @@ pipelines:
           script:
             - aws s3 --region "us-east-1" sync prebid/ s3://adysis-ad-delivery-js --cache-control "public, max-age=31536000" --delete
       - step:
+          name: Deploy to ads_vsvl_co_uk adysis backup
+          deployment: ads_vsvl_co_uk adysis backup
+          # trigger: manual  # Uncomment to make this a manual deployment.
+          script:
+            - aws s3 --region "us-east-1" sync prebid/ s3://adysis-ad-reporter --cache-control "public, max-age=31536000" --delete
+      - step:
          name: Deploy to Adysis Prebid Google Bucket
          deployment: Adysis Prebid Google Bucket
          # trigger: manual  # Uncomment to make this a manual deployment.
@@ -29,9 +35,4 @@ pipelines:
                 # STORAGE_CLASS: '<string>' # Optional.
                 # EXTRA_ARGS: '<string>' # Optional.
                 # DEBUG: '<boolean>' # Optional.
-      - step:
-         name: Deploy to ads_vsvl_co_uk adysis backup
-         deployment: ads_vsvl_co_uk adysis backup
-         # trigger: manual  # Uncomment to make this a manual deployment.
-         script:
-           - aws s3 --region "us-east-1" sync prebid/ s3://adysis-ad-reporter --cache-control "public, max-age=31536000" --delete
+      
