@@ -26,7 +26,7 @@ pipelines:
               variables:
                   AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
                   AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
-                  # AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION
+                  AWS_DEFAULT_REGION: 'us-east-1'
                   DISTRIBUTION_ID: 'E33HVAM2MUB5X3'
       - step:
          name: Deploy to Adysis Prebid Google Bucket
