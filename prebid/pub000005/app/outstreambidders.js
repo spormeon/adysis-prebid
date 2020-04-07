@@ -10,6 +10,7 @@ bids: [
 //{ bidder: 'komoona', params: { hbid: 'e885cf345b55406b9c37415b7fcc8409', placementId: '2d14facbe61621faad0c7b2aa0458cff' } },  /* Golfwrx.com _KB 300x250 */
 //{ bidder: "yieldmo", params: { placementId: "1990667709809591856" } }, /* no adapter in file */
 //{ bidder: 'unruly', params: { UUID: '23984444', SiteId: 15145 } },
+{ bidder: 'unruly',     params: { targetingUUID: '6f15e139-5f18-49a1-b52f-87e5e69ee65e', siteId: 1081534 } }, /* test bids */
 //{ bidder: 'contentignite', params: { accountID: '168237', zoneID: '316288'} }, /*300x250*/
 //{ bidder: 'viewdeos', params: { supplyPartnerId: '1985', rendererUrl: 'https://s.viewdeos.io/video/latest/renderer.js' } }, /* oustream  */
 //{ bidder: 'sekindoUM', params: { spaceId: '87709' } }, /* 300x250 */ 
