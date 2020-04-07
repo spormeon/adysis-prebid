@@ -1,5 +1,3 @@
-image: cgswong/aws
-
 pipelines:
   branches:
     master:
@@ -8,7 +6,26 @@ pipelines:
           deployment: Adysis Prebid AWS S3
           # trigger: manual  # Uncomment to make this a manual deployment.
           script:
-            - aws s3 --region "us-east-1" sync prebid/ s3://adysis-ad-delivery-js --cache-control "public, max-age=31536000" --delete
+            - pipe: atlassian/aws-s3-deploy:0.4.1
+              variables:
+                  AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+                  AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+                  AWS_DEFAULT_REGION: 'us-east-1'
+                  S3_BUCKET: 'adysis-ad-delivery-js'
+                  LOCAL_PATH: 'prebid/'
+                  #ACL: 'public-read'
+                  CACHE_CONTROL: 'max-age=31536000'
+                  #EXPIRES: '2018-10-01T00:00:00+00:00'
+                  DELETE_FLAG: 'false'
+                  #EXTRA_ARGS: '--follow-symlinks --quiet'
+                  #DEBUG: 'true'
+
+            - pipe: atlassian/aws-cloudfront-invalidate:0.1.1
+              variables:
+                  AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+                  AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+                  AWS_DEFAULT_REGION: 'us-east-1'
+                  DISTRIBUTION_ID: 'E2ERH7S5YEPI4G' # ad_adysis
       - step:
           name: Deploy to ads_vsvl_co_uk adysis backup
           deployment: ads_vsvl_co_uk adysis backup
@@ -26,32 +43,32 @@ pipelines:
                   #EXPIRES: '2018-10-01T00:00:00+00:00'
                   DELETE_FLAG: 'false'
                   #EXTRA_ARGS: '--follow-symlinks --quiet'
-                  DEBUG: 'true'
+                  #DEBUG: 'true'
 
             - pipe: atlassian/aws-cloudfront-invalidate:0.1.1
               variables:
                   AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
                   AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
                   AWS_DEFAULT_REGION: 'us-east-1'
-                  DISTRIBUTION_ID: 'E33HVAM2MUB5X3'
+                  DISTRIBUTION_ID: 'E33HVAM2MUB5X3' # ads_vsvl
       - step:
-         name: Deploy to Adysis Prebid Google Bucket
-         deployment: Adysis Prebid Google Bucket
-         # trigger: manual  # Uncomment to make this a manual deployment.
-         script:       
+          name: Deploy to Adysis Prebid Google Bucket
+          deployment: Adysis Prebid Google Bucket
+          # trigger: manual  # Uncomment to make this a manual deployment.
+          script:       
             - pipe: atlassian/google-cloud-storage-deploy:0.4.0
               variables:
-                KEY_FILE: '<string>'
-                PROJECT: 'Adysis'
-                BUCKET: 'adysis'
-                SOURCE: '.'
-                # CACHE_CONTROL: '<string>' # Optional.
-                # CONTENT_DISPOSITION: '<string>' # Optional.
-                # CONTENT_ENCODING: '<string>' # Optional.
-                # CONTENT_LANGUAGE: '<string>' # Optional.
-                # CONTENT_TYPE: '<string>' # Optional.
-                # ACL: '<string>' # Optional.
-                # STORAGE_CLASS: '<string>' # Optional.
-                # EXTRA_ARGS: '<string>' # Optional.
-                # DEBUG: '<boolean>' # Optional.
+                  KEY_FILE: '<string>'
+                  PROJECT: 'Adysis'
+                  BUCKET: 'adysis'
+                  SOURCE: '.'
+                  # CACHE_CONTROL: '<string>' # Optional.
+                  # CONTENT_DISPOSITION: '<string>' # Optional.
+                  # CONTENT_ENCODING: '<string>' # Optional.
+                  # CONTENT_LANGUAGE: '<string>' # Optional.
+                  # CONTENT_TYPE: '<string>' # Optional.
+                  # ACL: '<string>' # Optional.
+                  # STORAGE_CLASS: '<string>' # Optional.
+                  # EXTRA_ARGS: '<string>' # Optional.
+                  # DEBUG: '<boolean>' # Optional.
       
