@@ -21,6 +21,12 @@ pipelines:
                   AWS_DEFAULT_REGION: 'us-east-1'
                   S3_BUCKET: 'adysis-ad-reporter'
                   LOCAL_PATH: 'prebid/'
+                  #ACL: 'public-read'
+                  CACHE_CONTROL: 'max-age=31536000'
+                  #EXPIRES: '2018-10-01T00:00:00+00:00'
+                  DELETE_FLAG: 'false'
+                  #EXTRA_ARGS: '--follow-symlinks --quiet'
+                  DEBUG: 'true'
 
             - pipe: atlassian/aws-cloudfront-invalidate:0.1.1
               variables:
