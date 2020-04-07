@@ -61,7 +61,7 @@ pipelines:
                   KEY_FILE: $GOOGLE_KEY_FILE
                   PROJECT: 'Adysis'
                   BUCKET: 'adysis'
-                  SOURCE: '.'
+                  SOURCE: 'prebid/'
                   # CACHE_CONTROL: '<string>' # Optional.
                   # CONTENT_DISPOSITION: '<string>' # Optional.
                   # CONTENT_ENCODING: '<string>' # Optional.
