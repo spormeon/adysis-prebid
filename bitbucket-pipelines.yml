@@ -52,6 +52,12 @@ pipelines:
                   AWS_DEFAULT_REGION: 'us-east-1'
                   DISTRIBUTION_ID: 'E33HVAM2MUB5X3' # ads_vsvl
       - step:
+          name: Clear CloudFlare Cache
+          deployment: Clear CloudFlare Cache
+          # trigger: manual  # Uncomment to make this a manual deployment.
+          script:       
+            - curl -X POST "https://api.cloudflare.com/client/v4/zones/$CF_ZONE/purge_cache" -H "X-Auth-Email:$CF_EMAIL" -H "X-Auth-Key:$CF_AUTH_KEY" -H "Content-Type:application/json" --data '{"purge_everything":true}'
+      - step:
           name: Deploy to Adysis Prebid Google Bucket
           deployment: Adysis Prebid Google Bucket
           # trigger: manual  # Uncomment to make this a manual deployment.
@@ -71,10 +77,5 @@ pipelines:
                   # STORAGE_CLASS: '<string>' # Optional.
                   # EXTRA_ARGS: '<string>' # Optional.
                   # DEBUG: '<boolean>' # Optional.
-      - step:
-          name: Clear CloudFlare Cache
-          deployment: Clear CloudFlare Cache
-          # trigger: manual  # Uncomment to make this a manual deployment.
-          script:       
-           - curl -X POST "https://api.cloudflare.com/client/v4/zones/$CF_ZONE/purge_cache" -H "X-Auth-Email:$CF_EMAIL" -H "X-Auth-Key:$CF_AUTH_KEY" -H "Content-Type:application/json" --data '{"purge_everything":true}'
+      
       
