@@ -41,7 +41,7 @@ pipelines:
                   #ACL: 'public-read'
                   CACHE_CONTROL: 'max-age=31536000'
                   #EXPIRES: '2018-10-01T00:00:00+00:00'
-                  DELETE_FLAG: 'false'
+                  DELETE_FLAG: 'true'
                   #EXTRA_ARGS: '--follow-symlinks --quiet'
                   #DEBUG: 'true'
 
@@ -71,4 +71,10 @@ pipelines:
                   # STORAGE_CLASS: '<string>' # Optional.
                   # EXTRA_ARGS: '<string>' # Optional.
                   # DEBUG: '<boolean>' # Optional.
+      - step:
+          name: Clear CloudFlare Cache
+          deployment: Clear CloudFlare Cache
+          # trigger: manual  # Uncomment to make this a manual deployment.
+          script:       
+           - curl -X POST "https://api.cloudflare.com/client/v4/zones/$CF_ZONE/purge_cache" -H "X-Auth-Email:$CF_EMAIL" -H "X-Auth-Key:$CF_AUTH_KEY" -H "Content-Type:application/json" --data '{"purge_everything":true}'
       
