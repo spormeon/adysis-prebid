@@ -58,7 +58,7 @@ pipelines:
           script:       
             - pipe: atlassian/google-cloud-storage-deploy:0.4.0
               variables:
-                  KEY_FILE: '<string>'
+                  KEY_FILE: $GOOGLE_KEY_FILE
                   PROJECT: 'Adysis'
                   BUCKET: 'adysis'
                   SOURCE: '.'
