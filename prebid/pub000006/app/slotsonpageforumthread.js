@@ -1,5 +1,3 @@
-// load GPT tag
-(function(){var gads=document.createElement("script");gads.async=!0;gads.type="text/javascript";gads.src="https://securepubads.g.doubleclick.net/tag/js/gpt.js";var nodegads=document.getElementsByTagName("head")[0];nodegads.insertBefore(gads,nodegads.firstChild)})()
 //shows the slots on the page
 window.addEventListener("DOMContentLoaded",function(){
 document.querySelector(".p-breadcrumbs").insertAdjacentHTML('afterbegin','<div class="ad-reporter-ahytrfg35423"><div id="advertisement" style="border: 0pt none; margin: auto; text-align: center; color: #999; text-transform: uppercase; font-family: sans-serif; font-size: 9px; font-weight: 400; letter-spacing: .2em; line-height: 1; margin-top: 0px; position: relative; top: -4px;">Advertisement</div><div id="inreedvid13Slot"></div></div><br>');
