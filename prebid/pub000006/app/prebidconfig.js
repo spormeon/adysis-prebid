@@ -155,7 +155,7 @@ googletag.cmd.push(function () {
     // slot.setTargeting(event.slot);
        slot.defineSizeMapping(sizeMappings[def.sizeMapping]);
        slot.addService(googletag.pubads());
-        //googletag.display(key);
+       googletag.display(key);
        slots[key] = { slot: slot };
     });
     // googletag.pubads().refresh();
