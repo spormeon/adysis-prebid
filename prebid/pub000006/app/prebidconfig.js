@@ -169,7 +169,7 @@ inreedvid5Slot: { adUnitPath: "/21665095471/specktra_halfpage", size: [[300, 600
 inreedvid10Slot: { adUnitPath: "/21665095471/specktra_footer_1", size: [[550, 310],[970, 90],[728, 90],[300, 250],[250, 250],[468, 60],[320, 50],[336, 280],[580, 400],[320, 100],[1, 1]], sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
 inreedvid6Slot: { adUnitPath: "/21665095471/specktra_footer_2", size: [[550, 310],[728, 90],[300, 250],[250, 250],[468, 60],[320, 50],[336, 280],[580, 400],[320, 100],[1, 1]], sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
 inreedvid4Slot: { adUnitPath: "/21665095471/specktra_threads_leaderboard_2", size: [[550, 310],[728, 90],[300, 250],[250, 250],[468, 60],[320, 50],[336, 280],[580, 400],[320, 100],[1, 1]], sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
-inreedvid7Slot: { adUnitPath: "/21665095471/specktra_threads_leaderboard_2", size: [[550, 310],[728, 90],[300, 250],[250, 250],[468, 60],[320, 50],[336, 280],[580, 400],[320, 100],[1, 1]], sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
+inreedvid7Slot: { adUnitPath: "/21665095471/specktra_threads_leaderboard_4", size: [[550, 310],[728, 90],[300, 250],[250, 250],[468, 60],[320, 50],[336, 280],[580, 400],[320, 100],[1, 1]], sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
 },
 sizeMappings: {
 mappinginreedvidslot: [
