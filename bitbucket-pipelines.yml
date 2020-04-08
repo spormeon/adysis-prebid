@@ -64,7 +64,7 @@ pipelines:
           script:       
             - pipe: atlassian/google-cloud-storage-deploy:0.4.0
               variables:
-                  KEY_FILE: $GOOGLE_KEY_FILE
+                  KEY_FILE: 'prebid-header-bidding/divine-bonbon-271312-a62f91821ce6.json'
                   PROJECT: 'divine-bonbon-271312'
                   BUCKET: 'adysis'
                   SOURCE: 'prebid/'
