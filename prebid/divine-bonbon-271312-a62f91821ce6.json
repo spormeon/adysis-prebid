@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "divine-bonbon-271312",
+  "private_key_id": "a62f91821ce6e49afca5e1a29e5ce92c2df4cb41",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCe4fG1IRpR0yhn\nA80pZ1iEF5pYUmvyR6euffI7iNbU0dUmPJky8fsVVe5sjccudY3kj05zyVRIeS0R\nj1v3I0gbWRNRgNAG1gsp3zP/8rBCAm++XDFk6lk+7g1w5NlbqAtNBiJC0xQaP3ti\nnLfU4cgEwKg4n471yZEZmyYBUnpV3G5PIUzokKcmYyD0lemXVSjCpQkoyMCDNQzc\nhLqPnEx3nEw5VttRqgCoVhOPdOluwu/1KLI034Ap5drpvR2U0sFpZ7Puz4gIt8Mr\nLyr4DXF+UsMdAP9zPzvE34/RUJ3qaOL8AgnrLXCLFcgmrpt6gGbiuQcfnk0DS2Aa\nEe18zKNtAgMBAAECggEABUKc5aYxFdnVWV6zv+CKWHT0hskxZDCWqpbESYuSwYdc\nzlEs09HMyrpokAYaCZdNF128LsQMqfAg11t9vSRZMW/ukZIOoivXHvpnYVyUNvzb\n3Plla8kAvRSIgMm2lxIoYRdZVJGmqLKcFjGMj5webxGUoDQX5DhRBe8a0R0fcJ2i\n2eULeo6KdJsDZDQpfcRj9MWPUDO6jiOaBPo/QvQPYPfIqzKz6A0UOyzLxY6vTNZC\nMMrRine1Cs1SWOkgx6P2bxP5JXmjm3UJ11RSEk073+P35Wg4K4mDbF4JAnAH50NF\nOcaI9mL9z60w33gd4oq6ebEGNU3qzUQvWVhDT6VsuwKBgQDaEaL97+/NZ4b11giu\n5NA2zQucvhHC9CA0zB28ViNskQd79q6oJz9bndpG4J1mrSnDGJtVvc9I+QgtA6CM\n73nrydoSaYdK476JVWFegOco2BGbuY209jk4H8oXXTektO6FbfeD/uJt09Hhh69i\n+esFOv73G0Mf+L69l8v/vzMpMwKBgQC6hM7WHnK1h8zTqbNq7hub+vM0OqCD8ppb\nWTX9QMbd5kdpN+Nrgk0pjizftCgDVnQAtZ+5PwjRF+mVBBUrIZ+d4N5xofZN4w7K\nM5c+CADJeXNVoDLy1KMftDfnvHwGYngB0espg7t0W+GzNDfAtITaiU9whH0kon74\nZwRnrVVA3wKBgQCKHv2j5eN3sIkVENozHI6dB0bBosnRN5tmlZqH/e82Bq484ERE\nEYfZ2aO1nPNVY3y+K8nHhw/R4ppBGLkKS2xn4lQTsW+WCaZXihLALtk7T4/nmKGe\n6w3W9JumLM7frhIdxUcu/bQhaDbZqH14LV+k0ndHwKbFi2IU6B64ADzBbQKBgChk\ntKqYY30+0LQSL2H7+Qy5t0vbWoHY22bnFhMnoSnTQineSakxyeYy/TLhQD0gzvSM\nYO/sX8two0x7Wt5BZOD7HxF64u2RO9W8gIeVkh4P6FNl40LFnCI0lFribfWwA49Z\nV9VgywrzDxkROPXJ4m+1hve2KafybQ78uG5/klP/AoGABIDQkZrfx0jUC3OhZr1+\nuKZQVB87N/B1QOLXnsfHC0+U2Zqdrf7v8mgqCjhTpqKNZzzFPQPv09ooFCe/2c79\nQIDl3X8Mf+8sWs3qx5cLe48ugEs2FVMxViON6GzVuyZMsjNTngz6wHR3GjRnSfW3\noPzwmLwRwaUe3oRBoIdBHCg=\n-----END PRIVATE KEY-----\n",
+  "client_email": "adysis-bucket@divine-bonbon-271312.iam.gserviceaccount.com",
+  "client_id": "111605501611357527007",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/adysis-bucket%40divine-bonbon-271312.iam.gserviceaccount.com"
+}
