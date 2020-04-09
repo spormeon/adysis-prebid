@@ -53,7 +53,7 @@ pipelines:
                   CACHE_CONTROL: 'max-age=31536000'
                   #EXPIRES: '2018-10-01T00:00:00+00:00'
                   DELETE_FLAG: 'true'
-                  #EXTRA_ARGS: '--follow-symlinks --quiet'
+                  EXTRA_ARGS: '--size-only'
                   #DEBUG: 'true'
             - pipe: atlassian/aws-cloudfront-invalidate:0.1.1
               variables:
