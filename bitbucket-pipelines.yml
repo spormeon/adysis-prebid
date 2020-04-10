@@ -85,7 +85,7 @@ pipelines:
                   # CONTENT_TYPE: '<string>' # Optional.
                   # ACL: '<string>' # Optional.
                   # STORAGE_CLASS: '<string>' # Optional.
-                  #EXTRA_ARGS: 'rsync prebid' # Optional.
+                  EXTRA_ARGS: 'rsync' # Optional.
                   # DEBUG: '<boolean>' # Optional.
       - step:
           name: Clear BunnyCDN Cache
