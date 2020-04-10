@@ -85,6 +85,11 @@ pipelines:
                   # CONTENT_TYPE: '<string>' # Optional.
                   # ACL: '<string>' # Optional.
                   # STORAGE_CLASS: '<string>' # Optional.
-                  EXTRA_ARGS: 'rsync prebid' # Optional.
+                  #EXTRA_ARGS: 'rsync prebid' # Optional.
                   # DEBUG: '<boolean>' # Optional.
-                  
+      - step:
+          name: Clear BunnyCDN Cache
+          deployment: Clear BunnyCDN Cache
+          # trigger: manual  # Uncomment to make this a manual deployment.
+          script:
+          - curl -X POST "https://bunnycdn.com/api/pullzone/$BUNNY_ID/purgeCache" -H "AccessKey:$BUNNY_KEY" -H "Content-Type:application/json" -H "Accept:application/json"
