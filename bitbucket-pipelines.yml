@@ -92,4 +92,4 @@ pipelines:
           deployment: Clear BunnyCDN Cache
           # trigger: manual  # Uncomment to make this a manual deployment.
           script:
-          - curl -X POST "https://bunnycdn.com/api/pullzone/$BUNNY_ID/purgeCache" -H "AccessKey:$BUNNY_KEY" -H "Content-Type:application/json" -H "Accept:application/json"
+          - curl -X POST "https://bunnycdn.com/api/pullzone/$BUNNY_ID/purgeCache" -H "AccessKey:$BUNNY_KEY" -H "Content-Length:0" -H "Content-Type:application/json" -H "Accept:application/json"
