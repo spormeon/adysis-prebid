@@ -1,7 +1,8 @@
      var pbjs = pbjs || {};
      pbjs.que = pbjs.que || [];
      pbjs.que.push(function() {
-     pbjs.addAdUnits(adUnits);
+    	 const unitsOnPage = adUnits.filter(u => !! document.getElementById(u.code));
+    	  pbjs.addAdUnits(unitsOnPage);
      //pbjs.addAdUnits(videoAdUnit); // add your ad units to the bid request
   // alias for bidder
      //pbjs.aliasBidder('appnexus','brealtime'); 
