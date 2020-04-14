@@ -1,8 +1,8 @@
      var pbjs = pbjs || {};
      pbjs.que = pbjs.que || [];
      pbjs.que.push(function() {
-    	 const unitsOnPage = adUnits.filter(u => !! document.getElementById(u.code));
-    	  pbjs.addAdUnits(unitsOnPage);
+     const unitsOnPage = adUnits.filter(u => !! document.getElementById(u.code));
+     pbjs.addAdUnits(unitsOnPage);
      //pbjs.addAdUnits(videoAdUnit); // add your ad units to the bid request
   // alias for bidder
      //pbjs.aliasBidder('appnexus','brealtime'); 
@@ -68,7 +68,7 @@ sharethrough:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){
        bidderSequence: 'random', // Default is random
        publisherDomain: 'specktra.com',
        bidderTimeout: PREBID_TIMEOUT+500,
-       pubcid: {expInterval: 525600},
+       //pubcid: {expInterval: 525600},
        //currency: { 'adServerCurrency': "GBP", 'granularityMultiplier': 1, 'conversionRateFile': 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json', },
        sizeConfig: [
          { mediaQuery: '(min-width: 769px)', sizesSupported: [[580,400],[550,310],[970,90],[728,90],[468,60],[336,280],[320,100],[320,50],[300,250],[250,250],[300,600]], labels: [ 'desktop'] },
