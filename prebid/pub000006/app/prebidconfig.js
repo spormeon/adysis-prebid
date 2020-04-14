@@ -22,9 +22,9 @@
 //{ key: 'hb_native_title', val: function (bidResponse) { return bidResponse.native.title; } }
 //]
 //},
-sovrn:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 1.00; } },
-appnexus:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 1.00; } },
-openx:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 1.00; } },
+sovrn:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 0.75; } },
+appnexus:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 0.80; } },
+openx:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 0.85; } },
 sharethrough:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 1.00; } }
 };
     pbjs.setConfig({
@@ -45,8 +45,19 @@ sharethrough:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){
       },
       userSync: {
         iframeEnabled: true,
-        syncsPerBidder: 10, // and no more than 3 syncs at a time
+        syncsPerBidder: 999, // and no more than 3 syncs at a time
         syncDelay: PREBID_TIMEOUT*4, // 5 seconds after the auction
+        userIds: [{
+            name: 'unifiedId',
+            params: {
+                partner: 'kvir89h'
+            },
+            storage: {
+                type: 'cookie',
+                name: 'pbjs-unifiedid',
+                expires: 60
+            }
+        }],
       filterSettings: { iframe: { bidders: [''], filter: 'exclude' }, image:  { bidders: '*', filter: 'include' } },
       // enableOverride: true // publisher will call `pbjs.triggerUserSyncs()'
        },
@@ -150,6 +161,9 @@ googletag.cmd.push(function () {
     }
     });
     Object.keys(config.definitons).forEach(function (key) {
+    	if (!!! document.getElementById(key)) {
+            return;
+          }
      var def = config.definitons[key];
       var slot = googletag.defineSlot(def.adUnitPath, def.size, key);
        slot.setTargeting("test", "refresh");
