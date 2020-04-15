@@ -1,7 +1,8 @@
      var adyjs = adyjs || {};
      adyjs.que = adyjs.que || [];
      adyjs.que.push(function() {
-     adyjs.addAdUnits(adUnits);
+    	 const unitsOnPage = adUnits.filter(u => !! document.getElementById(u.code));
+         pbjs.addAdUnits(unitsOnPage);
      //adyjs.addAdUnits(videoAdUnit); // add your ad units to the bid request
   // alias for bidder
      //adyjs.aliasBidder('appnexus','brealtime'); 
@@ -191,6 +192,9 @@ googletag.cmd.push(function () {
     }
     });
     Object.keys(config.definitons).forEach(function (key) {
+    	if (!!! document.getElementById(key)) {
+            return;
+          }
      var def = config.definitons[key];
       var slot = googletag.defineSlot(def.adUnitPath, def.size, key);
        slot.setTargeting("test", "refresh");
