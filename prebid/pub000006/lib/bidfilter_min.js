@@ -1,2 +1,2 @@
-window._BidFilter={site_id:1045,pbjsKey:'adyjs',checkAudio:!1};(function(){var bidfilter=document.createElement("script");bidfilter.async=!0;bidfilter.rel="preload"
+window._BidFilter={site_id:1045,pbjsKey:'pbjs',checkAudio:!1};(function(){var bidfilter=document.createElement("script");bidfilter.async=!0;bidfilter.rel="preload"
 bidfilter.type="text/javascript";bidfilter.src="https://cdn.bidfilter.com/bidfilter.js";var nodebidfilter=document.getElementsByTagName("head")[0];nodebidfilter.insertBefore(bidfilter,nodebidfilter.fourthChild)})()
