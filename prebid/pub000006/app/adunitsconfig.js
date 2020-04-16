@@ -149,8 +149,8 @@ bids: banner_bidders.bids
 //new ad unit block
 {
 code: 'inreedvid13Slot',
-labelAny: ['desktopleader', 'tabletmenu', 'phonemenu'],
-mediaTypes: { banner: { sizes: [[970, 250],[970, 90],[728, 90],[468, 60],[320, 50],[550, 310]] } },
+labelAny: ['desktopleader', 'tabletleader', 'phoneleader'],
+mediaTypes: { banner: { sizes: [[970, 90],[970, 250],[728, 90],[468, 60],[320, 50],[320, 100]] } },
 bids: banner_bidders.bids
 }
 ];
