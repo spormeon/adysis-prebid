@@ -71,18 +71,18 @@ sharethrough:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){
        //pubcid: {expInterval: 525600},
        //currency: { 'adServerCurrency': "GBP", 'granularityMultiplier': 1, 'conversionRateFile': 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json', },
        sizeConfig: [
-         { mediaQuery: '(min-width: 769px)', sizesSupported: [[580,400],[550,310],[970,90],[728,90],[468,60],[336,280],[320,100],[320,50],[300,250],[250,250],[300,600]], labels: [ 'desktop'] },
-         { mediaQuery: '(min-width: 769px)', sizesSupported: [[550,310],[300,600],[300,250],[250,250],[160,600],[120,600]], labels: [ 'desktopmenu'] },
+         { mediaQuery: '(min-width: 769px)', sizesSupported: [[580,400],[970,90],[728,90],[468,60],[336,280],[320,100],[320,50],[300,250],[250,250],[300,600]], labels: [ 'desktop'] },
+         { mediaQuery: '(min-width: 769px)', sizesSupported: [[300,600],[300,250],[250,250],[160,600],[120,600]], labels: [ 'desktopmenu'] },
          { mediaQuery: '(min-width: 769px)', sizesSupported: [[300,250],[250,250]], labels: [ 'desktopmenu1'] },
          { mediaQuery: '(min-width: 769px)', sizesSupported: [[970, 90],[970, 250],[728, 90],[468, 60],[320, 50],[320, 100]], labels: [ 'desktopleader'] },
          { mediaQuery: '(min-width: 769px)', sizesSupported: [[970,90],[970,250],[728,90],[468,60],[320,50]], labels: [ 'desktopfooter'] },
-         { mediaQuery: '(min-width: 769px)', sizesSupported: [[550, 310],[970, 250],[970, 90],[728, 90],[300, 250],[250, 250],[468, 60],[320, 50],[336, 280],[580, 400],[320, 100]], labels: [ 'desktopbottom2'] },
-         { mediaQuery: '(min-width: 500px) and (max-width: 768px)', sizesSupported: [[550,310],[580,400],[728,90],[468,60],[320,50],[320,100],[336,280],[300,250],[300,600],[250,250]], labels: [ 'tablet'] },
+         { mediaQuery: '(min-width: 769px)', sizesSupported: [[970, 250],[970, 90],[728, 90],[300, 250],[250, 250],[468, 60],[320, 50],[336, 280],[580, 400],[320, 100]], labels: [ 'desktopbottom2'] },
+         { mediaQuery: '(min-width: 500px) and (max-width: 768px)', sizesSupported: [[580,400],[728,90],[468,60],[320,50],[320,100],[336,280],[300,250],[300,600],[250,250]], labels: [ 'tablet'] },
          { mediaQuery: '(min-width: 500px) and (max-width: 768px)', sizesSupported: [[300,250],[300,600],[250,250]], labels: [ 'tabletmenu'] },
          { mediaQuery: '(min-width: 500px) and (max-width: 768px)', sizesSupported: [[728,90],[468,60],[320,50]], labels: [ 'tabletfooter'] },
-         { mediaQuery: '(min-width: 500px) and (max-width: 768px)', sizesSupported: [[728, 90],[300, 250],[250, 250],[468, 60],[320, 50],[550, 310],[336, 280],[580, 400],[320, 100]], labels: [ 'tabletbottom2'] },
+         { mediaQuery: '(min-width: 500px) and (max-width: 768px)', sizesSupported: [[728, 90],[300, 250],[250, 250],[468, 60],[320, 50],[336, 280],[580, 400],[320, 100]], labels: [ 'tabletbottom2'] },
          { mediaQuery: '(min-width: 500px) and (max-width: 768px)', sizesSupported: [[728,90],[468,60],[320,50]], labels: [ 'tabletleader'] },
-         { mediaQuery: '(min-width: 1px) and (max-width: 499px)', sizesSupported: [[550,310],[300,250],[250,250],[320,50],[320,100],[336,280]], labels: [ 'phone'] },
+         { mediaQuery: '(min-width: 1px) and (max-width: 499px)', sizesSupported: [[300,250],[250,250],[320,50],[320,100],[336,280]], labels: [ 'phone'] },
          { mediaQuery: '(min-width: 1px) and (max-width: 499px)', sizesSupported: [[468,60],[320,50]], labels: [ 'phonefooter'] },
          { mediaQuery: '(min-width: 1px) and (max-width: 499px)', sizesSupported: [[300, 250],[250, 250],[320, 50],[320, 100],[336, 280],[468, 90]], labels: [ 'phonebottom2'] },
          { mediaQuery: '(min-width: 1px) and (max-width: 499px)', sizesSupported: [[468,60],[320,50]], labels: [ 'phoneleader'] },
@@ -189,16 +189,16 @@ definitons: {
 inreedvid13Slot: { adUnitPath: "/21665095471/specktra_top_1", size: [[970, 90],[970, 250],[728, 90],[468, 60],[320, 50],[320, 100]], sizeMapping: "mappingleaderslot", timeout: site_config.refresh_rate, },
 inreedvid9Slot: { adUnitPath: "/21665095471/specktra_mrec_1", size: [[300, 600],[300, 250],[250, 250],[160, 600],[120, 600]], sizeMapping: "mappingmenuslot", timeout: site_config.refresh_rate, },
 inreedvid5Slot: { adUnitPath: "/21665095471/specktra_halfpage", size: [[300, 600],[300, 250],[250, 250],[160, 600],[120, 600]], sizeMapping: "mappingmenuslot", timeout: site_config.refresh_rate, },
-inreedvid8Slot: { adUnitPath: "/21665095471/specktra_threads_leaderboard_1", size: [[550, 310],[728, 90],[300, 250],[250, 250],[468, 60],[320, 50],[336, 280],[580, 400],[320, 100]], sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
-inreedvid4Slot: { adUnitPath: "/21665095471/specktra_threads_leaderboard_2", size: [[550, 310],[728, 90],[300, 250],[250, 250],[468, 60],[320, 50],[336, 280],[580, 400],[320, 100]], sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
-inreedvid7Slot: { adUnitPath: "/21665095471/specktra_threads_leaderboard_4", size: [[550, 310],[970, 250],[970, 90],[728, 90],[300, 250],[250, 250],[468, 60],[320, 50],[336, 280],[580, 400],[320, 100]], sizeMapping: "mappingbottom2slot", timeout: site_config.refresh_rate, },
-inreedvid10Slot: { adUnitPath: "/21665095471/specktra_footer_1", size: [[550, 310],[970, 250],[970, 90],[728, 90],[300, 250],[250, 250],[468, 60],[320, 50],[336, 280],[580, 400],[320, 100]], sizeMapping: "mappingbottom2slot", timeout: site_config.refresh_rate, },
+inreedvid8Slot: { adUnitPath: "/21665095471/specktra_threads_leaderboard_1", size: [[728, 90],[300, 250],[250, 250],[468, 60],[320, 50],[336, 280],[580, 400],[320, 100]], sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
+inreedvid4Slot: { adUnitPath: "/21665095471/specktra_threads_leaderboard_2", size: [[728, 90],[300, 250],[250, 250],[468, 60],[320, 50],[336, 280],[580, 400],[320, 100]], sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
+inreedvid7Slot: { adUnitPath: "/21665095471/specktra_threads_leaderboard_4", size: [[970, 250],[970, 90],[728, 90],[300, 250],[250, 250],[468, 60],[320, 50],[336, 280],[580, 400],[320, 100]], sizeMapping: "mappingbottom2slot", timeout: site_config.refresh_rate, },
+inreedvid10Slot: { adUnitPath: "/21665095471/specktra_footer_1", size: [[970, 250],[970, 90],[728, 90],[300, 250],[250, 250],[468, 60],[320, 50],[336, 280],[580, 400],[320, 100]], sizeMapping: "mappingbottom2slot", timeout: site_config.refresh_rate, },
 inreedvid6Slot: { adUnitPath: "/21665095471/specktra_footer_2", size: [[970, 90],[728, 90],[468, 60],[320, 50],[320, 100]], sizeMapping: "mappingfooterslot", timeout: site_config.refresh_rate, },
 },
 sizeMappings: {
 mappinginreedvidslot: [
-[[1024, 768],[[550, 310],[728, 90],[300, 250],[250, 250],[468, 60],[320, 50],[336, 280],[580, 400],[320, 100]]],
-[[768, 500],[[728, 90],[300, 250],[250, 250],[468, 60],[320, 50],[550, 310],[336, 280],[580, 400],[320, 100]]],
+[[1024, 768],[[728, 90],[300, 250],[250, 250],[468, 60],[320, 50],[336, 280],[580, 400],[320, 100]]],
+[[768, 500],[[728, 90],[300, 250],[250, 250],[468, 60],[320, 50],[336, 280],[580, 400],[320, 100]]],
 [[1, 1],[[300, 250],[250, 250],[320, 50],[320, 100],[336, 280],[468, 90]]]
 ],
 mappingmenuslot: [
@@ -212,8 +212,8 @@ mappingmenu1slot: [
 [[1, 1],[[300, 250],[250, 250]]]
 ],
 mappingbottom2slot: [
-[[1024, 768],[[550, 310],[970, 250],[970, 90],[728, 90],[300, 250],[250, 250],[468, 60],[320, 50],[336, 280],[580, 400],[320, 100]]],
-[[768, 500],[[728, 90],[300, 250],[250, 250],[468, 60],[320, 50],[550, 310],[336, 280],[580, 400],[320, 100]]],
+[[1024, 768],[[970, 250],[970, 90],[728, 90],[300, 250],[250, 250],[468, 60],[320, 50],[336, 280],[580, 400],[320, 100]]],
+[[768, 500],[[728, 90],[300, 250],[250, 250],[468, 60],[320, 50],[336, 280],[580, 400],[320, 100]]],
 [[1, 1],[[300, 250],[250, 250],[320, 50],[320, 100],[336, 280],[468, 90]]]
 ],
 mappingfooterslot: [
