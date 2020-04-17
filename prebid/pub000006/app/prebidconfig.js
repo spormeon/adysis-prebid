@@ -144,7 +144,7 @@ googletag.cmd.push(function () {
       console.log("created sizemapping", sizeMappings[key]);
     });
     googletag.pubads().enableSingleRequest();
-    googletag.pubads().collapseEmptyDivs(true);
+    //googletag.pubads().collapseEmptyDivs(true);
     googletag.pubads().setCentering(true);
     //googletag.pubads().setSafeFrameConfig({allowPushExpansion: true, sandbox: true});
     //googletag.setAdIframeTitle('Advertisement');
