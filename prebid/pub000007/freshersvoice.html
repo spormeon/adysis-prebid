@@ -110,11 +110,11 @@
                 googletag.pubads().disableInitialLoad();
             });
 
-            var ubpbjs = ubpbjs || {};
-            ubpbjs.que = ubpbjs.que || [];
+            var pbjs = pbjs || {};
+            pbjs.que = pbjs.que || [];
 
-            ubpbjs.que.push(function() {
-                ubpbjs.addAdUnits(adUnits);
+            pbjs.que.push(function() {
+                pbjs.addAdUnits(adUnits);
                 
                 pbjs.bidderSettings = {
                 		//standard: {
@@ -132,7 +132,7 @@
                 		//{ key: 'hb_native_title', val: function (bidResponse) { return bidResponse.native.title; } }
                 		//]
                 		//},
-                		//ubpbjs.bidderSettings = {
+                		//pbjs.bidderSettings = {
 //    oftmedia: {
 //      bidCpmAdjustment: function(bidCpm){
 //        return bidCpm*0.80;
@@ -182,23 +182,23 @@
                 
                 
                 
-                ubpbjs.requestBids({
+                pbjs.requestBids({
                     bidsBackHandler: initAdserver,
                     timeout: PREBID_TIMEOUT
                 });
             });
 
             function initAdserver() {
-                if (ubpbjs.initAdserverSet) return;
-                ubpbjs.initAdserverSet = true;
+                if (pbjs.initAdserverSet) return;
+                pbjs.initAdserverSet = true;
                 googletag.cmd.push(function() {
-                    ubpbjs.que.push(function() {
-                        ubpbjs.setTargetingForGPTAsync();
+                    pbjs.que.push(function() {
+                        pbjs.setTargetingForGPTAsync();
                         googletag.pubads().refresh();
                     });
                 });
             }
-            // in case ubpbjs doesn't load
+            // in case pbjs doesn't load
             setTimeout(function() {
                 initAdserver();
             }, FAILSAFE_TIMEOUT);
