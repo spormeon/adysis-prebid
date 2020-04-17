@@ -1,0 +1,175 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Page Layout</title> 
+    <style> 
+        .head1 { 
+            font-size:40px; 
+            color:#009900; 
+            font-weight:bold; 
+        } 
+        .head2 { 
+            font-size:17px; 
+            margin-left:10px; 
+            margin-bottom:15px; 
+        } 
+        body { 
+            margin: 0 auto; 
+            background-position:center; 
+            background-size: contain; 
+        } 
+      
+        .menu {    
+            position: sticky; 
+            top: 0; 
+            background-color: #009900; 
+            padding:10px 0px 10px 0px; 
+            color:white; 
+            margin: 0 auto; 
+            overflow: hidden; 
+        } 
+        .menu a { 
+            float: left; 
+            color: white; 
+            text-align: center; 
+            padding: 14px 16px; 
+            text-decoration: none; 
+            font-size: 20px; 
+        } 
+        .menu-log { 
+            right: auto; 
+            float: right; 
+        } 
+        footer { 
+            width: 100%; 
+            bottom: 0px; 
+            background-color: #000; 
+            color: #fff; 
+            position: absolute; 
+            padding-top:20px; 
+            padding-bottom:50px; 
+            text-align:center; 
+            font-size:30px; 
+            font-weight:bold; 
+        } 
+        .body_sec { 
+            margin-left:20px; 
+        } 
+    </style> 
+    
+    
+    <script async src="//www.googletagservices.com/tag/js/gpt.js"></script>
+        <script async src="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/main/script/adScript.js"></script>
+        
+    <script>
+            var div_1_sizes = [
+                [320, 50]
+            ];
+            
+            var PREBID_TIMEOUT = 1000;
+            var FAILSAFE_TIMEOUT = 3000;
+
+            var adUnits = [
+                {
+                    code: '/21956916242/Prebid',
+                    mediaTypes: {
+                        banner: {
+                            sizes: div_1_sizes
+                        }
+                    },
+                    bids: [
+                    	{ bidder: 'oftmedia', params: { placementId: '18671527', allowSmallerSizes: true } },
+                    	{ bidder: '33across', params: { siteId : 'afgup6Buar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
+                    	{ bidder: 'emx_digital', params: { tagid: '97460' } }, /* sizeless */
+                    	{ bidder: 'rhythmone', params: { placementId: '76184', zone: '1r', path: 'mvo' } }, /* one placementId for all sizes */
+                    	{ bidder: 'eplanning', params: { ci: '2cfed', ml: '1' } }
+                    }]
+                }
+            ];
+
+            // ======== DO NOT EDIT BELOW THIS LINE =========== //
+            var googletag = googletag || {};
+            googletag.cmd = googletag.cmd || [];
+            googletag.cmd.push(function() {
+                googletag.pubads().disableInitialLoad();
+            });
+
+            var pbjs = pbjs || {};
+            pbjs.que = pbjs.que || [];
+
+            pbjs.que.push(function() {
+                pbjs.addAdUnits(adUnits);
+                pbjs.requestBids({
+                    bidsBackHandler: initAdserver,
+                    timeout: PREBID_TIMEOUT
+                });
+            });
+
+            function initAdserver() {
+                if (pbjs.initAdserverSet) return;
+                pbjs.initAdserverSet = true;
+                googletag.cmd.push(function() {
+                    pbjs.que.push(function() {
+                        pbjs.setTargetingForGPTAsync();
+                        googletag.pubads().refresh();
+                    });
+                });
+            }
+            // in case PBJS doesn't load
+            setTimeout(function() {
+                initAdserver();
+            }, FAILSAFE_TIMEOUT);
+
+            googletag.cmd.push(function() {
+                googletag.defineSlot('/21956916242/Prebid', div_1_sizes, 'div-1').addService(googletag.pubads());
+                googletag.pubads().enableSingleRequest();
+                googletag.enableServices();
+            });
+
+        </script>    
+</head> 
+  
+<body> 
+      
+    <!-- Header Section -->
+    <header> 
+        <div class="head1">GeeksforGeeks</div> 
+        <div class="head2">A computer science portal for geeks</div> 
+    </header> 
+      
+    <!-- Menu Navigation Bar -->
+    <div class="menu"> 
+        <a href="#home">HOME</a> 
+        <a href="#news">NEWS</a> 
+        <a href="#notification">NOTIFICATIONS</a> 
+        <div class="menu-log"> 
+            <a href="#login">LOGIN</a> 
+        </div> 
+    </div> 
+      
+    <!-- Body section -->
+    <div class = "body_sec"> 
+        <section id="Content"> 
+            <h3>Content section</h3> 
+            
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ut magna elit. Proin quis dignissim mauris. Quisque in est nisl. In metus ante, consequat vitae scelerisque ac, pretium ac magna. Aenean metus enim, convallis et dignissim a, pharetra id justo. Phasellus nec nunc massa. Nullam consequat ipsum et laoreet ultrices. Etiam at nisi sit amet sem dignissim viverra. Nullam eleifend eu lectus id ultrices. Pellentesque maximus urna odio, nec semper diam placerat ac.
+<br>
+Suspendisse eu neque consectetur, sollicitudin odio sed, facilisis dui. Vestibulum maximus sagittis maximus. Donec ornare sapien est. In elementum ac nisi ac semper. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris pharetra ex lectus, vel consequat nunc laoreet vitae. Praesent vel malesuada lectus. Sed pellentesque orci eget erat porttitor, vitae porttitor tellus placerat. Ut tincidunt eu libero sed pellentesque. Donec hendrerit imperdiet ipsum nec varius. Vivamus lectus tellus, sagittis eu condimentum ornare, sollicitudin sed tellus. Nulla nec lacus quis neque ultricies malesuada in non magna.
+<br>
+Curabitur egestas scelerisque convallis. Aliquam tempor, libero eu vestibulum luctus, felis nulla egestas mauris, vel ultricies sapien turpis a diam. Maecenas pulvinar tortor ante, quis molestie risus faucibus in. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sodales, ipsum vitae bibendum tincidunt, mi mauris bibendum lectus, quis aliquam urna turpis id leo. Duis ut diam lectus. Morbi quis purus dui. In facilisis quam vel tincidunt convallis.
+        </section> 
+    </div> 
+      
+    <!-- Footer Section -->
+    <footer>Footer Section
+    <div id='div-1'>
+            <script type='text/javascript'>
+                googletag.cmd.push(function() {
+                    googletag.display('div-1');
+                });
+
+            </script>
+        </div>
+    </footer> 
+</body> 
+</html>                     
