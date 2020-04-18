@@ -65,9 +65,7 @@
     
     
     
-            var div_1_sizes = [
-                [320, 50]
-            ];
+            
             
             var PREBID_TIMEOUT = 2000;
             var FAILSAFE_TIMEOUT = 3000;
@@ -77,10 +75,11 @@
                     code: '/21956916242/Prebid',
                     mediaTypes: {
                         banner: {
-                            sizes: div_1_sizes
+                            sizes: [[300, 250],[320], 50]]
                         }
                     },
                     bids: [
+                    	{ bidder: 'appnexus', params: { placementId: '11962910', allowSmallerSizes: true } }, /* one placementId for all sizes  my appnexus bidder */
                     	{ bidder: 'oftmedia', params: { placementId: '18671527', allowSmallerSizes: true } },
                     	{ bidder: '33across', params: { siteId : 'afgup6Buar6PWLaKlId8sQ', productId: 'siab' } }, /*All sizes*/
                     	{ bidder: 'emx_digital', params: { tagid: '97460' } }, /* sizeless */
