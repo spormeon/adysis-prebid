@@ -10,6 +10,3 @@ bids: [
 { bidder: 'sharethrough', params: { pkey: "esV9zAvAVRANpBbComRYEUWv", iframe: true } } /* Sizeless */
 ] //./bids
 };
-
-
-
