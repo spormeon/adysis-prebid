@@ -59,7 +59,7 @@ bids: outstream_bidders.bids
 {
 code: 'inreedvid6Slot',
 labelAny: ['desktopfooter', 'tabletfooter', 'phonefooter'],
-mediaTypes: { banner: { sizes: [[970,90],[970,250],[728,90],[468,60],[320,50]] } },
+mediaTypes: { banner: { sizes: [[970,90],[728,90],[468,60],[320,50]] } },
 bids: banner_bidders.bids
 },
 //new ad unit block
