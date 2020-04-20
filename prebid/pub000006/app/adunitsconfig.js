@@ -154,5 +154,3 @@ mediaTypes: { banner: { sizes: [[970, 90],[970, 250],[728, 90],[468, 60],[320, 5
 bids: banner_bidders.bids
 }
 ];
-
-
