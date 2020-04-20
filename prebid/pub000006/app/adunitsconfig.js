@@ -38,8 +38,8 @@ bids: outstream_bidders.bids
 {
 code: 'inreedvid5Slot',
 labelAny: ['desktopmenu1', 'tablet', 'phone'],
-mediaTypes: { banner: { sizes: [[300, 250],[250, 250]] } },
-bids: banner_bidders.bids
+mediaTypes: { banner: { sizes: [[300, 600],[160, 600],[120, 600],[300, 250],[250, 250]] } },
+bids: banner_bidders300x600.bids
 },
 //new ad unit block
 {
@@ -123,7 +123,7 @@ bids: outstream_bidders.bids
 code: 'inreedvid9Slot',
 labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'],
 mediaTypes: { banner: { sizes: [[300, 600],[160, 600],[120, 600],[300, 250],[250, 250]] } },
-bids: banner_bidders.bids
+bids: banner_bidders300x600.bids
 },
 //new ad unit block
 {
