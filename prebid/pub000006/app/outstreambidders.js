@@ -5,3 +5,6 @@ bids: [
 //{ bidder: 'appnexus', params: { placementId: '13232385', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }, /* APPNEXUS TEST ID one placementId for all sizes */	
 ] //./bids
 };
+
+
+
