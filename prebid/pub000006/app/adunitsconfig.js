@@ -10,7 +10,7 @@ bids: native_bidders.bids
 {
 code: 'inreedvid4Slot',
 labelAny: ['desktop', 'tablet', 'phone'],
-mediaTypes: { video:  { context: 'outstream', playerSize: [[640, 480]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'], playbackmethod: [2], minduration: 0,  maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10], linearity: 1, api: [1,2,3,4,5,6] } },
+mediaTypes: { video:  { context: 'outstream', playerSize: [[300, 250]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'], playbackmethod: [2], minduration: 0,  maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10], linearity: 1, api: [1,2,3,4,5,6] } },
 renderer: { url: 'https://cdn.jsdelivr.net/gh/spormeon/adysis-prebid/prebid/ANOutstreamVideo.js', render: function (bid) { ANOutstreamVideo.renderAd({ targetId: bid.adUnitCodes, adResponse: bid.adResponse, }); } },
 renderer: { options: { adText: 'Advertisement' } },
 bids: outstream_bidders.bids
@@ -148,11 +148,3 @@ mediaTypes: { banner: { sizes: [[970, 90],[970, 250],[728, 90],[468, 60],[320, 5
 bids: banner_bidders.bids
 }
 ];
-
-
-
-
-
-
-
-
