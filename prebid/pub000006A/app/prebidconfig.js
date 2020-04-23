@@ -191,7 +191,7 @@ googletag.cmd.push(function () {
  	     timeout: 2000 }, 
  	   function(bids) {
  	     apstag.setDisplayBids(); 
- 	     googletag.pubads().refresh();
+ 	     //googletag.pubads().refresh();
  	   }); 
  	 });  
     
