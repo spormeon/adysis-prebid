@@ -124,12 +124,7 @@ sharethrough:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){
      
 googletag.cmd.push(function () {
 
-	apstag.fetchBids({ 
-		  timeout: 2000 }, 
-		    function(bids) {
-		      apstag.setDisplayBids(); 
-		      googletag.pubads().refresh();
-		  }); 
+	
  	       
 	
 	(function (googletag, pbjs, config) {
@@ -137,30 +132,27 @@ googletag.cmd.push(function () {
       var slots = {};
        function refreshSlot(slot) {
        pbjs.que.push(function() {
-       pbjs.requestBids({
+       pbjs.requestBids({	    
        timeout: PREBID_TIMEOUT,
-       
-       
-       
-    	   
-          
-    	   
-    	 
-       
-       
     // useBidCache: USERBIDCACHE,
        adUnitCodes: [slot.getSlotElementId()],
-       bidsBackHandler: function() {
+       bidsBackHandler: function() { 
        pbjs.setTargetingForGPTAsync([slot.getSlotElementId()]);
     //googletag.destroySlots([slot]);
        googletag.pubads().refresh([slot]);
     }
     });
-    });
-        
-           
-       
+    });  
     }
+       googletag.cmd.push(function(){ 
+    	   apstag.fetchBids({ slots: [slot], 
+    	     timeout: 2000 }, 
+    	   function(bids) {
+    	     apstag.setDisplayBids(); 
+    	     googletag.pubads().refresh([slot]);
+    	   }); 
+    	 });   
+       
     Object.keys(config.sizeMappings).forEach(function (key) {
      var sizeMappingBuilder = googletag.sizeMapping();
       config.sizeMappings[key].forEach(function (mapping) {
