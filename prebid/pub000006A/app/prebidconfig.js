@@ -133,7 +133,28 @@ googletag.cmd.push(function () {
     }
     });
     });  
+       
+       
+     // AMAZON call refreshBids() to make an UAM request for all slots in apstagSlots and then call googletag to refresh all
+       //defined slots on the page
+       function refreshBids() {
+           apstag.fetchBids({ 
+               timeout: PREBID_TIMEOUT
+           }, function(bids) {
+               // set apstag targeting on googletag 
+               //then refresh all DFP
+               googletag.cmd.push(function() {
+                   apstag.setDisplayBids();
+                   //googletag.pubads().refresh();
+               });
+           });
+       }
+       // AMAZON refresh end 
+       
     }    
+       
+       
+       
     Object.keys(config.sizeMappings).forEach(function (key) {
      var sizeMappingBuilder = googletag.sizeMapping();
       config.sizeMappings[key].forEach(function (mapping) {
@@ -195,20 +216,7 @@ googletag.cmd.push(function () {
  	   }); 
  	 });  
     
-  //call refreshBids() to make an UAM request for all slots in apstagSlots and then call googletag to refresh all
-  //defined slots on the page
-  function refreshBids() {
-      apstag.fetchBids({ 
-          timeout: PREBID_TIMEOUT
-      }, function(bids) {
-          // set apstag targeting on googletag 
-          //then refresh all DFP
-          googletag.cmd.push(function() {
-              apstag.setDisplayBids();
-              googletag.pubads().refresh();
-          });
-      });
-  }
+  
     
     // googletag.pubads().refresh();
 // the order below determines the order on the page //
