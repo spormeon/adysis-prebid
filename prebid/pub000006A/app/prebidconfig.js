@@ -117,47 +117,23 @@ sharethrough:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){
     });
      
 googletag.cmd.push(function () {
-	(function (googletag, pbjs, config) {
+    (function (googletag, pbjs, config) {
      var sizeMappings = {};
       var slots = {};
        function refreshSlot(slot) {
        pbjs.que.push(function() {
-       pbjs.requestBids({	    
+       pbjs.requestBids({
        timeout: PREBID_TIMEOUT,
-       
     // useBidCache: USERBIDCACHE,
        adUnitCodes: [slot.getSlotElementId()],
-       bidsBackHandler: function() { 
+       bidsBackHandler: function() {
        pbjs.setTargetingForGPTAsync([slot.getSlotElementId()]);
     //googletag.destroySlots([slot]);
-       apstag.setDisplayBids();
        googletag.pubads().refresh([slot]);
     }
-       
     });
-    });  
-       }   
-       
-     // AMAZON call refreshBids() to make an UAM request for all slots in apstagSlots and then call googletag to refresh all
-       //defined slots on the page
-       function refreshBids() {
-           apstag.fetchBids({ 
-               timeout: PREBID_TIMEOUT
-           }, function(bids) {
-               // set apstag targeting on googletag 
-               //then refresh all DFP
-               googletag.cmd.push(function() {
-                   apstag.setDisplayBids();
-                   //googletag.pubads().refresh();
-               });
-           });
-       }
-       // AMAZON refresh end 
-       
-        
-       
-       
-       
+    });
+    }
     Object.keys(config.sizeMappings).forEach(function (key) {
      var sizeMappingBuilder = googletag.sizeMapping();
       config.sizeMappings[key].forEach(function (mapping) {
@@ -173,7 +149,7 @@ googletag.cmd.push(function () {
     //googletag.pubads().setSafeFrameConfig({allowPushExpansion: true, sandbox: true});
     //googletag.setAdIframeTitle('Advertisement');
     googletag.pubads().enableLazyLoad({
-      fetchMarginPercent: 12,  // Fetch slots within 30 viewports.
+      fetchMarginPercent: 15,  // Fetch slots within 30 viewports.
       renderMarginPercent: 8,  // Render slots within 5000 viewports.
       mobileScaling: 0.0  // Double the above values on mobile.
     });
@@ -206,21 +182,6 @@ googletag.cmd.push(function () {
        googletag.display(key);
        slots[key] = { slot: slot };
     });
-    
-    
-    
-    
-    googletag.cmd.push(function(){ 
- 	   apstag.fetchBids({ 
- 	     timeout: PREBID_TIMEOUT }, 
- 	   function(bids) {
- 	     apstag.setDisplayBids(); 
- 	     //googletag.pubads().refresh();
- 	   }); 
- 	 });  
-    
-  
-    
     // googletag.pubads().refresh();
 // the order below determines the order on the page //
     })(window.googletag, window.pbjs, {
@@ -268,3 +229,11 @@ mappingleaderslot: [
 }
 });
 });
+
+
+
+
+
+
+
+
