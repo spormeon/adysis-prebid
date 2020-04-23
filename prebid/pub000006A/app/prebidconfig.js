@@ -145,7 +145,7 @@ googletag.cmd.push(function () {
     });  
     }
        googletag.cmd.push(function(){ 
-    	   apstag.fetchBids({ slots: [slot.getSlotElementId()], 
+    	   apstag.fetchBids({ slots: [slot], 
     	     timeout: 2000 }, 
     	   function(bids) {
     	     apstag.setDisplayBids(); 
