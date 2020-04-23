@@ -1,4 +1,9 @@
-     var pbjs = pbjs || {};
+var googletag = googletag || {};
+     googletag.cmd = googletag.cmd || [];
+     googletag.cmd.push(function() {
+     googletag.pubads().disableInitialLoad();
+    });   
+var pbjs = pbjs || {};
      pbjs.que = pbjs.que || [];
      pbjs.que.push(function() {
      const unitsOnPage = adUnits.filter(u => !! document.getElementById(u.code));
@@ -110,11 +115,7 @@ sharethrough:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){
      initAdserver1();
      }, site_config.FAILSAFE_TIMEOUT);
      
-     var googletag = googletag || {};
-     googletag.cmd = googletag.cmd || [];
-     googletag.cmd.push(function() {
-     googletag.pubads().disableInitialLoad();
-    });
+     
      
 googletag.cmd.push(function () {
     (function (googletag, pbjs, config) {
@@ -181,6 +182,16 @@ googletag.cmd.push(function () {
        slot.addService(googletag.pubads());
        googletag.display(key);
        slots[key] = { slot: slot };
+    });
+    
+    googletag.cmd.push(function() {
+        apstag.fetchBids({
+                timeout: PREBID_TIMEOUT
+            },
+            function(bids) {
+                apstag.setDisplayBids();
+                //googletag.pubads().refresh();
+            });
     });
     // googletag.pubads().refresh();
 // the order below determines the order on the page //
