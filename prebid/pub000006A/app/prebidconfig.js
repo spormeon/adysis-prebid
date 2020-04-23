@@ -124,16 +124,19 @@ googletag.cmd.push(function () {
        pbjs.que.push(function() {
        pbjs.requestBids({	    
        timeout: PREBID_TIMEOUT,
+       
     // useBidCache: USERBIDCACHE,
        adUnitCodes: [slot.getSlotElementId()],
        bidsBackHandler: function() { 
        pbjs.setTargetingForGPTAsync([slot.getSlotElementId()]);
     //googletag.destroySlots([slot]);
+       apstag.setDisplayBids();
        googletag.pubads().refresh([slot]);
     }
+       
     });
     });  
-       
+       }   
        
      // AMAZON call refreshBids() to make an UAM request for all slots in apstagSlots and then call googletag to refresh all
        //defined slots on the page
@@ -151,7 +154,7 @@ googletag.cmd.push(function () {
        }
        // AMAZON refresh end 
        
-    }    
+        
        
        
        

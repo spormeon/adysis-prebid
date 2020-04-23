@@ -149,7 +149,7 @@ googletag.cmd.push(function () {
     //googletag.pubads().setSafeFrameConfig({allowPushExpansion: true, sandbox: true});
     //googletag.setAdIframeTitle('Advertisement');
     googletag.pubads().enableLazyLoad({
-      fetchMarginPercent: 12,  // Fetch slots within 30 viewports.
+      fetchMarginPercent: 15,  // Fetch slots within 30 viewports.
       renderMarginPercent: 8,  // Render slots within 5000 viewports.
       mobileScaling: 0.0  // Double the above values on mobile.
     });
