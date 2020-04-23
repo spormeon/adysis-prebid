@@ -107,17 +107,7 @@ sharethrough:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){
      }
     
     
- // Amazon Method 1: Construct bids for all defined slots and then make the DFP request
-    var amazon = amazon || {};
-    amazon.cmd = amazon.cmd || [];
-    amazon.cmd.push(function() { 
-      apstag.fetchBids({ 
-      timeout: PREBID_TIMEOUT }, 
-        function(bids) {
-          apstag.setDisplayBids(); 
-          googletag.pubads().refresh();
-      }); 
-    });
+ 
     
     
     
@@ -133,13 +123,31 @@ sharethrough:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){
     });
      
 googletag.cmd.push(function () {
-    (function (googletag, pbjs, amazon, config) {
+
+	apstag.fetchBids({ 
+		  timeout: 2000 }, 
+		    function(bids) {
+		      apstag.setDisplayBids(); 
+		      googletag.pubads().refresh();
+		  }); 
+ 	       
+	
+	(function (googletag, pbjs, config) {
      var sizeMappings = {};
       var slots = {};
        function refreshSlot(slot) {
        pbjs.que.push(function() {
        pbjs.requestBids({
        timeout: PREBID_TIMEOUT,
+       
+       
+       
+    	   
+          
+    	   
+    	 
+       
+       
     // useBidCache: USERBIDCACHE,
        adUnitCodes: [slot.getSlotElementId()],
        bidsBackHandler: function() {
@@ -149,6 +157,9 @@ googletag.cmd.push(function () {
     }
     });
     });
+        
+           
+       
     }
     Object.keys(config.sizeMappings).forEach(function (key) {
      var sizeMappingBuilder = googletag.sizeMapping();
