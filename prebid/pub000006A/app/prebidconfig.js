@@ -105,6 +105,20 @@ sharethrough:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){
      });
      });
      }
+    
+    
+ // Amazon Method 1: Construct bids for all defined slots and then make the DFP request
+    googletag.cmd.push(function(){ 
+      apstag.fetchBids({ 
+      timeout: 2000 }, 
+        function(bids) {
+          apstag.setDisplayBids(); 
+          googletag.pubads().refresh();
+      }); 
+    }); 
+    
+    
+    
   // in case pbjs doesn't load
      setTimeout(function() {
      initAdserver1();
