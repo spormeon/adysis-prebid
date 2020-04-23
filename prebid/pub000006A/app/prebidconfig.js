@@ -108,14 +108,16 @@ sharethrough:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){
     
     
  // Amazon Method 1: Construct bids for all defined slots and then make the DFP request
-    googletag.cmd.push(function(){ 
+    var amazon = amazon || {};
+    amazon.cmd = amazon.cmd || [];
+    amazon.cmd.push(function() { 
       apstag.fetchBids({ 
-      timeout: 2000 }, 
+      timeout: PREBID_TIMEOUT }, 
         function(bids) {
           apstag.setDisplayBids(); 
           googletag.pubads().refresh();
       }); 
-    }); 
+    });
     
     
     
@@ -131,7 +133,7 @@ sharethrough:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){
     });
      
 googletag.cmd.push(function () {
-    (function (googletag, pbjs, config) {
+    (function (googletag, pbjs, amazon, config) {
      var sizeMappings = {};
       var slots = {};
        function refreshSlot(slot) {
