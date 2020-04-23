@@ -188,14 +188,27 @@ googletag.cmd.push(function () {
     
     googletag.cmd.push(function(){ 
  	   apstag.fetchBids({ 
- 	     timeout: 2000 }, 
+ 	     timeout: PREBID_TIMEOUT }, 
  	   function(bids) {
  	     apstag.setDisplayBids(); 
  	     //googletag.pubads().refresh();
  	   }); 
  	 });  
     
-    
+  //call refreshBids() to make an UAM request for all slots in apstagSlots and then call googletag to refresh all
+  //defined slots on the page
+  function refreshBids() {
+      apstag.fetchBids({ 
+          timeout: PREBID_TIMEOUT
+      }, function(bids) {
+          // set apstag targeting on googletag 
+          //then refresh all DFP
+          googletag.cmd.push(function() {
+              apstag.setDisplayBids();
+              googletag.pubads().refresh();
+          });
+      });
+  }
     
     // googletag.pubads().refresh();
 // the order below determines the order on the page //
