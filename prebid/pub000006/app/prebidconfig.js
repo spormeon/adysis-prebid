@@ -183,18 +183,6 @@ googletag.cmd.push(function () {
        slots[key] = { slot: slot };
     });
     
-  //amazon simpleGPT call
-    googletag.cmd.push(function() {
-        apstag.fetchBids({
-                timeout: PREBID_TIMEOUT
-            },
-            function(bids) {
-                apstag.setDisplayBids();
-                //googletag.pubads().refresh();
-            });
-    });
-   //amazon simple GPT call end
-    
     // googletag.pubads().refresh();
 // the order below determines the order on the page //
     })(window.googletag, window.pbjs, {
