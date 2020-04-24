@@ -1,4 +1,1 @@
-var site_config={refresh_rate:PREBID_TIMEOUT*15,FAILSAFE_TIMEOUT:PREBID_TIMEOUT*2}
-
-
-
+var site_config={refresh_rate:30000,FAILSAFE_TIMEOUT:PREBID_TIMEOUT*2}
