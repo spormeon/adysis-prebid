@@ -105,6 +105,12 @@ sharethrough:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){
      });
      });
      }
+    
+    
+    
+    
+    
+    
   // in case pbjs doesn't load
      setTimeout(function() {
      initAdserver1();
