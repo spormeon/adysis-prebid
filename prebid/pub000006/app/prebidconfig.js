@@ -106,11 +106,6 @@ sharethrough:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){
      });
      }
     
-    
-    
-    
-    
-    
   // in case pbjs doesn't load
      setTimeout(function() {
      initAdserver1();
@@ -120,6 +115,7 @@ sharethrough:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){
      googletag.cmd = googletag.cmd || [];
      googletag.cmd.push(function() {
      googletag.pubads().disableInitialLoad();
+     googletag.pubads().refresh();
     });
      
 googletag.cmd.push(function () {
