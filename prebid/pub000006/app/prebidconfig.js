@@ -101,7 +101,7 @@ sharethrough:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){
      pbjs.que.push(function() {
      pbjs.setTargetingForGPTAsync();
      pbjs.triggerUserSyncs();
-     googletag.pubads().refresh();
+     //googletag.pubads().refresh();
      });
      });
      }
