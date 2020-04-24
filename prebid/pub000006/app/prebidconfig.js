@@ -101,11 +101,10 @@ sharethrough:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){
      pbjs.que.push(function() {
      pbjs.setTargetingForGPTAsync();
      pbjs.triggerUserSyncs();
-     //googletag.pubads().refresh();
+     googletag.pubads().refresh();
      });
      });
      }
-    
   // in case pbjs doesn't load
      setTimeout(function() {
      initAdserver1();
@@ -115,7 +114,6 @@ sharethrough:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){
      googletag.cmd = googletag.cmd || [];
      googletag.cmd.push(function() {
      googletag.pubads().disableInitialLoad();
-     googletag.pubads().refresh();
     });
      
 googletag.cmd.push(function () {
