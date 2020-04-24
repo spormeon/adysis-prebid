@@ -153,7 +153,7 @@ googletag.cmd.push(function () {
       renderMarginPercent: 20,  // Render slots within 5000 viewports.
       mobileScaling: 0.0  // Double the above values on mobile.
     });
-    googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': true });
+    googletag.pubads().setPrivacySettings({ 'restrictDataProcessing': false });
     //googletag.pubads().disableInitialLoad();
     googletag.enableServices();
 // not sure if impressionViewable, slotRenderEnded or slotOnload or impressionViewable is best to use yet
