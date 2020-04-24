@@ -144,7 +144,7 @@ googletag.cmd.push(function () {
       console.log("created sizemapping", sizeMappings[key]);
     });
     googletag.pubads().enableSingleRequest();
-    googletag.pubads().collapseEmptyDivs(true);
+    //googletag.pubads().collapseEmptyDivs(true);
     googletag.pubads().setCentering(true);
     //googletag.pubads().setSafeFrameConfig({allowPushExpansion: true, sandbox: true});
     //googletag.setAdIframeTitle('Advertisement');
@@ -183,7 +183,7 @@ googletag.cmd.push(function () {
        slots[key] = { slot: slot };
     });
     
-    //amazon simpleGPT call
+  //amazon simpleGPT call
     googletag.cmd.push(function() {
         apstag.fetchBids({
                 timeout: PREBID_TIMEOUT
