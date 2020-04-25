@@ -1,12 +1,5 @@
 //load up preconnect urls
-(function () {
-var pclink1 = document.createElement("link");
-pclink1.rel = "preconnect";
-pclink1.href = "//ads.vsvl.co.uk/";
-pclink1.crossorigin;
-var nodepclink1 = document.getElementsByTagName("footerbid1")[0];
-nodepclink1.insertBefore(pclink1, nodepclink1.firstChild);
-})();
+
 (function () {
 var pclink1 = document.createElement("link");
 pclink1.rel = "preconnect";
@@ -27,6 +20,14 @@ nodepclink1.insertBefore(pclink1, nodepclink1.firstChild);
 	var pclink1 = document.createElement("link");
 	pclink1.rel = "preconnect";
 	pclink1.href = "//aax.amazon-adsystem.com";
+	pclink1.crossorigin;
+	var nodepclink1 = document.getElementsByTagName("footerbid1")[0];
+	nodepclink1.insertBefore(pclink1, nodepclink1.firstChild);
+	})();
+(function () {
+	var pclink1 = document.createElement("link");
+	pclink1.rel = "preconnect";
+	pclink1.href = "//immensehoney.com";
 	pclink1.crossorigin;
 	var nodepclink1 = document.getElementsByTagName("footerbid1")[0];
 	nodepclink1.insertBefore(pclink1, nodepclink1.firstChild);
@@ -363,14 +364,6 @@ nodepclink1.insertBefore(pclink1, nodepclink1.firstChild);
 	var pclink1 = document.createElement("link");
 	pclink1.rel = "preconnect";
 	pclink1.href = "//x.bidfilter.com";
-	pclink1.crossorigin;
-	var nodepclink1 = document.getElementsByTagName("footerbid1")[0];
-	nodepclink1.insertBefore(pclink1, nodepclink1.firstChild);
-	})();
-(function () {
-	var pclink1 = document.createElement("link");
-	pclink1.rel = "preconnect";
-	pclink1.href = "//d2zv5rkii46miq.cloudfront.net";
 	pclink1.crossorigin;
 	var nodepclink1 = document.getElementsByTagName("footerbid1")[0];
 	nodepclink1.insertBefore(pclink1, nodepclink1.firstChild);
