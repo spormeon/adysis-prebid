@@ -122,30 +122,26 @@ googletag.cmd.push(function () {
     (function (googletag, pbjs, config) {
      var sizeMappings = {};
       var slots = {};
-       function refreshSlot(slot) {
-       pbjs.que.push(function() {
-       pbjs.requestBids({
-       timeout: PREBID_TIMEOUT,
-    // useBidCache: USERBIDCACHE,
-       adUnitCodes: [slot.getSlotElementId()],
-       bidsBackHandler: function() {
-       pbjs.setTargetingForGPTAsync([slot.getSlotElementId()]);
-    //googletag.destroySlots([slot]);
-       googletag.pubads().refresh([slot]);
-    }
-    });
-    });
-    }
+      function refreshSlot(slot) {
+    	    apstag.fetchBids({
+    	        timeout: PREBID_TIMEOUT
+    	    },
+    	    function(bids) {
+    	        apstag.setDisplayBids();
+    	    });
+    	    pbjs.que.push(function() {
+    	        pbjs.requestBids({
+    	            timeout: PREBID_TIMEOUT,
+    	            adUnitCodes: [slot.getSlotElementId()],
+    	            bidsBackHandler: function() {
+    	                pbjs.setTargetingForGPTAsync([slot.getSlotElementId()]);
+    	                googletag.pubads().refresh([slot]);
+    	            }
+    	        });
+    	    });
+    	}
        
-       googletag.cmd.push(function() {
-           apstag.fetchBids({
-                   timeout: PREBID_TIMEOUT-200
-               },
-               function(bids) {
-                   apstag.setDisplayBids();
-                   //googletag.pubads().refresh();
-               });
-       });
+       
        
        
        
