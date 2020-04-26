@@ -8,6 +8,7 @@ var pbjs = pbjs || {};
      pbjs.que.push(function() {
      const unitsOnPage = adUnits.filter(u => !! document.getElementById(u.code));
      pbjs.addAdUnits(unitsOnPage);
+     
      //pbjs.addAdUnits(videoAdUnit); // add your ad units to the bid request
   // alias for bidder
      //pbjs.aliasBidder('appnexus','brealtime'); 
@@ -135,6 +136,20 @@ googletag.cmd.push(function () {
     });
     });
     }
+       
+       googletag.cmd.push(function() {
+           apstag.fetchBids({
+                   timeout: PREBID_TIMEOUT-200
+               },
+               function(bids) {
+                   apstag.setDisplayBids();
+                   //googletag.pubads().refresh();
+               });
+       });
+       
+       
+       
+       
     Object.keys(config.sizeMappings).forEach(function (key) {
      var sizeMappingBuilder = googletag.sizeMapping();
       config.sizeMappings[key].forEach(function (mapping) {
@@ -184,15 +199,7 @@ googletag.cmd.push(function () {
        slots[key] = { slot: slot };
     });
     
-    googletag.cmd.push(function() {
-        apstag.fetchBids({
-                timeout: PREBID_TIMEOUT-200
-            },
-            function(bids) {
-                apstag.setDisplayBids();
-                //googletag.pubads().refresh();
-            });
-    });
+    
     // googletag.pubads().refresh();
 // the order below determines the order on the page //
     })(window.googletag, window.pbjs, {
