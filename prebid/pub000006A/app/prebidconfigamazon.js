@@ -709,16 +709,16 @@ function biddersBack() {
 }
 
 //function to send bids to GAM
-function sendAdserverRequest() {
-    console.log('sendAdserverRequest Called');
+function sendAdserverRequestRefresh(slot) {
+    console.log('sendAdserverRequestRefresh Called');
     console.log('requestManager.adserverRequestSent = '+requestManager.adserverRequestSent);
     if (requestManager.adserverRequestSent === true) {
         return;
     }
     requestManager.adserverRequestSent = true;
     googletag.cmd.push(function() {
-        console.log('sendAdserverRequest Refresh Called');
-        googletag.pubads().refresh();
+        console.log('sendAdserverRequestRefresh Refresh Called');
+        googletag.pubads().refresh([slot]);
     });
 }
 
