@@ -1,7 +1,6 @@
-Refreshing Ad Units
-To refresh all DFP slots, apstag.fetchBids() should be called with the same slots that were previously supplied, and then both the apstag.setDisplayBids()and googletag.pubads().refresh() function should be called in the callback like in the first request.
-
-//call refreshBids() to make an UAM request for all slots in apstagSlots and then call googletag to refresh all
+<h1>Refreshing Ad Units</h1>
+<p style="background: white; margin: 0in 0in 10.5pt 0in;"><span style="font-size: 10.0pt; font-family: 'Arial',sans-serif; color: #111111;">To refresh all DFP slots, </span><code><span style="font-size: 10.0pt; color: #111111;">apstag.fetchBids()</span></code><span class="apple-converted-space"><span style="font-size: 10.0pt; font-family: 'Arial',sans-serif; color: #111111;"> </span></span><span style="font-size: 10.0pt; font-family: 'Arial',sans-serif; color: #111111;">should be called with the same slots that were previously supplied, and then both the </span><code><span style="font-size: 10.0pt; color: #111111;">apstag.setDisplayBids()</span></code><span style="font-size: 10.0pt; font-family: 'Arial',sans-serif; color: #111111;">and </span><code><span style="font-size: 10.0pt; color: #111111;">googletag.pubads().refresh() </span></code><span style="font-size: 10.0pt; font-family: 'Arial',sans-serif; color: #111111;">function should be called in the callback like in the first request.</span></p>
+<pre style="background-color: #f5f5f5; white-space: -o-pre-wrap; word-wrap: break-word;">//call refreshBids() to make an UAM request for all slots in apstagSlots and then call googletag to refresh all
 //defined slots on the page
 function refreshBids() {
     apstag.fetchBids({
@@ -25,9 +24,9 @@ function refreshBids() {
         });
     });
 }
-To refresh only a subset of DFP slots, apstag.fetchBids() should be called with the slots that are to be refreshed, and then both apstag.setDisplayBids()and googletag.pubads().refresh() functions should be called in the callback like in the first request. When you make the refresh call, make sure to specify in the refresh ( ) the slots that you are refreshing to avoid refreshing all the slots on the page. The first function, _getGPTSlots(apstagSlots), will return only the googletag slots that match the slotID values inside of the slot objects stored in the variable apstagSlots that will be used for the fetchBids() request. In this case, when you pass apstagSlots into googletag.pubads().refresh(apstagSlots), like so, only the googletag slots that match div-gpt-ad-1475102693815-0 and div-gpt-ad-1475185990716-0 will be refreshed.
-
-//create a variable to store the slot objects that will be used to request bids from UAM
+</pre>
+<p style="background: white; margin: 0in 0in 10.5pt 0in;"><span style="font-size: 10.0pt; font-family: 'Arial',sans-serif; color: #111111;">To refresh only a subset of DFP slots, </span><code><span style="font-size: 10.0pt; color: #111111;">apstag.fetchBids()</span></code><span class="apple-converted-space"><span style="font-size: 10.0pt; font-family: 'Arial',sans-serif; color: #111111;"> </span></span><span style="font-size: 10.0pt; font-family: 'Arial',sans-serif; color: #111111;">should be called with the slots that are to be refreshed, and then both </span><code><span style="font-size: 10.0pt; color: #111111;">apstag.setDisplayBids()</span></code><span style="font-size: 10.0pt; font-family: 'Arial',sans-serif; color: #111111;">and </span><code><span style="font-size: 10.0pt; color: #111111;">googletag.pubads().refresh() </span></code><span style="font-size: 10.0pt; font-family: 'Arial',sans-serif; color: #111111;">functions should be called in the callback like in the first request. When you make the refresh call, make sure to specify in the refresh ( ) the slots that you are refreshing to avoid refreshing all the slots on the page. The first function, _getGPTSlots(apstagSlots), will return only the googletag slots that match the slotID values inside of the slot objects stored in the variable apstagSlots that will be used for the fetchBids() request. In this case, when you pass apstagSlots into googletag.pubads().refresh(apstagSlots), like so, only the googletag slots that match div-gpt-ad-1475102693815-0 and div-gpt-ad-1475185990716-0 will be refreshed.</span></p>
+<pre style="background-color: #f5f5f5; white-space: -o-pre-wrap; word-wrap: break-word;">//create a variable to store the slot objects that will be used to request bids from UAM
 apstagSlots = [{
          slotID: 'enter your slotID here', //example: div-gpt-ad-1475102693815-0
          slotName: 'enter your DFP ad unit path here', //example: 12345/box-1
@@ -46,7 +45,7 @@ function _getGPTSlots(apstagSlots) {
       // return the slot objects corresponding to the gpt slotIDs
       return googletag.pubads().getSlots().filter(function(slot) {
         // return true if the ID of the slot object is in the gpt slotIDs array
-        return slotIDs.indexOf(slot.getSlotElementId()) > -1;
+        return slotIDs.indexOf(slot.getSlotElementId()) &gt; -1;
  });
 }
 
@@ -62,6 +61,5 @@ function refreshBids() {
             googletag.pubads().refresh(_getGPTSlots(apstagSlots));
         });
     });
-}
- 
- 
+}</pre>
+<p>&nbsp;</p>
