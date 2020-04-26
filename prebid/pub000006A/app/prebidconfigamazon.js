@@ -330,7 +330,8 @@ googletag.cmd.push(function() {
           requestManager.adserverRequestSent = false;
           requestManager.prebid = false;
           // initiate bid request
-          requestHeaderBidsRefresh();
+          console.log('refreshSlot Function called');
+          requestHeaderBidsRefresh(slot);
         }
 
         Object.keys(config.sizeMappings).forEach(function(key) {
@@ -353,7 +354,7 @@ googletag.cmd.push(function() {
             mobileScaling: 0.0 // Double the above values on mobile.
         });
         googletag.pubads().setPrivacySettings({
-            'restrictDataProcessing': true
+            'restrictDataProcessing': false
         });
         //googletag.pubads().disableInitialLoad();
         googletag.enableServices();
@@ -754,10 +755,10 @@ requestHeaderBids();
 
 
 //Refresh Functions
-function biddersBackRefresh() {
+function biddersBackRefresh(slot) {
     if (requestManager.aps && requestManager.prebid) {
         console.log('biddersBack Refresh Called');
-        sendAdserverRequestRefresh();
+        sendAdserverRequestRefresh(slot);
     }
     return;
 }
@@ -777,15 +778,17 @@ function sendAdserverRequestRefresh(slot) {
 }
 
 //function to call the bids
-function requestHeaderBidsRefresh() {
+function requestHeaderBidsRefresh(slot) {
     console.log('requestHeaderBidsRefresh Called');
     // APS request
-    apstag.fetchBids({},function(bids) {
+    apstag.fetchBids({
+      timeout: site_config.refresh_rate
+    },function(bids) {
             googletag.cmd.push(function() {
                 console.log('APS Refresh Bids Called');
                 apstag.setDisplayBids();
                 requestManager.aps = true; // signals that APS request has completed
-                biddersBackRefresh(); // checks whether both APS and Prebid have returned
+                biddersBackRefresh(slot); // checks whether both APS and Prebid have returned
             });
         }
     );
@@ -793,12 +796,14 @@ function requestHeaderBidsRefresh() {
     // put prebid request here
     pbjs.que.push(function() {
         pbjs.requestBids({
+            timeout: site_config.refresh_rate,
+            adUnitCodes: [slot.getSlotElementId()],
             bidsBackHandler: function() {
                 googletag.cmd.push(function() {
                     console.log('Prebid Refresh Bids Called');
                     pbjs.setTargetingForGPTAsync();
                     requestManager.prebid = true; // signals that Prebid request has completed
-                    biddersBackRefresh(); // checks whether both APS and Prebid have returned
+                    biddersBackRefresh(slot); // checks whether both APS and Prebid have returned
                 })
             }
         });
