@@ -1,0 +1,67 @@
+Refreshing Ad Units
+To refresh all DFP slots, apstag.fetchBids() should be called with the same slots that were previously supplied, and then both the apstag.setDisplayBids()and googletag.pubads().refresh() function should be called in the callback like in the first request.
+
+//call refreshBids() to make an UAM request for all slots in apstagSlots and then call googletag to refresh all
+//defined slots on the page
+function refreshBids() {
+    apstag.fetchBids({
+        slots: [{
+            slotID: 'enter your slotID', //example: div-gpt-ad-1475102693815-0
+            slotName: 'enter your DFP ad unit path', //example: /116082170/slot2
+            sizes: [[width, height], [width, height]] //example: [[300,250],[300, 600]]
+        },
+        {
+            slotID: 'enter your slotID',
+            slotName: 'enter your DFP ad unit path' 
+            sizes: [[width, height], [width, height]]
+        }],
+        timeout: 2e3
+    }, function(bids) {
+        // set apstag targeting on googletag 
+        //then refresh all DFP
+        googletag.cmd.push(function() {
+            apstag.setDisplayBids();
+            googletag.pubads().refresh();
+        });
+    });
+}
+To refresh only a subset of DFP slots, apstag.fetchBids() should be called with the slots that are to be refreshed, and then both apstag.setDisplayBids()and googletag.pubads().refresh() functions should be called in the callback like in the first request. When you make the refresh call, make sure to specify in the refresh ( ) the slots that you are refreshing to avoid refreshing all the slots on the page. The first function, _getGPTSlots(apstagSlots), will return only the googletag slots that match the slotID values inside of the slot objects stored in the variable apstagSlots that will be used for the fetchBids() request. In this case, when you pass apstagSlots into googletag.pubads().refresh(apstagSlots), like so, only the googletag slots that match div-gpt-ad-1475102693815-0 and div-gpt-ad-1475185990716-0 will be refreshed.
+
+//create a variable to store the slot objects that will be used to request bids from UAM
+apstagSlots = [{
+         slotID: 'enter your slotID here', //example: div-gpt-ad-1475102693815-0
+         slotName: 'enter your DFP ad unit path here', //example: 12345/box-1
+         sizes: [[width, height], [width, height]] //example: [[300, 250], [300, 600]]
+     },
+     {
+         slotID: 'enter your slotID here',
+         slotName: 'enter your DFP ad unit path here',
+         sizes: [[width ,height]]
+     }]
+
+// get only gpt div id's that match slotIDs passed in fetchBids request
+function _getGPTSlots(apstagSlots) {
+// get all of the slot IDs that were requested
+   var slotIDs = apstagSlots.map(function(slot) { return slot.slotID; });
+      // return the slot objects corresponding to the gpt slotIDs
+      return googletag.pubads().getSlots().filter(function(slot) {
+        // return true if the ID of the slot object is in the gpt slotIDs array
+        return slotIDs.indexOf(slot.getSlotElementId()) > -1;
+ });
+}
+
+//call refreshBids() to make a request for specific ad slots then call googletag refresh in our callback for only those div ids
+function refreshBids() {
+    apstag.fetchBids({
+        slots: apstagSlots,
+        timeout: 2e3
+    }, function(bids) {
+        // set apstag targeting on googletag, then trigger the the refresh call to dfp 
+        googletag.cmd.push(function() {
+            apstag.setDisplayBids();
+            googletag.pubads().refresh(_getGPTSlots(apstagSlots));
+        });
+    });
+}
+ 
+ 

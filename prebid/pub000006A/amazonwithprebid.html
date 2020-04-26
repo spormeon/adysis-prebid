@@ -1,0 +1,130 @@
+Integrating alongside Prebid
+Sequential integration alongside Prebid
+
+Parallel integration alongside Prebid
+
+There are two methods to integrate alongside Prebid. The least complicated is to call Amazon Publisher Services (APS) and Prebid consecutively. The second method, and most efficient, groups the APS and Prebid bid requests together so that they are made simultaneously. Then the call to Google Ad Manager (GAM) initiates when either both APS and Prebid have returned, or the FAILSAFE_TIMEOUT has been hit. Both integrations are asynchronous, meaning that the first bidder called does not hinder the execution of the second bidder’s JavaScript.
+
+Method 1: Sequential integration alongside Prebid
+A sequential integration is simply calling Amazon and Prebid one right after another. There are three main API calls that need to be managed:
+
+Each bidders’ bid request (APS: apstag.fetchBids(), Prebid: pbjs.requestBids()).
+Setting key-value pairs with bid information (APS: apstag.setDisplayBids(), Prebid: pbjs.setTargetingForGPTAsync()).
+GAM request: googletag.pubads().refresh().
+When bidders are called sequentially, the APS apstag.fetchBids() and the Prebid pbjs.requestBids() functions need to be made as close together as possible in order to give both bidders equal amounts of time to complete their auction. In the example below, googletag.pubads().refresh() is commented out of the Amazon code to allow Prebid to make the GAM request when they have returned bids or their timeout is hit. In this method, the Prebid script loads directly below the APS script, and once Prebid has returned their bids, they initiate the call to GAM with googletag.pubads().refresh().
+
+Note: This method may result in a race condition where APS will not be able to compete in the auction if Prebid initiates the GAM request before UAM has returned bids. We recommend the parallel method if you have the resources to implement a little JavaScript.
+
+Example 1
+
+Amazon request: ———|
+
+Prebid request:      ————|
+
+GAM request:                           |—–|
+
+Code example calling APS first
+
+
+
+SEE DEMO AT: https://cdn.adysis.com/pub000006A/amazoncallingfirst.png
+
+
+
+
+
+
+
+Method 2: Parallel integration alongside Prebid
+The most efficient integration for APS and Prebid will be to implement the bid requests so they execute simultaneously. Then, you’ll want to apply logic to initiate the ad request to GAM when both APS and Prebid have returned bids, or when your failsafe timeout has been hit.
+
+We have created a ‘request manager’ to help you seamlessly integrate APS in parallel with Prebid. The executeParallelAuctionAlongsidePrebid() function manages the APS and Prebid bid requests, as well as the ad call to GAM. In your Prebid code you can keep all the Prebid config as is, but move your pbjs.requestBids() code block into the requestHeaderBids() function, and then remove the pbjs.sendAdserverRequest() code block, as this will now be made inside executeParallelAuctionAlongsidePrebid().
+
+This is what’s included inside the executeParallelAuctionAlongsidePrebid() function:
+
+Set universal timeout.
+Declare the request config settings.
+biddersBack(): called once when APS returns, and again when Prebid returns. When the last bidder returns, this function calls sendAdserverRequest().
+sendAdserverRequest(): Makes the ad request to GAM. This will only make one request to GAM, either when both bidders have returned, or when the FAILSAFE_TIMEOUT is hit.
+requestHeaderBids(): Initiates the bid requests to APS and Prebid.
+FAILSAFE_TIMEOUT: Calls sendAdserverRequest() if the timeout is hit before both APS and Prebid have returned. Only bidders that return bids within this timeframe will compete in the GAM auction.
+
+
+SEE DEMO AT https://cdn.adysis.com/pub000006A/amazonparallel.png
+
+
+Example code
+
+<script>
+/** Executes a parallel auction with prebid **/
+function executeParallelAuctionAlongsidePrebid() {
+
+    var FAILSAFE_TIMEOUT = 2000;
+    var requestManager = {
+        adserverRequestSent: false,
+        aps: false,
+        prebid: false
+    };
+
+    // when both APS and Prebid have returned, initiate ad request
+    function biddersBack() {
+        if (requestManager.aps && requestManager.prebid) {
+            sendAdserverRequest();
+        } 
+        return;
+    }
+
+    // sends adserver request
+    function sendAdserverRequest() {
+        if (requestManager.adserverRequestSent === true) {
+            return;
+        }
+        requestManager.adserverRequestSent = true;
+        googletag.cmd.push(function() {
+            googletag.pubads().refresh();
+        });
+    }
+
+    // sends bid request to APS and Prebid
+    function requestHeaderBids() {
+
+        // APS request
+        apstag.fetchBids({
+                slots: [{
+                    slotID: 'your-gpt-div-id',
+                    slotName: '12345/yourAdUnit',
+                    sizes: [[300, 250], [300, 600]]
+                }]
+            },function(bids) {
+                googletag.cmd.push(function() {
+                    apstag.setDisplayBids();
+                    requestManager.aps = true; // signals that APS request has completed
+                    biddersBack(); // checks whether both APS and Prebid have returned
+                });
+            }
+        );
+
+        // put prebid request here
+        pbjs.que.push(function() {
+            pbjs.requestBids({
+                bidsBackHandler: function() {
+                    googletag.cmd.push(function() {
+                        pbjs.setTargetingForGPTAsync();
+                        requestManager.prebid = true; // signals that Prebid request has completed
+                        biddersBack(); // checks whether both APS and Prebid have returned
+                    })
+                }
+            });
+        });
+    }
+
+    // initiate bid request
+    requestHeaderBids();
+
+    // set failsafe timeout
+    window.setTimeout(function() {
+        sendAdserverRequest();
+    }, FAILSAFE_TIMEOUT);
+};
+</script>
+Conditions of Use | Priv

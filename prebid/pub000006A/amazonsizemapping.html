@@ -1,0 +1,160 @@
+Googletag sizeMapping
+NOTE: These new integration methods do not require the use of the googletag sizeMapping feature, you can implement it with a standard googletag setup for an easier header bidding integration
+The apstag.fetchBids() API call is compatible with your existing googletag sizeMapping configuration, and may even result in a simpler integration all together. When you define your googletag slots, you apply the sizeMapping breakpoints to the slots you wish to be responsive, then the googletag code reads the browser width and height and dynamically requests specific ad sizes from DFP for the slots that have the sizeMapping enabled. The trick with header bidding, is matching the slot sizes in the Amazon Publisher Services (APS) bid request to the ad sizes that will be ultimately requested from DFP for each slot. If this doesn’t happen, there will be a mismatch of ad sizes requested from APS and ad sizes requested from DFP.
+
+Example: If you have a sizeMapping configuration like this:
+
+  var mapping = googletag.sizeMapping().
+    addSize([1024, 800], [[300, 600]]). // browsers with a WxH greater than 1024x800, request 300x600 from DFP
+    addSize([800, 400],  [300, 250]]). // browsers in between 800x400 and 1024x800, request 300x250 from DFP
+    addSize([0, 0], []). // browsers smaller than 800x400, don't request an ad
+    build();
+Then for every ad slot with this sizeMapping configuration applied to, in the bid request to APS for those slots, you will need to match the sizes that will be eventually requested from DFP based on the browser screen size. It would be inefficient to just send 300×250 and 300×600 on every slot request because only one of those sizes would have the potential of actually rendering.
+
+In order to achieve this, we have developed a new feature that allows you to just pass us the googletag slot object(s) in the bid request. We will parse through the sizeMapping breakpoints, and then match the sizes in the bid request to the sizes that will be requested from DFP for each slot. There is one caveat here, the slots being requested need to already be defined so that our code can access the slot object(s) and extract the proper sizes. This means that our integration will need to be pushed into the googletag.cmd queue so that our bid request is guaranteed to execute after the slots have been defined.
+
+There are two new methods to integrate:
+Don’t pass us any GPT slot information in the fetchBids API call, and we will construct the bid request for all defined slots
+<script>
+googletag.cmd.push(function(){ 
+  apstag.fetchBids({ 
+  timeout: 2000 }, 
+    function(bids) {
+      apstag.setDisplayBids(); 
+      googletag.pubads().refresh();
+  }); 
+}); 
+</script>
+Send us an array of comma separated GPT slot objects as the slots value in the first argument to fetchBids
+<script>
+googletag.cmd.push(function(){ 
+  apstag.fetchBids({ slots: [slot1, slot2], 
+    timeout: 2000 }, 
+  function(bids) {
+    apstag.setDisplayBids(); 
+    googletag.pubads().refresh([slot1, slot2]);
+  }); 
+}); 
+</script>
+Integration Instructions
+Step 1: Add new parameter to apstag.init()
+<script>
+/** to activate this feature, you will need to add simplerGPT as a new parameter 
+to apstag.init(), and set the value to true **/
+apstag.init({
+     pubID: 'xxxx', // enter your unique publisher id 
+     adServer: 'googletag',
+     simplerGPT: true 
+ });
+</script>
+Step 2: Define googletag slots and apply sizeMapping
+<script>
+//Define googletag and the cmd array
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+
+// declare slot variables so that our bid request API (fetchBids) can access them (for method 2)
+var slot1;
+var slot2;
+
+googletag.cmd.push(function() {
+  var mapping = googletag.sizeMapping().
+    addSize([1024, 800], [[300, 600]]). 
+    addSize([800, 400], [[300, 250]]). 
+    addSize([0, 0], []). 
+    build();
+
+  var mapping2 = googletag.sizeMapping().
+    addSize([1024, 800], [[970, 250]]).
+    addSize([800, 400], [[728, 90]]).
+    addSize([0, 0], []).
+    build();
+
+
+  slot1 = googletag.defineSlot('/116082170/top_300x250', [[300, 600], [300, 250]], 'div-gpt-ad-1519349898690-0').defineSizeMapping(mapping).addService(googletag.pubads());
+  slot2 = googletag.defineSlot('/116082170/bottom_728x90', [[970, 250], [728, 90]], 'div-gpt-ad-1519349898690-1').defineSizeMapping(mapping2).addService(googletag.pubads());
+  googletag.pubads().disableInitialLoad();
+  googletag.enableServices();
+});
+</script>
+Step 3: Add fetchBids() API call to request bids from APS
+Integrate our new code directly underneath where you define your googletag slots to allow our bid request to go out as soon as possible. If you are using another header bidding solution in conjunction with apstag, please see the other resources on how to integrate alongside other header bidders. If this is the case, then in order to leverage these new integration methods, you must either (1) push all header bidding code into the googletag.cmd queue to ensure that all the bidding executes at the same time, or (2) apply a timing mechanism to wait until we have returned our bids or a timeout has been reached before the page makes all the DFP requests.
+
+ 
+
+Method 1: Request bids for all defined slots
+<script>
+googletag.cmd.push(function(){ 
+  apstag.fetchBids({ 
+  timeout: 2000 }, 
+    function(bids) {
+      apstag.setDisplayBids(); 
+      googletag.pubads().refresh();
+  }); 
+}); 
+</script>
+Method 2: Request bids for only specific GPT slots (can be used for refreshing)
+<script>
+googletag.cmd.push(function(){ 
+  apstag.fetchBids({ slots: [slot1, slot2], 
+    timeout: 2000 }, 
+  function(bids) {
+    apstag.setDisplayBids(); 
+    googletag.pubads().refresh([slot1, slot2]);
+  }); 
+}); 
+</script>
+Full Code Example
+// Load GPT library
+<script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+<script>
+// Load APS library 
+!function(a9,a,p,s,t,A,g){if(a[a9])return;function q(c,r){a[a9]._Q.push([c,r])}a[a9]={init:function(){q("i",arguments)},fetchBids:function(){q("f",arguments)},setDisplayBids:function(){},targetingKeys:function(){return[]},_Q:[]};A=p.createElement(s);A.async=!0;A.src=t;g=p.getElementsByTagName(s)[0];g.parentNode.insertBefore(A,g)}("apstag",window,document,"script","//c.amazon-adsystem.com/aax2/apstag.js");
+
+/** To activate this feature, you will need to add a parameter to your apstag.init function. 
+The parameter is simplerGPT and it needs to be set to true: **/
+apstag.init({
+     pubID: 'xxxx', // enter your unique publisher id 
+     adServer: 'googletag',
+     simplerGPT: true
+ });
+
+//Define googletag and the cmd array
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+
+/** declare slot variables outside function scope
+so that our bid request function can access them (for method 2) **/
+var slot1;
+var slot2;
+
+googletag.cmd.push(function() {
+  var mapping = googletag.sizeMapping().
+    addSize([1024, 800], [[300, 600]]).
+    addSize([800, 400], [[300, 250]]).
+    addSize([0, 0], []). 
+    build();
+
+  var mapping2 = googletag.sizeMapping().
+    addSize([1024, 800], [[970, 250]]).
+    addSize([800, 400], [[728, 90]]).
+    addSize([0, 0], []).
+    build();
+
+
+  slot1 = googletag.defineSlot('/116082170/top_300x250', [[300, 600], [300, 250]], 'div-gpt-ad-1519349898690-0').defineSizeMapping(mapping).addService(googletag.pubads());
+  slot2 = googletag.defineSlot('/116082170/bottom_728x90', [[970, 250], [728, 90]], 'div-gpt-ad-1519349898690-1').defineSizeMapping(mapping2).addService(googletag.pubads());
+  googletag.pubads().disableInitialLoad();
+  googletag.enableServices();
+});
+
+// Method 1: Construct bids for all defined slots and then make the DFP request
+googletag.cmd.push(function(){ 
+  apstag.fetchBids({ 
+  timeout: 2000 }, 
+    function(bids) {
+      apstag.setDisplayBids(); 
+      googletag.pubads().refresh();
+  }); 
+}); 
+</script>
