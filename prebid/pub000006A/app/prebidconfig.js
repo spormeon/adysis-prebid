@@ -186,7 +186,7 @@ googletag.cmd.push(function () {
     
     googletag.cmd.push(function() {
         apstag.fetchBids({
-                timeout: PREBID_TIMEOUT
+                timeout: PREBID_TIMEOUT-200
             },
             function(bids) {
                 apstag.setDisplayBids();
