@@ -174,11 +174,10 @@ googletag.cmd.push(function() {
             slot.defineSizeMapping(sizeMappings[def.sizeMapping]);
             slot.addService(googletag.pubads());
             googletag.display(key);
-            slots[key] = {
-                slot: slot
-            };
+            slots[key] = { slot: slot };
         });
     })
+    // the order below determines the order on the page //
     (window.googletag, window.pbjs, {
 definitons: {
 inreedvid13Slot: { adUnitPath: "/21665095471/specktra_top_1", size: [[970, 90],[970, 250],[728, 90],[468, 60],[320, 50],[320, 100]], sizeMapping: "mappingleaderslot", timeout: site_config.refresh_rate, },
@@ -315,7 +314,7 @@ function requestHeaderBidsRefresh(slot) {
     console.log('requestHeaderBidsRefresh Called');
     // APS request
     apstag.fetchBids({
-      timeout: site_config.refresh_rate
+      timeout: PREBID_TIMEOUT
     },function(bids) {
             googletag.cmd.push(function() {
                 console.log('APS Refresh Bids Called');
@@ -329,7 +328,7 @@ function requestHeaderBidsRefresh(slot) {
     // put prebid request here
     pbjs.que.push(function() {
         pbjs.requestBids({
-            timeout: site_config.refresh_rate,
+            timeout: PREBID_TIMEOUT,
             adUnitCodes: [slot.getSlotElementId()],
             bidsBackHandler: function() {
                 googletag.cmd.push(function() {
