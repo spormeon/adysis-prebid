@@ -25,6 +25,3 @@ slots: [
     });
 });
 //amazon bidder end
-
-
-
