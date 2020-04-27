@@ -123,7 +123,7 @@ googletag.cmd.push(function() {
           requestManager.prebid = false;
           // initiate bid request
           console.log('refreshSlot Function called');
-          requestHeaderBidsRefresh([slot]);
+          requestHeaderBidsRefresh(slot);
         }
 
         Object.keys(config.sizeMappings).forEach(function(key) {
