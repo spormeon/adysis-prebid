@@ -135,6 +135,149 @@ googletag.cmd.push(function() {
             sizeMappings[key] = sizeMapping;
             console.log("created sizemapping", sizeMappings[key]);
         });
+        
+        
+        var requestManager = {
+        	    adserverRequestSent: false,
+        	    aps: false,
+        	    prebid: false
+        	};
+
+        	//function to check if both APS and Prebid have sent bids
+        	function biddersBack() {
+        	    if (requestManager.aps && requestManager.prebid) {
+        	        console.log('biddersBack Called');
+        	        sendAdserverRequest();
+        	    }
+        	    return;
+        	}
+
+        	//function to send bids to GAM
+        	function sendAdserverRequest() {
+        	    console.log('sendAdserverRequest Called');
+        	    console.log('requestManager.adserverRequestSent = '+requestManager.adserverRequestSent);
+        	    if (requestManager.adserverRequestSent === true) {
+        	        return;
+        	    }
+        	    requestManager.adserverRequestSent = true;
+        	    googletag.cmd.push(function() {
+        	        console.log('sendAdserverRequest Refresh Called');
+        	        googletag.pubads().refresh();
+        	    });
+        	}
+
+        	//function to call the bids
+        	function requestHeaderBids() {
+        	    console.log('requestHeaderBids Called');
+        	    // APS request
+        	    apstag.fetchBids({},function(bids) {
+        	            googletag.cmd.push(function() {
+        	                console.log('APS Bids Called');
+        	                apstag.setDisplayBids();
+        	                requestManager.aps = true; // signals that APS request has completed
+        	                biddersBack(); // checks whether both APS and Prebid have returned
+        	            });
+        	        }
+        	    );
+
+        	    // put prebid request here
+        	    pbjs.que.push(function() {
+        	        pbjs.requestBids({
+        	            bidsBackHandler: function() {
+        	                googletag.cmd.push(function() {
+        	                    console.log('Prebid Bids Called');
+        	                    pbjs.setTargetingForGPTAsync();
+        	                    requestManager.prebid = true; // signals that Prebid request has completed
+        	                    biddersBack(); // checks whether both APS and Prebid have returned
+        	                })
+        	            }
+        	        });
+        	    });
+        	}
+        	// initiate bid request
+        	requestHeaderBids();
+
+
+        	//Refresh Functions
+        	function biddersBackRefresh(slot) {
+        	    if (requestManager.aps && requestManager.prebid) {
+        	        console.log('biddersBack Refresh Called');
+        	        sendAdserverRequestRefresh(slot);
+        	    }
+        	    return;
+        	}
+
+        	//function to send bids to GAM
+        	function sendAdserverRequestRefresh(slot) {
+        	    console.log('sendAdserverRequestRefresh Called');
+        	    console.log('requestManager.adserverRequestSent = '+requestManager.adserverRequestSent);
+        	    if (requestManager.adserverRequestSent === true) {
+        	        return;
+        	    }
+        	    requestManager.adserverRequestSent = true;
+        	    googletag.cmd.push(function() {
+        	        console.log('sendAdserverRequestRefresh Refresh Called');
+        	        googletag.pubads().refresh([slot]);
+        	    });
+        	}
+
+        	//function to call the bids
+        	function requestHeaderBidsRefresh(slot) {
+        	    console.log('requestHeaderBidsRefresh Called');
+        	    // APS request
+        	    apstag.fetchBids({
+        	      timeout: PREBID_TIMEOUT
+        	    },function(bids) {
+        	            googletag.cmd.push(function() {
+        	                console.log('APS Refresh Bids Called');
+        	                apstag.setDisplayBids();
+        	                requestManager.aps = true; // signals that APS request has completed
+        	                biddersBackRefresh(slot); // checks whether both APS and Prebid have returned
+        	            });
+        	        }
+        	    );
+
+        	    // put prebid request here
+        	    pbjs.que.push(function() {
+        	        pbjs.requestBids({
+        	            timeout: PREBID_TIMEOUT,
+        	            adUnitCodes: [slot.getSlotElementId()],
+        	            bidsBackHandler: function() {
+        	                googletag.cmd.push(function() {
+        	                    console.log('Prebid Refresh Bids Called');
+        	                    pbjs.setTargetingForGPTAsync();
+        	                    requestManager.prebid = true; // signals that Prebid request has completed
+        	                    biddersBackRefresh(slot); // checks whether both APS and Prebid have returned
+        	                })
+        	            }
+        	        });
+        	    });
+        	}
+
+        	// function initAdserver1() {
+//        	     if (pbjs.initAdserver1Set) return;
+//        	     pbjs.initAdserver1Set = true;
+//        	     googletag.cmd.push(function() {
+//        	         pbjs.que.push(function() {
+//        	             pbjs.setTargetingForGPTAsync();
+//        	             pbjs.triggerUserSyncs();
+//        	             googletag.pubads().refresh();
+//        	         });
+//        	     });
+        	// }
+        	// in case pbjs doesn't load
+        	setTimeout(function() {
+        	    sendAdserverRequest();
+        	    console.log('Failsafe sendAdserverRequest Called');
+        	}, site_config.FAILSAFE_TIMEOUT);
+        
+        
+        
+        
+        
+        
+        
+        
         googletag.pubads().enableSingleRequest();
         //googletag.pubads().collapseEmptyDivs(true);
         googletag.pubads().setCentering(true);
@@ -225,136 +368,4 @@ sizeMappings: {
 });
 
 
-var requestManager = {
-    adserverRequestSent: false,
-    aps: false,
-    prebid: false
-};
 
-//function to check if both APS and Prebid have sent bids
-function biddersBack() {
-    if (requestManager.aps && requestManager.prebid) {
-        console.log('biddersBack Called');
-        sendAdserverRequest();
-    }
-    return;
-}
-
-//function to send bids to GAM
-function sendAdserverRequest() {
-    console.log('sendAdserverRequest Called');
-    console.log('requestManager.adserverRequestSent = '+requestManager.adserverRequestSent);
-    if (requestManager.adserverRequestSent === true) {
-        return;
-    }
-    requestManager.adserverRequestSent = true;
-    googletag.cmd.push(function() {
-        console.log('sendAdserverRequest Refresh Called');
-        googletag.pubads().refresh();
-    });
-}
-
-//function to call the bids
-function requestHeaderBids() {
-    console.log('requestHeaderBids Called');
-    // APS request
-    apstag.fetchBids({},function(bids) {
-            googletag.cmd.push(function() {
-                console.log('APS Bids Called');
-                apstag.setDisplayBids();
-                requestManager.aps = true; // signals that APS request has completed
-                biddersBack(); // checks whether both APS and Prebid have returned
-            });
-        }
-    );
-
-    // put prebid request here
-    pbjs.que.push(function() {
-        pbjs.requestBids({
-            bidsBackHandler: function() {
-                googletag.cmd.push(function() {
-                    console.log('Prebid Bids Called');
-                    pbjs.setTargetingForGPTAsync();
-                    requestManager.prebid = true; // signals that Prebid request has completed
-                    biddersBack(); // checks whether both APS and Prebid have returned
-                })
-            }
-        });
-    });
-}
-// initiate bid request
-requestHeaderBids();
-
-
-//Refresh Functions
-function biddersBackRefresh(slot) {
-    if (requestManager.aps && requestManager.prebid) {
-        console.log('biddersBack Refresh Called');
-        sendAdserverRequestRefresh(slot);
-    }
-    return;
-}
-
-//function to send bids to GAM
-function sendAdserverRequestRefresh(slot) {
-    console.log('sendAdserverRequestRefresh Called');
-    console.log('requestManager.adserverRequestSent = '+requestManager.adserverRequestSent);
-    if (requestManager.adserverRequestSent === true) {
-        return;
-    }
-    requestManager.adserverRequestSent = true;
-    googletag.cmd.push(function() {
-        console.log('sendAdserverRequestRefresh Refresh Called');
-        googletag.pubads().refresh([slot]);
-    });
-}
-
-//function to call the bids
-function requestHeaderBidsRefresh(slot) {
-    console.log('requestHeaderBidsRefresh Called');
-    // APS request
-    apstag.fetchBids({
-      timeout: PREBID_TIMEOUT
-    },function(bids) {
-            googletag.cmd.push(function() {
-                console.log('APS Refresh Bids Called');
-                apstag.setDisplayBids();
-                requestManager.aps = true; // signals that APS request has completed
-                biddersBackRefresh(slot); // checks whether both APS and Prebid have returned
-            });
-        }
-    );
-
-    // put prebid request here
-    pbjs.que.push(function() {
-        pbjs.requestBids({
-            timeout: PREBID_TIMEOUT,
-            adUnitCodes: [slot.getSlotElementId()],
-            bidsBackHandler: function() {
-                googletag.cmd.push(function() {
-                    console.log('Prebid Refresh Bids Called');
-                    pbjs.setTargetingForGPTAsync();
-                    requestManager.prebid = true; // signals that Prebid request has completed
-                    biddersBackRefresh(slot); // checks whether both APS and Prebid have returned
-                })
-            }
-        });
-    });
-}
-
-// function initAdserver1() {
-//     if (pbjs.initAdserver1Set) return;
-//     pbjs.initAdserver1Set = true;
-//     googletag.cmd.push(function() {
-//         pbjs.que.push(function() {
-//             pbjs.setTargetingForGPTAsync();
-//             pbjs.triggerUserSyncs();
-//             googletag.pubads().refresh();
-//         });
-//     });
-// }
-// in case pbjs doesn't load
-setTimeout(function() {
-    sendAdserverRequest();
-    console.log('Failsafe sendAdserverRequest Called');
-}, site_config.FAILSAFE_TIMEOUT);
