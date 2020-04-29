@@ -84,21 +84,6 @@ googletag.cmd.push(function() {
         var sizeMappings = {};
         var slots = {};
 
-        // function refreshSlot(slot) {
-        //     pbjs.que.push(function() {
-        //         pbjs.requestBids({
-        //             timeout: PREBID_TIMEOUT,
-        //             // useBidCache: USERBIDCACHE,
-        //             adUnitCodes: [slot.getSlotElementId()],
-        //             bidsBackHandler: function() {
-        //                 pbjs.setTargetingForGPTAsync([slot.getSlotElementId()]);
-        //                 //googletag.destroySlots([slot]);
-        //                 googletag.pubads().refresh([slot]);
-        //             }
-        //         });
-        //     });
-        // }
-
         function refreshSlot(slot){
           requestManager.aps = false;
           requestManager.adserverRequestSent = false;
