@@ -1,3 +1,4 @@
+// this runs amazon in parallel with prebid
 var googletag = googletag || {};
 googletag.cmd = googletag.cmd || [];
 googletag.cmd.push(function() {
@@ -93,7 +94,7 @@ pbjs.que.push(function() {
     });
     pbjs.requestBids({
         bidsBackHandler: biddersBack,
-        timeout: PREBID_TIMEOUT
+        //timeout: PREBID_TIMEOUT
     });
 });
 
@@ -359,3 +360,10 @@ setTimeout(function() {
     sendAdserverRequest();
     console.log('Failsafe sendAdserverRequest Called');
 }, site_config.FAILSAFE_TIMEOUT);
+
+
+
+
+
+
+
