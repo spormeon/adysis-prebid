@@ -282,7 +282,7 @@ function requestHeaderBidsRefresh(slot) {
     console.log('requestHeaderBidsRefresh Called');
     // APS request
     apstag.fetchBids({
-      timeout: PREBID_TIMEOUT
+      //timeout: PREBID_TIMEOUT
     },function(bids) {
             googletag.cmd.push(function() {
                 console.log('APS Refresh Bids Called');
@@ -296,7 +296,7 @@ function requestHeaderBidsRefresh(slot) {
     // put prebid request here
     pbjs.que.push(function() {
         pbjs.requestBids({
-            timeout: PREBID_TIMEOUT,
+            //timeout: PREBID_TIMEOUT,
             adUnitCodes: [slot.getSlotElementId()],
             bidsBackHandler: function() {
                 googletag.cmd.push(function() {
@@ -309,3 +309,7 @@ function requestHeaderBidsRefresh(slot) {
         });
     });
 }
+//set failsafe timeout
+window.setTimeout(function() {
+    sendAdserverRequest();
+}, FAILSAFE_TIMEOUT);
