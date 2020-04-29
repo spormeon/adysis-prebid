@@ -1,3 +1,4 @@
+// this runs amazon in parallel with prebid
 var googletag = googletag || {};
 googletag.cmd = googletag.cmd || [];
 googletag.cmd.push(function() {
@@ -10,21 +11,6 @@ pbjs.que.push(function() {
     pbjs.addAdUnits(unitsOnPage);
 
     pbjs.bidderSettings = {
-        //standard: {
-        //adserverTargeting: [
-        //{ key: "hb_bidder", val: function(bidResponse) { return bidResponse.bidderCode; } },
-        //{ key: "hb_adid", val: function(bidResponse) { return bidResponse.adId; } },
-        //{ key: "hb_pb",     val: function(bidResponse) { return bidResponse.pbCg; } },
-        //{ key: 'hb_size', val: function (bidResponse) { return bidResponse.size; } },
-        //{ key: 'hb_source', val: function (bidResponse) { return bidResponse.source; } },
-        //{ key: 'hb_deal', val: function (bidResponse) { return bidResponse.deal; } },
-        //{ key: 'hb_format', val: function (bidResponse) { return bidResponse.mediaType; } },
-        //{ key: 'hb_native_linkurl', val: function (bidResponse) { return bidResponse.native.clickUrl; } },
-        //{ key: 'hb_native_image', val: function (bidResponse) { return bidResponse.native.image; } },
-        //{ key: 'hb_native_brand', val: function (bidResponse) { return bidResponse.native.brand; } },
-        //{ key: 'hb_native_title', val: function (bidResponse) { return bidResponse.native.title; } }
-        //]
-        //},
     		sovrn:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 0.75; } },
     		appnexus:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 0.80; } },
     		openx:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 0.85; } },
@@ -69,7 +55,7 @@ pbjs.que.push(function() {
        enableSendAllBids: false, // Default will be `true` as of 1.0
        bidderSequence: 'random', // Default is random
        publisherDomain: 'specktra.com',
-       bidderTimeout: PREBID_TIMEOUT+500,
+       //bidderTimeout: PREBID_TIMEOUT+500,
        //pubcid: {expInterval: 525600},
        //currency: { 'adServerCurrency': "GBP", 'granularityMultiplier': 1, 'conversionRateFile': 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json', },
         sizeConfig: [
@@ -91,31 +77,12 @@ pbjs.que.push(function() {
             { mediaQuery: '(min-width: 1px) and (max-width: 499px)', sizesSupported: [[300,250],[250,250]], labels: [ 'phonemenu'] }
           ]
     });
-    pbjs.requestBids({
-        bidsBackHandler: biddersBack,
-        timeout: PREBID_TIMEOUT
-    });
 });
 
 googletag.cmd.push(function() {
     (function(googletag, pbjs, config) {
         var sizeMappings = {};
         var slots = {};
-
-        // function refreshSlot(slot) {
-        //     pbjs.que.push(function() {
-        //         pbjs.requestBids({
-        //             timeout: PREBID_TIMEOUT,
-        //             // useBidCache: USERBIDCACHE,
-        //             adUnitCodes: [slot.getSlotElementId()],
-        //             bidsBackHandler: function() {
-        //                 pbjs.setTargetingForGPTAsync([slot.getSlotElementId()]);
-        //                 //googletag.destroySlots([slot]);
-        //                 googletag.pubads().refresh([slot]);
-        //             }
-        //         });
-        //     });
-        // }
 
         function refreshSlot(slot){
           requestManager.aps = false;
@@ -342,20 +309,3 @@ function requestHeaderBidsRefresh(slot) {
         });
     });
 }
-
-// function initAdserver1() {
-//     if (pbjs.initAdserver1Set) return;
-//     pbjs.initAdserver1Set = true;
-//     googletag.cmd.push(function() {
-//         pbjs.que.push(function() {
-//             pbjs.setTargetingForGPTAsync();
-//             pbjs.triggerUserSyncs();
-//             googletag.pubads().refresh();
-//         });
-//     });
-// }
-// in case pbjs doesn't load
-setTimeout(function() {
-    sendAdserverRequest();
-    console.log('Failsafe sendAdserverRequest Called');
-}, site_config.FAILSAFE_TIMEOUT);
