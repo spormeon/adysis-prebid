@@ -77,6 +77,11 @@ pbjs.que.push(function() {
             { mediaQuery: '(min-width: 1px) and (max-width: 499px)', sizesSupported: [[300,250],[250,250]], labels: [ 'phonemenu'] }
           ]
     });
+    
+    pbjs.requestBids({
+        bidsBackHandler: biddersBack,
+        timeout: PREBID_TIMEOUT
+    });
 });
 
 googletag.cmd.push(function() {
