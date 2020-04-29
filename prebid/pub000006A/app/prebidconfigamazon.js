@@ -355,11 +355,12 @@ function requestHeaderBidsRefresh(slot) {
 //         });
 //     });
 // }
+
 // in case pbjs doesn't load
-setTimeout(function() {
-    sendAdserverRequest();
-    console.log('Failsafe sendAdserverRequest Called');
-}, site_config.FAILSAFE_TIMEOUT);
+//setTimeout(function() {
+//    sendAdserverRequest();
+//    console.log('Failsafe sendAdserverRequest Called');
+//}, site_config.FAILSAFE_TIMEOUT);
 
 
 
