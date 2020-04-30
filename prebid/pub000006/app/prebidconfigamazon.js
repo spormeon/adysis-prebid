@@ -309,15 +309,3 @@ function requestHeaderBidsRefresh(slot) {
         });
     });
 }
-
-
-
-
-
-
-
-
-
-
-
-
