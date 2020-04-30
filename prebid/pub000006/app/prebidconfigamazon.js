@@ -72,7 +72,7 @@ pbjs.que.push(function() {
             { mediaQuery: '(min-width: 500px) and (max-width: 768px)', sizesSupported: [[728,90],[468,60],[320,50]], labels: [ 'tabletleader'] },
             { mediaQuery: '(min-width: 1px) and (max-width: 499px)', sizesSupported: [[300,250],[250,250],[320,50],[320,100],[336,280]], labels: [ 'phone'] },
             { mediaQuery: '(min-width: 1px) and (max-width: 499px)', sizesSupported: [[468,60],[320,50]], labels: [ 'phonefooter'] },
-            { mediaQuery: '(min-width: 1px) and (max-width: 499px)', sizesSupported: [[300, 250],[250, 250],[320, 50],[320, 100],[336, 280],[468, 90]], labels: [ 'phonebottom2'] },
+            { mediaQuery: '(min-width: 1px) and (max-width: 499px)', sizesSupported: [[300, 250],[250, 250],[320, 50],[320, 100],[336, 280],[468, 60]], labels: [ 'phonebottom2'] },
             { mediaQuery: '(min-width: 1px) and (max-width: 499px)', sizesSupported: [[468,60],[320,50]], labels: [ 'phoneleader'] },
             { mediaQuery: '(min-width: 1px) and (max-width: 499px)', sizesSupported: [[300,250],[250,250]], labels: [ 'phonemenu'] }
           ]
@@ -161,7 +161,7 @@ sizeMappings: {
 	mappinginreedvidslot: [
 	[[1024, 768],[[728, 90],[300, 250],[250, 250],[468, 60],[320, 50],[336, 280],[580, 400],[320, 100]]],
 	[[768, 500],[[728, 90],[300, 250],[250, 250],[468, 60],[320, 50],[336, 280],[580, 400],[320, 100]]],
-	[[1, 1],[[300, 250],[250, 250],[320, 50],[320, 100],[336, 280],[468, 90]]]
+	[[1, 1],[[300, 250],[250, 250],[320, 50],[320, 100],[336, 280],[468, 60]]]
 	],
 	mappingmenuslot: [
 	[[1024, 768],[[300, 600],[300, 250],[250, 250],[160, 600],[120, 600]]],
@@ -176,7 +176,7 @@ sizeMappings: {
 	mappingbottom2slot: [
 	[[1024, 768],[[970, 250],[970, 90],[728, 90],[300, 250],[250, 250],[468, 60],[320, 50],[336, 280],[580, 400],[320, 100]]],
 	[[768, 500],[[728, 90],[300, 250],[250, 250],[468, 60],[320, 50],[336, 280],[580, 400],[320, 100]]],
-	[[1, 1],[[300, 250],[250, 250],[320, 50],[320, 100],[336, 280],[468, 90]]]
+	[[1, 1],[[300, 250],[250, 250],[320, 50],[320, 100],[336, 280],[468, 60]]]
 	],
 	mappingfooterslot: [
 	[[1024, 768],[[970, 90],[728, 90],[468, 60],[320, 50],[320, 100]]],
@@ -309,3 +309,15 @@ function requestHeaderBidsRefresh(slot) {
         });
     });
 }
+
+
+
+
+
+
+
+
+
+
+
+
