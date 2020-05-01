@@ -9,3 +9,6 @@ LAZYLOAD_MOBILE_SCALE: 1.3  // Scale the above values on mobile.
 console.log("Lazy Load Fetch:", LAZYLOAD_FETCH );
 console.log("Lazy Load Render:", LAZYLOAD_RENDER );
 console.log("Lazy Load Mobile Scale:", LAZYLOAD_MOBILE_SCALE );
+
+
+
