@@ -118,9 +118,9 @@ googletag.cmd.push(function() {
             renderMarginPercent: site_config.LAZYLOAD_RENDER,   // Render slots within 5000 viewports.
             mobileScaling: site_config.LAZYLOAD_MOBILE_SCALE    // Double the above values on mobile. 
         });
-        console.log("lazy load fetch triggered", fetchMarginPercent);
-        console.log("lazy load render triggered", renderMarginPercent);
-        console.log("lazy load mobile scale set", mobileScaling);
+        console.log('lazy load fetch triggered = ' +fetchMarginPercent);
+        console.log('lazy load render triggered = ' +renderMarginPercent);
+        console.log('lazy load mobile scale set = ' +mobileScaling);
         
         googletag.pubads().setPrivacySettings({
             'restrictDataProcessing': false
@@ -322,3 +322,9 @@ function requestHeaderBidsRefresh(slot) {
 window.setTimeout(function() {
     sendAdserverRequest();
 }, FAILSAFE_TIMEOUT);
+
+
+
+
+
+
