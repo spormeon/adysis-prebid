@@ -78,10 +78,10 @@ pbjs.que.push(function() {
           ]
     });
     
-    pbjs.requestBids({
-        bidsBackHandler: biddersBack,
-        timeout: PREBID_TIMEOUT
-     });
+    //pbjs.requestBids({
+    //    bidsBackHandler: biddersBack,
+    //    timeout: PREBID_TIMEOUT
+    // });
 });
 
 googletag.cmd.push(function() {
@@ -310,7 +310,7 @@ function requestHeaderBidsRefresh(slot) {
             bidsBackHandler: function() {
                 googletag.cmd.push(function() {
                     console.log('Prebid Refresh Bids Called');
-                    pbjs.setTargetingForGPTAsync();
+                    pbjs.setTargetingForGPTAsync([slot.getSlotElementId()]);
                     requestManager.prebid = true; // signals that Prebid request has completed
                     biddersBackRefresh(slot); // checks whether both APS and Prebid have returned
                 })
