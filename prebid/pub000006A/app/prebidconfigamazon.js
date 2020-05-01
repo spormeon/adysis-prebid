@@ -321,4 +321,9 @@ function requestHeaderBidsRefresh(slot) {
 //set failsafe timeout
 window.setTimeout(function() {
     sendAdserverRequest();
-}, FAILSAFE_TIMEOUT);
+}, site_config.FAILSAFE_TIMEOUT);
+
+
+
+
+
