@@ -321,7 +321,22 @@ function requestHeaderBidsRefresh(slot) {
 //set failsafe timeout
 window.setTimeout(function() {
     sendAdserverRequest();
-}, site_config.FAILSAFE_TIMEOUT);
+}, PREBID_TIMEOUT);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
