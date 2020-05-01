@@ -114,9 +114,9 @@ googletag.cmd.push(function() {
         //googletag.pubads().setSafeFrameConfig({allowPushExpansion: true, sandbox: true});
         //googletag.setAdIframeTitle('Advertisement');
         googletag.pubads().enableLazyLoad({
-            fetchMarginPercent: site_config.LAZYLOAD_FETCH,     // Fetch slots within 30 viewports.
-            renderMarginPercent: site_config.LAZYLOAD_RENDER,   // Render slots within 5000 viewports.
-            mobileScaling: site_config.LAZYLOAD_MOBILE_SCALE    // Double the above values on mobile. 
+            fetchMarginPercent: 20,     // Fetch slots within 30 viewports.
+            renderMarginPercent: 15,   // Render slots within 5000 viewports.
+            mobileScaling: 1.3    // Double the above values on mobile. 
         });
         console.log('lazy load fetch triggered = ' +fetchMarginPercent);
         console.log('lazy load render triggered = ' +renderMarginPercent);
@@ -322,9 +322,3 @@ function requestHeaderBidsRefresh(slot) {
 window.setTimeout(function() {
     sendAdserverRequest();
 }, FAILSAFE_TIMEOUT);
-
-
-
-
-
-
