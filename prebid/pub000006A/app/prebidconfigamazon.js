@@ -118,9 +118,9 @@ googletag.cmd.push(function() {
             renderMarginPercent: 15,   // Render slots within 5000 viewports.
             mobileScaling: 1.3    // Double the above values on mobile. 
         });
-        console.log('lazy load fetch triggered = ' +fetchMarginPercent);
-        console.log('lazy load render triggered = ' +renderMarginPercent);
-        console.log('lazy load mobile scale set = ' +mobileScaling);
+        console.log('lazy load fetch triggered = ' +site_config.LAZYLOAD_FETCH);
+        console.log('lazy load render triggered = ' renderMarginPercent);
+        console.log('lazy load mobile scale set = ' mobileScaling);
         
         googletag.pubads().setPrivacySettings({
             'restrictDataProcessing': false
