@@ -2,7 +2,7 @@
 var googletag = googletag || {};
 googletag.cmd = googletag.cmd || [];
 googletag.cmd.push(function() {
-    googletag.pubads().disableInitialLoad();
+    //googletag.pubads().disableInitialLoad();
 });
 var pbjs = pbjs || {};
 pbjs.que = pbjs.que || [];
@@ -77,6 +77,11 @@ pbjs.que.push(function() {
             { mediaQuery: '(min-width: 1px) and (max-width: 499px)', sizesSupported: [[300,250],[250,250]], labels: [ 'phonemenu'] }
           ]
     });
+    
+    //pbjs.requestBids({
+    //    bidsBackHandler: biddersBack,
+    //    timeout: PREBID_TIMEOUT
+    // });
 });
 
 googletag.cmd.push(function() {
@@ -109,14 +114,18 @@ googletag.cmd.push(function() {
         //googletag.pubads().setSafeFrameConfig({allowPushExpansion: true, sandbox: true});
         //googletag.setAdIframeTitle('Advertisement');
         googletag.pubads().enableLazyLoad({
-            fetchMarginPercent: 20, // Fetch slots within 30 viewports.
-            renderMarginPercent: 15, // Render slots within 5000 viewports.
-            mobileScaling: 0.0 // Double the above values on mobile.
+            fetchMarginPercent: site_config.LAZYLOAD_FETCH,     // Fetch slots within 30 viewports.
+            renderMarginPercent: site_config.LAZYLOAD_RENDER,   // Render slots within 5000 viewports.
+            mobileScaling: site_config.LAZYLOAD_MOBILE_SCALE    // Double the above values on mobile. 
         });
+        console.log('lazy load fetch triggered = ' +site_config.LAZYLOAD_FETCH);
+        console.log('lazy load render triggered = ' +site_config.LAZYLOAD_RENDER);
+        console.log('lazy load mobile scale set = ' +site_config.LAZYLOAD_MOBILE_SCALE);
+        
         googletag.pubads().setPrivacySettings({
             'restrictDataProcessing': false
         });
-        //googletag.pubads().disableInitialLoad();
+        googletag.pubads().disableInitialLoad();
         googletag.enableServices();
         // not sure if impressionViewable, slotRenderEnded or slotOnload or impressionViewable is best to use yet
         googletag.pubads().addEventListener("impressionViewable", function(event) {
@@ -282,7 +291,7 @@ function requestHeaderBidsRefresh(slot) {
     console.log('requestHeaderBidsRefresh Called');
     // APS request
     apstag.fetchBids({
-      timeout: PREBID_TIMEOUT
+      //timeout: PREBID_TIMEOUT
     },function(bids) {
             googletag.cmd.push(function() {
                 console.log('APS Refresh Bids Called');
@@ -296,12 +305,12 @@ function requestHeaderBidsRefresh(slot) {
     // put prebid request here
     pbjs.que.push(function() {
         pbjs.requestBids({
-            timeout: PREBID_TIMEOUT,
+            //timeout: PREBID_TIMEOUT,
             adUnitCodes: [slot.getSlotElementId()],
             bidsBackHandler: function() {
                 googletag.cmd.push(function() {
                     console.log('Prebid Refresh Bids Called');
-                    pbjs.setTargetingForGPTAsync();
+                    pbjs.setTargetingForGPTAsync([slot.getSlotElementId()]);
                     requestManager.prebid = true; // signals that Prebid request has completed
                     biddersBackRefresh(slot); // checks whether both APS and Prebid have returned
                 })
@@ -309,3 +318,7 @@ function requestHeaderBidsRefresh(slot) {
         });
     });
 }
+//set failsafe timeout
+window.setTimeout(function() {
+    sendAdserverRequest();
+}, PREBID_TIMEOUT);
