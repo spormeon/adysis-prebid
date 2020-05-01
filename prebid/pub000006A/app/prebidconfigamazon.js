@@ -114,13 +114,13 @@ googletag.cmd.push(function() {
         //googletag.pubads().setSafeFrameConfig({allowPushExpansion: true, sandbox: true});
         //googletag.setAdIframeTitle('Advertisement');
         googletag.pubads().enableLazyLoad({
-            fetchMarginPercent: 20,     // Fetch slots within 30 viewports.
-            renderMarginPercent: 15,   // Render slots within 5000 viewports.
-            mobileScaling: 1.3    // Double the above values on mobile. 
+            fetchMarginPercent: site_config.LAZYLOAD_FETCH,     // Fetch slots within 30 viewports.
+            renderMarginPercent: site_config.LAZYLOAD_RENDER,   // Render slots within 5000 viewports.
+            mobileScaling: site_config.LAZYLOAD_MOBILE_SCALE    // Double the above values on mobile. 
         });
         console.log('lazy load fetch triggered = ' +site_config.LAZYLOAD_FETCH);
-        console.log('lazy load render triggered = ' renderMarginPercent);
-        console.log('lazy load mobile scale set = ' mobileScaling);
+        console.log('lazy load render triggered = ' +site_config.LAZYLOAD_RENDER);
+        console.log('lazy load mobile scale set = ' +site_config.LAZYLOAD_MOBILE_SCALE);
         
         googletag.pubads().setPrivacySettings({
             'restrictDataProcessing': false
