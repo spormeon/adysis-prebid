@@ -9,7 +9,7 @@ var timeoutMap = {
 6 : 1400,
 7 : 2400,
 8 : 1400,
-9 : 1400,
+9 : Math.floor(Math.random() * 11) * 100 + 1000,
 10 : Math.floor(Math.random() * 11) * 100 + 1000,
 11 : Math.floor(Math.random() * 11) * 100 + 1000,
 12 : Math.floor(Math.random() * 11) * 100 + 1000,
