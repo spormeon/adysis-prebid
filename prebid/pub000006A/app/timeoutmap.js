@@ -1,6 +1,6 @@
 //  TIMEOUT MAP - 1000 def brings back bigger bids in Uk
 var timeoutMap = {
-0 : 1400,
+0 : Math.floor(Math.random() * 11) * 100 + 1000,
 1 : 1400,
 2 : 1400,
 3 : 1400,
@@ -10,9 +10,9 @@ var timeoutMap = {
 7 : 2400,
 8 : 1400,
 9 : 1400,
-10 : 1400,
-11 : 1400,
-12 : 1400,
+10 : Math.floor(Math.random() * 11) * 100 + 1000,
+11 : Math.floor(Math.random() * 11) * 100 + 1000,
+12 : Math.floor(Math.random() * 11) * 100 + 1000,
 13 : 1400,
 14 : 1400,
 15 : 1000,
