@@ -1,4 +1,6 @@
 //  TIMEOUT MAP - 1000 def brings back bigger bids in Uk
+// for random number 100 to 2000 - Math.floor(Math.random() * n) * s + m - where n is 11, the number of expected values, s is 100, the "step" size between values, and m is 1000, the minimum value expected
+
 var timeoutMap = {
 0 : Math.floor(Math.random() * 11) * 100 + 1000,
 1 : 1400,
