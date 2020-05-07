@@ -1,3 +1,5 @@
+<!--
+
 var SESSION_DEPTH = getCookie('pbj_session_depth');
 if (SESSION_DEPTH == '') {
     setCookie('pbj_session_depth', '1', 3);
@@ -8,6 +10,8 @@ if (SESSION_DEPTH == '') {
     setCookie('pbj_session_depth', SESSION_DEPTH, 3)
 };
 console.log('Session Depth: ' + SESSION_DEPTH);
+
+-->
 
 var PB_USER_STATUS = 'logged_in';
 if (pbj_user_id == '0') {
