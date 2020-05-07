@@ -1,3 +1,13 @@
+var SESSION_DEPTH = getCookie('pbj_session_depth');
+if (SESSION_DEPTH == '') {
+    setCookie('pbj_session_depth', '1', 3);
+    SESSION_DEPTH = '1'
+} else {
+    SESSION_DEPTH = parseInt(SESSION_DEPTH) + 1;
+    SESSION_DEPTH = SESSION_DEPTH.toString();
+    setCookie('pbj_session_depth', SESSION_DEPTH, 3)
+};
+console.log('Session Depth: ' + SESSION_DEPTH);
 // this runs amazon in parallel with prebid
 var googletag = googletag || {};
 googletag.cmd = googletag.cmd || [];
@@ -156,6 +166,8 @@ googletag.cmd.push(function() {
             var def = config.definitons[key];
             var slot = googletag.defineSlot(def.adUnitPath, def.size, key);
             slot.setTargeting("test", "refresh");
+            slot.setTargeting('user', PB_USER_STATUS);
+            slot.setTargeting('session_depth', SESSION_DEPTH);
             // slot.setTargeting(event.slot);
             slot.defineSizeMapping(sizeMappings[def.sizeMapping]);
             slot.addService(googletag.pubads());
