@@ -1,0 +1,1 @@
+var site_config={refresh_rate:30000,FAILSAFE_TIMEOUT:PREBID_TIMEOUT*2}
