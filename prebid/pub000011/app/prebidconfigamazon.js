@@ -158,8 +158,8 @@ googletag.cmd.push(function() {
             var def = config.definitons[key];
             var slot = googletag.defineSlot(def.adUnitPath, def.size, key);
             slot.setTargeting("test", "refresh");
-            slot.setTargeting('user', PB_USER_STATUS);
-            slot.setTargeting('session_depth', SESSION_DEPTH);
+            //slot.setTargeting('user', PB_USER_STATUS);
+            //slot.setTargeting('session_depth', SESSION_DEPTH);
             // slot.setTargeting(event.slot);
             slot.defineSizeMapping(sizeMappings[def.sizeMapping]);
             slot.addService(googletag.pubads());
