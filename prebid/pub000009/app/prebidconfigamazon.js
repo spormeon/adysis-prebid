@@ -8,6 +8,12 @@ if (SESSION_DEPTH == '') {
     setCookie('pbj_session_depth', SESSION_DEPTH, 3)
 };
 console.log('Session Depth: ' + SESSION_DEPTH);
+
+var PB_USER_STATUS = 'logged_in';
+if (pbj_user_id == '0') {
+    PB_USER_STATUS = 'logged_out'
+};
+
 // this runs amazon in parallel with prebid
 var googletag = googletag || {};
 googletag.cmd = googletag.cmd || [];
