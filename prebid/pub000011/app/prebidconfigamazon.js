@@ -88,6 +88,7 @@ pbjs.que.push(function() {
         sizeConfig: [
             { mediaQuery: '(min-width: 769px)', sizesSupported: [[580,400],[970,90],[728,90],[468,60],[336,280],[320,100],[320,50],[300,250],[250,250],[300,600]], labels: [ 'desktop'] },
             { mediaQuery: '(min-width: 769px)', sizesSupported: [[300,600],[300,250],[250,250],[160,600],[120,600]], labels: [ 'desktopmenu'] },
+            { mediaQuery: '(min-width: 769px)', sizesSupported: [[160,600],[120,600]], labels: [ 'desktopskyscraper'] },
             { mediaQuery: '(min-width: 769px)', sizesSupported: [[300,250],[250,250]], labels: [ 'desktopmenu1'] },
             { mediaQuery: '(min-width: 769px)', sizesSupported: [[970,90],[970,250],[728,90],[468,60],[320,50],[320,100]], labels: [ 'desktopleader'] },
             { mediaQuery: '(min-width: 769px)', sizesSupported: [[970,90],[728,90],[468,60],[320,50]], labels: [ 'desktopfooter'] },
@@ -186,14 +187,14 @@ googletag.cmd.push(function() {
     // the order below determines the order on the page //
     (window.googletag, window.pbjs, {
 definitons: {
-inreedvid13Slot: { adUnitPath: "/21665095471/SMF_Threads_Leaderboard_1", size: [[970, 90],[970, 250],[728, 90],[468, 60],[320, 50],[320, 100]], sizeMapping: "mappingleaderslot", timeout: site_config.refresh_rate, },
-inreedvid9Slot: { adUnitPath: "/21665095471/SMF_Mrec_1", size: [[300, 600],[300, 250],[250, 250],[160, 600],[120, 600]], sizeMapping: "mappingmenuslot", timeout: site_config.refresh_rate, },
-inreedvid5Slot: { adUnitPath: "/21665095471/SMF_Skyscraper_1", size: [[300, 600],[300, 250],[250, 250],[160, 600],[120, 600]], sizeMapping: "mappingmenuslot", timeout: site_config.refresh_rate, },
-inreedvid8Slot: { adUnitPath: "/21665095471/SMF_Threads_Leaderboard_2", size: [[728, 90],[300, 250],[250, 250],[468, 60],[320, 50],[336, 280],[580, 400],[320, 100]], sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
-inreedvid4Slot: { adUnitPath: "/21665095471/SMF_Threads_Leaderboard_3", size: [[728, 90],[300, 250],[250, 250],[468, 60],[320, 50],[336, 280],[580, 400],[320, 100]], sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
-inreedvid7Slot: { adUnitPath: "/21665095471/SMF_Threads_Leaderboard_4", size: [[728, 90],[300, 250],[250, 250],[468, 60],[320, 50],[336, 280],[580, 400],[320, 100]], sizeMapping: "mappingbottom2slot", timeout: site_config.refresh_rate, },
-inreedvid10Slot: { adUnitPath: "/21665095471/SMF_Footer_1", size: [[970, 250],[970, 90],[728, 90],[300, 250],[250, 250],[468, 60],[320, 50],[336, 280],[580, 400],[320, 100]], sizeMapping: "mappingbottom2slot", timeout: site_config.refresh_rate, },
-inreedvid6Slot: { adUnitPath: "/21665095471/SMF_Top_Leaderboard_1", size: [[970, 90],[728, 90],[468, 60],[320, 50],[320, 100]], sizeMapping: "mappingfooterslot", timeout: site_config.refresh_rate, },
+inreedvid13Slot: { adUnitPath: "/21665095471/sm_top_leaderboard_1", size: [[970, 90],[970, 250],[728, 90],[468, 60],[320, 50],[320, 100]], sizeMapping: "mappingleaderslot", timeout: site_config.refresh_rate, },
+inreedvid9Slot: { adUnitPath: "/21665095471/sm_mrec_1", size: [[300, 600],[300, 250],[250, 250],[160, 600],[120, 600]], sizeMapping: "mappingmenuslot", timeout: site_config.refresh_rate, },
+inreedvid5Slot: { adUnitPath: "/21665095471/sm_halfpage_1", size: [[300, 600],[300, 250],[250, 250],[160, 600],[120, 600]], sizeMapping: "mappingmenuslot", timeout: site_config.refresh_rate, },
+inreedvid8Slot: { adUnitPath: "/21665095471/sm_skyscraper_1", size: [[160, 600],[120, 600]], sizeMapping: "mappingskyscraperslot", timeout: site_config.refresh_rate, },
+inreedvid4Slot: { adUnitPath: "/21665095471/sm_leaderboard_1", size: [[728, 90],[300, 250],[250, 250],[468, 60],[320, 50],[336, 280],[580, 400],[320, 100]], sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
+inreedvid7Slot: { adUnitPath: "/21665095471/sm_leaderboard_2", size: [[728, 90],[300, 250],[250, 250],[468, 60],[320, 50],[336, 280],[580, 400],[320, 100]], sizeMapping: "mappingbottom2slot", timeout: site_config.refresh_rate, },
+// inreedvid10Slot: { adUnitPath: "/21665095471/SMF_Footer_1", size: [[970, 250],[970, 90],[728, 90],[300, 250],[250, 250],[468, 60],[320, 50],[336, 280],[580, 400],[320, 100]], sizeMapping: "mappingbottom2slot", timeout: site_config.refresh_rate, },
+inreedvid6Slot: { adUnitPath: "/21665095471/sm_footer_1", size: [[970, 90],[728, 90],[468, 60],[320, 50],[320, 100]], sizeMapping: "mappingfooterslot", timeout: site_config.refresh_rate, },
 },
 sizeMappings: {
 	mappinginreedvidslot: [
@@ -203,6 +204,11 @@ sizeMappings: {
 	],
 	mappingmenuslot: [
 	[[1024, 768],[[300, 600],[300, 250],[250, 250],[160, 600],[120, 600]]],
+	[[768, 500],[[300, 250],[250, 250]]],
+	[[1, 1],[[300, 250],[250, 250]]]
+	],
+	mappingskyscraperslot: [
+	[[1024, 768],[[160, 600],[120, 600]]],
 	[[768, 500],[[300, 250],[250, 250]]],
 	[[1, 1],[[300, 250],[250, 250]]]
 	],
