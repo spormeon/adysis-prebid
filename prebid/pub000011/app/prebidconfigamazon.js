@@ -81,11 +81,13 @@ pbjs.que.push(function() {
             { mediaQuery: '(min-width: 500px) and (max-width: 768px)', sizesSupported: [[728,90],[468,60],[320,50]], labels: [ 'tabletfooter'] },
             { mediaQuery: '(min-width: 500px) and (max-width: 768px)', sizesSupported: [[728,90],[300,250],[250,250],[468,60],[320,50],[336,280],[580,400],[320,100]], labels: [ 'tabletbottom2'] },
             { mediaQuery: '(min-width: 500px) and (max-width: 768px)', sizesSupported: [[728,90],[468,60],[320,50]], labels: [ 'tabletleader'] },
+            { mediaQuery: '(min-width: 500px) and (max-width: 768px)', sizesSupported: [[728,90],[468,60],[320,50]], labels: [ 'tabletskyscraper'] },
             { mediaQuery: '(min-width: 1px) and (max-width: 499px)', sizesSupported: [[300,250],[250,250],[320,50],[320,100],[336,280]], labels: [ 'phone'] },
             { mediaQuery: '(min-width: 1px) and (max-width: 499px)', sizesSupported: [[468,60],[320,50]], labels: [ 'phonefooter'] },
             { mediaQuery: '(min-width: 1px) and (max-width: 499px)', sizesSupported: [[300,250],[250,250],[320,50],[320,100],[336,280],[468,60]], labels: [ 'phonebottom2'] },
             { mediaQuery: '(min-width: 1px) and (max-width: 499px)', sizesSupported: [[468,60],[320,50]], labels: [ 'phoneleader'] },
-            { mediaQuery: '(min-width: 1px) and (max-width: 499px)', sizesSupported: [[300,250],[250,250]], labels: [ 'phonemenu'] }
+            { mediaQuery: '(min-width: 1px) and (max-width: 499px)', sizesSupported: [[300,250],[250,250]], labels: [ 'phonemenu'] },
+            { mediaQuery: '(min-width: 1px) and (max-width: 499px)', sizesSupported: [[300,250],[250,250]], labels: [ 'phonescraper'] }
           ]
     });
     
@@ -170,7 +172,7 @@ googletag.cmd.push(function() {
     // the order below determines the order on the page //
     (window.googletag, window.pbjs, {
 definitons: {
-inreedvid13Slot: { adUnitPath: "/21665095471/sm_top_leaderboard_1", size: [[970, 90],[970, 250],[728, 90],[468, 60],[320, 50],[320, 100]], sizeMapping: "mappingleaderslot", timeout: site_config.refresh_rate, },
+inreedvid13Slot: { adUnitPath: "/21665095471/sm_top_leaderboard_1", size: [[728, 90],[468, 60],[320, 50],[320, 100]], sizeMapping: "mappingleaderslot", timeout: site_config.refresh_rate, },
 inreedvid9Slot: { adUnitPath: "/21665095471/sm_mrec_1", size: [[300, 600],[300, 250],[250, 250],[160, 600],[120, 600]], sizeMapping: "mappingmenuslot", timeout: site_config.refresh_rate, },
 inreedvid5Slot: { adUnitPath: "/21665095471/sm_halfpage_1", size: [[300, 600],[300, 250],[250, 250],[160, 600],[120, 600]], sizeMapping: "mappingmenuslot", timeout: site_config.refresh_rate, },
 inreedvid8Slot: { adUnitPath: "/21665095471/sm_skyscraper_1", size: [[160, 600],[120, 600]], sizeMapping: "mappingskyscraperslot", timeout: site_config.refresh_rate, },
