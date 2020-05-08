@@ -174,6 +174,7 @@ googletag.cmd.push(function() {
 definitons: {
 inreedvid13Slot: { adUnitPath: "/21665095471/sm_top_leaderboard_1", size: [[728, 90],[468, 60],[320, 50],[320, 100]], sizeMapping: "mappingleaderslot", timeout: site_config.refresh_rate, },
 inreedvid9Slot: { adUnitPath: "/21665095471/sm_mrec_1", size: [[300, 600],[300, 250],[250, 250],[160, 600],[120, 600]], sizeMapping: "mappingmenuslot", timeout: site_config.refresh_rate, },
+inreedvid10Slot: { adUnitPath: "/21665095471/sm_mrec_2", size: [[300, 600],[300, 250],[250, 250],[160, 600],[120, 600]], sizeMapping: "mappingmenuslot", timeout: site_config.refresh_rate, },
 inreedvid5Slot: { adUnitPath: "/21665095471/sm_halfpage_1", size: [[300, 600],[300, 250],[250, 250],[160, 600],[120, 600]], sizeMapping: "mappingmenuslot", timeout: site_config.refresh_rate, },
 inreedvid8Slot: { adUnitPath: "/21665095471/sm_skyscraper_1", size: [[160, 600],[120, 600],[300, 250],[250, 250]], sizeMapping: "mappingskyscraperslot", timeout: site_config.refresh_rate, },
 inreedvid4Slot: { adUnitPath: "/21665095471/sm_leaderboard_1", size: [[728, 90],[300, 250],[250, 250],[468, 60],[320, 50],[336, 280],[580, 400],[320, 100]], sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },

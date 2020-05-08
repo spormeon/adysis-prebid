@@ -128,15 +128,15 @@ bids: native_bidders.bids
 {
 code: 'inreedvid10Slot',
 labelAny: ['desktopbottom2', 'tabletbottom2', 'phonebottom2'],
-mediaTypes: { video:  { context: 'outstream', playerSize: [[580, 400]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'], playbackmethod: [2], minduration: 0,  maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10], linearity: 1, api: [1,2,3,4,5,6] } },
+mediaTypes: { video:  { context: 'outstream', playerSize: [[300, 250]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'], playbackmethod: [2], minduration: 0,  maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10], linearity: 1, api: [1,2,3,4,5,6] } },
 renderer: { url: 'https://cdn.jsdelivr.net/gh/spormeon/adysis-prebid/prebid/ANOutstreamVideo.js', render: function (bid) { ANOutstreamVideo.renderAd({ targetId: bid.adUnitCode, adResponse: bid.adResponse, }); } },
 renderer: { options: { adText: 'Advertisement' } },
 bids: outstream_bidders.bids
 },
 {
 code: 'inreedvid10Slot',
-labelAny: ['desktopbottom2', 'tabletbottom2', 'phonebottom2'],
-mediaTypes: { banner: { sizes: [[970, 250],[970, 90],[728, 90],[300, 250],[250, 250],[468, 60],[320, 50],[336, 280],[580, 400],[320, 100]] } },
+labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'],
+mediaTypes: { banner: { sizes: [[300, 600],[160, 600],[120, 600],[300, 250],[250, 250]] } },
 bids: banner_bidders.bids
 },   	
 //new ad unit block
