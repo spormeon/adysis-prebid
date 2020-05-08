@@ -2126,7 +2126,7 @@ var requirejs, require, define;
     };
 
     define.amd = {
-        jQuery: true
+        jQuery: false
     };
 
     /**
