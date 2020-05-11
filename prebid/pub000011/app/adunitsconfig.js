@@ -142,22 +142,3 @@ bids: banner_bidders.bids
 ];
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
