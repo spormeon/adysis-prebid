@@ -83,17 +83,9 @@ bids: native_bidders.bids
 },
 {
 code: 'inreedvid8Slot',
-labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'],
-mediaTypes: { video:  { context: 'outstream', playerSize: [[580, 400]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'], playbackmethod: [2], minduration: 0,  maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10], linearity: 1, api: [1,2,3,4,5,6] } },
-renderer: { url: 'https://cdn.jsdelivr.net/gh/spormeon/adysis-prebid/prebid/ANOutstreamVideo.js', render: function (bid) { ANOutstreamVideo.renderAd({ targetId: bid.adUnitCode, adResponse: bid.adResponse, }); } },
-renderer: { options: { adText: 'Advertisement' } },
-bids: outstream_bidders.bids
-},
-{
-code: 'inreedvid8Slot',
 labelAny: ['desktopskyscraper', 'tabletskyscraper', 'phonescraper'],
 mediaTypes: { banner: { sizes: [[160, 600],[120, 600]] } },
-bids: banner_bidders.bids
+bids: banner_bidders300x600.bids
 },
 //new ad unit block
 // /21665095471/specktra_mrec_1
@@ -137,7 +129,7 @@ bids: outstream_bidders.bids
 code: 'inreedvid10Slot',
 labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'],
 mediaTypes: { banner: { sizes: [[300, 600],[160, 600],[120, 600],[300, 250],[250, 250]] } },
-bids: banner_bidders.bids
+bids: banner_bidders300x600.bids
 },   	
 //new ad unit block
 // /21665095471/specktra_top_1
