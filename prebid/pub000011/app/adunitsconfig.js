@@ -18,7 +18,7 @@ bids: outstream_bidders.bids
 {
 code: 'inreedvid4Slot',
 labelAny: ['desktop', 'tablet', 'phone'],
-mediaTypes: { banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50],[320, 100],[336, 280],[580, 400]] } },
+mediaTypes: { banner: { sizes: [[300, 250],[250, 250],[468, 60],[320, 50],[320, 100],[336, 280],[580, 400]] } },
 bids: banner_bidders.bids
 },
 //new ad unit block
@@ -70,7 +70,7 @@ bids: outstream_bidders.bids
 {
 code: 'inreedvid7Slot',
 labelAny: ['desktop', 'tablet', 'phone'],
-mediaTypes: { banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50],[320, 100],[336, 280],[580, 400]] } },
+mediaTypes: { banner: { sizes: [[300, 250],[250, 250],[468, 60],[320, 50],[320, 100],[336, 280],[580, 400]] } },
 bids: banner_bidders.bids
 },
 //new ad unit block
