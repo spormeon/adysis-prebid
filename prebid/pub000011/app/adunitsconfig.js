@@ -113,13 +113,13 @@ bids: banner_bidders300x600.bids
 // /21665095471/specktra_footer_1
 {
 code: 'inreedvid10Slot',
-labelAny: ['desktopbottom2', 'tabletbottom2', 'phonebottom2'],
+labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'],
 mediaTypes: { native: { image: { sizes: [300, 100], sendId: true }, title: { len: 50, sendId: true }, sponsoredBy: { required: true, sendId: true }, clickUrl: { required: true, sendId: true } } }, 
 bids: native_bidders.bids
 },
 {
 code: 'inreedvid10Slot',
-labelAny: ['desktopbottom2', 'tabletbottom2', 'phonebottom2'],
+labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'],
 mediaTypes: { video:  { context: 'outstream', playerSize: [[300, 250]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'], playbackmethod: [2], minduration: 0,  maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10], linearity: 1, api: [1,2,3,4,5,6] } },
 renderer: { url: 'https://cdn.jsdelivr.net/gh/spormeon/adysis-prebid/prebid/ANOutstreamVideo.js', render: function (bid) { ANOutstreamVideo.renderAd({ targetId: bid.adUnitCode, adResponse: bid.adResponse, }); } },
 renderer: { options: { adText: 'Advertisement' } },
@@ -140,6 +140,14 @@ mediaTypes: { banner: { sizes: [[728, 90],[468, 60],[320, 50],[320, 100]] } },
 bids: banner_bidders.bids
 }
 ];
+
+
+
+
+
+
+
+
 
 
 
