@@ -3,13 +3,13 @@ var adUnits = [
 // /21665095471/specktra_threads_leaderboard_2
 {
 code: 'inreedvid4Slot',
-labelAny: ['desktop', 'tablet', 'phone'],
+labelAny: ['desktopbottom2', 'tabletbottom2', 'phonebottom2'],
 mediaTypes: { native: { image: { sizes: [300, 100], sendId: true }, title: { len: 50, sendId: true }, sponsoredBy: { required: true, sendId: true }, clickUrl: { required: true, sendId: true } } },
 bids: native_bidders.bids   
 },
 {
 code: 'inreedvid4Slot',
-labelAny: ['desktop', 'tablet', 'phone'],
+labelAny: ['desktopbottom2', 'tabletbottom2', 'phonebottom2'],
 mediaTypes: { video:  { context: 'outstream', playerSize: [[580, 400]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'], playbackmethod: [2], minduration: 0,  maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10], linearity: 1, api: [1,2,3,4,5,6] } },
 renderer: { url: 'https://cdn.jsdelivr.net/gh/spormeon/adysis-prebid/prebid/ANOutstreamVideo.js', render: function (bid) { ANOutstreamVideo.renderAd({ targetId: bid.adUnitCode, adResponse: bid.adResponse, }); } },
 renderer: { options: { adText: 'Advertisement' } },
@@ -17,7 +17,7 @@ bids: outstream_bidders.bids
 },
 {
 code: 'inreedvid4Slot',
-labelAny: ['desktop', 'tablet', 'phone'],
+labelAny: ['desktopbottom2', 'tabletbottom2', 'phonebottom2'],
 mediaTypes: { banner: { sizes: [[300, 250],[250, 250],[468, 60],[320, 50],[320, 100],[336, 280],[580, 400]] } },
 bids: banner_bidders.bids
 },
@@ -69,7 +69,7 @@ bids: outstream_bidders.bids
 },
 {
 code: 'inreedvid7Slot',
-labelAny: ['desktop', 'tablet', 'phone'],
+labelAny: ['desktopbottom2', 'tabletbottom2', 'phonebottom2'],
 mediaTypes: { banner: { sizes: [[300, 250],[250, 250],[468, 60],[320, 50],[320, 100],[336, 280],[580, 400]] } },
 bids: banner_bidders.bids
 },
