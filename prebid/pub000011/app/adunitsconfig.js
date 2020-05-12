@@ -48,7 +48,7 @@ bids: banner_bidders300x600.bids
 {
 code: 'inreedvid6Slot',
 labelAny: ['desktopfooter', 'tabletfooter', 'phonefooter'],
-mediaTypes: { banner: { sizes: [[970,90],[728,90],[468,60],[320,50]] } },
+mediaTypes: { banner: { sizes: [[970,90],[728,90],[468,60],[320,50],[1,1]] } },
 bids: banner_bidders.bids
 },
 //new ad unit block
@@ -140,6 +140,18 @@ mediaTypes: { banner: { sizes: [[728, 90],[468, 60],[320, 50],[320, 100]] } },
 bids: banner_bidders.bids
 }
 ];
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
