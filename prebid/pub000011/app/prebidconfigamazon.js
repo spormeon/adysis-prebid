@@ -74,7 +74,7 @@ pbjs.que.push(function() {
             { mediaQuery: '(min-width: 769px)', sizesSupported: [[160,600],[120,600]], labels: [ 'desktopskyscraper'] },
             { mediaQuery: '(min-width: 769px)', sizesSupported: [[300,250],[250,250]], labels: [ 'desktopmenu1'] },
             { mediaQuery: '(min-width: 769px)', sizesSupported: [[728,90],[468,60],[320,50],[320,100]], labels: [ 'desktopleader'] },
-            { mediaQuery: '(min-width: 769px)', sizesSupported: [[970, 250],[970,90],[728,90],[468,60],[320,50]], labels: [ 'desktopfooter'] },
+            { mediaQuery: '(min-width: 769px)', sizesSupported: [[970,90],[728,90],[468,60],[320,50]], labels: [ 'desktopfooter'] },
             { mediaQuery: '(min-width: 769px)', sizesSupported: [[300,250],[250,250],[468,60],[320,50],[336,280],[580,400],[320,100]], labels: [ 'desktopbottom2'] },
             { mediaQuery: '(min-width: 500px) and (max-width: 768px)', sizesSupported: [[580,400],[728,90],[468,60],[320,50],[320,100],[336,280],[300,250],[300,600],[250,250]], labels: [ 'tablet'] },
             { mediaQuery: '(min-width: 500px) and (max-width: 768px)', sizesSupported: [[300,250],[300,600],[250,250]], labels: [ 'tabletmenu'] },
@@ -180,7 +180,7 @@ inreedvid8Slot: { adUnitPath: "/21665095471/sm_skyscraper_1", size: [[160, 600],
 inreedvid4Slot: { adUnitPath: "/21665095471/sm_leaderboard_1", size: [[300, 250],[250, 250],[468, 60],[320, 50],[336, 280],[580, 400],[320, 100]], sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
 inreedvid7Slot: { adUnitPath: "/21665095471/sm_leaderboard_2", size: [[300, 250],[250, 250],[468, 60],[320, 50],[336, 280],[580, 400],[320, 100]], sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
 // inreedvid10Slot: { adUnitPath: "/21665095471/SMF_Footer_1", size: [[970, 250],[970, 90],[728, 90],[300, 250],[250, 250],[468, 60],[320, 50],[336, 280],[580, 400],[320, 100]], sizeMapping: "mappingbottom2slot", timeout: site_config.refresh_rate, },
-inreedvid6Slot: { adUnitPath: "/21665095471/sm_footer_1", size: [[970, 250],[970, 90],[728, 90],[468, 60],[320, 50],[320, 100]], sizeMapping: "mappingfooterslot", timeout: site_config.refresh_rate, },
+inreedvid6Slot: { adUnitPath: "/21665095471/sm_footer_1", size: [[970, 90],[728, 90],[468, 60],[320, 50],[320, 100]], sizeMapping: "mappingfooterslot", timeout: site_config.refresh_rate, },
 },
 sizeMappings: {
 	mappinginreedvidslot: [
@@ -209,7 +209,7 @@ sizeMappings: {
 	[[1, 1],[[300, 250],[250, 250],[320, 50],[320, 100],[336, 280],[468, 60]]]
 	],
 	mappingfooterslot: [
-	[[1024, 768],[[970, 250],[970, 90],[728, 90],[468, 60],[320, 50],[320, 100]]],
+	[[1024, 768],[[970, 90],[728, 90],[468, 60],[320, 50],[320, 100]]],
 	[[768, 500],[[728, 90],[468, 60],[320, 50]]],
 	[[1, 1],[[468, 60],[320, 50]]]
 	],
