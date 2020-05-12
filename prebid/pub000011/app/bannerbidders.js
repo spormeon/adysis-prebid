@@ -7,7 +7,11 @@ bids: [
 { bidder: 'openx', params: { unit:'539995990', delDomain:'huddler-d.openx.net' } },
 { bidder: 'conversant', params: { site_id:'117478', secure:1 } },
 { bidder: 'gourmetads', params: { placementId:'13192609' } },
-{ bidder: 'ix', params: { siteId:'285986' } },
+{ bidder: 'ix', params: { siteId:'285986', size: [728, 90] } },
+{ bidder: 'ix', params: { siteId:'285979', size: [970, 250] } },
+{ bidder: 'ix', params: { siteId:'285980', size: [300, 250] } },
+{ bidder: 'ix', params: { siteId:'285980', size: [250, 250] } },
+{ bidder: 'ix', params: { siteId:'285982', size: [320, 50] } },
 { bidder: 'sovrn', params: { tagid: '590973' } }, /* 728x90 970x90 970x250 */
 { bidder: 'sovrn', params: { tagid: '590974' } }, /* 320x50 */
 //{ bidder: 'sovrn', params: { tagid: '662395' } }, /* 250x250 300x250 */
