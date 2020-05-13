@@ -344,19 +344,3 @@ window.setTimeout(function() {
 }, PREBID_TIMEOUT);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
