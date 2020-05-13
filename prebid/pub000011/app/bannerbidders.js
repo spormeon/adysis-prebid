@@ -2,8 +2,8 @@
 var banner_bidders = {
 bids: [
 { bidder: 'appnexus', params: { placementId: '13211644', allowSmallerSizes: true } }, /* one placementId for all sizes */
-{ bidder: 'districtm', params: { placementId: '13445867', allowSmallerSizes: true } }, /* one placementId for all sizes */
-{ bidder: 'districtmDMX', params: { dmxid:'221837', memberid:'101399' } },
+{ bidder: 'districtm', params: { placementId: '19221281', allowSmallerSizes: true } }, /* one placementId for all sizes */
+{ bidder: 'districtmDMX', params: { dmxid:'524025', memberid:'101399' } },
 { bidder: 'conversant', params: { site_id:'117478', secure:1 } },
 { bidder: 'gourmetads', params: { placementId: '13192609', allowSmallerSizes: true } },
 { bidder: 'ix', params: { siteId:'285986', size: [728, 90] } },
