@@ -6,3 +6,12 @@ bids: [
 { bidder: 'gourmetads', params: { placementId:'13192609', allowSmallerSizes: true } } /* one placementId for all sizes */
 ] //./bids
 };
+
+
+
+
+
+
+
+
+
