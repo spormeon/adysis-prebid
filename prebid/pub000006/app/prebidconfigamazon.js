@@ -128,7 +128,7 @@ googletag.cmd.push(function() {
         googletag.pubads().disableInitialLoad();
         googletag.enableServices();
         // not sure if impressionViewable, slotRenderEnded or slotOnload or impressionViewable is best to use yet
-        googletag.pubads().addEventListener("impressionViewable", function(event) {
+        googletag.pubads().addEventListener("slotRenderEnded", function(event) {
             var elementId = event.slot.getSlotElementId();
             var slotConfig = slots[elementId];
             if (slotConfig) {
@@ -322,4 +322,12 @@ function requestHeaderBidsRefresh(slot) {
 window.setTimeout(function() {
     sendAdserverRequest();
 }, PREBID_TIMEOUT);
+
+
+
+
+
+
+
+
 
