@@ -78,10 +78,10 @@ pbjs.que.push(function() {
           ]
     });
     
-    pbjs.requestBids({
-       bidsBackHandler: biddersBack,
-       timeout: PREBID_TIMEOUT
-    });
+    //pbjs.requestBids({
+    //  bidsBackHandler: biddersBack,
+    //   timeout: PREBID_TIMEOUT
+    //});
 });
 
 googletag.cmd.push(function() {
@@ -322,17 +322,5 @@ function requestHeaderBidsRefresh(slot) {
 window.setTimeout(function() {
     sendAdserverRequest();
 }, PREBID_TIMEOUT);
-
-
-
-
-
-
-
-
-
-
-
-
 
 
