@@ -297,7 +297,7 @@ function requestHeaderBidsRefresh(slot) {
                 console.log('APS Refresh Bids Called');
                 apstag.setDisplayBids();
                 requestManager.aps = true; // signals that APS request has completed
-                biddersBackRefresh(slot); // checks whether both APS and Prebid have returned
+                biddersBackRefresh(); // checks whether both APS and Prebid have returned
             });
         }
     );
@@ -312,7 +312,7 @@ function requestHeaderBidsRefresh(slot) {
                     console.log('Prebid Refresh Bids Called');
                     pbjs.setTargetingForGPTAsync([slot.getSlotElementId()]);
                     requestManager.prebid = true; // signals that Prebid request has completed
-                    biddersBackRefresh(slot); // checks whether both APS and Prebid have returned
+                    biddersBackRefresh(); // checks whether both APS and Prebid have returned
                 })
             }
         });
@@ -322,5 +322,11 @@ function requestHeaderBidsRefresh(slot) {
 window.setTimeout(function() {
     sendAdserverRequest();
 }, PREBID_TIMEOUT);
+
+
+
+
+
+
 
 
