@@ -282,7 +282,7 @@ function sendAdserverRequestRefresh(slot) {
     requestManager.adserverRequestSent = true;
     googletag.cmd.push(function() {
         console.log('sendAdserverRequestRefresh Refresh Called');
-        googletag.pubads().refresh();
+        googletag.pubads().refresh([slot]);
     });
 }
 
@@ -322,6 +322,12 @@ function requestHeaderBidsRefresh(slot) {
 window.setTimeout(function() {
     sendAdserverRequest();
 }, PREBID_TIMEOUT);
+
+
+
+
+
+
 
 
 
