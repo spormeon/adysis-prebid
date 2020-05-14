@@ -267,7 +267,7 @@ requestHeaderBids();
 function biddersBackRefresh(slot) {
     if (requestManager.aps && requestManager.prebid) {
         console.log('biddersBack Refresh Called');
-        sendAdserverRequestRefresh();
+        sendAdserverRequestRefresh(slot);
     }
     return;
 }
@@ -322,5 +322,11 @@ function requestHeaderBidsRefresh(slot) {
 window.setTimeout(function() {
     sendAdserverRequest();
 }, PREBID_TIMEOUT);
+
+
+
+
+
+
 
 
