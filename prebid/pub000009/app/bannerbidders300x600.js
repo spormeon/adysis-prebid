@@ -6,7 +6,7 @@ bids: [
 { bidder: 'districtmDMX', params: { dmxid:'524026', memberid:'101399' } },
 { bidder: 'conversant', params: { site_id:'117455', secure:1 } },
 { bidder: 'sovrn', params: { tagid: '590708' } }, /* 300x600 */
-{ bidder: 'sovrn', params: { tagid: '590711' } }, /* 300x250 */
+{ bidder: 'sovrn', params: { tagid: '725085' } }, /* 300x250 */
 { bidder: 'sovrn', params: { tagid: '725039' } }, /* 160x600 */
 { bidder: 'sovrn', params: { tagid: '725040' } }, /* 120x600 */
 { bidder: 'openx', params: { unit: '540375629', delDomain: 'huddler-d.openx.net' } }, /* 300x250 */
@@ -18,6 +18,10 @@ bids: [
 { bidder: 'aol', params: { placement: '5219099', network: '11361.1' } } /* 300x600 */ 
 ] //./bids
 };
+
+
+
+
 
 
 
