@@ -13,11 +13,11 @@ bids: [
 { bidder: 'ix', params: { siteId:'285982', size: [320, 50] } },
 { bidder: 'sovrn', params: { tagid: '590975' } }, /* 728x90 */
 { bidder: 'sovrn', params: { tagid: '590974' } }, /* 320x50 */
-{ bidder: 'sovrn', params: { tagid: '725049' } }, /* 336x280 */
-{ bidder: 'sovrn', params: { tagid: '725050' } }, /* 970x90  */
+//{ bidder: 'sovrn', params: { tagid: '725049' } }, /* 336x280 */
+//{ bidder: 'sovrn', params: { tagid: '725050' } }, /* 970x90  */
 { bidder: 'sovrn', params: { tagid: '590977' } }, /* 300x250 */
-{ bidder: 'sovrn', params: { tagid: '725052' } }, /* 468x60 */
-{ bidder: 'sovrn', params: { tagid: '725051' } }, /* 970x250 */
+//{ bidder: 'sovrn', params: { tagid: '725052' } }, /* 468x60 */
+//{ bidder: 'sovrn', params: { tagid: '725051' } }, /* 970x250 */
 { bidder: 'openx', params: { unit: '539995985', delDomain: 'huddler-d.openx.net' } }, /* 728x90 970x90 970x250 */
 { bidder: 'openx', params: { unit: '539995993', delDomain: 'huddler-d.openx.net' } }, /* 250x250 300x250 320x50 */
 { bidder: 'sharethrough', params: { pkey: "auoW1g6UJHnw8XCAzrbTwfpV", iframe: true } }, /* Sizeless */
