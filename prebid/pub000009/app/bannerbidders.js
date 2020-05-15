@@ -7,7 +7,7 @@ bids: [
 { bidder: 'conversant', params: { site_id:'117455', secure:1 } },
 { bidder: 'sovrn', params: { tagid: '590714' } }, /* 728x90 */
 { bidder: 'sovrn', params: { tagid: '590717' } }, /* 320x50 */
-{ bidder: 'sovrn', params: { tagid: '725046' } }, /* 336x280 */
+//{ bidder: 'sovrn', params: { tagid: '725046' } }, /* 336x280 */
 { bidder: 'sovrn', params: { tagid: '725044' } }, /* 970x90  */
 { bidder: 'sovrn', params: { tagid: '725085' } }, /* 300x250 */
 //{ bidder: 'sovrn', params: { tagid: '725045' } }, /* 468x60 */
@@ -24,4 +24,10 @@ bids: [
 { bidder: 'aol', params: { placement: '5219093', network: '11361.1' } } /* 468x60 */
 ] //./bids
 };
+
+
+
+
+
+
 
