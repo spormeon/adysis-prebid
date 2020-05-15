@@ -5,8 +5,10 @@ bids: [
 { bidder: 'districtm', params: { placementId: '19221299', allowSmallerSizes: true } }, /* one placementId for all sizes */
 { bidder: 'districtmDMX', params: { dmxid:'524026', memberid:'101399' } },
 { bidder: 'conversant', params: { site_id:'117455', secure:1 } },
-{ bidder: 'sovrn', params: { tagid: '662394' } }, /* 160x600 300x600 */
-{ bidder: 'sovrn', params: { tagid: '662395' } }, /* 250x250 300x250 */
+{ bidder: 'sovrn', params: { tagid: '590708' } }, /* 300x600 */
+{ bidder: 'sovrn', params: { tagid: '590711' } }, /* 300x250 */
+{ bidder: 'sovrn', params: { tagid: '725039' } }, /* 160x600 */
+{ bidder: 'sovrn', params: { tagid: '725040' } }, /* 120x600 */
 { bidder: 'openx', params: { unit: '540375629', delDomain: 'huddler-d.openx.net' } }, /* 300x250 */
 { bidder: 'openx', params: { unit: '540923378', delDomain: 'huddler-d.openx.net' } }, /* 160x600 300x600 */
 { bidder: 'sharethrough', params: { pkey: "esV9zAvAVRANpBbComRYEUWv", iframe: true } }, /* Sizeless */
