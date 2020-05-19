@@ -247,7 +247,8 @@ var site_config = {
 				var native_bidders = {
 				bids: [	
 				{ bidder: 'appnexus', params: { placementId: '12995676', allowSmallerSizes: true } }, /* one placementId for all sizes */
-				{ bidder: 'districtm', params: { placementId: '19221299', allowSmallerSizes: true } } /* one placementId for all sizes */
+				{ bidder: 'districtm', params: { placementId: '19221299', allowSmallerSizes: true } }, /* one placementId for all sizes */
+				{ bidder: 'gourmetads', params: { placementId: '12962328', allowSmallerSizes: true } },
 				] //./bids
 				};
 				
@@ -265,6 +266,7 @@ var site_config = {
 				bids: [
 				{ bidder: 'appnexus', params: { placementId: '12995676', allowSmallerSizes: true } }, /* one placementId for all sizes */
 				{ bidder: 'districtm', params: { placementId: '19221299', allowSmallerSizes: true } }, /* one placementId for all sizes */
+				{ bidder: 'gourmetads', params: { placementId: '12962328', allowSmallerSizes: true } },
 				{ bidder: 'districtmDMX', params: { dmxid:'524026', memberid:'101399' } },
 				{ bidder: 'conversant', params: { site_id:'117455', secure:1 } },
 				{ bidder: 'sovrn', params: { tagid: '590714' } }, /* 728x90 */
@@ -283,7 +285,10 @@ var site_config = {
 				{ bidder: 'aol', params: { placement: '5219094', network: '11361.1' } }, /* 336x280 */ 
 				{ bidder: 'aol', params: { placement: '5219097', network: '11361.1' } }, /* 728x90 */ 
 				{ bidder: 'aol', params: { placement: '5219095', network: '11361.1' } }, /* 970x90 */ 
-				{ bidder: 'aol', params: { placement: '5219093', network: '11361.1' } } /* 468x60 */
+				{ bidder: 'aol', params: { placement: '5219093', network: '11361.1' } }, /* 468x60 */
+				{ bidder: 'ix', params: { siteId:'285987', size: [728, 90] } },
+				{ bidder: 'ix', params: { siteId:'285987', size: [320, 50] } },
+				{ bidder: 'ix', params: { siteId:'285989', size: [300, 250] } }
 				] //./bids
 				};
 
@@ -293,6 +298,7 @@ var site_config = {
 				bids: [
 				{ bidder: 'appnexus', params: { placementId: '12995676', allowSmallerSizes: true } }, /* one placementId for all sizes */
 				{ bidder: 'districtm', params: { placementId: '19221299', allowSmallerSizes: true } }, /* one placementId for all sizes */
+				{ bidder: 'gourmetads', params: { placementId: '12962328', allowSmallerSizes: true } },
 				{ bidder: 'districtmDMX', params: { dmxid:'524026', memberid:'101399' } },
 				{ bidder: 'conversant', params: { site_id:'117455', secure:1 } },
 				{ bidder: 'sovrn', params: { tagid: '590708' } }, /* 300x600 */
@@ -305,7 +311,9 @@ var site_config = {
 				{ bidder: 'aol', params: { placement: '5219101', network: '11361.1' } }, /* 300x250 */ 
 				{ bidder: 'aol', params: { placement: '5219100', network: '11361.1' } }, /* 120x600 */ 
 				{ bidder: 'aol', params: { placement: '5219098', network: '11361.1' } }, /* 160x600 */ 
-				{ bidder: 'aol', params: { placement: '5219099', network: '11361.1' } } /* 300x600 */ 
+				{ bidder: 'aol', params: { placement: '5219099', network: '11361.1' } }, /* 300x600 */ 
+				{ bidder: 'ix', params: { siteId:'285990', size: [300, 600] } },
+				{ bidder: 'ix', params: { siteId:'285989', size: [300, 250] } }
 				] //./bids
 				};
 				
