@@ -1,0 +1,15 @@
+spectra.com setup
+
+please add the following into the <head> of the site, this is what create’s the ad unit div’s on site
+
+<script type="text/javascript" src="https://cdn.adysis.com/pub000006/app/slotsonpage.js" ></script>
+
+
+Then after </html>,  please add the following, this includes the prebid setup files for bidding.  It can also be added into the <head> of the site but i would recommend after </html>,  this allows site load first, for better user experience.
+
+<footerbid1>
+<script  data-main="https://cdn.adysis.com/pub000006/app.js" src="https://cdn.adysis.com/pub000006/require-min.js"></script>
+</footerbid1>
+
+
+After the following code has been added, please delete any current versions of prebid on the site and either comment out the current GPT slot divs on site or delete them,  would recommend commenting out in first instance until everything is properly up and running.
