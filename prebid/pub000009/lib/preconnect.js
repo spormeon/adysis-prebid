@@ -336,3 +336,43 @@ nodepclink1.insertBefore(pclink1, nodepclink1.firstChild);
 	var nodepclink1 = document.getElementsByTagName("footerbid1")[0];
 	nodepclink1.insertBefore(pclink1, nodepclink1.firstChild);
 	})();
+(function () {
+	var pclink1 = document.createElement("link");
+	pclink1.rel = "preconnect";
+	pclink1.href = "//secure.adnxs.com";
+	pclink1.crossorigin;
+	var nodepclink1 = document.getElementsByTagName("footerbid1")[0];
+	nodepclink1.insertBefore(pclink1, nodepclink1.firstChild);
+	})();
+(function () {
+	var pclink1 = document.createElement("link");
+	pclink1.rel = "preconnect";
+	pclink1.href = "//adservice.google.co.uk";
+	pclink1.crossorigin;
+	var nodepclink1 = document.getElementsByTagName("footerbid1")[0];
+	nodepclink1.insertBefore(pclink1, nodepclink1.firstChild);
+	})();
+(function () {
+	var pclink1 = document.createElement("link");
+	pclink1.rel = "preconnect";
+	pclink1.href = "//cdn.ampproject.org";
+	pclink1.crossorigin;
+	var nodepclink1 = document.getElementsByTagName("footerbid1")[0];
+	nodepclink1.insertBefore(pclink1, nodepclink1.firstChild);
+	})();
+(function () {
+	var pclink1 = document.createElement("link");
+	pclink1.rel = "preconnect";
+	pclink1.href = "//www.google.com";
+	pclink1.crossorigin;
+	var nodepclink1 = document.getElementsByTagName("footerbid1")[0];
+	nodepclink1.insertBefore(pclink1, nodepclink1.firstChild);
+	})();
+(function () {
+	var pclink1 = document.createElement("link");
+	pclink1.rel = "preconnect";
+	pclink1.href = "//www.google-analytics.com";
+	pclink1.crossorigin;
+	var nodepclink1 = document.getElementsByTagName("footerbid1")[0];
+	nodepclink1.insertBefore(pclink1, nodepclink1.firstChild);
+	})();
