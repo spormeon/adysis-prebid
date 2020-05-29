@@ -372,7 +372,7 @@ nodepclink1.insertBefore(pclink1, nodepclink1.firstChild);
 	var pclink1 = document.createElement("link");
 	pclink1.rel = "preconnect";
 	pclink1.href = "//www.google-analytics.com";
-	pclink1.crossorigin;
+	pclink1.crossorigin = "anonymous";
 	var nodepclink1 = document.getElementsByTagName("footerbid1")[0];
 	nodepclink1.insertBefore(pclink1, nodepclink1.firstChild);
 	})();
