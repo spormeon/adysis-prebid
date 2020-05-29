@@ -107,14 +107,6 @@ nodepclink1.insertBefore(pclink1, nodepclink1.firstChild);
 (function () {
 	var pclink1 = document.createElement("link");
 	pclink1.rel = "preconnect";
-	pclink1.href = "//adops.adysis.com";
-	pclink1.crossorigin;
-	var nodepclink1 = document.getElementsByTagName("footerbid1")[0];
-	nodepclink1.insertBefore(pclink1, nodepclink1.firstChild);
-	})();
-(function () {
-	var pclink1 = document.createElement("link");
-	pclink1.rel = "preconnect";
 	pclink1.href = "//a.teads.tv";
 	pclink1.crossorigin;
 	var nodepclink1 = document.getElementsByTagName("footerbid1")[0];
@@ -123,23 +115,7 @@ nodepclink1.insertBefore(pclink1, nodepclink1.firstChild);
 (function () {
 	var pclink1 = document.createElement("link");
 	pclink1.rel = "preconnect";
-	pclink1.href = "//h.cedatoplayer.com";
-	pclink1.crossorigin;
-	var nodepclink1 = document.getElementsByTagName("footerbid1")[0];
-	nodepclink1.insertBefore(pclink1, nodepclink1.firstChild);
-	})();
-(function () {
-	var pclink1 = document.createElement("link");
-	pclink1.rel = "preconnect";
 	pclink1.href = "//g2.gumgum.com";
-	pclink1.crossorigin;
-	var nodepclink1 = document.getElementsByTagName("footerbid1")[0];
-	nodepclink1.insertBefore(pclink1, nodepclink1.firstChild);
-	})();
-(function () {
-	var pclink1 = document.createElement("link");
-	pclink1.rel = "preconnect";
-	pclink1.href = "//player-cdn.beachfrontmedia.com";
 	pclink1.crossorigin;
 	var nodepclink1 = document.getElementsByTagName("footerbid1")[0];
 	nodepclink1.insertBefore(pclink1, nodepclink1.firstChild);
@@ -219,31 +195,7 @@ nodepclink1.insertBefore(pclink1, nodepclink1.firstChild);
 (function () {
 	var pclink1 = document.createElement("link");
 	pclink1.rel = "preconnect";
-	pclink1.href = "//hb.undertone.com";
-	pclink1.crossorigin;
-	var nodepclink1 = document.getElementsByTagName("footerbid1")[0];
-	nodepclink1.insertBefore(pclink1, nodepclink1.firstChild);
-	})();
-(function () {
-	var pclink1 = document.createElement("link");
-	pclink1.rel = "preconnect";
-	pclink1.href = "//bidder.komoona.com";
-	pclink1.crossorigin;
-	var nodepclink1 = document.getElementsByTagName("footerbid1")[0];
-	nodepclink1.insertBefore(pclink1, nodepclink1.firstChild);
-	})();
-(function () {
-	var pclink1 = document.createElement("link");
-	pclink1.rel = "preconnect";
 	pclink1.href = "//s0.2mdn.net";
-	pclink1.crossorigin;
-	var nodepclink1 = document.getElementsByTagName("footerbid1")[0];
-	nodepclink1.insertBefore(pclink1, nodepclink1.firstChild);
-	})();
-(function () {
-	var pclink1 = document.createElement("link");
-	pclink1.rel = "preconnect";
-	pclink1.href = "//quantcast.mgr.consensu.org";
 	pclink1.crossorigin;
 	var nodepclink1 = document.getElementsByTagName("footerbid1")[0];
 	nodepclink1.insertBefore(pclink1, nodepclink1.firstChild);
@@ -260,30 +212,6 @@ nodepclink1.insertBefore(pclink1, nodepclink1.firstChild);
 	var pclink1 = document.createElement("link");
 	pclink1.rel = "preconnect";
 	pclink1.href = "//track-east.mobileadtrading.com";
-	pclink1.crossorigin;
-	var nodepclink1 = document.getElementsByTagName("footerbid1")[0];
-	nodepclink1.insertBefore(pclink1, nodepclink1.firstChild);
-	})();
-(function () {
-	var pclink1 = document.createElement("link");
-	pclink1.rel = "preconnect";
-	pclink1.href = "//s.komoona.com";
-	pclink1.crossorigin;
-	var nodepclink1 = document.getElementsByTagName("footerbid1")[0];
-	nodepclink1.insertBefore(pclink1, nodepclink1.firstChild);
-	})();
-(function () {
-	var pclink1 = document.createElement("link");
-	pclink1.rel = "preconnect";
-	pclink1.href = "//cms.quantserve.com";
-	pclink1.crossorigin;
-	var nodepclink1 = document.getElementsByTagName("footerbid1")[0];
-	nodepclink1.insertBefore(pclink1, nodepclink1.firstChild);
-	})();
-(function () {
-	var pclink1 = document.createElement("link");
-	pclink1.rel = "preconnect";
-	pclink1.href = "//rtb.viewdeos.com";
 	pclink1.crossorigin;
 	var nodepclink1 = document.getElementsByTagName("footerbid1")[0];
 	nodepclink1.insertBefore(pclink1, nodepclink1.firstChild);
@@ -355,14 +283,6 @@ nodepclink1.insertBefore(pclink1, nodepclink1.firstChild);
 (function () {
 	var pclink1 = document.createElement("link");
 	pclink1.rel = "preconnect";
-	pclink1.href = "//supply.decenterads.com";
-	pclink1.crossorigin;
-	var nodepclink1 = document.getElementsByTagName("footerbid1")[0];
-	nodepclink1.insertBefore(pclink1, nodepclink1.firstChild);
-	})();
-(function () {
-	var pclink1 = document.createElement("link");
-	pclink1.rel = "preconnect";
 	pclink1.href = "//x.bidfilter.com";
 	pclink1.crossorigin;
 	var nodepclink1 = document.getElementsByTagName("footerbid1")[0];
@@ -387,7 +307,31 @@ nodepclink1.insertBefore(pclink1, nodepclink1.firstChild);
 (function () {
 	var pclink1 = document.createElement("link");
 	pclink1.rel = "preconnect";
-	pclink1.href = "//sourcepoint.mgr.consensu.org";
+	pclink1.href = "//ap.lijit.com";
+	pclink1.crossorigin;
+	var nodepclink1 = document.getElementsByTagName("footerbid1")[0];
+	nodepclink1.insertBefore(pclink1, nodepclink1.firstChild);
+	})();
+(function () {
+	var pclink1 = document.createElement("link");
+	pclink1.rel = "preconnect";
+	pclink1.href = "//admiral.mgr.consensu.org";
+	pclink1.crossorigin;
+	var nodepclink1 = document.getElementsByTagName("footerbid1")[0];
+	nodepclink1.insertBefore(pclink1, nodepclink1.firstChild);
+	})();
+(function () {
+	var pclink1 = document.createElement("link");
+	pclink1.rel = "preconnect";
+	pclink1.href = "//vendorlist.consensu.org";
+	pclink1.crossorigin;
+	var nodepclink1 = document.getElementsByTagName("footerbid1")[0];
+	nodepclink1.insertBefore(pclink1, nodepclink1.firstChild);
+	})();
+(function () {
+	var pclink1 = document.createElement("link");
+	pclink1.rel = "preconnect";
+	pclink1.href = "//ad.doubleclick.net";
 	pclink1.crossorigin;
 	var nodepclink1 = document.getElementsByTagName("footerbid1")[0];
 	nodepclink1.insertBefore(pclink1, nodepclink1.firstChild);
