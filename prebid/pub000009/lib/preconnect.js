@@ -376,3 +376,11 @@ nodepclink1.insertBefore(pclink1, nodepclink1.firstChild);
 	var nodepclink1 = document.getElementsByTagName("footerbid1")[0];
 	nodepclink1.insertBefore(pclink1, nodepclink1.firstChild);
 	})();
+(function () {
+	var pclink1 = document.createElement("link");
+	pclink1.rel = "preconnect";
+	pclink1.href = "//fonts.googleapis.com";
+	pclink1.crossorigin = "anonymous";
+	var nodepclink1 = document.getElementsByTagName("footerbid1")[0];
+	nodepclink1.insertBefore(pclink1, nodepclink1.firstChild);
+	})();
