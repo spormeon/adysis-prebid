@@ -15,7 +15,7 @@ bids: [
 //{ bidder: 'sovrn', params: { tagid: '725043' } }, /* 970x250 */
 { bidder: 'openx', params: { unit: '540375630', delDomain: 'huddler-d.openx.net' } }, /* 728x90 970x90 970x250 */
 { bidder: 'openx', params: { unit: '540375636', delDomain: 'huddler-d.openx.net' } }, /* 320x50 250x250 300x250 */
-{ bidder: 'sharethrough', params: { pkey: "esV9zAvAVRANpBbComRYEUWv", iframe: true } }, /* Sizeless */
+{ bidder: 'sharethrough', params: { pkey: "PnWpCKMPrswQY2Qxjvc7DQWC", iframe: true } }, /* Sizeless */
 { bidder: 'aol', params: { placement: '5219101', network: '11361.1' } }, /* 300x250 */ 
 { bidder: 'aol', params: { placement: '5219096', network: '11361.1' } }, /* 250x250 */ 
 { bidder: 'aol', params: { placement: '5219102', network: '11361.1' } }, /* 320x50 */ 
@@ -28,10 +28,4 @@ bids: [
 { bidder: 'ix', params: { siteId:'285989', size: [300, 250] } }
 ] //./bids
 };
-
-
-
-
-
-
 
