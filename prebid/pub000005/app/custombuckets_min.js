@@ -1,1 +1,1 @@
-const customConfigObjectA={"buckets":[{"precision":2,"min":0,"max":2,"increment":0.01},{"precision":2,"min":2.1,"max":20,"increment":0.10}]}
+const customConfigObjectA={"buckets":[{"precision":2,"min":0.01,"max":20,"increment":0.01}]}
