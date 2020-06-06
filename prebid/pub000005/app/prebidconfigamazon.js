@@ -28,7 +28,7 @@ pbjs.que.push(function() {
     pbjs.setConfig({
     	//rubicon: {singleRequest: true},
     	priceGranularity: customConfigObjectA,
-     consentManagement: { gdpr: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400, allowAuctionWithoutConsent: true }, usp: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*400 } },
+     consentManagement: { gdpr: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*2, allowAuctionWithoutConsent: true }, usp: { cmpApi: 'iab', timeout: PREBID_TIMEOUT*2 } },
       cache: {url: "https://prebid.adnxs.com/pbc/v1/cache"},
       s2sConfig: {
         accountId: 'e31f627f-53a3-4288-9979-482d3c6ffc76',
@@ -137,7 +137,7 @@ googletag.cmd.push(function() {
         googletag.pubads().disableInitialLoad();
         googletag.enableServices();
         // not sure if impressionViewable, slotRenderEnded or slotOnload or impressionViewable is best to use yet
-        googletag.pubads().addEventListener("impressionViewable", function(event) {
+        googletag.pubads().addEventListener("slotRenderEnded", function(event) {
             var elementId = event.slot.getSlotElementId();
             var slotConfig = slots[elementId];
             if (slotConfig) {
@@ -326,6 +326,11 @@ function requestHeaderBidsRefresh(slot) {
 window.setTimeout(function() {
     sendAdserverRequest();
 }, PREBID_TIMEOUT);
+
+
+
+
+
 
 
 
