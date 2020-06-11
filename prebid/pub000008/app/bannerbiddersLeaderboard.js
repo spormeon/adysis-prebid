@@ -1,8 +1,8 @@
 // BANNER BIDDER LIST
 var banner_biddersLeaderboard = {
 bids: [
-{ bidder: 'appnexus', params: { placementId: '13002608', allowSmallerSizes: true } }, /* one placementId for all sizes */
-{ bidder: 'districtm', params: { placementId: '19222008', allowSmallerSizes: true } }, /* one placementId for all sizes */
+{ bidder: 'appnexus', params: { placementId: '13002608' } }, /* one placementId for all sizes */
+{ bidder: 'districtm', params: { placementId: '19222008' } }, /* one placementId for all sizes */
 //{ bidder: 'gourmetads', params: { placementId: '12962328', allowSmallerSizes: true } },
 { bidder: 'districtmDMX', params: { dmxid:'524030', memberid:'101399' } },
 //{ bidder: 'conversant', params: { site_id:'117455', secure:1 } },
@@ -30,9 +30,9 @@ bids: [
 { bidder: 'ix', params: { siteId:'285996', size: [320, 50] } },
 //{ bidder: 'ix', params: { siteId:'286001', size: [300, 250] } },
 //{ bidder: 'triplelift', params: { inventoryCode: 'niketalk_merc_1' } }, /* 300x250 */
-{ bidder: 'triplelift', params: { inventoryCode: 'niketalk_leaderboard_top' } } /* 300x250 */
+{ bidder: 'triplelift', params: { inventoryCode: 'niketalk_leaderboard_top' } }, /* 300x250 */
 //{ bidder: 'triplelift', params: { inventoryCode: 'niketalk_footer_1' } }, /* 400x225 */
-//{ bidder: 'triplelift', params: { inventoryCode: 'niketalk_thread_leaderboard_1' } } /* 400x225 */
+{ bidder: 'triplelift', params: { inventoryCode: 'niketalk_thread_leaderboard_1' } } /* 400x225 */
 ] //./bids
 };
 

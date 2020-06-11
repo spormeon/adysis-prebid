@@ -74,17 +74,20 @@ pbjs.que.push(function() {
             { mediaQuery: '(min-width: 769px)', sizesSupported: [[300,250],[250,250]], labels: [ 'desktopmenu1'] },
             { mediaQuery: '(min-width: 769px)', sizesSupported: [[970,90],[728,90],[468,60],[320,50],[320,100]], labels: [ 'desktopleader'] },
             { mediaQuery: '(min-width: 769px)', sizesSupported: [[970,90],[728,90],[468,60],[320,50]], labels: [ 'desktopfooter'] },
+            { mediaQuery: '(min-width: 769px)', sizesSupported: [[728,90],[468,60],[320,50],[320,100],[336,280],[580,400]], labels: [ 'desktopinreed'] },
             { mediaQuery: '(min-width: 769px)', sizesSupported: [[970,250],[970,90],[728,90],[300,250],[250,250],[468,60],[320,50],[336,280],[580,400],[320,100]], labels: [ 'desktopbottom2'] },
             { mediaQuery: '(min-width: 500px) and (max-width: 768px)', sizesSupported: [[580,400],[728,90],[468,60],[320,50],[320,100],[336,280],[300,250],[300,600],[250,250]], labels: [ 'tablet'] },
             { mediaQuery: '(min-width: 500px) and (max-width: 768px)', sizesSupported: [[300,250],[300,600],[250,250]], labels: [ 'tabletmenu'] },
             { mediaQuery: '(min-width: 500px) and (max-width: 768px)', sizesSupported: [[728,90],[468,60],[320,50]], labels: [ 'tabletfooter'] },
             { mediaQuery: '(min-width: 500px) and (max-width: 768px)', sizesSupported: [[728,90],[300,250],[250,250],[468,60],[320,50],[336,280],[580,400],[320,100]], labels: [ 'tabletbottom2'] },
             { mediaQuery: '(min-width: 500px) and (max-width: 768px)', sizesSupported: [[728,90],[468,60],[320,50]], labels: [ 'tabletleader'] },
+            { mediaQuery: '(min-width: 500px) and (max-width: 768px)', sizesSupported: [[728,90],[468,60],[320,50],[336,280],[580,400],[320,100]], labels: [ 'tabletinreed'] },
             { mediaQuery: '(min-width: 1px) and (max-width: 499px)', sizesSupported: [[300,250],[250,250],[320,50],[320,100],[336,280]], labels: [ 'phone'] },
             { mediaQuery: '(min-width: 1px) and (max-width: 499px)', sizesSupported: [[468,60],[320,50]], labels: [ 'phonefooter'] },
             { mediaQuery: '(min-width: 1px) and (max-width: 499px)', sizesSupported: [[300,250],[250,250],[320,50],[320,100],[336,280],[468,60]], labels: [ 'phonebottom2'] },
             { mediaQuery: '(min-width: 1px) and (max-width: 499px)', sizesSupported: [[468,60],[320,50]], labels: [ 'phoneleader'] },
-            { mediaQuery: '(min-width: 1px) and (max-width: 499px)', sizesSupported: [[300,250],[250,250]], labels: [ 'phonemenu'] }
+            { mediaQuery: '(min-width: 1px) and (max-width: 499px)', sizesSupported: [[300,250],[250,250]], labels: [ 'phonemenu'] },
+            { mediaQuery: '(min-width: 1px) and (max-width: 499px)', sizesSupported: [[320,50],[320,100],[468,60]], labels: [ 'phoneinreed'] },
           ]
     });
     
@@ -170,18 +173,18 @@ definitons: {
 inreedvid13Slot: { adUnitPath: "/21665095471/niketalk_leaderboard_top_guest1", size: [[970, 90],[728, 90],[468, 60],[320, 50],[320, 100]], sizeMapping: "mappingleaderslot", timeout: site_config.refresh_rate, },
 inreedvid9Slot: { adUnitPath: "/21665095471/niketalk_merc_1", size: [[300, 600],[300, 250],[250, 250],[160, 600],[120, 600]], sizeMapping: "mappingmenuslot", timeout: site_config.refresh_rate, },
 inreedvid5Slot: { adUnitPath: "/21665095471/niketalk_skyscraper_1", size: [[300, 600],[300, 250],[250, 250],[160, 600],[120, 600]], sizeMapping: "mappingmenuslot", timeout: site_config.refresh_rate, },
-inreedvid8Slot: { adUnitPath: "/21665095471/niketalk_thread_leaderboard_1", size: [[728, 90],[300, 250],[250, 250],[468, 60],[320, 50],[336, 280],[580, 400],[320, 100]], sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
-inreedvid4Slot: { adUnitPath: "/21665095471/niketalk_thread_leaderboard_2", size: [[728, 90],[300, 250],[250, 250],[468, 60],[320, 50],[336, 280],[580, 400],[320, 100]], sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
-inreedvid7Slot: { adUnitPath: "/21665095471/niketalk_thread_leaderboard_3", size: [[728, 90],[300, 250],[250, 250],[468, 60],[320, 50],[336, 280],[580, 400],[320, 100]], sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
-inreedvid14Slot: { adUnitPath: "/21665095471/niketalk_thread_leaderboard_4", size: [[728, 90],[300, 250],[250, 250],[468, 60],[320, 50],[336, 280],[580, 400],[320, 100]], sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
+inreedvid8Slot: { adUnitPath: "/21665095471/niketalk_thread_leaderboard_1", size: [[728, 90],[468, 60],[320, 50],[336, 280],[580, 400],[320, 100]], sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
+inreedvid4Slot: { adUnitPath: "/21665095471/niketalk_thread_leaderboard_2", size: [[728, 90],[468, 60],[320, 50],[336, 280],[580, 400],[320, 100]], sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
+inreedvid7Slot: { adUnitPath: "/21665095471/niketalk_thread_leaderboard_3", size: [[728, 90],[468, 60],[320, 50],[336, 280],[580, 400],[320, 100]], sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
+inreedvid14Slot: { adUnitPath: "/21665095471/niketalk_thread_leaderboard_4", size: [[728, 90],[468, 60],[320, 50],[336, 280],[580, 400],[320, 100]], sizeMapping: "mappinginreedvidslot", timeout: site_config.refresh_rate, },
 inreedvid10Slot: { adUnitPath: "/21665095471/niketalk_footer_1", size: [[970, 250],[970, 90],[728, 90],[300, 250],[250, 250],[468, 60],[320, 50],[336, 280],[580, 400],[320, 100]], sizeMapping: "mappingbottom2slot", timeout: site_config.refresh_rate, },
 inreedvid6Slot: { adUnitPath: "/21665095471/niketalk_footer_1", size: [[970, 90],[728, 90],[468, 60],[320, 50],[320, 100],[1, 1]], sizeMapping: "mappingfooterslot", timeout: site_config.refresh_rate, },
 },
 sizeMappings: {
 	mappinginreedvidslot: [
-	[[1024, 768],[[728, 90],[300, 250],[250, 250],[468, 60],[320, 50],[336, 280],[580, 400],[320, 100]]],
-	[[768, 500],[[728, 90],[300, 250],[250, 250],[468, 60],[320, 50],[336, 280],[580, 400],[320, 100]]],
-	[[1, 1],[[300, 250],[250, 250],[320, 50],[320, 100],[336, 280],[468, 60]]]
+	[[1024, 768],[[728, 90],[468, 60],[320, 50],[336, 280],[580, 400],[320, 100]]],
+	[[768, 500],[[728, 90],[468, 60],[320, 50],[336, 280],[580, 400],[320, 100]]],
+	[[1, 1],[[320, 50],[320, 100],[336, 280],[468, 60]]]
 	],
 	mappingmenuslot: [
 	[[1024, 768],[[300, 600],[300, 250],[250, 250],[160, 600],[120, 600]]],

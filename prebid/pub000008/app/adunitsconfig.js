@@ -3,22 +3,22 @@ var adUnits = [
 // /21665095471/specktra_threads_leaderboard_2
 {
 code: 'inreedvid4Slot',
-labelAny: ['desktop', 'tablet', 'phone'],
+labelAny: ['desktopinreed', 'tabletinreed', 'phoneinreed'],
 mediaTypes: { native: { image: { sizes: [300, 100], sendId: true }, title: { len: 50, sendId: true }, sponsoredBy: { required: true, sendId: true }, clickUrl: { required: true, sendId: true } } },
 bids: native_bidders.bids   
 },
 {
 code: 'inreedvid4Slot',
-labelAny: ['desktop', 'tablet', 'phone'],
-mediaTypes: { video:  { context: 'outstream', playerSize: [[580, 400]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'], playbackmethod: [2], minduration: 0,  maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10], linearity: 1, api: [1,2,3,4,5,6] } },
-renderer: { url: 'https://cdn.jsdelivr.net/gh/spormeon/adysis-prebid/prebid/ANOutstreamVideo.js', render: function (bid) { ANOutstreamVideo.renderAd({ targetId: bid.adUnitCode, adResponse: bid.adResponse, }); } },
-renderer: { options: { adText: 'Advertisement' } },
+labelAny: ['desktopinreed', 'tabletinreed', 'phoneinreed'],
+mediaTypes: { video:  { context: 'outstream', playerSize: [[580, 400]] } },
+//renderer: { url: 'https://cdn.jsdelivr.net/gh/spormeon/adysis-prebid/prebid/ANOutstreamVideo.js', render: function (bid) { ANOutstreamVideo.renderAd({ targetId: bid.adUnitCode, adResponse: bid.adResponse, }); } },
+//renderer: { options: { adText: 'Advertisement' } },
 bids: outstream_bidders.bids
 },
 {
 code: 'inreedvid4Slot',
-labelAny: ['desktop', 'tablet', 'phone'],
-mediaTypes: { banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50],[320, 100],[336, 280],[580, 400]] } },
+labelAny: ['desktopinreed', 'tabletinreed', 'phoneinreed'],
+mediaTypes: { banner: { sizes: [[728, 90],[468, 60],[320, 50],[320, 100],[336, 280],[580, 400]] } },
 bids: banner_bidders.bids
 },
 //new ad unit block
@@ -32,9 +32,9 @@ bids: native_bidders.bids
 {
 code: 'inreedvid5Slot',
 labelAny: ['desktopmenu1', 'tablet', 'phone'],
-mediaTypes: { video:  { context: 'outstream', playerSize: [[300, 250]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'], playbackmethod: [2], minduration: 0,  maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10], linearity: 1, api: [1,2,3,4,5,6] } },
-renderer: { url: 'https://cdn.jsdelivr.net/gh/spormeon/adysis-prebid/prebid/ANOutstreamVideo.js', render: function (bid) { ANOutstreamVideo.renderAd({ targetId: bid.adUnitCode, adResponse: bid.adResponse, }); } },
-renderer: { options: { adText: 'Advertisement' } },
+mediaTypes: { video:  { context: 'outstream', playerSize: [[300, 250]] } },
+//renderer: { url: 'https://cdn.jsdelivr.net/gh/spormeon/adysis-prebid/prebid/ANOutstreamVideo.js', render: function (bid) { ANOutstreamVideo.renderAd({ targetId: bid.adUnitCode, adResponse: bid.adResponse, }); } },
+//renderer: { options: { adText: 'Advertisement' } },
 bids: outstream_bidders.bids
 },
 {
@@ -55,44 +55,44 @@ bids: banner_bidders.bids
 // /21665095471/specktra_threads_leaderboard_4
 {
 code: 'inreedvid7Slot',
-labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'],
+labelAny: ['desktopinreed', 'tabletinreed', 'phoneinreed'],
 mediaTypes: { native: { image: { sizes: [300, 100], sendId: true }, title: { len: 50, sendId: true }, sponsoredBy: { required: true, sendId: true }, clickUrl: { required: true, sendId: true } } },
 bids: native_bidders.bids
 },
 {
 code: 'inreedvid7Slot',
-labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'],
-mediaTypes: { video:  { context: 'outstream', playerSize: [[580, 400]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'], playbackmethod: [2], minduration: 0,  maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10], linearity: 1, api: [1,2,3,4,5,6] } },
-renderer: { url: 'https://cdn.jsdelivr.net/gh/spormeon/adysis-prebid/prebid/ANOutstreamVideo.js', render: function (bid) { ANOutstreamVideo.renderAd({ targetId: bid.adUnitCode, adResponse: bid.adResponse, }); } },
-renderer: { options: { adText: 'Advertisement' } },
+labelAny: ['desktopinreed', 'tabletinreed', 'phoneinreed'],
+mediaTypes: { video:  { context: 'outstream', playerSize: [[580, 400]] } },
+//renderer: { url: 'https://cdn.jsdelivr.net/gh/spormeon/adysis-prebid/prebid/ANOutstreamVideo.js', render: function (bid) { ANOutstreamVideo.renderAd({ targetId: bid.adUnitCode, adResponse: bid.adResponse, }); } },
+//renderer: { options: { adText: 'Advertisement' } },
 bids: outstream_bidders.bids
 },
 {
 code: 'inreedvid7Slot',
-labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'],
-mediaTypes: { banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50],[320, 100],[336, 280],[580, 400]] } },
+labelAny: ['desktopinreed', 'tabletinreed', 'phoneinreed'],
+mediaTypes: { banner: { sizes: [[728, 90],[468, 60],[320, 50],[320, 100],[336, 280],[580, 400]] } },
 bids: banner_bidders.bids
 },
 //new ad unit block
 // /21665095471/specktra_threads_leaderboard_1
 {
 code: 'inreedvid8Slot',
-labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'],
+labelAny: ['desktopinreed', 'tabletinreed', 'phoneinreed'],
 mediaTypes: { native: { image: { sizes: [300, 100], sendId: true }, title: { len: 50, sendId: true }, sponsoredBy: { required: true, sendId: true }, clickUrl: { required: true, sendId: true } } },
 bids: native_bidders.bids
 },
 {
 code: 'inreedvid8Slot',
-labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'],
+labelAny: ['desktopinreed', 'tabletinreed', 'phoneinreed'],
 mediaTypes: { video:  { context: 'outstream', playerSize: [[580, 400]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'], playbackmethod: [2], minduration: 0,  maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10], linearity: 1, api: [1,2,3,4,5,6] } },
-renderer: { url: 'https://cdn.jsdelivr.net/gh/spormeon/adysis-prebid/prebid/ANOutstreamVideo.js', render: function (bid) { ANOutstreamVideo.renderAd({ targetId: bid.adUnitCode, adResponse: bid.adResponse, }); } },
-renderer: { options: { adText: 'Advertisement' } },
+//renderer: { url: 'https://cdn.jsdelivr.net/gh/spormeon/adysis-prebid/prebid/ANOutstreamVideo.js', render: function (bid) { ANOutstreamVideo.renderAd({ targetId: bid.adUnitCode, adResponse: bid.adResponse, }); } },
+//renderer: { options: { adText: 'Advertisement' } },
 bids: outstream_bidders.bids
 },
 {
 code: 'inreedvid8Slot',
-labelAny: ['desktopleader', 'tabletmenu', 'phonemenu'],
-mediaTypes: { banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50],[320, 100],[336, 280],[580, 400]] } },
+labelAny: ['desktopinreed', 'tabletinreed', 'phoneinreed'],
+mediaTypes: { banner: { sizes: [[728, 90],[468, 60],[320, 50],[320, 100],[336, 280],[580, 400]] } },
 bids: banner_bidders.bids
 },
 //new ad unit block
@@ -107,8 +107,8 @@ bids: native_bidders.bids
 code: 'inreedvid9Slot',
 labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'],
 mediaTypes: { video:  { context: 'outstream', playerSize: [[300, 250]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'], playbackmethod: [2], minduration: 0,  maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10], linearity: 1, api: [1,2,3,4,5,6] } },
-renderer: { url: 'https://cdn.jsdelivr.net/gh/spormeon/adysis-prebid/prebid/ANOutstreamVideo.js', render: function (bid) { ANOutstreamVideo.renderAd({ targetId: bid.adUnitCode, adResponse: bid.adResponse, }); } },
-renderer: { options: { adText: 'Advertisement' } },
+//renderer: { url: 'https://cdn.jsdelivr.net/gh/spormeon/adysis-prebid/prebid/ANOutstreamVideo.js', render: function (bid) { ANOutstreamVideo.renderAd({ targetId: bid.adUnitCode, adResponse: bid.adResponse, }); } },
+//renderer: { options: { adText: 'Advertisement' } },
 bids: outstream_bidders.bids
 },
 {
@@ -129,8 +129,8 @@ bids: native_bidders.bids
 code: 'inreedvid10Slot',
 labelAny: ['desktopbottom2', 'tabletbottom2', 'phonebottom2'],
 mediaTypes: { video:  { context: 'outstream', playerSize: [[580, 400]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'], playbackmethod: [2], minduration: 0,  maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10], linearity: 1, api: [1,2,3,4,5,6] } },
-renderer: { url: 'https://cdn.jsdelivr.net/gh/spormeon/adysis-prebid/prebid/ANOutstreamVideo.js', render: function (bid) { ANOutstreamVideo.renderAd({ targetId: bid.adUnitCode, adResponse: bid.adResponse, }); } },
-renderer: { options: { adText: 'Advertisement' } },
+//renderer: { url: 'https://cdn.jsdelivr.net/gh/spormeon/adysis-prebid/prebid/ANOutstreamVideo.js', render: function (bid) { ANOutstreamVideo.renderAd({ targetId: bid.adUnitCode, adResponse: bid.adResponse, }); } },
+//renderer: { options: { adText: 'Advertisement' } },
 bids: outstream_bidders.bids
 },
 {
@@ -151,22 +151,22 @@ bids: banner_biddersLeaderboard.bids
 ///21665095471/specktra_threads_leaderboard_2
 {
 code: 'inreedvid14Slot',
-labelAny: ['desktop', 'tablet', 'phone'],
+labelAny: ['desktopinreed', 'tabletinreed', 'phoneinreed'],
 mediaTypes: { native: { image: { sizes: [300, 100], sendId: true }, title: { len: 50, sendId: true }, sponsoredBy: { required: true, sendId: true }, clickUrl: { required: true, sendId: true } } },
 bids: native_bidders.bids   
 },
 {
 code: 'inreedvid14Slot',
-labelAny: ['desktop', 'tablet', 'phone'],
+labelAny: ['desktopinreed', 'tabletinreed', 'phoneinreed'],
 mediaTypes: { video:  { context: 'outstream', playerSize: [[580, 400]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'], playbackmethod: [2], minduration: 0,  maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10], linearity: 1, api: [1,2,3,4,5,6] } },
-renderer: { url: 'https://cdn.jsdelivr.net/gh/spormeon/adysis-prebid/prebid/ANOutstreamVideo.js', render: function (bid) { ANOutstreamVideo.renderAd({ targetId: bid.adUnitCode, adResponse: bid.adResponse, }); } },
-renderer: { options: { adText: 'Advertisement' } },
+//renderer: { url: 'https://cdn.jsdelivr.net/gh/spormeon/adysis-prebid/prebid/ANOutstreamVideo.js', render: function (bid) { ANOutstreamVideo.renderAd({ targetId: bid.adUnitCode, adResponse: bid.adResponse, }); } },
+//renderer: { options: { adText: 'Advertisement' } },
 bids: outstream_bidders.bids
 },
 {
 code: 'inreedvid14Slot',
-labelAny: ['desktop', 'tablet', 'phone'],
-mediaTypes: { banner: { sizes: [[300, 250],[728, 90],[250, 250],[468, 60],[320, 50],[320, 100],[336, 280],[580, 400]] } },
+labelAny: ['desktopinreed', 'tabletinreed', 'phoneinreed'],
+mediaTypes: { banner: { sizes: [[728, 90],[468, 60],[320, 50],[320, 100],[336, 280],[580, 400]] } },
 bids: banner_bidders.bids
 },
 ];
