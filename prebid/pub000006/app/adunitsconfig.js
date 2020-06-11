@@ -10,9 +10,9 @@ bids: native_bidders.bids
 {
 code: 'inreedvid4Slot',
 labelAny: ['desktop', 'tablet', 'phone'],
-mediaTypes: { video:  { context: 'outstream', playerSize: [[580, 400]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'], playbackmethod: [2], minduration: 0,  maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10], linearity: 1, api: [1,2,3,4,5,6] } },
-renderer: { url: 'https://cdn.jsdelivr.net/gh/spormeon/adysis-prebid/prebid/ANOutstreamVideo.js', render: function (bid) { ANOutstreamVideo.renderAd({ targetId: bid.adUnitCode, adResponse: bid.adResponse, }); } },
-renderer: { options: { adText: 'Advertisement' } },
+mediaTypes: { video:  { context: 'outstream', playerSize: [[580, 400]] } },
+//renderer: { url: 'https://cdn.jsdelivr.net/gh/spormeon/adysis-prebid/prebid/ANOutstreamVideo.js', render: function (bid) { ANOutstreamVideo.renderAd({ targetId: bid.adUnitCode, adResponse: bid.adResponse, }); } },
+//renderer: { options: { adText: 'Advertisement' } },
 bids: outstream_bidders.bids
 },
 {
@@ -32,9 +32,9 @@ bids: native_bidders.bids
 {
 code: 'inreedvid5Slot',
 labelAny: ['desktopmenu1', 'tablet', 'phone'],
-mediaTypes: { video:  { context: 'outstream', playerSize: [[300, 250]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'], playbackmethod: [2], minduration: 0,  maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10], linearity: 1, api: [1,2,3,4,5,6] } },
-renderer: { url: 'https://cdn.jsdelivr.net/gh/spormeon/adysis-prebid/prebid/ANOutstreamVideo.js', render: function (bid) { ANOutstreamVideo.renderAd({ targetId: bid.adUnitCode, adResponse: bid.adResponse, }); } },
-renderer: { options: { adText: 'Advertisement' } },
+mediaTypes: { video:  { context: 'outstream', playerSize: [[300, 250]] } },
+//renderer: { url: 'https://cdn.jsdelivr.net/gh/spormeon/adysis-prebid/prebid/ANOutstreamVideo.js', render: function (bid) { ANOutstreamVideo.renderAd({ targetId: bid.adUnitCode, adResponse: bid.adResponse, }); } },
+//renderer: { options: { adText: 'Advertisement' } },
 bids: outstream_bidders.bids
 },
 {
@@ -62,9 +62,9 @@ bids: native_bidders.bids
 {
 code: 'inreedvid7Slot',
 labelAny: ['desktopbottom2', 'tabletbottom2', 'phonebottom2'],
-mediaTypes: { video:  { context: 'outstream', playerSize: [[580, 400]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'], playbackmethod: [2], minduration: 0,  maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10], linearity: 1, api: [1,2,3,4,5,6] } },
-renderer: { url: 'https://cdn.jsdelivr.net/gh/spormeon/adysis-prebid/prebid/ANOutstreamVideo.js', render: function (bid) { ANOutstreamVideo.renderAd({ targetId: bid.adUnitCode, adResponse: bid.adResponse, }); } },
-renderer: { options: { adText: 'Advertisement' } },
+mediaTypes: { video:  { context: 'outstream', playerSize: [[580, 400]] } },
+//renderer: { url: 'https://cdn.jsdelivr.net/gh/spormeon/adysis-prebid/prebid/ANOutstreamVideo.js', render: function (bid) { ANOutstreamVideo.renderAd({ targetId: bid.adUnitCode, adResponse: bid.adResponse, }); } },
+//renderer: { options: { adText: 'Advertisement' } },
 bids: outstream_bidders.bids
 },
 {
@@ -84,9 +84,9 @@ bids: native_bidders.bids
 {
 code: 'inreedvid8Slot',
 labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'],
-mediaTypes: { video:  { context: 'outstream', playerSize: [[580, 400]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'], playbackmethod: [2], minduration: 0,  maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10], linearity: 1, api: [1,2,3,4,5,6] } },
-renderer: { url: 'https://cdn.jsdelivr.net/gh/spormeon/adysis-prebid/prebid/ANOutstreamVideo.js', render: function (bid) { ANOutstreamVideo.renderAd({ targetId: bid.adUnitCode, adResponse: bid.adResponse, }); } },
-renderer: { options: { adText: 'Advertisement' } },
+mediaTypes: { video:  { context: 'outstream', playerSize: [[580, 400]] } },
+//renderer: { url: 'https://cdn.jsdelivr.net/gh/spormeon/adysis-prebid/prebid/ANOutstreamVideo.js', render: function (bid) { ANOutstreamVideo.renderAd({ targetId: bid.adUnitCode, adResponse: bid.adResponse, }); } },
+//renderer: { options: { adText: 'Advertisement' } },
 bids: outstream_bidders.bids
 },
 {
@@ -106,9 +106,9 @@ bids: native_bidders.bids
 {
 code: 'inreedvid9Slot',
 labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'],
-mediaTypes: { video:  { context: 'outstream', playerSize: [[300, 250]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'], playbackmethod: [2], minduration: 0,  maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10], linearity: 1, api: [1,2,3,4,5,6] } },
-renderer: { url: 'https://cdn.jsdelivr.net/gh/spormeon/adysis-prebid/prebid/ANOutstreamVideo.js', render: function (bid) { ANOutstreamVideo.renderAd({ targetId: bid.adUnitCode, adResponse: bid.adResponse, }); } },
-renderer: { options: { adText: 'Advertisement' } },
+mediaTypes: { video:  { context: 'outstream', playerSize: [[300, 250]] } },
+//renderer: { url: 'https://cdn.jsdelivr.net/gh/spormeon/adysis-prebid/prebid/ANOutstreamVideo.js', render: function (bid) { ANOutstreamVideo.renderAd({ targetId: bid.adUnitCode, adResponse: bid.adResponse, }); } },
+//renderer: { options: { adText: 'Advertisement' } },
 bids: outstream_bidders.bids
 },
 {
@@ -128,9 +128,9 @@ bids: native_bidders.bids
 {
 code: 'inreedvid10Slot',
 labelAny: ['desktopbottom2', 'tabletbottom2', 'phonebottom2'],
-mediaTypes: { video:  { context: 'outstream', playerSize: [[580, 400]], mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'], playbackmethod: [2], minduration: 0,  maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10], linearity: 1, api: [1,2,3,4,5,6] } },
-renderer: { url: 'https://cdn.jsdelivr.net/gh/spormeon/adysis-prebid/prebid/ANOutstreamVideo.js', render: function (bid) { ANOutstreamVideo.renderAd({ targetId: bid.adUnitCode, adResponse: bid.adResponse, }); } },
-renderer: { options: { adText: 'Advertisement' } },
+mediaTypes: { video:  { context: 'outstream', playerSize: [[580, 400]] } },
+//renderer: { url: 'https://cdn.jsdelivr.net/gh/spormeon/adysis-prebid/prebid/ANOutstreamVideo.js', render: function (bid) { ANOutstreamVideo.renderAd({ targetId: bid.adUnitCode, adResponse: bid.adResponse, }); } },
+//renderer: { options: { adText: 'Advertisement' } },
 bids: outstream_bidders.bids
 },
 {
