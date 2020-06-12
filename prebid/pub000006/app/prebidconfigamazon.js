@@ -9,7 +9,10 @@ pbjs.que = pbjs.que || [];
 pbjs.que.push(function() {
     const unitsOnPage = adUnits.filter(u => !!document.getElementById(u.code));
     pbjs.addAdUnits(unitsOnPage);
-
+    
+    // marks winng video bids as used
+    pbjs.markWinningBidAsUsed(adId);
+    
     pbjs.bidderSettings = {
     		sovrn:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 0.90; } },
     		appnexus:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 1.00; } },
