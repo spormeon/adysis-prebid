@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Prebid Server Video -- Video.js</title>
+
+<script type = "text/javascript">
+  window._sp_ = window._sp_ || {};
+  window._sp_.config = window._sp_.config || {};
+  window._sp_.config.account_id = 959;
+  window._sp_.config.mms_domain = 'messaging.sourcepoint.com';
+  window._sp_.mms = window._sp_.mms || {};
+  window._sp_.mms.cmd = window._sp_.mms.cmd || [];
+  window._sp_.config.cmp = _sp_.config.cmp || {};
+  window._sp_.config.cmp.enabled = true;
+  window._sp_.config.detection = window._sp_.config.detection || {};
+  window._sp_.config.detection.timeout = 1;
+  window._sp_.config.writeFirstPartyCookies = true;
+  window._sp_.mms.cmd.push( function () {
+    window._sp_.mms.startMsg();
+  });
+</script>
+<script type="text/javascript" src="https://d2zv5rkii46miq.cloudfront.net/0/latest/messaging_without_detection.js"></script>
+
+     
+<!-- videojs -->
+<script src="https://adops.adysis.com/prebid2.36.0adyjs.js"></script>
+<script src="//imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
+        
+<!-- videojs -->
+<!-- use recent version of videojs to ensure proper functioning with the iOS devices -->
+<link rel="stylesheet" href="https://adops.adysis.com/video-js-min.css">
+<script type="text/javascript" src="https://adops.adysis.com/video-min.js"></script>
+<!-- videojs-vast-vpaid -->
+<link href="https://adops.adysis.com/videojs.vast.vpaid-min.css" rel="stylesheet">
+<script src="https://adops.adysis.com/videojs_5.vast.vpaid-min.js"></script>
+
+<!-- videojs picture in picture-->
+<link href="https://players.brightcove.net/videojs-pip/1/videojs-pip.css" rel="stylesheet">
+
+<script>
+
+//ASSERTIVE ANALYTICS SETTINGS - Version: 1.4.0
+var assertive_entityId = "FHkAkgiDWrXm4dZFw";
+var assertive_debug = 0; // append the query string 'assertiveYield=debug' or add this local storage entry 'localStorage.setItem("assertiveYield", "debug")' to enable dynamically
+var assertive_sampleRate = 1; // 1 = 100%, 0.2 = 20%...
+var assertive_timeout = null;
+var assertive_layout = null;
+var assertive_userState = null;
+// var assertive_custom_1 = null;
+var assertive_custom_2 = null;
+var assertive_custom_3 = null;
+var assertive_custom_4 = null;
+var assertive_custom_5 = null;
+//example of supplying a custom var from a prev. defined var
+            var adyjs = adyjs || {};
+            adyjs.que = adyjs.que || [];
+
+            /* PRE-DEFINE `invokeVideoPlayer`
+            Because we have no way of knowing when all the bids will be
+            returned from Prebid we can't be sure that the browser will
+            reach the point where `invokeVideoPlayer` is defined before
+            `bidsBackHandler` fires and tries to call it.
+            To prevent an "`invokeVideoPlayer` not defined" error, we
+            pre-define it before we make the call to Prebid, and redefine
+            it later on with the code to create the player and play the
+            ad.
+            In this first version, it simply stores the winning VAST to
+            use later. */
+
+            var tempTag = false;
+            var invokeVideoPlayer = function(url) {
+                tempTag = url;
+            };
+            /* Prebid video ad unit */
+            var videoAdUnit = {
+                code: 'vid2',
+                mediaTypes: {
+                    video: { context: 'instream', playerSize: [[640, 480]],  mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'],  playbackmethod: [2], minduration: 0,  maxduration: 45, protocols: [1,2,3,4,5,6,7,8,9,10], linearity: 1, api: [1,2,3,4,5,6]  }
+                },
+                bids: [
+                	//{ bidder: 'appnexus', params: { placementId: '15915644', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }, /* instream placementid */
+                	{ bidder: 'appnexus', params: { placementId: '11962910', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }, /* one placementId for all sizes */
+                	//{ bidder: 'appnexus', params: { placementId: '13232361', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }, /* appnexus test placementid */
+                    { bidder: 'districtm', params: { placementId: '11937611', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } },
+                    { bidder: 'beachfront', params: { bidfloor: 0.01, appId: '11bc5dd5-7421-4dd8-c926-40fa653bec76' } },
+                    //{ bidder: 'viewdeos', params: { supplyPartnerId: '1985' } },
+                    { bidder: 'rhythmone',  params: { placementId: '76184', zone: '1r', path: 'mvo' } },
+                    //{ bidder: 'somoaudience', params: { placement_hash: '1152340cac3268b0e737b49c1382cd2b' } },
+                    { bidder: 'rubicon', params: { accountId: "16924", siteId: "151312", zoneId: "896644", video: { playerWidth: '640', playerHeight: '480', language: 'en' } } }, /* video call */
+                    { bidder: 'openx', params: { unit: '539181725', delDomain: 'freestar-d.openx.net', openrtb: { imp: [{ video: { mimes: ['video/x-flv, video/mp4, application/x-shockwave-flash, application/javascript, video/webm'] } }] } } },
+                    // { bidder: 'unruly', params: { targetingUUID: '23984444', siteId: 15145 } }
+                    // { bidder: 'teads',  params: { placementId: '75853', pageId: '87372' } }
+                    // { bidder: 'cedato', params: { player_id: '1895193152' , bidfloor: 0.01 } }
+                    //{ bidder: 'ucfunnel', params: { adid: 'test-ad-D778B679776BD6BFB8A6A83A3BAEAA', video: { playerWidth: '640', playerHeight: '480' } } },
+                    { bidder: 'emx_digital', params: { tagid: '77460', video: { language: 'en' } } }, /* video tag */
+                    //{ bidder: 'criteo', params: { zoneId: "1079305", video: { skip: 1, playbackmethod: 2, placement: 1 } } },
+                    //{ bidder: "ix", params: { siteId: "261017", size: [640, 480] } }, /* id 261017 golfwrx id */
+                    { bidder: 'oftmedia', params: { placementId: '16137883', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } },
+                    { bidder: 'smartyads', params: { placementId: '11836' } }, /* instream */
+                    { bidder: 'brealtime', params: { placementId: '16714331', allowSmallerSizes: true, video: { skippable: true, playback_method: ['auto_play_sound_off'] } } }, /* one placementId for all sizes */
+                    { bidder: 'conversant', params: { site_id: '117979', mimes: [ 'video/mp4', 'application/javascript' ], maxduration: 45 } },  /* golfwrx site id */ 
+                    //{ bidder: 'quantcast',  params: { publisherId: 'EnBKrGZNvq', video: { mimes: ['video/x-flv', 'video/mp4', 'application/x-shockwave-flash', 'application/javascript', 'video/webm'] } } }
+                    { bidder: 'smartrtb', params: { zoneId: "tU7HrNuBNqlWsQzZLhWf" } }
+                ]
+            };
+
+            adyjs.que.push(function() {
+            	adyjs.addAdUnits(videoAdUnit); // add your ad units to the bid request
+            	// alias for bidder
+                adyjs.aliasBidder('appnexus','brealtime');
+                //adyjs.aliasBidder('appnexus','emx_digital');
+                //adyjs.aliasBidder('appnexus','springserveAlias2');
+                adyjs.aliasBidder('appnexus','districtm');
+                adyjs.aliasBidder('gamoshi','viewdeos');
+                adyjs.aliasBidder('onedisplay','aol');
+                adyjs.aliasBidder('appnexus','adysis');
+                adyjs.aliasBidder('serverbid','adsparc');
+                // adyjs.aliasBidder('appnexus','152media');
+            	// configure prebid to use prebid cache and prebid server
+                // make sure to add your own accountId to your s2sConfig object
+                adyjs.bidderSettings = { 
+      districtm:    { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.88; } },
+      teads:   { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.94; } },
+      unruly:  { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.90; } },
+      beachfront:   { bidCpmAdjustment : function(bidCpm){ return bidCpm * 0.01; } }, 
+      viewdeos:   { bidCpmAdjustment : function(bidCpm){ return bidCpm * 1.00; } },
+      appnexus:   { bidCpmAdjustment : function(bidCpm){ return bidCpm * 10.00; } },
+    };
+                adyjs.setConfig({
+                	consentManagement: { cmpApi: 'iab', timeout: 4000, allowAuctionWithoutConsent: true },
+                    cache: { url: 'https://prebid.adnxs.com/pbc/v1/cache' },
+                    s2sConfig: {
+                        accountId: 'e31f627f-53a3-4288-9979-482d3c6ffc76',
+                        enabled: false,
+                        bidders: ['beachfront','gamoshi','rhythmone','somoaudience','appnexus','rubicon','openx','districtm'],
+                        adapter: 'prebidServer',
+                        timeout: 1400,
+                        endpoint: 'https://prebid.adnxs.com/pbs/v1/openrtb2/auction',
+                        syncEndpoint: 'https://prebid.adnxs.com/pbs/v1/cookie_sync',
+                        cookieSet: true,
+                        cookiesetUrl: 'https://acdn.adnxs.com/cookieset/cs.js'
+                      },
+                      userSync: {
+                          iframeEnabled: true,
+                          syncsPerBidder: 50, // and no more than 3 syncs at a time
+                          syncDelay: 5000, // 5 seconds after the auction
+                        filterSettings: {
+                           iframe: { bidders: [''], filter: 'exclude' },
+                           image:  { bidders: '*', filter: 'include' }
+                           },
+                         },
+                         debug: true,
+                         useBidCache: false,
+                         enableSendAllBids: false, // Default will be `true` as of 1.0
+                         bidderSequence: 'random', // Default is random
+                         publisherDomain: 'golfwrx.com',
+                         bidderTimeout: 2000,
+                         pubcid: {expInterval: 525600},
+                         currency: {
+                           'adServerCurrency': "GBP",
+                           'granularityMultiplier': 1,
+                           'conversionRateFile': 'https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json',
+                         },   
+                });
+                
+                adyjs.requestBids({
+                    bidsBackHandler: function(bids) {
+                        var videoUrl = adyjs.adServers.dfp.buildVideoUrl({
+                            adUnit: videoAdUnit,
+                            params: {
+                                // iu: '/19968336/prebid_cache_video_adunit',
+                                iu: '/1001824/Golfwrx.com-HB/vid1',
+                                description_url: 'http%3A%2F%2Fadops.golfwrx.com%2Fbyron%2Fvideo.html',
+                                output: 'vast'
+                            }
+                        }); 
+                     // Mark the bid, used in buildVideoUrl, as used
+                        adyjs.markWinningBidAsUsed({
+                            adUnitCode: videoAdUnit.code // optional if you know the adId
+                            // adId: bid.adId // optional
+                        });
+                        invokeVideoPlayer(videoUrl);
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+   <div style="width:60%;margin-left:auto;margin-right:auto">
+            <p>
+                In scelerisque sem sed tortor posuere sagittis. Fusce scelerisque odio at tincidunt ultricies. Fusce egestas, erat non finibus dictum, nulla arcu viverra nibh, at bibendum ligula nisi egestas magna. Nulla eu finibus nulla. Pellentesque at mi eget turpis
+                consequat scelerisque. Sed lacinia, nisi sit amet egestas vestibulum, elit odio iaculis leo, et lacinia risus enim non lacus. Cras nec neque eget nunc gravida maximus. Ut hendrerit convallis sollicitudin. Donec cursus erat vel metus gravida,
+                et pretium justo iaculis. Curabitur condimentum blandit augue, quis interdum leo. Vivamus dapibus est nec dui efficitur, eu imperdiet nulla sollicitudin. Suspendisse laoreet velit vitae arcu mollis, ac interdum lorem venenatis. Aenean
+                nec purus varius, accumsan ex at, luctus arcu. Quisque consectetur tortor eros, placerat lacinia eros aliquam a. Proin non porttitor libero.
+            </p>
+            <p>
+                Proin eget vulputate est. Nunc sit amet neque a tortor ullamcorper suscipit non eu neque. Quisque at massa in metus feugiat rutrum. Nulla et orci orci. Aliquam erat volutpat. Cras tincidunt metus lectus, sed suscipit augue mollis vitae. Sed quis condimentum
+                tortor, sit amet consectetur erat. Nulla pellentesque turpis lacus, eu venenatis massa fringilla at. Duis sed pharetra turpis. Maecenas vel porttitor neque. Praesent quis felis sapien. Donec suscipit euismod dui, vitae fermentum nisi ornare
+                in.
+            </p>
+            <div class="ad-reporter-ahytrfg35423">
+<div id="advertisement" style="border: 0pt none; margin: auto; text-align: center; color: #999; text-transform: uppercase; font-family: sans-serif; font-size: 9px; font-weight: 400; letter-spacing: .2em; line-height: 1; margin-top: 0px; position: relative; top: -4px;">Advertisement</div>
+            
+            <div class="vjs-pip-container">
+            <video id="vid2" class="video-js vjs-default-skin vjs-big-play-centered" controls data-setup='{"preload": "auto", "loop": true}' width='580' height='400' style="display:block; margin: 0 auto;">
+                <source src="//vjs.zencdn.net/v/oceans.mp4" type='video/mp4'/>
+                <source src="//vjs.zencdn.net/v/oceans.webm" type='video/webm'/>
+                <source src="//vjs.zencdn.net/v/oceans.ogv" type='video/ogg'/>
+            </video>
+        </div>
+        </div>
+        
+        
+        <!-- Script for the picture-in-picture plugin -->
+<script src="https://players.brightcove.net/videojs-pip/1/videojs-pip.min.js"></script>
+
+<script>
+videojs.getPlayer('vid2').ready(function() {
+  // When the player is ready, get a reference to it
+  var myPlayer = this;
+  // Initialize the picture-in-picture plugin
+  myPlayer.pip();
+});
+</sxcript>
+
+            <p>
+                Suspendisse tempor felis accumsan orci finibus, imperdiet mollis arcu imperdiet. In eu dolor condimentum, pulvinar nisl a, sollicitudin nunc. Ut vel lectus libero. Praesent rhoncus leo tortor, at mollis nulla sagittis eget. Quisque tempus tempor augue
+                sed rutrum. Sed vitae volutpat quam. Proin vestibulum eros metus, a luctus erat condimentum eu. Vivamus ullamcorper ultricies dui, ac malesuada leo finibus semper. Cras diam augue, imperdiet sed efficitur id, aliquam sed purus. Praesent
+                eget turpis quis sapien interdum sagittis. Vivamus placerat nunc a tempus fermentum. Praesent laoreet leo at tellus porta, ut viverra tortor pharetra. Quisque elit velit, eleifend eget imperdiet vel, suscipit ac nisi. Aliquam egestas mauris
+                ut massa fringilla laoreet.
+            </p>
+            
+            <p>
+                Quisque ac luctus nisi, vitae ornare arcu. Proin fermentum sapien vitae odio vestibulum porta. Suspendisse faucibus sapien enim, et faucibus urna tempus et. Integer porttitor justo sed faucibus blandit. Morbi semper lectus vitae semper facilisis. Quisque
+                molestie accumsan arcu, eget bibendum dui euismod et. Sed in mattis lacus, nec lacinia sem. Fusce sed tortor posuere, iaculis justo varius, elementum est.
+            </p>
+            <p>
+                Etiam condimentum, eros commodo semper tristique, lorem leo pharetra massa, eget cursus justo enim id urna. Sed imperdiet mauris vitae ante bibendum elementum. Etiam eu dui porttitor leo imperdiet cursus. Maecenas consequat, neque a dapibus viverra, nunc
+                velit volutpat nibh, ut cursus sem tortor ac arcu. Praesent convallis lacus vel nisi aliquam, in posuere libero scelerisque. Curabitur et lacinia nisl. Nunc id ligula neque. Phasellus non eros et leo ultrices ultricies. Nulla facilisi.
+                Donec ut augue urna. Suspendisse sodales nisi at ex faucibus, et tempus magna fermentum. Proin non arcu interdum, pulvinar est at, vehicula odio. Morbi nec maximus sem. Ut eu tristique urna.
+            </p>
+            <p>
+                Pellentesque eget quam sem. Nam interdum eleifend leo, mattis sagittis metus ornare tristique. Cras pretium odio lectus, vitae viverra massa consequat eget. Suspendisse porttitor pretium lectus in scelerisque. Phasellus euismod porta lectus eget pharetra.
+                Ut et viverra mi, ut imperdiet lacus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc tempus sapien sit amet tortor rhoncus dignissim. Sed at augue et sem lacinia feugiat. Nulla vitae convallis
+                urna. Morbi scelerisque erat quis nibh pretium, non elementum elit consectetur. Proin in feugiat nisl.
+            </p>
+            <p>
+                Morbi et ipsum purus. Integer ut pulvinar metus. Fusce maximus ex nec purus sollicitudin gravida. Vivamus dapibus volutpat erat nec tristique. Aliquam mi dolor, pretium non elementum quis, viverra non est. Pellentesque egestas, lectus a posuere imperdiet,
+                nisi sem elementum neque, eu volutpat arcu turpis venenatis magna. Curabitur non neque consectetur, vulputate urna sed, vestibulum lacus. Aenean mollis, risus non pulvinar egestas, lectus lectus finibus dui, sit amet pretium metus mauris
+                vitae nibh. In non ultricies odio.
+            </p>
+            <p>
+                Donec dictum sem ac risus molestie lobortis. Maecenas at justo vehicula, iaculis orci eget, eleifend nunc. In non justo imperdiet, blandit leo in, interdum mi. Proin feugiat libero et erat dictum efficitur. Nunc auctor lacus feugiat erat euismod cursus.
+                Sed vehicula ante vel quam pretium blandit. Maecenas congue quis mauris vitae efficitur. Cras sit amet justo at sem dictum ornare vitae eu ex. Nunc ornare odio nec leo consectetur cursus. Mauris eu dolor tellus. Etiam dignissim ut nunc
+                et mollis. Cras at pulvinar velit, ut tincidunt velit. Cras vitae fermentum ante. Aenean interdum dolor in scelerisque consectetur.
+            </p>
+            <p>
+                Curabitur auctor leo sit amet massa faucibus ultrices. Maecenas dignissim libero ac cursus cursus. Curabitur eget sapien leo. Phasellus pretium blandit facilisis. Proin egestas urna a sagittis tempus. Donec in nibh ex. Vestibulum efficitur felis aliquam
+                urna ultrices, at gravida nibh pretium. Morbi dictum vulputate pretium. Donec at nisi rutrum, pharetra nunc a, placerat felis. Quisque rhoncus congue fermentum. Quisque pharetra est at nisl sagittis suscipit. Maecenas scelerisque porta
+                eleifend. Mauris nulla leo, consectetur at eros vel, elementum pretium diam.
+            </p>
+            <p>
+                In nisi libero, porta ut ullamcorper a, dapibus nec velit. Vestibulum congue rhoncus congue. Nulla a libero sit amet risus feugiat hendrerit id placerat ex. In hac habitasse platea dictumst. Pellentesque ut ullamcorper risus. Nunc et ipsum nisi. Vivamus
+                a interdum diam, hendrerit pellentesque orci.
+            </p>
+            
+        </div> 
+
+        <script>
+            var page_load_time;
+
+            page_load_time = new Date().getTime() - performance.timing.navigationStart;
+            console.log(page_load_time + "ms -- Player loading!");
+
+            var vid2 = videojs('vid2');
+
+            page_load_time = new Date().getTime() - performance.timing.navigationStart;
+            console.log(page_load_time + "ms -- Player loaded!");
+
+            function invokeVideoPlayer(url) {
+
+                page_load_time = new Date().getTime() - performance.timing.navigationStart;
+                console.log(page_load_time + "ms -- Prebid VAST url = " + url);
+
+                /* Access the player instance by calling `videojs()` and passing
+                 in the player's ID. Add a `ready` listener to make sure the
+                 player is ready before interacting with it. */
+
+                videojs("vid2").ready(function() {
+
+                    page_load_time = new Date().getTime() - performance.timing.navigationStart;
+                    console.log(page_load_time + "ms -- Player is ready!");
+
+                    /* PASS SETTINGS TO VAST PLUGIN
+                    Pass in a JSON object to the player's `vastClient` (defined
+                    by the VAST/VPAID plugin we're using). The requires an
+                    `adTagUrl`, which will be the URL returned by Prebid. You
+                    can view all the options available for the `vastClient`
+                    here:
+                    https://github.com/MailOnline/videojs-vast-vpaid#options */
+
+                    var player = this;
+                    var vastAd = player.vastClient({
+                        adTagUrl: url,
+                        prerollTimeout: 2000,
+                        playAdAlways: true,
+                        verbosity: 4,
+                        vpaidFlashLoaderPath: "https://adops.adysis.com/VPAIDFlash.swf?raw=true",
+                        autoplay: true
+                    });
+
+                    page_load_time = new Date().getTime() - performance.timing.navigationStart;
+                    console.log(page_load_time + "ms -- Prebid VAST tag inserted!");
+
+                    player.muted(true);
+                    player.play();
+
+                    page_load_time = new Date().getTime() - performance.timing.navigationStart;
+                    console.log(page_load_time + "ms -- invokeVideoPlayer complete!");
+                });
+            }
+            /*  ####################################
+             *  #    ASSERTIVE ANALYTICS CLIENT    #
+             *  #        Version: 1.9.1            #
+             *  ####################################
+             */
+            !function(){function w(e){console.error(e);var t=new XMLHttpRequest;t.open("POST",N+"/error.php",!0),t.setRequestHeader("Content-Type","text/plain"),t.send(JSON.stringify(e,Object.getOwnPropertyNames(e)))}try{var U="1.9",N="https://api.assertcom.de",t="assertive_analytics_",R=P(),T=[],S=[],n=n||localStorage.getItem("assertiveYield")&&-1!==localStorage.getItem("assertiveYield").indexOf("debug")||-1!==u("assertiveYield").indexOf("debug");function i(e){return t.concat(e)}function a(e,t){return localStorage.setItem(i(e),t)}function D(e){return localStorage.getItem(i(e))}function d(e){return localStorage.removeItem(i(e))}function E(e){e=i(e);var t=Number(localStorage.getItem(e))||0;return localStorage.setItem(e,++t),t}function e(e){if(E(e+"PageViewN"),"client"!==e||!D(e+"UUID")){if("session"===e){if(D(e+"UUID")&&D(e+"Timeout")&&Date.now()<D(e+"Timeout"))return void a(e+"Timeout",Date.now()+18e5);a(e+"Timeout",Date.now()+18e5)}a(e+"UUID",P()),a(e+"Random",Math.random()),document.referrer?a(e+"Referrer",document.referrer):d(e+"Referrer"),a(e+"EntryPathname",window.location.pathname);var t=["utm_source","utm_medium","utm_campaign","utm_term","utm_content"],n={};for(var i in t){var r=t[i],s=u(r);""!==s&&(n[r]=s)}var o=JSON.stringify(n);o!==JSON.stringify({})?a(e+"UTM",o):d(e+"UTM"),a(e+"ImpressionN",1),a(e+"PageViewN",1),E(e+"SessionN")}}function P(e){return e?(e^16*Math.random()>>e/4).toString(16):([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g,P)}function u(e){return decodeURI(window.location.search.replace(new RegExp("^(?:.*[&\\?]"+escape(e).replace(/[\.\+\*]/g,"\\$&")+"(?:\\=([^&]*))?)?.*$","i"),"$1"))}function O(e){n&&console.log(e)}Array.prototype.find||Object.defineProperty(Array.prototype,"find",{value:function(e){if(null==this)throw new TypeError('"this" is null or not defined');var t=Object(this),n=t.length>>>0;if("function"!=typeof e)throw new TypeError("predicate must be a function");for(var i=arguments[1],r=0;r<n;){var s=t[r];if(e.call(i,s,r,t))return s;r++}},configurable:!0,writable:!0}),e("client"),e("session"),-1!==u("assertiveYield").indexOf("check")&&alert("Assertive Yield: Check"),("undefined"==typeof assertive_sampleRate||assertive_sampleRate&&D("sessionRandom")<assertive_sampleRate)&&function e(){if(r)return;if("undefined"==typeof googletag||!googletag.pubadsReady)return void setTimeout(e,20);r=!0;var b=null;window.addEventListener("blur",function(){if(b){var e=new XMLHttpRequest,t=N+"?event=click&entityId="+assertive_entityId+"&impressionUUID="+T[b];e.open("GET",t,!0),e.send()}});googletag.cmd.push(function(){try{googletag.pubads().addEventListener("slotRenderEnded",function(e){try{if(e.isEmpty)return;if("undefined"==typeof assertive_entityId)return void console.error("Assertive Yield: Entity ID is mandatory and not defined, exiting...");E("clientImpressionN"),E("sessionImpressionN");var t=e.slot,n=t.getSlotElementId(),i=t.getAdUnitPath(),r=document.getElementById(n);if(!r)return;var s=r.getElementsByTagName("iframe")[0];s.addEventListener("mouseover",function(){b=n}),s.addEventListener("touchstart",function(){b=n}),s.addEventListener("mouseout",function(){b=null}),s.addEventListener("touchend",function(){b=null});var o,a=t.getHtml(),d=/(?:(?:adyjs\.renderAd\(document, |adId: |hb_adid":\[)|(?:pbadid=))['"](.*?)["']/gi.exec(a),u=d?d[1]:t.getTargeting("hb_adid")[0],l=!!d;if(u){var c=null;adyjs.adUnits.find(function(e){return e.code===n})?c=n:adyjs.adUnits.find(function(e){return e.code===i})&&(c=i);var p=adyjs.getBidResponsesForAdUnitCode(c).bids||[];if(!p.length){var m=adyjs.getBidResponses();for(var f in m)if(m.hasOwnProperty(f)){var v=m[f].bids;for(var g in v)v.hasOwnProperty(g)&&p.push(v[g])}}o=p.find(function(e){return e.adId===u})||null}var m=o?p.filter(function(e){return e.auctionId===o.auctionId}):[];T[n]=P(),O("Session UUID: "+D("sessionUUID")+", PageView UUID: "+R+", Impression UUID: "+T[n]+", AdId: "+u),O("Slot Id: "+n+", AdUnitPath: "+i),o&&O(" - Highest Prebid "+o.cpm+" from "+o.bidderCode+" with id "+u),o||O(" - No PreBids!!!"),O(" - Winner: "+(l?"prebid":"dfp (Direct/AdX/AdSense)")+" with size "+(l&&o?o.width:e.size[0])+"x"+(l&&o?o.height:e.size[1])),O("---------------");var y=null,I=null;o&&(o.appnexus?y=o.appnexus.buyerMemberId?o.appnexus.buyerMemberId:null:o.rubicon&&(y=o.rubicon.networkId?o.rubicon.networkId:null,I=o.rubicon.advertiserId?o.rubicon.advertiserId:null));var _={version:U,entityId:assertive_entityId,siteUUID:"undefined"!=typeof assertive_siteUUID?assertive_siteUUID:null,clientUUID:D("clientUUID"),sessionUUID:D("sessionUUID"),pageViewUUID:R,impressionUUID:T[n],slotId:n,adUnitPath:i,dfpResponseInformation:t.getResponseInformation()||null,dfpTargetingMap:t.getTargetingMap()||null,highestBid:o,bidResponses:m,highestPreBid:o?o.cpm:0,highestPreBid_partner:o?o.bidderCode:"",buyerId:y,brandId:I,dealId:o&&o.dealId?o.dealId:null,creativeId:o&&o.creativeId?o.creativeId:null,mediaType:o&&o.mediaType?o.mediaType:null,source:o&&o.source?o.source:null,currency:o&&o.currency?o.currency:null,netRevenue:o&&o.netRevenue?o.netRevenue:null,creative_width:l&&o?o.width:e.size[0],creative_height:l&&o?o.height:e.size[1],preBidWon:l,timeToRespond:o?o.timeToRespond:null,protocol:window.location.protocol,host:window.location.host,pathname:window.location.pathname,pathname_split:window.location.pathname.split("/").filter(function(e){return!!e}),referrer:D("sessionReferrer"),utm:D("sessionUTM"),entryPathname:D("sessionEntryPathname"),impressionN:Number(D("sessionImpressionN"))||null,pageViewN:Number(D("sessionPageViewN"))||null,client_referrer:D("clientReferrer"),client_utm:D("clientUTM"),client_entryPathname:D("clientEntryPathname"),client_impressionN:Number(D("clientImpressionN"))||null,client_pageViewN:Number(D("clientPageViewN"))||null,client_sessionN:Number(D("clientSessionN"))||null,prebid_timeout:assertive_timeout||null,prebid_version:adyjs.version||null,userState:"undefined"!=typeof assertive_userState?assertive_userState:null,layout:"undefined"!=typeof assertive_layout?assertive_layout:null,custom_1:"undefined"!=typeof assertive_custom_1?assertive_custom_1:null,custom_2:"undefined"!=typeof assertive_custom_2?assertive_custom_2:null,custom_3:"undefined"!=typeof assertive_custom_3?assertive_custom_3:null,custom_4:"undefined"!=typeof assertive_custom_4?assertive_custom_4:null,custom_5:"undefined"!=typeof assertive_custom_5?assertive_custom_5:null,bps_type:t.getTargeting("ay_bid")[0]||null,bps_algo:t.getTargeting("ay_algo")[0]||null};S.push(_);var h=new XMLHttpRequest;h.open("POST",N,!0),h.setRequestHeader("Content-Type","text/plain"),h.send(JSON.stringify(_)),O("SENT!!!")}catch(e){w(e)}}),googletag.pubads().addEventListener("impressionViewable",function(e){try{var t=e.slot.getSlotElementId();if(!T[t])return;var n=new XMLHttpRequest,i=N+"?event=activeView&entityId="+assertive_entityId+"&impressionUUID="+T[t];n.open("GET",i,!0),n.send()}catch(e){w(e)}})}catch(e){w(e)}})}();var r=!1}catch(e){w(e)}}();
+            // end assertive //
+        </script>
+<link rel="preconnect" href="//adops.adysis.com" crossorigin>
+<link rel="preconnect" href="//sourcepoint.mgr.consensu.org" crossorigin>   
+<link rel="preconnect" href="https://www.googletagservices.com/" crossorigin>
+<link rel="preconnect" href="//c.amazon-adsystem.com" crossorigin>
+<link rel="preconnect" href="//aax.amazon-adsystem.com" crossorigin>
+<link rel="preconnect" href="//fastlane.rubiconproject.com" crossorigin>
+<link rel="preconnect" href="//ib.adnxs.com" crossorigin>
+<link rel="preconnect" href="https://as-sec.casalemedia.com" crossorigin>
+<link rel="preconnect" href="https://as.casalemedia.com" crossorigin>
+<link rel="preconnect" href="https://hbopenbid.pubmatic.com" crossorigin>
+<link rel="preconnect" href="https://securepubads.g.doubleclick.net" crossorigin>
+<link rel="preconnect" href="https://adservice.google.com" crossorigin>
+<link rel="preconnect" href="//tpc.googlesyndication.com" crossorigin>
+<link rel="preconnect" href="//pagead2.googlesyndication.com" crossorigin>
+<link rel="preconnect" href="//adops.adysis.com" crossorigin>
+<link rel="preconnect" href="//a.teads.tv" crossorigin>
+<link rel="preconnect" href="//h.cedatoplayer.com" crossorigin>
+<link rel="preconnect" href="//g2.gumgum.com" crossorigin>
+<link rel="preconnect" href="//player-cdn.beachfrontmedia.com" crossorigin>
+<link rel="preconnect" href="//adserver-eu.adtech.advertising.com" crossorigin>
+<link rel="preconnect" href="//prebid.adnxs.com" crossorigin>
+<link rel="preconnect" href="//api.assertcom.de" crossorigin>
+<link rel="preconnect" href="//dmx.districtm.io" crossorigin>
+<link rel="preconnect" href="//cdn.districtm.io" crossorigin>
+<link rel="preconnect" href="//cdn.jsdelivr.net" crossorigin>
+<link rel="preconnect" href="//reachms.bfmio.com" crossorigin>
+<link rel="preconnect" href="//useast.bfmio.com" crossorigin>
+<link rel="preconnect" href="//ssc.33across.com" crossorigin>
+<link rel="preconnect" href="//hb.undertone.com" crossorigin>
+<link rel="preconnect" href="//bidder.komoona.com" crossorigin>
+<link rel="preconnect" href="//p.ato.mx" crossorigin>
+<link rel="preconnect" href="//s0.2mdn.net" crossorigin>
+<link rel="preconnect" href="//quantcast.mgr.consensu.org" crossorigin>
+<link rel="preconnect" href="//ic.tynt.com" crossorigin>
+<link rel="preconnect" href="//track-east.mobileadtrading.com" crossorigin>
+<link rel="preconnect" href="//s.komoona.com" crossorigin>
+<link rel="preconnect" href="//cms.quantserve.com" crossorigin>
+<link rel="preconnect" href="//rtb.viewdeos.com" crossorigin>
+<link rel="preconnect" href="//ad.crwdcntrl.net" crossorigin>
+<link rel="preconnect" href="//adops.adysis.com" crossorigin>
+<link rel="preconnect" href="//ssp-nj.webtradehub.com" crossorigin>
+<link rel="preconnect" href="//cdn.adnxs.com" crossorigin>
+<link rel="preconnect" href="//securepubads.g.doubleclick.net" crossorigin>
+    </body>
+</html>
