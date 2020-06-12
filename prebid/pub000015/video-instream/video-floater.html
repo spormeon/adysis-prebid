@@ -43,12 +43,14 @@
 <script>
 videojs.getPlayer('vid2').ready(function() {
   // When the player is ready, get a reference to it
-  var myPlayer = this;
+  var myPlayer = this,
+      options = {};
+
+  options.scale = 0.5;
+  options.posX = "left";
+  options.closeable: true;
   // Initialize the picture-in-picture plugin
-  myPlayer.pip();
-});
-//Do not allow the user to close the PIP mode player.
-player.pip({closeable: true});
+  myPlayer.pip(options);
 </script>
 <script>
 
