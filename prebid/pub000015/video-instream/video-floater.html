@@ -38,21 +38,7 @@
 <!-- videojs picture in picture-->
 <link href="https://players.brightcove.net/videojs-pip/1/videojs-pip.css" rel="stylesheet">
 <!-- Script for the picture-in-picture plugin -->
-<script src="https://players.brightcove.net/videojs-pip/1/videojs-pip.min.js"></script>
 
-<script>
-videojs.getPlayer('myPlayerID').ready(function() {
-  // When the player is ready, get a reference to it
-  var myPlayer = this,
-      options = {};
-
-  options.scale = 0.5;
-  options.posX = "left";
-  options.closeable = true;
-  // Initialize the picture-in-picture plugin
-  myPlayer.pip(options);
-});
-</script>
 <script>
 
 //ASSERTIVE ANALYTICS SETTINGS - Version: 1.4.0
@@ -214,7 +200,7 @@ var assertive_custom_5 = null;
                 tortor, sit amet consectetur erat. Nulla pellentesque turpis lacus, eu venenatis massa fringilla at. Duis sed pharetra turpis. Maecenas vel porttitor neque. Praesent quis felis sapien. Donec suscipit euismod dui, vitae fermentum nisi ornare
                 in.
             </p>
-            <div class="vjs-pip-container">
+            
             <div class="ad-reporter-ahytrfg35423">
 <div id="advertisement" style="border: 0pt none; margin: auto; text-align: center; color: #999; text-transform: uppercase; font-family: sans-serif; font-size: 9px; font-weight: 400; letter-spacing: .2em; line-height: 1; margin-top: 0px; position: relative; top: -4px;">Advertisement</div>
             
@@ -226,7 +212,7 @@ var assertive_custom_5 = null;
             </video>
             
         </div>
-        </div>
+        
         
         
         
@@ -249,7 +235,21 @@ var assertive_custom_5 = null;
         
         
         
-  
+  <script src="https://players.brightcove.net/videojs-pip/1/videojs-pip.min.js"></script>
+
+<script>
+videojs.getPlayer('myPlayerID').ready(function() {
+  // When the player is ready, get a reference to it
+  var myPlayer = this,
+      options = {};
+
+  options.scale = 0.5;
+  options.posX = "left";
+  options.closeable = true;
+  // Initialize the picture-in-picture plugin
+  myPlayer.pip(options);
+});
+</script>
 
             <p>
                 Suspendisse tempor felis accumsan orci finibus, imperdiet mollis arcu imperdiet. In eu dolor condimentum, pulvinar nisl a, sollicitudin nunc. Ut vel lectus libero. Praesent rhoncus leo tortor, at mollis nulla sagittis eget. Quisque tempus tempor augue
