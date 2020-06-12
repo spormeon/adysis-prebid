@@ -12,7 +12,7 @@ code: 'inreedvid4Slot',
 labelAny: ['desktopbottom2', 'tabletbottom2', 'phonebottom2'],
 mediaTypes: { video:  { context: 'outstream', playerSize: [[580, 400]] } },
 //renderer: { url: 'https://cdn.jsdelivr.net/gh/spormeon/adysis-prebid/prebid/ANOutstreamVideo.js', render: function (bid) { ANOutstreamVideo.renderAd({ targetId: bid.adUnitCode, adResponse: bid.adResponse, }); } },
-//renderer: { options: { adText: 'Advertisement' } },
+renderer: { options: { adText: 'Advertisement', disableCollapse: { enabled: true, replay: false }, delayExpandUntilVPAIDInit: false, delayStartUntilNotified: false } },
 bids: outstream_bidders.bids
 },
 {
@@ -34,7 +34,7 @@ code: 'inreedvid5Slot',
 labelAny: ['desktopmenu1', 'tablet', 'phone'],
 mediaTypes: { video:  { context: 'outstream', playerSize: [[300, 250]] } },
 //renderer: { url: 'https://cdn.jsdelivr.net/gh/spormeon/adysis-prebid/prebid/ANOutstreamVideo.js', render: function (bid) { ANOutstreamVideo.renderAd({ targetId: bid.adUnitCode, adResponse: bid.adResponse, }); } },
-//renderer: { options: { adText: 'Advertisement' } },
+renderer: { options: { adText: 'Advertisement', disableCollapse: { enabled: true, replay: false }, delayExpandUntilVPAIDInit: false, delayStartUntilNotified: false } },
 bids: outstream_bidders.bids
 },
 {
@@ -100,7 +100,7 @@ code: 'inreedvid9Slot',
 labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'],
 mediaTypes: { video:  { context: 'outstream', playerSize: [[300, 250]] } },
 //renderer: { url: 'https://cdn.jsdelivr.net/gh/spormeon/adysis-prebid/prebid/ANOutstreamVideo.js', render: function (bid) { ANOutstreamVideo.renderAd({ targetId: bid.adUnitCode, adResponse: bid.adResponse, }); } },
-//renderer: { options: { adText: 'Advertisement' } },
+renderer: { options: { adText: 'Advertisement', disableCollapse: { enabled: true, replay: false }, delayExpandUntilVPAIDInit: false, delayStartUntilNotified: false } },
 bids: outstream_bidders.bids
 },
 {
@@ -122,7 +122,7 @@ code: 'inreedvid10Slot',
 labelAny: ['desktopmenu', 'tabletmenu', 'phonemenu'],
 mediaTypes: { video:  { context: 'outstream', playerSize: [[300, 250]] } },
 //renderer: { url: 'https://cdn.jsdelivr.net/gh/spormeon/adysis-prebid/prebid/ANOutstreamVideo.js', render: function (bid) { ANOutstreamVideo.renderAd({ targetId: bid.adUnitCode, adResponse: bid.adResponse, }); } },
-//renderer: { options: { adText: 'Advertisement' } },
+renderer: { options: { adText: 'Advertisement', disableCollapse: { enabled: true, replay: false }, delayExpandUntilVPAIDInit: false, delayStartUntilNotified: false } },
 bids: outstream_bidders.bids
 },
 {
