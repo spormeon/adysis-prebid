@@ -11,7 +11,10 @@ pbjs.que.push(function() {
     pbjs.addAdUnits(unitsOnPage);
     
     pbjs.aliasBidder('appnexus','districtm');
+    
+ // marks winng video bids as used
     pbjs.markWinningBidAsUsed(adId);
+    
     pbjs.bidderSettings = {
     		sovrn:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 0.85; } },
     		appnexus:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 1.00; } },

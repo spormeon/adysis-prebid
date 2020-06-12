@@ -16,6 +16,7 @@ pbjs.que.push(function() {
  // marks winng video bids as used
     pbjs.markWinningBidAsUsed(adId);
     
+    
     pbjs.bidderSettings = {
     		sovrn:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 0.85; } },
     		appnexus:   { bidCpmAdjustment : function(bidCpm){ if(bidCpm < FLOOR_PRICE){ return 0;}return bidCpm * 1.00; } },
@@ -335,6 +336,4 @@ function requestHeaderBidsRefresh(slot) {
 window.setTimeout(function() {
     sendAdserverRequest();
 }, PREBID_TIMEOUT);
-
-
 
