@@ -511,7 +511,7 @@ videojs.getPlayer('myPlayerID').ready(function() {
             page_load_time = new Date().getTime() - performance.timing.navigationStart;
             console.log(page_load_time + "ms -- Player loading!");
 
-            var vid2 = videojs.getPlayer('vid2');
+            var vid2 = videojs("vid2");
             
             page_load_time = new Date().getTime() - performance.timing.navigationStart;
             console.log(page_load_time + "ms -- Player loaded!");
@@ -525,7 +525,7 @@ videojs.getPlayer('myPlayerID').ready(function() {
                  in the player's ID. Add a `ready` listener to make sure the
                  player is ready before interacting with it. */
 
-                 videojs.getPlayer('vid2').ready(function() {
+                 videojs("vid2").ready(function() {
 
                     page_load_time = new Date().getTime() - performance.timing.navigationStart;
                     console.log(page_load_time + "ms -- Player is ready!");
