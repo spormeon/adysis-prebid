@@ -511,8 +511,8 @@ videojs.getPlayer('myPlayerID').ready(function() {
             page_load_time = new Date().getTime() - performance.timing.navigationStart;
             console.log(page_load_time + "ms -- Player loading!");
 
-            var vid2 = videojs('vid2');
-
+            var vid2 = videojs.getPlayer('vid2');
+            
             page_load_time = new Date().getTime() - performance.timing.navigationStart;
             console.log(page_load_time + "ms -- Player loaded!");
 
