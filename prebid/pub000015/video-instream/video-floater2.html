@@ -206,7 +206,7 @@ var assertive_custom_5 = null;
         
         
       <div class="vjs-pip-container">  
-        <video-js id="myPlayerID"
+        <video-js id="vid2"
   data-video-id="5701202551001"
   data-account="1752604059001"
   data-player="default"
@@ -465,7 +465,7 @@ var assertive_custom_5 = null;
             </p>
         </div> 
         
-        
+<!--   
 <script>
 videojs.getPlayer('myPlayerID').ready(function() {
   // When the player is ready, get a reference to it
@@ -479,7 +479,7 @@ videojs.getPlayer('myPlayerID').ready(function() {
   myPlayer.pip(options);
 });
 </script>
-
+-->
 
         <script>
             var page_load_time;
@@ -514,7 +514,16 @@ videojs.getPlayer('myPlayerID').ready(function() {
                     here:
                     https://github.com/MailOnline/videojs-vast-vpaid#options */
 
-                    var player = this;
+                    var myPlayer = this,
+                    options = {};
+
+                options.scale = 0.5;
+                options.posX = "left";
+                options.closeable = true;
+                // Initialize the picture-in-picture plugin
+                myPlayer.pip(options);
+              });
+                    
                     var vastAd = player.vastClient({
                         adTagUrl: url,
                         prerollTimeout: 2000,
@@ -522,13 +531,7 @@ videojs.getPlayer('myPlayerID').ready(function() {
                         verbosity: 4,
                         vpaidFlashLoaderPath: "https://adops.adysis.com/VPAIDFlash.swf?raw=true",
                         autoplay: true,
-                        options = {};
-
-                    options.scale = 0.5;
-                    options.posX = "left";
-                    options.closeable = true;
-                    // Initialize the picture-in-picture plugin
-                    myPlayer.pip(options);
+                        
                     });
 
                     page_load_time = new Date().getTime() - performance.timing.navigationStart;
