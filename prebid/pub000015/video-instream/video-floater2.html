@@ -37,10 +37,21 @@
 
 <!-- videojs picture in picture-->
 <link href="https://players.brightcove.net/videojs-pip/1/videojs-pip.css" rel="stylesheet">
+
+
+
+
+
 <!-- Script for the picture-in-picture plugin -->
+<script src="https://players.brightcove.net/1752604059001/default_default/index.min.js"></script>
+<!-- Script for the picture-in-picture plugin -->
+<script src="https://players.brightcove.net/videojs-pip/1/videojs-pip.min.js"></script>
+
+
+
+
 
 <script>
-
 //ASSERTIVE ANALYTICS SETTINGS - Version: 1.4.0
 var assertive_entityId = "FHkAkgiDWrXm4dZFw";
 var assertive_debug = 0; // append the query string 'assertiveYield=debug' or add this local storage entry 'localStorage.setItem("assertiveYield", "debug")' to enable dynamically
@@ -202,26 +213,36 @@ var assertive_custom_5 = null;
             </p>
             
             
+            
+            <div class="vjs-pip-container"> 
+            <div class="ad-reporter-ahytrfg35423">
+<div id="advertisement" style="border: 0pt none; margin: auto; text-align: center; color: #999; text-transform: uppercase; font-family: sans-serif; font-size: 9px; font-weight: 400; letter-spacing: .2em; line-height: 1; margin-top: 0px; position: relative; top: -4px;">Advertisement</div>
+            
+            
+            <video-js 
+            id="vid2" 
+            data-video-id="5701202551001"
+            data-player="default"
+            data-embed="default"
+            class="video-js vjs-default-skin vjs-big-play-centered video-js" 
+            controls data-setup='{"preload": "auto", "loop": true}' 
+            width='550' 
+            height='310' 
+            style="display:block; 
+            margin: 0 auto;">
+                <source src="//vjs.zencdn.net/v/oceans.mp4" type='video/mp4'/>
+                <source src="//vjs.zencdn.net/v/oceans.webm" type='video/webm'/>
+                <source src="//vjs.zencdn.net/v/oceans.ogv" type='video/ogg'/>
+            </video-js>
+            
+        </div>
+    </div>    
         
         
+       
         
-      <div class="vjs-pip-container">  
-        <video-js id="vid2"
-  data-video-id="5701202551001"
-  data-account="1752604059001"
-  data-player="default"
-  data-embed="default"
-  class="video-js"
-  width="550" height="310"
-  controls></video-js>
-  
 
-<script src="https://players.brightcove.net/1752604059001/default_default/index.min.js"></script>
 
-</div>
-
-<!-- Script for the picture-in-picture plugin -->
-<script src="https://players.brightcove.net/videojs-pip/1/videojs-pip.min.js"></script>
 
 
 
@@ -504,7 +525,7 @@ videojs.getPlayer('myPlayerID').ready(function() {
                  in the player's ID. Add a `ready` listener to make sure the
                  player is ready before interacting with it. */
 
-                videojs("vid2").ready(function() {
+                 videojs.getPlayer('vid2').ready(function() {
 
                     page_load_time = new Date().getTime() - performance.timing.navigationStart;
                     console.log(page_load_time + "ms -- Player is ready!");
@@ -521,8 +542,13 @@ videojs.getPlayer('myPlayerID').ready(function() {
                     options = {};
 
                 options.scale = 0.5;
-                options.posX = "left";
+                options.posX = "right";
+                options.posY = "bottom";
                 options.closeable = true;
+                options.viewable = 0;
+                options.manualContainerSize: true;
+                options.width = 300;
+                options.height = 150;
                 // Initialize the picture-in-picture plugin
                 myPlayer.pip(options);
                     
